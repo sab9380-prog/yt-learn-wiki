@@ -90,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/_category-일반학습.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "_category-일반학습 의 백링크"
+              "title": "백링크"
             }
           },
           {
@@ -165,8 +164,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,11 +180,11 @@
   },
   "active": "58f664466835d825",
   "lastOpenFiles": [
-    "notes/_category-일반학습.md",
-    "INDEX.md",
     "notes/2026-06-24-aa-zYgWV00g.md",
     "notes/2026-06-23-9q1WG0tbzvs.md",
     "notes/2026-06-20-ow1we5PzK-o.md",
+    "notes/_category-일반학습.md",
+    "INDEX.md",
     "무제.base",
     "무제 1.base"
   ]
