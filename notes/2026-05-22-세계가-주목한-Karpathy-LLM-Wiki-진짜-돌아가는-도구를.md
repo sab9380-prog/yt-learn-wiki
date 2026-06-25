@@ -1,0 +1,289 @@
+---
+title: "세계가 주목한 Karpathy LLM Wiki, 진짜 돌아가는 도구를 만들었습니다 | MindVault"
+source_url: https://youtube.com/watch?v=LxMhb8HIL7A
+video_id: LxMhb8HIL7A
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# 세계가 주목한 Karpathy LLM Wiki, 진짜 돌아가는 도구를 만들었습니다 | MindVault
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 안드레이 카파시의 LLM 위키 패턴을 구현한 오픈소스 도구 마인드볼트를 소개한다. AI 코딩 도구가 프로젝트 맥락을 잊어버리는 문제와 토큰 낭비를 해결하기 위해 개발된 도구로, 3레이어 아키텍처(검색-그래프-위키)를 통해 기존 대비 60배 토큰을 절약한다. 7개 AI 도구와 자동 연동되며, 13개 프로그래밍 언어를 지원한다. 한번 설치하면 백그라운드 데몬이 파일 변경을 감지해 지식 베이스를 자동 업데이트하고, 시스템 레벨에서 프로젝트 컨텍스트를 자동 주입한다.
+- **Core Message:** AI 코딩 도구의 맥락 망각 문제를 자동화된 지식 베이스 관리로 해결하여 토큰을 60배 절약한다
+> 같이 만든 건데 기억을 못 하는 겁니다
+> 약 60배 절감입니다. 이건 이론적인 수치가 아니라 실제로 제 프로젝트에서 측정한 결과입니다
+> AI가 기억을 참조하는 것을 까먹을 수가 없기 때문입니다
+❗ 기존 6만 토큰 → 마인드볼트 900토큰으로 60배 토큰 절감
+❗ 24개 파일에서 271개 노드와 373개 엣지로 구성된 지식 그래프 자동 생성
+❗ pip install 두 줄만으로 7개 AI 도구와 13개 언어 자동 지원
+
+## 📚 핵심 용어
+- **LLM 위키 패턴:** 원본 자료를 AI가 자동으로 읽고 분류해서 위키 형태의 지식 베이스로 정리하는 개념 / 도서관 사서가 새 책들을 받아서 자동으로 분류하고 카탈로그를 만들듯이, AI가 코드와 문서를 정리해 위키로 만든다. / 일반 RAG는 단순 검색, LLM 위키는 구조화된 지식 베이스. 위키는 정보 간 연결과 맥락을 보존한다.
+- **3레이어 아키텍처:** 검색-그래프-위키 순서로 동작하여 토큰 사용량을 최소화하는 마인드볼트의 핵심 구조 / 병원 진료 과정과 같다. 접수(검색)에서 기본 정보 확인, 검사실(그래프)에서 관계 파악, 의사(위키)가 최종 진단. / 기존 방식은 모든 파일을 AI가 읽음(6만 토큰), 3레이어는 단계별 필터링으로 900토큰만 사용.
+- **오토 컨텍스트 훅:** AI 도구 실행 시 시스템이 자동으로 프로젝트 맥락 정보를 주입하는 기능 / 회의실에 들어가면 자동으로 회의 자료가 책상에 준비되어 있는 것처럼, AI가 시작될 때 필요한 맥락이 자동 제공된다. / 수동 맥락 제공은 사용자가 매번 설명해야 함, 오토훅은 시스템이 강제로 주입해서 망각 불가능.
+- **백그라운드 데몬:** 파일 변경을 감지해 지식 베이스를 자동 업데이트하는 백그라운드 프로세스 / 집 앞 경비원이 24시간 지켜보며 택배가 오면 자동으로 받아두듯이, 파일 변경을 계속 감시해서 자동 처리한다. / 수동 빌드는 사용자가 직접 명령 실행, 데몬은 변경 감지 시 자동 업데이트. 사용자 개입이 불필요.
+
+## 🚀 실행 (Execute)
+- [ ] 마인드볼트 설치 및 테스트 (pip install mindbolt-ai, mindbolt install)
+  - 담당: 나
+  - 이유: 현재 AI 코딩 도구에서 맥락 망각과 토큰 낭비 문제가 있다면 즉시 해결 가능한 도구
+- [ ] 주요 프로젝트에 마인드볼트 적용하고 토큰 사용량 측정
+  - 담당: 나
+  - 이유: 실제 토큰 절약 효과를 확인하고 기존 워크플로우와 비교 분석 필요
+- 자료: GitHub 저장소: e-teamplace/mindbolt
+- 자료: 지원 AI 도구: Claude Code, Cursor, GitHub Copilot, Windsurf, Gemini Code Assist, Cline, Aider
+- 자료: BM25 알고리즘, NetworkX 라이브러리 (Python 생태계 기반 도구들)
+- Timeline: 1단계(오늘): 설치 및 기본 테스트 → 2단계(이번 주): 주요 프로젝트 적용 및 효과 측정 → 3단계: 팀 전체 도입 검토
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=LxMhb8HIL7A&t=0) 안드레이 카파시가 제한 LM 위키
+- [0:02](https://youtube.com/watch?v=LxMhb8HIL7A&t=2) 패턴을 아시나요? 원본 자료를 폴더에
+- [0:05](https://youtube.com/watch?v=LxMhb8HIL7A&t=5) 넣으면 AI가 읽고 분류해서 위키
+- [0:08](https://youtube.com/watch?v=LxMhb8HIL7A&t=8) 형태의 지식 베이스로 정리해 주는
+- [0:10](https://youtube.com/watch?v=LxMhb8HIL7A&t=10) 개념입니다. 저는이 아이디어가 좋아서
+- [0:13](https://youtube.com/watch?v=LxMhb8HIL7A&t=13) 실제로 동작하는 도구로 만들어
+- [0:15](https://youtube.com/watch?v=LxMhb8HIL7A&t=15) 봤습니다. 오늘은 그 도구 마인드
+- [0:18](https://youtube.com/watch?v=LxMhb8HIL7A&t=18) 볼트를 소개합니다.
+- [0:20](https://youtube.com/watch?v=LxMhb8HIL7A&t=20) 제가 실제로 겪은 일입니다. 저는
+- [0:23](https://youtube.com/watch?v=LxMhb8HIL7A&t=23) 클로드 코드로 텔레그램 봇을 직접
+- [0:25](https://youtube.com/watch?v=LxMhb8HIL7A&t=25) 만들어서 쓰고 있었습니다. 며칠에
+- [0:27](https://youtube.com/watch?v=LxMhb8HIL7A&t=27) 걸쳐서 꽤 복잡한 기능들을
+- [0:29](https://youtube.com/watch?v=LxMhb8HIL7A&t=29) 구현했거든요.
+- [0:31](https://youtube.com/watch?v=LxMhb8HIL7A&t=31) 그런데 새 세션을 열고 텔레그램 봇에
+- [0:33](https://youtube.com/watch?v=LxMhb8HIL7A&t=33) 대해 물어보니까 AI가 엔스로픽의
+- [0:35](https://youtube.com/watch?v=LxMhb8HIL7A&t=35) 공식 채널 기능을 설명하더라고요.
+- [0:38](https://youtube.com/watch?v=LxMhb8HIL7A&t=38) 제가 직접 만든 커스텀 봇이 아니라
+- [0:40](https://youtube.com/watch?v=LxMhb8HIL7A&t=40) 회사에서 공식으로 제공하는 완전히
+- [0:42](https://youtube.com/watch?v=LxMhb8HIL7A&t=42) 다른 기능을요. 같이 만든 건데
+- [0:44](https://youtube.com/watch?v=LxMhb8HIL7A&t=44) 기억을 못 하는 겁니다. 결국
+- [0:46](https://youtube.com/watch?v=LxMhb8HIL7A&t=46) 프로젝트 구조부터 어떤 파일에 뭐가
+- [0:48](https://youtube.com/watch?v=LxMhb8HIL7A&t=48) 있는지까지 전부 다시 설명해야
+- [0:50](https://youtube.com/watch?v=LxMhb8HIL7A&t=50) 했습니다. 그 과정에서 시간도
+- [0:51](https://youtube.com/watch?v=LxMhb8HIL7A&t=51) 낭비되고 토큰도 수만 개씩
+- [0:54](https://youtube.com/watch?v=LxMhb8HIL7A&t=54) 낭비됩니다. 이런 일이 프로젝트
+- [0:56](https://youtube.com/watch?v=LxMhb8HIL7A&t=56) 규모가 커질수록 더 자주
+- [0:58](https://youtube.com/watch?v=LxMhb8HIL7A&t=58) 발생합니다.이
+- [1:01](https://youtube.com/watch?v=LxMhb8HIL7A&t=61) 문제를 해결하기 위해 오픈소스
+- [1:03](https://youtube.com/watch?v=LxMhb8HIL7A&t=63) 생태계를 조사해 봤습니다. 이미
+- [1:05](https://youtube.com/watch?v=LxMhb8HIL7A&t=65) 비슷한 시도를 하는 도구들이
+- [1:07](https://youtube.com/watch?v=LxMhb8HIL7A&t=67) 있었습니다. QMD는 마크다운 문서를
+- [1:09](https://youtube.com/watch?v=LxMhb8HIL7A&t=69) 키워드로 빠르게 검색합니다. BM25
+- [1:12](https://youtube.com/watch?v=LxMhb8HIL7A&t=72) 알고리즘 기반이라 속도가 빠르고
+- [1:15](https://youtube.com/watch?v=LxMhb8HIL7A&t=75) 토큰도 안 씁니다. 그래피파이는 파일
+- [1:17](https://youtube.com/watch?v=LxMhb8HIL7A&t=77) 간의 관계를 지식 그래프로
+- [1:19](https://youtube.com/watch?v=LxMhb8HIL7A&t=79) 시각화합니다. 어떤 파일이 어떤
+- [1:21](https://youtube.com/watch?v=LxMhb8HIL7A&t=81) 파일과 연결되는지를 한 눈에 보여
+- [1:24](https://youtube.com/watch?v=LxMhb8HIL7A&t=84) 줍니다. LM 위키 컴파일러는 자료를
+- [1:27](https://youtube.com/watch?v=LxMhb8HIL7A&t=87) 분석해서 위키 문서를 자동
+- [1:29](https://youtube.com/watch?v=LxMhb8HIL7A&t=89) 생성합니다. 훌륭한 도구들이지만
+- [1:32](https://youtube.com/watch?v=LxMhb8HIL7A&t=92) 각각 따로 설치하고 설정해야 해서
+- [1:34](https://youtube.com/watch?v=LxMhb8HIL7A&t=94) 번거로웠습니다.
+- [1:35](https://youtube.com/watch?v=LxMhb8HIL7A&t=95) 그래서이 세 가지 접근법의 장점을
+- [1:37](https://youtube.com/watch?v=LxMhb8HIL7A&t=97) 참고해서
+- [1:39](https://youtube.com/watch?v=LxMhb8HIL7A&t=99) 처음부터 하나의 통합된 도구를 새로
+- [1:41](https://youtube.com/watch?v=LxMhb8HIL7A&t=101) 만들기로 했습니다.
+- [1:43](https://youtube.com/watch?v=LxMhb8HIL7A&t=103) 카파시의 LLM 위키는 훌륭한
+- [1:46](https://youtube.com/watch?v=LxMhb8HIL7A&t=106) 개념입니다. 하지만 개념을 실제
+- [1:48](https://youtube.com/watch?v=LxMhb8HIL7A&t=108) 도구로 만들려면 여러 기술적 과제가
+- [1:51](https://youtube.com/watch?v=LxMhb8HIL7A&t=111) 있습니다. 코드와 문서에서 구조를
+- [1:53](https://youtube.com/watch?v=LxMhb8HIL7A&t=113) 자동 추출해야 하고 위키를 생성하고
+- [1:56](https://youtube.com/watch?v=LxMhb8HIL7A&t=116) 점진적으로 관리해야 하고 검색
+- [1:58](https://youtube.com/watch?v=LxMhb8HIL7A&t=118) 인덱스도 만들어야 합니다. 세 자료가
+- [2:01](https://youtube.com/watch?v=LxMhb8HIL7A&t=121) 들어오면 기존 위키와 상호 참조도
+- [2:03](https://youtube.com/watch?v=LxMhb8HIL7A&t=123) 해야 합니다.이 과정을 자동화하는
+- [2:05](https://youtube.com/watch?v=LxMhb8HIL7A&t=125) 도구를 만들어 보자는 생각으로 마인드
+- [2:08](https://youtube.com/watch?v=LxMhb8HIL7A&t=128) 볼트를 개발했습니다. 검색,
+- [2:11](https://youtube.com/watch?v=LxMhb8HIL7A&t=131) 그래프,
+- [2:13](https://youtube.com/watch?v=LxMhb8HIL7A&t=133) 위키이
+- [2:14](https://youtube.com/watch?v=LxMhb8HIL7A&t=134) 세 가지를 처음부터 새로 설계해서
+- [2:16](https://youtube.com/watch?v=LxMhb8HIL7A&t=136) 하나의 패키지로 만든 것입니다.
+- [2:20](https://youtube.com/watch?v=LxMhb8HIL7A&t=140) 마인드볼트의 핵심은 쓰레이어
+- [2:22](https://youtube.com/watch?v=LxMhb8HIL7A&t=142) 아키텍처입니다.
+- [2:23](https://youtube.com/watch?v=LxMhb8HIL7A&t=143) 각 레이어가 다른 역할을 담당하면서
+- [2:26](https://youtube.com/watch?v=LxMhb8HIL7A&t=146) 토큰을 극적으로 절략합니다. 첫 번째
+- [2:29](https://youtube.com/watch?v=LxMhb8HIL7A&t=149) 레이어는 서치입니다.
+- [2:31](https://youtube.com/watch?v=LxMhb8HIL7A&t=151) BM25 알고리즘으로 키워드 검색을
+- [2:34](https://youtube.com/watch?v=LxMhb8HIL7A&t=154) 수행하는데 이건 완전히 로컬해서
+- [2:36](https://youtube.com/watch?v=LxMhb8HIL7A&t=156) 돌아가기 때문에 토큰 소비가
+- [2:38](https://youtube.com/watch?v=LxMhb8HIL7A&t=158) 0입니다. 두 번째 레이어는
+- [2:40](https://youtube.com/watch?v=LxMhb8HIL7A&t=160) 그래프입니다. 네트워크엑스
+- [2:42](https://youtube.com/watch?v=LxMhb8HIL7A&t=162) 라이브러리로 코드간의 관계를 그래프로
+- [2:44](https://youtube.com/watch?v=LxMhb8HIL7A&t=164) 구축하는데 약 백토큰 정도를
+- [2:46](https://youtube.com/watch?v=LxMhb8HIL7A&t=166) 사용합니다. 세 번째 레이어는
+- [2:49](https://youtube.com/watch?v=LxMhb8HIL7A&t=169) 위키입니다. 앞서 말씀드린 카파시의
+- [2:52](https://youtube.com/watch?v=LxMhb8HIL7A&t=172) LM 위키 패턴을 적용해서 위키
+- [2:54](https://youtube.com/watch?v=LxMhb8HIL7A&t=174) 문서를 자동 생성하는데 약 800
+- [2:56](https://youtube.com/watch?v=LxMhb8HIL7A&t=176) 토큰을 사용합니다. 세 레이어를
+- [2:58](https://youtube.com/watch?v=LxMhb8HIL7A&t=178) 합쳐도 쿼이 한 번에 약
+- [3:00](https://youtube.com/watch?v=LxMhb8HIL7A&t=180) 900토큰밖에 안 씁니다.
+- [3:03](https://youtube.com/watch?v=LxMhb8HIL7A&t=183) 설치는 놀라울 정도로 간단합니다.
+- [3:06](https://youtube.com/watch?v=LxMhb8HIL7A&t=186) 터미널에서 피인스톨 마인드볼트 AI를
+- [3:09](https://youtube.com/watch?v=LxMhb8HIL7A&t=189) 입력하고 마인드볼트 인스톨을 실행하면
+- [3:12](https://youtube.com/watch?v=LxMhb8HIL7A&t=192) 끝입니다. 딱 두 줄입니다. 인스톨
+- [3:15](https://youtube.com/watch?v=LxMhb8HIL7A&t=195) 명령어를 실행하면 마인드볼트가
+- [3:17](https://youtube.com/watch?v=LxMhb8HIL7A&t=197) 자동으로 여러분의 환경을 감지합니다.
+- [3:20](https://youtube.com/watch?v=LxMhb8HIL7A&t=200) 어떤 AI 도구를 쓰고 있는지 운영
+- [3:23](https://youtube.com/watch?v=LxMhb8HIL7A&t=203) 체제가 뭔지 로컬 LLM이 있는지
+- [3:26](https://youtube.com/watch?v=LxMhb8HIL7A&t=206) 전부 자동으로 파악해서 최적의 설정을
+- [3:28](https://youtube.com/watch?v=LxMhb8HIL7A&t=208) 잡아 줍니다. 복잡한 설정 파일을
+- [3:31](https://youtube.com/watch?v=LxMhb8HIL7A&t=211) 직접 만질 필요가 전혀 없습니다.
+- [3:33](https://youtube.com/watch?v=LxMhb8HIL7A&t=213) 초보자도 바로 시작할 수 있습니다.
+- [3:36](https://youtube.com/watch?v=LxMhb8HIL7A&t=216) 마인드볼트가 내부적으로 어떻게
+- [3:38](https://youtube.com/watch?v=LxMhb8HIL7A&t=218) 동작하는지 보겠습니다. 총 일곱 단계
+- [3:40](https://youtube.com/watch?v=LxMhb8HIL7A&t=220) 파이프라인입니다.
+- [3:42](https://youtube.com/watch?v=LxMhb8HIL7A&t=222) 먼저 디텍트 단계에서 코드,
+- [3:46](https://youtube.com/watch?v=LxMhb8HIL7A&t=226) 문서, PDF 등 모든 파일을 자동
+- [3:49](https://youtube.com/watch?v=LxMhb8HIL7A&t=229) 탐지합니다.
+- [3:51](https://youtube.com/watch?v=LxMhb8HIL7A&t=231) 익스트랙트 단계에서는 입력 유행에
+- [3:53](https://youtube.com/watch?v=LxMhb8HIL7A&t=233) 따라 자동 분기합니다. 코드 파일은
+- [3:56](https://youtube.com/watch?v=LxMhb8HIL7A&t=236) 트리시터로 함수와 클래스 구조를
+- [3:58](https://youtube.com/watch?v=LxMhb8HIL7A&t=238) 추출하고
+- [3:59](https://youtube.com/watch?v=LxMhb8HIL7A&t=239) 마크다운이나 PDF 같은 문서는
+- [4:02](https://youtube.com/watch?v=LxMhb8HIL7A&t=242) 헤더층과 링크 구조를 추출합니다.이
+- [4:05](https://youtube.com/watch?v=LxMhb8HIL7A&t=245) 과정에서 LM은 사용하지 않습니다.
+- [4:08](https://youtube.com/watch?v=LxMhb8HIL7A&t=248) 시멘틱 단계에서는 LLM 코드와 문서
+- [4:10](https://youtube.com/watch?v=LxMhb8HIL7A&t=250) 모두의 의미를 분석합니다. 빌드
+- [4:12](https://youtube.com/watch?v=LxMhb8HIL7A&t=252) 단계에서 그래프를 구축하고 클러스터
+- [4:15](https://youtube.com/watch?v=LxMhb8HIL7A&t=255) 단계에서 커뮤니티로 묶고 위키
+- [4:17](https://youtube.com/watch?v=LxMhb8HIL7A&t=257) 단계에서 위키 문서를 생성하고 마지막
+- [4:20](https://youtube.com/watch?v=LxMhb8HIL7A&t=260) 인덱스 단계에서 검색 인덱스를
+- [4:22](https://youtube.com/watch?v=LxMhb8HIL7A&t=262) 구축합니다.
+- [4:24](https://youtube.com/watch?v=LxMhb8HIL7A&t=264) 가장 중요한 부분입니다. 실제로
+- [4:26](https://youtube.com/watch?v=LxMhb8HIL7A&t=266) 얼마나 토큰을 절약할 수 있을까요?
+- [4:29](https://youtube.com/watch?v=LxMhb8HIL7A&t=269) 보통 AI가 프로젝트를 이해하려면
+- [4:31](https://youtube.com/watch?v=LxMhb8HIL7A&t=271) 소스 파일을 하나하나 읽어야 합니다.
+- [4:34](https://youtube.com/watch?v=LxMhb8HIL7A&t=274) 이렇게 하면 약 6만 토큰을
+- [4:35](https://youtube.com/watch?v=LxMhb8HIL7A&t=275) 소비합니다. 클로드 코드 기준으로
+- [4:38](https://youtube.com/watch?v=LxMhb8HIL7A&t=278) 하루에 몇 번만 이렇게 해도 비용이
+- [4:40](https://youtube.com/watch?v=LxMhb8HIL7A&t=280) 꽤 나가죠. 하지만 마인드볼트를 통해
+- [4:43](https://youtube.com/watch?v=LxMhb8HIL7A&t=283) 같은 정보를 얻으면 약 900
+- [4:44](https://youtube.com/watch?v=LxMhb8HIL7A&t=284) 토큰이면 충분합니다. 약 60배
+- [4:47](https://youtube.com/watch?v=LxMhb8HIL7A&t=287) 절감입니다. 이건 이론적인 수치가
+- [4:50](https://youtube.com/watch?v=LxMhb8HIL7A&t=290) 아니라 실제로 제 프로젝트에서 측정한
+- [4:53](https://youtube.com/watch?v=LxMhb8HIL7A&t=293) 결과입니다. 24개 파일에서 271개
+- [4:57](https://youtube.com/watch?v=LxMhb8HIL7A&t=297) 노드와 373개 엣지로 구성된 지식
+- [5:00](https://youtube.com/watch?v=LxMhb8HIL7A&t=300) 그래프가 생성되었고 AI가 프로젝트의
+- [5:03](https://youtube.com/watch?v=LxMhb8HIL7A&t=303) 전체 구조를 900 토큰만으로
+- [5:05](https://youtube.com/watch?v=LxMhb8HIL7A&t=305) 정확하게 파악할 수 있게 되었습니다.
+- [5:09](https://youtube.com/watch?v=LxMhb8HIL7A&t=309) 마인드볼트의 진짜 강점은
+- [5:11](https://youtube.com/watch?v=LxMhb8HIL7A&t=311) 자동화입니다.
+- [5:12](https://youtube.com/watch?v=LxMhb8HIL7A&t=312) 한번 설치하면 운영 체제에 맞는
+- [5:15](https://youtube.com/watch?v=LxMhb8HIL7A&t=315) 백그라운드 데몬이 자동으로
+- [5:16](https://youtube.com/watch?v=LxMhb8HIL7A&t=316) 등록됩니다.
+- [5:18](https://youtube.com/watch?v=LxMhb8HIL7A&t=318) 메고os는 런치 D디, 윈도우는
+- [5:21](https://youtube.com/watch?v=LxMhb8HIL7A&t=321) 테스크 스케줄러, 리누스는 시스템을
+- [5:24](https://youtube.com/watch?v=LxMhb8HIL7A&t=324) 사용합니다. 여러분이 파일을 수정하고
+- [5:26](https://youtube.com/watch?v=LxMhb8HIL7A&t=326) 커밋할 때마다 지식 그래프가 자동으로
+- [5:29](https://youtube.com/watch?v=LxMhb8HIL7A&t=329) 업데이트됩니다. 수동으로 다시 빌드할
+- [5:32](https://youtube.com/watch?v=LxMhb8HIL7A&t=332) 필요가 없습니다. 그리고 가장
+- [5:34](https://youtube.com/watch?v=LxMhb8HIL7A&t=334) 핵심적인 기능이 오토 컨텍스트
+- [5:36](https://youtube.com/watch?v=LxMhb8HIL7A&t=336) 훅입니다.
+- [5:37](https://youtube.com/watch?v=LxMhb8HIL7A&t=337) AI 도구가 실행될 때 시스템
+- [5:39](https://youtube.com/watch?v=LxMhb8HIL7A&t=339) 레벨에서 프로젝트 컨텍스트를 자동으로
+- [5:42](https://youtube.com/watch?v=LxMhb8HIL7A&t=342) 주입합니다. 이게 왜 중요하냐면
+- [5:45](https://youtube.com/watch?v=LxMhb8HIL7A&t=345) AI가 기억을 참조하는 것을 까먹을
+- [5:47](https://youtube.com/watch?v=LxMhb8HIL7A&t=347) 수가 없기 때문입니다. 사용자가 매번
+- [5:50](https://youtube.com/watch?v=LxMhb8HIL7A&t=350) 기억해서 명령할 필요 없이 시스템이
+- [5:52](https://youtube.com/watch?v=LxMhb8HIL7A&t=352) 강제로 넣어 주니까요.
+- [5:55](https://youtube.com/watch?v=LxMhb8HIL7A&t=355) 마인드볼트는 현재 일곱 개의 AI
+- [5:58](https://youtube.com/watch?v=LxMhb8HIL7A&t=358) 코딩 도구를 자동으로 감지하고
+- [6:00](https://youtube.com/watch?v=LxMhb8HIL7A&t=360) 연동합니다.
+- [6:02](https://youtube.com/watch?v=LxMhb8HIL7A&t=362) 클로드 코드 커서 기터브 코파일럿
+- [6:07](https://youtube.com/watch?v=LxMhb8HIL7A&t=367) 윈드프
+- [6:09](https://youtube.com/watch?v=LxMhb8HIL7A&t=369) 제미나이 코드시스트
+- [6:12](https://youtube.com/watch?v=LxMhb8HIL7A&t=372) 클라 에이더이 도구들을 쓰고 계시다면
+- [6:16](https://youtube.com/watch?v=LxMhb8HIL7A&t=376) 마인드볼트 인스톨 한 번이면 전부
+- [6:19](https://youtube.com/watch?v=LxMhb8HIL7A&t=379) 자동으로 연결됩니다.
+- [6:21](https://youtube.com/watch?v=LxMhb8HIL7A&t=381) 각 도구의 설정 파일 위치와 형식이
+- [6:23](https://youtube.com/watch?v=LxMhb8HIL7A&t=383) 다 다른데 마인드볼트가 그걸 전부
+- [6:26](https://youtube.com/watch?v=LxMhb8HIL7A&t=386) 알아서 처리합니다.
+- [6:27](https://youtube.com/watch?v=LxMhb8HIL7A&t=387) 그리고 LLM도 자동으로 감지합니다.
+- [6:31](https://youtube.com/watch?v=LxMhb8HIL7A&t=391) 로컬의 잼마나 올라마가 설치되어
+- [6:32](https://youtube.com/watch?v=LxMhb8HIL7A&t=392) 있으면 무료로 바로 사용합니다.
+- [6:35](https://youtube.com/watch?v=LxMhb8HIL7A&t=395) 대부분의 분들처럼 클로드 코드나
+- [6:37](https://youtube.com/watch?v=LxMhb8HIL7A&t=397) 커서를 구독 중이시라면 별도 설정
+- [6:40](https://youtube.com/watch?v=LxMhb8HIL7A&t=400) 없이 구독 토큰으로 처리됩니다.
+- [6:42](https://youtube.com/watch?v=LxMhb8HIL7A&t=402) API 키를 따로 발급받을 필요가
+- [6:44](https://youtube.com/watch?v=LxMhb8HIL7A&t=404) 없습니다. 만약 API 키가 설정되어
+- [6:47](https://youtube.com/watch?v=LxMhb8HIL7A&t=407) 있는 경우에만 예상 비용을 먼저 보여
+- [6:49](https://youtube.com/watch?v=LxMhb8HIL7A&t=409) 드리고 동의를 받은 후에 사용합니다.
+- [6:53](https://youtube.com/watch?v=LxMhb8HIL7A&t=413) 지원하는 프로그래밍 언어도
+- [6:55](https://youtube.com/watch?v=LxMhb8HIL7A&t=415) 13개입니다. 파이썬 타스크립트
+- [6:59](https://youtube.com/watch?v=LxMhb8HIL7A&t=419) 자바스크립트
+- [7:01](https://youtube.com/watch?v=LxMhb8HIL7A&t=421) 러스트 자바
+- [7:03](https://youtube.com/watch?v=LxMhb8HIL7A&t=423) 스위프트 코틀린
+- [7:06](https://youtube.com/watch?v=LxMhb8HIL7A&t=426) C플러스플러스
+- [7:09](https://youtube.com/watch?v=LxMhb8HIL7A&t=429) 루비 C#프까지 현재 실무에서 쓰이는
+- [7:12](https://youtube.com/watch?v=LxMhb8HIL7A&t=432) 주요 언어를 거의 다 커버합니다.
+- [7:14](https://youtube.com/watch?v=LxMhb8HIL7A&t=434) 여러분이 어떤 언어로 개발하든 마인드
+- [7:16](https://youtube.com/watch?v=LxMhb8HIL7A&t=436) 볼트를 바로 적용할 수 있습니다.
+- [7:18](https://youtube.com/watch?v=LxMhb8HIL7A&t=438) 그리고 클로드 코드 사용자라면 더
+- [7:21](https://youtube.com/watch?v=LxMhb8HIL7A&t=441) 좋은 소식이 있습니다. 메모리 MD
+- [7:23](https://youtube.com/watch?v=LxMhb8HIL7A&t=443) 파일과의 통합 기능입니다. 클로드
+- [7:25](https://youtube.com/watch?v=LxMhb8HIL7A&t=445) 코드에는 세션 간의 중요한 정보를
+- [7:27](https://youtube.com/watch?v=LxMhb8HIL7A&t=447) 기억하기 위한 메모리 MD 파일이
+- [7:29](https://youtube.com/watch?v=LxMhb8HIL7A&t=449) 있는데 마인드볼트가이 메모리 파일의
+- [7:32](https://youtube.com/watch?v=LxMhb8HIL7A&t=452) 내용을 코드 분석 결과와 자동으로
+- [7:34](https://youtube.com/watch?v=LxMhb8HIL7A&t=454) 합쳐 줍니다. 코드 구조와 사용자
+- [7:36](https://youtube.com/watch?v=LxMhb8HIL7A&t=456) 메모가 하나에 통합된 지식 베이스로
+- [7:38](https://youtube.com/watch?v=LxMhb8HIL7A&t=458) 합쳐지는 겁니다.
+- [7:40](https://youtube.com/watch?v=LxMhb8HIL7A&t=460) 마지막으로 글로벌 모드입니다.
+- [7:43](https://youtube.com/watch?v=LxMhb8HIL7A&t=463) 개발자라면 보통 프로젝트를 여러 개
+- [7:45](https://youtube.com/watch?v=LxMhb8HIL7A&t=465) 동시에 관리하잖아요. 마인드볼트의
+- [7:47](https://youtube.com/watch?v=LxMhb8HIL7A&t=467) 글로벌 모드는 여러분의 디렉토리를
+- [7:49](https://youtube.com/watch?v=LxMhb8HIL7A&t=469) 자동으로 스캔해서 프로젝트뿐 아니라
+- [7:52](https://youtube.com/watch?v=LxMhb8HIL7A&t=472) 문서, 메모리 파일까지 모두
+- [7:54](https://youtube.com/watch?v=LxMhb8HIL7A&t=474) 찾아냅니다. 패키지 제이슨,
+- [7:56](https://youtube.com/watch?v=LxMhb8HIL7A&t=476) 카고토음, 퍼스펙, 야음 등의 마커
+- [7:59](https://youtube.com/watch?v=LxMhb8HIL7A&t=479) 파일로 프로젝트를 식별하고 클로드
+- [8:01](https://youtube.com/watch?v=LxMhb8HIL7A&t=481) 코드의 메모리 파일도 자동으로
+- [8:03](https://youtube.com/watch?v=LxMhb8HIL7A&t=483) 통합합니다. 발견된 모든 자료의
+- [8:05](https://youtube.com/watch?v=LxMhb8HIL7A&t=485) 지식을 하나로 통합 관리합니다. 제
+- [8:07](https://youtube.com/watch?v=LxMhb8HIL7A&t=487) 경우 아홉 개 프로젝트에서 총
+- [8:09](https://youtube.com/watch?v=LxMhb8HIL7A&t=489) 572개의 노드가 생성되었고
+- [8:11](https://youtube.com/watch?v=LxMhb8HIL7A&t=491) 프로젝트간 연결도 33개가 자동으로
+- [8:14](https://youtube.com/watch?v=LxMhb8HIL7A&t=494) 발견되었습니다.
+- [8:16](https://youtube.com/watch?v=LxMhb8HIL7A&t=496) 마인드볼트의 가장 큰 차별점은 위키가
+- [8:19](https://youtube.com/watch?v=LxMhb8HIL7A&t=499) 시간이 지날수록 풍부해진다는
+- [8:21](https://youtube.com/watch?v=LxMhb8HIL7A&t=501) 것입니다. 이건 카파시의 LLM 위키
+- [8:24](https://youtube.com/watch?v=LxMhb8HIL7A&t=504) 패턴에서 가져온 핵심 아이디어입니다.
+- [8:27](https://youtube.com/watch?v=LxMhb8HIL7A&t=507) 처음 프로젝트를 분석하면 코드,
+- [8:30](https://youtube.com/watch?v=LxMhb8HIL7A&t=510) 문서, 설정 파일을 모두 읽어서
+- [8:33](https://youtube.com/watch?v=LxMhb8HIL7A&t=513) 위키가 생성됩니다.
+- [8:36](https://youtube.com/watch?v=LxMhb8HIL7A&t=516) 이후 파일이 변경되면 변경된 부분만
+- [8:38](https://youtube.com/watch?v=LxMhb8HIL7A&t=518) 업데이트되고
+- [8:40](https://youtube.com/watch?v=LxMhb8HIL7A&t=520) 기존 위키의 내용은 보존됩니다.
+- [8:43](https://youtube.com/watch?v=LxMhb8HIL7A&t=523) 사용자가 직접 추가한 메모도 절대
+- [8:45](https://youtube.com/watch?v=LxMhb8HIL7A&t=525) 삭제되지 않습니다. 외부 자료를
+- [8:48](https://youtube.com/watch?v=LxMhb8HIL7A&t=528) 넣으면 기존 커뮤니티에 자동으로
+- [8:50](https://youtube.com/watch?v=LxMhb8HIL7A&t=530) 분류되어 병합됩니다. 지의한 내용도
+- [8:53](https://youtube.com/watch?v=LxMhb8HIL7A&t=533) 위키에 축적됩니다. 한번 물어본
+- [8:55](https://youtube.com/watch?v=LxMhb8HIL7A&t=535) 질문은 다음에 더 빠르게 찾을 수
+- [8:57](https://youtube.com/watch?v=LxMhb8HIL7A&t=537) 있습니다. 그리고 같은 개념에 대해
+- [9:00](https://youtube.com/watch?v=LxMhb8HIL7A&t=540) 서로 다른 설명이 있으면 자동으로
+- [9:02](https://youtube.com/watch?v=LxMhb8HIL7A&t=542) 모순을 탐지합니다.
+- [9:04](https://youtube.com/watch?v=LxMhb8HIL7A&t=544) 마인드볼트는 완전한 오픈 소스입니다.
+- [9:07](https://youtube.com/watch?v=LxMhb8HIL7A&t=547) 기타브의 e팀플레스/마인드볼트에서
+- [9:09](https://youtube.com/watch?v=LxMhb8HIL7A&t=549) 전체 소스 코드를 확인하실 수 있고
+- [9:13](https://youtube.com/watch?v=LxMhb8HIL7A&t=553) 마인드볼트 AI로 바로 설치하실 수
+- [9:15](https://youtube.com/watch?v=LxMhb8HIL7A&t=555) 있습니다. 정리하겠습니다.
+- [9:17](https://youtube.com/watch?v=LxMhb8HIL7A&t=557) 마인드볼트는 카파시의 LLM 위키
+- [9:19](https://youtube.com/watch?v=LxMhb8HIL7A&t=559) 패턴에서 영감을 받아든 오픈소스
+- [9:22](https://youtube.com/watch?v=LxMhb8HIL7A&t=562) 도구입니다. 쓰레이어 아키텍처로
+- [9:25](https://youtube.com/watch?v=LxMhb8HIL7A&t=565) 쿼리당 약 900 토큰 기존 대비
+- [9:27](https://youtube.com/watch?v=LxMhb8HIL7A&t=567) 60배 절감 일곱개 AI 도구 자동
+- [9:31](https://youtube.com/watch?v=LxMhb8HIL7A&t=571) 연동 13개 언어 지원 크로스 플랫폼
+- [9:34](https://youtube.com/watch?v=LxMhb8HIL7A&t=574) 대몬까지 피 인스톨 두 줄이면
+- [9:36](https://youtube.com/watch?v=LxMhb8HIL7A&t=576) 끝입니다. AI 코딩 도구가 맥락을
+- [9:39](https://youtube.com/watch?v=LxMhb8HIL7A&t=579) 잊어버리는 문제. 그리고 매번 파일을
+- [9:42](https://youtube.com/watch?v=LxMhb8HIL7A&t=582) 다시 읽느라 토큰이 낭비되는 문제.이
+- [9:45](https://youtube.com/watch?v=LxMhb8HIL7A&t=585) 이 두 가지를 동시에 해결하고 싶으신
+- [9:47](https://youtube.com/watch?v=LxMhb8HIL7A&t=587) 분들께 추천드립니다. 오늘 영상이
+- [9:50](https://youtube.com/watch?v=LxMhb8HIL7A&t=590) 도움이 되셨다면 구독과 좋아요
+- [9:52](https://youtube.com/watch?v=LxMhb8HIL7A&t=592) 부탁드립니다. 시청해 주셔서
+- [9:54](https://youtube.com/watch?v=LxMhb8HIL7A&t=594) 감사합니다.
