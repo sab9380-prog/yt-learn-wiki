@@ -1,0 +1,442 @@
+---
+title: "[한국어더빙] Claude Design보다 더 나은 도구는 이미 있습니다"
+source_url: https://youtube.com/watch?v=8Zb_HSIDzRQ
+video_id: 8Zb_HSIDzRQ
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# \[한국어더빙\] Claude Design보다 더 나은 도구는 이미 있습니다
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 클로드 디자인이 출시되면서 디자인 업계에 큰 화제가 됐지만, 실제로는 과장된 측면이 많다. 클로드 디자인은 본질적으로 클로드 코드를 재포장한 것에 가깝고, 클로드 코드만으로도 같거나 더 나은 결과를 얻을 수 있다. 클로드 디자인의 뛰어난 성과는 도구 자체보다는 Opus 4.7 모델의 향상된 비전 성능 덕분이다. 클로드 코드는 더 저렴하고, 무제한 반복 가능하며, 실제 배포 가능한 코드를 생성하고, Git 연동 등 더 강력한 기능들을 제공한다.
+- **Core Message:** 클로드 디자인은 마케팅적 과장이 많고, 실무에서는 클로드 코드가 더 효율적이고 실용적인 대안이다.
+> 클로드 디자인은 말 그대로 클로드 코드를 다른 도구처럼 다시 포장해 판 것에 가깝습니다
+> 가장 높은 맥스 플랜을 써도 디자인을 20번쯤 반복하자마자 한도가 금방 바닥났다
+> 클로드 디자인 결과물이 그렇게 인상적으로 보이는 진짜 이유는 사실 오퍼스 4.7입니다
+❗ 클로드 디자인 출시로 피그마 주가가 하락했다
+❗ Opus 4.7은 기존 4.6의 115만 화소에서 375만 화소로 3배 이상 해상도가 향상됐다
+❗ 소셜미디어의 인상적인 디자인 데모 대부분이 비디오 배경을 사용한 것이다
+
+## 📚 핵심 용어
+- **클로드 디자인:** Anthropic이 출시한 디자인 전용 AI 도구로, 프로토타입과 디자인 시안을 생성한다. / 요리 완성품만 나오는 자동 요리기와 같다. 멋진 결과물이 나오지만, 재료 조절이나 중간 과정 수정이 어렵다. / 클로드 코드는 실제 코드를 생성하지만, 클로드 디자인은 버려지는 프로토타입만 만든다. 배포까지 고려하면 코드가 유리하다.
+- **Opus 4.7:** 비전 성능이 크게 향상된 Claude의 최신 모델로, 375만 화소 이미지까지 분석 가능하다. / 안경을 새로 맞춘 것과 같다. 예전에는 흐릿했던 세부사항까지 선명하게 보고 더 정확한 작업을 한다. / 4.6은 115만 화소였지만 4.7은 375만 화소까지 처리한다. 해상도 차이로 디자인 품질이 크게 달라진다.
+- **MCP 서버:** Model Context Protocol의 줄임말로, AI가 외부 도구와 연결하여 기능을 확장하는 방식이다. / 스마트폰의 앱스토어와 같다. 기본 기능 외에 필요한 도구들을 설치해서 AI의 능력을 확장한다. / 클로드 디자인은 기본 기능만 쓰지만, 클로드 코드는 MCP로 다양한 도구를 연결해 훨씬 유연하다.
+
+## 🚀 실행 (Execute)
+- [ ] 클로드 코드에서 디자인 생성용 스킬(프롬프트 템플릿) 작성 및 테스트
+  - 담당: 나
+  - 이유: 클로드 디자인과 같은 질문 흐름을 구현해 비용 효율적으로 디자인 작업 가능
+- [ ] MCP 서버 설정으로 외부 도구(컴포넌트 라이브러리, Git) 연결
+  - 담당: 나
+  - 이유: 클로드 코드의 확장성을 활용해 더 강력한 디자인 워크플로우 구축
+- 자료: 데스프로(영상 제작자 자료실)에서 스킬과 리소스 다운로드
+- 자료: ZCN, 아세토니티, 히어로 UI 등 컴포넌트 라이브러리
+- 자료: 스크롤 리텔링 오픈소스 스킬 (확인 필요)
+- 자료: 프롬프트 템플릿 사이트들
+- Timeline: 1주차에 기본 스킬 작성하고 테스트, 2주차에 MCP 연결로 고도화. 클로드 디자인 구독 전에 클로드 코드로 충분한 결과를 얻을 수 있는지 검증 우선.
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=0) 클로드 디자인이 나오면서 디자인 판이
+- [0:01](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=1) 완전히 바뀌었습니다. 하지만 실제로는
+- [0:04](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=4) 사람들이 생각하는 것보다 훨씬 더
+- [0:05](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=5) 과장됐습니다. 그래서 X에서 보신
+- [0:07](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=7) 내용만으로는 전체 그림을 알 수
+- [0:09](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=9) 없습니다. 클로드 디자인이 뭔가
+- [0:11](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=11) 회기적인 걸 하고 있다고 생각하시거나
+- [0:12](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=12) 돌아다니는 그 엄청난 대모들을 보고
+- [0:13](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=13) 흔들리셨다면요. 그게 당장 갈아타야
+- [0:15](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=15) 한다는 증거라고 보신다면 그건
+- [0:16](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=16) 틀렸습니다. 사실 그 디자인들이 좋아
+- [0:19](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=19) 보이는 이유는이 도구 자체가
+- [0:20](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=20) 아닙니다. 오히려 사람들이 쓰는
+- [0:22](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=22) 방식이 자신들에게 불리하게 작용하고
+- [0:23](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=23) 있는데 아직 대부분은 그걸 눈치채지
+- [0:25](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=25) 못했습니다. 클로드 디자인은 디자인
+- [0:27](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=27) 업계를 뒤집을 혁신적인 제품처럼
+- [0:28](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=28) 마케팅됐습니다. 출시되자마자 사람들은
+- [0:31](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=31) 이걸 피그마 킬러라고 부르거나
+- [0:32](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=32) 디자이너의 종말이라고까지 말했습니다.
+- [0:35](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=35) 화장이 워낙 커서 피그마 주가는 계속
+- [0:36](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=36) 떨어졌고 기억 가치에도 타격이
+- [0:37](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=37) 갔습니다. 이건 사실적인 프로토타입을
+- [0:40](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=40) 만드는 도구입니다. 와이어 프레임,
+- [0:42](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=42) 디자인 시안, 피치덱 같은 여러
+- [0:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=43) 결과물을 만들 수 있습니다. 하지만
+- [0:45](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=45) 현실은 실제보다 화재성이 더 큰
+- [0:47](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=47) 도구에 가깝습니다. 말 그대로 클로드
+- [0:49](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=49) 코드를 다른 도구처럼 다시 포장에 판
+- [0:50](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=50) 것에 가깝습니다. 클로드 코드로도
+- [0:52](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=52) 똑같은 건 물론이고 어쩌면 그 이상도
+- [0:54](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=54) 할 수 있기 때문입니다. 예를 들면
+- [0:56](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=56) 클로드 디자인의 편집이나 코멘트 같은
+- [0:57](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=57) 기능들입니다. 하지만 적절한 도구만
+- [0:59](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=59) 붙여주면 여기 있는 기능 중 클로드
+- [1:01](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=61) 코드가 못 할 건 없습니다. 그리고
+- [1:03](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=63) 이걸 클로드 코드 제포장이라고 하는
+- [1:05](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=65) 건 테스트도 안 해보고 하는 말이
+- [1:06](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=66) 아닙니다. 우리는 커뮤니티를 만들어
+- [1:08](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=68) 달라는 간단한 프로젝트를 넣었습니다.
+- [1:10](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=70) 그리고 중간에 나온 질문들에
+- [1:11](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=71) 답해줬습니다. 결과로 나온 두 가지
+- [1:13](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=73) 디자인은 그 자체로 인상적이었고
+- [1:15](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=75) 예전에 클로드가 만들던 랜딩
+- [1:16](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=76) 페이지보다 훨씬 나왔지만 문제도
+- [1:18](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=78) 많았습니다. 한 버전은 가격 섹션에서
+- [1:20](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=80) 잘려 있었고 푸터도 아예 없었습니다.
+- [1:23](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=83) 그래서 비슷한 프롬프트로 클로드
+- [1:25](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=85) 코드도 테스트해 봤습니다. 비교를
+- [1:27](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=87) 위해 오퍼스 4.7을 하이 에퍼트로
+- [1:29](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=89) 돌렸고 나온 디자인은 클로드 디자인의
+- [1:31](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=91) 결과물과 충분히 만먹었습니다.
+- [1:33](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=93) 물론 가입 버튼에 폰트색이 잘못
+- [1:35](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=95) 잡히는 시계 자잘한 문제는 조금
+- [1:37](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=97) 있었습니다.
+- [1:39](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=99) 그래도 전체적으로는 정말 잘 만들어진
+- [1:40](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=100) 디자인이었습니다.
+- [1:42](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=102) 그것도 클로드 디자인에 들어 있는
+- [1:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=103) 디자인 전용하에서나 특별한 프롬프팅
+- [1:45](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=105) 없이 우리가 거의 아무것도 안 준
+- [1:47](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=107) 상태에서 나온 결과였습니다.
+- [1:49](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=109) 하지만 아마 여기저기서 보신 데모들은
+- [1:51](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=111) 꽤 인상적이었을 텐데 그 뒤에는
+- [1:52](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=112) 숨겨진 맥락이 있습니다. 소셜
+- [1:55](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=115) 미디어에 퍼지는 대부분의 사례는이
+- [1:56](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=116) 도구가 혼자 실제로 해내는 것보다
+- [1:58](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=118) 과장된 기대감에 더 기대고 있습니다.
+- [2:00](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=120) 사람들은 긴 워크플로를 거쳐 디자인을
+- [2:01](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=121) 만들어 냅니다. 그러고는 마치 클로드
+- [2:03](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=123) 디자인이 한 번에 전부 만들어낸
+- [2:05](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=125) 것처럼 보여줍니다. 하지만 그
+- [2:07](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=127) 워크플로들은 굳이 클로드 디자인
+- [2:08](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=128) 없이도 클로드 코드에서 그대로 돌릴
+- [2:10](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=130) 수 있습니다. 그래서이 제품이
+- [2:12](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=132) 디자인어용으로 만들어졌다고 해도
+- [2:13](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=133) 사실은 클로드 디자인보다 클로드
+- [2:15](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=135) 코드를 쓰는 편이 낫습니다. 그래야
+- [2:17](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=137) 더 다양한 시안을 시험해 보고 더
+- [2:18](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=138) 많이 실험하면서 클로드 디자인과
+- [2:20](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=140) 같거나 그보다 더 나은 결과까지 얻을
+- [2:22](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=142) 수 있기 때문입니다. 그러면 클로드
+- [2:24](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=144) 코드로 더 여러 번 반복해 볼 수
+- [2:25](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=145) 있고 디자인이 마풀리기 시작할 때
+- [2:27](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=147) 끊기지도 않습니다. 매번 처음부터
+- [2:29](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=149) 다시 시작할 필요도 줄어듭니다. 이미
+- [2:31](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=151) 있는 사이트 위에 계속 쌓아가니까 각
+- [2:33](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=153) 디자인의 방향을 더 잘 통제할 수
+- [2:35](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=155) 있습니다. 그리고 클로드 코드가
+- [2:37](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=157) 만들어내는 건 전부 실제 코드라서
+- [2:39](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=159) 결과물도 버리는 프로토타입이 아니라
+- [2:41](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=161) 다른 사람이 다시 만들 필요 없이
+- [2:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=163) 바로 제품에 넣어 배포할 수 있는
+- [2:44](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=164) 수준입니다. 나중에 다시 숨을 필요도
+- [2:46](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=166) 없고요. 게다가 클로드 디자인은 비용
+- [2:48](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=168) 문제도 있습니다. 클로드 코드는 같은
+- [2:50](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=170) 일을 훨씬 더 저렴하게 할 수
+- [2:51](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=171) 있습니다. 반면 클로드 디자인은
+- [2:54](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=174) 별도로 분리되 있고 주간 한도에 따로
+- [2:56](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=176) 잡히며 다른 한도와는 별개로
+- [2:58](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=178) 계산되지만 다른 클로드 앱에서 모델을
+- [3:00](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=180) 쓸 때 기대하는 것보다 사용량이 훨씬
+- [3:02](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=182) 빨리 소진됩니다.
+- [3:05](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=185) 이건 디자이너들에게 가장 치명적인데
+- [3:07](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=187) 쿼터가 너무 낮아서 필요한만큼 실험도
+- [3:09](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=189) 못 해보고 디자인을 몇 번 돌려보지도
+- [3:11](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=191) 못한 채 한도가 끝나 버리기
+- [3:12](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=192) 때문입니다.
+- [3:14](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=194) 그리고 바로이 점을 많은 사람들이
+- [3:16](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=196) 불만으로 말하고 있습니다. 가장 높은
+- [3:19](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=199) 맥스 플랜을 써도 디자인을 20번쯤
+- [3:21](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=201) 반복하자마자 한도가 금방 바닥났다는
+- [3:23](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=203) 겁니다.
+- [3:25](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=205) 또 다른 많은 사람들은 한시간 만에
+- [3:26](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=206) 한도에 걸렸는데도 결국 클로드 코드로
+- [3:28](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=208) 한 번에 구현할 수 있을 정도의
+- [3:30](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=210) 단순한 디자인 밖에 못 얻었다고
+- [3:31](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=211) 말합니다. 그러니 작업 중인
+- [3:33](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=213) 워크플로를 끝내기도 전에 한도에 막혀
+- [3:35](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=215) 버려서 실무에서는 사실상 쓰기 어렵고
+- [3:38](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=218) 클로드 코드 한도보다 훨씬
+- [3:39](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=219) 불리합니다.
+- [3:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=223) 클로드 디자인 결과물이 그렇게
+- [3:44](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=224) 인상적으로 보이는 진짜 이유는 사실
+- [3:46](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=226) 오퍼스 4.7입니다. 오퍼스 4.7은
+- [3:48](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=228) 다시 최첨단 모델로 올라섰고 성능도
+- [3:50](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=230) 놀라울만큼 좋으며 거의 모든
+- [3:52](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=232) 벤치마크에서 더 잘 나옵니다. 하지만
+- [3:54](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=234) 여기서 정말 중요한 업그레이드는 비전
+- [3:56](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=236) 성능입니다.이 모델은 시각 인식이
+- [3:58](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=238) 훨씬 좋아졌고 예전보다 훨씬 높은
+- [4:01](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=241) 해상도로 이미지를 볼 수 있습니다.
+- [4:03](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=243) 4.6은 115만 화소 해상도의
+- [4:05](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=245) 이미지를 분석할 수 있었지만 4.7은
+- [4:07](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=247) 375만 화소까지 분석할 수
+- [4:09](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=249) 있습니다.
+- [4:11](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=251) 즉 레퍼런스 이미지를 보고 디자인을
+- [4:14](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=254) 훨씬 더 잘 이해할 수 있다는
+- [4:15](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=255) 뜻입니다. 레퍼런스 디자인을 훨씬 더
+- [4:18](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=258) 선명하게 처리하고 예전엔 놓쳤을
+- [4:20](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=260) 요소들까지 잡아냅니다.이
+- [4:23](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=263) 모델 업그레이드로 엔스로픽은 클로드
+- [4:25](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=265) 모델이 약했고 손이 많이 가던 유일한
+- [4:27](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=267) 빈틈 즉 프런트 엔드 디자인 영역을
+- [4:29](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=269) 메웠습니다.
+- [4:31](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=271) 그래서 작업을 수행할 때 더
+- [4:32](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=272) 창의적으로 움직이고 혼자서도 더 높은
+- [4:34](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=274) 품질이 인터페이스와 디자인을 만들어
+- [4:35](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=275) 냅니다. 그래서 클로드 디자인이
+- [4:37](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=277) 나왔을 때 엄청난 디자인 결과물
+- [4:39](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=279) 덕분에 크게 화제가 됐습니다. 하지만
+- [4:42](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=282) 실제로 더 좋아진 건 모델이었습니다.
+- [4:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=283) 풀 자체가 갑자기 엄청나게 좋아진
+- [4:45](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=285) 것은 아닙니다. 지금 보이는 이런
+- [4:46](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=286) 다른 비조를 만든 건 모델의
+- [4:47](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=287) 현상이라는 겁니다. 클로드 디자인은
+- [4:49](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=289) 엔스로픽이 기존 기술을 더 영리하게
+- [4:50](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=290) 포장에 팔고 거기에 화제를 붙인 또
+- [4:52](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=292) 하나의 방식이었습니다. 이제는 클로드
+- [4:54](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=294) 디자인에서 얻는 장점을 클로드
+- [4:55](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=295) 코드에서도 똑같이 어쩌면 더 잘 누릴
+- [4:57](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=297) 수 있습니다. 간단한 스킬만 만들면
+- [4:59](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=299) 클로드 디자인의 질문 흐름도 클로드
+- [5:00](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=300) 코드에서 그대로 제언할 수 있습니다.
+- [5:02](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=302) 클로드 디자인에서 프로젝트를 만들면
+- [5:04](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=304) 프롬프트를 넣고 디자인 방향을 제대로
+- [5:06](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=306) 파악하려고 질문을 많이 합니다.
+- [5:10](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=310) 클로드 코드의 플래닝 모드보다 훨씬
+- [5:12](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=312) 더 많이 묻지만 스킬로도 똑같이 할
+- [5:14](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=314) 수 있습니다. 스킬에는 클로드
+- [5:17](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=317) 디자인처럼 질문 세션을 진행하는
+- [5:18](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=318) 방법이 들어 있고 프롬프트의 빈틈을
+- [5:20](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=320) 질문으로 메우면서 무엇을 만들어야
+- [5:22](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=322) 하는지도 물어보게 합니다.
+- [5:26](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=326) 후속 질문을 언제 던질지 그리고
+- [5:28](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=328) 흐름을 실제로 어떻게 진행할지도
+- [5:29](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=329) 정의해 둡니다. 세션 진행용 예시
+- [5:32](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=332) 질문과 질문 라이브러리도 들어 있고
+- [5:34](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=334) 사이트 아스카의 레아웃까지 있어서
+- [5:36](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=336) 랜딩 페이지 요소 배치도 정할 수
+- [5:38](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=338) 있습니다.
+- [5:41](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=341) 그래서 프롬프트를 주면 스킬을
+- [5:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=343) 활용해서 스스로 찾은 빈틈에 맞는
+- [5:45](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=345) 질문들을 합니다. 클로드 디자인처럼
+- [5:48](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=348) 여러 영역에 걸쳐 질문을 던지고
+- [5:50](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=350) 구현에 필요한 정보가 다 모이면 바로
+- [5:53](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=353) 만들기 시작합니다.
+- [5:55](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=355) 가장 좋은 점은 코드를 바로 뽑아
+- [5:56](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=356) 준다는 것입니다. 그래서 디자인을
+- [5:58](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=358) 코드로 넘기는 핸드오프가 없습니다.
+- [6:00](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=360) 그리고이 방식이면 원하는만큼 계속
+- [6:01](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=361) 반복해 볼 수 있습니다. 한 시간
+- [6:02](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=362) 만에 한 도를 다 써 버릴까 걱정할
+- [6:04](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=364) 필요도 없습니다. 같은 종류의
+- [6:06](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=366) 프롬프트와 비슷한 질문 흐름으로 만든
+- [6:08](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=368) 클로드 코드의 UI 결과물은 클로드
+- [6:09](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=369) 디자인이 만든 것과 거의
+- [6:10](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=370) 비슷했습니다. 다만 클로드 디자인이
+- [6:13](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=373) 몇몇 부분에서는 좀 더 앞섰습니다.
+- [6:16](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=376) 작은 애니메이션을 더해서 웹사이트가
+- [6:17](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=377) 더 몰입감 있고 눈깨각게 보이도록
+- [6:19](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=379) 만든다는 점에서 그렇습니다. 그런데
+- [6:22](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=382) 계속 가기 전에 스폰서인 헤이젠
+- [6:24](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=384) 이야기를 잠깐 해 볼게요. 아마
+- [6:26](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=386) AI로 영상 만들어 본 적 있으실
+- [6:27](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=387) 거예요. 시작한지 20분 지나면
+- [6:28](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=388) 타임라인 붙잡고 실험하게 되죠.
+- [6:30](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=390) 보이스 오버를 다시 녹음하고 어색한
+- [6:31](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=391) 더빙처럼 보이는 리싱크랑도 싸워야
+- [6:32](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=392) 하고요. 헤이제는 그 과정을 다
+- [6:34](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=394) 건너니다. 헤이제는 세라이를 맞출시한
+- [6:37](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=397) AI 영상 생성기라서 디지털 트윈
+- [6:39](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=399) 아바타 영상 전체를 명령어 한 줄로
+- [6:40](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=400) 만들 수 있어요. 카메라도 촬영팀도
+- [6:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=403) 필요 없죠. 디지털 트윈을 한 번만
+- [6:46](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=406) 녹화해 두면 헤이젠이 다시 촬영하지
+- [6:47](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=407) 않고도 꾸준히 콘텐츠를 올리게 해
+- [6:49](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=409) 줘요. 뉴스레터나 PDF 파워포인트도
+- [6:52](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=412) 영상으로 바꿔주고요. 비디오
+- [6:53](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=413) 에이전트로 프롬프트 하나만으로
+- [6:54](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=414) 편지까지 끝난 멀티신 영상을 만들고
+- [6:56](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=416) 완전한 닉싱크까지 넣어서 전 세계
+- [6:57](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=417) 시청자용으로 번역할 수 있어요.
+- [6:59](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=419) 아바타, 음성, 비디오 에이전트 번역
+- [7:02](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=422) 같은 기능으로 디벨로퍼스에서 바로
+- [7:03](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=423) 만들어 볼 수 있어요. 디지털 트위는
+- [7:05](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=425) 검증된 동의 절차가 필요해요.
+- [7:07](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=427) 여러분의 콘텐츠는 공개 모델 학습에
+- [7:09](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=429) 절대 쓰이지 않고 플랫폼 전체도
+- [7:10](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=430) 엔터프라이즈 보안을 기준으로
+- [7:11](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=431) 만들어졌어요. 카메라 한번 안 잡고도
+- [7:14](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=434) 스튜디오 영상을 바로 내보내 보세요.
+- [7:16](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=436) 고정 댓글 링크를 눌러서 오늘 바로
+- [7:18](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=438) 헤이젠을 써 보세요. 사람들이 X에서
+- [7:21](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=441) 클로드 디자인을 자랑할 때 보셨던
+- [7:22](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=442) 스크롤 인터랙션 디자인 대부분은 사실
+- [7:24](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=444) 그냥 비디오 배경을 쓴 사이트입니다.
+- [7:27](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=447) 그래서 실제보다 훨씬 더 고급스럽고
+- [7:29](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=449) 대단해 보이는 것입니다.
+- [7:33](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=453) 대부분의 데모도 사실은 바로 쓸 수
+- [7:35](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=455) 있는 프롬프트 템플릿 사이트에서
+- [7:36](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=456) 가져온 프롬프트를 복사한 경우가
+- [7:38](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=458) 많습니다. 연 프롬프트에는 배경으로
+- [7:40](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=460) 쓰라고 만든 영상 링크가 들어
+- [7:41](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=461) 있습니다. 구현 방법에 대한 자세한
+- [7:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=463) 가이드도 함께 들어 있습니다. 그래서
+- [7:45](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=465) 비슷한 프롬프트만 주어지면 클로드
+- [7:47](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=467) 디자인뿐 아니라 어떤 에이전트든 이런
+- [7:49](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=469) 웹사이트는 만들 수 있습니다.
+- [7:52](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=472) 하지만 이런 건 쇼기용 사이트를 위한
+- [7:53](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=473) 셀프로프트의 뿐이고 실제 프로덕션
+- [7:54](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=474) 앱은 다릅니다. 많은 프로덕션 앱에서
+- [7:57](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=477) 쓰는 레니스나 웹사이트 경험을 훨씬
+- [7:59](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=479) 더 몰입감 있게 만드는 부드러운
+- [8:01](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=481) 애니메이션 구현용으로 가장 인기 있는
+- [8:03](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=483) 라이브러리 중 하나인치피 같은 걸로
+- [8:04](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=484) 만듭니다.
+- [8:10](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=490) 영상 하나를 다운로드해서 프롬프트에
+- [8:12](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=492) 원하는 색상 테마와 함께 그 영상을
+- [8:14](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=494) 히어로 섹션했으라고 클로드 코드에만
+- [8:16](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=496) 적어 줬더니 나머지 웹사이트는 알아서
+- [8:18](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=498) 구현했습니다.
+- [8:20](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=500) 우리가 한번 수정한 건 그 영상이
+- [8:22](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=502) 어떤 내용인지 설명해 준
+- [8:23](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=503) 것뿐이었습니다.
+- [8:25](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=505) 그랬더니 그 스타일을 랜딩 페이지에
+- [8:27](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=507) 완벽하게 녹여서 이전 버전보다 훨씬
+- [8:28](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=508) 좋아졌습니다.
+- [8:30](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=510) 프롬프트가 그렇게 단순했는데도
+- [8:32](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=512) 웹사이트 구현이 정말 잘돼서 꽤
+- [8:34](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=514) 강력했습니다.
+- [8:35](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=515) 그리고 여러 애니메이션과 인터랙션도
+- [8:37](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=517) 들어가서이 부분이 훨씬 더
+- [8:38](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=518) 강력해졌습니다. 클로드의 기능 덕분에
+- [8:40](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=520) 전보다 훨씬 더 인터랙티브해졌습니다.
+- [8:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=523) 그리고 클로드 코드는 기술적으로 더
+- [8:45](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=525) 뛰어나고 구현도 더 매끄러워서 클로드
+- [8:47](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=527) 디자인보다 다양한 도구를 훨씬 쉽게
+- [8:49](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=529) 붙일 수 있습니다.
+- [8:54](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=534) 예를 들면 프로젝트에 스크롤 기반
+- [8:56](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=536) 스토리텔링 애니메이션을 넣어 주는
+- [8:57](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=537) 스크롤 리텔링 같은 오픈 소스 스킬을
+- [8:58](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=538) 쓸 수 있습니다. 그래서 이런 스킬이
+- [9:01](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=541) 있으면 클로드는 단순한
+- [9:02](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=542) 프롬프트만으로도 여러 단계의 스토리
+- [9:04](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=544) 텔링을 쉽게 구현하고 클로드
+- [9:05](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=545) 디자인만으로는 하기 어려운 훨씬 더
+- [9:07](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=547) 깊이 있는 애니메이션까지 만들 수
+- [9:09](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=549) 있습니다. 그리고 저희 콘텐츠가
+- [9:11](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=551) 마음에 드신다면 하이프 버튼도 눌러
+- [9:13](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=553) 주세요. 그게 이런 콘텐츠를 더
+- [9:15](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=555) 만들고 더 많은 분들께 닿는데 큰
+- [9:17](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=557) 도움이 됩니다.
+- [9:19](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=559) 클로드 디자인 대신 클로드 코드를
+- [9:21](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=561) 쓰면 UI 구현이 더 쉬워집니다.
+- [9:23](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=563) 클로드 코드에서는 내장 디자인
+- [9:25](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=565) 시스템을 훨씬 쉽게 붙일 수 있기
+- [9:26](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=566) 때문입니다. ZCN, 아세토니티,
+- [9:29](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=569) 히어로 UI 같은 컴포넌트를 가져다면
+- [9:31](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=571) 이미 준비된 애니메이션이 많이 들어
+- [9:33](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=573) 있습니다. 그러면 모델이 각
+- [9:35](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=575) 컴포넌트의 모양과 동작을 일일이
+- [9:37](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=577) 고민할 필요가 줄고 전체 디자인을 더
+- [9:39](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=579) 좋게 만드는데 집중할 수 있습니다.
+- [9:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=583) 그래서 기본 상태 클로드 디자인에서
+- [9:45](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=585) 바로 작업할 때보다 훨씬 쉽게 원하는
+- [9:46](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=586) 수준에 도달할 수 있습니다. 또
+- [9:48](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=588) 프로젝트의 현재 상태를 분석하는 스킬
+- [9:50](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=590) 크리에이터로 만든 프로젝트 맞춤형
+- [9:52](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=592) 프런트 엔드 디자인 스킬이나 다른
+- [9:54](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=594) 특화 스킬도 쓸 수 있습니다.
+- [9:57](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=597) 그래서 시간을 낭비하지 않고 기능을
+- [9:59](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=599) 더 효과적으로 만들 수 있습니다.
+- [10:00](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=600) 클로드 코드는 MCP 서버를 연결할
+- [10:02](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=602) 수 있어서 훨씬 더 유연하기도
+- [10:04](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=604) 합니다. 예를 들어 세 MCP 서버를
+- [10:06](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=606) 쓰면 뭘 어디에 써야 하는지 일일이
+- [10:08](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=608) 말해 주지 않아도 에이전트가 알아서
+- [10:10](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=610) 맞는 컴포넌트를 설치할 수 있습니다.
+- [10:13](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=613) 마찬가지로 순수 생성 디자인에만
+- [10:14](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=614) 기대기보다 UI를 더 잘 만들게
+- [10:16](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=616) 도와주는 여러 MCP를 쓸 수
+- [10:18](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=618) 있습니다. 오퍼스 4.7 같은 모델을
+- [10:20](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=620) 써도 그렇습니다. 클로드 디자인 같은
+- [10:23](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=623) 도구로 그냥 바로 생성한 디자인은
+- [10:25](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=625) 종종 티가 납니다. 비슷한 패턴을
+- [10:27](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=627) 따라가는 경우가 많아서 모델이 맞는
+- [10:28](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=628) 것처럼 보이기 때문입니다. 하지만
+- [10:30](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=630) 검증된 라이브러리를 쓰면 이런 문제가
+- [10:31](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=631) 줄고 결과물도 더 자연스럽고 덜
+- [10:34](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=634) 뻔하게 느껴집니다.
+- [10:35](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=635) 클로드 코드를 클로드 디자인 대신
+- [10:37](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=637) 쓰는 가장 큰 장점은 기대 연결할 수
+- [10:39](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=639) 있다는 점입니다. 기다리를 클로드
+- [10:41](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=641) 디자인에도 연결할 수는 있지만 둘이
+- [10:42](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=642) 작동하는 방식은 정말 크게 다릅니다.
+- [10:44](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=644) 클로드 디자인의 길 연동은 꽤
+- [10:46](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=646) 기본적인 수준입니다. 주로 연결된
+- [10:48](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=648) 기터브 저장소에서 파일을 가져와
+- [10:50](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=650) 디자인을 이해하는데 쓰고 목적도
+- [10:52](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=652) 대부분 읽고 참고하는데 머니다.
+- [10:57](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=657) 실제로 저장소를 바꾸는 일은 거의
+- [10:58](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=658) 하지 않습니다. 반면 클로드코드는
+- [10:59](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=659) 완전히 다릅니다. 커밋이나 브랜치
+- [11:01](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=661) 같은 전체기 작업도 다 할 수
+- [11:03](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=663) 있습니다.
+- [11:04](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=664) 그래서 구현이 잘못됐거나 바꿔본 뒤에
+- [11:07](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=667) 예전 버전이 더 낫다고 느껴지면
+- [11:09](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=669) 기술로 손쉽게 이전 버전으로 되돌릴
+- [11:10](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=670) 수 있습니다.
+- [11:14](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=674) 이건 클로드 디자인에선 작업 중에
+- [11:15](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=675) 활용하기 어려운 방식이다. 다양한
+- [11:17](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=677) 프로토타입을 디자인할 때는 클로드
+- [11:18](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=678) 코드 쪽이 훨씬 강력합니다.
+- [11:20](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=680) 클로드 디자인으로 가거나 피그마를
+- [11:22](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=682) 쓰기보다 HTML로 바로 모을 만드는
+- [11:25](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=685) 편이 더 효과적입니다.
+- [11:27](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=687) 여러 변형을 빠르게 시험해 볼 때
+- [11:28](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=688) 특히 그렇습니다. 클로드 디자인이
+- [11:30](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=690) 디자인을 탐색하듯이 병렬 에이전트와
+- [11:33](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=693) 워크트리로 작업을 나누대 기술로
+- [11:34](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=694) 관리하면 가장 좋은 버전은 남기고
+- [11:36](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=696) 나머지는 쉽게 버릴 수 있습니다.
+- [11:40](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=700) 그냥 프롬프트로 별도 워크리에서 서브
+- [11:41](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=701) 에이전트를 싸고 지시하면 됩니다. 각
+- [11:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=703) 에이전트가 같은 디자인에 다른 변형을
+- [11:45](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=705) 구현하게 하면 클로드가 각기 다른
+- [11:46](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=706) 작업 공간에서 에이전트를 띄웁니다.
+- [11:49](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=709) 병렬 에이전트를 쓰면 여러 방향을 한
+- [11:51](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=711) 번에 탐색하면서 시간과 수고를 아낄
+- [11:53](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=713) 수 있습니다. 이제 각 에이전트가
+- [11:55](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=715) 작업을 끝내면 언제든 검토할 수 있는
+- [11:57](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=717) 여러 버전이 생기고 그중에서 내
+- [11:59](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=719) 목적에 가장 맞는 걸 고르면 됩니다.
+- [12:02](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=722) 그다음엔 가장 마음에 드는 스타일을
+- [12:04](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=724) 기준으로 수정하면서 앱 개발을
+- [12:06](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=726) 계속하면 됩니다.
+- [12:08](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=728) 그리고 클로드 디자인으로 만든게
+- [12:10](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=730) 아니어도 생성된 각 디자인은 전부
+- [12:12](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=732) 코드로 만든 적절한 SVG 덕분에
+- [12:14](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=734) 충분히 보기 좋습니다. 요소 표현도
+- [12:16](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=736) 자연스럽고 전체 균형도 훨씬
+- [12:17](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=737) 좋습니다. 그다음 마음에 드는 버전을
+- [12:20](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=740) 메인에 머지하고 별로였던 디자인이
+- [12:22](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=742) 들어 있는 워크트리는 지우면 됩니다.
+- [12:26](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=746) 여기서 쓴 스킬들과 다른 리소스들은이
+- [12:27](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=747) 영상용 자료로 데스프로에 올라와
+- [12:29](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=749) 있습니다. 저희 이전 영상 자료까지
+- [12:31](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=751) 전부 내려받아서 직접 프로젝트에 써
+- [12:32](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=752) 보실 수 있습니다. 저희가 하는 일이
+- [12:35](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=755) 도움이 되셨고 채널을 후원하고
+- [12:36](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=756) 싶으시라면 설명란 링크를 이용해
+- [12:38](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=758) 주시는게 가장 좋은 방법입니다. 이제
+- [12:41](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=761) 이번 영상은 여기까지입니다. 채널을
+- [12:42](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=762) 후원해 주시면 저희가 이런 영상을
+- [12:43](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=763) 계속 만드는데 도움이 됩니다. 아래에
+- [12:45](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=765) 슈퍼 땡스 버튼을 눌러 주시면
+- [12:47](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=767) 됩니다.
+- [12:49](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=769) 늘 그렇듯 시청해 주셔서 감사하고
+- [12:51](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=771) 다음 영상에서 뵙겠습니다.
