@@ -1,0 +1,1379 @@
+---
+title: "The 7 Levels of Claude Code & RAG"
+source_url: https://youtube.com/watch?v=kQu5pWKS8GA
+video_id: kQu5pWKS8GA
+source_type: youtube
+lang: en
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# The 7 Levels of Claude Code & RAG
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 이 영상은 Claude Code에서 메모리 문제를 해결하는 7단계 RAG 시스템 로드맵을 제시합니다. 레벨 1(자동메모리)부터 레벨 7(Agent RAG)까지 각 단계별로 특징, 필요한 기술, 함정, 그리고 다음 단계로 넘어가는 조건을 설명합니다. 중요한 점은 대부분의 사용자에게는 Obsidian(레벨 4)으로 충분하며, 무조건 최고 레벨을 목표로 할 필요가 없다는 것입니다. 각 단계는 문서 규모와 복잡성에 따라 선택해야 하며, 간단한 것부터 시작해서 필요에 따라 점진적으로 업그레이드하는 것이 현명합니다.
+- **Core Message:** Claude Code의 메모리 문제는 단계적 RAG 시스템으로 해결할 수 있으며, 대부분의 사용자에게는 Obsidian 수준이면 충분하다.
+> Context pollution is real. Context rot is real. If something doesn't make sense for virtually every single prompt, should it be in claude.md? The answer is no.
+> For most people, Obsidian is that 80% solution that in reality is a 99% solution because it's free, there's basically no overhead, and it does the job.
+> If it's not obvious that you need level seven, and certainly if you haven't already tried the obsidian route, you don't need to be here.
+❗ RAG 시스템이 일반 LLM보다 1,200배 빠르고 저렴할 수 있다는 연구 결과
+❗ Andre Karpathy의 Obsidian 기반 LLM 지식베이스 영상이 2천만 뷰를 기록
+❗ Light RAG가 Naive RAG 대비 성능을 100% 이상 향상시킨다는 벤치마크 결과
+
+## 📚 핵심 용어
+- **RAG (Retrieval Augmented Generation):** AI가 외부 문서에서 정보를 검색해서 답변을 보강하는 시스템 / 오픈북 시험과 같다. 모든 걸 외울 필요 없이, 필요할 때 책(외부 자료)을 펴서 답을 찾는다. / Fine-tuning은 AI의 뇌를 바꾸는 것(평생 공부), RAG는 시험장에 책을 가져가는 것(즉시 참조). 자료 갱신은 RAG가 쉽다.
+- **Context Rot:** 같은 대화 세션에서 토큰이 쌓일수록 AI 성능이 떨어지는 현상 / 책상 위가 서류로 쌓일수록 필요한 걸 찾기 어려워지는 것처럼, 대화가 길어질수록 AI가 집중력을 잃는다. / 짧은 대화는 92% 정확도, 긴 대화는 78% 정확도. 1백만 토큰 창이 있어도 효율은 떨어진다.
+- **Graph RAG:** 문서들 간의 관계와 연결을 그래프로 표현하는 고급 RAG 시스템 / 도서관 카드 목록처럼 책들이 서로 어떻게 연결되는지 보여주는 지도. 단순 검색이 아니라 관계를 파악한다. / Naive RAG는 단순 키워드 검색, Graph RAG는 관계 기반 검색. 성능은 2배 이상 향상되지만 설정이 복잡하다.
+- **Vector Database:** 텍스트를 수백 차원의 숫자 좌표로 변환해 저장하는 특수 데이터베이스 / 단어들을 3D 공간의 점으로 표시하는 것. 비슷한 의미의 단어들은 가까운 위치에 모인다. / 일반 DB는 행과 열(2차원), Vector DB는 수백~수천 차원. 의미 유사성으로 검색 가능하다.
+
+## 🚀 실행 (Execute)
+- [ ] 현재 Claude Code 사용 패턴 분석 및 Context Rot 확인
+  - 담당: 나
+  - 이유: 대화창을 계속 유지하면서 효율성이 떨어지고 있는지 파악해야 함
+- [ ] Obsidian 설치 후 Andre Karpathy 방식의 Vault 구조 실험
+  - 담당: 나
+  - 이유: 대부분의 사용자에게 충분한 솔루션이며 무료로 시작할 수 있음
+- 자료: Andre Karpathy LLM Knowledge Base 영상 (영상에서 언급)
+- 자료: Light RAG GitHub 저장소
+- 자료: RAG Anything 도구 (확인 필요)
+- 자료: Chase AI Plus Claude Code Masterclass
+- Timeline: 1단계: Context 관리 습관 개선 → 2단계: Obsidian 실험 → 3단계: 필요시 Graph RAG 검토 순으로 진행. 각 단계에서 충분한지 확인 후 다음 단계로 이동.
+
+## ⏰ 타임스탬프
+- [0:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=0) — RAG 7단계 로드맵 소개 및 Context Rot 문제 정의
+- [5:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=300) — 레벨 1-2: 자동메모리와 claude.md 파일 활용법
+- [15:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=900) — 레벨 4: Obsidian을 활용한 지식베이스 구축 방법
+- [30:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=1800) — 레벨 5-6: Naive RAG vs Graph RAG 비교 및 성능 차이
+- [40:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=2400) — 레벨 7: 멀티모달 Agent RAG 시스템과 실무 적용 고려사항
+- [0:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=0) — Impact/Cover는 AI의 평범한 디자인을 체계적인 워크플로와 안티 패턴 회피로 브랜드 아이덴티티가 있는 고품질 UI로 변화시키는 진화된 디자인 스킬 시스템입니다.
+- [0:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=0) — 앤트로픽의 OAuth 금지 정책에 대한 대안으로 디스코드 기반 클로드 코드 채널을 활용하여 합법적이고 효율적인 AI 워크플로우를 구축할 수 있다.
+- [0:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=0) — 클로드의 컨텍스트를 깔끔하게 관리하면 AI가 바보처럼 행동하는 문제의 80%를 해결할 수 있다.
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=0) Let's solve the problem of clawed code
+- [0:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=2) and memory. Getting AI systems to
+- [0:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=5) reliably and accurately answer questions
+- [0:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=7) about past conversations or giant troves
+- [0:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=11) of documents is a problem we have been
+- [0:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=13) trying to solve for years. And the
+- [0:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=16) typical response has been rag retrieval
+- [0:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=19) augmented generation. And while this
+- [0:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=21) video is titled the seven levels of
+- [0:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=22) clawed code and rag, what this video is
+- [0:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=25) really about is deconstructing that
+- [0:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=28) problem of clawed code and really AI
+- [0:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=30) systems in general and memory. And even
+- [0:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=33) more importantly, this video is about
+- [0:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=34) giving you a road map that shows you
+- [0:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=36) where you stand in this fight between AI
+- [0:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=38) systems and memory and what you can do
+- [0:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=41) to get to the next level. So as we
+- [0:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=43) journey through these seven levels of
+- [0:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=45) claude code and rag we are going to hit
+- [0:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=46) on a number of topics but we are not
+- [0:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=48) going to start here in graph rag or
+- [0:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=50) anything complicated we're going to
+- [0:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=52) start at the beginning which is just the
+- [0:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=54) basic memory systems that are native to
+- [0:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=56) cloud code because sad as it is to say
+- [0:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=59) this is where most people not only begin
+- [1:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=61) but it's where they stay from automemory
+- [1:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=64) and things like cloud MD we're going to
+- [1:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=65) move to outside tools things like
+- [1:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=67) Obsidian before we eventually find
+- [1:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=70) ourselves with the big boys with the
+- [1:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=72) through rag systems. At these levels,
+- [1:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=74) we'll talk about what rag actually is,
+- [1:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=76) how it works, the different types of
+- [1:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=78) rag, naive rag versus graph rag versus
+- [1:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=80) agentic rag, things like rerankers and
+- [1:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=82) everything in between. And at each
+- [1:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=84) level, we're going to break it down in
+- [1:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=85) the same manner. We're going to talk
+- [1:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=86) about what to expect at that level, the
+- [1:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=88) skills you need to master, the traps you
+- [1:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=90) need to avoid, and what you need to do
+- [1:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=92) to move on to the follow-on level. What
+- [1:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=94) this video will not be is a super
+- [1:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=96) in-depth technical explanation of how to
+- [1:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=99) necessarily set up these specific
+- [1:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=100) systems because I've already done this
+- [1:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=103) in many instances when we talk about
+- [1:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=105) graph rag and light rag for example or
+- [1:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=107) even more advanced topics like rag
+- [1:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=109) anything and these different sort of
+- [1:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=110) embedding systems. I've done videos
+- [1:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=112) where I break down from the very
+- [1:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=114) beginning to the very end how to set
+- [1:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=115) that up yourself. So when we get to
+- [1:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=117) those sections, I will link those
+- [1:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=119) videos. And this is for both our sakes.
+- [2:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=121) So this video isn't 5 hours long. But
+- [2:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=123) for those levels, we're still going to
+- [2:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=124) talk about what that actually means,
+- [2:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=126) what each system buys you, and when you
+- [2:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=128) should be using it. But before we start
+- [2:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=130) with level one, a quick word from
+- [2:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=132) today's sponsor, me. So just last month,
+- [2:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=134) I released the Claude Code Masterass,
+- [2:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=136) and is the number one way to go from
+- [2:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=138) zero to AI dev, especially if you don't
+- [2:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=141) come from a technical background. And
+- [2:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=142) this master class is a little bit
+- [2:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=144) different because we focus on a number
+- [2:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=146) of different use cases to learn how to
+- [2:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=148) use cloud code. One of those is
+- [2:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=150) something like production level rag. How
+- [2:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=152) to build the rag systems you're going to
+- [2:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=154) see in this video in a real life
+- [2:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=156) scenario and actually use it as a member
+- [2:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=158) of a team or sell it to a client. That's
+- [2:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=160) the kind of stuff we focus on. So if you
+- [2:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=163) want to get access, you can find it
+- [2:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=164) inside of Chase AI plus. There's a link
+- [2:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=166) to that in the pinned comment and we'd
+- [2:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=168) love to have you there. So now let's
+- [2:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=169) start with level one and that's
+- [2:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=171) automemory. These are the systems that
+- [2:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=173) Cloud Code automatically uses to create
+- [2:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=176) some sort of memory apparatus to
+- [2:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=178) actually remember things that you've
+- [2:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=179) talked about. And you know you're here
+- [3:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=181) if you've never set anything up
+- [3:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=183) intentionally to help claude code
+- [3:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=186) remember context in general about
+- [3:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=188) previous conversations or just stuff
+- [3:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=190) that's going on in your codebase. And
+- [3:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=191) when we talk about automemory, that is
+- [3:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=193) quite literally what it is called. The
+- [3:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=195) automemory system, which is
+- [3:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=197) automatically enabled when you use
+- [3:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=198) claude code, essentially allows cloud
+- [3:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=201) code to create markdown files on its own
+- [3:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=204) that sort of lists out things it thinks
+- [3:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=207) are important about you and that
+- [3:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=209) particular project. And this is purely
+- [3:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=211) based off of its own intuition based on
+- [3:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=214) your conversations. And I can see these
+- [3:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=216) memory files it's created. Again, it
+- [3:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=217) does this on its own. If you go into
+- [3:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=219) yourcloud folder, you go into projects,
+- [3:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=221) you will see a folder there that is
+- [3:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=223) called memory. And inside that file,
+- [3:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=225) you'll see a number of markdown files.
+- [3:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=227) Here, there are four of them. And
+- [3:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=228) they're like Claude Code's version of
+- [3:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=230) Post-it notes saying, "Oh yeah, he
+- [3:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=231) mentioned this one time about his
+- [3:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=234) YouTube project growth goals. Let's
+- [3:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=236) write that down." And inside of
+- [3:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=238) everyone's memory folder, there will be
+- [4:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=240) a memory file. So you see in this memory
+- [4:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=242) file, it has a little note about one of
+- [4:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=244) my skills. And then it has, you know,
+- [4:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=246) essentially an index of all these
+- [4:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=248) submemory files saying, "Hey, there's a
+- [4:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=249) YouTube growth one in here, a revenue
+- [4:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=251) one, a references one, and here's what's
+- [4:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=252) inside of it." So, if I'm just talking
+- [4:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=254) to Claude Code in my vault file and I
+- [4:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=258) mention something about YouTube and sort
+- [4:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=259) of my goals with growth, whatever, it's
+- [4:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=261) going to reference this and say, "Oh,
+- [4:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=263) yeah, Chase is trying to get, you know,
+- [4:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=264) x amount of subscribers by the end of
+- [4:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=266) 2026."
+- [4:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=267) It's cute, but ultimately it's not that
+- [4:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=270) useful. It's kind of like when you're
+- [4:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=271) inside of chat GBT and it will bring up
+- [4:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=274) random stuff about previous
+- [4:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=276) conversations and it almost like
+- [4:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=277) shoehorns it in. It's like, "Okay, I get
+- [4:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=279) it. You remember this, but I don't
+- [4:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=281) really care." Aaron, honestly, it's a
+- [4:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=282) little weird you keep bringing that up.
+- [4:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=284) I prefer if you didn't. And
+- [4:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=285) unfortunately, this is where most people
+- [4:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=286) stay in their memory journey. And it's
+- [4:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=288) built upon a somewhat almost abusive
+- [4:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=291) past that we all have when it comes to
+- [4:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=292) using these chat bots because these chat
+- [4:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=295) bots don't have any sort of real memory
+- [4:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=298) from conversation to conversation. And
+- [5:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=300) so, we're always scared to death of
+- [5:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=302) having to exit out of a chat window or
+- [5:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=305) exit out of a terminal session because
+- [5:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=306) you think, "Oh my gosh, it's not going
+- [5:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=307) to remember my conversation." And this
+- [5:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=309) is actually a real problem because what
+- [5:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=311) is everybody's answer to the chat window
+- [5:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=316) not being able to remember anything?
+- [5:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=317) Well, the answer is you just keep that
+- [5:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=319) conversation going forever because you
+- [5:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=321) don't want to get to a scenario where
+- [5:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=323) you have to exit out and it forgets
+- [5:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=324) everything. This is a fear that is born
+- [5:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=326) here inside of these chat windows
+- [5:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=327) beginning with chat GPT and same thing
+- [5:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=329) with Claude's web app. And honestly,
+- [5:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=331) used to be infinitely worse with
+- [5:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=332) Claude's web app because I think we all
+- [5:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=334) remember before the days of the 1
+- [5:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=335) million contacts window where you would
+- [5:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=336) have like 30 minutes to talk with Claude
+- [5:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=338) and be like, "Well, see you in four
+- [5:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=339) hours." The issue is people have brought
+- [5:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=341) that sort of psychotic neurotic behavior
+- [5:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=344) to the terminal. And what they do in
+- [5:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=347) large part because you now can get away
+- [5:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=349) with it with a 1 million context window
+- [5:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=351) is they never clear. They just keep
+- [5:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=352) talking and talking and talking with
+- [5:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=354) Cloud Code because they never want it to
+- [5:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=356) forget what they're talking about
+- [5:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=358) because of these memory problems. And
+- [6:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=360) the issue with that is your efficiency
+- [6:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=361) goes way down over time the more you
+- [6:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=364) talk with cloud code inside of the same
+- [6:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=365) session. And this is the fundamental
+- [6:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=367) idea of context raw. If you don't know
+- [6:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=369) what context rot is, it's the phenomenon
+- [6:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=372) that the more I use an AI system within
+- [6:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=375) its same session, within its same chat,
+- [6:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=377) and I fill up that context window, the
+- [6:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=379) worse it gets. You can see that right
+- [6:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=380) here. Clawed code 1 million context
+- [6:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=383) window at 256k tokens. aka I've only
+- [6:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=387) filled up about a quarter of its context
+- [6:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=389) window. We're at 92%. By the end, I'm at
+- [6:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=392) 78. So, the more you use it in the same
+- [6:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=394) chat, the worse it gets. And that's one
+- [6:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=396) of the primary issues people have with
+- [6:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=398) AI systems in memory. I have clawed
+- [6:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=400) code. It has a million contexts now. And
+- [6:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=403) yet, I do not want it to forget about
+- [6:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=404) the conversation I'm having. So, I just
+- [6:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=406) never exit the window. I just fill it up
+- [6:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=408) and fill it up and fill it up. And two
+- [6:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=410) things happen. One, effectiveness goes
+- [6:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=412) down like you just saw. Two, your usage
+- [6:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=414) fills up a ton.
+- [6:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=416) because the amount of tokens that are
+- [6:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=419) used at 1 million at 800,000 you know
+- [7:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=422) context is way more than at 80,000
+- [7:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=425) context. So this isn't the only issue
+- [7:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=428) but kind of off topic we in a current
+- [7:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=430) ecosystem where everyone complains about
+- [7:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=432) cloud code being nerfed and my usage
+- [7:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=433) just gets run up automatically. There's
+- [7:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=435) a number of reasons for that, but one of
+- [7:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=438) them undoubtedly is the fact that since
+- [7:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=440) 1 million context got introduced, people
+- [7:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=443) have no clue how to manage their own
+- [7:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=445) context window. And they aren't nearly
+- [7:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=448) they aren't nearly as aggressive with
+- [7:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=450) clearing and resetting the conversation
+- [7:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=451) as often as they should. But that's kind
+- [7:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=453) of off topic. The point of that whole
+- [7:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=455) discussion is that when it comes to
+- [7:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=458) memory in this discussion about rag in
+- [7:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=460) claude code, we have to keep context rot
+- [7:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=462) in the back of our mind because we're
+- [7:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=463) constantly trying to deal with this
+- [7:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=465) tension of okay, I want to ingest
+- [7:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=467) context so cloud code can answer
+- [7:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=469) questions about a number of things yet
+- [7:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=471) at the same time I don't want the
+- [7:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=473) context to get too large because then
+- [7:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=475) it's worse.
+- [7:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=476) So we just that always needs to be
+- [7:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=479) something we're thinking about in this
+- [8:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=481) conversation about memory. But to bring
+- [8:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=482) this back to the actual video in level
+- [8:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=485) one, what are people doing at level one?
+- [8:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=486) The answer is they're not really doing
+- [8:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=487) anything. And because they're not doing
+- [8:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=489) anything, they just rely on a bloated
+- [8:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=491) context window to remember things. So
+- [8:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=493) you know you're here when you've never
+- [8:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=495) edited a cloud. MD file and you've never
+- [8:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=497) created any sort of artifact or any sort
+- [8:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=501) of file that allows cloud code to
+- [8:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=503) realize what the heck is going on, what
+- [8:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=505) it's actually done in the past, and what
+- [8:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=507) it needs to do in the future. So what do
+- [8:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=508) we need to master at this level? Well,
+- [8:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=510) really all you really need to master
+- [8:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=512) despite everything I've wrote here is
+- [8:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=513) you just need to understand that
+- [8:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=514) automemory isn't enough and we need to
+- [8:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=516) take an active role when it comes to
+- [8:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=517) cloud code and memory because a trap at
+- [8:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=519) this level if you don't take an active
+- [8:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=521) role you you have no control and we need
+- [8:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=523) to control what claude code considers
+- [8:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=525) when it answers our questions. And so to
+- [8:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=528) unlock level one and move on to level
+- [8:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=530) two, we need memory that's explicit and
+- [8:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=534) we need to figure out how to actually do
+- [8:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=536) that. What files do you need to edit and
+- [8:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=538) understand that they even exist in order
+- [9:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=540) to take an active role in this
+- [9:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=541) relationship? Now, level two is all
+- [9:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=543) about one specific file, and that is the
+- [9:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=544) claw.md file. When you learn about this
+- [9:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=546) thing, it feels like a godsend. Finally,
+- [9:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=548) there is a single place where I can tell
+- [9:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=552) claude code some rules and conventions
+- [9:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=554) that I always wanted to follow, and it's
+- [9:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=555) going to do it. And in fact, I can
+- [9:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=557) include things that I wanted to
+- [9:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=558) remember, and it always will. And it
+- [9:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=560) definitely feels like progress at first.
+- [9:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=562) So here's a template of a standard
+- [9:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=564) claw.md file for a personal assistant
+- [9:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=567) project. Now cloud code is going to
+- [9:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=570) automatically create a claw.mmd file,
+- [9:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=571) but you have the ability to edit this or
+- [9:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=574) even updated on demand by using a
+- [9:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=576) command like for slashinit. And the idea
+- [9:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=578) of this thing is is it is again like the
+- [9:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=581) holy grail of instructions for cloud
+- [9:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=583) code for that particular project. For
+- [9:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=585) all intents and purposes, claude code is
+- [9:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=587) going to take a look at this before any
+- [9:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=589) task it executes. So if you wanted to
+- [9:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=592) remember specific things, what are you
+- [9:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=594) going to do? You're going to put it in
+- [9:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=594) the cloud MD theoretically. It's a bit
+- [9:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=598) smaller scale than something like rag,
+- [10:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=600) you know, we aren't putting in, you
+- [10:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=602) know, complete documents in here, but
+- [10:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=603) it's things you want cloud code to
+- [10:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=605) always remember and conventions you want
+- [10:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=607) it to follow. So for this one, we have
+- [10:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=608) an about me section. We have a breakdown
+- [10:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=610) of the structure of the file system and
+- [10:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=612) how we want it to actually operate when
+- [10:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=614) we give it commands. And like I said,
+- [10:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=616) because this is referenced on
+- [10:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=617) essentially every prompt, Cloud Code is
+- [10:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=619) really good at following this. So the
+- [10:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=620) idea of like, hey, I wanted to remember
+- [10:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=622) specific things. This seems like a great
+- [10:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=624) place to put it. But we got to be
+- [10:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=625) careful because we can overdo it. When
+- [10:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=627) we look at studies like this one,
+- [10:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=629) evaluating agents.m MD, and you can swap
+- [10:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=631) agents.mmd for claw.md,
+- [10:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=634) they found in the study that these sort
+- [10:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=637) of files can actually reduce the
+- [10:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=639) effectiveness of large language models
+- [10:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=642) at large. And why is that? Well, it's
+- [10:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=643) because the thing that makes it so good,
+- [10:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=645) the fact that it's injected into
+- [10:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=646) basically every prompt, is what also can
+- [10:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=648) make it so bad. Are we actually
+- [10:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=651) injecting the correct context? Have we
+- [10:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=655) pushed through the noise and are we
+- [10:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=656) actually giving it a proper signal? Or
+- [10:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=657) are we just throwing in things that we
+- [11:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=660) think are good? Because if it isn't
+- [11:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=662) relevant to virtually every single
+- [11:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=664) prompt that's going to do in your
+- [11:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=665) project, should it be here in the claw.
+- [11:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=667) MD, is this a good way to let Claude
+- [11:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=670) Code remember things? I would argue no,
+- [11:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=673) not really. And that goes contrary to
+- [11:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=676) what a lot of people say about claw. MD
+- [11:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=678) and how you should structure it. Based
+- [11:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=680) on studies like that and based on
+- [11:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=682) personal experience, less is more.
+- [11:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=684) Context pollution is real. Context rot
+- [11:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=686) is real. So if something is inside of
+- [11:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=688) claw.md and it doesn't make sense for
+- [11:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=690) again virtually every single prompt you
+- [11:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=693) give it, should it be in there? The
+- [11:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=695) answer is no. But most people don't
+- [11:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=696) realize that and instead they fall into
+- [11:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=698) this trap of a bloated rule book.
+- [11:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=700) Instead, the skills we should be
+- [11:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=702) mastering are how do we create project
+- [11:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=704) context that is high signal. How do I
+- [11:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=707) make sure what I'm actually putting
+- [11:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=708) inside this thing makes sense? And with
+- [11:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=710) that comes the idea of context awareness
+- [11:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=712) like we talked about in the last level.
+- [11:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=714) And you take all that together and level
+- [11:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=716) two feels like you've been moving
+- [11:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=717) forward like, hey, I'm taking an active
+- [11:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=719) role in memory. I have this claw. MD
+- [12:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=721) file. You realize it's not really
+- [12:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=723) enough. And when we talk about level
+- [12:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=726) three and what we can do to move forward
+- [12:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=727) there, we want to think about sort of
+- [12:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=730) not a static rulebook, but something
+- [12:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=732) that can evolve and it's something that
+- [12:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=734) can include cloud MD instead of relying
+- [12:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=736) on cloud MD to do everything. What if we
+- [12:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=739) use cloud MD as sort of like an index
+- [12:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=741) file that points cloud code in the right
+- [12:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=743) direction instead? So what did I mean
+- [12:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=745) about cloud.md acting as sort of an
+- [12:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=748) index and pointing towards other files?
+- [12:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=750) Well, I'm talking about a architecture
+- [12:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=753) within your codebase that doesn't just
+- [12:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=755) have one markdown file trying to deal
+- [12:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=758) with all the sort of memory issues in
+- [12:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=759) the form of cloudm. I'm talking about
+- [12:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=761) having multiple files for specific
+- [12:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=763) tasks. I think a great example of this
+- [12:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=765) in action is sort of what GSD, the get
+- [12:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=767) done orchestration tool does. It
+- [12:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=770) doesn't just create one file that says,
+- [12:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=772) hey, this is what we're going to build
+- [12:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=774) and these are the requirements and this
+- [12:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=775) is what we've done and where we're
+- [12:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=776) going. Instead, it creates multiple. You
+- [12:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=778) can see over here on the left we have a
+- [12:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=779) project.mmd a requirements.mmd a road
+- [13:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=782) map and a state. So the requirements
+- [13:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=785) exist. So cloud code always knows and
+- [13:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=787) has memory of what it's supposed to be
+- [13:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=789) building. The road map breaks down what
+- [13:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=791) exactly we are going to be creating not
+- [13:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=793) just now but what we've done in the past
+- [13:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=794) and in the future. And the project gives
+- [13:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=796) it memory gives it context of what we
+- [13:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=798) are doing at a highle overview. What is
+- [13:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=801) our northstar? And by breaking up memory
+- [13:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=803) and context and conventions and this
+- [13:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=805) sort of system, we're fighting against
+- [13:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=808) the idea of context raw and the idea
+- [13:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=811) brought up in that study which is
+- [13:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=813) injecting these files into every prompt
+- [13:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=815) all the time like we do in claw. MD,
+- [13:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=817) it's actually counterintuitive. This
+- [13:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=818) doesn't help us get better outputs.
+- [13:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=820) Furthermore, breaking it down into these
+- [13:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=822) chunks and having a clear path for cloud
+- [13:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=824) code to go down and says like, hey, I
+- [13:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=825) want to figure out where this
+- [13:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=827) information is. Oh, I go to cloud.md.
+- [13:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=829) Oh, cloud.MD MD says, "These are my five
+- [13:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=831) options." Okay, here's that one. Let me
+- [13:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=833) go and find it. That sort of structure
+- [13:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=835) is what you're going to see 100% in the
+- [13:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=837) follow-on level when we talk about
+- [13:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=838) Obsidian. And really is sort of like a
+- [14:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=841) crude reimagining of the chunking system
+- [14:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=844) and the vector similarity search that we
+- [14:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=846) see in true rag systems. But obviously,
+- [14:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=849) this is kind of small scale at this
+- [14:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=850) level. We're talking about four markdown
+- [14:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=852) files here. We're not talking about a
+- [14:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=854) system that can handle thousands and
+- [14:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=856) thousands and thousands of documents.
+- [14:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=858) But like you're going to hear me talk
+- [14:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=860) about a lot, what does that mean for
+- [14:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=863) you? Do you need a system that we're
+- [14:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=865) going to talk about in levels four,
+- [14:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=866) five, 6, 7 that can handle this many
+- [14:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=869) documents? The answer is maybe not. And
+- [14:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=871) so part of this rag journey is
+- [14:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=873) understanding not just where you stand,
+- [14:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=875) but like where do you actually need to
+- [14:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=876) go? Do you always need to be at level
+- [14:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=877) seven and know how to do an agentic rag
+- [14:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=880) system of cloud code? It's probably good
+- [14:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=882) to know how to do it, but it's also just
+- [14:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=884) as good to know when you don't need to
+- [14:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=886) implement that. Sometimes what we see in
+- [14:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=888) these systems like this is enough for a
+- [14:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=891) lot of people. So it's just as important
+- [14:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=893) to know how to do it and to know like do
+- [14:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=896) you need to should you do it? When we
+- [14:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=898) talk about level three and we talk about
+- [14:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=899) state files, how do we know we're here?
+- [15:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=901) Well, we know we're here when we're
+- [15:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=902) still strictly inside the cloud code
+- [15:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=903) ecosystem. We haven't integrated outside
+- [15:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=905) tools or applications and really we're
+- [15:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=907) just at the place where we're just
+- [15:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=908) creating multiple markdown files to
+- [15:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=911) create our own homemade sort of like
+- [15:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=913) memory chunking system. But this still
+- [15:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=915) is really important. We're still
+- [15:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=916) mastering some true skills here. The
+- [15:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=917) idea of like actually structuring docs,
+- [15:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=920) having some sort of system in place that
+- [15:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=922) updates state at every session because
+- [15:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=924) this is can be a problem with rag too.
+- [15:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=925) Like how do you make sure everything is
+- [15:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=928) up to date? And chances are you're also
+- [15:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=931) starting to lean into orchestration
+- [15:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=932) layers at this point. Things like GST
+- [15:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=934) and superpowers that do things like
+- [15:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=936) this, this multi markdown file
+- [15:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=938) architecture on their own. But there is
+- [15:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=940) a real trap here. what we create in this
+- [15:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=942) project is very much just for that
+- [15:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=945) project. It's kind of clunky to then
+- [15:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=947) take those markdown files and shift them
+- [15:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=949) over to another project. So level four
+- [15:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=952) is where we bring in Obsidian. And this
+- [15:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=953) is a tool that has been getting a ton of
+- [15:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=955) hype and for good reason. When you have
+- [15:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=958) people like Andre Carpathy talking about
+- [15:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=959) these LLM knowledge bases they've
+- [16:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=962) created which are built for all intents
+- [16:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=964) and purposes on an Obsidian Foundation.
+- [16:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=966) It's getting almost 20 million views. we
+- [16:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=969) should probably listen and see how this
+- [16:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=971) is actually operating. Now, for context,
+- [16:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=973) I've done a full deep dive on this
+- [16:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=976) Obsidian Andre Carpathy LLM knowledge
+- [16:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=979) base. I'll link that above. So, if you
+- [16:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=980) want to focus on that, how to build
+- [16:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=982) that. Make sure you check that out
+- [16:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=983) above. And what I also want to mention
+- [16:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=984) to most people is that this Obsidian
+- [16:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=986) thing we're going to talk about right
+- [16:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=988) here in level four, this is honestly the
+- [16:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=990) level most people should strive for
+- [16:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=992) because this is enough for most people
+- [16:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=995) in most use cases. When we talk about
+- [16:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=997) levels five, six, and seven, we're going
+- [16:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=998) to talk about true rag structures. And
+- [16:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=1000) to be honest, it's overkill for most
+- [16:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=1003) people. This is overkill
+- [16:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=1005) for most people. Like, we love talking
+- [16:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1008) about rag. Like, it's great. I
+- [16:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=1009) understand that. But Obsidian is that
+- [16:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=1012) 80% solution that in reality is like a
+- [16:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=1014) 99% solution for most people because
+- [16:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=1016) it's free. There's basically no
+- [16:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=1018) overhead. And it does the job for the
+- [17:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=1020) solo operator. And when I say does the
+- [17:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=1022) job for the solo operator, I mean it
+- [17:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=1023) solves the problem of having clawed code
+- [17:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1026) connected to a bunch of different
+- [17:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=1028) documents, a bunch of different markdown
+- [17:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=1030) files, and being able to get accurate,
+- [17:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=1032) timely information from it, and having
+- [17:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1036) insight to those documents as the human
+- [17:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1038) being. Because when I click on these
+- [17:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=1040) documents, it's very clear what is going
+- [17:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=1041) on inside here. And it's very clear what
+- [17:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=1043) documents are related to it. When I
+- [17:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=1045) click these links, I'm brought to more
+- [17:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=1048) documents. When I click these links, I'm
+- [17:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=1051) brought to more documents. And so for me
+- [17:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=1053) as the human being, having this insight
+- [17:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=1055) is important because to be totally
+- [17:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=1057) honest, the obsidianbased insight to the
+- [17:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=1061) documents, I would argue trumps a lot of
+- [17:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=1063) the insight you get from the rag
+- [17:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=1065) systems. When we talk about thousands
+- [17:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=1067) and thousands of documents being
+- [17:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1068) embedded in something like a grav rag
+- [17:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=1069) system, like this looks great visually,
+- [17:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=1072) looks very stunning. Do you actually
+- [17:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=1074) know what's going on inside here?
+- [17:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=1077) Maybe you do. to be honest, you're kind
+- [17:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=1079) of just relying on the answers you get
+- [18:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=1081) that we'll show and the and the links
+- [18:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=1082) and stuff, but it's a bit hard. It's
+- [18:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=1084) like piece through the embeddings for
+- [18:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1086) sure. All that to say is you should pay
+- [18:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=1087) special attention to Obsidian and Claude
+- [18:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=1089) code because when we talk about this
+- [18:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=1091) journey from Rag, I always suggest to
+- [18:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1094) everybody, clients included, like let's
+- [18:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=1095) just start with Obsidian and see how far
+- [18:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=1099) we can scale this and eventually if we
+- [18:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=1101) do hit a wall, you can always transition
+- [18:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=1102) to more robust rag systems.
+- [18:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=1105) So, why not try the simple option? If it
+- [18:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=1108) works, great. It's free. Cost me no
+- [18:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=1109) money versus like, let's try to knock
+- [18:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=1111) out this rag system, which can be kind
+- [18:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=1113) of difficult to put into production
+- [18:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=1115) depending on what you're trying to do.
+- [18:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=1116) Like, always start with the simple
+- [18:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=1118) stuff. It's never too hard to transition
+- [18:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=1120) to something more complicated. So, what
+- [18:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=1122) are we really talking about here in
+- [18:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=1123) level four? What we're talking about
+- [18:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=1124) taking sort of that structure we began
+- [18:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=1127) to build in level three, you know, with
+- [18:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=1129) an index file pointing at different
+- [18:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=1130) markdown files and just scaling that up
+- [18:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=1134) and then bringing in this outside tool
+- [18:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=1135) Obsidian to make it easy for you, the
+- [18:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=1137) human being to actually see these
+- [18:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=1138) connections. And the platonic idea of
+- [19:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=1140) this version is pretty much what Andre
+- [19:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=1141) Carpathy laid out and building a LLM
+- [19:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=1143) knowledge base on top of Obsidian and
+- [19:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=1145) powered by cloud code. And what that
+- [19:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=1147) looks like is a structure like this. So
+- [19:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=1150) when you use Obsidian and you download,
+- [19:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=1152) it's completely free. again referenced
+- [19:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=1153) that video I posted earlier. You set a
+- [19:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1156) certain file as the vault. Think of the
+- [19:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=1159) vault as sort of like the rag system.
+- [19:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=1163) This this quasi rag system you've
+- [19:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=1164) created. And inside of the vault, we
+- [19:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=1168) then architect that. We structure that
+- [19:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=1170) just with files. So we have the
+- [19:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=1172) overarching file called the vault. And
+- [19:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=1174) inside that vault, we create multiple
+- [19:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=1176) subfolders. In Andre Carpathy's case, he
+- [19:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=1179) talks about three different subfolders.
+- [19:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=1181) The reality is they could be any
+- [19:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=1182) subfolders. It just sort of needs to
+- [19:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=1184) match the theme we're going to talk
+- [19:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=1186) about. In one folder we have the raw
+- [19:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1188) data. This is everything we are
+- [19:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=1189) ingesting and eventually want to
+- [19:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=1191) structure so that cla code can reference
+- [19:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=1193) it later. Think of you know you have
+- [19:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=1196) claude code do competitive analysis on
+- [19:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=1199) 50 of your competitors and it pulls 50
+- [20:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=1201) sites for each, right? We're talking
+- [20:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=1202) about a large amount of information.
+- [20:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=1204) It's probably 2500 different things. All
+- [20:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1206) that will get dumped into some sort of
+- [20:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=1208) raw folder. This is like the staging
+- [20:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=1209) area for the data. We then have the wiki
+- [20:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=1212) folder. The wiki folder is where the
+- [20:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1214) structured data goes. So we then have
+- [20:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1216) clawed code take this raw data and
+- [20:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1218) structure it into essentially different
+- [20:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=1220) like Wikipedia type articles inside of
+- [20:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=1223) the wiki folder. Each article gets its
+- [20:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=1226) own folder. So the idea being when you
+- [20:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=1230) then ask Claude code information about
+- [20:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=1232) you know let's say we had it search for
+- [20:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=1234) stuff about AI agents and I say hey
+- [20:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=1236) claude code talk to me about AI agents.
+- [20:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=1238) It's the same way you would query a rag
+- [20:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=1240) system. Well, claude code is going to go
+- [20:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=1243) to the vault. From the vault, it's going
+- [20:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=1245) to go to the wiki. The wiki has a master
+- [20:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1248) index markdown file. Think of sort of
+- [20:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=1250) what we were doing with talked about
+- [20:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=1251) doing with claw.md before, right? You
+- [20:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=1253) see how these sort of themes transition
+- [20:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=1256) throughout the different levels. It
+- [20:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=1258) takes a look at that master index. The
+- [20:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=1259) master index tells it what exists in
+- [21:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=1262) this obsidian rag system. Oh, AI agents
+- [21:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=1264) exist. Cool. Guess what's going on down
+- [21:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=1267) here? It also has an index file which
+- [21:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=1269) talks about the individual articles that
+- [21:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=1271) exists. What am I saying here? I am
+- [21:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1274) saying there is a clear hierarchy for
+- [21:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1278) claude code to reference when it wants
+- [21:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=1280) to find information about files vault
+- [21:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=1283) wiki index article
+- [21:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=1287) etc. So because it is so clear how to
+- [21:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=1290) find information and also why it's so
+- [21:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=1292) clear to first find information then
+- [21:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=1294) turn into wiki we can create a system
+- [21:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=1296) that has a lot of documents without rag
+- [21:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=1300) hundreds thousands if you do this
+- [21:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=1302) properly because if the system is clear
+- [21:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=1304) hey I check the vault and I check the
+- [21:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=1306) index and that has a clear delineation
+- [21:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=1309) of like where everything is well then
+- [21:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=1310) it's not too hard for cloud code to
+- [21:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=1312) figure out where to find stuff and so
+- [21:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=1313) you can get away with a non-rag
+- [21:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=1315) structure for thousands of documents and
+- [21:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=1316) it's been really hard to do that in the
+- [21:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=1318) past. And that's because most people
+- [21:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=1319) don't structure anything with any sort
+- [22:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=1321) of structure. They just have a billion
+- [22:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=1322) documents sitting in one folder. It's
+- [22:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=1324) the equivalent of having 10 million
+- [22:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1326) files strewn across the factory floor
+- [22:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=1328) and being like, well, Claude Code, find
+- [22:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=1330) it. Like, no, you actually just need a
+- [22:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=1332) filing cabinet. Like Claude Code's
+- [22:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1334) actually pretty smart. And you can see
+- [22:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=1335) that architecture in action right here.
+- [22:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1336) So, right now, we're looking at a cloud.
+- [22:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1338) MD file that is in an Obsidian vault.
+- [22:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=1341) And what does it say? breaks down the
+- [22:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=1344) vault structure, the wiki system, you
+- [22:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=1347) know, the overall structure of the
+- [22:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=1349) subfolders and how to essentially work
+- [22:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=1351) it. Right? So again, we're using claude
+- [22:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=1353) MD as a conventions type file. Over here
+- [22:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=1356) on the left, you can see the wiki
+- [22:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=1357) folder. Inside the wiki folder is a
+- [22:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=1359) master index and it lists what is inside
+- [22:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=1363) of there. In this case, there's just one
+- [22:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=1365) article. It's on cloud managed agents.
+- [22:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1368) Inside that folder, we see cloud managed
+- [22:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=1370) agents. It has its own wiki folder
+- [22:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=1373) breaking down the articles inside until
+- [22:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=1375) you get to the actual article itself. So
+- [22:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=1377) very clear the steps it needs to take.
+- [22:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=1379) And so when I tell Claude Code, talk to
+- [23:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=1381) me about the manage agents, we have a
+- [23:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=1383) wiki on it. It's very easy for it to
+- [23:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1386) search for it via its built-in GP tool.
+- [23:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=1388) It links me the actual markdown file and
+- [23:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=1391) then breaks down everything that's
+- [23:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=1392) happening. Now the question at level
+- [23:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1394) four really becomes a level of scale.
+- [23:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1396) How many documents can we get away with
+- [23:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1398) where this sort of system continues to
+- [23:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=1400) work? Is there a point at which Andre
+- [23:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=1402) Carpathy system begins to fall apart
+- [23:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=1404) where hey like I get it there's a very
+- [23:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=1405) clear clear path that cloud code needs
+- [23:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=1407) to follow goes to the indexes yada yada
+- [23:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=1409) yada does that sustain itself at 2,000
+- [23:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=1413) documents 2500 3,000 is there a clear
+- [23:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=1415) number the answer is we don't really
+- [23:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=1417) know and there isn't a clear number
+- [23:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=1419) because all your documents are also
+- [23:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=1421) different and in terms of hitting a wall
+- [23:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=1422) it isn't just as simple as well cloud
+- [23:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=1424) code's giving us the wrong answers it
+- [23:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=1426) has too many files in the subsidian
+- [23:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1428) system how much is it costing you in
+- [23:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=1430) terms of tokens now that we've added so
+- [23:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=1432) many files and how quickly is it doing
+- [23:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=1433) it because RAG can actually be
+- [23:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=1436) infinitely faster and cheaper in certain
+- [23:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=1438) situations. What we're looking at here
+- [24:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=1441) is a comparison between textual LLMs
+- [24:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=1444) right in the giant bars and textual rag
+- [24:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1446) in terms of the amount of tokens it took
+- [24:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=1448) to get the correct answer and the amount
+- [24:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=1451) of time it took to get that answer. What
+- [24:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=1453) do we see here? We see that textual rag
+- [24:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1456) versus textual LLMs, there's a massive
+- [24:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1458) difference to the tune of like 1,200
+- [24:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=1460) times. I'm saying rag is 1,200 times
+- [24:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=1464) cheaper and 1,200 times faster than
+- [24:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=1466) textual LLM in these studies. Now,
+- [24:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=1470) context, this was done in 2025. This was
+- [24:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=1472) not done with clawed code. These models
+- [24:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=1474) have changed significantly since then.
+- [24:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=1476) These are just straight up LLMs. This
+- [24:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=1477) isn't a coding artist, etc., etc., etc.
+- [24:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=1481) However, we were talking a,200x
+- [24:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=1485) difference. So, when we're evaluating,
+- [24:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1488) hey, is Obsidian what I should be doing
+- [24:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=1491) versus is should I be doing rag system?
+- [24:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=1493) It isn't as simple as just, well, it's
+- [24:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=1496) giving the right answer or not because
+- [24:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=1497) you could be you could have a scenario
+- [24:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=1499) where you get the right answer with
+- [25:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=1500) Obsidian, yet if you went to Rag, it's a
+- [25:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=1503) thousand times cheaper and faster,
+- [25:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1506) right? So it's this very fuzzy line
+- [25:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=1508) between when is obsidian good enough and
+- [25:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=1510) these sort of like just markdown file
+- [25:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=1512) architectures good enough or when like
+- [25:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1514) we need to use rag. There's not a great
+- [25:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=1515) answer. I don't have a great answer for
+- [25:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=1517) you. The answer is you have to
+- [25:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1518) experiment and you need to try both and
+- [25:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=1520) see what works because this is frankly
+- [25:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=1522) out of date totally like 2025 older
+- [25:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=1525) models. The difference between rag and
+- [25:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=1528) textual LLM is not 1,200 times. But how
+- [25:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=1531) much has that gap shrunk? Because that
+- [25:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=1532) is an insane gap. That isn't like 10x.
+- [25:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=1535) It's 1,200x
+- [25:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=1537) the so there's a lot you have to know
+- [25:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=1539) and again you you you won't know the
+- [25:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=1542) answer ahead of time. You just won't
+- [25:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=1544) watch every video you want. No one's
+- [25:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=1545) going to tell you where that line in the
+- [25:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=1547) sand is. You literally just need to
+- [25:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1548) experiment and see what works for you as
+- [25:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=1551) you increase the amount of documents
+- [25:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=1553) you're asking cloud code to answer
+- [25:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=1554) questions about. So on that note, let's
+- [25:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=1556) move on to level five, which is where we
+- [25:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=1558) finally begin to talk about real rag
+- [26:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=1561) systems and talk about some of the rag
+- [26:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=1563) fundamentals like embeddings, vector
+- [26:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=1565) databases, and how data actually flows
+- [26:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=1567) through a system when it becomes part of
+- [26:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=1569) our rag knowledge base. So let's begin
+- [26:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=1572) by talking about naive rag, which is the
+- [26:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1574) most basic type of rag out there, but it
+- [26:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1576) provides the foundation for everything
+- [26:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1578) else we do. Now, you can kind of think
+- [26:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=1580) of rag systems being broken out into
+- [26:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=1582) three parts. On the left hand side we
+- [26:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=1584) have the embedding stage. We then have
+- [26:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=1587) the vector database and then we have the
+- [26:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=1590) actual retrieval going on with the large
+- [26:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=1592) language model. So one 2 and three. And
+- [26:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=1596) to best illustrate this model, let's
+- [26:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=1598) start with sort of the journey of a
+- [26:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=1601) document that is going to be part of our
+- [26:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=1602) knowledge base. Remember in a large rag
+- [26:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=1604) system we could be talking about
+- [26:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=1606) thousands of documents and and each
+- [26:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1608) document could be thousands of pages.
+- [26:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=1610) But in this example, we have a onepage
+- [26:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=1612) document that we're talking about. Now,
+- [26:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=1614) if we want to add this document to our
+- [26:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=1617) database, the way it's going to work is
+- [26:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=1619) it's not going to be ingested as a whole
+- [27:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=1622) unit. Instead, we are going to take this
+- [27:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=1624) document and we are going to chunk it up
+- [27:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1626) into pieces. So, this one pager
+- [27:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=1629) essentially becomes three different
+- [27:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=1631) chunks. These three chunks are then sent
+- [27:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=1633) to an embedding model. And the job of
+- [27:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1636) the embedding model is to take these
+- [27:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1638) three chunks and turn it into a vector
+- [27:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=1641) in a vector database. Now a vector
+- [27:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=1643) database is just a different variation
+- [27:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=1646) of your standard database. When we talk
+- [27:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=1647) about a standard database, think of
+- [27:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=1650) something like an Excel document, right?
+- [27:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=1652) You have columns and you have rows.
+- [27:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=1654) Well, in a vector database, it's not
+- [27:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=1656) two-dimensional columns and rows. It's
+- [27:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=1657) actually hundreds, if not thousands of
+- [27:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=1660) dimensions. But for the purposes of
+- [27:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=1662) today, just think of a three-dimensional
+- [27:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=1664) graph like you see here. And the vectors
+- [27:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=1667) are just points in that graph. And each
+- [27:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=1670) point is represented by a series of
+- [27:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=1673) numbers. So you can see here we have
+- [27:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=1675) bananas. And bananas is represented by
+- [27:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=1678) 0.52, 5.12, and then 9.31. You see that
+- [28:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=1682) up here. Now that continues for hundreds
+- [28:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1686) of numbers. Now where each vector gets
+- [28:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=1688) placed in this giant multi-dimensional
+- [28:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=1691) graph depends on its semantic meaning.
+- [28:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1694) What what do the words actually mean? So
+- [28:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1696) you can see over here this is like the
+- [28:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1698) the fruit section. We have bananas, we
+- [28:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=1700) have apples, we have pears. Over here we
+- [28:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=1702) have ships and we have boats. So going
+- [28:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=1704) back to our document, let's imagine that
+- [28:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=1707) this document is about World War II
+- [28:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=1710) ships. So each of these chunks is going
+- [28:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=1714) to get turned into a series of numbers
+- [28:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=1716) and those series of numbers will be
+- [28:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=1718) represented as a dot in this graph.
+- [28:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=1720) Where do you think it's going to go?
+- [28:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=1721) Well, they'll probably go around this
+- [28:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=1723) area, right? So that would be 1 2 and
+- [28:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=1726) three. So that's how documents get
+- [28:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1728) placed. Every document is going to get
+- [28:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=1730) chunked. Each chunk goes through the
+- [28:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=1732) embedding model and the embedding model
+- [28:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=1734) inserts them into the vector database.
+- [28:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=1736) Repeat, repeat, repeat for every single
+- [28:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=1737) document. And in the end, after we do
+- [28:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=1739) that several thousand times, we get a
+- [29:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=1741) vector database, which represents our
+- [29:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=1743) knowledge graph, so to speak, our our
+- [29:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=1745) knowledge base. And that moves us on to
+- [29:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=1747) step three, which is the retrieval part.
+- [29:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=1749) So, where do you play into this? Well,
+- [29:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=1752) normally, let's let's depict you. Well,
+- [29:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=1755) we'll give you a different color. You
+- [29:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1756) can be you get to be pink. So, this is
+- [29:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=1759) you. All right.
+- [29:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=1762) You normally just talk to Claude Code
+- [29:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=1764) and you ask Claude Code questions about
+- [29:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=1767) World War II battleships. Well, in your
+- [29:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=1769) standard non-rag setup, what's going to
+- [29:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=1771) happen? Well, the large language model,
+- [29:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=1773) Opus 4.6, is going to take a look at its
+- [29:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=1775) training data, and then it's going to
+- [29:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=1777) give you an answer based on its training
+- [29:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=1779) data, information about World War II
+- [29:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=1780) battleships. But with a rag system, it's
+- [29:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=1782) going to do more. It's going to retrieve
+- [29:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=1785) the appropriate vectors. It's going to
+- [29:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1788) use those vectors to augment the answer.
+- [29:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=1790) it generates for you. Hence, retrieval
+- [29:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=1792) augmented generation. That's the power
+- [29:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=1794) of rag. It allows our large language
+- [29:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=1796) models to pull in information that is
+- [29:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=1799) not a part of its training data to
+- [30:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=1801) augment its answer. In this example,
+- [30:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=1803) World War II battleships. Yes, I
+- [30:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=1805) understand the large language model
+- [30:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1806) already knows that, but replace this
+- [30:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=1808) with any sort of proprietary company
+- [30:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=1811) data that isn't just available for the
+- [30:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1814) web and do it at scale. That's the cell
+- [30:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=1817) for rag. Now, in our example, when we
+- [30:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=1819) ask Claude Code for questions for
+- [30:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=1821) information about World War II
+- [30:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=1822) battleships and it's in a rag setup,
+- [30:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=1824) what it's going to do is it's going to
+- [30:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=1826) take our question and it's going to turn
+- [30:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=1828) our question into a series of numbers
+- [30:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=1831) similar to the vectors over here. It is
+- [30:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=1834) then going to take a look at what the
+- [30:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=1837) number is for our question and the
+- [30:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=1838) numbers of the vectors and it's going to
+- [30:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=1840) see which of these vectors most closely
+- [30:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=1843) matches the questions vector. Right? how
+- [30:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=1847) similar are the vectors the question
+- [30:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1848) pretty much. And then it's going to pull
+- [30:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=1850) a certain amount of vectors whether
+- [30:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=1852) that's 1 2 3 four or five or 10 or 20.
+- [30:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=1855) And it's going to pull those vectors and
+- [30:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=1857) their information into the large
+- [31:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=1860) language model. So now the large
+- [31:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=1862) language model has its training data
+- [31:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=1863) answer plus say 10 vectors worth of
+- [31:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1866) information. Right? That was the
+- [31:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=1868) retrieval part and then it augments and
+- [31:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=1870) generates an answer with that additional
+- [31:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=1871) information. And that is how rag works.
+- [31:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1874) That is how naive rag works. Now, this
+- [31:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=1876) is not particularly effective for a
+- [31:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1878) number of reasons. This very basic
+- [31:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=1880) structure kind of falls apart at the
+- [31:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=1882) beginning when we begin to think about,
+- [31:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=1884) okay,
+- [31:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=1885) how are we chunking up these documents?
+- [31:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=1888) Is it random? Is it just off a pure
+- [31:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=1890) number of tokens? Do we have a certain
+- [31:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=1892) number of overlap? Are the documents
+- [31:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=1894) themselves set up in a way where it even
+- [31:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=1896) makes sense to chunk them? Because what
+- [31:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=1898) if you know chunk number three is
+- [31:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=1901) referencing something in chunk number
+- [31:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=1903) one and in our vector situation when we
+- [31:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=1905) pull the chunks what if it doesn't get
+- [31:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=1906) the right one? What if it doesn't get
+- [31:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=1908) that other chunk that's required as
+- [31:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=1911) context to even make sense of what
+- [31:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=1913) number three says? You get what I'm
+- [31:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=1914) saying? Like very often the entire
+- [31:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=1917) document itself is needed to answer
+- [31:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=1919) questions about said document. So this
+- [32:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=1921) idea of getting these peacemeal answers
+- [32:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=1924) doesn't really work in practice yet.
+- [32:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=1926) This is how rag was set up for a long
+- [32:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=1928) long time. Other issues that can come
+- [32:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=1930) into play are things like what if I have
+- [32:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=1932) questions about the relationships
+- [32:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=1935) between different vectors because right
+- [32:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=1938) now I kind of just pull vectors in a
+- [32:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=1940) silo, but what if I wanted to know how
+- [32:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=1941) boats related to bananas?
+- [32:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=1944) Sounds random, but what if I did? You
+- [32:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=1947) know, this standard sort of vector
+- [32:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=1950) database naive rag approach.
+- [32:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=1952) Everything's kind of in a silo. It's
+- [32:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=1953) hard to connect information and a lot of
+- [32:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=1955) it just depends on how well those
+- [32:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=1958) original documents are even structured.
+- [32:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=1961) Are they structured in a manner that
+- [32:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=1962) makes sense for Raget? Now, over the
+- [32:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=1963) years, we've come up with some ways to
+- [32:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=1965) alleviate these issues. Things like
+- [32:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=1967) rerankers or ranking systems that take a
+- [32:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=1969) look at all the vectors we grab and
+- [32:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=1971) essentially then do another pass on them
+- [32:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=1973) with a large language model to rank them
+- [32:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=1975) in terms of their relevance. But by and
+- [32:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=1977) large, this naive rag system
+- [33:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=1980) has kind of fallen out of vogue. Yet,
+- [33:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=1982) it's still important to understand how
+- [33:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=1983) this works at a foundational level so it
+- [33:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=1985) can inform your decisions if you go for
+- [33:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=1987) a more robust rag approach. Because if
+- [33:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=1990) you don't understand how chunking or
+- [33:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=1991) embeddings even work, how can you make
+- [33:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=1994) decisions about how you should structure
+- [33:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=1995) your documents when we talk about
+- [33:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=1997) something like graph rag or we talk
+- [33:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=1999) about more complicating embedding
+- [33:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=2001) systems like the brand new one from
+- [33:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=2002) Google which can actually ingest not
+- [33:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=2004) just text but videos. And if you don't
+- [33:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=2007) understand this sort of foundation, it's
+- [33:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=2008) hard for you to actually understand this
+- [33:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=2010) trap. And the trap is that we've kind of
+- [33:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=2012) just created a crappy search engine
+- [33:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=2014) because with these naive rag systems
+- [33:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=2016) where all we do is grab chunks and we
+- [33:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=2018) can't really understand the
+- [33:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=2019) relationships between them. How is that
+- [33:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=2021) different from basically just having an
+- [33:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=2024) over complicated control F system? The
+- [33:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=2027) answer there's really not much of a
+- [33:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=2028) difference. Which is why in these simple
+- [33:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=2031) when in these simplistic kind of
+- [33:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=2033) outdated rag structures that actually
+- [33:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=2035) are still all over the place. If you see
+- [33:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=2036) someone who's like oh here's my pine
+- [33:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=2038) cone rag system or here's my superbase
+- [34:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=2040) rag system. They don't mention anything
+- [34:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=2042) about graph rag or they don't mention
+- [34:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=2044) anything about like hey here's how we
+- [34:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=2046) have like the sophisticated reranker
+- [34:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=2047) system and they it's going to suck to
+- [34:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=2050) the tune of like oh the actual
+- [34:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=2052) effectiveness of this is like 25% of the
+- [34:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=2053) time you get something right like you're
+- [34:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=2055) almost better guessing. So if you don't
+- [34:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=2058) know that going in, you can definitely
+- [34:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=2059) be sort of hoodwinkedked or confused or
+- [34:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=2062) in some cases like basically scammed
+- [34:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=2063) into buying these rag systems that do
+- [34:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=2065) not make sense. And so level five isn't
+- [34:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=2067) about implementing these sort of naive
+- [34:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=2069) rag systems. It's about understanding
+- [34:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=2071) how they work so that you when it comes
+- [34:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=2074) time to implement something more
+- [34:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=2076) sophisticated, you actually understand
+- [34:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=2078) what's going on. Because that
+- [34:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=2079) five-minute explanation of rag is sadly
+- [34:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=2081) not something most people understand
+- [34:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=2082) when they say, "I need a rag system."
+- [34:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=2084) Well, do you? Because you also have to
+- [34:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=2086) ask yourself what kind of questions are
+- [34:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=2088) you actually asking about your system.
+- [34:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=2090) If you're just asking, you know,
+- [34:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=2093) essentially treating your knowledge base
+- [34:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=2094) as a giant rulebook and you just need
+- [34:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=2096) specific things from that knowledge
+- [34:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=2098) system brought up, well then Obsidian is
+- [35:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=2101) probably enough or you could probably
+- [35:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=2102) even get away with a naive rag system.
+- [35:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=2103) But if we need to know about
+- [35:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=2104) relationships, if we need to know about
+- [35:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=2106) how X interacts with Y and they're two
+- [35:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=2109) separate documents, they never even
+- [35:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=2111) really mention each other and it's not
+- [35:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=2113) something I can just stick inside the
+- [35:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=2115) context directly because I have
+- [35:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=2116) thousands of said documents. Well, that
+- [35:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=2119) is when when you're going to need rag
+- [35:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=2120) and that's when you're going to need
+- [35:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=2121) something more sophisticated than basic
+- [35:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=2123) vector rag. That is when we need to
+- [35:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=2126) start talking about graph rag. So when
+- [35:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=2129) we talk about level six of cloud code
+- [35:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=2131) and rag, we're talking about graph rag
+- [35:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=2132) and we're talking about this. And in my
+- [35:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=2134) opinion, if you are going to use rag,
+- [35:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=2136) this is sort of the lowest level of
+- [35:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=2138) infrastructure you need to create. This
+- [35:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=2140) is using light rag, which is a
+- [35:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=2142) completely open- source tool. I'll put a
+- [35:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=2143) link above where I break down exactly
+- [35:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=2145) how to use it and how to build it. But
+- [35:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=2147) the idea of graph rag is pretty obvious.
+- [35:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=2150) It's the idea that everything is
+- [35:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=2152) connected. This isn't a vector database
+- [35:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=2154) with a bunch of vectors in a silo. This
+- [35:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=2156) is a bunch of things connected to one
+- [35:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=2157) another. Right? I click on this
+- [35:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=2158) document. I can see over here on the
+- [36:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=2160) right and I'll move this over. You know
+- [36:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=2162) the description of the vector, the name,
+- [36:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=2165) the type, the file, the chunk, and then
+- [36:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=2167) more importantly the different
+- [36:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=2168) relationships. And this relationship
+- [36:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=2170) based approach results in more effective
+- [36:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=2173) outcomes. Here is a chart from light
+- [36:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=2175) rags GitHub. This is about I would say 6
+- [36:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=2177) to 8 months old. And also of note, light
+- [36:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=2181) rag is the lightest weight graph rag
+- [36:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=2184) system out there that I know of. There's
+- [36:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=2185) some very robust versions including
+- [36:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=2188) graph rag itself from Microsoft it's a
+- [36:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=2191) graph it's literally called a graph rag
+- [36:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=2193) but when we compare naive rag to light
+- [36:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=2195) rag across the board we get jumps of
+- [36:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=2198) oftent times more than 100% right 31.6
+- [36:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=2202) versus 68.4 4 24 versus 76 24 versus 75
+- [36:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=2206) on and on and on. And that being said,
+- [36:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=2208) according to light rag, it actually
+- [36:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=2210) holds its own and beats out graph rag
+- [36:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=2212) itself. But hey, these are light rags
+- [36:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=2214) numbers, so take them with a grain of
+- [36:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=2215) salt. Now, when we look at this
+- [36:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=2216) knowledge graph system, right away your
+- [36:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=2218) mind probably goes to obsidian because
+- [37:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=2220) this looks very similar. However, what
+- [37:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=2223) we're looking at here in Obsidian is way
+- [37:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=2226) more rudimentary than what's going on
+- [37:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=2228) inside of Lightra or any graph rag
+- [37:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=2230) system because this series of
+- [37:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=2231) connections we see here, this is all
+- [37:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=2234) manual and somewhat arbitrary. It's only
+- [37:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=2236) connected because we set related
+- [37:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=2238) documents or claude code set related
+- [37:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=2240) documents when it generated this
+- [37:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=2242) particular document. For example, just
+- [37:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=2244) added a couple brackets, boom, that
+- [37:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=2246) document's connected. So, in theory, I
+- [37:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=2248) could connect a bunch of random
+- [37:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=2249) documents that in reality have nothing
+- [37:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=2250) to do with one another. Now, because
+- [37:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=2252) Cloud Code isn't stupid, it's not going
+- [37:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=2253) to do that. But that's a lot different
+- [37:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=2255) than what went on here. Like, this went
+- [37:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=2257) through an actual embedding system. It
+- [37:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=2260) looked at the actual content. It set a
+- [37:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=2262) relationship. It sent an entity. There's
+- [37:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=2264) a lot more work going on here inside of
+- [37:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=2267) LightRag in terms of defining the
+- [37:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=2269) relationships than Obsidian. Now, does
+- [37:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=2271) that difference actually equate to some
+- [37:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=2274) wild gap in terms of the performance
+- [37:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=2277) at a low level? No. at a huge scale
+- [38:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=2281) maybe. Again, we're in sort of that gray
+- [38:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=2284) area. Kind of depends on your scale and
+- [38:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=2286) what we're actually talking about. And
+- [38:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=2287) nobody can answer that question except
+- [38:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=2289) you and some personal experience. But
+- [38:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=2291) understand these two things are not the
+- [38:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=2295) same. We are not the same, brother. Two
+- [38:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=2298) totally different systems. One is pretty
+- [38:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=2301) sophisticated. One's pretty rudimentary.
+- [38:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=2303) Understand that. And so to wrap up level
+- [38:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=2305) six in graph rag, we're really here when
+- [38:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=2307) we're when we've decided, hey, stuff
+- [38:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=2309) like Obsidian isn't working. We can't
+- [38:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=2311) use something like naive rag because it
+- [38:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=2313) just doesn't work. And we need something
+- [38:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=2315) that can extract entities and
+- [38:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=2316) relationships and really leverage the
+- [38:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=2319) sort of hybrid vector plus graph query
+- [38:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=2322) system design. But there are some traps.
+- [38:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=2325) There are some serious roadblocks. Even
+- [38:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=2327) here at level six, when we talk about
+- [38:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=2328) light rag, this is just text. What if I
+- [38:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=2331) have scannable PDFs? What if I have
+- [38:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=2333) videos? What if I have images? We don't
+- [38:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=2336) live in a world where all your documents
+- [38:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=2338) are just going to be Google Docs.
+- [39:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=2340) And so what do we do in those instances?
+- [39:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=2343) So multimodal retrieval is a huge thing.
+- [39:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=2345) And on top of that, what about bringing
+- [39:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=2346) some more agentic qualities to these
+- [39:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=2348) systems? Give it a little more AI power,
+- [39:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=2351) some sort of boost in that department.
+- [39:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=2352) Well, if we're talking about things that
+- [39:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=2354) are multimonal, then we can finally move
+- [39:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=2357) to sort of like the bleeding edge of rag
+- [39:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=2360) in today's day and age as of April 2026.
+- [39:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=2363) And that's what level 7's all about.
+- [39:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=2365) Now, when we talk about level seven in
+- [39:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=2367) aentic rag, the big thing we kind of
+- [39:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=2370) want to index on here is things that
+- [39:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=2372) have to do with multimodal ingestion.
+- [39:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=2374) Now, we've done videos on these things,
+- [39:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=2376) things like rag anything, which allow us
+- [39:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=2379) to import images and non-ext documents,
+- [39:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=2382) again, think scannable PDFs into
+- [39:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=2384) structures like the light rag knowledge
+- [39:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=2386) graph you saw here. We also have new
+- [39:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=2388) releases like Gemini embedding too,
+- [39:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=2390) which just came out in March, which
+- [39:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=2392) allows us to actually embed videos into
+- [39:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=2395) our vector database, videos itself. And
+- [39:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=2397) this is frankly where the space is
+- [39:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=2399) going. It's not enough to just do text
+- [40:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=2401) documents. how much information, how
+- [40:03](https://youtube.com/watch?v=kQu5pWKS8GA&t=2403) much knowledge is trapped on the
+- [40:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=2405) internet, especially on places like
+- [40:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=2406) YouTube where it's just purely video and
+- [40:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=2408) we want more than just a transcript as
+- [40:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=2410) well. A transcript doesn't do enough.
+- [40:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=2412) So, this sort of multimodal problem is
+- [40:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=2414) real. And again, this is stuff that just
+- [40:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=2416) came out weeks ago. And level seven is
+- [40:18](https://youtube.com/watch?v=kQu5pWKS8GA&t=2418) also where we need to start paying
+- [40:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=2420) attention to our architecture and
+- [40:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=2421) pipelines when it comes to the data
+- [40:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=2423) going in and out of our rag system. It's
+- [40:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=2425) not enough to just get data in here.
+- [40:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=2426) Like this is great, you know, okay, we
+- [40:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=2429) have all these connections and stuff.
+- [40:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=2431) How does the data getting there? How is
+- [40:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=2432) the data getting there in the context of
+- [40:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=2434) a team? How is data getting out of
+- [40:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=2436) there? Like what if some of the
+- [40:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=2438) information here has changed in a
+- [40:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=2440) particular document? What if somebody
+- [40:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=2441) edits it? How does it get updated? What
+- [40:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=2443) if we had duplicates?
+- [40:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=2446) Who can actually put these things in
+- [40:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=2447) there? When it comes to production level
+- [40:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=2449) stuff, these are all questions you need
+- [40:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=2450) to begin to ask yourself. And so when we
+- [40:52](https://youtube.com/watch?v=kQu5pWKS8GA&t=2452) look at an agentic rag system like this
+- [40:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=2454) one from NAND, you can see the vast
+- [40:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=2456) majority of the infrastructure,
+- [40:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=2459) everything outlined here is all about
+- [41:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=2462) data ingestion and data syncing. There's
+- [41:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=2464) only a very small part that has anything
+- [41:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=2465) due to rag, which is right there.
+- [41:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=2467) Because we need systems that clean up
+- [41:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=2469) the data, that are able to look at,
+- [41:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=2470) okay, we just ingested this document. In
+- [41:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=2473) fact, this was version two of version
+- [41:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=2475) one. Can we now go back and clean that
+- [41:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=2477) data? Here's something like a data
+- [41:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=2479) ingestion pipeline where documents don't
+- [41:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=2480) get directly put into the system or in
+- [41:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=2482) light rag. We instead put it inside of
+- [41:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=2484) like a Google drive and from there it
+- [41:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=2486) gets ingested into the graph rag system
+- [41:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=2488) and logged. These were the sort of
+- [41:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=2490) things that will actually make or break
+- [41:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=2491) your rag system when you're using it for
+- [41:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=2493) real. And when we talk about a gentic
+- [41:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=2495) rag, you can see here, and I know this
+- [41:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=2498) is rather blurry, but if we have an AI
+- [41:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=2500) agent running this whole program, so you
+- [41:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=2502) set up, imagine some sort of chatbot for
+- [41:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=2503) your team. Does it always need to hit
+- [41:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=2507) this database?
+- [41:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=2508) The answer is probably not. Chances are
+- [41:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=2511) in a team setting, in a business
+- [41:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=2513) setting, you're going to have
+- [41:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=2514) information that's in a database like
+- [41:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=2515) this like text or something, but you
+- [41:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=2517) probably also have another set of
+- [41:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=2519) databases like just standard Postgress
+- [42:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=2521) databases with a bunch of information
+- [42:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=2522) you want to query with SQL as well. So
+- [42:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=2525) when we talk about in a gentic rag
+- [42:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=2527) system, we need something that has all
+- [42:08](https://youtube.com/watch?v=kQu5pWKS8GA&t=2528) of that. The ability to intelligently
+- [42:10](https://youtube.com/watch?v=kQu5pWKS8GA&t=2530) decide, oh, am I going to be hitting the
+- [42:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=2533) graph rag database represented here or
+- [42:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=2536) am I just going to be doing some sort of
+- [42:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=2537) SQL queries in Postgress? These things
+- [42:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=2539) can get complicated, right? And all of
+- [42:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=2541) this is use case dependent, which is why
+- [42:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=2543) it's kind of hard to sometimes make
+- [42:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=2544) these videos and try to hit every single
+- [42:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=2546) edge case. The point here at level seven
+- [42:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=2549) is not that there's necessarily some
+- [42:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=2551) super rag system you've never heard of.
+- [42:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=2553) It's that you're actually the devil's in
+- [42:35](https://youtube.com/watch?v=kQu5pWKS8GA&t=2555) the details here. And that's really
+- [42:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=2557) mostly the data ingestion piece and
+- [42:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=2559) keeping it up to date, but also like how
+- [42:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=2561) do you actually access this thing? Easy
+- [42:44](https://youtube.com/watch?v=kQu5pWKS8GA&t=2564) to do in a demo right here. Oh, we just
+- [42:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=2566) go to the light rag thing and I go to
+- [42:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=2567) retrieval and I ask it questions.
+- [42:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=2569) Different scenario when we're talking
+- [42:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=2571) about it with a team and everyone's
+- [42:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=2573) approaching it from different angles and
+- [42:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=2575) you probably don't want everyone to have
+- [42:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=2576) access to actually uploading it to light
+- [43:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=2580) rag itself on a web app. That being
+- [43:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=2582) said, for the solo operator who is
+- [43:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=2585) trying to create some sort of
+- [43:06](https://youtube.com/watch?v=kQu5pWKS8GA&t=2586) sophisticated rag system that is able to
+- [43:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=2589) do multimodal stuff, I would suggest the
+- [43:12](https://youtube.com/watch?v=kQu5pWKS8GA&t=2592) rag anything plus light rag combination.
+- [43:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=2594) I've done a video on that and I'll if I
+- [43:16](https://youtube.com/watch?v=kQu5pWKS8GA&t=2596) haven't linked it already, I'll link it
+- [43:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=2597) above. I suggest that for a few reasons.
+- [43:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=2600) One, it's open source and it's
+- [43:22](https://youtube.com/watch?v=kQu5pWKS8GA&t=2602) lightweight. So, it's not like you're
+- [43:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=2605) spending a bunch of money or time to
+- [43:27](https://youtube.com/watch?v=kQu5pWKS8GA&t=2607) spin something like this up to make sure
+- [43:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=2609) it actually makes sense for your use
+- [43:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=2610) case. Again, the the thing we want is we
+- [43:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=2613) don't want to get stuck in systems where
+- [43:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=2616) there's no way out and we spent a bunch
+- [43:37](https://youtube.com/watch?v=kQu5pWKS8GA&t=2617) of money to get there, which is why I do
+- [43:39](https://youtube.com/watch?v=kQu5pWKS8GA&t=2619) love Obsidian. And I always recommend
+- [43:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=2622) things like light rag and rag anything
+- [43:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=2623) cuz hey, if you try this out and it
+- [43:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=2625) doesn't work for you and it doesn't make
+- [43:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=2626) sense, okay, whatever. You wasted a
+- [43:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=2627) handful of hours, you know, it's not
+- [43:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=2629) like you are spending a bunch of money
+- [43:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=2631) on Microsoft's graph rag, which is in no
+- [43:54](https://youtube.com/watch?v=kQu5pWKS8GA&t=2634) in no way is cheap. And so when do you
+- [43:56](https://youtube.com/watch?v=kQu5pWKS8GA&t=2636) know you're in level seven? really
+- [43:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=2638) multimodal stuff like you need to index
+- [43:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=2639) images, tables, and videos and you're
+- [44:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=2642) integrating some sort of agent system
+- [44:04](https://youtube.com/watch?v=kQu5pWKS8GA&t=2644) where it can intelligently decide like
+- [44:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=2645) which path it goes down to answer
+- [44:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=2647) information because at level seven
+- [44:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=2649) you're probably integrating all this
+- [44:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=2651) stuff. You probably have a claude MD
+- [44:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=2653) file with some permanent information.
+- [44:14](https://youtube.com/watch?v=kQu5pWKS8GA&t=2654) You probably have it in a codebase with
+- [44:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=2655) some markdown files that sort of makes
+- [44:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=2657) sense for easy retrieval. Perhaps you're
+- [44:19](https://youtube.com/watch?v=kQu5pWKS8GA&t=2659) also including Obsidian. It's in some
+- [44:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=2661) sort of vault. Plus, you probably have
+- [44:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=2663) some section of documents that are in a
+- [44:24](https://youtube.com/watch?v=kQu5pWKS8GA&t=2664) graph rag database and you have a top of
+- [44:29](https://youtube.com/watch?v=kQu5pWKS8GA&t=2669) the funnel AI system that can decide
+- [44:31](https://youtube.com/watch?v=kQu5pWKS8GA&t=2671) they ask this question, I go down this
+- [44:33](https://youtube.com/watch?v=kQu5pWKS8GA&t=2673) route. That's a mature sort of memory
+- [44:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=2676) architecture
+- [44:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=2678) that I would suggest. But what's the
+- [44:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=2680) trap here? The trap honestly is trying
+- [44:42](https://youtube.com/watch?v=kQu5pWKS8GA&t=2682) to force yourself into this level and
+- [44:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=2685) this sort of sophistication when it's
+- [44:47](https://youtube.com/watch?v=kQu5pWKS8GA&t=2687) just not needed. To be honest, after all
+- [44:49](https://youtube.com/watch?v=kQu5pWKS8GA&t=2689) this, most of you are fine with
+- [44:51](https://youtube.com/watch?v=kQu5pWKS8GA&t=2691) obsidian. This is more than enough. You
+- [44:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=2693) don't need graph rag. You really don't
+- [44:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=2695) need rag in general. And if it's not
+- [44:57](https://youtube.com/watch?v=kQu5pWKS8GA&t=2697) obvious that you need level seven, and
+- [44:58](https://youtube.com/watch?v=kQu5pWKS8GA&t=2698) certainly if you haven't already tried
+- [44:59](https://youtube.com/watch?v=kQu5pWKS8GA&t=2699) the obsidian route, you don't need to be
+- [45:01](https://youtube.com/watch?v=kQu5pWKS8GA&t=2701) here. It's probably a waste of your
+- [45:02](https://youtube.com/watch?v=kQu5pWKS8GA&t=2702) time. But the whole point of this video
+- [45:05](https://youtube.com/watch?v=kQu5pWKS8GA&t=2705) was to the best of my ability was to
+- [45:07](https://youtube.com/watch?v=kQu5pWKS8GA&t=2707) expose you to what I see is the
+- [45:09](https://youtube.com/watch?v=kQu5pWKS8GA&t=2709) different levels of rag and memory and
+- [45:11](https://youtube.com/watch?v=kQu5pWKS8GA&t=2711) claude code and what this problem is,
+- [45:13](https://youtube.com/watch?v=kQu5pWKS8GA&t=2713) what some of the tensions are, what the
+- [45:15](https://youtube.com/watch?v=kQu5pWKS8GA&t=2715) tradeoffs are, and where you should
+- [45:17](https://youtube.com/watch?v=kQu5pWKS8GA&t=2717) probably be for your use case. And
+- [45:20](https://youtube.com/watch?v=kQu5pWKS8GA&t=2720) again, the biggest thing is just
+- [45:21](https://youtube.com/watch?v=kQu5pWKS8GA&t=2721) experiment. You don't have to know the
+- [45:23](https://youtube.com/watch?v=kQu5pWKS8GA&t=2723) answer before you get into this. Just
+- [45:25](https://youtube.com/watch?v=kQu5pWKS8GA&t=2725) try them out. And I would try in
+- [45:26](https://youtube.com/watch?v=kQu5pWKS8GA&t=2726) ascending order. If you can get away
+- [45:28](https://youtube.com/watch?v=kQu5pWKS8GA&t=2728) with just markdown files in a cloud
+- [45:30](https://youtube.com/watch?v=kQu5pWKS8GA&t=2730) system and it's basically just claw.md
+- [45:32](https://youtube.com/watch?v=kQu5pWKS8GA&t=2732) on steroids, sweet, go ahead and then
+- [45:34](https://youtube.com/watch?v=kQu5pWKS8GA&t=2734) try Obsidian. If Obsidian's not enough,
+- [45:36](https://youtube.com/watch?v=kQu5pWKS8GA&t=2736) try LightRag and so on and so forth. So,
+- [45:38](https://youtube.com/watch?v=kQu5pWKS8GA&t=2738) that is where I'm going to leave you
+- [45:40](https://youtube.com/watch?v=kQu5pWKS8GA&t=2740) guys for today. If you want to learn
+- [45:41](https://youtube.com/watch?v=kQu5pWKS8GA&t=2741) more, especially about the production
+- [45:43](https://youtube.com/watch?v=kQu5pWKS8GA&t=2743) side of Rag, like how to spin this up
+- [45:45](https://youtube.com/watch?v=kQu5pWKS8GA&t=2745) for a team or package it for a client,
+- [45:46](https://youtube.com/watch?v=kQu5pWKS8GA&t=2746) we have a whole module on that inside of
+- [45:48](https://youtube.com/watch?v=kQu5pWKS8GA&t=2748) Chase AI plus. So, check that out. Other
+- [45:50](https://youtube.com/watch?v=kQu5pWKS8GA&t=2750) than that, let me know what you thought.
+- [45:53](https://youtube.com/watch?v=kQu5pWKS8GA&t=2753) I know this was a long one and I will
+- [45:55](https://youtube.com/watch?v=kQu5pWKS8GA&t=2755) see you
