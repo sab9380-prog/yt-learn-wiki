@@ -10,8 +10,6 @@ status: active
 ---
 # The Karpathy CLAUDE.md File That 43,000 Developers Installed in 1 Week (Full Breakdown)
 
-[[_category-일반학습]]
-
 ## 🧠 이해 (Understand)
 - **Summary:** André Karpathy가 AI 에이전트의 주요 실수들을 분석한 트위트를 바탕으로, 개발자 Forest가 만든 'claw.md' 파일이 Claude Code의 성능을 획기적으로 개선시키고 있다. 이 단일 파일은 43,000명이 한 주 만에 설치했으며, 4가지 핵심 원칙을 구현한다: 1) 코딩 전 사고하기 - 가정하지 말고 먼저 질문하기, 2) 단순함 우선 - 과도한 구축보다 최소한의 코드로, 3) 정확한 변경 - 요청하지 않은 부분은 건드리지 않기, 4) 목표 지향적 실행 - 명령보다는 성공 기준 제공하기. 실제 테스트에서 vanilla Claude Code와 비교했을 때, Karpathy 원칙을 적용한 버전이 일관되게 더 나은 결과를 보여준다.
 - **Core Message:** 단일 claw.md 파일을 통해 AI 에이전트의 4가지 핵심 원칙을 구현하면 Claude Code의 성능과 정확도를 극적으로 향상시킬 수 있다.
@@ -39,6 +37,9 @@ status: active
 - 자료: André Karpathy의 원본 트위트 (AI 에이전트 실수 분석)
 - 자료: Claude Code 공식 문서 (claw.md 파일 설정 방법)
 - Timeline: 즉시 claw.md 적용 → 일주일 내 기존 설정과 통합 테스트 → 실제 프로젝트에서 4가지 원칙 적용 연습
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=0) What if one file can fix the biggest
