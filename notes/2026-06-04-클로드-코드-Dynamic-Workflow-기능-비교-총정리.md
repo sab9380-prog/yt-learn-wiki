@@ -1,0 +1,591 @@
+---
+title: "클로드 코드 Dynamic Workflow 기능 비교 총정리!"
+source_url: https://youtube.com/watch?v=9fx2_1aTzq8
+video_id: 9fx2_1aTzq8
+source_type: youtube
+lang: ko
+analyzed: 2026-06-04
+category: 일반학습
+status: active
+---
+# 클로드 코드 Dynamic Workflow 기능 비교 총정리!
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 클로드 코드에 새로 도입된 다이나믹 워크플로우(딥리서치, 울트라코드)의 작동 원리와 기존 병렬 처리 기술(서브에이전트, 배치, 골)과의 차이점을 설명한다. 다이나믹 워크플로우는 사용자의 요청을 받아 메인 에이전트가 자동으로 단계별 작업 계획을 수립하고, 각 페이즈에 맞는 하위 에이전트들을 동적으로 생성하여 병렬 처리한다. 딥리서치는 리서치에 특화되어 있고, 울트라코드는 코드 생성/수정에 특화되어 있다. 이들은 검증과 수정 과정을 반복하며 목표를 달성할 때까지 작업을 계속한다.
+- **Core Message:** 다이나믹 워크플로우는 정적인 하네스 대신 요청에 따라 동적으로 워크플로를 생성하여 복잡한 작업을 자동화된 단계별 처리로 해결하는 혁신적인 AI 작업 방식이다.
+> 다이나믹 워크플로우는 결국에 이 페이즈들을 나누는 역할을 하는 겁니다. 각각 페이즈의 정확한 목표와 정확한 결과물을 내고 각 페이즈가 지날 때마다 그 페이스에 정확하게 만든 하네스가 설정이 돼 있을 수 있도록 만들어 주는게 다이나믹 워크플로우
+> 골 같은 경우에는 성공하지 않으면 죽은 뿐이다. 기본적으로 집착에 가까울 정도로 우리가 명령한 거를 그냥 성공하거나 아니면 그냥 죽을 때까지 하는 거
+> 메타프롬프팅을 꼭 쓰셔야 돼요. 나 이걸 할 건데 네가 너한테 먹일 프롬프트를 만들어 줘라고 클로드한테 얘기하는 거예요
+❗ 딥리서치는 검증 단계에서 초기 검색 에이전트 수의 거의 5배에 가까운 에이전트들을 사용한다
+❗ 울트라코드는 딥리서치보다 에이전트 개수는 적게 사용하지만, 각 에이전트가 더 오래 실행되어 토큰 사용량은 더 많을 수 있다
+❗ 골(Goal)은 시간 제한 없이 며칠씩 돌 수 있으며, 목표 달성까지 무제한으로 실행된다
+
+## 🚀 실행 (Execute)
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=0) 클로드 코드에 다이나믹
+- [0:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=1) 워크플로우라는게 생긴지 조금 됐죠.
+- [0:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=3) 대표적으로 딥리서치랑 울트라 코드이
+- [0:05](https://youtube.com/watch?v=9fx2_1aTzq8&t=5) 두 가지가 있는데이 두 가지를
+- [0:07](https://youtube.com/watch?v=9fx2_1aTzq8&t=7) 헷갈리는 분은 잘 없을 거예요.
+- [0:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=8) 근데이 두 가지가이 클로드 코드
+- [0:11](https://youtube.com/watch?v=9fx2_1aTzq8&t=11) 생태계 속에서 어떻게 어떤 포지셔닝을
+- [0:14](https://youtube.com/watch?v=9fx2_1aTzq8&t=14) 갖고 있는지 물어보는 분들이 굉장히
+- [0:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=16) 많아서 제가 싹 다 한번 정리를 해
+- [0:17](https://youtube.com/watch?v=9fx2_1aTzq8&t=17) 봤고요. 자, 오늘 영상 좋다면은
+- [0:19](https://youtube.com/watch?v=9fx2_1aTzq8&t=19) 구독과 알림 설정 그리고 댓글에
+- [0:21](https://youtube.com/watch?v=9fx2_1aTzq8&t=21) 하이보이까지 꼭 해 주시면은 1초도
+- [0:23](https://youtube.com/watch?v=9fx2_1aTzq8&t=23) 안 걸리거든요. 저는 진짜 그것
+- [0:24](https://youtube.com/watch?v=9fx2_1aTzq8&t=24) 때문에 합니다. 영상 보기 전에 꼭
+- [0:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=26) 한번 눌러 주시면 제가 한번 열심히
+- [0:27](https://youtube.com/watch?v=9fx2_1aTzq8&t=27) 해 보겠습니다. 쏘as지. 자, 일단
+- [0:30](https://youtube.com/watch?v=9fx2_1aTzq8&t=30) 우리가 좀 정의를 한번 하고 가야
+- [0:32](https://youtube.com/watch?v=9fx2_1aTzq8&t=32) 되는데. 자,이 다이나믹 워크플로에는
+- [0:34](https://youtube.com/watch?v=9fx2_1aTzq8&t=34) 아까 말씀을 드린 것처럼 딥리서치랑
+- [0:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=36) 울트라 코드가 있고요. 자,
+- [0:37](https://youtube.com/watch?v=9fx2_1aTzq8&t=37) 딥리서치는 당연히 리서치를 하는
+- [0:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=39) 형태고 울트라 코드는 당연히 코드를
+- [0:41](https://youtube.com/watch?v=9fx2_1aTzq8&t=41) 생성하는 목적을 갖고 있다라고
+- [0:42](https://youtube.com/watch?v=9fx2_1aTzq8&t=42) 보시면은 돼요. 자, 근데 이게 왜
+- [0:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=44) 다이나믹 워크플로라고 이름이 지어져
+- [0:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=46) 있냐? 자,이 워크플로가 동적으로
+- [0:48](https://youtube.com/watch?v=9fx2_1aTzq8&t=48) 생성이 됩니다. 여러분이 일반적으로
+- [0:51](https://youtube.com/watch?v=9fx2_1aTzq8&t=51) 하네싱을 해 놓으면요. 여러분의 이제
+- [0:53](https://youtube.com/watch?v=9fx2_1aTzq8&t=53) 프로젝트에서 그러면은 그 하네스가
+- [0:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=55) 굉장히 정적이잖아요. 그죠? 여러분이
+- [0:56](https://youtube.com/watch?v=9fx2_1aTzq8&t=56) 계속 바꿔 줘야지만이 한네스가 작동을
+- [0:59](https://youtube.com/watch?v=9fx2_1aTzq8&t=59) 하고 그것 때문에 오히려 한네스
+- [1:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=61) 만지느라 제대로 프로젝트를 진행하지
+- [1:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=63) 못하는 경우도 있단 말이에요. 그죠?
+- [1:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=64) 자, 그런데이 친구들은 어떤 식으로
+- [1:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=66) 작동을 하냐면요. 자, 둘 다
+- [1:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=68) 마찬가지요. 일단 우리가 어떤 요청을
+- [1:10](https://youtube.com/watch?v=9fx2_1aTzq8&t=70) 줘요. 어떤 리서치 목적을 주거나
+- [1:12](https://youtube.com/watch?v=9fx2_1aTzq8&t=72) 코드를 어떻게 변경을 해라, 생성을
+- [1:14](https://youtube.com/watch?v=9fx2_1aTzq8&t=74) 해라라고 우리가 얘기를 하게 되면은
+- [1:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=76) 그때는 워크플로우가 생성이 되지가
+- [1:18](https://youtube.com/watch?v=9fx2_1aTzq8&t=78) 않아요. 그 목적을 메이너 에이전트가
+- [1:20](https://youtube.com/watch?v=9fx2_1aTzq8&t=80) 일단 듣고 나서요. 이거를 어떻게
+- [1:22](https://youtube.com/watch?v=9fx2_1aTzq8&t=82) 작업을 해야 될지 리서치하고 계획을
+- [1:25](https://youtube.com/watch?v=9fx2_1aTzq8&t=85) 세웁니다. 그 계획에서 뭘 세우냐면은
+- [1:27](https://youtube.com/watch?v=9fx2_1aTzq8&t=87) 페이즈별로 나눠요. 각각 페이지의
+- [1:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=89) 한스를 이제 생성을 하는 거죠.이 이
+- [1:31](https://youtube.com/watch?v=9fx2_1aTzq8&t=91) 페이지에서 어떤 걸 리서치해야 되고
+- [1:33](https://youtube.com/watch?v=9fx2_1aTzq8&t=93) 어떤 걸 작업해야 되고 어떤 결과물을
+- [1:35](https://youtube.com/watch?v=9fx2_1aTzq8&t=95) 내야 된다. 전부 다 정의를이 친구가
+- [1:37](https://youtube.com/watch?v=9fx2_1aTzq8&t=97) 다 해 놓습니다. 그리고이 친구가
+- [1:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=99) 정한이 하네스 안에서 동적으로
+- [1:42](https://youtube.com/watch?v=9fx2_1aTzq8&t=102) 생성된이 한네스 안에서이 전체
+- [1:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=104) 프로세스가 이루어지는 거예요. 그리고
+- [1:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=106) 그 안에서 만약에 부족한 부분이
+- [1:48](https://youtube.com/watch?v=9fx2_1aTzq8&t=108) 있으면은 계속 검증과 수정의 과정을
+- [1:51](https://youtube.com/watch?v=9fx2_1aTzq8&t=111) 겪게 되는 거고요. 자, 그래서
+- [1:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=112) 딥리서치 같은 경우에는 항상 일단은
+- [1:54](https://youtube.com/watch?v=9fx2_1aTzq8&t=114) 조사를 먼저 해야겠죠. 그다음에 이제
+- [1:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=115) 우리가 검증을 하고 그리고 그다음에
+- [1:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=118) 우리가 더 조사할게 있는지 확인하고서
+- [2:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=120) 만약에 더 있다면 돌아가 가지고 더
+- [2:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=121) 조사하고 이거 계속 무한루프가 도는
+- [2:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=123) 거고 아닐 경우에 다 끝났을 경우에
+- [2:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=124) 이제 리포트를내는 이런 형태가 되는
+- [2:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=126) 거죠. 자, 보통 우리가 일반 채팅을
+- [2:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=128) 쓰게 되면은 자, 여기 첫 번째
+- [2:10](https://youtube.com/watch?v=9fx2_1aTzq8&t=130) 단계에서 끝난다라고 보시면은 됩니다.
+- [2:13](https://youtube.com/watch?v=9fx2_1aTzq8&t=133) 그래서 그냥 뱉어내게 되고 이거를 뭐
+- [2:15](https://youtube.com/watch?v=9fx2_1aTzq8&t=135) 검증을 하고 뭘 하고 막 이런
+- [2:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=136) 생각까지를 하지 않게 된다라는 거죠.
+- [2:18](https://youtube.com/watch?v=9fx2_1aTzq8&t=138) 왜냐면은 일반 채팅 같은 경우에는
+- [2:20](https://youtube.com/watch?v=9fx2_1aTzq8&t=140) 정해져 있어요. 얼마나 이제 턴이
+- [2:22](https://youtube.com/watch?v=9fx2_1aTzq8&t=142) 들어갈 수가 있는지가 엔트로픽에서
+- [2:23](https://youtube.com/watch?v=9fx2_1aTzq8&t=143) 정해 놓은게 있기 때문에 여러분이
+- [2:25](https://youtube.com/watch?v=9fx2_1aTzq8&t=145) 오랫동안 이렇게 계속 끌고 갈 수가
+- [2:27](https://youtube.com/watch?v=9fx2_1aTzq8&t=147) 없습니다. 자, 그걸 우리가 조금
+- [2:28](https://youtube.com/watch?v=9fx2_1aTzq8&t=148) 있다고 비교해서도 한번 얘기를 해 볼
+- [2:30](https://youtube.com/watch?v=9fx2_1aTzq8&t=150) 거예요. 자, 울트라 코드도
+- [2:31](https://youtube.com/watch?v=9fx2_1aTzq8&t=151) 마찬가지예요. 뭘 코드를 만들려고
+- [2:33](https://youtube.com/watch?v=9fx2_1aTzq8&t=153) 하면은 우리가 다양한 방면에서 우리가
+- [2:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=156) 병렬로 처리를 해 주고 그다음에
+- [2:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=158) 리뷰하고 그리고 검증한 다음에 만약에
+- [2:40](https://youtube.com/watch?v=9fx2_1aTzq8&t=160) 수정해야 될게 있으면 다시 계획해
+- [2:41](https://youtube.com/watch?v=9fx2_1aTzq8&t=161) 가지고 다시 돌아가 가지고 작업을
+- [2:42](https://youtube.com/watch?v=9fx2_1aTzq8&t=162) 무한루프를 돌리고서 결과를 낸다라는
+- [2:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=164) 거죠. 자, 그리고 이게 재미있는게
+- [2:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=166) 자, 우리 워크플로즈에 들어가
+- [2:47](https://youtube.com/watch?v=9fx2_1aTzq8&t=167) 보면요. 제가 딥리 서치를 하나 시켜
+- [2:49](https://youtube.com/watch?v=9fx2_1aTzq8&t=169) 본게 있는데요.이 딥리 서치랑 울트라
+- [2:51](https://youtube.com/watch?v=9fx2_1aTzq8&t=171) 코드랑 똑같이 나옵니다. 화면은
+- [2:53](https://youtube.com/watch?v=9fx2_1aTzq8&t=173) 대신에이 페이즈가 매번 달라요.
+- [2:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=175) 여러분이 시킨 거에 따라서. 자,
+- [2:56](https://youtube.com/watch?v=9fx2_1aTzq8&t=176) 보면 이제 스코프를 정하고요.
+- [2:57](https://youtube.com/watch?v=9fx2_1aTzq8&t=177) 그다음에 우리가 두 번째 서치로 가게
+- [3:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=180) 되면은요. 자, 이렇게 알아서 우리가
+- [3:02](https://youtube.com/watch?v=9fx2_1aTzq8&t=182) 목적을 갖고 있는이 서치 페이즈에서
+- [3:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=184) 해야 되는 결과물을 얻기 위해서,
+- [3:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=186) 최대한 빨리 얻기 위해서 우리가
+- [3:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=188) 병렬로 다섯 개 에이전트를 생성해
+- [3:10](https://youtube.com/watch?v=9fx2_1aTzq8&t=190) 가지고 작업을 한 거를 볼 수가
+- [3:11](https://youtube.com/watch?v=9fx2_1aTzq8&t=191) 있어요. 그리고 들어가 가지고
+- [3:12](https://youtube.com/watch?v=9fx2_1aTzq8&t=192) 보면은요.이 각각의 에이전트가 뭘
+- [3:14](https://youtube.com/watch?v=9fx2_1aTzq8&t=194) 했는지도 아웃컴까지도 우리가 볼 수가
+- [3:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=196) 있습니다. 그죠? 자, 그래서 우리가
+- [3:17](https://youtube.com/watch?v=9fx2_1aTzq8&t=197) 동시에 실행해서 굉장히 빠르게 하나의
+- [3:19](https://youtube.com/watch?v=9fx2_1aTzq8&t=199) 목적을 향해서 달려가도록 하게 하는
+- [3:21](https://youtube.com/watch?v=9fx2_1aTzq8&t=201) 거다라는 거죠. 사실상 무한하게이
+- [3:23](https://youtube.com/watch?v=9fx2_1aTzq8&t=203) 병렬 에이전트들을 우리가 실행을 할
+- [3:25](https://youtube.com/watch?v=9fx2_1aTzq8&t=205) 수가 있습니다. 자, 일단 검색
+- [3:27](https://youtube.com/watch?v=9fx2_1aTzq8&t=207) 소스들을 우리가 구분을 해 가지고
+- [3:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=209) 검색 결과들을 얻었고요. 그렇죠?
+- [3:31](https://youtube.com/watch?v=9fx2_1aTzq8&t=211) 자, 그거를 기반으로 우리가 어떤
+- [3:33](https://youtube.com/watch?v=9fx2_1aTzq8&t=213) 정보를 가져야 되는지 알게 됐으니까
+- [3:35](https://youtube.com/watch?v=9fx2_1aTzq8&t=215) 여기서 병렬로 우리가 모든
+- [3:37](https://youtube.com/watch?v=9fx2_1aTzq8&t=217) 에이전트들이 실제 정보들을 다 가져온
+- [3:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=219) 거예요. 그죠? 자, 가져오고 나면
+- [3:40](https://youtube.com/watch?v=9fx2_1aTzq8&t=220) 우리가 이거를 검증을 또 해야
+- [3:41](https://youtube.com/watch?v=9fx2_1aTzq8&t=221) 되잖아요. 그죠? 여기까지는 우리가
+- [3:43](https://youtube.com/watch?v=9fx2_1aTzq8&t=223) 절대로 그냥 채팅해서 한번 싱글
+- [3:45](https://youtube.com/watch?v=9fx2_1aTzq8&t=225) 프롬프트로 넣어 가지고 갈 수가 없는
+- [3:47](https://youtube.com/watch?v=9fx2_1aTzq8&t=227) 공간이에요. 자, 검증은 당연히
+- [3:49](https://youtube.com/watch?v=9fx2_1aTzq8&t=229) 우리가 더 많은 에이전트가
+- [3:50](https://youtube.com/watch?v=9fx2_1aTzq8&t=230) 필요하겠죠? 우리가 검색해 가지고 어
+- [3:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=232) 이런 자료들을 우리가 한번 검색해
+- [3:53](https://youtube.com/watch?v=9fx2_1aTzq8&t=233) 보면 좋겠다라는 결론이 나고 그
+- [3:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=235) 자료들을 실제 가져와서 검색을 할
+- [3:57](https://youtube.com/watch?v=9fx2_1aTzq8&t=237) 때는 우리가 거의 다섯 배에 가까운
+- [3:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=238) 에이전트들을 썼으니까 그 에이전트들이
+- [4:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=241) 병렬로 모은 수많은 데이터를 또
+- [4:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=243) 검증을 하기 위해서 우리가 더 많은
+- [4:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=244) 에이전트들이 필요하겠죠. 각각의이
+- [4:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=246) 소스별로 우리가 정보가 너무 많으니까
+- [4:09](https://youtube.com/watch?v=9fx2_1aTzq8&t=249) 그 정보들조차도 지금 이제 세 개씩
+- [4:11](https://youtube.com/watch?v=9fx2_1aTzq8&t=251) 쪼갠 거 같아요. 세 개씩 쪼개
+- [4:13](https://youtube.com/watch?v=9fx2_1aTzq8&t=253) 가지고 우리가 독립적으로 이렇게
+- [4:14](https://youtube.com/watch?v=9fx2_1aTzq8&t=254) 검증을 하고서 그 결과들을 한 번에
+- [4:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=256) 또 모아 가지고 마지막에 이제
+- [4:18](https://youtube.com/watch?v=9fx2_1aTzq8&t=258) 리포트를 이렇게 만들어 주는 거죠.
+- [4:20](https://youtube.com/watch?v=9fx2_1aTzq8&t=260) 자, 리포트를 만드는 건 그럼 왜
+- [4:21](https://youtube.com/watch?v=9fx2_1aTzq8&t=261) 혼자서 하냐? 어, 이거는 컨텍스트
+- [4:23](https://youtube.com/watch?v=9fx2_1aTzq8&t=263) 때문에 그러겠죠. 그죠? 자,
+- [4:24](https://youtube.com/watch?v=9fx2_1aTzq8&t=264) 그래서이 다이나믹 워크플로우는
+- [4:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=266) 결국에이 페이즈들을 나누는 역할을
+- [4:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=269) 하는 겁니다.이 페이즈들을. 그래서이
+- [4:31](https://youtube.com/watch?v=9fx2_1aTzq8&t=271) 각각 페이즈의 정확한 목표와 정확한
+- [4:34](https://youtube.com/watch?v=9fx2_1aTzq8&t=274) 결과물을 우리가 내고 각 페이즈가
+- [4:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=276) 지날 때마다 그 페이스에 정확하게
+- [4:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=278) 만든 하네스가 설정이 돼 있을 수
+- [4:40](https://youtube.com/watch?v=9fx2_1aTzq8&t=280) 있도록 우리가 만들어 주는게 다이나믹
+- [4:42](https://youtube.com/watch?v=9fx2_1aTzq8&t=282) 워크플로우라는 거죠. 이게 동적으로
+- [4:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=284) 생기기 때문에 여러분이 정의를 해
+- [4:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=286) 놓을 필요 없이 그냥 싱글 프롬프트
+- [4:47](https://youtube.com/watch?v=9fx2_1aTzq8&t=287) 딱 넣어 버리면은 그걸 기반으로 완전
+- [4:50](https://youtube.com/watch?v=9fx2_1aTzq8&t=290) 동적으로이 워크플로우를 생성을 해
+- [4:51](https://youtube.com/watch?v=9fx2_1aTzq8&t=291) 버리기 때문에 다이나믹 워크플로우로
+- [4:53](https://youtube.com/watch?v=9fx2_1aTzq8&t=293) 하는 겁니다. 자, 울트라 코드도
+- [4:54](https://youtube.com/watch?v=9fx2_1aTzq8&t=294) 마찬가지예요. 우리가 들어가 가지고
+- [4:56](https://youtube.com/watch?v=9fx2_1aTzq8&t=296) 여기서 울트라 코드를 설정을 하면요.
+- [4:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=298) 자, 오른쪽에 이렇게 울트라 코드라고
+- [4:59](https://youtube.com/watch?v=9fx2_1aTzq8&t=299) 나오죠. 그죠?이 상태에서 우리가 큰
+- [5:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=301) 작업을 요청을 하게 되면은 알아서
+- [5:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=303) 병렬로 작업들을 만들어 내요. 예를
+- [5:05](https://youtube.com/watch?v=9fx2_1aTzq8&t=305) 들어서 그냥 대강적으로 이렇게 말해
+- [5:07](https://youtube.com/watch?v=9fx2_1aTzq8&t=307) 볼게요. 굉장히 조금 오래 걸 걸릴
+- [5:09](https://youtube.com/watch?v=9fx2_1aTzq8&t=309) 수 있는 작업. 컨스란 뭐 포스를
+- [5:11](https://youtube.com/watch?v=9fx2_1aTzq8&t=311) 전부 다 호환할 수 있도록 우리가
+- [5:13](https://youtube.com/watch?v=9fx2_1aTzq8&t=313) 크린 아키텍처를 사용을 한 포텐트
+- [5:14](https://youtube.com/watch?v=9fx2_1aTzq8&t=314) 아댑터 패턴을 구현하고 싶어라고
+- [5:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=316) 만약에 이야기를 하게 되면은요. 자,
+- [5:18](https://youtube.com/watch?v=9fx2_1aTzq8&t=318) 이게 사실 거의 그냥 미친
+- [5:20](https://youtube.com/watch?v=9fx2_1aTzq8&t=320) 소리거든요. 이거는 그냥 사실상
+- [5:22](https://youtube.com/watch?v=9fx2_1aTzq8&t=322) 현실성이 없다라고 보시면 돼요.
+- [5:23](https://youtube.com/watch?v=9fx2_1aTzq8&t=323) 현실에서 우리가 실제로 여러 개의
+- [5:25](https://youtube.com/watch?v=9fx2_1aTzq8&t=325) 데이터베이스에 똑같은 소스를
+- [5:27](https://youtube.com/watch?v=9fx2_1aTzq8&t=327) 콤팩티블하게 쓰는 경우는 잘 없으니까
+- [5:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=329) 보통 이제 서로 다른 API를 다른
+- [5:31](https://youtube.com/watch?v=9fx2_1aTzq8&t=331) 데이터베이스에 이제 연결하도록 할 수
+- [5:33](https://youtube.com/watch?v=9fx2_1aTzq8&t=333) 있는데 보통 이제 완전 똑같이
+- [5:34](https://youtube.com/watch?v=9fx2_1aTzq8&t=334) 컴패티브 하게 하진 않습니다. 근데
+- [5:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=336) 만약에 이거를 하고 싶다라고 우리가
+- [5:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=338) 뇌절을 해 버리면은 자 여기서는 어
+- [5:40](https://youtube.com/watch?v=9fx2_1aTzq8&t=340) 말도 안 되는 소리 하고 있네라고
+- [5:41](https://youtube.com/watch?v=9fx2_1aTzq8&t=341) 생각은 하겠지만 어쨌든 내가 하라고
+- [5:43](https://youtube.com/watch?v=9fx2_1aTzq8&t=343) 했으니까 일단은 플래닝을 하겠죠. 자
+- [5:45](https://youtube.com/watch?v=9fx2_1aTzq8&t=345) 이거를 우리가 컨วก 포스트 그
+- [5:47](https://youtube.com/watch?v=9fx2_1aTzq8&t=347) SQL 모두 다 모든 API들이 다
+- [5:49](https://youtube.com/watch?v=9fx2_1aTzq8&t=349) 호환되도록 이제 만들어야 되고 그
+- [5:50](https://youtube.com/watch?v=9fx2_1aTzq8&t=350) 인프라도 이제 따로 각각 이제
+- [5:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=352) 아댑터들을 다 짜야 되는데 그러면은
+- [5:54](https://youtube.com/watch?v=9fx2_1aTzq8&t=354) 우리가 어 페이스들을 어떻게 나누면
+- [5:56](https://youtube.com/watch?v=9fx2_1aTzq8&t=356) 될까 일단 중요한이 단계들이 뭘까라고
+- [5:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=358) 생각을 해 보면 일단은 클린
+- [6:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=360) 아키텍처로 먼저 바꾸겠죠. 그죠?
+- [6:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=361) 자, 그리고 포트가 다 생성이 되고
+- [6:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=363) 나면 그 아댑터들을 우리가 또 병렬로
+- [6:05](https://youtube.com/watch?v=9fx2_1aTzq8&t=365) 실행하겠다라는 계획을 짜게 될
+- [6:07](https://youtube.com/watch?v=9fx2_1aTzq8&t=367) 거예요. 그죠? 자, 그리고 그다음에
+- [6:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=368) 이제 검증을 할 거고 검증하고서 이제
+- [6:10](https://youtube.com/watch?v=9fx2_1aTzq8&t=370) 되지 않는 것들이 있다라고 하면 다시
+- [6:12](https://youtube.com/watch?v=9fx2_1aTzq8&t=372) 한번 코딩을 진행을 하는 과정을
+- [6:13](https://youtube.com/watch?v=9fx2_1aTzq8&t=373) 가져가게 될 겁니다. 우리가 생각을
+- [6:15](https://youtube.com/watch?v=9fx2_1aTzq8&t=375) 해보면 이제 딱 그런 단계로 나눌
+- [6:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=376) 거란 말이죠. 그죠? 근데이 친구도
+- [6:18](https://youtube.com/watch?v=9fx2_1aTzq8&t=378) 아마 그렇게 나눌 거고요. 지금
+- [6:20](https://youtube.com/watch?v=9fx2_1aTzq8&t=380) 생각하고 있는이 에이전트가 그 한네스
+- [6:23](https://youtube.com/watch?v=9fx2_1aTzq8&t=383) 단계들을 다이나믹 워크플로를 만들어
+- [6:25](https://youtube.com/watch?v=9fx2_1aTzq8&t=385) 낸다라고 여러분이 보시면 된다라는
+- [6:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=386) 거예요. 자, 그리고 제가 항상
+- [6:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=389) 말씀을 드리지만이 계획이 가장
+- [6:31](https://youtube.com/watch?v=9fx2_1aTzq8&t=391) 중요하기 때문에 그러니까 어떻게
+- [6:33](https://youtube.com/watch?v=9fx2_1aTzq8&t=393) 계획을 설계를 했냐에 따라서 결과물이
+- [6:35](https://youtube.com/watch?v=9fx2_1aTzq8&t=395) 완전히 달라지기 때문에 우리가 올트라
+- [6:37](https://youtube.com/watch?v=9fx2_1aTzq8&t=397) 코드를 쓰게 되면은요. X하이 말고
+- [6:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=399) 다른 우리가 쓸 수는 없어요. 그죠?
+- [6:42](https://youtube.com/watch?v=9fx2_1aTzq8&t=402) 그래서 X하이로 우리가 생각을 하고
+- [6:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=404) 모든 단계들을 설계를 하고 나면은이
+- [6:47](https://youtube.com/watch?v=9fx2_1aTzq8&t=407) 그 각각 페이즈 안에서는 진짜
+- [6:49](https://youtube.com/watch?v=9fx2_1aTzq8&t=409) 자신들에게 배정된 일에만 집중해서
+- [6:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=412) 우리가 작업을 할 수 있게 된다라는
+- [6:53](https://youtube.com/watch?v=9fx2_1aTzq8&t=413) 거죠. 자, 워크플로가 생성이 되니까
+- [6:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=415) 이렇게 어, 파운데이션 자, 일단은
+- [6:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=418) 기본기들을 만들고 그다음에 이제
+- [6:59](https://youtube.com/watch?v=9fx2_1aTzq8&t=419) 빌드하고 그다음에 우리가 통합하고
+- [7:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=421) 그다음에 리뷰하는 형태로 이렇게
+- [7:02](https://youtube.com/watch?v=9fx2_1aTzq8&t=422) 페이즈들을 만든 거를 볼 수가
+- [7:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=424) 있어요. 그리고 자, 여기도 설명이
+- [7:05](https://youtube.com/watch?v=9fx2_1aTzq8&t=425) 있습니다. 자, 어떻게 만들었는지,
+- [7:07](https://youtube.com/watch?v=9fx2_1aTzq8&t=427) 자, 어떻게 우리가 설계를 했는지
+- [7:09](https://youtube.com/watch?v=9fx2_1aTzq8&t=429) 자, 이렇게네 개 에이전트를 쓸 거고
+- [7:11](https://youtube.com/watch?v=9fx2_1aTzq8&t=431) 빌드할 때 14개, 그다음에 두 개,
+- [7:12](https://youtube.com/watch?v=9fx2_1aTzq8&t=432) 그다음에 세 개 이렇게 쓸 거다라고
+- [7:14](https://youtube.com/watch?v=9fx2_1aTzq8&t=434) 나오는 걸로 볼 수가 있어요. 자,
+- [7:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=436) 대체적으로 우리가 코드를 변경을 하는
+- [7:19](https://youtube.com/watch?v=9fx2_1aTzq8&t=439) 거는 우리가 여러 에이전트를 막
+- [7:21](https://youtube.com/watch?v=9fx2_1aTzq8&t=441) 70개 막 이렇게까지는 쓰기가 조금
+- [7:23](https://youtube.com/watch?v=9fx2_1aTzq8&t=443) 쉽지가 않아요. 컨텍스트가 굉장히
+- [7:25](https://youtube.com/watch?v=9fx2_1aTzq8&t=445) 중요하기 때문에. 자, 그래서 우리가
+- [7:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=446) 울트라 코드를 쓸 때는 딥
+- [7:28](https://youtube.com/watch?v=9fx2_1aTzq8&t=448) 리서치보다는 훨씬 더 적은 에이전트
+- [7:31](https://youtube.com/watch?v=9fx2_1aTzq8&t=451) 개수들을 사용을 하게 되고요.
+- [7:32](https://youtube.com/watch?v=9fx2_1aTzq8&t=452) 그렇다고 해서 울트라코드가 토큰을
+- [7:35](https://youtube.com/watch?v=9fx2_1aTzq8&t=455) 상대적으로 덜 쓰는 건 아닙니다.
+- [7:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=456) 목적 자체가 다르기는 하지만 훨씬
+- [7:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=458) 더이 각각 에이전트들이 더 오래
+- [7:41](https://youtube.com/watch?v=9fx2_1aTzq8&t=461) 실행이 되기 때문에 여러분이
+- [7:42](https://youtube.com/watch?v=9fx2_1aTzq8&t=462) 마찬가지로 굉장히 많은 토큰을 사용을
+- [7:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=464) 하게 된다라고 기억을 하시면 됩니다.
+- [7:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=466) 자, 그러면이 둘은 이해를 하는데
+- [7:48](https://youtube.com/watch?v=9fx2_1aTzq8&t=468) 그러면이 친구들이 다른 우리의 굉장히
+- [7:51](https://youtube.com/watch?v=9fx2_1aTzq8&t=471) 많은 병렬 실행하는 프레워크나
+- [7:53](https://youtube.com/watch?v=9fx2_1aTzq8&t=473) 기술들과 어떤 차이가 있는지가
+- [7:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=475) 궁금하잖아요. 그죠? 그중에
+- [7:56](https://youtube.com/watch?v=9fx2_1aTzq8&t=476) 대표적으로이 배치랑 서브에트가 있을
+- [7:59](https://youtube.com/watch?v=9fx2_1aTzq8&t=479) 거란 말이죠. 물론 골도 있겠지만
+- [8:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=480) 골은 우리가 조금 있다 얘기를 해
+- [8:02](https://youtube.com/watch?v=9fx2_1aTzq8&t=482) 보도록 할게요. 자, 서에전트부터
+- [8:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=484) 얘기를 하면은 서베에트는 가장 먼저
+- [8:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=486) 나온 기능 중 하나죠. 우리 병렬로
+- [8:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=488) 하위 에이전트를 생성하는 방식이.
+- [8:10](https://youtube.com/watch?v=9fx2_1aTzq8&t=490) 그리고 이게 나왔을 때 사실상 어떻게
+- [8:12](https://youtube.com/watch?v=9fx2_1aTzq8&t=492) 보면 한해 시초라고 볼 수도 있고요.
+- [8:15](https://youtube.com/watch?v=9fx2_1aTzq8&t=495) 엄청나게 혁신적이었습니다. 그래서
+- [8:17](https://youtube.com/watch?v=9fx2_1aTzq8&t=497) 맨날 서브에트 튜닝하면서 우리가
+- [8:19](https://youtube.com/watch?v=9fx2_1aTzq8&t=499) 하루를 보내고 막 그랬었는데 우리가이
+- [8:21](https://youtube.com/watch?v=9fx2_1aTzq8&t=501) 각각의이 에이전트들을 직접 정의해서
+- [8:23](https://youtube.com/watch?v=9fx2_1aTzq8&t=503) 만들 수가 있어요. 물론 만들어
+- [8:25](https://youtube.com/watch?v=9fx2_1aTzq8&t=505) 달라고 할 수도 있고요. 그죠? 자,
+- [8:27](https://youtube.com/watch?v=9fx2_1aTzq8&t=507) 그런데 어떻게 사용이 되느냐? 우리가
+- [8:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=509) 메인 에이전트한테 어떤 작업을 해
+- [8:30](https://youtube.com/watch?v=9fx2_1aTzq8&t=510) 줘라고 하면은 바로 실행이 되는게
+- [8:32](https://youtube.com/watch?v=9fx2_1aTzq8&t=512) 뭐예요? 일단 리서치 서치하는
+- [8:34](https://youtube.com/watch?v=9fx2_1aTzq8&t=514) 에이전트 뜨죠? 하이쿠로 그죠?
+- [8:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=516) 빠르게 검색을 하려고 중요한 정보만
+- [8:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=518) 취합을 해 가지고 그 친구들이 다시
+- [8:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=519) 메인 에이전트한테 데이터를 넘겨 준단
+- [8:42](https://youtube.com/watch?v=9fx2_1aTzq8&t=522) 말이에요. 컨텍스트를 아낄 수 있도록
+- [8:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=524) 그죠? 왜냐면 소스크를 전제 다 봐
+- [8:45](https://youtube.com/watch?v=9fx2_1aTzq8&t=525) 버리면 혼자서 그러면 그것만으로 이제
+- [8:47](https://youtube.com/watch?v=9fx2_1aTzq8&t=527) 벌써 컨텍스트 윈더가 터져 버리니까.
+- [8:49](https://youtube.com/watch?v=9fx2_1aTzq8&t=529) 자, 그다음에 우리가 작업을 하게
+- [8:50](https://youtube.com/watch?v=9fx2_1aTzq8&t=530) 된다라고 하면은 각각 특화된
+- [8:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=532) 프롬프트로 하는이 서버지를 띄어
+- [8:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=535) 가지고 우리가 병렬로 실행을 하든
+- [8:57](https://youtube.com/watch?v=9fx2_1aTzq8&t=537) 아니면 뭐 직렬로 실행을 하든 우리가
+- [8:59](https://youtube.com/watch?v=9fx2_1aTzq8&t=539) 실행을 할 수 있게 된다. 자,
+- [9:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=540) 그리고 이게 다 끝나고 나면 무조건
+- [9:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=541) 이제 다시 메인 에이전트한테 결과물을
+- [9:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=543) 취합해서 돌려 준다라는게 이제 서브
+- [9:05](https://youtube.com/watch?v=9fx2_1aTzq8&t=545) 서브에트의 특징입니다. 자, 근데
+- [9:07](https://youtube.com/watch?v=9fx2_1aTzq8&t=547) 이걸 우리가 배치랑 비교를 하게
+- [9:09](https://youtube.com/watch?v=9fx2_1aTzq8&t=549) 되면은요. 서브에트는 우리가이 각각
+- [9:12](https://youtube.com/watch?v=9fx2_1aTzq8&t=552) 에이전트 하나하나에 우리가 신경을
+- [9:14](https://youtube.com/watch?v=9fx2_1aTzq8&t=554) 썼더라면은 배치는 우리가 비슷한
+- [9:17](https://youtube.com/watch?v=9fx2_1aTzq8&t=557) 것들이 있잖아요. 굉장히 많은 비슷한
+- [9:18](https://youtube.com/watch?v=9fx2_1aTzq8&t=558) 이미 정의돼 있는 것들 그리고
+- [9:20](https://youtube.com/watch?v=9fx2_1aTzq8&t=560) 독립적으로 우리가 실행할 수 있는
+- [9:22](https://youtube.com/watch?v=9fx2_1aTzq8&t=562) 것들 그런 것들을 모아서 딱 이게
+- [9:24](https://youtube.com/watch?v=9fx2_1aTzq8&t=564) 제일 좋죠. 테스크리스타고서 버그 뭐
+- [9:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=566) 1번부터 뭐 100번까지 있으면
+- [9:28](https://youtube.com/watch?v=9fx2_1aTzq8&t=568) 그러면은 각각 버그는 다 독립적일 거
+- [9:30](https://youtube.com/watch?v=9fx2_1aTzq8&t=570) 아니에요. 그죠? 그 친구들 그냥
+- [9:32](https://youtube.com/watch?v=9fx2_1aTzq8&t=572) 우리가 각각 에이전트에 배정을 해
+- [9:34](https://youtube.com/watch?v=9fx2_1aTzq8&t=574) 가지고 동시에 수정을 하고서 결과를
+- [9:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=576) 내 버리는 거죠. 그러니까 공장 같은
+- [9:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=578) 느낌이에요. 공장 같은 느낌. 우리가
+- [9:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=579) 독립적으로 처리할 수 있는 여러
+- [9:41](https://youtube.com/watch?v=9fx2_1aTzq8&t=581) 가지를 묶어서 한 번의 병렬로 실행을
+- [9:43](https://youtube.com/watch?v=9fx2_1aTzq8&t=583) 하는게 배치의 가장 큰 목적이다라고
+- [9:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=586) 생각을 하시면 됩니다. 자, 그래서
+- [9:48](https://youtube.com/watch?v=9fx2_1aTzq8&t=588) 우리가 어 배치랑이
+- [9:50](https://youtube.com/watch?v=9fx2_1aTzq8&t=590) 서베이전트를 제외하더라도 우리가
+- [9:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=592) 전반적으로 어떤 식으로이 프롬프팅이
+- [9:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=595) 진화를 해 왔는지 그리고 작업 방식이
+- [9:57](https://youtube.com/watch?v=9fx2_1aTzq8&t=597) 진화를 해 왔는지 우리가 한번 확인을
+- [9:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=598) 해 보면은 자, 일단 왼쪽부터 당연히
+- [10:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=601) 오른쪽으로 갈 토큰을 제일 많이
+- [10:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=603) 먹고요. 그리고 목표를 추종하는이
+- [10:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=606) 방식도 오른쪽으로 갈수록 가장
+- [10:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=608) 높아집니다. 자, 일반 채팅 같은
+- [10:10](https://youtube.com/watch?v=9fx2_1aTzq8&t=610) 경우 우리 그냥 채팅 페이지에서
+- [10:11](https://youtube.com/watch?v=9fx2_1aTzq8&t=611) 우리가 하는 거랑 똑같죠. 자, 그냥
+- [10:13](https://youtube.com/watch?v=9fx2_1aTzq8&t=613) 우리가 답변하면은 한번 답변을 받을
+- [10:15](https://youtube.com/watch?v=9fx2_1aTzq8&t=615) 수가 있고. 자,이 친구는 오랫동안
+- [10:17](https://youtube.com/watch?v=9fx2_1aTzq8&t=617) 실행이 되지 않도록 애초에 원래
+- [10:19](https://youtube.com/watch?v=9fx2_1aTzq8&t=619) 설계가 돼 있어요. 그래서 완전한
+- [10:21](https://youtube.com/watch?v=9fx2_1aTzq8&t=621) 결과를 얻어내지 못했더라도 일단은 몇
+- [10:24](https://youtube.com/watch?v=9fx2_1aTzq8&t=624) 번 턴이 돌고 나면은 우리한테
+- [10:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=626) 결과물을 던져 주는 거 자체가이
+- [10:28](https://youtube.com/watch?v=9fx2_1aTzq8&t=628) 친구의 목적입니다. 그렇기 때문에
+- [10:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=629) 여러분이 가장 심플한 단계에서
+- [10:31](https://youtube.com/watch?v=9fx2_1aTzq8&t=631) 쓰시면은 좋고요. 자, 스킬은 뭐죠?
+- [10:33](https://youtube.com/watch?v=9fx2_1aTzq8&t=633) 자, 이거를 우리가 자주 하게 되는
+- [10:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=636) 거를 묶어 놓은게 이거예요. 자,
+- [10:37](https://youtube.com/watch?v=9fx2_1aTzq8&t=637) 그러니까 목적성이 조금 더 어,
+- [10:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=639) 명확해지죠. 자, 그다음에 뭐죠?
+- [10:40](https://youtube.com/watch?v=9fx2_1aTzq8&t=640) 자, 서브에트는 에이전트 자체를 이제
+- [10:43](https://youtube.com/watch?v=9fx2_1aTzq8&t=643) 튜닝을 한 겁니다. 어떤 특정 작업을
+- [10:45](https://youtube.com/watch?v=9fx2_1aTzq8&t=645) 할 수 있도록. 자,이 서베이전트
+- [10:47](https://youtube.com/watch?v=9fx2_1aTzq8&t=647) 그래서 스킬을 쓸 수도 있는 거고요.
+- [10:48](https://youtube.com/watch?v=9fx2_1aTzq8&t=648) 자, 그러면은 이제 배치 같은
+- [10:50](https://youtube.com/watch?v=9fx2_1aTzq8&t=650) 경우에는이 친구들을 우리가 여러 개를
+- [10:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=652) 동시에 한 번에 돌려 버릴 수가
+- [10:53](https://youtube.com/watch?v=9fx2_1aTzq8&t=653) 있는게 배치인 거고 딜리서치 같은
+- [10:56](https://youtube.com/watch?v=9fx2_1aTzq8&t=656) 경우에는 제가 설명 또 했죠. 예,
+- [10:57](https://youtube.com/watch?v=9fx2_1aTzq8&t=657) 딥치랑 울트라 코드는 사실상 같은
+- [11:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=660) 티어 있는데 우리가 토큰을 어느
+- [11:02](https://youtube.com/watch?v=9fx2_1aTzq8&t=662) 곳에서 더 많이 쓰는가라고 생각을 해
+- [11:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=663) 보면은 온트라 코드가 더 많이 쓸
+- [11:05](https://youtube.com/watch?v=9fx2_1aTzq8&t=665) 가능성이 훨씬 더 높아요. 작업이
+- [11:07](https://youtube.com/watch?v=9fx2_1aTzq8&t=667) 따라 다르긴 하겠지만. 자, 그래서이
+- [11:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=668) 둘이 이렇게 있고 그다음에 이제 목표
+- [11:11](https://youtube.com/watch?v=9fx2_1aTzq8&t=671) 지향적으로 가는 것 자체 포커스가
+- [11:13](https://youtube.com/watch?v=9fx2_1aTzq8&t=673) 제일 많이 맞춰져 있는 거는 골이라는
+- [11:15](https://youtube.com/watch?v=9fx2_1aTzq8&t=675) 겁니다. 어, 병렬로 실행하는 것들도
+- [11:17](https://youtube.com/watch?v=9fx2_1aTzq8&t=677) 당연히 있긴 하지만요. 병렬로
+- [11:19](https://youtube.com/watch?v=9fx2_1aTzq8&t=679) 실행하는게 좀 배치라던가 이제
+- [11:20](https://youtube.com/watch?v=9fx2_1aTzq8&t=680) 서브에트를 활용하는 방식으로 우리가
+- [11:22](https://youtube.com/watch?v=9fx2_1aTzq8&t=682) 실행을 하게 되는데 이거 워크플로
+- [11:24](https://youtube.com/watch?v=9fx2_1aTzq8&t=684) 안에서 생성되진 않아요.이 친구는이
+- [11:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=686) 친구를 우리가 쓸 때 그 제가 전에
+- [11:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=689) 보여 드렸던 영상에서도 말씀을
+- [11:30](https://youtube.com/watch?v=9fx2_1aTzq8&t=690) 드렸지만 메타프롬프팅을 꼭 쓰셔야
+- [11:32](https://youtube.com/watch?v=9fx2_1aTzq8&t=692) 돼요. 메타프롬프팅은 뭐냐? 야, 나
+- [11:34](https://youtube.com/watch?v=9fx2_1aTzq8&t=694) 이걸 할 건데 네가 너한테 먹일
+- [11:37](https://youtube.com/watch?v=9fx2_1aTzq8&t=697) 프롬프트를 만들어 줘라고 클로드한테
+- [11:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=699) 우리가 얘기를 하는 거예요. 예를
+- [11:40](https://youtube.com/watch?v=9fx2_1aTzq8&t=700) 들어서 넥스트를 스벨트로 우리가
+- [11:42](https://youtube.com/watch?v=9fx2_1aTzq8&t=702) 마이그레이션 해야 돼. 그 말도 안
+- [11:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=704) 되는 미친 짓이지만 뭐 누군가 갑자기
+- [11:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=706) 하고 싶다고 가정을 해 볼게요.
+- [11:47](https://youtube.com/watch?v=9fx2_1aTzq8&t=707) 그러면은 이거는 우리가 여기에서
+- [11:49](https://youtube.com/watch?v=9fx2_1aTzq8&t=709) 실행을 하면은요. 절대로 완성할 수가
+- [11:51](https://youtube.com/watch?v=9fx2_1aTzq8&t=711) 없어요. 너무 오래 걸리니까.
+- [11:53](https://youtube.com/watch?v=9fx2_1aTzq8&t=713) 이걸로도 충분하지가 않아. 이거랑
+- [11:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=715) 이거랑 똑같은 거니까 어차피 그죠?
+- [11:56](https://youtube.com/watch?v=9fx2_1aTzq8&t=716) 자, 서브에전트 우리가 배치로 막
+- [11:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=718) 돌려 가지고 할 수가 있는데 그
+- [11:59](https://youtube.com/watch?v=9fx2_1aTzq8&t=719) 결과를 우리가 보장을 받지를 못한단
+- [12:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=721) 말이에요. 왜냐면은 이게 배치를
+- [12:02](https://youtube.com/watch?v=9fx2_1aTzq8&t=722) 우리가 병렬로 너무 많이 실행을 하다
+- [12:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=724) 보면은요.이 목 자,이 목적을
+- [12:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=726) 검증하는 것보다는 일단 결과물을
+- [12:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=728) 빠르게내는 거에 훨씬 더 초점이
+- [12:10](https://youtube.com/watch?v=9fx2_1aTzq8&t=730) 맞춰져요. 자, 그런데이 골 같은
+- [12:12](https://youtube.com/watch?v=9fx2_1aTzq8&t=732) 경우는 어떻게 설계가 돼 있냐? 일단
+- [12:14](https://youtube.com/watch?v=9fx2_1aTzq8&t=734) 기본적으로 제한이 없습니다. 몇 턴을
+- [12:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=736) 사용을 해야 되는지 제한이 없어가죠.
+- [12:17](https://youtube.com/watch?v=9fx2_1aTzq8&t=737) 어, 며칠 돌기도 하고 몇 시간을
+- [12:19](https://youtube.com/watch?v=9fx2_1aTzq8&t=739) 돌기도 하고 목표가 정해진 목표가
+- [12:22](https://youtube.com/watch?v=9fx2_1aTzq8&t=742) 완전히 달성이 될 때까지 계속 실행이
+- [12:24](https://youtube.com/watch?v=9fx2_1aTzq8&t=744) 되기 때문에 우리가 여기다 프롬프트를
+- [12:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=746) 잘못 넣게 되면은요. 그냥 뻘짓을
+- [12:28](https://youtube.com/watch?v=9fx2_1aTzq8&t=748) 하는 거예요. 자, 그래서 그거를
+- [12:30](https://youtube.com/watch?v=9fx2_1aTzq8&t=750) 정의를 할 때는 무조건 우리가
+- [12:31](https://youtube.com/watch?v=9fx2_1aTzq8&t=751) 하려는게 뭐고 어떤 결과물이 나와야
+- [12:33](https://youtube.com/watch?v=9fx2_1aTzq8&t=753) 되고 검증은 어떻게 해야 되고 완료
+- [12:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=756) 조건들이 뭔지를 정확하게 명시를 해야
+- [12:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=758) 되거든요. 근데 그거 여러분이 손으로
+- [12:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=759) 절대 못 해요. 네. 그건 할 수가
+- [12:41](https://youtube.com/watch?v=9fx2_1aTzq8&t=761) 없고 그거를 여러분이 손을 할 수
+- [12:42](https://youtube.com/watch?v=9fx2_1aTzq8&t=762) 있다고 하더라도 그거 하는데 몇
+- [12:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=764) 시간이 걸리니까 그렇게 바보같이 하지
+- [12:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=766) 마시고요. 그냥 클로드한테 나 슬래시
+- [12:49](https://youtube.com/watch?v=9fx2_1aTzq8&t=769) 골로 마이그레션 이거 진행을 할 건데
+- [12:51](https://youtube.com/watch?v=9fx2_1aTzq8&t=771) 아 골프롬프트 만들어서 나한테 보여
+- [12:53](https://youtube.com/watch?v=9fx2_1aTzq8&t=773) 줘라고 하면은 요청을 하면은 자
+- [12:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=775) 이렇게 우리가 프롬프트를 받을 수가
+- [12:57](https://youtube.com/watch?v=9fx2_1aTzq8&t=777) 있다라는 거죠. 자, 여러분이 어떤
+- [12:59](https://youtube.com/watch?v=9fx2_1aTzq8&t=779) 에이전트를 써도 그리고 실제 우리가
+- [13:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=781) 하려는 거 작업 원칙 수행 단계 완료
+- [13:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=783) 기준 자 이것들이 정확하게 정의가
+- [13:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=786) 됩니다. 왜냐면 고리라는게 뭔지를
+- [13:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=788) 이미이 친구들이 다 알고 있기
+- [13:09](https://youtube.com/watch?v=9fx2_1aTzq8&t=789) 때문에. 자, 저걸 여러분들이 직접
+- [13:11](https://youtube.com/watch?v=9fx2_1aTzq8&t=791) 할 수가 없으니까 절대적으로
+- [13:12](https://youtube.com/watch?v=9fx2_1aTzq8&t=792) 메타프롬프팅을 하라는 겁니다. 자,
+- [13:14](https://youtube.com/watch?v=9fx2_1aTzq8&t=794) 저도 이렇게 얘기를 했죠. 골 기능을
+- [13:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=796) 사용을 할 건데 넥스트에서 스벨트로
+- [13:18](https://youtube.com/watch?v=9fx2_1aTzq8&t=798) 마이그레이션하는 골 프롬프트를 만들어
+- [13:20](https://youtube.com/watch?v=9fx2_1aTzq8&t=800) 줘 하니까 이렇게 만들어 준 겁니다.
+- [13:22](https://youtube.com/watch?v=9fx2_1aTzq8&t=802) 자, 그리고이 골 같은 경우에는 공식
+- [13:24](https://youtube.com/watch?v=9fx2_1aTzq8&t=804) 문서에 써져 있는데요. 보통 우리가
+- [13:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=806) 일반 채팅에서 생기는 헬로시네이션들
+- [13:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=809) 있죠? 그리고 스트에 대한 문제 다
+- [13:30](https://youtube.com/watch?v=9fx2_1aTzq8&t=810) 안 됐는데 됐어요라고 말을 하고서
+- [13:32](https://youtube.com/watch?v=9fx2_1aTzq8&t=812) 끝내는 거. 근데 우리가 거기서 어,
+- [13:33](https://youtube.com/watch?v=9fx2_1aTzq8&t=813) 이거 이렇게 해서 안 됐잖아. 왜
+- [13:35](https://youtube.com/watch?v=9fx2_1aTzq8&t=815) 거짓말해라고 얘기를 하면 그러면이
+- [13:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=816) 친구 다시 보고서 아, 그거 안
+- [13:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=818) 했네요. 미안해요. 다시 할게요. 막
+- [13:40](https://youtube.com/watch?v=9fx2_1aTzq8&t=820) 이런 식으로 하잖아요. 그죠? 근데
+- [13:41](https://youtube.com/watch?v=9fx2_1aTzq8&t=821) 우리가 생성하는 순간 일단 그 부분에
+- [13:45](https://youtube.com/watch?v=9fx2_1aTzq8&t=825) 대해서도 훨씬 더 정직하게 답변을
+- [13:47](https://youtube.com/watch?v=9fx2_1aTzq8&t=827) 하도록 돼 있고이 친구가 실패를
+- [13:50](https://youtube.com/watch?v=9fx2_1aTzq8&t=830) 하더라도 계속 무언가가 안 되면은
+- [13:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=832) 일반 채팅이 밑으로 갈수록 그냥
+- [13:54](https://youtube.com/watch?v=9fx2_1aTzq8&t=834) 포기하고 사람한테 약간 강아지만
+- [13:56](https://youtube.com/watch?v=9fx2_1aTzq8&t=836) 쫄래쫄려 와 가지고 어 이거 안 돼요
+- [13:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=838) 하면서 막 징징된다면은이 골 같은
+- [14:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=840) 경우에는 최대한 내가 해결해 보려고
+- [14:02](https://youtube.com/watch?v=9fx2_1aTzq8&t=842) 계속 노력을 하고요. 도저히 도저히
+- [14:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=844) 도저히 도저히 안 되겠을 때만 어
+- [14:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=846) 사람한테 해결해 달라고 하는 어 약간
+- [14:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=848) 태토 같은 그런 기술이다라고 여러분이
+- [14:11](https://youtube.com/watch?v=9fx2_1aTzq8&t=851) 생각을 하시면 됩니다. 자, 그래서이
+- [14:13](https://youtube.com/watch?v=9fx2_1aTzq8&t=853) 방향으로 여러분이 가면 되고요. 자,
+- [14:15](https://youtube.com/watch?v=9fx2_1aTzq8&t=855) 그렇기 때문에 우리가 다그램을 좀
+- [14:17](https://youtube.com/watch?v=9fx2_1aTzq8&t=857) 이런 식으로 그려 볼 수가 있는데요.
+- [14:18](https://youtube.com/watch?v=9fx2_1aTzq8&t=858) 일반 채팅은 당연히 우리가 채팅하면은
+- [14:21](https://youtube.com/watch?v=9fx2_1aTzq8&t=861) 답이 바로 나오는 거고 스킬 같은
+- [14:23](https://youtube.com/watch?v=9fx2_1aTzq8&t=863) 경우에는 우리가 이미 정의를 해 놓은
+- [14:24](https://youtube.com/watch?v=9fx2_1aTzq8&t=864) 거죠. 그죠? 그 정의를 갖고서
+- [14:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=866) 우리가 똑같은 작업을 반복적으로
+- [14:28](https://youtube.com/watch?v=9fx2_1aTzq8&t=868) 우리가 할 수 있도록 이렇게 넣어
+- [14:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=869) 주는 거고 서브에트는 우리가 에이전트
+- [14:31](https://youtube.com/watch?v=9fx2_1aTzq8&t=871) 자체를 어 정의를 만들어서이 친구들을
+- [14:34](https://youtube.com/watch?v=9fx2_1aTzq8&t=874) 생성을 해 가지고 또 우리가 메인
+- [14:35](https://youtube.com/watch?v=9fx2_1aTzq8&t=875) 에이전트가 정보를 다 취합을 하는
+- [14:37](https://youtube.com/watch?v=9fx2_1aTzq8&t=877) 형태. 자 배치는 자이 서에전트를
+- [14:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=879) 쓰는 건데 아까 말씀을 드린 것처럼
+- [14:41](https://youtube.com/watch?v=9fx2_1aTzq8&t=881) 여러 개의 작업을 반복적으로 가능한
+- [14:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=884) 여러 개의 작업을 우리가 한꺼번에
+- [14:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=886) 돌린다라는 이야기입니다. 그러니까
+- [14:48](https://youtube.com/watch?v=9fx2_1aTzq8&t=888) 서바이전트를 가장 극대화에서 사용하는
+- [14:50](https://youtube.com/watch?v=9fx2_1aTzq8&t=890) 목적을 갖고 있는게 배치다라고 보시면
+- [14:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=892) 되겠죠. 자 딥리 서치는 그럼 뭐냐?
+- [14:54](https://youtube.com/watch?v=9fx2_1aTzq8&t=894) 자, 뒷리서치는 쉽죠? 자, 우리가
+- [14:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=895) 검색해 가지고 검증하고 정말 최대한
+- [14:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=898) 제가 요청한 것들을 완성도 높게
+- [15:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=900) 리서치를 하는 역할을 한다. 자,
+- [15:02](https://youtube.com/watch?v=9fx2_1aTzq8&t=902) 울트라 코드는 똑같이 워크플로를
+- [15:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=904) 생성을 하는데 우리가 될 때까지 계속
+- [15:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=906) 병렬로 한혜이 정말 잘 잘된 상태에서
+- [15:09](https://youtube.com/watch?v=9fx2_1aTzq8&t=909) 굉장히 빠르게 목적을 이룰 수 있도록
+- [15:11](https://youtube.com/watch?v=9fx2_1aTzq8&t=911) 실행하는게 울트라 코드고 골 같은
+- [15:13](https://youtube.com/watch?v=9fx2_1aTzq8&t=913) 경우에는 목적성 자체가 목적인 내가
+- [15:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=916) 얘한테 하라고 했던 그 작업물을
+- [15:19](https://youtube.com/watch?v=9fx2_1aTzq8&t=919) 만들어 내고 그거를 완벽하게 해내는
+- [15:21](https://youtube.com/watch?v=9fx2_1aTzq8&t=921) 거 자체가 목적인게 골이기 때문에이
+- [15:24](https://youtube.com/watch?v=9fx2_1aTzq8&t=924) 골 같은 경우에는 뭐 병렬 실행 이런
+- [15:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=926) 것들을이 오트라코드나 딥 리서치만큼
+- [15:28](https://youtube.com/watch?v=9fx2_1aTzq8&t=928) 굉장히 많이 하지는 않고요. 대신에이
+- [15:30](https://youtube.com/watch?v=9fx2_1aTzq8&t=930) 하나의 메인 에이전트가 물론
+- [15:32](https://youtube.com/watch?v=9fx2_1aTzq8&t=932) 서브에트도 쓰기는 하지만이 하나의
+- [15:34](https://youtube.com/watch?v=9fx2_1aTzq8&t=934) 메인 에이전트가 거의 집착에 가까울
+- [15:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=936) 정도로 우리가 명려한 거를 그냥
+- [15:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=938) 빅토리라 성공하거나 아니면 그냥 죽을
+- [15:41](https://youtube.com/watch?v=9fx2_1aTzq8&t=941) 때까지 하는 거야. 진짜 그래서
+- [15:43](https://youtube.com/watch?v=9fx2_1aTzq8&t=943) 이거는 이제 목적성이 가장 높은
+- [15:45](https://youtube.com/watch?v=9fx2_1aTzq8&t=945) 명령이다라고 여러분이 생각하시면 될
+- [15:47](https://youtube.com/watch?v=9fx2_1aTzq8&t=947) 거 같아요. 그래서 울트라코드랑
+- [15:49](https://youtube.com/watch?v=9fx2_1aTzq8&t=949) 고리랑 가장 고민이 많이 되실 건데
+- [15:51](https://youtube.com/watch?v=9fx2_1aTzq8&t=951) 일반적으로 제 생각에 울트라코드를
+- [15:53](https://youtube.com/watch?v=9fx2_1aTzq8&t=953) 쓰시면 되고요. 왜냐면 훨씬 더 빨리
+- [15:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=955) 작업이 완료되는데 포커스가 더 맞춰져
+- [15:57](https://youtube.com/watch?v=9fx2_1aTzq8&t=957) 있어요. 물론 여기도 이제 고블처럼
+- [15:59](https://youtube.com/watch?v=9fx2_1aTzq8&t=959) 목적을 이루기 위해서 굉장히 댑스
+- [16:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=961) 있는 작업을 하긴 하지만 성공하지
+- [16:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=963) 않으면 죽은 뿐이다. 막 이런
+- [16:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=964) 느낌까지는 아니요. 기본적으로 울트라
+- [16:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=966) 코드를 사용해서 여러분들이 작업을
+- [16:08](https://youtube.com/watch?v=9fx2_1aTzq8&t=968) 하시면 제일 좋고 복잡한 작업을 할
+- [16:09](https://youtube.com/watch?v=9fx2_1aTzq8&t=969) 때 골 같은 경우에는요. 검증이 정말
+- [16:12](https://youtube.com/watch?v=9fx2_1aTzq8&t=972) 힘든 작업들 있잖아요. 진짜 완벽해야
+- [16:15](https://youtube.com/watch?v=9fx2_1aTzq8&t=975) 되는 것들. 그리고 내가이 작업을
+- [16:17](https://youtube.com/watch?v=9fx2_1aTzq8&t=977) 정의를 해 주기만 하면은 그리고이
+- [16:19](https://youtube.com/watch?v=9fx2_1aTzq8&t=979) 프롬프트를 얘가 따라오기만 하면은
+- [16:21](https://youtube.com/watch?v=9fx2_1aTzq8&t=981) 그럼 분명히 얘가 100% 해낼 수
+- [16:23](https://youtube.com/watch?v=9fx2_1aTzq8&t=983) 있다라는 생각이 드는 그런 작업들을
+- [16:25](https://youtube.com/watch?v=9fx2_1aTzq8&t=985) 여러분들이 해 주면은 가장 좋습니다.
+- [16:27](https://youtube.com/watch?v=9fx2_1aTzq8&t=987) 자, 예제로 들면은 울트라코드는 저
+- [16:29](https://youtube.com/watch?v=9fx2_1aTzq8&t=989) 같으면 뭐 리팩터링이라든가 아니면은
+- [16:32](https://youtube.com/watch?v=9fx2_1aTzq8&t=992) 뭐 진짜 아까처럼 프레임워크로 뭐
+- [16:33](https://youtube.com/watch?v=9fx2_1aTzq8&t=993) 변경을 한다거나 그런 거는 저는
+- [16:35](https://youtube.com/watch?v=9fx2_1aTzq8&t=995) 무조건 울트라 코드를 쓸 것 같고요.
+- [16:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=996) 왜냐면 약간의 뭐 에러가 있거나
+- [16:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=998) 아니면 문제가 생기더라도 일단은 빨리
+- [16:40](https://youtube.com/watch?v=9fx2_1aTzq8&t=1000) 우리가 전환을 하고서 다음 앞으로
+- [16:42](https://youtube.com/watch?v=9fx2_1aTzq8&t=1002) 계속 나가는게 이제 중요하니까 골
+- [16:44](https://youtube.com/watch?v=9fx2_1aTzq8&t=1004) 같은 경우에는요. 예를 들어서 이제
+- [16:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=1006) 새로운 소스를 우리가 통합을 시킬 때
+- [16:48](https://youtube.com/watch?v=9fx2_1aTzq8&t=1008) 우리가 이제는 레디스를 사용해서
+- [16:50](https://youtube.com/watch?v=9fx2_1aTzq8&t=1010) 캐싱하는 레이어를 만들 건데 어 이게
+- [16:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=1012) 굉장히 복잡하잖아요. 그렇죠? 어떤
+- [16:54](https://youtube.com/watch?v=9fx2_1aTzq8&t=1014) 것들을 우리가 연기동을 해야 될지
+- [16:55](https://youtube.com/watch?v=9fx2_1aTzq8&t=1015) 그리고 검증을 어떻게 해야 될지
+- [16:57](https://youtube.com/watch?v=9fx2_1aTzq8&t=1017) 그리고 실제로 우리가 배포를 했을 때
+- [16:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=1018) 어떤 식으로 잘 작동을 할지 알고리즘
+- [17:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=1020) 어떻게 쓸지 이런 것들 이제 다
+- [17:02](https://youtube.com/watch?v=9fx2_1aTzq8&t=1022) 생각을 해 내야 되는데 자 그럴 때는
+- [17:04](https://youtube.com/watch?v=9fx2_1aTzq8&t=1024) 우리가를 사용해서 정확하게 성공하는
+- [17:06](https://youtube.com/watch?v=9fx2_1aTzq8&t=1026) 조건들을 넣어 놓은 다음에 이게 될
+- [17:09](https://youtube.com/watch?v=9fx2_1aTzq8&t=1029) 때까지 또는 이제 뚝배에 깨져 버릴
+- [17:10](https://youtube.com/watch?v=9fx2_1aTzq8&t=1030) 때까지 그냥 작업을 하도록 시키는게
+- [17:12](https://youtube.com/watch?v=9fx2_1aTzq8&t=1032) 유용하다라는 거죠. 그죠? 자,
+- [17:14](https://youtube.com/watch?v=9fx2_1aTzq8&t=1034) 그래서이 둘은 그런 차이를 두고서
+- [17:16](https://youtube.com/watch?v=9fx2_1aTzq8&t=1036) 여러분들이 쓰면 좋을 거 같고요.
+- [17:17](https://youtube.com/watch?v=9fx2_1aTzq8&t=1037) 어쨌든 오른쪽으로 갈수록 계속 토큰이
+- [17:20](https://youtube.com/watch?v=9fx2_1aTzq8&t=1040) 더 많이 되니까이 위에 세 개선는
+- [17:22](https://youtube.com/watch?v=9fx2_1aTzq8&t=1042) 조금 애매하죠. 어 시간 대비은이
+- [17:25](https://youtube.com/watch?v=9fx2_1aTzq8&t=1045) 워크 다이나믹 워크 플로우가 많이
+- [17:26](https://youtube.com/watch?v=9fx2_1aTzq8&t=1046) 쓰는데 훨씬 더 오래 돌 수 있는 건
+- [17:28](https://youtube.com/watch?v=9fx2_1aTzq8&t=1048) 고리기 때문에 어떤게 더 많이 될지
+- [17:30](https://youtube.com/watch?v=9fx2_1aTzq8&t=1050) 조금 애매하긴 합니다. 근데 어찌됐든
+- [17:32](https://youtube.com/watch?v=9fx2_1aTzq8&t=1052) 갈수록 많이 쓰게 되니까 기본적으로
+- [17:34](https://youtube.com/watch?v=9fx2_1aTzq8&t=1054) 여기서부터 시작을 하고요. 그리고이
+- [17:36](https://youtube.com/watch?v=9fx2_1aTzq8&t=1056) 위로 계속 올라가기 시작을 하면은
+- [17:38](https://youtube.com/watch?v=9fx2_1aTzq8&t=1058) 돼요. 자, 그리고 쓰다 보면은 어
+- [17:39](https://youtube.com/watch?v=9fx2_1aTzq8&t=1059) 여러분이 특히나 이제 만약에
+- [17:40](https://youtube.com/watch?v=9fx2_1aTzq8&t=1060) 소프트웨어 엔지니어라면은이 난이도를
+- [17:43](https://youtube.com/watch?v=9fx2_1aTzq8&t=1063) 여러분이 이해를 하고 있으니까 어떤
+- [17:45](https://youtube.com/watch?v=9fx2_1aTzq8&t=1065) 거를 써야지 우리가 작업을 제대로 할
+- [17:46](https://youtube.com/watch?v=9fx2_1aTzq8&t=1066) 수 있을지 금방 감이 오게 될
+- [17:48](https://youtube.com/watch?v=9fx2_1aTzq8&t=1068) 겁니다. 자, 그래서 그렇게 이해를
+- [17:49](https://youtube.com/watch?v=9fx2_1aTzq8&t=1069) 하시면 될 거 같고요. 자, 오늘
+- [17:51](https://youtube.com/watch?v=9fx2_1aTzq8&t=1071) 영상 좋았다면은 구독과 좋아요 알림
+- [17:52](https://youtube.com/watch?v=9fx2_1aTzq8&t=1072) 설정 그리고 댓글에 하이보이까지 꼭
+- [17:54](https://youtube.com/watch?v=9fx2_1aTzq8&t=1074) 좀 해 주시면은 저에게 조금 더
+- [17:56](https://youtube.com/watch?v=9fx2_1aTzq8&t=1076) 행복한 내일이 올 것 같습니다. 자,
+- [17:58](https://youtube.com/watch?v=9fx2_1aTzq8&t=1078) 오늘도 영상 봐 주셔서 감사하고요.
+- [18:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=1080) 자, 다음에 그럼 저는 더 좋은
+- [18:01](https://youtube.com/watch?v=9fx2_1aTzq8&t=1081) 영상으로 찾아뵙도록 할게요.
+- [18:03](https://youtube.com/watch?v=9fx2_1aTzq8&t=1083) 쏘as지.
