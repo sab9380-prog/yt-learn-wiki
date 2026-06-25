@@ -1,0 +1,354 @@
+---
+title: "GStack + Superpowers로 클로드코드 완전히 달라진 사람의 후기"
+source_url: https://youtube.com/watch?v=af3OJ0L1jEU
+video_id: af3OJ0L1jEU
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# GStack + Superpowers로 클로드코드 완전히 달라진 사람의 후기
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 클로드 코드 사용 시 발생하는 주요 문제들(방향성 흔들림, 불명확한 요구사항, 작업 흐름 단절)을 해결하기 위해 수많은 플러그인을 테스트한 결과, 최종적으로 G-Stack과 SuperPowers 두 개만 남겨서 사용하는 최적화된 워크플로우를 소개합니다. G-Stack의 Office Hours(아이디어 구체화 상담)와 Design Review(AI 슬롭 방지), SuperPowers의 Sub-agent Driven Development(팀 작업 분할)와 Git Worktrees(작업 공간 분리) 기능을 조합하여 체계적인 개발 흐름을 구축합니다. 실제 사용 순서는 Office Hours로 아이디어 정리 → 문서화 → Brainstorming으로 보완 → Writing Plans로 계획서 작성 → 작업 공간 분리 → 팀 단위 개발 진행 순으로 진행하며, 이를 통해 중간에 방향이 바뀌지 않고 매끄러운 결과물을 얻을 수 있습니다.
+- **Core Message:** 클로드 코드의 수많은 플러그인 중 G-Stack과 SuperPowers 두 개만 조합하여 체계적인 워크플로우를 구축하면, 방향성 있고 매끄러운 개발이 가능하다.
+> 분명히 이런 거 만들어줘 했는데 클로드가 만들어 놓은 걸 보면 이게 아닌데 하는 상황이 반복되는 거예요
+> 생각 정리가 덜된 채로 바로 만들어 줘 하면 클로드 나름대로 해석해서 만들어 버리거든요
+> 결과물이 매끄럽게 나와요. 억지로 만든 느낌이 없어요. 그냥 흘러가듯이 나옵니다
+❗ 수많은 플러그인을 테스트한 결과 오히려 2개만 남겼을 때 가장 효과적이었다
+❗ Office Hours 상담만 15-20분 투자해도 나중에 결과물 품질이 완전히 달라진다
+❗ SuperPowers의 브레인스토밍 스킬로 피그마 없이도 실시간 목업 제작이 가능하다
+
+## 📚 핵심 용어
+- **Office Hours:** 아이디어를 바로 구현하지 않고 먼저 클로드와 상담하며 요구사항을 구체화하는 기능. / 인테리어 공사 전 업체와 충분히 상담하는 것처럼, 만들기 전에 원하는 것을 명확히 정리하는 시간이다. / 일반 개발은 바로 '만들어줘'라고 요청하지만, Office Hours는 '왜, 어떻게, 언제' 쓸지 먼저 묻는다.
+- **Sub-agent Driven Development:** 큰 작업을 여러 개의 작은 클로드(서브 에이전트)가 각자 담당 영역에만 집중하게 분할하는 방식. / 회사에서 기획팀, 디자인팀, 개발팀으로 역할을 나누듯이, AI도 각자 전문 분야에만 집중하게 한다. / 기존 방식은 한 클로드가 모든 걸 처리하지만, 서브 에이전트는 작업을 나눠 품질과 집중도를 높인다.
+- **Git Worktrees:** 여러 프로젝트를 동시에 작업할 때 각각을 독립된 공간에서 진행하게 해주는 작업 공간 분리 기능. / 책상 A에는 프로젝트 A 서류만, 책상 B에는 프로젝트 B 서류만 두는 것처럼 작업 공간을 분리한다. / 일반적으론 한 공간에서 여러 작업이 뒤섞이지만, Worktrees는 각 작업을 완전히 독립시켜 간섭을 방지한다.
+- **AI 슬롭:** AI가 만든 결과물에서 나타나는 과도한 그라데이션, 이모지 등의 부자연스럽고 천편일률적인 요소들. / 공장에서 찍어낸 듯한 획일적인 디자인으로, 마치 같은 틀에서 나온 티가 나는 인공적인 느낌이다. / 자연스러운 디자인은 사람의 감성이 느껴지지만, AI 슬롭은 기계적이고 과도한 장식으로 어색함을 준다.
+
+## 🚀 실행 (Execute)
+- [ ] G-Stack과 SuperPowers 플러그인 설치 및 초기 설정
+  - 담당: 나
+  - 이유: 영상에서 제시한 최적화된 워크플로우를 직접 체험하고 검증하기 위해
+- [ ] Office Hours 기능으로 현재 진행 중인 프로젝트 아이디어 재정리
+  - 담당: 나
+  - 이유: 기존 프로젝트의 방향성을 명확히 하고 놓친 부분을 발견하기 위해
+- 자료: G-Stack 깃허브 리포지토리 (설치 방법 확인 필요)
+- 자료: SuperPowers 깃허브 리포지토리 (설치 방법 확인 필요)
+- 자료: 클로드 코드 확장 프로그램 관리 문서
+- Timeline: 먼저 플러그인 설치하고, 기존 프로젝트에 Office Hours 적용해보며 효과를 체감한 후, 새 프로젝트에 전체 워크플로우 적용
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=af3OJ0L1jEU&t=0) 저 요즘 클로드코드 플러그인 거의 다
+- [0:02](https://youtube.com/watch?v=af3OJ0L1jEU&t=2) 지웠어요. 여러 개 써 봤는데 다
+- [0:04](https://youtube.com/watch?v=af3OJ0L1jEU&t=4) 별로였거든요. 근데 딱 두 개만
+- [0:06](https://youtube.com/watch?v=af3OJ0L1jEU&t=6) 남겼더니 오히려 지금이 제일 잘
+- [0:07](https://youtube.com/watch?v=af3OJ0L1jEU&t=7) 써지고 있어요. 오늘 그 두 개
+- [0:09](https://youtube.com/watch?v=af3OJ0L1jEU&t=9) 조합이랑 제가 실제로 쓰는 방식
+- [0:10](https://youtube.com/watch?v=af3OJ0L1jEU&t=10) 처음부터 끝까지 다 보여 드릴게요.
+- [0:12](https://youtube.com/watch?v=af3OJ0L1jEU&t=12) 개발 모르셔도 돼요. 그냥 AI
+- [0:13](https://youtube.com/watch?v=af3OJ0L1jEU&t=13) 도움이 잘 쓰는 법이라고 생각하시면
+- [0:15](https://youtube.com/watch?v=af3OJ0L1jEU&t=15) 됩니다. 오늘은 딱 다섯 가지를 보여
+- [0:17](https://youtube.com/watch?v=af3OJ0L1jEU&t=17) 드릴 거예요. 첫 번째 G스텍이 뭔지
+- [0:19](https://youtube.com/watch?v=af3OJ0L1jEU&t=19) 특히 오피스하워라 디자인 리뷰가 왜
+- [0:21](https://youtube.com/watch?v=af3OJ0L1jEU&t=21) 좋은지 두 번째 슈퍼파워즈가 뭔지 세
+- [0:23](https://youtube.com/watch?v=af3OJ0L1jEU&t=23) 번째 작업 공간을 나눠서 동시에
+- [0:24](https://youtube.com/watch?v=af3OJ0L1jEU&t=24) 처리하는 방법이라 기록을 알아서 해
+- [0:26](https://youtube.com/watch?v=af3OJ0L1jEU&t=26) 주는 기능네 번째 제가 실제로 쓰는
+- [0:28](https://youtube.com/watch?v=af3OJ0L1jEU&t=28) 순서 아이디어 정리부터 문서 작성까지
+- [0:30](https://youtube.com/watch?v=af3OJ0L1jEU&t=30) 그리고 다섯 번째 이게 핵심인데요.
+- [0:31](https://youtube.com/watch?v=af3OJ0L1jEU&t=31) 계획서 작성과 리뷰입니다. 마지막까지
+- [0:33](https://youtube.com/watch?v=af3OJ0L1jEU&t=33) 보시면 오늘부터 바로 클러드 코드
+- [0:35](https://youtube.com/watch?v=af3OJ0L1jEU&t=35) 쓰는 나만의 흐름이 생기실 거예요.
+- [0:36](https://youtube.com/watch?v=af3OJ0L1jEU&t=36) 클로드 코드 써 보신 분들 처음에
+- [0:38](https://youtube.com/watch?v=af3OJ0L1jEU&t=38) 어떠셨어요? 저는 처음에 진짜 세상
+- [0:39](https://youtube.com/watch?v=af3OJ0L1jEU&t=39) 바뀌겠다 싶었거든요. 말만 하면 뭔가
+- [0:41](https://youtube.com/watch?v=af3OJ0L1jEU&t=41) 만들어 주니까요. 근데 시간이 좀
+- [0:43](https://youtube.com/watch?v=af3OJ0L1jEU&t=43) 지나면서 이상한 일이 생겼어요.
+- [0:44](https://youtube.com/watch?v=af3OJ0L1jEU&t=44) 분명히 이런 거 만들어줘 했는데
+- [0:46](https://youtube.com/watch?v=af3OJ0L1jEU&t=46) 클로드가 만들어 놓은 걸 보면 어
+- [0:48](https://youtube.com/watch?v=af3OJ0L1jEU&t=48) 이게 아닌데 하는 상황이 반복되는
+- [0:49](https://youtube.com/watch?v=af3OJ0L1jEU&t=49) 거예요. 비율를 들면요 인테리어 업체
+- [0:52](https://youtube.com/watch?v=af3OJ0L1jEU&t=52) 리모델링 해 주세요라고 했는데 막상
+- [0:54](https://youtube.com/watch?v=af3OJ0L1jEU&t=54) 완성된 걸 보니까 내가 원하는
+- [0:55](https://youtube.com/watch?v=af3OJ0L1jEU&t=55) 스타일이 아닌 거예요. 처음부터
+- [0:56](https://youtube.com/watch?v=af3OJ0L1jEU&t=56) 충분히 얘기를 안 나눠서 그런
+- [0:58](https://youtube.com/watch?v=af3OJ0L1jEU&t=58) 거잖아요. 클로드 코드도 똑같아요.
+- [0:59](https://youtube.com/watch?v=af3OJ0L1jEU&t=59) 생각 정리가 덜된 채로 바로 만들어
+- [1:01](https://youtube.com/watch?v=af3OJ0L1jEU&t=61) 줘 하면 클로드 나름대로 해석해서
+- [1:03](https://youtube.com/watch?v=af3OJ0L1jEU&t=63) 만들어 버리거든요. 더 복잡한
+- [1:04](https://youtube.com/watch?v=af3OJ0L1jEU&t=64) 작업에서는 문제가 더 커요. 예를
+- [1:06](https://youtube.com/watch?v=af3OJ0L1jEU&t=66) 들어 여러 군데를 동시에 고쳐야 하는
+- [1:08](https://youtube.com/watch?v=af3OJ0L1jEU&t=68) 작업이 있잖아요. 그럼 이쪽 고치다가
+- [1:09](https://youtube.com/watch?v=af3OJ0L1jEU&t=69) 저쪽만 가지고 저쪽 고치다가 이쪽도
+- [1:11](https://youtube.com/watch?v=af3OJ0L1jEU&t=71) 망가지고 마치이 사침을 혼자 다단하다
+- [1:13](https://youtube.com/watch?v=af3OJ0L1jEU&t=73) 보면 방 A에 뒀다가 방 B에 옮기고
+- [1:15](https://youtube.com/watch?v=af3OJ0L1jEU&t=75) 또 방 A에가 보면 없고 정신없이
+- [1:17](https://youtube.com/watch?v=af3OJ0L1jEU&t=77) 왔다 갔다 하는 느낌이에요. 그래서
+- [1:19](https://youtube.com/watch?v=af3OJ0L1jEU&t=79) 저도 뭔가 도움 될게 없나 싶어서
+- [1:21](https://youtube.com/watch?v=af3OJ0L1jEU&t=81) 플러그인을 이것저것 다 써 봤어요.
+- [1:22](https://youtube.com/watch?v=af3OJ0L1jEU&t=82) 근데 대부분이 기능만 엄청 많고 실제
+- [1:24](https://youtube.com/watch?v=af3OJ0L1jEU&t=84) 내 작업 흐름이랑면 안 맞아요.
+- [1:26](https://youtube.com/watch?v=af3OJ0L1jEU&t=86) 오히려 클로드한테 뭘 너무 많이
+- [1:27](https://youtube.com/watch?v=af3OJ0L1jEU&t=87) 주입해서 더 이상하게 동작하거나
+- [1:29](https://youtube.com/watch?v=af3OJ0L1jEU&t=89) 설정이 너무 복잡하거나 둘 중
+- [1:30](https://youtube.com/watch?v=af3OJ0L1jEU&t=90) 하나였어요. 다 별로였습니다.
+- [1:32](https://youtube.com/watch?v=af3OJ0L1jEU&t=92) 그러다가 딱 두 개를 조합해서 쓰기
+- [1:33](https://youtube.com/watch?v=af3OJ0L1jEU&t=93) 시작했는데 뭔가가 달라지기
+- [1:34](https://youtube.com/watch?v=af3OJ0L1jEU&t=94) 시작했습니다. 결과물이 매끄러워지고
+- [1:36](https://youtube.com/watch?v=af3OJ0L1jEU&t=96) 방향이 흔들리지 않고 클루드랑
+- [1:38](https://youtube.com/watch?v=af3OJ0L1jEU&t=98) 작업하는게 진짜 협업처럼 느껴지기
+- [1:40](https://youtube.com/watch?v=af3OJ0L1jEU&t=100) 시작했거든요. 오늘 그게 어떤 건지
+- [1:42](https://youtube.com/watch?v=af3OJ0L1jEU&t=102) 같이 보실 거예요. 첫 번째 G스택
+- [1:44](https://youtube.com/watch?v=af3OJ0L1jEU&t=104) 얘기부터 할게요. G스텍은 클로드
+- [1:46](https://youtube.com/watch?v=af3OJ0L1jEU&t=106) 코드의 확장팩 같은 거예요. 기능이
+- [1:47](https://youtube.com/watch?v=af3OJ0L1jEU&t=107) 여러 개 있는데 그 중 두 가지
+- [1:49](https://youtube.com/watch?v=af3OJ0L1jEU&t=109) 소개해 줄게요. 오피스랑 디자인
+- [1:51](https://youtube.com/watch?v=af3OJ0L1jEU&t=111) 리뷰. 오피스부터 볼게요. 이름
+- [1:52](https://youtube.com/watch?v=af3OJ0L1jEU&t=112) 그대로예요. 상담 시간이에요. 뭔가
+- [1:54](https://youtube.com/watch?v=af3OJ0L1jEU&t=114) 만들고 싶은게 새겼을 때 바로 만들어
+- [1:56](https://youtube.com/watch?v=af3OJ0L1jEU&t=116) 줘 하는게 아니라 먼저 클로드랑
+- [1:58](https://youtube.com/watch?v=af3OJ0L1jEU&t=118) 아이디어 회의를 하는 거예요. 마치
+- [2:00](https://youtube.com/watch?v=af3OJ0L1jEU&t=120) 새 프로젝트 시작 전에 팀장이랑
+- [2:01](https://youtube.com/watch?v=af3OJ0L1jEU&t=121) 미팅하는 것처럼요. 이런 거 하고
+- [2:03](https://youtube.com/watch?v=af3OJ0L1jEU&t=123) 싶은데 어떻게 생각해요라고 시작하면
+- [2:05](https://youtube.com/watch?v=af3OJ0L1jEU&t=125) 클로드가 인터뷰하듯이 질문을
+- [2:06](https://youtube.com/watch?v=af3OJ0L1jEU&t=126) 던지거든요. 그걸 왜 하고 싶으세요?
+- [2:08](https://youtube.com/watch?v=af3OJ0L1jEU&t=128) 주로 어떤 상황에서 쓸 건가요?
+- [2:09](https://youtube.com/watch?v=af3OJ0L1jEU&t=129) 비슷한 거 써 보신 적 있으세요?
+- [2:10](https://youtube.com/watch?v=af3OJ0L1jEU&t=130) 이런 식으로요.이 과정에서 내가
+- [2:12](https://youtube.com/watch?v=af3OJ0L1jEU&t=132) 생각보다 원하는게 뭔지 불명확하다는
+- [2:14](https://youtube.com/watch?v=af3OJ0L1jEU&t=134) 걸 알게 되는 경우가 많아요. 정리가
+- [2:16](https://youtube.com/watch?v=af3OJ0L1jEU&t=136) 안 된 차로 그냥 만들어 줘 하면
+- [2:17](https://youtube.com/watch?v=af3OJ0L1jEU&t=137) 나중에 결과물을 보고 어 이게 아닌데
+- [2:19](https://youtube.com/watch?v=af3OJ0L1jEU&t=139) 하는게 당연한 거거든요. 오피스월즈를
+- [2:20](https://youtube.com/watch?v=af3OJ0L1jEU&t=140) [콧방귀]
+- [2:21](https://youtube.com/watch?v=af3OJ0L1jEU&t=141) 한 번 거치고 나면 아이디어가 훨씬
+- [2:22](https://youtube.com/watch?v=af3OJ0L1jEU&t=142) 구체야 돼요. 그다음으로 소개해 드릴
+- [2:24](https://youtube.com/watch?v=af3OJ0L1jEU&t=144) 거는 디자인 리뷰예요.이 친구는
+- [2:25](https://youtube.com/watch?v=af3OJ0L1jEU&t=145) 저희가 만든 결과에 대해서 디자인
+- [2:27](https://youtube.com/watch?v=af3OJ0L1jEU&t=147) 리뷰하는 친구예요. AI 슬롭처럼
+- [2:29](https://youtube.com/watch?v=af3OJ0L1jEU&t=149) 나오는 결과물들. 과도한 그라데이션,
+- [2:31](https://youtube.com/watch?v=af3OJ0L1jEU&t=151) 과도한 이모지 등등 그런 것들을
+- [2:33](https://youtube.com/watch?v=af3OJ0L1jEU&t=153) 잡아내는 역할을 해요.이 친구덕에
+- [2:35](https://youtube.com/watch?v=af3OJ0L1jEU&t=155) 바이브 코딩 냄새를 많이 지울 수
+- [2:36](https://youtube.com/watch?v=af3OJ0L1jEU&t=156) 있어요. 두 번째로는 슈퍼파워즈예요.
+- [2:39](https://youtube.com/watch?v=af3OJ0L1jEU&t=159) 이것도 클로드 코드에 붙이는
+- [2:40](https://youtube.com/watch?v=af3OJ0L1jEU&t=160) 확장팩인데 이름처럼 초능력을 더해
+- [2:42](https://youtube.com/watch?v=af3OJ0L1jEU&t=162) 주는 느낌이에요.이 중에서 볼 거는
+- [2:44](https://youtube.com/watch?v=af3OJ0L1jEU&t=164) 서브 에이전트 드리븐 디로먼트예요.
+- [2:46](https://youtube.com/watch?v=af3OJ0L1jEU&t=166) 서브 에이전트 드리븐 디로버먼트는
+- [2:48](https://youtube.com/watch?v=af3OJ0L1jEU&t=168) 팀처럼 나눠서 일하기에요. 예를 들어
+- [2:50](https://youtube.com/watch?v=af3OJ0L1jEU&t=170) 회사에서 큰 프로젝트를 할 때 한
+- [2:51](https://youtube.com/watch?v=af3OJ0L1jEU&t=171) 사람이 기획도 하고 디자인도 하고
+- [2:52](https://youtube.com/watch?v=af3OJ0L1jEU&t=172) 개발도 하고 테스트도 다 혼자 하면
+- [2:54](https://youtube.com/watch?v=af3OJ0L1jEU&t=174) 어떻게 될까요? 지치고 집중력이
+- [2:56](https://youtube.com/watch?v=af3OJ0L1jEU&t=176) 흐트러지고 실수가 늘어나요. 그래서
+- [2:57](https://youtube.com/watch?v=af3OJ0L1jEU&t=177) 기획 팀, 디자인 팀, 개발팀,
+- [2:59](https://youtube.com/watch?v=af3OJ0L1jEU&t=179) Q팀으로 나누잖아요. 서브 에이전트가
+- [3:01](https://youtube.com/watch?v=af3OJ0L1jEU&t=181) 딱 그 역할이에요. 클로드한테 큰
+- [3:02](https://youtube.com/watch?v=af3OJ0L1jEU&t=182) 작업을 던지면 그걸 한 컨텍스트
+- [3:04](https://youtube.com/watch?v=af3OJ0L1jEU&t=184) 안에서 다 처리하는게 아니라 작업을
+- [3:06](https://youtube.com/watch?v=af3OJ0L1jEU&t=186) 자기 좁아서 각각의 작은 클로드가
+- [3:08](https://youtube.com/watch?v=af3OJ0L1jEU&t=188) 자기 파트에만 집중하게 해요. 결과물
+- [3:10](https://youtube.com/watch?v=af3OJ0L1jEU&t=190) 품질이 확실히 달라집니다. 세 번째
+- [3:13](https://youtube.com/watch?v=af3OJ0L1jEU&t=193) 슈퍼파워즈에는 작업 공간을 나눠주는
+- [3:16](https://youtube.com/watch?v=af3OJ0L1jEU&t=196) 기능이 있어요. 깃워크트리즈라고
+- [3:18](https://youtube.com/watch?v=af3OJ0L1jEU&t=198) 하는데요. 이런보다 개념이 훨씬
+- [3:20](https://youtube.com/watch?v=af3OJ0L1jEU&t=200) 쉬워요. 비유하면 이래요. 여러분이
+- [3:21](https://youtube.com/watch?v=af3OJ0L1jEU&t=201) 회사에서 책상이 하나인데 프로젝트 A
+- [3:23](https://youtube.com/watch?v=af3OJ0L1jEU&t=203) 서류랑 프로젝트 B 서류가 같은
+- [3:25](https://youtube.com/watch?v=af3OJ0L1jEU&t=205) 책상에 섞여 있으면 어떻게 돼요?
+- [3:26](https://youtube.com/watch?v=af3OJ0L1jEU&t=206) 복잡하고 실수하고 서류가
+- [3:27](https://youtube.com/watch?v=af3OJ0L1jEU&t=207) 뒤섞이잖아요. 근데 책상 A에는
+- [3:29](https://youtube.com/watch?v=af3OJ0L1jEU&t=209) 프로젝트 A 서류만 책상 B에는
+- [3:31](https://youtube.com/watch?v=af3OJ0L1jEU&t=211) 프로젝트 B 서류만 두면 훨씬
+- [3:32](https://youtube.com/watch?v=af3OJ0L1jEU&t=212) 깔끔하게 작업할 수 있잖아요. 그게
+- [3:34](https://youtube.com/watch?v=af3OJ0L1jEU&t=214) 워크트리즈예요. 클로드가 여러 작업을
+- [3:36](https://youtube.com/watch?v=af3OJ0L1jEU&t=216) 동시에 처리할 때 각각을 독립등
+- [3:38](https://youtube.com/watch?v=af3OJ0L1jEU&t=218) 공간에서 진행하게 해 줘요. 서로
+- [3:39](https://youtube.com/watch?v=af3OJ0L1jEU&t=219) 영향을 안 줘요. 프로젝트 A치다가
+- [3:41](https://youtube.com/watch?v=af3OJ0L1jEU&t=221) 프로젝트 B 망가지는 일이 없어요.
+- [3:42](https://youtube.com/watch?v=af3OJ0L1jEU&t=222) 그리고 이것보다 제가 더 좋아하는
+- [3:43](https://youtube.com/watch?v=af3OJ0L1jEU&t=223) 기능이 있어요. 작업 기록을 알아서
+- [3:45](https://youtube.com/watch?v=af3OJ0L1jEU&t=225) 해 줘요. 문서 작업하실 때 컨트롤
+- [3:47](https://youtube.com/watch?v=af3OJ0L1jEU&t=227) S 눌러서 저장하는 거 까먹은 거
+- [3:48](https://youtube.com/watch?v=af3OJ0L1jEU&t=228) 있으시죠? 갑자기 컴퓨터 꺼지면 다
+- [3:50](https://youtube.com/watch?v=af3OJ0L1jEU&t=230) 날아가잖아요. 개발할 때도 비슷한
+- [3:51](https://youtube.com/watch?v=af3OJ0L1jEU&t=231) 상황이 생겨요. 어느 시점에 뭘
+- [3:53](https://youtube.com/watch?v=af3OJ0L1jEU&t=233) 바꿨는지 기록을 남겨야 되는데 이걸
+- [3:55](https://youtube.com/watch?v=af3OJ0L1jEU&t=235) 일일이 하면 번거러워요. 슈퍼파워즈를
+- [3:57](https://youtube.com/watch?v=af3OJ0L1jEU&t=237) 쓰면 클로드가 의미 있는 작업 단위가
+- [3:59](https://youtube.com/watch?v=af3OJ0L1jEU&t=239) 될 때마다 알아서 기록을 남겨요.
+- [4:00](https://youtube.com/watch?v=af3OJ0L1jEU&t=240) 나중에 어이 부분 언제 바뀐 건지
+- [4:02](https://youtube.com/watch?v=af3OJ0L1jEU&t=242) 하고 찾아보고 싶을 때 바로 찾을 수
+- [4:04](https://youtube.com/watch?v=af3OJ0L1jEU&t=244) 있어요. 개발 흐름이 끊기지
+- [4:05](https://youtube.com/watch?v=af3OJ0L1jEU&t=245) 않는다는게 생각보다 큰 차이를
+- [4:07](https://youtube.com/watch?v=af3OJ0L1jEU&t=247) 만들어요. 이제 마지막 주인트인데요.
+- [4:10](https://youtube.com/watch?v=af3OJ0L1jEU&t=250) 이게 사실 제일 중요해요.네 번째
+- [4:12](https://youtube.com/watch?v=af3OJ0L1jEU&t=252) 제가 실제로 어떤 순서로 쓰는지 보여
+- [4:13](https://youtube.com/watch?v=af3OJ0L1jEU&t=253) 드릴게요. 뭔가 새 기능이나
+- [4:15](https://youtube.com/watch?v=af3OJ0L1jEU&t=255) 프로젝트를 시작할 때 저는 항상
+- [4:16](https://youtube.com/watch?v=af3OJ0L1jEU&t=256) 오피스 아우스부터 시작해요. 바로
+- [4:18](https://youtube.com/watch?v=af3OJ0L1jEU&t=258) 만들어 달라고 안 해요. 이게 처음에
+- [4:20](https://youtube.com/watch?v=af3OJ0L1jEU&t=260) 가장 중요한 습관이에요. 오피스
+- [4:21](https://youtube.com/watch?v=af3OJ0L1jEU&t=261) 아우즈를 켜고 이런 거 만들고 싶은데
+- [4:23](https://youtube.com/watch?v=af3OJ0L1jEU&t=263) 같이 좀 생각 좀 해 볼까로
+- [4:25](https://youtube.com/watch?v=af3OJ0L1jEU&t=265) 시작해요. 그러면 클로드가 질문을
+- [4:26](https://youtube.com/watch?v=af3OJ0L1jEU&t=266) 던져요. 왜 만들려고 해요? 주로
+- [4:27](https://youtube.com/watch?v=af3OJ0L1jEU&t=267) 어떤 상황에 쓰실 건가요? 팀 규모는
+- [4:29](https://youtube.com/watch?v=af3OJ0L1jEU&t=269) 어떻게 됐나요? 비슷한 거 써 봤을
+- [4:30](https://youtube.com/watch?v=af3OJ0L1jEU&t=270) 때 불편한게 뭐였어요? 이런
+- [4:32](https://youtube.com/watch?v=af3OJ0L1jEU&t=272) 것들이요.이 대화가 15에서 20분
+- [4:34](https://youtube.com/watch?v=af3OJ0L1jEU&t=274) 정도 걸리는데 끝나고 나면 머릿속에
+- [4:36](https://youtube.com/watch?v=af3OJ0L1jEU&t=276) 있던 흐릿한 아이디어가 꽤 굳쳐야
+- [4:38](https://youtube.com/watch?v=af3OJ0L1jEU&t=278) 돼요. 머릿속에서만 들던게 글로
+- [4:39](https://youtube.com/watch?v=af3OJ0L1jEU&t=279) 정리되는 느낌이랄까요? 그다음에 그
+- [4:41](https://youtube.com/watch?v=af3OJ0L1jEU&t=281) 내용을 문서로 정리해요. 뭘 만들
+- [4:43](https://youtube.com/watch?v=af3OJ0L1jEU&t=283) 건지, 왜 만드는 건지, 어떻게
+- [4:44](https://youtube.com/watch?v=af3OJ0L1jEU&t=284) 구성할 건지. 이걸 글로 남겨 두는
+- [4:46](https://youtube.com/watch?v=af3OJ0L1jEU&t=286) 거예요. 그리고 여기서 마지막 한
+- [4:47](https://youtube.com/watch?v=af3OJ0L1jEU&t=287) 가지 더 슈퍼파워즈의 브레인스토밍
+- [4:49](https://youtube.com/watch?v=af3OJ0L1jEU&t=289) 스킬을 써요. 이건 마무리 검토
+- [4:51](https://youtube.com/watch?v=af3OJ0L1jEU&t=291) 단계예요. 혹시 내가 놓친게 있나?이
+- [4:53](https://youtube.com/watch?v=af3OJ0L1jEU&t=293) 방향이 맞나 하고 추가로 확인하는
+- [4:54](https://youtube.com/watch?v=af3OJ0L1jEU&t=294) 거예요. 브랜스톰밍 스킬이 아이디어를
+- [4:56](https://youtube.com/watch?v=af3OJ0L1jEU&t=296) 여러 각도에서 다시 한번 바라봐 줘서
+- [4:58](https://youtube.com/watch?v=af3OJ0L1jEU&t=298) 초반에 구멍 뚫린 부분들을 미리 잡을
+- [4:59](https://youtube.com/watch?v=af3OJ0L1jEU&t=299) 수 있어요. 출반절에 지도를 두 번
+- [5:01](https://youtube.com/watch?v=af3OJ0L1jEU&t=301) 확인하는 것과 같아요. 막상 가다가이
+- [5:03](https://youtube.com/watch?v=af3OJ0L1jEU&t=303) 길 아닌데 하는 상황을 미리 막는
+- [5:04](https://youtube.com/watch?v=af3OJ0L1jEU&t=304) 거죠. 이렇게 오피스워즈 문서 작성
+- [5:06](https://youtube.com/watch?v=af3OJ0L1jEU&t=306) 브랜스밍 마무리이 세 단계를 거치고
+- [5:08](https://youtube.com/watch?v=af3OJ0L1jEU&t=308) 나서야 본격적인 작업에 들어가요.
+- [5:10](https://youtube.com/watch?v=af3OJ0L1jEU&t=310) 여기까지 잘 따라오셨으면 다음 내용이
+- [5:12](https://youtube.com/watch?v=af3OJ0L1jEU&t=312) 다 연결될 거예요. 다섯 번째
+- [5:14](https://youtube.com/watch?v=af3OJ0L1jEU&t=314) 슈퍼파워즈의 라이팅 플랜즈 스킬을
+- [5:15](https://youtube.com/watch?v=af3OJ0L1jEU&t=315) 써요. 라이팅 플랜즈를 한마디로
+- [5:17](https://youtube.com/watch?v=af3OJ0L1jEU&t=317) 설명하면요. 공사전에 설계 도면
+- [5:19](https://youtube.com/watch?v=af3OJ0L1jEU&t=319) 그리는 거예요. 아무리 좋은 인테리어
+- [5:21](https://youtube.com/watch?v=af3OJ0L1jEU&t=321) 업체도 설계 도면 없이 공사 시작하면
+- [5:22](https://youtube.com/watch?v=af3OJ0L1jEU&t=322) 중간에 이게 아닌데 하고 다 뜯어내는
+- [5:24](https://youtube.com/watch?v=af3OJ0L1jEU&t=324) 상황이 생기잖아요. 라이팅 플랜즈는
+- [5:26](https://youtube.com/watch?v=af3OJ0L1jEU&t=326) 클로드가 작업 들어가기 전에 단개발
+- [5:28](https://youtube.com/watch?v=af3OJ0L1jEU&t=328) 계획서를 만들어 주는 거예요.
+- [5:29](https://youtube.com/watch?v=af3OJ0L1jEU&t=329) 1단계에서는 이거 하고 2단계에서는
+- [5:31](https://youtube.com/watch?v=af3OJ0L1jEU&t=331) 이거 하고 3단계에서는 이거 확인하고
+- [5:32](https://youtube.com/watch?v=af3OJ0L1jEU&t=332) 이렇게 순서가 잡힌 문서예요. 이게
+- [5:34](https://youtube.com/watch?v=af3OJ0L1jEU&t=334) 있으면 작업 중간에 클로드가 방향을
+- [5:36](https://youtube.com/watch?v=af3OJ0L1jEU&t=336) 잃지 않아요. 뭔가 막히거나 헷갈릴
+- [5:37](https://youtube.com/watch?v=af3OJ0L1jEU&t=337) 때 계획서를 다시 보고 아 나 지금
+- [5:39](https://youtube.com/watch?v=af3OJ0L1jEU&t=339) 여기에 있구나 하고 다시 맞춰
+- [5:40](https://youtube.com/watch?v=af3OJ0L1jEU&t=340) 나가거든요. 슈퍼파워즈의 베이직
+- [5:42](https://youtube.com/watch?v=af3OJ0L1jEU&t=342) 워크플로우가 딱이 순서를 따라가요.
+- [5:44](https://youtube.com/watch?v=af3OJ0L1jEU&t=344) 브랜스밍으로 아이디 구체화 라이팅
+- [5:47](https://youtube.com/watch?v=af3OJ0L1jEU&t=347) 플랜으로 계획서 작성 공간 나누기
+- [5:48](https://youtube.com/watch?v=af3OJ0L1jEU&t=348) 각자 집중해서 구현이 흐름대로 하면
+- [5:50](https://youtube.com/watch?v=af3OJ0L1jEU&t=350) 처음부터 끝까지 하나의 선이
+- [5:52](https://youtube.com/watch?v=af3OJ0L1jEU&t=352) 이어져요. 중간에 끊기거나 방향이
+- [5:53](https://youtube.com/watch?v=af3OJ0L1jEU&t=353) 바뀌는 일도 없어요. 제가 다른
+- [5:55](https://youtube.com/watch?v=af3OJ0L1jEU&t=355) 플러그인들을 다 걷어내고이 두 개만
+- [5:56](https://youtube.com/watch?v=af3OJ0L1jEU&t=356) 남긴 이유가 바로 여기 있어요. 다른
+- [5:58](https://youtube.com/watch?v=af3OJ0L1jEU&t=358) 건 기능만 많고 실제 흐름이랑 따로
+- [6:00](https://youtube.com/watch?v=af3OJ0L1jEU&t=360) 놀거든요. 있긴 있는데 막상 쓸 때
+- [6:01](https://youtube.com/watch?v=af3OJ0L1jEU&t=361) 어색하고 억지스럽거나 너무 말이 안
+- [6:04](https://youtube.com/watch?v=af3OJ0L1jEU&t=364) 되는 구조예요. 예를 들어 가지고
+- [6:05](https://youtube.com/watch?v=af3OJ0L1jEU&t=365) 그냥 팀 모드로 자동 사냥을 돌려
+- [6:07](https://youtube.com/watch?v=af3OJ0L1jEU&t=367) 버리는데 그게 AI 솔루만 양산하는
+- [6:10](https://youtube.com/watch?v=af3OJ0L1jEU&t=370) 느낌이랄까? 근데 쥐스택이랑
+- [6:11](https://youtube.com/watch?v=af3OJ0L1jEU&t=371) 슈퍼파워즈는 서로 자연스럽게 붙고
+- [6:13](https://youtube.com/watch?v=af3OJ0L1jEU&t=373) 그거를 따로따로 제 마음대로 제
+- [6:16](https://youtube.com/watch?v=af3OJ0L1jEU&t=376) 입맛에 맞게 컨트롤 할 수 있다가
+- [6:18](https://youtube.com/watch?v=af3OJ0L1jEU&t=378) 장점인 거 같습니다. 또한 결과물이
+- [6:20](https://youtube.com/watch?v=af3OJ0L1jEU&t=380) 매끄럽게 나와요. 억지로 만든 느낌이
+- [6:22](https://youtube.com/watch?v=af3OJ0L1jEU&t=382) 없어요. 그냥 흘러가듯이 나옵니다.
+- [6:24](https://youtube.com/watch?v=af3OJ0L1jEU&t=384) 자, 그러면 이론은 다 아셨으니까
+- [6:25](https://youtube.com/watch?v=af3OJ0L1jEU&t=385) 실제로 어떻게 하는 건지 순서대로
+- [6:27](https://youtube.com/watch?v=af3OJ0L1jEU&t=387) 보여 드릴게요. 저도 처음에 인수
+- [6:28](https://youtube.com/watch?v=af3OJ0L1jEU&t=388) 순서대로 좀 사용을 했거든요. 그대로
+- [6:30](https://youtube.com/watch?v=af3OJ0L1jEU&t=390) 따라하시면 됩니다. 준비할 건 두
+- [6:32](https://youtube.com/watch?v=af3OJ0L1jEU&t=392) 가지예요. G스텍 설치하고 수퍼파워드
+- [6:34](https://youtube.com/watch?v=af3OJ0L1jEU&t=394) 설치하면 끝이에요. 각각 기터브에
+- [6:36](https://youtube.com/watch?v=af3OJ0L1jEU&t=396) 리듬이 보시면 설치 방법 나와
+- [6:37](https://youtube.com/watch?v=af3OJ0L1jEU&t=397) 있어요. 어렵지 않아요? 설치하고
+- [6:39](https://youtube.com/watch?v=af3OJ0L1jEU&t=399) 나서 실제로 어떻게 시작하는지
+- [6:41](https://youtube.com/watch?v=af3OJ0L1jEU&t=401) 볼게요. 첫 번째 다게 새 프로젝트나
+- [6:42](https://youtube.com/watch?v=af3OJ0L1jEU&t=402) 기능을 시작하면 바로 만들어져 하지
+- [6:44](https://youtube.com/watch?v=af3OJ0L1jEU&t=404) 마세요. 클로드 코드 키하고
+- [6:45](https://youtube.com/watch?v=af3OJ0L1jEU&t=405) 오피스하워 입력하세요. 그러면
+- [6:47](https://youtube.com/watch?v=af3OJ0L1jEU&t=407) 클로드가 질문을 던지기 시작할
+- [6:49](https://youtube.com/watch?v=af3OJ0L1jEU&t=409) 거예요. 성실하게 답하세요. 10에서
+- [6:50](https://youtube.com/watch?v=af3OJ0L1jEU&t=410) 20분 정도 걸려요. 귀찮아 보여도
+- [6:52](https://youtube.com/watch?v=af3OJ0L1jEU&t=412) 이게 나중에 다 돌아와요.
+- [6:53](https://youtube.com/watch?v=af3OJ0L1jEU&t=413) 출반전을지도 보는 시간으로
+- [6:55](https://youtube.com/watch?v=af3OJ0L1jEU&t=415) 생각하세요. 대화가 끝나고 나면
+- [6:57](https://youtube.com/watch?v=af3OJ0L1jEU&t=417) 브레인스토밍 스킬을 이용을 해 가지고
+- [7:01](https://youtube.com/watch?v=af3OJ0L1jEU&t=421) 부족한 부분을 채워줘요. 그다음에는
+- [7:03](https://youtube.com/watch?v=af3OJ0L1jEU&t=423) 라이팅 플랜즈 스킬을 실행해요.
+- [7:05](https://youtube.com/watch?v=af3OJ0L1jEU&t=425) 클로드가 대화 내용을 기반으로 단개별
+- [7:07](https://youtube.com/watch?v=af3OJ0L1jEU&t=427) 계획서를 만들어 줘요.이 계획서가
+- [7:09](https://youtube.com/watch?v=af3OJ0L1jEU&t=429) 앞으로 모든 작업의 기준점이에요.
+- [7:10](https://youtube.com/watch?v=af3OJ0L1jEU&t=430) 인쇄해 두고 싶을 정도로 유용해요.
+- [7:12](https://youtube.com/watch?v=af3OJ0L1jEU&t=432) 저는 추가적인 작업으로 나온 플랜에
+- [7:14](https://youtube.com/watch?v=af3OJ0L1jEU&t=434) 대해서 리뷰 에니트들을 사용해서
+- [7:15](https://youtube.com/watch?v=af3OJ0L1jEU&t=435) 리뷰를 추가적으로 꼭 해 줍니다.이를
+- [7:17](https://youtube.com/watch?v=af3OJ0L1jEU&t=437) 통해서 이중 검증을 합니다. 세 번째
+- [7:20](https://youtube.com/watch?v=af3OJ0L1jEU&t=440) 단계 유진 기워크트리즈를 써서 작업
+- [7:22](https://youtube.com/watch?v=af3OJ0L1jEU&t=442) 공간을 나눠 줘요. 기능별로 작업
+- [7:24](https://youtube.com/watch?v=af3OJ0L1jEU&t=444) 단위별로 공간을 분리해요. 클로드가
+- [7:25](https://youtube.com/watch?v=af3OJ0L1jEU&t=445) 알아서 제안해 줄 거예요.
+- [7:27](https://youtube.com/watch?v=af3OJ0L1jEU&t=447) 여기서부터는 팀 작업이 자동으로
+- [7:28](https://youtube.com/watch?v=af3OJ0L1jEU&t=448) 돌아가요. 각 공간에서 작업이 끝날
+- [7:30](https://youtube.com/watch?v=af3OJ0L1jEU&t=450) 때마다 기록도 알아서 남겨 줘요.네
+- [7:31](https://youtube.com/watch?v=af3OJ0L1jEU&t=451) 네 번째 단계 서브에트 드리븐
+- [7:33](https://youtube.com/watch?v=af3OJ0L1jEU&t=453) 디벨로먼트를 사용해서 개발을
+- [7:34](https://youtube.com/watch?v=af3OJ0L1jEU&t=454) 진행해요. 컨텍스트가 분리가 돼서 참
+- [7:36](https://youtube.com/watch?v=af3OJ0L1jEU&t=456) 좋답니다.
+- [7:38](https://youtube.com/watch?v=af3OJ0L1jEU&t=458) 여기서 하나 조언을 드리자면
+- [7:40](https://youtube.com/watch?v=af3OJ0L1jEU&t=460) 슈퍼파워즈의 브레인스토밍 스킬을 쓰면
+- [7:43](https://youtube.com/watch?v=af3OJ0L1jEU&t=463) 가장 큰 장점이 뭐냐면 UX나
+- [7:45](https://youtube.com/watch?v=af3OJ0L1jEU&t=465) UI적인 부분에 있어 가지고 모업
+- [7:47](https://youtube.com/watch?v=af3OJ0L1jEU&t=467) 화면을 뽑아 준다는게 가장 큰
+- [7:49](https://youtube.com/watch?v=af3OJ0L1jEU&t=469) 장점이라고 생각합니다. 저희가 어떤
+- [7:51](https://youtube.com/watch?v=af3OJ0L1jEU&t=471) 디자인에 대해 가지고 피그마를
+- [7:53](https://youtube.com/watch?v=af3OJ0L1jEU&t=473) 쓴다든지 해 가지고 디자인을 먼저
+- [7:55](https://youtube.com/watch?v=af3OJ0L1jEU&t=475) 잡잖아요. 이제는 그런 것들이 좀
+- [7:57](https://youtube.com/watch?v=af3OJ0L1jEU&t=477) 필요가 없어지는 시대가 되지 않았나
+- [7:58](https://youtube.com/watch?v=af3OJ0L1jEU&t=478) 싶습니다. 바로 바이브 코딩을 통해
+- [8:00](https://youtube.com/watch?v=af3OJ0L1jEU&t=480) 가지고 이런 플러그인들을 이용을 해서
+- [8:02](https://youtube.com/watch?v=af3OJ0L1jEU&t=482) 모이터를 뽑고이 모업 데이터를
+- [8:04](https://youtube.com/watch?v=af3OJ0L1jEU&t=484) 실시간으로 바꿔 가면서 아 이런
+- [8:06](https://youtube.com/watch?v=af3OJ0L1jEU&t=486) 디자인으로 해 줘, 이런 깔로 해 줘
+- [8:08](https://youtube.com/watch?v=af3OJ0L1jEU&t=488) 해 가지고 디렉팅을 하는게 훨씬
+- [8:10](https://youtube.com/watch?v=af3OJ0L1jEU&t=490) 빠르고 유용하고 더 좋은 성과를내는
+- [8:13](https://youtube.com/watch?v=af3OJ0L1jEU&t=493) 거 같습니다. 특히나 속도적인
+- [8:14](https://youtube.com/watch?v=af3OJ0L1jEU&t=494) 측면에서 말도 안 되는 속도를내는 거
+- [8:16](https://youtube.com/watch?v=af3OJ0L1jEU&t=496) 같아요. 오늘 다른 거 정리할게요.
+- [8:18](https://youtube.com/watch?v=af3OJ0L1jEU&t=498) 첫 번째 G스텍의 오피스 시작 전에
+- [8:20](https://youtube.com/watch?v=af3OJ0L1jEU&t=500) 아이디를 정리한 상담 시간이에요.
+- [8:21](https://youtube.com/watch?v=af3OJ0L1jEU&t=501) 방향이 명확해져요. 두 번째 지스텍의
+- [8:23](https://youtube.com/watch?v=af3OJ0L1jEU&t=503) 디자인 리뷰. 만드는 중간에 방향이
+- [8:26](https://youtube.com/watch?v=af3OJ0L1jEU&t=506) 맞는지 그리고 AI 슬롭이 나오는지
+- [8:29](https://youtube.com/watch?v=af3OJ0L1jEU&t=509) 점검하는 기술이에요. 세 번째
+- [8:30](https://youtube.com/watch?v=af3OJ0L1jEU&t=510) 슈퍼파워즈의 팀 작업과 기준 먼저
+- [8:32](https://youtube.com/watch?v=af3OJ0L1jEU&t=512) 세우기. 큰 작업을 나눠서 각자
+- [8:33](https://youtube.com/watch?v=af3OJ0L1jEU&t=513) 집중하게 해서 품질을 높이는
+- [8:35](https://youtube.com/watch?v=af3OJ0L1jEU&t=515) 방법이에요.네 번째 작업 공간
+- [8:36](https://youtube.com/watch?v=af3OJ0L1jEU&t=516) 나누기와 자동 기록. 다섯 번째
+- [8:38](https://youtube.com/watch?v=af3OJ0L1jEU&t=518) 계획을 쓰고 계획을 리뷰해야 돼요.
+- [8:40](https://youtube.com/watch?v=af3OJ0L1jEU&t=520) 결국이 두 플러그인이 좋은 이유는
+- [8:42](https://youtube.com/watch?v=af3OJ0L1jEU&t=522) 기능이 많아서가 아니에요. 서로
+- [8:43](https://youtube.com/watch?v=af3OJ0L1jEU&t=523) 자연스럽게 연결되고
+- [8:45](https://youtube.com/watch?v=af3OJ0L1jEU&t=525) 쓰다 보면 유저의 입맛에 맞게 사용할
+- [8:47](https://youtube.com/watch?v=af3OJ0L1jEU&t=527) 수가 있어요. 억지로 쓰는게 아니라
+- [8:49](https://youtube.com/watch?v=af3OJ0L1jEU&t=529) 흘러가듯이 쓸 수 있어요. 다른
+- [8:51](https://youtube.com/watch?v=af3OJ0L1jEU&t=531) 플러그인들 여러 개 써 봤는데이 두
+- [8:52](https://youtube.com/watch?v=af3OJ0L1jEU&t=532) 개만큼 워크플로우랑 잘 맞는 거 못
+- [8:54](https://youtube.com/watch?v=af3OJ0L1jEU&t=534) 찾았어요. 그리고 여러분은 클로드
+- [8:56](https://youtube.com/watch?v=af3OJ0L1jEU&t=536) 코드 쓸 때 가장 어려운게 뭐예요?
+- [8:58](https://youtube.com/watch?v=af3OJ0L1jEU&t=538) 방향이 자꾸 흔들리는 건지 결과물이
+- [8:59](https://youtube.com/watch?v=af3OJ0L1jEU&t=539) 마음에 안 드는 건지 아니면 아직
+- [9:01](https://youtube.com/watch?v=af3OJ0L1jEU&t=541) 어디서 시작해야 할지 모르겠다 하시는
+- [9:02](https://youtube.com/watch?v=af3OJ0L1jEU&t=542) 건지요.
