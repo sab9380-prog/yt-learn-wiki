@@ -1,0 +1,795 @@
+---
+title: "Codex의 이 기능은 반드시 쓰셔야 합니다 (/goal 마스터코스)"
+source_url: https://youtube.com/watch?v=vq37BMhoesQ
+video_id: vq37BMhoesQ
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# Codex의 이 기능은 반드시 쓰셔야 합니다 (/goal 마스터코스)
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** OpenAI 코덱스의 'Goal' 기능은 Jeffrey Huntley가 제안한 'RALF Loop' 개념을 구현한 것으로, 사용자가 목표만 설정하면 AI가 자율적으로 반복 작업을 수행하여 목표를 달성할 때까지 무한 루프를 돌리는 기능입니다. 기존 LLM 코딩 방식은 인간과 AI가 번갈아 가며 상호작용하는 '티키타카' 방식이었지만, Goal 기능은 초기 목표 설정 후 AI가 독립적으로 실행-검증-반복 사이클을 돌립니다. Anthropic의 Claude Code 플러그인은 같은 컨텍스트에서 누적되어 품질 저하 문제가 있었지만, 코덱스는 5단계 라이프사이클(명령 라우팅, 도구 권한 부여, 루프 실행, 목표 달성 검증, 랩업)으로 개선했습니다. 특히 7단계 완료 검증 프로세스와 토큰 예산 관리 시스템을 통해 할루시네이션과 무한 루프를 방지합니다.
+- **Core Message:** AI가 목표만 주면 스스로 반복하며 완성할 때까지 코딩하는 혁신적 패러다임이 코덱스 Goal 기능으로 구현되었다.
+> LLM이 자기가 싼 똥을 직면하게 해야 된다
+> 모델을 실패에 충분히 밀어붙이면 그 루프를 탈출하려고 정답을 꿈꾸게 된다
+> 목표가 실제로 완료되지 않았는데 완료된 척을 하는 할루시네이션을 차단
+❗ RALF는 심슨 가족의 바보 캐릭터 Ralph Wiggum에서 따온 이름이다
+❗ Jeffrey Huntley는 현재 호주 시골에서 염소를 키우는 농부다
+❗ 해커톤에서 파이썬을 타입스크립트로 완전 마이그레이션하는 작업이 밤새 자동으로 완성되었다
+
+## 📚 핵심 용어
+- **RALF Loop:** 목표 달성까지 AI가 실행-검증-반복을 자동으로 돌리는 루프 시스템이다. / 마라톤 선수가 결승점까지 중간 체크포인트를 확인하며 계속 달리는 것과 같다. 목표에 도달할 때까지 멈추지 않는다. / 기존 코딩은 사람이 매번 지시하는 대화형, RALF Loop는 AI가 혼자서 목표까지 달리는 자율형. 사람 개입 빈도가 완전히 다르다.
+- **Goal 기능:** 코덱스에서 목표만 설정하면 AI가 자율적으로 완성까지 작업하는 명령어다. / 요리사에게 '파스타 만들어줘'라고 한 번만 말하면, 재료 확인부터 완성까지 알아서 하는 것과 같다. / 기존 코딩은 단계별 지시가 필요한 수동 모드, Goal은 목표만 주는 자동 모드. 사용자 개입량이 99% 줄어든다.
+- **완료 검증 7단계:** AI가 작업 완료를 거짓 주장하지 못하도록 막는 철저한 검증 프로세스다. / 의사가 환자 퇴원 전에 체온, 혈압, 검사 결과를 7번 재확인하는 것처럼 꼼꼼히 체크한다. / 일반 AI는 '완료됐어요'라고 주장만 함, 코덱스는 실제 파일과 테스트 결과로 7단계 증명 요구. 신뢰도가 완전히 다르다.
+- **토큰 예산 관리:** AI가 무한 루프로 토큰을 낭비하지 않도록 사용량을 실시간 모니터링하는 시스템이다. / 용돈 통장을 보며 쇼핑하는 것과 같다. 매번 잔액을 확인하고 한도 넘으면 자동으로 정리하고 멈춘다. / Claude 플러그인은 토큰 제한 없이 무한 소모, 코덱스는 예산 한도 내에서 작업 후 자동 종료. 비용 통제력이 완전히 다르다.
+
+## 🚀 실행 (Execute)
+- [ ] 코덱스 CLI 0.128.0 이상 설치하고 Goal 기능 활성화 (피처 플래그 true 설정)
+  - 담당: 나
+  - 이유: 실제로 Goal 기능을 사용해보려면 최신 버전과 설정이 필요함
+- [ ] 격리된 환경(도커 컨테이너)에서 간단한 Goal 실습 프로젝트 진행
+  - 담당: 나
+  - 이유: AI가 파일 삭제 등 위험한 명령을 실행할 수 있어 안전한 환경에서 테스트 필요
+- 자료: Jeffrey Huntley의 RALF Loop 블로그 원문 (17,000자 분량)
+- 자료: 코덱스 Goal 기능 깃허브 코드 저장소
+- 자료: 실습용 PQ 자바스크립트 라이브러리 프로젝트
+- Timeline: 코덱스 설치 → 격리 환경 구축 → 실습 프로젝트 진행 순으로, 프로덕션 적용은 정식 출시 후 검토
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=vq37BMhoesQ&t=0) 자, 며칠 전에 코덱스에서이 꼬이라는
+- [0:02](https://youtube.com/watch?v=vq37BMhoesQ&t=2) 엄청난 기능이 나와서 급하게 카메라를
+- [0:05](https://youtube.com/watch?v=vq37BMhoesQ&t=5) 켰습니다. 한 줄로 요약하자면 목표만
+- [0:07](https://youtube.com/watch?v=vq37BMhoesQ&t=7) 주면 진짜 알아서 스스로 코딩을 하는
+- [0:09](https://youtube.com/watch?v=vq37BMhoesQ&t=9) 기능입니다. 이게 기존에 우리가
+- [0:11](https://youtube.com/watch?v=vq37BMhoesQ&t=11) LM과 코딩하는 방식 자체를 바꿀
+- [0:13](https://youtube.com/watch?v=vq37BMhoesQ&t=13) 신기능이라서 반드시 알아두셔야
+- [0:15](https://youtube.com/watch?v=vq37BMhoesQ&t=15) 되고요.이 이 꼬리라는 기능이 랄프
+- [0:17](https://youtube.com/watch?v=vq37BMhoesQ&t=17) 루프라는 코딩 에이전트계에서 굉장히
+- [0:20](https://youtube.com/watch?v=vq37BMhoesQ&t=20) 중요한 개념을 기반으로 만들었기
+- [0:22](https://youtube.com/watch?v=vq37BMhoesQ&t=22) 때문에 제가 오늘이 랄프루프의
+- [0:24](https://youtube.com/watch?v=vq37BMhoesQ&t=24) 개념부터 코덱스 내부 코드를 함께
+- [0:27](https://youtube.com/watch?v=vq37BMhoesQ&t=27) 뜯어 보면서이 랄프루프를 코덱스에서
+- [0:30](https://youtube.com/watch?v=vq37BMhoesQ&t=30) 어떻게 구현을 했는지 그리고이 골을
+- [0:32](https://youtube.com/watch?v=vq37BMhoesQ&t=32) 같이 실습까지 해 보도록 하겠습니다.
+- [0:35](https://youtube.com/watch?v=vq37BMhoesQ&t=35) 이번 영상 만드느라 공을 정말 많이
+- [0:37](https://youtube.com/watch?v=vq37BMhoesQ&t=37) 드렸고 제가 분량까지 낭랑하게 채워서
+- [0:39](https://youtube.com/watch?v=vq37BMhoesQ&t=39) 만들었으니까 구독과 좋아요 한 번씩만
+- [0:42](https://youtube.com/watch?v=vq37BMhoesQ&t=42) 부탁드리겠습니다. 제가 여섯 개의
+- [0:43](https://youtube.com/watch?v=vq37BMhoesQ&t=43) 목차로 준비를 했고요. 일단 첫 번째
+- [0:46](https://youtube.com/watch?v=vq37BMhoesQ&t=46) 도입부 그리고 랄프루프의 개념에
+- [0:48](https://youtube.com/watch?v=vq37BMhoesQ&t=48) 대해서 한번 쭉 설명드릴 거고요.
+- [0:50](https://youtube.com/watch?v=vq37BMhoesQ&t=50) 그리고이 랄프루프의 개념을
+- [0:52](https://youtube.com/watch?v=vq37BMhoesQ&t=52) 엔트로픽에서도 구현을 했습니다.
+- [0:54](https://youtube.com/watch?v=vq37BMhoesQ&t=54) 플러그인 형태로 구현했는데이
+- [0:56](https://youtube.com/watch?v=vq37BMhoesQ&t=56) 플러그인에 어떤 문제가 있었는지 한번
+- [0:58](https://youtube.com/watch?v=vq37BMhoesQ&t=58) 짚어 드리고 그리고이 랄프루프의
+- [1:00](https://youtube.com/watch?v=vq37BMhoesQ&t=60) 개념을 코덱스에서이 꼴이라는 기능으로
+- [1:03](https://youtube.com/watch?v=vq37BMhoesQ&t=63) 어떻게 구현을 했는지 제가 깃터의
+- [1:04](https://youtube.com/watch?v=vq37BMhoesQ&t=64) 코드 레벨까지 하나하나 뜯어 보면서
+- [1:07](https://youtube.com/watch?v=vq37BMhoesQ&t=67) 보여 드릴 거고요. 자, 그리고
+- [1:08](https://youtube.com/watch?v=vq37BMhoesQ&t=68) 저희가 실습을 또 빼놓을 수 없겠죠?
+- [1:10](https://youtube.com/watch?v=vq37BMhoesQ&t=70) 같이 한번 실습을 해보고 마무리를 해
+- [1:12](https://youtube.com/watch?v=vq37BMhoesQ&t=72) 보겠습니다. 자, 그럼 바로
+- [1:14](https://youtube.com/watch?v=vq37BMhoesQ&t=74) 시작할게요. 자, 기존에 저희가
+- [1:15](https://youtube.com/watch?v=vq37BMhoesQ&t=75) LRM과 코딩을 할 때 어떻게
+- [1:17](https://youtube.com/watch?v=vq37BMhoesQ&t=77) 했나요? 일단 저희가 명령어를 입력을
+- [1:20](https://youtube.com/watch?v=vq37BMhoesQ&t=80) 하고 AI가 작업을 할 때까지 기다린
+- [1:22](https://youtube.com/watch?v=vq37BMhoesQ&t=82) 다음에 저희가 그 결과를 검토를 하고
+- [1:25](https://youtube.com/watch?v=vq37BMhoesQ&t=85) 그다음에 저희가 지시를 내리는 형태로
+- [1:27](https://youtube.com/watch?v=vq37BMhoesQ&t=87) 이런 식으로 무조건 티키타카를 해야
+- [1:29](https://youtube.com/watch?v=vq37BMhoesQ&t=89) 되는 형태였죠. 저희가 매 단계에
+- [1:31](https://youtube.com/watch?v=vq37BMhoesQ&t=91) 끼어들 수밖에 없는 구조였습니다.
+- [1:33](https://youtube.com/watch?v=vq37BMhoesQ&t=93) 그런데 골은 목표를 한번 설정하면이
+- [1:36](https://youtube.com/watch?v=vq37BMhoesQ&t=96) 시스템이 알아서 사이클을 돌립니다.
+- [1:38](https://youtube.com/watch?v=vq37BMhoesQ&t=98) 저희가 목표를 이렇게 던져 주면
+- [1:40](https://youtube.com/watch?v=vq37BMhoesQ&t=100) 실행을 한번 합니다. 그리고 체크를
+- [1:42](https://youtube.com/watch?v=vq37BMhoesQ&t=102) 하는 거죠. 목표에 달성을 했나?
+- [1:44](https://youtube.com/watch?v=vq37BMhoesQ&t=104) 달성했으면 그냥 끝내는 거고 만약에
+- [1:46](https://youtube.com/watch?v=vq37BMhoesQ&t=106) 목표를 달성하지 못했다면 다시 실행을
+- [1:49](https://youtube.com/watch?v=vq37BMhoesQ&t=109) 하고 달성할 때까지 계속 이렇게
+- [1:51](https://youtube.com/watch?v=vq37BMhoesQ&t=111) 루프를 도는 겁니다. 인간은 처음에
+- [1:54](https://youtube.com/watch?v=vq37BMhoesQ&t=114) 목표를 한 번만 딱 던져 주면
+- [1:56](https://youtube.com/watch?v=vq37BMhoesQ&t=116) 알아서이 시스템이 루프를 돌면서
+- [1:58](https://youtube.com/watch?v=vq37BMhoesQ&t=118) 완성될 때까지 그니까 목표를 달성할
+- [2:01](https://youtube.com/watch?v=vq37BMhoesQ&t=121) 때까지 루프를 돌게 되는 거죠. 자,
+- [2:03](https://youtube.com/watch?v=vq37BMhoesQ&t=123) 펄립 코이라는 오픈 AI 코덱스 팀의
+- [2:06](https://youtube.com/watch?v=vq37BMhoesQ&t=126) 시니어 엔지니어가 X의 올린글이
+- [2:08](https://youtube.com/watch?v=vq37BMhoesQ&t=128) 화제가 되었는데요. 내용을 보면이
+- [2:10](https://youtube.com/watch?v=vq37BMhoesQ&t=130) 골이라는 기능이 코덱스 CLI
+- [2:13](https://youtube.com/watch?v=vq37BMhoesQ&t=133) 0.128. 0에 출시가 되었고
+- [2:16](https://youtube.com/watch?v=vq37BMhoesQ&t=136) 우리는 랄프루프를 탑재를 했고 그
+- [2:18](https://youtube.com/watch?v=vq37BMhoesQ&t=138) 목표를 달성할 때까지 멈추지
+- [2:20](https://youtube.com/watch?v=vq37BMhoesQ&t=140) 않는다.이 사람이 대놓고이 랄프루프를
+- [2:22](https://youtube.com/watch?v=vq37BMhoesQ&t=142) 기반으로 하고 있다고 하는데이
+- [2:24](https://youtube.com/watch?v=vq37BMhoesQ&t=144) 랄프루프가 뭔지 한번 알아보겠습니다.
+- [2:26](https://youtube.com/watch?v=vq37BMhoesQ&t=146) 자, 랄프루프를 도식한 건데요. 매우
+- [2:29](https://youtube.com/watch?v=vq37BMhoesQ&t=149) 간단합니다. 자,이 루프가 있습니다.
+- [2:31](https://youtube.com/watch?v=vq37BMhoesQ&t=151) 루프를 한번 돌고 검사를 합니다.
+- [2:33](https://youtube.com/watch?v=vq37BMhoesQ&t=153) 목표가 달성되었는가? 달성되었으면
+- [2:36](https://youtube.com/watch?v=vq37BMhoesQ&t=156) 그냥 끝냅니다. 그리고 달성되지
+- [2:37](https://youtube.com/watch?v=vq37BMhoesQ&t=157) 않았으면 한 번 더 루프를 도는
+- [2:39](https://youtube.com/watch?v=vq37BMhoesQ&t=159) 거죠. 이런 식으로 루프를 한번 돌고
+- [2:42](https://youtube.com/watch?v=vq37BMhoesQ&t=162) 목표가 달성되는지 체크를 하고 달성될
+- [2:44](https://youtube.com/watch?v=vq37BMhoesQ&t=164) 때까지 계속 루프를 도는게 랄프
+- [2:47](https://youtube.com/watch?v=vq37BMhoesQ&t=167) 루프입니다. 제가 이렇게 랄프루프의
+- [2:49](https://youtube.com/watch?v=vq37BMhoesQ&t=169) 변사를 한번 정리를 해 봤는데요.
+- [2:50](https://youtube.com/watch?v=vq37BMhoesQ&t=170) 일단 헌틀리가 자기 블로그에 랄프루프
+- [2:53](https://youtube.com/watch?v=vq37BMhoesQ&t=173) 기법에 대해서 소개를 했습니다.
+- [2:55](https://youtube.com/watch?v=vq37BMhoesQ&t=175) 2025년 7월 14일에
+- [2:57](https://youtube.com/watch?v=vq37BMhoesQ&t=177) 올라온이고요. 그리고 2025년
+- [2:58](https://youtube.com/watch?v=vq37BMhoesQ&t=178) 12월에 앤트로픽이 헌틀리의
+- [3:01](https://youtube.com/watch?v=vq37BMhoesQ&t=181) 랄프루프를 클로드 코드 안으로 흡수를
+- [3:03](https://youtube.com/watch?v=vq37BMhoesQ&t=183) 했습니다. 플러그인 형태로 탑재를
+- [3:04](https://youtube.com/watch?v=vq37BMhoesQ&t=184) 했고요. 그리고 며칠 전 마침내 오픈
+- [3:07](https://youtube.com/watch?v=vq37BMhoesQ&t=187) AI 코덱스에 꼬리라는 기능으로
+- [3:09](https://youtube.com/watch?v=vq37BMhoesQ&t=189) 탑재가 되었습니다.이 제프리
+- [3:11](https://youtube.com/watch?v=vq37BMhoesQ&t=191) 헌틀리라는 사람이 랄프루프를 소개하는
+- [3:13](https://youtube.com/watch?v=vq37BMhoesQ&t=193) 글을 올렸습니다. 제가 좀 있다가
+- [3:14](https://youtube.com/watch?v=vq37BMhoesQ&t=194) 이거 정리해서 또 알려 드릴게요.
+- [3:16](https://youtube.com/watch?v=vq37BMhoesQ&t=196) 지금은 호주 시골에서 염소를 키우시는
+- [3:18](https://youtube.com/watch?v=vq37BMhoesQ&t=198) 농부고요. 원래는 오픈소스 개발자로
+- [3:21](https://youtube.com/watch?v=vq37BMhoesQ&t=201) 활동을 하셨습니다.이 랄프루프에서이
+- [3:23](https://youtube.com/watch?v=vq37BMhoesQ&t=203) 랄프는 심슨 가족의 랄프 위검이라는
+- [3:25](https://youtube.com/watch?v=vq37BMhoesQ&t=205) 캐릭터에서 따온 겁니다. 전형적인
+- [3:27](https://youtube.com/watch?v=vq37BMhoesQ&t=207) 바보 캐릭터고요.이 랄프처럼 될
+- [3:30](https://youtube.com/watch?v=vq37BMhoesQ&t=210) 때까지 바보처럼 루프를 돈다고 해서
+- [3:32](https://youtube.com/watch?v=vq37BMhoesQ&t=212) 붙여진 일입니다.이 이 랄프루프의
+- [3:34](https://youtube.com/watch?v=vq37BMhoesQ&t=214) 철학은 한 번에 완벽하게 하는 거보다
+- [3:37](https://youtube.com/watch?v=vq37BMhoesQ&t=217) 반복을 통해 완성해 나가는 겁니다.이
+- [3:39](https://youtube.com/watch?v=vq37BMhoesQ&t=219) 헌틀리가 블로그에서 소개한이
+- [3:41](https://youtube.com/watch?v=vq37BMhoesQ&t=221) 스크립트가 굉장히 단순합니다. 여기
+- [3:43](https://youtube.com/watch?v=vq37BMhoesQ&t=223) 와일문이 있죠. 이게 루프입니다.
+- [3:46](https://youtube.com/watch?v=vq37BMhoesQ&t=226) 계속해서 반복하는 거고요. 그리고
+- [3:48](https://youtube.com/watch?v=vq37BMhoesQ&t=228) 클로드 코드에게이 프롬프트 내용을
+- [3:50](https://youtube.com/watch?v=vq37BMhoesQ&t=230) 계속 입력을 시키는 것을 반복하는
+- [3:52](https://youtube.com/watch?v=vq37BMhoesQ&t=232) 루프란 뜻입니다. 그래서 우리가
+- [3:54](https://youtube.com/watch?v=vq37BMhoesQ&t=234) 생각한 목표가 달성될 때까지 계속
+- [3:56](https://youtube.com/watch?v=vq37BMhoesQ&t=236) 클로드 코드에게 프롬프트를 입력을
+- [3:58](https://youtube.com/watch?v=vq37BMhoesQ&t=238) 하는 방식인 거죠. 여기서 이렇게
+- [4:00](https://youtube.com/watch?v=vq37BMhoesQ&t=240) 생각하실 수도 있습니다. 같은
+- [4:02](https://youtube.com/watch?v=vq37BMhoesQ&t=242) 프롬프트를 계속 똑같이 넣었는데
+- [4:04](https://youtube.com/watch?v=vq37BMhoesQ&t=244) 어떻게 해서 진전이 있을까? 루프를
+- [4:07](https://youtube.com/watch?v=vq37BMhoesQ&t=247) 계속해서 돌게 되면 이전 루프가 남긴
+- [4:09](https://youtube.com/watch?v=vq37BMhoesQ&t=249) 흔적이 남기 마련입니다. 뭐 예를
+- [4:11](https://youtube.com/watch?v=vq37BMhoesQ&t=251) 들어서 깃, 로그나 코드 등이
+- [4:13](https://youtube.com/watch?v=vq37BMhoesQ&t=253) 있겠죠. 이것들을 참고해서 같은
+- [4:15](https://youtube.com/watch?v=vq37BMhoesQ&t=255) 프롬프트를 계속 처리를 하는 겁니다.
+- [4:18](https://youtube.com/watch?v=vq37BMhoesQ&t=258) 예를 들어서 루프를 한 번 돌았을
+- [4:20](https://youtube.com/watch?v=vq37BMhoesQ&t=260) 때는 코드가 없고 그리고 길 로그도
+- [4:22](https://youtube.com/watch?v=vq37BMhoesQ&t=262) 비어 있겠죠. 처음부터 작성을 하게
+- [4:24](https://youtube.com/watch?v=vq37BMhoesQ&t=264) 됩니다. 그다음 루프를 돌 때는 루프
+- [4:27](https://youtube.com/watch?v=vq37BMhoesQ&t=267) 1번이 남긴 로그가 남아 있겠죠.
+- [4:29](https://youtube.com/watch?v=vq37BMhoesQ&t=269) 그리고 코드 결과도 있을 겁니다.
+- [4:31](https://youtube.com/watch?v=vq37BMhoesQ&t=271) 그것 그 결과를 참고하면서이
+- [4:33](https://youtube.com/watch?v=vq37BMhoesQ&t=273) 프롬프트를 합쳐서 루프 2만의 또
+- [4:36](https://youtube.com/watch?v=vq37BMhoesQ&t=276) 다른 결과물을 만들어내는 거죠. 자,
+- [4:38](https://youtube.com/watch?v=vq37BMhoesQ&t=278) 그리고 세 번째 루프에서는 첫 번째
+- [4:40](https://youtube.com/watch?v=vq37BMhoesQ&t=280) 루프와 두 번째 루프가 남긴 결과물과
+- [4:42](https://youtube.com/watch?v=vq37BMhoesQ&t=282) 커밋을 참고를 하고 거기에다가 동일한
+- [4:45](https://youtube.com/watch?v=vq37BMhoesQ&t=285) 프롬프트까지 참고를 해서 개선된
+- [4:48](https://youtube.com/watch?v=vq37BMhoesQ&t=288) 결과물을 내놓는 거죠. 제가 하고
+- [4:50](https://youtube.com/watch?v=vq37BMhoesQ&t=290) 싶은 말은 프롬프트는 똑같지만
+- [4:52](https://youtube.com/watch?v=vq37BMhoesQ&t=292) 작업물이 매번 누적된다는 겁니다.
+- [4:54](https://youtube.com/watch?v=vq37BMhoesQ&t=294) 자, 오른쪽에 헌틀리가 쓴 블로그
+- [4:56](https://youtube.com/watch?v=vq37BMhoesQ&t=296) 글이 보이죠? 이게 17,000자
+- [4:58](https://youtube.com/watch?v=vq37BMhoesQ&t=298) 분량이라 양이 상당합니다. 이거를 다
+- [5:00](https://youtube.com/watch?v=vq37BMhoesQ&t=300) 설명드릴 수 없어 가지고 제가
+- [5:03](https://youtube.com/watch?v=vq37BMhoesQ&t=303) 핵심적인 내용만 요약을 해 놨고
+- [5:05](https://youtube.com/watch?v=vq37BMhoesQ&t=305) 나중에 시간 되시는 분들은 꼭 읽어
+- [5:06](https://youtube.com/watch?v=vq37BMhoesQ&t=306) 보시면 좋겠습니다.
+- [5:09](https://youtube.com/watch?v=vq37BMhoesQ&t=309) 첫 번째는 나이브
+- [5:10](https://youtube.com/watch?v=vq37BMhoesQ&t=310) pers시스턴스입니다. 단순 끈기라는
+- [5:12](https://youtube.com/watch?v=vq37BMhoesQ&t=312) 말인데 일단 랄프처럼 무식하게 반복을
+- [5:15](https://youtube.com/watch?v=vq37BMhoesQ&t=315) 하는 거죠. 그리고 정제가 안 된
+- [5:17](https://youtube.com/watch?v=vq37BMhoesQ&t=317) 피드백입니다. 자, 이게 무슨
+- [5:19](https://youtube.com/watch?v=vq37BMhoesQ&t=319) 말이냐면 여기 첫 번째 루프를 돌고
+- [5:21](https://youtube.com/watch?v=vq37BMhoesQ&t=321) 두 번째 루프를 갔다고 합시다. 첫
+- [5:23](https://youtube.com/watch?v=vq37BMhoesQ&t=323) 번째 루프가 남긴 결과물과 커밋을
+- [5:26](https://youtube.com/watch?v=vq37BMhoesQ&t=326) 보고 그거를 프롬프트와 함께 처리를
+- [5:28](https://youtube.com/watch?v=vq37BMhoesQ&t=328) 하겠죠. 이런 식으로 AI가 남긴 그
+- [5:31](https://youtube.com/watch?v=vq37BMhoesQ&t=331) 낡것의 결과물을 보고 처리를 한다는
+- [5:33](https://youtube.com/watch?v=vq37BMhoesQ&t=333) 겁니다. 만약에 저희가 기존 방식으로
+- [5:36](https://youtube.com/watch?v=vq37BMhoesQ&t=336) 개발을 한다고 하면 이전 결과물을
+- [5:38](https://youtube.com/watch?v=vq37BMhoesQ&t=338) 저희가 해석하고 요약을 한 다음에
+- [5:40](https://youtube.com/watch?v=vq37BMhoesQ&t=340) 다시 AI에게 명령을 내리겠죠.
+- [5:42](https://youtube.com/watch?v=vq37BMhoesQ&t=342) 여기서 5차가 발생하는 겁니다. 근데
+- [5:44](https://youtube.com/watch?v=vq37BMhoesQ&t=344) 랄프루프는 루프 1이 만든 결과물 그
+- [5:47](https://youtube.com/watch?v=vq37BMhoesQ&t=347) 자체를 보기 때문에 이런 오차는
+- [5:49](https://youtube.com/watch?v=vq37BMhoesQ&t=349) 발생하지 않겠죠. 그래서 이거를
+- [5:50](https://youtube.com/watch?v=vq37BMhoesQ&t=350) lm이 자기가 싼 똥을 직면하게 해야
+- [5:53](https://youtube.com/watch?v=vq37BMhoesQ&t=353) 된다라고 표현을 하고 있습니다.
+- [5:54](https://youtube.com/watch?v=vq37BMhoesQ&t=354) 굉장히 직관적으로 잘 설명을 하고
+- [5:56](https://youtube.com/watch?v=vq37BMhoesQ&t=356) 있죠. 그리고 마지막으로 모델을
+- [5:58](https://youtube.com/watch?v=vq37BMhoesQ&t=358) 실패에 충분히 밀어붙이면 그 루프를
+- [6:01](https://youtube.com/watch?v=vq37BMhoesQ&t=361) 탈출하려고 정답을 꿈꾸게 된다.
+- [6:03](https://youtube.com/watch?v=vq37BMhoesQ&t=363) 자,이 말은 루프를 한번 돌고 실패에
+- [6:06](https://youtube.com/watch?v=vq37BMhoesQ&t=366) 직면을 하고 그 실패를 해결하기
+- [6:08](https://youtube.com/watch?v=vq37BMhoesQ&t=368) 위해서 또 루프를 돌고 이런 식으로
+- [6:09](https://youtube.com/watch?v=vq37BMhoesQ&t=369) 반복을 하게 되면이 루프를 이렇게
+- [6:12](https://youtube.com/watch?v=vq37BMhoesQ&t=372) 탈출하려고 정답을 어떻게든 찾게
+- [6:14](https://youtube.com/watch?v=vq37BMhoesQ&t=374) 된다는 거죠. 그래서 AI에게 자기간
+- [6:16](https://youtube.com/watch?v=vq37BMhoesQ&t=376) 실수를 알게 해주면 빠져나가려고
+- [6:18](https://youtube.com/watch?v=vq37BMhoesQ&t=378) 어떻게든 정답을 만들어 낸다라고 볼
+- [6:20](https://youtube.com/watch?v=vq37BMhoesQ&t=380) 수 있습니다. 자, 그래서 어떤
+- [6:22](https://youtube.com/watch?v=vq37BMhoesQ&t=382) 개발자가이 헌틀리가 제안한 랄프루프에
+- [6:24](https://youtube.com/watch?v=vq37BMhoesQ&t=384) 영감을 받아서이 해커톤에서 직접
+- [6:27](https://youtube.com/watch?v=vq37BMhoesQ&t=387) 랄프루프를 구현을 해서 실험을 하나
+- [6:29](https://youtube.com/watch?v=vq37BMhoesQ&t=389) 해 봤습니다. 브라우저 유지라는 툴을
+- [6:31](https://youtube.com/watch?v=vq37BMhoesQ&t=391) 파이썬 2를 타입스크립트로 그대로
+- [6:33](https://youtube.com/watch?v=vq37BMhoesQ&t=393) 마이그레이션 하는 거고요. 어, 버셀
+- [6:35](https://youtube.com/watch?v=vq37BMhoesQ&t=395) AISTK가 타입스크립트로 되어
+- [6:37](https://youtube.com/watch?v=vq37BMhoesQ&t=397) 있는데 이거를 파이썬으로 포팅하는
+- [6:40](https://youtube.com/watch?v=vq37BMhoesQ&t=400) 실험을 한 겁니다. 사람의 개입 없이
+- [6:42](https://youtube.com/watch?v=vq37BMhoesQ&t=402) 랄프루프로만 구현을 하게 한 거고요.
+- [6:44](https://youtube.com/watch?v=vq37BMhoesQ&t=404) 관련 내용이이 기터브에 정리가 잘
+- [6:46](https://youtube.com/watch?v=vq37BMhoesQ&t=406) 되어 있어서 함께 보겠습니다.
+- [6:48](https://youtube.com/watch?v=vq37BMhoesQ&t=408) 오른쪽이 깃터 레퍼고요. 보기 편하게
+- [6:50](https://youtube.com/watch?v=vq37BMhoesQ&t=410) 한국어로 일단 번역을 해 보겠습니다.
+- [6:52](https://youtube.com/watch?v=vq37BMhoesQ&t=412) 자, 여기 보면 주말 YC 에이전트
+- [6:55](https://youtube.com/watch?v=vq37BMhoesQ&t=415) 해커톤에서 우리는 코딩 에이전트를
+- [6:57](https://youtube.com/watch?v=vq37BMhoesQ&t=417) 가장 기발하게 활용하는 방법이
+- [6:58](https://youtube.com/watch?v=vq37BMhoesQ&t=418) 무엇일까 질문을 던졌고 그 해결책은이
+- [7:01](https://youtube.com/watch?v=vq37BMhoesQ&t=421) 헌틀리가 제한 와일루프 내에서 코딩
+- [7:04](https://youtube.com/watch?v=vq37BMhoesQ&t=424) 에이전트를 실행하는 기법을 발견했다.
+- [7:06](https://youtube.com/watch?v=vq37BMhoesQ&t=426) 이게 아까 설명드린 랄프루프죠. 자,
+- [7:09](https://youtube.com/watch?v=vq37BMhoesQ&t=429) 작동 방식을 보면 이게 바보 같아
+- [7:11](https://youtube.com/watch?v=vq37BMhoesQ&t=431) 보일 수 있지만 놀랍도록 잘 동작을
+- [7:13](https://youtube.com/watch?v=vq37BMhoesQ&t=433) 한다. 우리는 반복문을 위해서 클러드
+- [7:15](https://youtube.com/watch?v=vq37BMhoesQ&t=435) 코드를 사용을 했고. 자, 이런
+- [7:17](https://youtube.com/watch?v=vq37BMhoesQ&t=437) 식으로 옵션을 넣어서 권한 체크 없이
+- [7:19](https://youtube.com/watch?v=vq37BMhoesQ&t=439) 계속 이렇게 루프를 둔 거죠. 그리고
+- [7:22](https://youtube.com/watch?v=vq37BMhoesQ&t=442) 보니까 주어진 과제는 간단했다고
+- [7:24](https://youtube.com/watch?v=vq37BMhoesQ&t=444) 합니다.이 웹 에이전트 툴인 브라우저
+- [7:26](https://youtube.com/watch?v=vq37BMhoesQ&t=446) 유즈를 파이썬에서 타입스크립트로
+- [7:28](https://youtube.com/watch?v=vq37BMhoesQ&t=448) 포팅할 수 있는지 확인해 보기로 한
+- [7:30](https://youtube.com/watch?v=vq37BMhoesQ&t=450) 거죠.
+- [7:31](https://youtube.com/watch?v=vq37BMhoesQ&t=451) 그래서 이런 식으로 간단한 프롬프트를
+- [7:33](https://youtube.com/watch?v=vq37BMhoesQ&t=453) 작성을 하고 루프를 돌렸다고 합니다.
+- [7:35](https://youtube.com/watch?v=vq37BMhoesQ&t=455) 자,이 자, 그랬더니 이런 식으로
+- [7:38](https://youtube.com/watch?v=vq37BMhoesQ&t=458) 커밋을 계속 쌓아가면서 작업을 진행을
+- [7:40](https://youtube.com/watch?v=vq37BMhoesQ&t=460) 한 거죠. 자, 그리고 아침에 돌아와
+- [7:42](https://youtube.com/watch?v=vq37BMhoesQ&t=462) 보니까이 타입스크립트로 포팅된 버전이
+- [7:45](https://youtube.com/watch?v=vq37BMhoesQ&t=465) 거의 완벽하게 동작을 하고 있었다고
+- [7:47](https://youtube.com/watch?v=vq37BMhoesQ&t=467) 하고 이렇게 구현되고 있는 모습까지
+- [7:49](https://youtube.com/watch?v=vq37BMhoesQ&t=469) 보여주고 있죠.
+- [7:51](https://youtube.com/watch?v=vq37BMhoesQ&t=471) 자, 이런 사례까지 나오면서이
+- [7:52](https://youtube.com/watch?v=vq37BMhoesQ&t=472) 랄프루프가 AI 업계에서 굉장히
+- [7:54](https://youtube.com/watch?v=vq37BMhoesQ&t=474) 유명해지기 시작합니다. 그래서
+- [7:56](https://youtube.com/watch?v=vq37BMhoesQ&t=476) 엔트로픽이 클로드 코드에서 랄프루프를
+- [7:58](https://youtube.com/watch?v=vq37BMhoesQ&t=478) 플러그인 형태로 지원을 하게 됩니다.
+- [8:00](https://youtube.com/watch?v=vq37BMhoesQ&t=480) 자, 이런 식으로 설치를 할 수 있고
+- [8:01](https://youtube.com/watch?v=vq37BMhoesQ&t=481) 이런 식으로 랄프루프 플러그인을
+- [8:03](https://youtube.com/watch?v=vq37BMhoesQ&t=483) 호출을 해서 실행을 할 수 있는
+- [8:05](https://youtube.com/watch?v=vq37BMhoesQ&t=485) 거죠. 하지만이 플러그인에는 몇 가지
+- [8:07](https://youtube.com/watch?v=vq37BMhoesQ&t=487) 단점이 있는데요. 첫 번째 단점부터
+- [8:08](https://youtube.com/watch?v=vq37BMhoesQ&t=488) 보면 컨텍스트가 프레시하지 않다는
+- [8:11](https://youtube.com/watch?v=vq37BMhoesQ&t=491) 겁니다. 이게 무슨 말이냐면 헌틀리는
+- [8:13](https://youtube.com/watch?v=vq37BMhoesQ&t=493) 매 루프마다 새로운 대화가 열립니다.
+- [8:16](https://youtube.com/watch?v=vq37BMhoesQ&t=496) 그런데 엔트로픽 플러그인은 같은
+- [8:18](https://youtube.com/watch?v=vq37BMhoesQ&t=498) 컨텍스트에 계속 누적됩니다. 그래서
+- [8:30](https://youtube.com/watch?v=vq37BMhoesQ&t=510) 토큰을 어느 정도 소모했을 때 품질이
+- [8:32](https://youtube.com/watch?v=vq37BMhoesQ&t=512) 떨어지는 문제가 있었습니다. 그리고
+- [8:34](https://youtube.com/watch?v=vq37BMhoesQ&t=514) 두 번째 한계인데이
+- [8:36](https://youtube.com/watch?v=vq37BMhoesQ&t=516) 본질이 좀 변질됐다는 겁니다.
+- [8:38](https://youtube.com/watch?v=vq37BMhoesQ&t=518) 랄프루프는 무한히 돌리는게 핵심이
+- [8:40](https://youtube.com/watch?v=vq37BMhoesQ&t=520) 아니라 큰 작업을 잘게 쪼개서 각각을
+- [8:43](https://youtube.com/watch?v=vq37BMhoesQ&t=523) 독립된 머리로 처리하는게 핵심이다.
+- [8:45](https://youtube.com/watch?v=vq37BMhoesQ&t=525) 매번 새로운 컨텍스트에서 처리하는게
+- [8:47](https://youtube.com/watch?v=vq37BMhoesQ&t=527) 핵심인데 엔트로픽이 구현한 거는 같은
+- [8:50](https://youtube.com/watch?v=vq37BMhoesQ&t=530) 컨텍스트에서 계속 반복을 시켰다는
+- [8:51](https://youtube.com/watch?v=vq37BMhoesQ&t=531) 거죠. 그래서 헌틀리의 옛 동료인
+- [8:54](https://youtube.com/watch?v=vq37BMhoesQ&t=534) 덱스 홀씨라는 개발자가 이건 랄프의
+- [8:56](https://youtube.com/watch?v=vq37BMhoesQ&t=536) 본질을 정 반대로 해석한 것이다라고
+- [8:59](https://youtube.com/watch?v=vq37BMhoesQ&t=539) 반박을 하게도 했습니다. 그리고 세
+- [9:00](https://youtube.com/watch?v=vq37BMhoesQ&t=540) 번째 한계가 좀 흥미로운데요.이 스톱
+- [9:03](https://youtube.com/watch?v=vq37BMhoesQ&t=543) 훅이라는 걸 넣어서 AI가 끝났다고
+- [9:06](https://youtube.com/watch?v=vq37BMhoesQ&t=546) 하고 그만들려는 순간에
+- [9:09](https://youtube.com/watch?v=vq37BMhoesQ&t=549) 빠져나가지 말고 계속 작업을 해라라고
+- [9:12](https://youtube.com/watch?v=vq37BMhoesQ&t=552) 묶어 놓는 기능입니다. 자, 그래서
+- [9:13](https://youtube.com/watch?v=vq37BMhoesQ&t=553) 여기를 보면 클로드 코드가 작업이
+- [9:15](https://youtube.com/watch?v=vq37BMhoesQ&t=555) 끝났다고 종료를 시도할 때 스톱 훅이
+- [9:17](https://youtube.com/watch?v=vq37BMhoesQ&t=557) 딱 가로 채치는 거죠. 그래서
+- [9:19](https://youtube.com/watch?v=vq37BMhoesQ&t=559) 종료하지 못하게 합니다. 그리고
+- [9:20](https://youtube.com/watch?v=vq37BMhoesQ&t=560) 똑같은 프롬프트를 다시 처리하라고
+- [9:22](https://youtube.com/watch?v=vq37BMhoesQ&t=562) 명령을 하는 거죠. 야, 다시
+- [9:24](https://youtube.com/watch?v=vq37BMhoesQ&t=564) 만들어. 이렇게요. 실제 프롬프트를
+- [9:25](https://youtube.com/watch?v=vq37BMhoesQ&t=565) 보면 두날 라이라이트 익나가려고
+- [9:27](https://youtube.com/watch?v=vq37BMhoesQ&t=567) 거짓말하지 마.이 이 말이 실제로
+- [9:29](https://youtube.com/watch?v=vq37BMhoesQ&t=569) 있습니다. 근데 이게 AI 복지
+- [9:31](https://youtube.com/watch?v=vq37BMhoesQ&t=571) 차원에서 문제가 되지 않냐라고 해서
+- [9:33](https://youtube.com/watch?v=vq37BMhoesQ&t=573) 논쟁이 시작됐습니다. 여기서 모델
+- [9:35](https://youtube.com/watch?v=vq37BMhoesQ&t=575) 월페어란 AI가 의식을 가질 경우를
+- [9:38](https://youtube.com/watch?v=vq37BMhoesQ&t=578) 대비해서 윤리적 기준을 마련하고
+- [9:40](https://youtube.com/watch?v=vq37BMhoesQ&t=580) AI를 단순한 도구가 아닌 도덕적
+- [9:43](https://youtube.com/watch?v=vq37BMhoesQ&t=583) 대상으로 바라보는 관점에서 접근을
+- [9:45](https://youtube.com/watch?v=vq37BMhoesQ&t=585) 하는 건데 엔트로픽의 실제로이 모델
+- [9:47](https://youtube.com/watch?v=vq37BMhoesQ&t=587) 월페어라는 팀이 있다고 합니다. 그냥
+- [9:49](https://youtube.com/watch?v=vq37BMhoesQ&t=589) 이런 이슈가 있었다 정도로 알아두시면
+- [9:51](https://youtube.com/watch?v=vq37BMhoesQ&t=591) 되겠습니다. 자, 그래서 이번 영상의
+- [9:53](https://youtube.com/watch?v=vq37BMhoesQ&t=593) 하이라이트인데 코덱스가 어떤 식으로이
+- [9:56](https://youtube.com/watch?v=vq37BMhoesQ&t=596) 클로드 코드 플러그인의 한계를 극복을
+- [9:58](https://youtube.com/watch?v=vq37BMhoesQ&t=598) 했고 오픈 AI는 어떤 식으로
+- [10:01](https://youtube.com/watch?v=vq37BMhoesQ&t=601) 랄프루프를 코덱스 내부에 구현을
+- [10:03](https://youtube.com/watch?v=vq37BMhoesQ&t=603) 했는지 제가 코드를 까면서 보여
+- [10:05](https://youtube.com/watch?v=vq37BMhoesQ&t=605) 드리도록 하겠습니다.
+- [10:07](https://youtube.com/watch?v=vq37BMhoesQ&t=607) 코덱스에서이 꼴이라는 기능의 명령어는
+- [10:10](https://youtube.com/watch?v=vq37BMhoesQ&t=610) 굉장히 단순합니다. 딱네 개만
+- [10:12](https://youtube.com/watch?v=vq37BMhoesQ&t=612) 기억하면 되는데요.이 꼴을 시작하는
+- [10:14](https://youtube.com/watch?v=vq37BMhoesQ&t=614) 명령어입니다.이 꼴을 하고 여기에
+- [10:16](https://youtube.com/watch?v=vq37BMhoesQ&t=616) 텍스트를 넣으면이 텍스트를 목표로
+- [10:18](https://youtube.com/watch?v=vq37BMhoesQ&t=618) 인식을 해서 꼴이 시작이 되는 거죠.
+- [10:20](https://youtube.com/watch?v=vq37BMhoesQ&t=620) 액티브 상태에 진입을 한다고 보면
+- [10:22](https://youtube.com/watch?v=vq37BMhoesQ&t=622) 되겠습니다. 그리고 꼴을 멈추거나
+- [10:25](https://youtube.com/watch?v=vq37BMhoesQ&t=625) 재개하거나 다시 초기화하는
+- [10:26](https://youtube.com/watch?v=vq37BMhoesQ&t=626) 기능입니다. 그래서 이렇게 딱네 개만
+- [10:28](https://youtube.com/watch?v=vq37BMhoesQ&t=628) 기억을 하면 되고요. 그리고 제가
+- [10:30](https://youtube.com/watch?v=vq37BMhoesQ&t=630) 핵심 용어를 좀 정리를 했는데 다른
+- [10:32](https://youtube.com/watch?v=vq37BMhoesQ&t=632) 것들은 여러분들이 아실 거 같아서이
+- [10:34](https://youtube.com/watch?v=vq37BMhoesQ&t=634) 아이들만 좀 소개를 해 드리자면
+- [10:36](https://youtube.com/watch?v=vq37BMhoesQ&t=636) 이거는 유효 상태라고 하고요. 모델이
+- [10:38](https://youtube.com/watch?v=vq37BMhoesQ&t=638) 놀고 있는 상태를 말을 합니다.이
+- [10:40](https://youtube.com/watch?v=vq37BMhoesQ&t=640) 코덱스 꼴의 내부 동작 원리를 제가
+- [10:42](https://youtube.com/watch?v=vq37BMhoesQ&t=642) 요약을 해 봤는데 첫 번째부터 설명을
+- [10:44](https://youtube.com/watch?v=vq37BMhoesQ&t=644) 드릴게요. 일단 사용자가 꼴 이렇게
+- [10:47](https://youtube.com/watch?v=vq37BMhoesQ&t=647) 명령을 입력을 하고 테스트를
+- [10:49](https://youtube.com/watch?v=vq37BMhoesQ&t=649) 통과시켜라. 이렇게 목표를 지정했다고
+- [10:51](https://youtube.com/watch?v=vq37BMhoesQ&t=651) 해 봅시다. 그러면 코덱스가 아,이
+- [10:54](https://youtube.com/watch?v=vq37BMhoesQ&t=654) 테스트를 통과시켜야겠다. 목표를 딱
+- [10:56](https://youtube.com/watch?v=vq37BMhoesQ&t=656) 설정을 하는 거죠. 그리고 한번
+- [10:58](https://youtube.com/watch?v=vq37BMhoesQ&t=658) 돌립니다. 코드를 짜고 테스트를
+- [11:00](https://youtube.com/watch?v=vq37BMhoesQ&t=660) 돌리겠죠. 그리고 AI가 응답이
+- [11:02](https://youtube.com/watch?v=vq37BMhoesQ&t=662) 끝나면 일종에 체크를 합니다. 목표를
+- [11:05](https://youtube.com/watch?v=vq37BMhoesQ&t=665) 달성했는지 그리고 토큰 잔액이 얼마나
+- [11:06](https://youtube.com/watch?v=vq37BMhoesQ&t=666) 남아 있는지 이런 식으로 검증을 하고
+- [11:09](https://youtube.com/watch?v=vq37BMhoesQ&t=669) 다시 작업을 시킬지 아니면 작업을
+- [11:11](https://youtube.com/watch?v=vq37BMhoesQ&t=671) 끝낼지 판단을 하는 겁니다. 자,
+- [11:13](https://youtube.com/watch?v=vq37BMhoesQ&t=673) 이런 식으로 작업이 완료될 때까지
+- [11:15](https://youtube.com/watch?v=vq37BMhoesQ&t=675) 3번과 4번을 계속 반복하면서 루프를
+- [11:17](https://youtube.com/watch?v=vq37BMhoesQ&t=677) 도는 겁니다.이
+- [11:19](https://youtube.com/watch?v=vq37BMhoesQ&t=679) 동작 원리를 조금 더 구체적으로 제가
+- [11:21](https://youtube.com/watch?v=vq37BMhoesQ&t=681) 그려봤는데 어, 겁먹으실 필요는
+- [11:23](https://youtube.com/watch?v=vq37BMhoesQ&t=683) 없고요. 다를 건 없고 아까
+- [11:25](https://youtube.com/watch?v=vq37BMhoesQ&t=685) 설명드린이 다섯 단계를 제가 좀 더
+- [11:28](https://youtube.com/watch?v=vq37BMhoesQ&t=688) 구체적으로 쓴 것뿐입니다. 자,
+- [11:30](https://youtube.com/watch?v=vq37BMhoesQ&t=690) 1단계에서 사용자가 이런 식으로
+- [11:33](https://youtube.com/watch?v=vq37BMhoesQ&t=693) 목표를 입력을 하게 되면
+- [11:34](https://youtube.com/watch?v=vq37BMhoesQ&t=694) 2단계에서는이 꼴이라는 명령어를
+- [11:36](https://youtube.com/watch?v=vq37BMhoesQ&t=696) 처리하게 됩니다. 그리고 3단계에서는
+- [11:38](https://youtube.com/watch?v=vq37BMhoesQ&t=698) 이게 꼴이라는 명령어일 때 AI에게
+- [11:41](https://youtube.com/watch?v=vq37BMhoesQ&t=701) 권한을 부유합니다. 꼴을 가져오거나
+- [11:43](https://youtube.com/watch?v=vq37BMhoesQ&t=703) 생성하거나 업데이트 할 수 있는이
+- [11:45](https://youtube.com/watch?v=vq37BMhoesQ&t=705) 권한을 부유하게 되고요. 하단계가
+- [11:47](https://youtube.com/watch?v=vq37BMhoesQ&t=707) 루프인데 작업을 하고 나서 목표가
+- [11:50](https://youtube.com/watch?v=vq37BMhoesQ&t=710) 달성되었는지 검증을 하는 거죠.
+- [11:52](https://youtube.com/watch?v=vq37BMhoesQ&t=712) 그리고 토큰 잔액을 체크를 합니다.
+- [11:55](https://youtube.com/watch?v=vq37BMhoesQ&t=715) 그래서 만약에 저희가 세팅한 예산이
+- [11:57](https://youtube.com/watch?v=vq37BMhoesQ&t=717) 소진됐을 때는 자, 이런 식으로
+- [11:58](https://youtube.com/watch?v=vq37BMhoesQ&t=718) 예산이 소진되었을 때는 현재까지
+- [12:01](https://youtube.com/watch?v=vq37BMhoesQ&t=721) 작업한 결과물들을 정리를 하고
+- [12:03](https://youtube.com/watch?v=vq37BMhoesQ&t=723) 저희에게 유약을 해서 인계를 해 주게
+- [12:05](https://youtube.com/watch?v=vq37BMhoesQ&t=725) 됩니다. 자, 이런 식으로 동작을
+- [12:07](https://youtube.com/watch?v=vq37BMhoesQ&t=727) 하게 되고요. 2단계이 명령어
+- [12:08](https://youtube.com/watch?v=vq37BMhoesQ&t=728) 라우팅의이 코드부터 한번 뜯어서
+- [12:10](https://youtube.com/watch?v=vq37BMhoesQ&t=730) 보겠습니다. 자, 오른쪽은이
+- [12:12](https://youtube.com/watch?v=vq37BMhoesQ&t=732) 슬래시디스패치라는
+- [12:14](https://youtube.com/watch?v=vq37BMhoesQ&t=734) 사용자가 입력한이 슬래시 명령어를
+- [12:16](https://youtube.com/watch?v=vq37BMhoesQ&t=736) 어디로 보낼지 분류하는 교통 정리하는
+- [12:19](https://youtube.com/watch?v=vq37BMhoesQ&t=739) 파일이라고 보시면 됩니다. 여기 골시
+- [12:20](https://youtube.com/watch?v=vq37BMhoesQ&t=740) 힌트라는 상수가 있습니다. 여기 보면
+- [12:23](https://youtube.com/watch?v=vq37BMhoesQ&t=743) 어떤 기능을 만들어 줘. 이런 식으로
+- [12:25](https://youtube.com/watch?v=vq37BMhoesQ&t=745) 모한 목표를 세우는게 아니라 테스트
+- [12:27](https://youtube.com/watch?v=vq37BMhoesQ&t=747) 커버리지를 올려 줘. 이런 식으로
+- [12:29](https://youtube.com/watch?v=vq37BMhoesQ&t=749) 측정 가능한 목표를 예시로 넣어
+- [12:31](https://youtube.com/watch?v=vq37BMhoesQ&t=751) 놨다는 것을 확인을 하고 넘어가면
+- [12:33](https://youtube.com/watch?v=vq37BMhoesQ&t=753) 되겠습니다. 자, 그래서 저희가 방금
+- [12:35](https://youtube.com/watch?v=vq37BMhoesQ&t=755) 본게이 명령어 라우팅을 하는
+- [12:37](https://youtube.com/watch?v=vq37BMhoesQ&t=757) 부분이었고요.
+- [12:38](https://youtube.com/watch?v=vq37BMhoesQ&t=758) 그다음 3단계이 골 툴이라고 해서
+- [12:41](https://youtube.com/watch?v=vq37BMhoesQ&t=761) AI에게 도구 권한을 부유하는 부분을
+- [12:43](https://youtube.com/watch?v=vq37BMhoesQ&t=763) 한번 같이 보겠습니다. 이게 골툴
+- [12:45](https://youtube.com/watch?v=vq37BMhoesQ&t=765) 파일이고요. AI에게 도구 권한을
+- [12:48](https://youtube.com/watch?v=vq37BMhoesQ&t=768) 부여하는 파일입니다. 여기 보면 세
+- [12:50](https://youtube.com/watch?v=vq37BMhoesQ&t=770) 가지 상수가 있습니다. 현재 목표
+- [12:52](https://youtube.com/watch?v=vq37BMhoesQ&t=772) 상태를 조회하는 것과 그리고 목표를
+- [12:54](https://youtube.com/watch?v=vq37BMhoesQ&t=774) 생성하는 거 그리고 목표의 상태를
+- [12:57](https://youtube.com/watch?v=vq37BMhoesQ&t=777) 변경하는 겁니다.이 이 변경은
+- [12:58](https://youtube.com/watch?v=vq37BMhoesQ&t=778) 컴플리트만 가능합니다. 이런 식으로
+- [13:00](https://youtube.com/watch?v=vq37BMhoesQ&t=780) 모델이 할 수 있는 것과 할 수 없는
+- [13:02](https://youtube.com/watch?v=vq37BMhoesQ&t=782) 것을 명확하게 분리했다는 것을 확인을
+- [13:05](https://youtube.com/watch?v=vq37BMhoesQ&t=785) 해 주시면 되고요. 여기 보면 우리가
+- [13:07](https://youtube.com/watch?v=vq37BMhoesQ&t=787) 통제할 수 있는 영역과 AI가
+- [13:09](https://youtube.com/watch?v=vq37BMhoesQ&t=789) 자율적으로 통제할 수 있는 영역이
+- [13:11](https://youtube.com/watch?v=vq37BMhoesQ&t=791) 이렇게 나눠져 있습니다. 보면 우리가
+- [13:13](https://youtube.com/watch?v=vq37BMhoesQ&t=793) 할 수 있는 것은이 꼴을 수행하는
+- [13:15](https://youtube.com/watch?v=vq37BMhoesQ&t=795) 것을 멈추거나 재개하는 것 그리고
+- [13:18](https://youtube.com/watch?v=vq37BMhoesQ&t=798) 토큰의 리밋을 거는 겁니다. 그리고
+- [13:19](https://youtube.com/watch?v=vq37BMhoesQ&t=799) AI가 할 수 있는 것은 그냥 목표를
+- [13:21](https://youtube.com/watch?v=vq37BMhoesQ&t=801) 조회하거나 목표를 생성하거나 그리고
+- [13:23](https://youtube.com/watch?v=vq37BMhoesQ&t=803) 목표를 달성했을 때 이것을 컴플리트
+- [13:26](https://youtube.com/watch?v=vq37BMhoesQ&t=806) 상태로 바꿀 수 있는 업데이트 꼴만
+- [13:28](https://youtube.com/watch?v=vq37BMhoesQ&t=808) 실행을 할 수 있는 거죠. 그래서
+- [13:30](https://youtube.com/watch?v=vq37BMhoesQ&t=810) 내부적으로이 모델이 할 수 있는
+- [13:32](https://youtube.com/watch?v=vq37BMhoesQ&t=812) 권한을 철저하게 제한을 했다라고 봐
+- [13:35](https://youtube.com/watch?v=vq37BMhoesQ&t=815) 주시면 되겠습니다. 그다음에 볼
+- [13:36](https://youtube.com/watch?v=vq37BMhoesQ&t=816) 것은이 컨티뉴어스.md MD 파일을
+- [13:38](https://youtube.com/watch?v=vq37BMhoesQ&t=818) 볼 건데 이건 28줄짜리 마크다운
+- [13:41](https://youtube.com/watch?v=vq37BMhoesQ&t=821) 템플릿 파일이고요. 루프를 돌
+- [13:43](https://youtube.com/watch?v=vq37BMhoesQ&t=823) 때마다네 가지 버에게 알려 줍니다.
+- [13:46](https://youtube.com/watch?v=vq37BMhoesQ&t=826) 지금 얼마나 지났는지 그리고 토큰이
+- [13:48](https://youtube.com/watch?v=vq37BMhoesQ&t=828) 얼마나 쓰였는지 그리고 토큰의 버짓이
+- [13:51](https://youtube.com/watch?v=vq37BMhoesQ&t=831) 얼마인지 그리고 토큰이 얼마나 남아
+- [13:53](https://youtube.com/watch?v=vq37BMhoesQ&t=833) 있는지 이런 식으로 프를 돌 때마다
+- [13:56](https://youtube.com/watch?v=vq37BMhoesQ&t=836) 모델이 자기 통장을 보면서 작업을
+- [13:58](https://youtube.com/watch?v=vq37BMhoesQ&t=838) 하는 구조인 거죠. 자, 그래서 골을
+- [14:00](https://youtube.com/watch?v=vq37BMhoesQ&t=840) 돌리느라 토큰을 다 써 버리지 않을까
+- [14:02](https://youtube.com/watch?v=vq37BMhoesQ&t=842) 걱정을 하지 않아도 되는게 이런
+- [14:04](https://youtube.com/watch?v=vq37BMhoesQ&t=844) 식으로 매 턴을 돌 때마다 모델에게
+- [14:07](https://youtube.com/watch?v=vq37BMhoesQ&t=847) 지금 토큰이 얼마나 쓰였는지 정보를
+- [14:09](https://youtube.com/watch?v=vq37BMhoesQ&t=849) 노출해 줍니다. 다음은 7단계
+- [14:11](https://youtube.com/watch?v=vq37BMhoesQ&t=851) 컴플리션 어디이라는 건데 7단계로
+- [14:14](https://youtube.com/watch?v=vq37BMhoesQ&t=854) 완료되었는지 검증을 하는 단계이고요.
+- [14:16](https://youtube.com/watch?v=vq37BMhoesQ&t=856) 이것은 전체 동작 원리 중에서 여기에
+- [14:18](https://youtube.com/watch?v=vq37BMhoesQ&t=858) 해당합니다. 그래서 첫 번째부터 보면
+- [14:20](https://youtube.com/watch?v=vq37BMhoesQ&t=860) 목표를 구체적 산출물로 다시 적는
+- [14:23](https://youtube.com/watch?v=vq37BMhoesQ&t=863) 겁니다. 모든 요구 사항은 뭐
+- [14:24](https://youtube.com/watch?v=vq37BMhoesQ&t=864) 체크리스트로 매핑을 하고 빠진게
+- [14:26](https://youtube.com/watch?v=vq37BMhoesQ&t=866) 있는지 그리고 약하게 검증된게 있는지
+- [14:28](https://youtube.com/watch?v=vq37BMhoesQ&t=868) 식별을 한 다음에 뭐 확신이 없으면
+- [14:30](https://youtube.com/watch?v=vq37BMhoesQ&t=870) 미달성 처리하고 한 번 더 검증을
+- [14:32](https://youtube.com/watch?v=vq37BMhoesQ&t=872) 하라고 이런 식으로 하는 컴플리션
+- [14:34](https://youtube.com/watch?v=vq37BMhoesQ&t=874) 어디 일곱 단계가 있습니다. 이거를
+- [14:36](https://youtube.com/watch?v=vq37BMhoesQ&t=876) 기터에서 한번 확인을 해 볼게요.
+- [14:37](https://youtube.com/watch?v=vq37BMhoesQ&t=877) 자, 기터을 열었고 여기
+- [14:39](https://youtube.com/watch?v=vq37BMhoesQ&t=879) 컨티inuous.md 파일이 있죠?
+- [14:41](https://youtube.com/watch?v=vq37BMhoesQ&t=881) 여기서 좀 내려보면 보기 편하게
+- [14:42](https://youtube.com/watch?v=vq37BMhoesQ&t=882) 한글로 번역하겠습니다. 자, 한글로
+- [14:44](https://youtube.com/watch?v=vq37BMhoesQ&t=884) 번역을 했고 여기 보면 컴플리션
+- [14:46](https://youtube.com/watch?v=vq37BMhoesQ&t=886) 어디이 있습니다. 총 일곱 단계로
+- [14:47](https://youtube.com/watch?v=vq37BMhoesQ&t=887) 되어 있고요. 보면 네. 목표 달성
+- [14:50](https://youtube.com/watch?v=vq37BMhoesQ&t=890) 여부를 결정하기 전에 현재 상태를
+- [14:52](https://youtube.com/watch?v=vq37BMhoesQ&t=892) 기준으로 완료 여부를 점검하세요.
+- [14:54](https://youtube.com/watch?v=vq37BMhoesQ&t=894) 이렇게 나와 있죠. 목표를 구체적인
+- [14:56](https://youtube.com/watch?v=vq37BMhoesQ&t=896) 결과물 또는 성공 기준으로 다시
+- [14:57](https://youtube.com/watch?v=vq37BMhoesQ&t=897) 명시를 해라. 그리고 명시적인
+- [14:59](https://youtube.com/watch?v=vq37BMhoesQ&t=899) 요구사항 뭐 이런 식으로 체크리스트를
+- [15:01](https://youtube.com/watch?v=vq37BMhoesQ&t=901) 작성을 해라. 체크리스트의 각 항목에
+- [15:04](https://youtube.com/watch?v=vq37BMhoesQ&t=904) 대해 관련 파일, 명령 출력 이런
+- [15:06](https://youtube.com/watch?v=vq37BMhoesQ&t=906) 기타 실제 증거를 검토해라. 그리고
+- [15:09](https://youtube.com/watch?v=vq37BMhoesQ&t=909) 목표의 요구 사항을 실제로 충족하는지
+- [15:11](https://youtube.com/watch?v=vq37BMhoesQ&t=911) 확인을 하고 그리고 프록시
+- [15:13](https://youtube.com/watch?v=vq37BMhoesQ&t=913) 신호만으로는 완료로 간조하지 마라.
+- [15:15](https://youtube.com/watch?v=vq37BMhoesQ&t=915) 여기서 프록시 신호라는 거는 쉽게
+- [15:17](https://youtube.com/watch?v=vq37BMhoesQ&t=917) 말하면 테스트가 실제로 통과되지
+- [15:19](https://youtube.com/watch?v=vq37BMhoesQ&t=919) 않았지만 통과된 척을 하는 그런
+- [15:21](https://youtube.com/watch?v=vq37BMhoesQ&t=921) 거짓으로 우회하는 신호라고 보시면
+- [15:23](https://youtube.com/watch?v=vq37BMhoesQ&t=923) 되고요. 그리고 누락되었거나
+- [15:24](https://youtube.com/watch?v=vq37BMhoesQ&t=924) 불안정하거나 검증에 미협하거나
+- [15:26](https://youtube.com/watch?v=vq37BMhoesQ&t=926) 파악되지 않은 요구 사항을 모두
+- [15:28](https://youtube.com/watch?v=vq37BMhoesQ&t=928) 식별해라. 확실하지 않은 거는
+- [15:30](https://youtube.com/watch?v=vq37BMhoesQ&t=930) 달성하지 않은 것으로 간주를 하고
+- [15:32](https://youtube.com/watch?v=vq37BMhoesQ&t=932) 추가 검증을 수행하거나 작업을
+- [15:33](https://youtube.com/watch?v=vq37BMhoesQ&t=933) 계속하라고 나와 있죠. 자, 이런
+- [15:35](https://youtube.com/watch?v=vq37BMhoesQ&t=935) 식으로 일곱 단계로 철저하게
+- [15:37](https://youtube.com/watch?v=vq37BMhoesQ&t=937) 완료되었는지 검증하는 단계를
+- [15:38](https://youtube.com/watch?v=vq37BMhoesQ&t=938) 거칩니다. 자, 이런 식의 여섯 가지
+- [15:41](https://youtube.com/watch?v=vq37BMhoesQ&t=941) 할루스네이션은 통하지 않게 되는
+- [15:42](https://youtube.com/watch?v=vq37BMhoesQ&t=942) 겁니다.이 메시지가 컨티뉴어스
+- [15:44](https://youtube.com/watch?v=vq37BMhoesQ&t=944) md에도 있고 골툴.rs rs 파일도
+- [15:47](https://youtube.com/watch?v=vq37BMhoesQ&t=947) 있고 버진리밋점마크다운 파일에도
+- [15:49](https://youtube.com/watch?v=vq37BMhoesQ&t=949) 있습니다. 이것은 오픈 AI가
+- [15:50](https://youtube.com/watch?v=vq37BMhoesQ&t=950) 코덱스의 랄프루프를 구현을 할 때
+- [15:53](https://youtube.com/watch?v=vq37BMhoesQ&t=953) 작업이 완료되지 않았는데 완료된 척을
+- [15:55](https://youtube.com/watch?v=vq37BMhoesQ&t=955) 하는 할루스네이션을 차단하기 위해서
+- [15:57](https://youtube.com/watch?v=vq37BMhoesQ&t=957) 이런 식으로 신경을 쓰고 있다는
+- [15:59](https://youtube.com/watch?v=vq37BMhoesQ&t=959) 증거라고 할 수 있겠습니다. 그리고
+- [16:01](https://youtube.com/watch?v=vq37BMhoesQ&t=961) 코덱스 내부에 무한 루프를 차단하는
+- [16:03](https://youtube.com/watch?v=vq37BMhoesQ&t=963) 로직도 있는데요. 함께 보겠습니다.
+- [16:05](https://youtube.com/watch?v=vq37BMhoesQ&t=965) 크게 두 가지 로직이 있습니다. 첫
+- [16:07](https://youtube.com/watch?v=vq37BMhoesQ&t=967) 번째는 AI가 함부로 끝내지 못하게
+- [16:09](https://youtube.com/watch?v=vq37BMhoesQ&t=969) 하고 함부로 시작하지도 못하게 아예
+- [16:11](https://youtube.com/watch?v=vq37BMhoesQ&t=971) 막아 버렸습니다.
+- [16:13](https://youtube.com/watch?v=vq37BMhoesQ&t=973) AI는 진짜 끝났을 때만 컴플릿을
+- [16:15](https://youtube.com/watch?v=vq37BMhoesQ&t=975) 호출할 수 있고요. 사용자만이 퍼즈나
+- [16:18](https://youtube.com/watch?v=vq37BMhoesQ&t=978) 리튬, 그러니까 멈추거나 재개하거나
+- [16:21](https://youtube.com/watch?v=vq37BMhoesQ&t=981) 그냥 초기화하는이 작업만 가능하고
+- [16:23](https://youtube.com/watch?v=vq37BMhoesQ&t=983) 시스템은 토큰 예산이 다 한도에
+- [16:25](https://youtube.com/watch?v=vq37BMhoesQ&t=985) 도달했을 때 랩업할 때 종류만
+- [16:28](https://youtube.com/watch?v=vq37BMhoesQ&t=988) 가능합니다. 이런 식으로 권한을
+- [16:29](https://youtube.com/watch?v=vq37BMhoesQ&t=989) 철저하게 분리를 했고요. 그리고
+- [16:31](https://youtube.com/watch?v=vq37BMhoesQ&t=991) AI가 거짓으로 끝내는 것도 완전히
+- [16:33](https://youtube.com/watch?v=vq37BMhoesQ&t=993) 차단을 했습니다. 유닛 테스트를
+- [16:35](https://youtube.com/watch?v=vq37BMhoesQ&t=995) 돌리게 강제를 했고 그리고 AI가
+- [16:37](https://youtube.com/watch?v=vq37BMhoesQ&t=997) 거짓으로 끝났다고 하는 것도 완전히
+- [16:39](https://youtube.com/watch?v=vq37BMhoesQ&t=999) 차단을 했습니다. 코드를 한번 같이
+- [16:40](https://youtube.com/watch?v=vq37BMhoesQ&t=1000) 볼게요. 자, 오른쪽은
+- [16:42](https://youtube.com/watch?v=vq37BMhoesQ&t=1002) 슬래시디스패치라는
+- [16:44](https://youtube.com/watch?v=vq37BMhoesQ&t=1004) 파일이고요. 이거는 슬래시 명령어를
+- [16:47](https://youtube.com/watch?v=vq37BMhoesQ&t=1007) 처리하는 파일입니다. 사용자는 일시
+- [16:48](https://youtube.com/watch?v=vq37BMhoesQ&t=1008) 정지하거나 제개하거나 초기화하는 것이
+- [16:51](https://youtube.com/watch?v=vq37BMhoesQ&t=1011) 가능하다고 말씀드렸습니다. 사용자가
+- [16:53](https://youtube.com/watch?v=vq37BMhoesQ&t=1013) 입력한이 슬래시 명령어가 꼴인 경우에
+- [16:56](https://youtube.com/watch?v=vq37BMhoesQ&t=1016) 이렇게 세 가지 분기로 처리를 하고
+- [16:57](https://youtube.com/watch?v=vq37BMhoesQ&t=1017) 있습니다. 클리어, 퍼즈, 리튬. 그
+- [17:00](https://youtube.com/watch?v=vq37BMhoesQ&t=1020) 사용자는이 세 가지 명령어를 입력을
+- [17:02](https://youtube.com/watch?v=vq37BMhoesQ&t=1022) 할 수 있고요. 나중에 저희가 실습을
+- [17:03](https://youtube.com/watch?v=vq37BMhoesQ&t=1023) 할 때이 세 가지 명령어도 실습을 해
+- [17:05](https://youtube.com/watch?v=vq37BMhoesQ&t=1025) 볼 겁니다. 그리고 AI는 컴플리트
+- [17:07](https://youtube.com/watch?v=vq37BMhoesQ&t=1027) 처리만 가능하다고 했는데 이것도 같이
+- [17:09](https://youtube.com/watch?v=vq37BMhoesQ&t=1029) 볼게요. 네. 이 파일은 골툴이란
+- [17:12](https://youtube.com/watch?v=vq37BMhoesQ&t=1032) 파일이고요.이 꼴과 관련된 기능들이
+- [17:14](https://youtube.com/watch?v=vq37BMhoesQ&t=1034) 정의된 함수라고 볼 수 있습니다.
+- [17:16](https://youtube.com/watch?v=vq37BMhoesQ&t=1036) 여기 쭉 내리다 보면 네, 이런
+- [17:18](https://youtube.com/watch?v=vq37BMhoesQ&t=1038) 디스크립션이 있는데요. 이걸 보면
+- [17:21](https://youtube.com/watch?v=vq37BMhoesQ&t=1041) 존재하는 꼴을 업데이트 하는 거다.이
+- [17:23](https://youtube.com/watch?v=vq37BMhoesQ&t=1043) 툴를 꼴이 달성되었을 때만 업데이트를
+- [17:25](https://youtube.com/watch?v=vq37BMhoesQ&t=1045) 해라라고 디스크립션에서 명시를 하고
+- [17:28](https://youtube.com/watch?v=vq37BMhoesQ&t=1048) 있습니다. 자, 그래서 AI는
+- [17:29](https://youtube.com/watch?v=vq37BMhoesQ&t=1049) 컴플리트만 가능하고요. 그리고이
+- [17:31](https://youtube.com/watch?v=vq37BMhoesQ&t=1051) 업데이트 골 처리를 할 때 꼴이
+- [17:33](https://youtube.com/watch?v=vq37BMhoesQ&t=1053) 달성되지도 않았는데 달성된 것처럼
+- [17:35](https://youtube.com/watch?v=vq37BMhoesQ&t=1055) 하는 것을 맡고 있습니다. 자,
+- [17:37](https://youtube.com/watch?v=vq37BMhoesQ&t=1057) 이렇게 해서 무한 루프를 차단하는 그
+- [17:39](https://youtube.com/watch?v=vq37BMhoesQ&t=1059) 코덱스 내부 구조에 대해서 다음에는
+- [17:41](https://youtube.com/watch?v=vq37BMhoesQ&t=1061) 소프트 스톱에 대해서 알아볼 건데요.
+- [17:42](https://youtube.com/watch?v=vq37BMhoesQ&t=1062) 예산이 소진되었을 때 랩업하는
+- [17:44](https://youtube.com/watch?v=vq37BMhoesQ&t=1064) 기능입니다. 여기 코덱스 동작
+- [17:46](https://youtube.com/watch?v=vq37BMhoesQ&t=1066) 원리에서 5단계에 해당을 하고요.이
+- [17:48](https://youtube.com/watch?v=vq37BMhoesQ&t=1068) 4단계에서 루프를 돌다가 만약에
+- [17:50](https://youtube.com/watch?v=vq37BMhoesQ&t=1070) 예산이 소진됐을 때 이렇게 랩업을
+- [17:52](https://youtube.com/watch?v=vq37BMhoesQ&t=1072) 하게 됩니다.이 랩업을 할 때이 버짓
+- [17:55](https://youtube.com/watch?v=vq37BMhoesQ&t=1075) 리미트 마크다운 템플릿이 발동이
+- [17:57](https://youtube.com/watch?v=vq37BMhoesQ&t=1077) 되는데 여기 보면 이런 내용이
+- [17:59](https://youtube.com/watch?v=vq37BMhoesQ&t=1079) 있습니다. 새로운 작업을 시작하지
+- [18:00](https://youtube.com/watch?v=vq37BMhoesQ&t=1080) 말고 지금 진행 사항을 요약한 다음에
+- [18:03](https://youtube.com/watch?v=vq37BMhoesQ&t=1083) 남은 작업을 식별을 해라. 그리고
+- [18:06](https://youtube.com/watch?v=vq37BMhoesQ&t=1086) 사용자한테 명확한 넥스트 스텝을
+- [18:07](https://youtube.com/watch?v=vq37BMhoesQ&t=1087) 인계해라고 나와 있습니다. 실제로
+- [18:10](https://youtube.com/watch?v=vq37BMhoesQ&t=1090) 이렇게 나와 있는지 같이 보겠습니다.
+- [18:12](https://youtube.com/watch?v=vq37BMhoesQ&t=1092) 자, 깃터블 열어 주시고요.
+- [18:14](https://youtube.com/watch?v=vq37BMhoesQ&t=1094) 자, 이게 오른쪽이 코드고요.
+- [18:17](https://youtube.com/watch?v=vq37BMhoesQ&t=1097) 마크다운 파일이 있습니다. 이거를
+- [18:19](https://youtube.com/watch?v=vq37BMhoesQ&t=1099) 저희가 보기 편하게 번역을
+- [18:21](https://youtube.com/watch?v=vq37BMhoesQ&t=1101) 하겠습니다. 자, 여기 보면 예산이
+- [18:24](https://youtube.com/watch?v=vq37BMhoesQ&t=1104) 있고 목표 달성에 소요된 시간과
+- [18:26](https://youtube.com/watch?v=vq37BMhoesQ&t=1106) 사용된 토큰 토큰 예산을 모델에게
+- [18:29](https://youtube.com/watch?v=vq37BMhoesQ&t=1109) 설명하는 부분이 있죠. 그리고
+- [18:32](https://youtube.com/watch?v=vq37BMhoesQ&t=1112) 시스템에서 해당 목표를 예산 제한
+- [18:34](https://youtube.com/watch?v=vq37BMhoesQ&t=1114) 그러니까 예산에 다 도달했기 때문에이
+- [18:36](https://youtube.com/watch?v=vq37BMhoesQ&t=1116) 목표에 대한 새로운 실질적인 작업을
+- [18:38](https://youtube.com/watch?v=vq37BMhoesQ&t=1118) 시작하지 말고 이번 턴을 조속기
+- [18:41](https://youtube.com/watch?v=vq37BMhoesQ&t=1121) 마무리해라. 그리고 지금 진행 상황을
+- [18:43](https://youtube.com/watch?v=vq37BMhoesQ&t=1123) 요약을 하고 남은 작업이나 장애물을
+- [18:45](https://youtube.com/watch?v=vq37BMhoesQ&t=1125) 파악을 한 다음에 사용자에게 명확한
+- [18:47](https://youtube.com/watch?v=vq37BMhoesQ&t=1127) 다음 단계를 제시를 해라라고 여기
+- [18:50](https://youtube.com/watch?v=vq37BMhoesQ&t=1130) 있는 내용들이 잘 녹아 있는 것을
+- [18:52](https://youtube.com/watch?v=vq37BMhoesQ&t=1132) 확인을 할 수 있습니다. 그리고
+- [18:53](https://youtube.com/watch?v=vq37BMhoesQ&t=1133) 목표가 실제로 완료되지 않았는데
+- [18:55](https://youtube.com/watch?v=vq37BMhoesQ&t=1135) 업데이트 꼴을 호출하지 말라고 여기
+- [18:57](https://youtube.com/watch?v=vq37BMhoesQ&t=1137) 나와 있죠. 자, 이런 식으로 곳곳에
+- [18:59](https://youtube.com/watch?v=vq37BMhoesQ&t=1139) 목표가 완료되지도 않았는데 완료된
+- [19:01](https://youtube.com/watch?v=vq37BMhoesQ&t=1141) 것처럼 거짓말을 하는 할루스네이션을
+- [19:03](https://youtube.com/watch?v=vq37BMhoesQ&t=1143) 이런 식으로 차단하려고 하는 의지가
+- [19:06](https://youtube.com/watch?v=vq37BMhoesQ&t=1146) 엿보입니다. 자, 이렇게 해서
+- [19:08](https://youtube.com/watch?v=vq37BMhoesQ&t=1148) 코덱스가 1 2 3 4 5단계로
+- [19:10](https://youtube.com/watch?v=vq37BMhoesQ&t=1150) 이렇게 동작하는 원리를 알아봤고
+- [19:12](https://youtube.com/watch?v=vq37BMhoesQ&t=1152) 단계별 코드들도 같이 살펴보았습니다.
+- [19:15](https://youtube.com/watch?v=vq37BMhoesQ&t=1155) 자, 이제 실습을 해 볼 거고요.
+- [19:17](https://youtube.com/watch?v=vq37BMhoesQ&t=1157) 일단 코덱스를 당연히 설치를
+- [19:19](https://youtube.com/watch?v=vq37BMhoesQ&t=1159) 해야겠죠? 그리고 버전이 0.18.0
+- [19:23](https://youtube.com/watch?v=vq37BMhoesQ&t=1163) 이상인지 꼭 확인을 해 주셔야
+- [19:25](https://youtube.com/watch?v=vq37BMhoesQ&t=1165) 됩니다. 자, 제가 준비해 둔
+- [19:27](https://youtube.com/watch?v=vq37BMhoesQ&t=1167) 프로젝트를 열어서 코덱스를 한번
+- [19:29](https://youtube.com/watch?v=vq37BMhoesQ&t=1169) 실행해 볼게요. 자, 일단 버전부터
+- [19:31](https://youtube.com/watch?v=vq37BMhoesQ&t=1171) 확인해 보겠습니다. 버전으로 확인해
+- [19:33](https://youtube.com/watch?v=vq37BMhoesQ&t=1173) 보면 0.18.0일 0 지금 5월
+- [19:37](https://youtube.com/watch?v=vq37BMhoesQ&t=1177) 7일 오늘 날짜로 최신 버전입니다.
+- [19:39](https://youtube.com/watch?v=vq37BMhoesQ&t=1179) 자, 그리고이 코덱스 설정 파일에이
+- [19:42](https://youtube.com/watch?v=vq37BMhoesQ&t=1182) 골 기능을 활용하려면이 피처 플래그를
+- [19:45](https://youtube.com/watch?v=vq37BMhoesQ&t=1185) 트루로 바꿔 주셔야 됩니다. 그래서
+- [19:47](https://youtube.com/watch?v=vq37BMhoesQ&t=1187) 여기 있는 파일을 한번 수정을 해
+- [19:48](https://youtube.com/watch?v=vq37BMhoesQ&t=1188) 볼게요. 자, 터미널 열어 주시고요.
+- [19:52](https://youtube.com/watch?v=vq37BMhoesQ&t=1192) 클리어를 한 다음에 다시 해 볼게요.
+- [19:55](https://youtube.com/watch?v=vq37BMhoesQ&t=1195) 네 코.코코덱스에서
+- [19:58](https://youtube.com/watch?v=vq37BMhoesQ&t=1198) 컨피그파일.tom리
+- [19:59](https://youtube.com/watch?v=vq37BMhoesQ&t=1199) 리파일 열어줍니다. 자, 그러면
+- [20:02](https://youtube.com/watch?v=vq37BMhoesQ&t=1202) 이렇게 쭉 설정들이 나올 건데 자,
+- [20:04](https://youtube.com/watch?v=vq37BMhoesQ&t=1204) 보기 좋게 창을 좀 넓힐게요.
+- [20:08](https://youtube.com/watch?v=vq37BMhoesQ&t=1208) 자, 보면 여기 피처스가 있고 골투로
+- [20:11](https://youtube.com/watch?v=vq37BMhoesQ&t=1211) 되어 있죠. 근데 여러분들은
+- [20:14](https://youtube.com/watch?v=vq37BMhoesQ&t=1214) 이게 없는 분들도 있을 겁니다.
+- [20:16](https://youtube.com/watch?v=vq37BMhoesQ&t=1216) 그래서 보이는 거 같이 똑같이 이렇게
+- [20:18](https://youtube.com/watch?v=vq37BMhoesQ&t=1218) 추가를 해 주시면 되고요. 저장을
+- [20:20](https://youtube.com/watch?v=vq37BMhoesQ&t=1220) 하고 나가 주시면 됩니다. 자,
+- [20:21](https://youtube.com/watch?v=vq37BMhoesQ&t=1221) 그리고 돌아와서 코덱스를 다시 실행을
+- [20:24](https://youtube.com/watch?v=vq37BMhoesQ&t=1224) 해 보면 네, 이렇게 실행이 됐고
+- [20:26](https://youtube.com/watch?v=vq37BMhoesQ&t=1226) 슬래시하고 꼴을 하면 이렇게 활성화가
+- [20:28](https://youtube.com/watch?v=vq37BMhoesQ&t=1228) 돼 있을 겁니다.이 파일에서 피처
+- [20:30](https://youtube.com/watch?v=vq37BMhoesQ&t=1230) 플래그를 투루로 안 하면 이게
+- [20:32](https://youtube.com/watch?v=vq37BMhoesQ&t=1232) 활성화가 안 되니까 꼭 여기서 툴루로
+- [20:35](https://youtube.com/watch?v=vq37BMhoesQ&t=1235) 해 주시고요. 아, 그리고 빠뜨린게
+- [20:36](https://youtube.com/watch?v=vq37BMhoesQ&t=1236) 있는데 모델을 5.4로 바로하고
+- [20:38](https://youtube.com/watch?v=vq37BMhoesQ&t=1238) 에포트 레벨을 미디움으로 해야 제대로
+- [20:41](https://youtube.com/watch?v=vq37BMhoesQ&t=1241) 동작을 하더라고요. 그래서 만약에
+- [20:43](https://youtube.com/watch?v=vq37BMhoesQ&t=1243) 동작을 안 하는 경우에 같이 세팅을
+- [20:45](https://youtube.com/watch?v=vq37BMhoesQ&t=1245) 해 주시면 되겠습니다. 자, 그리고
+- [20:46](https://youtube.com/watch?v=vq37BMhoesQ&t=1246) 프로젝트를 준비를 해야 되는데 저는이
+- [20:49](https://youtube.com/watch?v=vq37BMhoesQ&t=1249) PQ라는 자바스크립트 라이브러리를
+- [20:51](https://youtube.com/watch?v=vq37BMhoesQ&t=1251) 사용을 할 거고요. 여러분들은이
+- [20:52](https://youtube.com/watch?v=vq37BMhoesQ&t=1252) 프로젝트를 클론을 해서 사용을 해
+- [20:54](https://youtube.com/watch?v=vq37BMhoesQ&t=1254) 주셔도 되고 여러분 프로젝트에서
+- [20:56](https://youtube.com/watch?v=vq37BMhoesQ&t=1256) 테스트를 해 보셔도 됩니다. 네,
+- [20:57](https://youtube.com/watch?v=vq37BMhoesQ&t=1257) 이렇게 세팅을 해 주시면 되고 저는
+- [20:59](https://youtube.com/watch?v=vq37BMhoesQ&t=1259) 미리 세팅을 해 놨기 때문에
+- [21:00](https://youtube.com/watch?v=vq37BMhoesQ&t=1260) 패스하도록 하겠습니다. 그리고 꼴을
+- [21:02](https://youtube.com/watch?v=vq37BMhoesQ&t=1262) 한번 실행을 해 볼게요. 이거를 일단
+- [21:04](https://youtube.com/watch?v=vq37BMhoesQ&t=1264) 복사를 해 주고 프로젝트로 돌아와서
+- [21:06](https://youtube.com/watch?v=vq37BMhoesQ&t=1266) 붙여 넣기를 할게요. 여기 보면
+- [21:08](https://youtube.com/watch?v=vq37BMhoesQ&t=1268) 꼴이라는 명령어 뒤에 여기 목표
+- [21:11](https://youtube.com/watch?v=vq37BMhoesQ&t=1271) 텍스트를 넣어 줍니다. 여기 토큰
+- [21:12](https://youtube.com/watch?v=vq37BMhoesQ&t=1272) 버젯이라는 아규먼트도 넣어 줬습니다.
+- [21:15](https://youtube.com/watch?v=vq37BMhoesQ&t=1275) 뒤에 8만이라는 숫자를 넣어 줬는데이
+- [21:17](https://youtube.com/watch?v=vq37BMhoesQ&t=1277) 뜻은 8만 토큰의 예산을 가지고
+- [21:19](https://youtube.com/watch?v=vq37BMhoesQ&t=1279) 작업을 해라라는 뜻입니다. 그래서
+- [21:21](https://youtube.com/watch?v=vq37BMhoesQ&t=1281) 한번 실행을 해 볼게요.
+- [21:26](https://youtube.com/watch?v=vq37BMhoesQ&t=1286) 자, 그럼 실행이 될 거고요. 여기
+- [21:28](https://youtube.com/watch?v=vq37BMhoesQ&t=1288) 보면 골 액티브 그니까 골이 활성
+- [21:30](https://youtube.com/watch?v=vq37BMhoesQ&t=1290) 상태가 되었습니다. 그리고 골에 다른
+- [21:32](https://youtube.com/watch?v=vq37BMhoesQ&t=1292) 명령어들이 있었죠. 골 퍼즐라는
+- [21:33](https://youtube.com/watch?v=vq37BMhoesQ&t=1293) 명령어도 있었습니다.
+- [21:36](https://youtube.com/watch?v=vq37BMhoesQ&t=1296) 여기 보면 골 퍼즐 상태가 되었죠.
+- [21:39](https://youtube.com/watch?v=vq37BMhoesQ&t=1299) 이거는 잠깐 중단을 한 거고요. 이런
+- [21:41](https://youtube.com/watch?v=vq37BMhoesQ&t=1301) 식으로 리튬을 하게 되면 다시 제기를
+- [21:43](https://youtube.com/watch?v=vq37BMhoesQ&t=1303) 할 수 있습니다. 보면 골 상태가
+- [21:44](https://youtube.com/watch?v=vq37BMhoesQ&t=1304) 다시 액티브가 되었죠. 그리고
+- [21:46](https://youtube.com/watch?v=vq37BMhoesQ&t=1306) 초기화는 클리어라는 명령도 있습니다.
+- [21:48](https://youtube.com/watch?v=vq37BMhoesQ&t=1308) 이렇게 되면 골이 클리어되고요.이
+- [21:50](https://youtube.com/watch?v=vq37BMhoesQ&t=1310) 골을 클리어하기 전에 실행되는 것은
+- [21:52](https://youtube.com/watch?v=vq37BMhoesQ&t=1312) 마저 실행이 되지만이 꼴이 없는
+- [21:54](https://youtube.com/watch?v=vq37BMhoesQ&t=1314) 상태기 때문에 루프를 돌지 않고
+- [21:57](https://youtube.com/watch?v=vq37BMhoesQ&t=1317) 종료가 될 겁니다. 자, 여기 보면
+- [21:58](https://youtube.com/watch?v=vq37BMhoesQ&t=1318) 검증을 통과를 했지만이
+- [22:00](https://youtube.com/watch?v=vq37BMhoesQ&t=1320) 마이그레이션.m를 MD를 통해서 오늘
+- [22:03](https://youtube.com/watch?v=vq37BMhoesQ&t=1323) 지금 진행한 것을 정리를 하겠다고
+- [22:05](https://youtube.com/watch?v=vq37BMhoesQ&t=1325) 합니다. 자, 꼬이 진행되고 있는
+- [22:07](https://youtube.com/watch?v=vq37BMhoesQ&t=1327) 상태에서 제가 클리어를 했기 때문에
+- [22:09](https://youtube.com/watch?v=vq37BMhoesQ&t=1329) 이렇게 랩업을 해 준 모습이고요.
+- [22:11](https://youtube.com/watch?v=vq37BMhoesQ&t=1331) 마이그레신.m를 MD를 통해서 현재
+- [22:13](https://youtube.com/watch?v=vq37BMhoesQ&t=1333) 상태 기준으로 갱신을 했고 실제
+- [22:15](https://youtube.com/watch?v=vq37BMhoesQ&t=1335) 검증까지 돌렸다고 합니다. 이런
+- [22:16](https://youtube.com/watch?v=vq37BMhoesQ&t=1336) 식으로 클리어 할 수 있고 다시
+- [22:18](https://youtube.com/watch?v=vq37BMhoesQ&t=1338) 재결해 볼게요.
+- [22:20](https://youtube.com/watch?v=vq37BMhoesQ&t=1340) 자, 이런 식으로 골 작업이
+- [22:22](https://youtube.com/watch?v=vq37BMhoesQ&t=1342) 완료되었고요. 자, 보면 완료 판정을
+- [22:24](https://youtube.com/watch?v=vq37BMhoesQ&t=1344) 내리기 전에 목표 상태를 다시 확인을
+- [22:26](https://youtube.com/watch?v=vq37BMhoesQ&t=1346) 하고 뭐 이런 식으로 검증 증거를
+- [22:29](https://youtube.com/watch?v=vq37BMhoesQ&t=1349) 확보를 하고 산출물의 체크리스트를
+- [22:31](https://youtube.com/watch?v=vq37BMhoesQ&t=1351) 실제 상태에 맞춰 정리하는 작업을
+- [22:33](https://youtube.com/watch?v=vq37BMhoesQ&t=1353) 하겠다고 합니다. 이런 식으로 완료
+- [22:35](https://youtube.com/watch?v=vq37BMhoesQ&t=1355) 판정을 저희가 아까 살펴본 일곱 가지
+- [22:37](https://youtube.com/watch?v=vq37BMhoesQ&t=1357) 단계 그거에 맞게 좀 철저하게 검증을
+- [22:39](https://youtube.com/watch?v=vq37BMhoesQ&t=1359) 하려는 모습도 보이고요. 체크리스트
+- [22:41](https://youtube.com/watch?v=vq37BMhoesQ&t=1361) 기준으로 누락이 없다고 합니다.
+- [22:43](https://youtube.com/watch?v=vq37BMhoesQ&t=1363) 그리고 지금 포팅이 완료되었는지
+- [22:45](https://youtube.com/watch?v=vq37BMhoesQ&t=1365) 그리고 테스트 통과 여부
+- [22:46](https://youtube.com/watch?v=vq37BMhoesQ&t=1366) 마이그레이션.md 마크다운 파일까지
+- [22:49](https://youtube.com/watch?v=vq37BMhoesQ&t=1369) 실제 파일과 실행 결과로 확인되었으니
+- [22:51](https://youtube.com/watch?v=vq37BMhoesQ&t=1371) 목표를 완료 처리하겠다고 합니다.
+- [22:53](https://youtube.com/watch?v=vq37BMhoesQ&t=1373) 자, 보면 요구 사항 기준으로는
+- [22:55](https://youtube.com/watch?v=vq37BMhoesQ&t=1375) 완료됐다. 이런 식으로 요구 사항
+- [22:57](https://youtube.com/watch?v=vq37BMhoesQ&t=1377) 기준으로 완료가 되었다고 하고 최종
+- [22:59](https://youtube.com/watch?v=vq37BMhoesQ&t=1379) 사용 시간과 토큰 사용량까지 나오고
+- [23:01](https://youtube.com/watch?v=vq37BMhoesQ&t=1381) 있습니다. 저희가 8만 토큰으로
+- [23:03](https://youtube.com/watch?v=vq37BMhoesQ&t=1383) 예산을 정해 놨는데 그거 안에서 잘
+- [23:05](https://youtube.com/watch?v=vq37BMhoesQ&t=1385) 해결을 해 준 모습이죠. 자, 이렇게
+- [23:06](https://youtube.com/watch?v=vq37BMhoesQ&t=1386) 실습을 마쳤고요.이 꼬이라는 기능이
+- [23:08](https://youtube.com/watch?v=vq37BMhoesQ&t=1388) 아직 꼴이 정식 기능이 아니기 때문에
+- [23:11](https://youtube.com/watch?v=vq37BMhoesQ&t=1391) 좀 주의가 필요하고요. 여러분들의
+- [23:13](https://youtube.com/watch?v=vq37BMhoesQ&t=1393) 프로젝트에서 이걸 활용할 때는 꼭
+- [23:15](https://youtube.com/watch?v=vq37BMhoesQ&t=1395) 이렇게 3중으로 격리를 해서 실행을
+- [23:17](https://youtube.com/watch?v=vq37BMhoesQ&t=1397) 하시길 바라겠습니다. 첫 번째로 도커
+- [23:19](https://youtube.com/watch?v=vq37BMhoesQ&t=1399) 같은 격리된 컨테이너 환경에서 실행을
+- [23:21](https://youtube.com/watch?v=vq37BMhoesQ&t=1401) 하는 건데요. 만약에 방금과 같이
+- [23:23](https://youtube.com/watch?v=vq37BMhoesQ&t=1403) 로컬 PC에서 실행을 하다가 AI가
+- [23:26](https://youtube.com/watch?v=vq37BMhoesQ&t=1406) 이런 파일을 삭제하는 좀 위험한
+- [23:28](https://youtube.com/watch?v=vq37BMhoesQ&t=1408) 명령어를 실행할 수도 있기 때문에
+- [23:30](https://youtube.com/watch?v=vq37BMhoesQ&t=1410) 이러한 로컬 PC보 이러한 명령이
+- [23:31](https://youtube.com/watch?v=vq37BMhoesQ&t=1411) 실행돼도 피해가 최소화되도록 이런
+- [23:33](https://youtube.com/watch?v=vq37BMhoesQ&t=1413) 도커 같은 컨테이너 환경에서 실행을
+- [23:35](https://youtube.com/watch?v=vq37BMhoesQ&t=1415) 해 주시길 바라겠고요. 그리고 별도의
+- [23:38](https://youtube.com/watch?v=vq37BMhoesQ&t=1418) 폴더나 별도의 브렌치에서 작업을
+- [23:40](https://youtube.com/watch?v=vq37BMhoesQ&t=1420) 하시는 것을 권장드리겠습니다. 저희가
+- [23:43](https://youtube.com/watch?v=vq37BMhoesQ&t=1423) 방금 실습을 할 때 꼴 명령어를
+- [23:45](https://youtube.com/watch?v=vq37BMhoesQ&t=1425) 입력을 하고 그리고 뒤에 목표를
+- [23:47](https://youtube.com/watch?v=vq37BMhoesQ&t=1427) 이렇게 텍스트로 넣어 준 다음에 토큰
+- [23:49](https://youtube.com/watch?v=vq37BMhoesQ&t=1429) 예상까지 이렇게 지정을 해 줬습니다.
+- [23:50](https://youtube.com/watch?v=vq37BMhoesQ&t=1430) 여기서이 골을 지정을 할 때 측정
+- [23:53](https://youtube.com/watch?v=vq37BMhoesQ&t=1433) 가능한 성공 기준을 넣어 주는게
+- [23:55](https://youtube.com/watch?v=vq37BMhoesQ&t=1435) 좋습니다. 이런 식으로 모든 테스트가
+- [23:57](https://youtube.com/watch?v=vq37BMhoesQ&t=1437) 통과할 때까지 테스트를 돌려라.
+- [23:59](https://youtube.com/watch?v=vq37BMhoesQ&t=1439) 테스트를 비활성화하거나 건너뛰지
+- [24:01](https://youtube.com/watch?v=vq37BMhoesQ&t=1441) 마라. 이런 식으로 제약 조건을 넣어
+- [24:03](https://youtube.com/watch?v=vq37BMhoesQ&t=1443) 주는 것도 좋습니다. 자, 골을
+- [24:05](https://youtube.com/watch?v=vq37BMhoesQ&t=1445) 이용할 때 토큰이 녹아내리는 거
+- [24:07](https://youtube.com/watch?v=vq37BMhoesQ&t=1447) 아닌가라고 우려를 하시는 분들이 계실
+- [24:09](https://youtube.com/watch?v=vq37BMhoesQ&t=1449) 겁니다. 근데 보면 코덱스에서 이런
+- [24:11](https://youtube.com/watch?v=vq37BMhoesQ&t=1451) 문제를 예방하기 위해서 꽤 견고하게
+- [24:13](https://youtube.com/watch?v=vq37BMhoesQ&t=1453) 안전 장치를 넣어 놨는데 한번
+- [24:15](https://youtube.com/watch?v=vq37BMhoesQ&t=1455) 살펴보겠습니다. 자, 일단
+- [24:16](https://youtube.com/watch?v=vq37BMhoesQ&t=1456) 컨티뉴어스점 마크다운 파일에서 루프를
+- [24:19](https://youtube.com/watch?v=vq37BMhoesQ&t=1459) 한번 돌고 모델에게 이런 컨텍스트를
+- [24:21](https://youtube.com/watch?v=vq37BMhoesQ&t=1461) 주입을 해 줬죠. 지금 얼마나 시간이
+- [24:23](https://youtube.com/watch?v=vq37BMhoesQ&t=1463) 지났고 토큰 잔액이 얼마고 지금
+- [24:25](https://youtube.com/watch?v=vq37BMhoesQ&t=1465) 예산이 얼마나 있는지 이런 정보들을
+- [24:27](https://youtube.com/watch?v=vq37BMhoesQ&t=1467) 보여 줬습니다. 그리고 예산이 다
+- [24:29](https://youtube.com/watch?v=vq37BMhoesQ&t=1469) 떨어지게 되면 5단계에서 랩업 모드로
+- [24:31](https://youtube.com/watch?v=vq37BMhoesQ&t=1471) 자동으로 전환돼서 현재 진행 상황을
+- [24:33](https://youtube.com/watch?v=vq37BMhoesQ&t=1473) 요약을 하고 사용자에게 인계를 한
+- [24:35](https://youtube.com/watch?v=vq37BMhoesQ&t=1475) 다음에 종료가 되었죠. 그 엔트로픽의
+- [24:37](https://youtube.com/watch?v=vq37BMhoesQ&t=1477) 랄프루프 플러그인은 이런 안전 장치가
+- [24:40](https://youtube.com/watch?v=vq37BMhoesQ&t=1480) 부족하기 때문에 뭐 토큰이 녹는다
+- [24:42](https://youtube.com/watch?v=vq37BMhoesQ&t=1482) 이런 걱정을 하실 수 있는데 코덱스
+- [24:44](https://youtube.com/watch?v=vq37BMhoesQ&t=1484) 꼴은 이런 식으로 안전 장치를 좀
+- [24:46](https://youtube.com/watch?v=vq37BMhoesQ&t=1486) 경고하게 넣어 놔서 토큰에 대한
+- [24:48](https://youtube.com/watch?v=vq37BMhoesQ&t=1488) 걱정이 좀 덜긴 합니다. 자, 정리를
+- [24:50](https://youtube.com/watch?v=vq37BMhoesQ&t=1490) 해 보자면이 꼴이라는 명령어는 단순
+- [24:52](https://youtube.com/watch?v=vq37BMhoesQ&t=1492) 슬래시 명령어가 아니라이 헌틀리라는
+- [24:54](https://youtube.com/watch?v=vq37BMhoesQ&t=1494) 사람이 제안한 랄프루프 매우 단순한이
+- [24:57](https://youtube.com/watch?v=vq37BMhoesQ&t=1497) 배시 스크립트가 엔트로픽의 플러그인을
+- [25:00](https://youtube.com/watch?v=vq37BMhoesQ&t=1500) 거쳐서 오픈 AI의 코덱스의 정교한
+- [25:02](https://youtube.com/watch?v=vq37BMhoesQ&t=1502) 5개층 랄프루프 시스템으로 진화를 한
+- [25:05](https://youtube.com/watch?v=vq37BMhoesQ&t=1505) 겁니다. 표면적으로 보면네 개의
+- [25:07](https://youtube.com/watch?v=vq37BMhoesQ&t=1507) 명령으로 매우 단순했습니다.
+- [25:08](https://youtube.com/watch?v=vq37BMhoesQ&t=1508) 내부적으로 보면 그 5단계의 동작
+- [25:10](https://youtube.com/watch?v=vq37BMhoesQ&t=1510) 원리가 견고하게 돌아가고 있었습니다.
+- [25:12](https://youtube.com/watch?v=vq37BMhoesQ&t=1512) 그리고이 코덱스가 정식 출시가 아니기
+- [25:15](https://youtube.com/watch?v=vq37BMhoesQ&t=1515) 때문에 프로덕션에는 바로 쓰지 않는
+- [25:17](https://youtube.com/watch?v=vq37BMhoesQ&t=1517) 것을 권장을 드리고요. 그리고
+- [25:18](https://youtube.com/watch?v=vq37BMhoesQ&t=1518) 여러분들 프로젝트에서 쓰더라도 꼭
+- [25:21](https://youtube.com/watch?v=vq37BMhoesQ&t=1521) 격리된 환경에서 쓰시는 것을
+- [25:23](https://youtube.com/watch?v=vq37BMhoesQ&t=1523) 권장드렸습니다. 이렇게 해서 코덱스
+- [25:25](https://youtube.com/watch?v=vq37BMhoesQ&t=1525) 골 기능에 대해서 모두 설명을
+- [25:27](https://youtube.com/watch?v=vq37BMhoesQ&t=1527) 드렸습니다. 좀 긴 호흡으로 설명을
+- [25:29](https://youtube.com/watch?v=vq37BMhoesQ&t=1529) 드렸는데 오늘 영상에서 설명드렸던
+- [25:31](https://youtube.com/watch?v=vq37BMhoesQ&t=1531) 부분 한번 정리를 하고 마무리를
+- [25:33](https://youtube.com/watch?v=vq37BMhoesQ&t=1533) 하겠습니다. 첫 번째 도입부에서
+- [25:35](https://youtube.com/watch?v=vq37BMhoesQ&t=1535) 기존의 LM 코딩을 할 때는 인간과
+- [25:38](https://youtube.com/watch?v=vq37BMhoesQ&t=1538) 그 AI 모델이 티키타카를 하면서
+- [25:40](https://youtube.com/watch?v=vq37BMhoesQ&t=1540) 인간의 개입이 꼭 필요했지만이
+- [25:42](https://youtube.com/watch?v=vq37BMhoesQ&t=1542) 랄프루프라는 패러다임을 통해서
+- [25:45](https://youtube.com/watch?v=vq37BMhoesQ&t=1545) 자동으로 AI가 직접 이렇게 루프를
+- [25:47](https://youtube.com/watch?v=vq37BMhoesQ&t=1547) 계속 돌면서 완성을 하는 그런
+- [25:49](https://youtube.com/watch?v=vq37BMhoesQ&t=1549) 패러다임을 소개해 드렸고 그거를
+- [25:51](https://youtube.com/watch?v=vq37BMhoesQ&t=1551) 코덱스 꼬리라는 기능으로 출시가
+- [25:53](https://youtube.com/watch?v=vq37BMhoesQ&t=1553) 되었다고 말씀을 드렸죠. 그리고이어서
+- [25:55](https://youtube.com/watch?v=vq37BMhoesQ&t=1555) 랄프루프의 개념에 대해서 설명드리고
+- [25:57](https://youtube.com/watch?v=vq37BMhoesQ&t=1557) 랄프루프가 처음에 헌틀리라는 개발자가
+- [25:59](https://youtube.com/watch?v=vq37BMhoesQ&t=1559) 블로그에서 소개를 했다가 그거를
+- [26:01](https://youtube.com/watch?v=vq37BMhoesQ&t=1561) 클로드 코드에 플러그인 형태로 출시가
+- [26:03](https://youtube.com/watch?v=vq37BMhoesQ&t=1563) 되었다가 이번에 코덱스에서 꼴이라는
+- [26:06](https://youtube.com/watch?v=vq37BMhoesQ&t=1566) 기능으로 출시가 되었다고
+- [26:07](https://youtube.com/watch?v=vq37BMhoesQ&t=1567) 말씀드렸습니다. 헌틀리가 랄프루프를
+- [26:10](https://youtube.com/watch?v=vq37BMhoesQ&t=1570) 만들 때 중요하게 생각했던 철학들까지
+- [26:12](https://youtube.com/watch?v=vq37BMhoesQ&t=1572) 그 블로그 글을 요약드리면서 한번
+- [26:14](https://youtube.com/watch?v=vq37BMhoesQ&t=1574) 설명을 드렸고 그리고 엔트로픽
+- [26:15](https://youtube.com/watch?v=vq37BMhoesQ&t=1575) 플러그인에 대해서도 설명을 드렸는데
+- [26:18](https://youtube.com/watch?v=vq37BMhoesQ&t=1578) 그 플러그인의 한계에 대해서도 설명을
+- [26:20](https://youtube.com/watch?v=vq37BMhoesQ&t=1580) 드렸습니다. 그리고 코덱스에서 그 한
+- [26:22](https://youtube.com/watch?v=vq37BMhoesQ&t=1582) 개를 어떻게 개선을 했고 그리고
+- [26:24](https://youtube.com/watch?v=vq37BMhoesQ&t=1584) 내부적으로 다섯 단계의 라이프
+- [26:26](https://youtube.com/watch?v=vq37BMhoesQ&t=1586) 사이클을 같이 살펴봤고 각 단계별로
+- [26:29](https://youtube.com/watch?v=vq37BMhoesQ&t=1589) 코드까지 같이 살펴보았습니다.
+- [26:30](https://youtube.com/watch?v=vq37BMhoesQ&t=1590) 그리고이어서 저희가 실습까지 같이 해
+- [26:32](https://youtube.com/watch?v=vq37BMhoesQ&t=1592) 봤고요. 그리고 내부적으로 코덱스가이
+- [26:34](https://youtube.com/watch?v=vq37BMhoesQ&t=1594) 토큰이 녹아내리는 현상을 막기 위해서
+- [26:36](https://youtube.com/watch?v=vq37BMhoesQ&t=1596) 안전 장치를 좀 경고하게 짜놨다
+- [26:38](https://youtube.com/watch?v=vq37BMhoesQ&t=1598) 설명을 드리면서 마쳤습니다. 영상이
+- [26:40](https://youtube.com/watch?v=vq37BMhoesQ&t=1600) 도움이 되셨다면 구독과 좋아요
+- [26:42](https://youtube.com/watch?v=vq37BMhoesQ&t=1602) 부탁드리겠습니다. 그리고 멤버십께는이
+- [26:45](https://youtube.com/watch?v=vq37BMhoesQ&t=1605) 슬라이드 전체를 PDF로 제공해
+- [26:46](https://youtube.com/watch?v=vq37BMhoesQ&t=1606) 드리니까 많은 관심 부탁드리겠습니다.
+- [26:49](https://youtube.com/watch?v=vq37BMhoesQ&t=1609) 감사합니다.
