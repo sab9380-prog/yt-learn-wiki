@@ -1,0 +1,800 @@
+---
+title: "Claude Code Design just became UNSTOPPABLE"
+source_url: https://youtube.com/watch?v=z9CwM-DAe5Q
+video_id: z9CwM-DAe5Q
+source_type: youtube
+lang: en
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# Claude Code Design just became UNSTOPPABLE
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 이 영상은 Claude Code를 활용한 새로운 디자인 시스템을 소개합니다. AI가 생성하는 획일적인 디자인(AI slop)을 극복하고, 디자인을 코드로 체계화하여 무한 복제 가능한 시스템을 만드는 방법을 설명합니다. GitHub의 'Awesome Design' 레포지토리를 활용해 웹사이트, 프레젠테이션 등을 한 번에 생성하고, Firecrawl 같은 도구로 브랜드 가이드라인을 자동 추출하는 5단계 프로세스를 제시합니다. 핵심은 디자인을 예술이 아닌 코드화 가능한 시스템으로 접근하는 것입니다.
+- **Core Message:** 디자인을 코드로 체계화하면 아름다운 디자인을 무한 복제할 수 있고, 이는 디자인 업계의 패러다임을 바꾸고 있다.
+> Design is not an art form reserved for specialists. It's a system that can actually be encoded.
+> Once you've codified something once, you can replicate it infinitely.
+> Design is just coding plus taste.
+❗ Awesome Design 레포지토리가 2주 만에 50,000개 스타를 받았다
+❗ 고품질 사이트가 일반 사이트보다 91% 더 높은 전환율을 보인다
+❗ Figma 검색량이 급감하고 있다
+
+## 📚 핵심 용어
+- **AI slop:** AI가 생성하는 획일적이고 뻔한 디자인으로, 보라색 그라데이션과 둥근 박스 등 천편일률적 특징을 가짐 / 패스트푸드점에서 나오는 똑같은 햄버거처럼, AI가 만드는 디자인도 다 비슷비슷해서 한눈에 알아볼 수 있다 / 맞춤 디자인은 셰프의 창작 요리, AI slop은 공장에서 찍어낸 즉석식품. 개성과 차별화가 핵심 차이다
+- **디자인 코드화:** 타이포그래피, 색상, 레이아웃 등 디자인 요소를 코드로 정의해 시스템화하는 것 / 요리 레시피를 정확히 적어두면 누구나 같은 맛을 낼 수 있듯이, 디자인 규칙을 코드로 만들면 언제든 동일한 결과물을 얻는다 / 전통 디자인은 매번 새로 그리는 그림, 코드화는 도장 찍기. 반복성과 일관성에서 큰 차이가 난다
+- **Firecrawl:** 웹사이트에서 브랜드 로고, 색상, 타이포그래피 등을 자동으로 추출하는 웹 스크래핑 도구 / 명탐정이 현장에서 단서를 수집하듯이, 웹사이트를 훑어보며 브랜드 아이덴티티 요소들을 자동으로 찾아내는 도구다 / 일반 스크래핑은 텍스트만 가져오는 복사기, Firecrawl은 디자인 요소까지 분석하는 전문가. 깊이가 다르다
+
+## 🚀 실행 (Execute)
+- [ ] Claude Code와 Firecrawl을 연결하여 첫 디자인 스킬 구축하기
+  - 담당: 나
+  - 이유: 브랜드 일관성을 유지하면서 디자인 작업을 자동화할 수 있는 핵심 시스템
+- [ ] 자주 만드는 디자인 포맷(프레젠테이션/랜딩페이지 등) 선정하고 5단계 프로세스 적용
+  - 담당: 나
+  - 이유: 가장 높은 ROI를 얻을 수 있는 반복 작업부터 자동화해야 효과 극대화
+- 자료: GitHub - Awesome Design 레포지토리 (https://github.com/awesome-design)
+- 자료: Firecrawl 웹 스크래핑 도구
+- 자료: Krea API (이미지 생성용)
+- 자료: Cursor/Windsurf (IDE 환경)
+- Timeline: 1주차: Claude Code 환경 설정 및 Firecrawl 연동, 2주차: 첫 디자인 스킬 완성 및 테스트, 이후: 다른 디자인 포맷으로 확장
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=0) Cloud Code just became the world's
+- [0:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1) number one design tool. And 99% of
+- [0:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=3) people don't even realize yet. I
+- [0:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=5) discovered a new system that builds
+- [0:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=7) beautiful designs for any task. And in
+- [0:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=10) this video, I'll show you how to build
+- [0:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=11) these gorgeous and interactive designs
+- [0:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=14) in minutes, saving you time, making you
+- [0:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=16) more money, and getting you light years
+- [0:18](https://youtube.com/watch?v=z9CwM-DAe5Q&t=18) ahead of your competitors. And if you
+- [0:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=20) don't know who I am, my name is Jack
+- [0:21](https://youtube.com/watch?v=z9CwM-DAe5Q&t=21) Roberts. I built and sold my last tech
+- [0:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=23) startup with over 60,000 customers. And
+- [0:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=25) now I run a fast growing AI startup and
+- [0:27](https://youtube.com/watch?v=z9CwM-DAe5Q&t=27) teach thousands of people every day. So,
+- [0:29](https://youtube.com/watch?v=z9CwM-DAe5Q&t=29) if you haven't already, grab that coffee
+- [0:31](https://youtube.com/watch?v=z9CwM-DAe5Q&t=31) and let's dive straight in. So, this is
+- [0:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=33) the Claude Code design system and it
+- [0:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=35) will blow your mind. And I'll show you
+- [0:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=37) what the premise here. The idea is that
+- [0:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=38) we're going to codify something once and
+- [0:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=40) once we do that, we can replicate it
+- [0:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=42) infinitely. The design tool landscape
+- [0:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=44) has legitimately shifted and I'll
+- [0:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=46) explain exactly why. But first of all,
+- [0:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=48) we have to understand the AI slop
+- [0:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=50) apocalypse. So, the biggest criticism
+- [0:52](https://youtube.com/watch?v=z9CwM-DAe5Q&t=52) about AI generated content is mainly the
+- [0:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=54) fact that it all looks exactly the same.
+- [0:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=58) Specifically, it's got the same hero
+- [0:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=59) section. If it's a website, you're going
+- [1:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=61) to see purple gradients. You're going to
+- [1:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=62) see interfont. You're going to see the
+- [1:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=63) classic three rounded boxes. You can see
+- [1:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=65) it a mile away. According to Inblad
+- [1:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=67) Science, quality sites convert pretty
+- [1:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=69) much 91% better than regular ones. So,
+- [1:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=72) this is the general misconception about
+- [1:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=74) AI and design that I want to smash right
+- [1:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=76) now. Now, here's a big breakthrough and
+- [1:18](https://youtube.com/watch?v=z9CwM-DAe5Q&t=78) we talked about this with video recently
+- [1:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=80) is that code can effectively be turned
+- [1:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=83) into design. This is what I mean. So, AI
+- [1:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=85) is incredible at code. Design can
+- [1:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=86) actually be codified. This is the
+- [1:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=88) central premise of this and why claude
+- [1:29](https://youtube.com/watch?v=z9CwM-DAe5Q&t=89) code is exceptional. Typography scales,
+- [1:31](https://youtube.com/watch?v=z9CwM-DAe5Q&t=91) spacing systems, color tokens, layout
+- [1:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=93) grids. If you can explain to Claude code
+- [1:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=97) what great design looks like, you can
+- [1:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=99) produce it on demand as much as you want
+- [1:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=102) to in any style that you want to. You
+- [1:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=104) just have to be able to explain it. So
+- [1:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=106) you unlock it here is a once you know
+- [1:47](https://youtube.com/watch?v=z9CwM-DAe5Q&t=107) design components, you can just give
+- [1:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=109) Claude the assets, explain what good
+- [1:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=111) looks like, and then you can basically
+- [1:52](https://youtube.com/watch?v=z9CwM-DAe5Q&t=112) drive it to the moon. Key takeaway is
+- [1:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=114) that design is not an art form reserve
+- [1:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=115) for specialists. It's a system that can
+- [1:57](https://youtube.com/watch?v=z9CwM-DAe5Q&t=117) actually be encoded. Now, here's the
+- [2:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=120) thing. Now, this system that I'm going
+- [2:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=121) to show you in this video with this new
+- [2:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=122) tool unlock doesn't just work on one
+- [2:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=124) thing. You can explain it for anything.
+- [2:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=126) So, landing pages and apps, HTML slide
+- [2:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=128) decks. In fact, the very thing that
+- [2:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=130) you're looking at right now was built
+- [2:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=132) with Claude branded graphics, reports,
+- [2:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=134) and proposals, data visualization, even
+- [2:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=137) identity systems. Now, the brand new
+- [2:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=139) tool just dropped on GitHub that I'm
+- [2:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=140) going to show you because I think this
+- [2:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=142) is best explained with an example and
+- [2:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=144) then I'm going to show you how you
+- [2:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=145) reverse engineer this to pretty much
+- [2:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=146) apply this to any single design thing
+- [2:29](https://youtube.com/watch?v=z9CwM-DAe5Q&t=149) that your business has. And once you've
+- [2:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=150) created it, you can at the click of your
+- [2:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=152) fingers design all of this whenever you
+- [2:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=154) want to. So, this is called awesome
+- [2:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=155) design. You can see how fast growing
+- [2:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=158) this is. It's got almost 50,000 stars
+- [2:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=160) within 2 weeks. And the idea of this is
+- [2:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=162) you're going to get a plain text design
+- [2:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=164) system for every area of your business.
+- [2:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=166) This particular skill itself has over 55
+- [2:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=169) brand systems available for many
+- [2:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=171) different websites. And this design
+- [2:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=173) system builds beautiful things like this
+- [2:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=174) in one click. So if you're building
+- [2:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=175) websites, they can look like this. If
+- [2:57](https://youtube.com/watch?v=z9CwM-DAe5Q&t=177) you're building design systems and HTML
+- [2:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=178) decks, you can build gorgeous ones that
+- [3:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=180) are super interactive. You can build
+- [3:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=182) Spotify inspired websites, pricing
+- [3:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=184) websites inspired by Stripe. You can get
+- [3:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=186) these beautiful pages here to sell
+- [3:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=188) products just like Nike. And it goes on
+- [3:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=190) and on and on. Now, this is best
+- [3:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=191) explained in practice. So we're going to
+- [3:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=193) open the skill together. But the skill
+- [3:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=195) isn't actually the point. The point is
+- [3:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=197) the strategy that sits behind the skill.
+- [3:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=199) And I'm going to show you exactly how
+- [3:21](https://youtube.com/watch?v=z9CwM-DAe5Q&t=201) you can use that to essentially hack
+- [3:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=204) design everything in your business in a
+- [3:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=206) super simple fivestep process.
+- [3:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=208) Beautiful. So let's start by opening up
+- [3:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=210) this design prompt. So if you to click
+- [3:31](https://youtube.com/watch?v=z9CwM-DAe5Q&t=211) on the link, I'll put this all below
+- [3:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=213) down for you. So you can literally go
+- [3:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=214) ahead and grab this. And all you're
+- [3:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=215) going to do is come down to code here
+- [3:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=217) and click on copy. Then we're going to
+- [3:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=219) head over to our integrated development
+- [3:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=221) environment of choice. I'm going to be
+- [3:43](https://youtube.com/watch?v=z9CwM-DAe5Q&t=223) using anti-gravity. And once you've
+- [3:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=224) opened up anti-gravity and if it sounds
+- [3:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=226) like Spanish, check this video on
+- [3:47](https://youtube.com/watch?v=z9CwM-DAe5Q&t=227) screen. I'll explain everything in good
+- [3:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=229) detail. Well, awesome. Welcome back if
+- [3:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=231) you check that out. Now, this is a good
+- [3:52](https://youtube.com/watch?v=z9CwM-DAe5Q&t=232) opportunity to understand what
+- [3:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=233) design.mmede is and the principle behind
+- [3:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=235) it because remember it's just about the
+- [3:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=238) philosophy. Key takeaway here is get CL
+- [4:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=240) to understand what great design looks
+- [4:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=241) like and once it understands that you
+- [4:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=243) can build anything. So, the way that
+- [4:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=245) this works, if I come down and show what
+- [4:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=246) this looks like, it's a markdown file,
+- [4:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=247) no Figma export, no JSON schema, no
+- [4:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=249) special tooling. You can just talk to
+- [4:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=250) Claude and it will work for you. That's
+- [4:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=252) how this works. It's really really cool.
+- [4:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=254) Now, if you look at the collection
+- [4:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=255) they've got here for AI and LM
+- [4:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=257) platforms, effectively what they've done
+- [4:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=259) is taken the essence and the kind of
+- [4:21](https://youtube.com/watch?v=z9CwM-DAe5Q&t=261) design infrastructure for all of these
+- [4:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=263) wonderful websites. Cursor expo,
+- [4:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=265) lovable, click house, you know, you
+- [4:27](https://youtube.com/watch?v=z9CwM-DAe5Q&t=267) literally name it based on whatever it
+- [4:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=268) is for backend database and devops,
+- [4:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=270) productivity and SAS. You have all these
+- [4:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=272) fantastic things you designed. And
+- [4:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=273) indeed, all the things that I showed you
+- [4:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=275) here, for example, this and this and
+- [4:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=277) this were all done in one shot. And you
+- [4:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=279) can build things that look like this.
+- [4:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=281) This is really cool. This is something
+- [4:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=282) that you could do whenever you're flying
+- [4:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=284) away somewhere. Cool. Can not even just
+- [4:45](https://youtube.com/watch?v=z9CwM-DAe5Q&t=285) And this is why Canva and Figma and as
+- [4:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=288) somebody who a huge user of Canva over
+- [4:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=290) many years, I can tell you this is
+- [4:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=291) something that's really worth
+- [4:52](https://youtube.com/watch?v=z9CwM-DAe5Q&t=292) understanding. Like even things like
+- [4:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=293) these interactive things that you can
+- [4:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=295) play around with little things you can
+- [4:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=296) now pull together instantaneously on
+- [4:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=298) clawed code from a single prompt. Now we
+- [5:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=300) need to come back over to anti-gravity.
+- [5:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=302) Now we're here. We're going to come over
+- [5:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=302) to the left hand side, click on claw
+- [5:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=304) code. If you don't have it, you can just
+- [5:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=305) store it in extensions here. I'm on
+- [5:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=307) local and new session. Once we're here,
+- [5:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=308) we're going to say, "Hey there, I'd like
+- [5:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=309) to install this GitHub repo, please."
+- [5:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=311) And then we simply go ahead and paste
+- [5:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=312) the repo. Then that will install itself
+- [5:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=314) naturally. Let me click on files. We can
+- [5:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=315) see awesome design. MD. And you can see
+- [5:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=317) if I click on design MD again, you see
+- [5:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=319) all these websites that it's got here,
+- [5:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=320) right? Open code, Postgog, Stripe,
+- [5:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=322) Spotify, SpaceX, Wise, you literally
+- [5:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=325) name it. BMW, Apple, loads of stuff. So,
+- [5:27](https://youtube.com/watch?v=z9CwM-DAe5Q&t=327) as an example, what we could do if you
+- [5:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=328) click on BMW for example, it's basically
+- [5:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=330) got all of the information and it's got
+- [5:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=332) all the design system details on the
+- [5:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=334) website, which is cool. So what we're
+- [5:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=335) going to do is give the following prompt
+- [5:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=336) which is hey there my man would like to
+- [5:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=338) do is to create me two websites based on
+- [5:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=341) this skill. I want you to go ahead and
+- [5:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=342) build for me. Firstly go ahead and why
+- [5:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=344) don't you do lovable and then after
+- [5:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=346) lovable go ahead and do one on Lama so I
+- [5:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=349) can see the full power of this and
+- [5:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=351) actually do a third one for me. Also do
+- [5:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=353) SpaceX and then we hit just send that
+- [5:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=354) one off. Beautiful. And now we're doing
+- [5:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=355) three big beautiful strong builds and
+- [5:57](https://youtube.com/watch?v=z9CwM-DAe5Q&t=357) you can see it's gone down. It's pulled
+- [5:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=359) everything together. It's done the
+- [6:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=360) research. So we can say awesome. Open
+- [6:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=362) these three up for me in a local host.
+- [6:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=364) Now, what's interesting here isn't
+- [6:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=366) really about the fact it's built
+- [6:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=368) websites. It's how it's done and how we
+- [6:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=370) can leverage Claude code to effectively
+- [6:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=372) solve any design thing that you've
+- [6:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=374) gotten. And the future that we're
+- [6:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=375) heading towards is that we're going to
+- [6:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=376) be living in a code first environment
+- [6:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=379) for design. And there's a very unique
+- [6:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=380) opportunity that you can leverage right
+- [6:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=382) now if you use the system that I'm about
+- [6:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=383) to show you. So, let's go through and
+- [6:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=385) open up all three of them real quick.
+- [6:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=386) So, here we go. Okay, this is lovable.
+- [6:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=388) As you can see, you got the the typing
+- [6:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=390) thing appearing. This is the website all
+- [6:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=392) appearing for you. As you scroll down,
+- [6:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=393) bear in mind this is completely one
+- [6:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=395) shot. Just using the same design
+- [6:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=396) principles. Come down. Loads of cool
+- [6:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=398) things. Beautiful. Come back over. Let's
+- [6:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=399) have a look at O Lama. It's looking a
+- [6:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=401) bit more codeheavy. Very decent. You can
+- [6:43](https://youtube.com/watch?v=z9CwM-DAe5Q&t=403) see it's got those kind of diagrams on
+- [6:45](https://youtube.com/watch?v=z9CwM-DAe5Q&t=405) there. Again, these look pretty decent.
+- [6:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=406) Pretty swish. Loads of different ideas.
+- [6:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=408) And then this all flows up. And then
+- [6:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=410) finally, let's have a quick look at
+- [6:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=411) SpaceX. Again, one shot. Come down, have
+- [6:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=414) a look. Very interplanetatory, very
+- [6:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=416) SpaceX related. So, as you can see, you
+- [6:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=418) can effectively build these things very
+- [6:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=419) quickly, but you can take this way
+- [7:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=421) further. And there's a reason why this
+- [7:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=422) GitHub repo is trending. So, if I come
+- [7:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=424) back over then, not to the website that
+- [7:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=425) it did on Lamborghini, but if I come
+- [7:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=427) back over to our system here, for
+- [7:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=429) example, um there's a really simple
+- [7:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=430) five-step process that we can do to
+- [7:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=432) pretty much replicate anything. And in
+- [7:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=434) fact, the thing that you're seeing right
+- [7:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=435) here is one of my very own Claw systems
+- [7:18](https://youtube.com/watch?v=z9CwM-DAe5Q&t=438) that I have inside my community because
+- [7:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=440) um people like this so much. I had so
+- [7:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=442) many questions like, Jack, what is it?
+- [7:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=443) How do I use it? So, five things you
+- [7:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=444) need to do. The first thing you need to
+- [7:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=446) do is go ahead and pick your format.
+- [7:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=448) Now, this can be anything you want to.
+- [7:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=450) Could be website, could be presentation,
+- [7:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=452) could be social media post, infographic,
+- [7:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=453) document, whatever it is. I'd start with
+- [7:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=456) the highest leverage thing first.
+- [7:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=457) Something that you do quite regularly.
+- [7:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=459) For example, I make videos quite often.
+- [7:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=461) Therefore, a design system that works
+- [7:43](https://youtube.com/watch?v=z9CwM-DAe5Q&t=463) for me, it would be something like this,
+- [7:45](https://youtube.com/watch?v=z9CwM-DAe5Q&t=465) like a presentation thing. Equally, if
+- [7:47](https://youtube.com/watch?v=z9CwM-DAe5Q&t=467) you're somebody who's traveling, you got
+- [7:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=468) teams that are traveling and you want to
+- [7:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=470) create something like this, it's again
+- [7:52](https://youtube.com/watch?v=z9CwM-DAe5Q&t=472) super easy to do. And what the cool
+- [7:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=474) thing about this is effectively
+- [7:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=475) speaking, if I just refresh this and
+- [7:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=476) show you, I have this connected to many
+- [7:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=478) other things. So for all the trips I
+- [8:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=480) have, I can easily just cycle through
+- [8:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=482) these and it'll just pop up the one that
+- [8:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=483) I'm actually going to and you can share
+- [8:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=485) that whenever you want to. So step one
+- [8:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=487) is nailing down what your actual format
+- [8:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=489) is going to be. So for us, let's say for
+- [8:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=491) example that we are going to building a
+- [8:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=493) presentation. Well, let's head over to
+- [8:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=495) Claude and build something out together.
+- [8:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=496) Now the best design system in the world
+- [8:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=497) is of no use to you or I unless we know
+- [8:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=500) how we're actually going to apply it on
+- [8:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=502) a day-to-day basis, which is why the
+- [8:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=503) first step is choose your designs. And
+- [8:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=506) the philosophy here is that we want to
+- [8:27](https://youtube.com/watch?v=z9CwM-DAe5Q&t=507) be design first. So, we want to be
+- [8:29](https://youtube.com/watch?v=z9CwM-DAe5Q&t=509) coding first when we're picking what we
+- [8:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=510) want to do. So, for example, we could do
+- [8:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=512) landing pages and apps like I just
+- [8:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=513) showed you with Lamborghini and Spotify
+- [8:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=515) and things from Stripe. We're at the era
+- [8:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=518) now where if you can find something
+- [8:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=519) that's a good design, you can basically
+- [8:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=520) do it. So, we have websites. We've
+- [8:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=522) covered that in great detail. HTML slide
+- [8:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=524) decks just like the one you're watching
+- [8:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=526) right now. We could do branding
+- [8:47](https://youtube.com/watch?v=z9CwM-DAe5Q&t=527) graphics, identity systems, visualize
+- [8:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=528) our data, or reports and proposals. For
+- [8:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=531) this one, we're going to go ahead and
+- [8:52](https://youtube.com/watch?v=z9CwM-DAe5Q&t=532) choose HTML slide decks. I would often
+- [8:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=534) use the following framework. I choose
+- [8:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=536) what is the thing that you spend most of
+- [8:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=538) your own personal time creating and what
+- [9:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=541) would have the highest impact if you
+- [9:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=543) were to automate it because the idea
+- [9:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=545) here is that we find excellence and we
+- [9:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=547) create excellence and then we
+- [9:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=548) systematize it and create a skill with
+- [9:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=550) claude that basically will always
+- [9:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=551) produce it at that level and there's
+- [9:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=553) something else we can do that takes it
+- [9:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=555) to a completely different level of
+- [9:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=556) performance. Now, once we've grabbed the
+- [9:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=557) beautiful coffee and written down all
+- [9:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=559) the different integration points that we
+- [9:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=560) want to do, the next thing we need to do
+- [9:21](https://youtube.com/watch?v=z9CwM-DAe5Q&t=561) is equip Claude code with the ability
+- [9:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=564) and the assets to effectively do
+- [9:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=566) anything that we need to. And so, we're
+- [9:27](https://youtube.com/watch?v=z9CwM-DAe5Q&t=567) going to go ahead and download the
+- [9:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=568) Claude app. And when you do that, you're
+- [9:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=570) going to see three things at the top.
+- [9:31](https://youtube.com/watch?v=z9CwM-DAe5Q&t=571) You're going to see chat, co-work, and
+- [9:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=573) code. Remember, codework is the
+- [9:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=575) userfriendly version of code. If you can
+- [9:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=577) use code, I always recommend that you go
+- [9:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=579) and do it. What we're particularly
+- [9:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=580) looking for down here is on more options
+- [9:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=582) and click on connectors. And these are
+- [9:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=584) all the apps or the tools that we're
+- [9:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=586) going to give to Claude Code. Now, if
+- [9:47](https://youtube.com/watch?v=z9CwM-DAe5Q&t=587) you're building out a design system,
+- [9:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=589) there's a couple of different things
+- [9:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=590) that we're going to want to do. First of
+- [9:52](https://youtube.com/watch?v=z9CwM-DAe5Q&t=592) all, we've got repos like I showed you
+- [9:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=593) here in anti-gravity. This beautiful
+- [9:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=595) design repo for websites as well as the
+- [9:57](https://youtube.com/watch?v=z9CwM-DAe5Q&t=597) other systems I've shown you in here.
+- [9:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=599) But if you look at the one that I built,
+- [10:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=600) for example, one of the key things that
+- [10:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=602) we want to give it as a tool is the
+- [10:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=603) ability to scrape websites and gain
+- [10:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=607) information and research that isn't
+- [10:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=609) available normally by just regular
+- [10:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=611) scraping. And through that we want to
+- [10:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=612) give it access to something called
+- [10:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=614) firecrol. Now the cool thing about
+- [10:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=615) firecraw and I'll pull this up here
+- [10:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=616) right now is that it can do things with
+- [10:18](https://youtube.com/watch?v=z9CwM-DAe5Q&t=618) website research that a lot of just
+- [10:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=620) basic things can't do. So it won't just
+- [10:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=622) it's basically like talking to a website
+- [10:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=624) and you can extract things like brand
+- [10:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=626) identity logos. For example, if I come
+- [10:29](https://youtube.com/watch?v=z9CwM-DAe5Q&t=629) down here and I go for glido.com. Now
+- [10:31](https://youtube.com/watch?v=z9CwM-DAe5Q&t=631) glido.com is the thing ironically that
+- [10:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=633) I'm using to talk it. So I come down
+- [10:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=634) here I can find things like branding and
+- [10:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=636) images and I can get the HTML. I can get
+- [10:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=638) anything I want to. I can start
+- [10:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=640) scraping. Check this out for example.
+- [10:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=641) Right now, I give all of my agents
+- [10:43](https://youtube.com/watch?v=z9CwM-DAe5Q&t=643) access to firecrol because it is just so
+- [10:45](https://youtube.com/watch?v=z9CwM-DAe5Q&t=645) powerful. But the weird thing is if you
+- [10:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=646) come back and actually complete the
+- [10:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=648) search, we can now extract things from
+- [10:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=649) here. So look, I come down at branding
+- [10:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=651) and you can see just how valuable this
+- [10:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=653) might be. Getting their logos, getting
+- [10:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=655) their accent colors, getting the
+- [10:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=656) typography that we can now pull in. So I
+- [10:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=658) like to equip it with all the
+- [11:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=660) appropriate skills. The first of which
+- [11:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=661) is definitely going to be firecrol. And
+- [11:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=663) the way that we get that in is coming
+- [11:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=664) down here to the plus button. Of course,
+- [11:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=666) we come to connectors. Come on to manage
+- [11:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=668) connectors. And I don't have fire crawl
+- [11:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=670) on this so I can actually show you what
+- [11:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=671) that looks like. What you're going to do
+- [11:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=672) is come down to the plus button here.
+- [11:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=674) Click on browse connectors. Now you try
+- [11:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=675) and find the one that you're looking
+- [11:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=676) for. Obviously the first one we want is
+- [11:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=677) some research power and firecrol is in
+- [11:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=679) there. So how do we get it into claude?
+- [11:21](https://youtube.com/watch?v=z9CwM-DAe5Q&t=681) Well, really simple, right? You type in
+- [11:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=682) the thing that you want. If you can't
+- [11:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=684) find it, that's absolutely fine. You
+- [11:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=685) click off and instead what we're going
+- [11:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=686) to do is click on the plus and click on
+- [11:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=688) add custom connector and then you're
+- [11:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=690) going to click on firecrawl. Then we're
+- [11:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=692) just going to ask Claude, what is the
+- [11:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=693) remote MCP server URL? And so easiest
+- [11:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=696) thing to do is just take a little
+- [11:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=697) screenshot of this, hit enter, and then
+- [11:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=698) just ask Claude, "Hey there, what is the
+- [11:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=700) remote MCP server for Firecrawl?" Now, I
+- [11:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=702) could give you the exact one myself, but
+- [11:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=704) I think I just want to show you the
+- [11:45](https://youtube.com/watch?v=z9CwM-DAe5Q&t=705) process of how you add manual things.
+- [11:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=706) Now, research is one thing, but I find
+- [11:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=708) like, you know, wouldn't it be great if
+- [11:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=709) you could specify multiple different
+- [11:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=711) types of resources, which I'm going to
+- [11:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=713) get on to in just a second. Cool. So,
+- [11:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=714) now we've got the remote MCP sub URL.
+- [11:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=716) We're going to drop this in, and then
+- [11:57](https://youtube.com/watch?v=z9CwM-DAe5Q&t=717) we've just got to add in the API key.
+- [11:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=718) So, let's go and grab that. And if you
+- [11:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=719) come to the homepage, it's literally
+- [12:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=720) right there. Just click on copy. And
+- [12:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=722) then we're just going to fill in the
+- [12:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=722) gaps here. Then once you've clicked on
+- [12:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=724) add, remember you want to remove the
+- [12:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=725) curly brackets. You can see that we have
+- [12:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=727) firecrawl. Now I click on that and look
+- [12:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=728) at this. We've got everything. I'm going
+- [12:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=730) to put always allow because it's fine
+- [12:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=731) for these ones. It's decent. Now we've
+- [12:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=733) added firecrawl to our system and we can
+- [12:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=734) now integrate that with anything that we
+- [12:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=736) want to and you just add all the ones in
+- [12:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=737) that you would like. And so just think
+- [12:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=739) of all the different connections and
+- [12:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=740) skills that you want access to. That
+- [12:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=742) could be your Gmail. If you're building
+- [12:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=743) presentations for clients, you may want
+- [12:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=745) to have access to your calendar, your
+- [12:27](https://youtube.com/watch?v=z9CwM-DAe5Q&t=747) emails. If it's going to be
+- [12:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=748) presentations, you might use something
+- [12:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=750) like granola like, "Hey, what were the
+- [12:31](https://youtube.com/watch?v=z9CwM-DAe5Q&t=751) transcripts I said?" For example, I have
+- [12:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=752) a skill here and I can say, "Hey there,
+- [12:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=754) my last meeting, could you tell me one
+- [12:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=756) action that I had to do off the back of
+- [12:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=757) that, please?" Now, this is connected to
+- [12:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=759) me for granola. Now, what that means is
+- [12:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=761) that effectively speaking, I can now ask
+- [12:43](https://youtube.com/watch?v=z9CwM-DAe5Q&t=763) questions about that. And if I'm
+- [12:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=764) building, you know, meetings, if I'm
+- [12:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=766) building presentations for clients, I
+- [12:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=768) can ask, hey, I spoke to so and so about
+- [12:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=770) this yesterday, you know, what did I
+- [12:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=771) cover about that? Or like I've got to do
+- [12:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=773) a presentation on the next steps. I can
+- [12:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=775) go through that, actually get the
+- [12:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=776) information, do it. So, as you can see,
+- [12:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=778) it's now pulled down based on that grill
+- [12:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=779) integration. So if I was doing a
+- [13:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=780) presentation for a client on next steps,
+- [13:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=782) I now add everything. So the key thing
+- [13:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=783) is to add in all the integrations and it
+- [13:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=786) could also be skills. So now we've got
+- [13:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=787) the connections. Those won't really help
+- [13:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=789) us unless we have some kind of stylistic
+- [13:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=791) guidelines about what excellence
+- [13:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=793) actually looks like for your specific
+- [13:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=795) project. And the good news is there's a
+- [13:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=797) really quick hack that you can use. And
+- [13:18](https://youtube.com/watch?v=z9CwM-DAe5Q&t=798) by hack I mean we find what excellent
+- [13:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=800) design looks like. I always start with
+- [13:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=802) the end outcome which is typically
+- [13:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=804) speaking what is the thing I want to
+- [13:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=806) happen at the end of X. So if it's a
+- [13:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=808) presentation, I want it to be clear for
+- [13:29](https://youtube.com/watch?v=z9CwM-DAe5Q&t=809) you to find it interesting and get as
+- [13:31](https://youtube.com/watch?v=z9CwM-DAe5Q&t=811) much value as possible. If it's a sales
+- [13:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=813) presentation, I may want them to buy. So
+- [13:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=814) we start with the end first. So the way
+- [13:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=816) we begin is coming over to Claude. And
+- [13:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=817) we basically give it a prompt that
+- [13:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=818) sounds like this. Hey dude, I would like
+- [13:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=820) to build a skill for building
+- [13:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=822) presentations. The presentation format
+- [13:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=824) is going to be 16 by9. I would like to
+- [13:47](https://youtube.com/watch?v=z9CwM-DAe5Q&t=827) define what excellence looks like. I'm
+- [13:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=828) going to give you some beautiful
+- [13:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=830) materials so we can agree and go back
+- [13:52](https://youtube.com/watch?v=z9CwM-DAe5Q&t=832) and forth on a desired style. Once we've
+- [13:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=834) done that and we're happy with it, I'm
+- [13:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=835) going to make sure that you're using the
+- [13:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=836) right skills, the right connections, and
+- [13:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=838) then we're going to codify this to be a
+- [14:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=840) skill that I can use whenever I want to
+- [14:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=841) to create that thing. Do you have any
+- [14:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=843) questions for me initially? Then I'm
+- [14:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=844) going to go ahead and I'm going to
+- [14:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=845) provide to you the basic assets I want
+- [14:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=847) you to use. Now, when I'm thinking about
+- [14:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=849) basic assets, I'm thinking fonts,
+- [14:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=850) typography, and we're also looking at
+- [14:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=852) general images. So, first place I'd go,
+- [14:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=854) actually, believe it or not, is you've
+- [14:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=855) got midjourney. So, you can even go over
+- [14:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=857) to midjourney and type in presentation.
+- [14:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=859) Dead simple. Bam. And have a quick look.
+- [14:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=860) You can see for certain presentations
+- [14:21](https://youtube.com/watch?v=z9CwM-DAe5Q&t=861) you're like mid Journey typically
+- [14:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=863) speaking though is more good for
+- [14:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=864) illustrations certain illustration
+- [14:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=865) styles you can come over to IDMJourney
+- [14:27](https://youtube.com/watch?v=z9CwM-DAe5Q&t=867) just get inspiration you think is really
+- [14:29](https://youtube.com/watch?v=z9CwM-DAe5Q&t=869) cool like hey doesn't this look really
+- [14:31](https://youtube.com/watch?v=z9CwM-DAe5Q&t=871) cool I like the look of that I'm just
+- [14:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=872) going to copy that as an illustration
+- [14:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=874) style right so I come back over I
+- [14:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=875) literally drop it in hey I'm dropping
+- [14:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=877) some styles and illustrations that I
+- [14:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=878) like the best all right drop that in
+- [14:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=880) another great website put on your radar
+- [14:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=882) is godly website these are things if
+- [14:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=884) you're dying websites that you might
+- [14:45](https://youtube.com/watch?v=z9CwM-DAe5Q&t=885) find really cool they're just like a
+- [14:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=886) really beautiful websites and you keep
+- [14:47](https://youtube.com/watch?v=z9CwM-DAe5Q&t=887) on scrolling basically forever who knows
+- [14:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=890) Who knows where this website ends? Who's
+- [14:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=891) to say? Another one. Great one here. You
+- [14:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=893) got 25.dev community components and good
+- [14:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=895) old fashioned undefeated. You can just
+- [14:57](https://youtube.com/watch?v=z9CwM-DAe5Q&t=897) come to Google like beautiful website
+- [14:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=899) presentations. Or in fact, if you just
+- [15:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=901) got beautiful presentations like so, and
+- [15:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=904) you can literally go into images, find
+- [15:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=905) ones that you think look cool. You like,
+- [15:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=907) what do I like the look of? What do I
+- [15:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=908) like the style of? Another good one is
+- [15:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=910) Canva. You can just lift and shift
+- [15:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=912) anything you want there. And then going
+- [15:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=913) to come back and answer clause
+- [15:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=914) questions. So here we're going to give
+- [15:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=915) it a few answers. So output format is
+- [15:18](https://youtube.com/watch?v=z9CwM-DAe5Q&t=918) going to be HTML slide deck
+- [15:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=919) self-contained HTML file. Yes, I'd like
+- [15:21](https://youtube.com/watch?v=z9CwM-DAe5Q&t=921) that please. Um content scope is going
+- [15:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=924) to be for let's say it's going to be
+- [15:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=926) education for my videos. Image
+- [15:29](https://youtube.com/watch?v=z9CwM-DAe5Q&t=929) generation. I would like you to be able
+- [15:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=930) to generate nano banana images on the
+- [15:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=932) slides where relevant. Interactivity.
+- [15:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=934) Yes, I'd love animations, transitions.
+- [15:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=936) That sounds beautiful. Make it visually
+- [15:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=937) gorgeous. And to time with my brand, I
+- [15:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=939) will give you the brand guidelines. You
+- [15:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=941) actually have um access to firecrol. So,
+- [15:43](https://youtube.com/watch?v=z9CwM-DAe5Q&t=943) I'd like you to go ahead and pull the
+- [15:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=944) Glido brand guidelines from glido.com.
+- [15:47](https://youtube.com/watch?v=z9CwM-DAe5Q&t=947) Cool. Then the other thing I recommend
+- [15:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=948) you do if you're doing presentations is
+- [15:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=950) just specify whether it's detailed or
+- [15:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=951) not. So, I would just add I would like
+- [15:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=953) these to be more presentation. So, not
+- [15:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=956) loads and loads of text. Just generate
+- [15:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=958) for me three slides to show what I mean.
+- [16:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=960) I've also attached an illustration
+- [16:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=961) style. I want you to deconstruct what
+- [16:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=963) that looks like and then maybe just show
+- [16:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=964) me one of the images with it and one
+- [16:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=966) should have HTML in there as well. I'd
+- [16:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=968) also like the glider logo in the bottom
+- [16:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=969) right hand corner. Extract that using
+- [16:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=971) your fire crawl skill. Now what I'm
+- [16:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=973) using here for image generation is
+- [16:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=974) something called KIA API which is great.
+- [16:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=976) So if you come over to here, Kia is just
+- [16:18](https://youtube.com/watch?v=z9CwM-DAe5Q&t=978) the cheapest way I have found so far to
+- [16:21](https://youtube.com/watch?v=z9CwM-DAe5Q&t=981) leverage Nano Banana 2, which is
+- [16:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=983) fantastic. Now the cool thing here is if
+- [16:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=985) you can literally if I go to pricing for
+- [16:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=986) example, it's about it's pretty it's
+- [16:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=988) pretty cheap. If I type in Nano Banana
+- [16:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=990) 2, I believe it's like 50% less. So you
+- [16:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=992) throw some credits in here. Is it worth
+- [16:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=994) doing? I really think so. I mean you can
+- [16:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=996) be of that if you want those beautiful
+- [16:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=997) presentations, beautiful images. It's
+- [16:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=999) super easy to do and it's like six cents
+- [16:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1001) um per image, right? Which is uh pretty
+- [16:43](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1003) pretty cheap and you can literally just
+- [16:45](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1005) integrate this within Claude just like
+- [16:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1006) everything else. Then once we've
+- [16:47](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1007) actually provided all this stuff to
+- [16:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1009) Claude, the next thing we need to do is
+- [16:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1010) actually make the presentation itself so
+- [16:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1013) that we can then go ahead and make it
+- [16:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1014) epic. And the presentation step is
+- [16:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1016) literally it just building the first
+- [16:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1018) generation. Now the key thing that we
+- [16:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1019) need to do here is basically enshrine
+- [17:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1021) our design principles interled with what
+- [17:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1024) we're doing as it's going ahead and
+- [17:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1025) scraping things. So for example, we just
+- [17:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1026) want to be specific on that. So, I would
+- [17:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1029) like to lead with metaphors in the
+- [17:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1031) presentation when they're designed. I
+- [17:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1033) want it to be beautiful to look at and I
+- [17:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1036) want you to do some research on what
+- [17:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1037) makes great presentations and I want you
+- [17:18](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1038) to implement that throughout the whole
+- [17:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1040) process. So, here for example, what
+- [17:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1042) we've done is we've got the information
+- [17:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1043) from Glider, right? We're getting the
+- [17:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1045) branding, we're getting everything that
+- [17:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1046) we need here. You can see it's literally
+- [17:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1048) going ahead and finding what that brand
+- [17:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1050) identity is so we can fuel it in the
+- [17:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1052) presentation so we can be consistent
+- [17:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1054) with exactly what we're building. And
+- [17:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1056) guys, look at this. And it's literally
+- [17:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1057) pulled together the exact typography.
+- [17:39](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1059) And look, it's got my logo in the bottom
+- [17:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1061) right. And it's got zero one out of
+- [17:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1062) three at the bottom left. That is crazy.
+- [17:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1064) How do I know this? Well, because from
+- [17:45](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1065) the website, it's the exact color and
+- [17:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1068) logo. It did that just by pulling it
+- [17:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1069) together with fire crawl. How crazy is
+- [17:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1071) that? I go to the next slide and look,
+- [17:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1073) it's pulled it through in the exact
+- [17:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1075) style that we gave it, right? How
+- [17:57](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1077) insane. If I come up to this, how do I
+- [17:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1078) know that? Look, this is the reference
+- [18:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1080) style. This is a style it's gone. Do you
+- [18:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1082) see how ridiculous this actually is?
+- [18:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1085) this now. It's effectively your
+- [18:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1086) imagination and it will just go ahead
+- [18:07](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1087) and do it for us. Then on the thumbnail
+- [18:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1089) page, what have we got? We got logos.
+- [18:10](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1090) We've got different stuff here. I think
+- [18:12](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1092) this is cool. And it's even got an anim.
+- [18:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1093) It's added animations into the slide.
+- [18:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1095) That is what we are dealing with now in
+- [18:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1097) 2026. It is ridiculous. And once you've
+- [18:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1099) got the core presentation, there's one
+- [18:21](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1101) final thing that we have to do whether
+- [18:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1103) it's a website, presentation or app, and
+- [18:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1104) that is to simply make it perfect for
+- [18:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1106) exactly what we're looking for. So once
+- [18:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1108) you've got the initial first draft, the
+- [18:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1110) next thing we need to do is make sure
+- [18:31](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1111) it's refined and works perfectly for
+- [18:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1113) everything that you're trying to do.
+- [18:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1114) Because when we crack that effectively,
+- [18:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1116) it's one command and then we sit back,
+- [18:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1118) we grab our coffee, and we just have a
+- [18:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1120) wonderful time. And then we just give it
+- [18:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1121) feedback. So you might say something
+- [18:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1122) like, "Hey dude, before we do any
+- [18:43](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1123) presentation, I'm going to give you an
+- [18:45](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1125) idea. I want you to do comprehensive
+- [18:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1126) research. I want you to spin up sub
+- [18:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1128) agents and fact check that research so
+- [18:50](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1130) the presentation is with actual
+- [18:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1133) truth that I want from you a text
+- [18:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1135) download on all of the sources." And
+- [18:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1136) then you might say something like, and
+- [18:57](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1137) in terms of a design, I want to
+- [18:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1139) simplify. I mean, I don't like the now
+- [19:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1141) live and beta. Let's never have that.
+- [19:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1142) Let's make sure we have the logo on the
+- [19:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1144) center of the first deck of everything.
+- [19:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1146) And the final deck should be the
+- [19:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1148) client's logo that you're going to go
+- [19:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1149) and grab based on the transcript that I
+- [19:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1151) give you. And effectively, we go back
+- [19:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1153) and forth like this, refining it to the
+- [19:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1155) point. And then when it's all done, what
+- [19:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1156) you're going to do is come down and
+- [19:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1157) basically say to her, I would like to
+- [19:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1159) turn this entire thing into a skill. So,
+- [19:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1160) I'm going to give you some information
+- [19:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1162) in the future, and you're going to
+- [19:23](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1163) produce this for me systematically. And
+- [19:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1165) at that point, Click Code will turn your
+- [19:27](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1167) design assets into a skill. Now, think
+- [19:29](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1169) about everything that we've done here
+- [19:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1170) cuz this is so so important to bear in
+- [19:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1172) mind. We've actually done five things
+- [19:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1173) here. Okay. Now, this is a system that
+- [19:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1175) can design anything. We chose our
+- [19:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1176) format websites presentations social
+- [19:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1178) media posts. We did the integrations,
+- [19:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1180) the different tools, fire crawl, Kia
+- [19:42](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1182) API, maybe you want to integrate
+- [19:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1184) YouTube, whatever, or maybe notebook LM,
+- [19:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1186) whatever you want. We gave it reference
+- [19:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1188) materials for the things that we wanted
+- [19:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1189) to create this design philosophy and
+- [19:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1191) then we generated it to get 80% of the
+- [19:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1193) way there. Then we simply refine it,
+- [19:55](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1195) give it those micro polishes, and then
+- [19:57](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1197) essentially it's ready to go. And the
+- [19:58](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1198) funny thing here is the numbers about
+- [19:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1199) this don't lie. Now check this out.
+- [20:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1201) Awesome Design has got over 46,000 stars
+- [20:03](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1203) in 2 weeks. You can tell these systems
+- [20:05](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1205) are gaining traction, and they're
+- [20:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1206) gaining traction for a reason. Campber
+- [20:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1208) Magic Studio, for example, has 260
+- [20:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1211) million users. The valuation is 42
+- [20:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1213) billion. One of the most successful
+- [20:14](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1214) Australian companies ever. This is
+- [20:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1216) basically design, the future of design
+- [20:17](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1217) that we're seeing here. AI design system
+- [20:19](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1219) conferences are getting sold out because
+- [20:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1220) there's so much interest and information
+- [20:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1222) in it. You can see here for example
+- [20:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1224) situations where I reach Figma have
+- [20:25](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1225) fallen off a cliff. We're having design
+- [20:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1226) conferences sell out and we're even
+- [20:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1228) having people who need to go to these
+- [20:29](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1229) specialist design softwares less and
+- [20:31](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1231) less. That's only going to increase over
+- [20:33](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1233) time. Now I did a little bit of
+- [20:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1234) interesting um research funnily enough
+- [20:36](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1236) using the same system I'm showing you to
+- [20:38](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1238) understand how what people are actually
+- [20:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1240) saying about design. What's really
+- [20:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1241) interesting though is that 53% of people
+- [20:44](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1244) are already starting to get this. And
+- [20:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1246) with systems like this, we have to hire
+- [20:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1248) designers less and less. This is where
+- [20:49](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1249) it's going. But what do you do for your
+- [20:51](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1251) own specific situation? So, this is what
+- [20:53](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1253) you should be doing right now. If you're
+- [20:54](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1254) a creator and a founder, you need to
+- [20:56](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1256) start with this straight away. It is
+- [20:59](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1259) going to save you so much money and make
+- [21:01](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1261) you more money by building beautiful
+- [21:02](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1262) designs that look like this. You want to
+- [21:04](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1264) get design files for brands you desire
+- [21:06](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1266) and go through the same process item by
+- [21:08](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1268) item for your business. If you're a
+- [21:09](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1269) developer, you know coding. Design is
+- [21:11](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1271) just coding plus taste. We're now in an
+- [21:13](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1273) era where creatives can just enact
+- [21:15](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1275) basically create their own vision.
+- [21:16](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1276) That's where we're at. Grab the repo put
+- [21:18](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1278) down below in the free resources section
+- [21:20](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1280) and you can start to see how it works.
+- [21:21](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1281) And if you're an enterprising team, the
+- [21:22](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1282) idea here is that you're not going to
+- [21:24](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1284) rip out your core systems overnight. Of
+- [21:26](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1286) course, you're not, but you do need to
+- [21:27](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1287) start becoming a design first business
+- [21:28](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1288) based on when you're at them. So, Monday
+- [21:30](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1290) action, build your first design skill.
+- [21:32](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1292) This is the thing I want you to do right
+- [21:34](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1294) now is follow this exact system and
+- [21:35](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1295) build your very first one. But it does
+- [21:37](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1297) then lead us to one final problem and
+- [21:40](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1300) that's the fact that we're giving it
+- [21:41](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1301) information, but it will lose context.
+- [21:43](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1303) It has amnesia and a memory problem.
+- [21:45](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1305) Which is why the next thing that we need
+- [21:46](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1306) to do is solve that memory problem so we
+- [21:48](https://youtube.com/watch?v=z9CwM-DAe5Q&t=1308) can scale faster than ever before.
