@@ -1,0 +1,364 @@
+---
+title: "왜 스킬이 졌을까?(feat. agent.md 의 비밀)"
+source_url: https://youtube.com/watch?v=q-HacOazKsA
+video_id: q-HacOazKsA
+source_type: youtube
+lang: ko
+analyzed: 2026-06-25
+category: 일반학습
+tags: ["Agent.md", "Skills(AI 도구)", "컨텍스트 항상 노출 전략", "AI의 선택 실수", "문서 압축(목차화)", "Vercel 실험 결과"]
+status: active
+---
+# 왜 스킬이 졌을까?(feat. agent.md 의 비밀)
+
+## 🧠 이해 (Understand)
+- **Summary:** Vercel이 AI에게 최신 문서를 제공하는 두 방식(Skills vs Agent.md)을 실험한 결과, 단순 텍스트 파일인 Agent.md가 100점, 정교한 Skills가 79점을 기록했다. Skills는 AI가 스스로 매뉴얼을 꺼내 보지 않거나(10번 중 6번 무시), 지시 문구 순서 하나에 결과가 뒤집히는 불안정성이 문제였다. Agent.md는 항상 눈앞에 펼쳐져 있어 AI가 '볼지 말지' 고민할 필요가 없어 안정적으로 작동했다. 단, 문서 분량을 80% 압축(40→8)해 목차만 남겨도 100점을 유지했다. 결론: 평소 기본 맥락은 Agent.md로 항상 노출하고, 특수 대형 작업만 Skills로 명시 호출하는 조합이 최적이다.
+- **Core Message:** AI에게 똑똑한 도구를 쥐여주기보다, 필요한 정보를 항상 눈앞에 펼쳐두어 선택할 틈을 없애는 것이 더 높은 정확도를 만든다.
+> 멍청한 방식이 정교한 방식을 이겼다.
+> 선택을 시키면 틀려요. 선택을 안 시키면 안 틀려요.
+> 기억 말고 문서 봐. 이 한 마디가 100점과 53점을 가르는 거예요.
+❗ Skills를 제공했지만 '알아서 쓰라'고 두었을 때 점수가 53점으로, 아무것도 안 준 맨봉 상태(53점)와 동일했다.
+❗ AI가 Skills 매뉴얼 존재를 알면서도 10번 중 약 6번을 꺼내 보지 않았다.
+❗ 문서를 80% 압축(40→8 분량)해 목차만 남겼는데도 점수는 그대로 100점을 유지했다.
+
+## 📚 핵심 용어
+- **Agent.md:** 프로젝트 루트에 놓는 텍스트 파일로, AI가 작업할 때 항상 자동으로 참조하는 맥락 문서. / 신입 직원 책상 위에 항상 펼쳐진 메모지. 볼지 말지 고민 없이 눈에 그냥 들어온다. / Skills는 책장에서 꺼내야 하는 매뉴얼, Agent.md는 이미 책상에 펼쳐진 메모지. 차이는 AI가 꺼내는 행동을 해야 하느냐 여부다.
+- **Skills:** AI가 특정 상황에서 필요할 때 꺼내 쓰도록 설계된 전문 문서 묶음(도구 세트). / 회사 책장에 꽂힌 두꺼운 전문 매뉴얼. 필요할 때 꺼내 보라고 있지만, 꺼내는 건 AI 판단에 달려있다. / Skills는 AI가 사용 여부를 스스로 판단(오판 가능), Agent.md는 판단 없이 항상 노출. 핵심 차이는 AI의 선택 개입 여부다.
+- **컨텍스트 압축(목차화):** AI에게 줄 문서를 전체 내용 대신 목차만 남겨 80% 줄이는 최적화 기법. / 책 전체를 책상에 펼치는 대신, 무슨 내용이 몇 페이지에 있는지 목차 한 장만 붙여두는 것. / 전체 문서 삽입은 AI의 작업 공간(컨텍스트 윈도우)을 잡아먹지만, 목차화는 공간을 아끼면서도 정확도를 유지한다.
+- **수동 호출 vs 자동 호출:** AI 도구를 사용자가 직접 지정해 부르느냐, AI가 상황 판단해 자동으로 쓰느냐의 차이. / 자동은 직원이 알아서 매뉴얼 꺼내길 기다리는 것, 수동은 내가 직접 '지금 이거 봐'라고 집어주는 것. / 자동 호출은 편리하지만 AI가 놓치면 점수가 53점까지 떨어지고, 수동 호출은 번거롭지만 100% 확실하게 작동한다.
+
+## 🚀 실행 (Execute)
+- [ ] 현재 사용 중인 AI 작업 프로젝트(코드, 기획 문서, 콘텐츠 폴더 등) 루트에 AGENT.md 파일을 만들고, 프로젝트 규칙·핵심 맥락을 목차 형식으로 짧게 작성. 맨 위에 '외운 지식 말고 이 문서를 먼저 보고 판단해' 한 줄 삽입. — ⏰ 오늘 · ⚡ 30분
+  - 담당: 나
+  - 이유: 오늘 영상의 핵심 실험 결과를 즉시 내 워크플로우에 적용할 수 있는 가장 직접적인 행동이며, 별도 도구 없이 텍스트 파일 하나로 AI 정확도를 높일 수 있다.
+- [ ] 현재 쓰는 AI 도구(Cursor, Claude 등)에서 Skills/자동 도구 호출에만 의존하던 반복 작업을 점검하고, 자주 틀리는 패턴이 있다면 해당 지식을 AGENT.md에 추가하거나 직접 수동 호출로 전환. — ⏰ 이번 주 · ⚡ 1~2시간
+  - 담당: 나
+  - 이유: AI가 자동으로 도구를 꺼내길 기다리면 10번 중 6번 놓친다는 실험 결과를 내 실제 업무에서 검증하고, 신뢰성 있는 방식으로 바꾸기 위함.
+- 자료: Vercel 공식 블로그 Agent.md 실험 보고서 (vercel.com/blog 검색 — 'agent.md vs skills' 키워드로 확인 필요)
+- 자료: npx next-code-mod 최신버전 agent-md 명령어 (영상에서 언급, 실제 패키지명 정확 여부 확인 필요 — npm/npx에서 직접 검색 권장)
+- Timeline: 1순위(오늘): AGENT.md 파일 생성 및 현재 프로젝트에 적용 → 2순위(이번 주): 기존 Skills/자동 호출 의존 작업 점검 및 수동 전환 → 3순위(2주 내): 적용 후 AI 응답 정확도 체감 변화 확인, 필요 시 내용 보완
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
+- 핵심 개념: [[Agent.md]] · [[Skills]] · [[컨텍스트 항상 노출 전략]] · [[AI의 선택 실수]] · [[문서 압축]] · [[Vercel 실험 결과]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=q-HacOazKsA&t=0) 버셀이 재밌는 실험 결과를 하나
+- [0:02](https://youtube.com/watch?v=q-HacOazKsA&t=2) 공개했어요. AI한테 일을 시키는 두
+- [0:04](https://youtube.com/watch?v=q-HacOazKsA&t=4) 가지 방식을 비교해 봤거든요. 한쪽은
+- [0:06](https://youtube.com/watch?v=q-HacOazKsA&t=6) 요즘 제일 핫한 방식인 스킬. 다른
+- [0:08](https://youtube.com/watch?v=q-HacOazKsA&t=8) 한쪽은 그냥 파일 하나인
+- [0:10](https://youtube.com/watch?v=q-HacOazKsA&t=10) 에이전트.MD. 결과가요.이
+- [0:12](https://youtube.com/watch?v=q-HacOazKsA&t=12) 에이전트.md가 MD가 100점을
+- [0:14](https://youtube.com/watch?v=q-HacOazKsA&t=14) 맞았어요. 스킬은 79점에서
+- [0:16](https://youtube.com/watch?v=q-HacOazKsA&t=16) 얹쳤고요. 다들 좋다고 하던 그
+- [0:17](https://youtube.com/watch?v=q-HacOazKsA&t=17) 스킬이 그냥 파일 하나한테 진
+- [0:19](https://youtube.com/watch?v=q-HacOazKsA&t=19) 거예요. 오늘은 이게 왜 이렇게
+- [0:21](https://youtube.com/watch?v=q-HacOazKsA&t=21) 됐는지 그리고 여러분이 지금 당장
+- [0:23](https://youtube.com/watch?v=q-HacOazKsA&t=23) 어디다 써 먹을 수 있는지 처음부터
+- [0:25](https://youtube.com/watch?v=q-HacOazKsA&t=25) 끝까지 천천히 풀어 드릴게요.이 영상
+- [0:27](https://youtube.com/watch?v=q-HacOazKsA&t=27) 끝까지 보시면요.이 세 가지를 얻어
+- [0:29](https://youtube.com/watch?v=q-HacOazKsA&t=29) 가실 수 있어요. 첫째, 요즘 다들
+- [0:31](https://youtube.com/watch?v=q-HacOazKsA&t=31) 말하는 스킬이 정확히 뭔지 그리고 왜
+- [0:33](https://youtube.com/watch?v=q-HacOazKsA&t=33) 생각보다는 못 믿어온지. 둘째,
+- [0:36](https://youtube.com/watch?v=q-HacOazKsA&t=36) 에이전트 MD가 대체 뭔지. 이걸 왜
+- [0:38](https://youtube.com/watch?v=q-HacOazKsA&t=38) 버셀이 직접 밀어주는지. 셋째,
+- [0:41](https://youtube.com/watch?v=q-HacOazKsA&t=41) 여러분 프로젝트에 이걸 단 한 줄로
+- [0:43](https://youtube.com/watch?v=q-HacOazKsA&t=43) 적용하는 방법까지 개발 안 하시는
+- [0:45](https://youtube.com/watch?v=q-HacOazKsA&t=45) 분들도 걱정 마세요. 오늘은 어려운
+- [0:47](https://youtube.com/watch?v=q-HacOazKsA&t=47) 말 다 빼고 전부 일상 비유로 풀어
+- [0:49](https://youtube.com/watch?v=q-HacOazKsA&t=49) 드릴 거예요. 자, 그럼 먼저이
+- [0:51](https://youtube.com/watch?v=q-HacOazKsA&t=51) 실험이 왜 시작됐는지부터 볼게요.
+- [0:53](https://youtube.com/watch?v=q-HacOazKsA&t=53) 요즘 AA한테 코드 짜 달라고 많이
+- [0:55](https://youtube.com/watch?v=q-HacOazKsA&t=55) 하시잖아요. 클루드한테 커서한테 코드
+- [0:58](https://youtube.com/watch?v=q-HacOazKsA&t=58) 짜줘 하면 척 짜주죠. 근데요. 가끔
+- [1:00](https://youtube.com/watch?v=q-HacOazKsA&t=60) 이상하게 틀릴 때가 많아요. 분명
+- [1:02](https://youtube.com/watch?v=q-HacOazKsA&t=62) 멀쩡한 도구인데 자꾸 옛날 방식으로
+- [1:04](https://youtube.com/watch?v=q-HacOazKsA&t=64) 코드를 짜는 거예요. 왜 그럴까요?
+- [1:06](https://youtube.com/watch?v=q-HacOazKsA&t=66) 이거 비유로 설명해 드릴게요.
+- [1:08](https://youtube.com/watch?v=q-HacOazKsA&t=68) AI는요. 몇 달 전에 공부를 끝낸
+- [1:10](https://youtube.com/watch?v=q-HacOazKsA&t=70) 학생이에요. 시험 보기 전까지 책을
+- [1:12](https://youtube.com/watch?v=q-HacOazKsA&t=72) 달달 외웠어요. 근데 외운 다음에 책
+- [1:15](https://youtube.com/watch?v=q-HacOazKsA&t=75) 내용이 바뀐 거예요. 이번에
+- [1:16](https://youtube.com/watch?v=q-HacOazKsA&t=76) 넥js라는 도구가 16버전으로
+- [1:18](https://youtube.com/watch?v=q-HacOazKsA&t=78) 올라갔거든요. 새로운 기능들이 잔뜩
+- [1:20](https://youtube.com/watch?v=q-HacOazKsA&t=80) 생겼어요. 그런데 AI는요.이 세
+- [1:23](https://youtube.com/watch?v=q-HacOazKsA&t=83) 기능들을 한 번도 본 적이 없어요.
+- [1:24](https://youtube.com/watch?v=q-HacOazKsA&t=84) 공부 끝난 다음에 나왔으니까요.
+- [1:26](https://youtube.com/watch?v=q-HacOazKsA&t=86) 그러니 어떻게 되겠어요? 모르면서도
+- [1:28](https://youtube.com/watch?v=q-HacOazKsA&t=88) 아는 척. 옛날에 외운 대로 코드를
+- [1:30](https://youtube.com/watch?v=q-HacOazKsA&t=90) 막자는 거죠. 이게 바로 버셀이
+- [1:32](https://youtube.com/watch?v=q-HacOazKsA&t=92) 마주친 문제였어요. 새 기능을
+- [1:34](https://youtube.com/watch?v=q-HacOazKsA&t=94) AA한테 어떻게 알려주지? 어떻게
+- [1:37](https://youtube.com/watch?v=q-HacOazKsA&t=97) AI가 옛날 지식 말고 새 문서를
+- [1:39](https://youtube.com/watch?v=q-HacOazKsA&t=99) 보고 일하게 만들지. 여기서 두 가지
+- [1:40](https://youtube.com/watch?v=q-HacOazKsA&t=100) 방법이 나옵니다. 자, 두 명의
+- [1:43](https://youtube.com/watch?v=q-HacOazKsA&t=103) 선수를 소개할게요. 첫 번째 선수
+- [1:45](https://youtube.com/watch?v=q-HacOazKsA&t=105) 스킬이에요. 스킬이 뭐냐면요.
+- [1:47](https://youtube.com/watch?v=q-HacOazKsA&t=107) AI한테 주는 전문 매뉴얼
+- [1:49](https://youtube.com/watch?v=q-HacOazKsA&t=109) 묶음이에요. 비유하자면요. 회사
+- [1:51](https://youtube.com/watch?v=q-HacOazKsA&t=111) 책장에 꽂혀 있는 두꺼운 전문
+- [1:53](https://youtube.com/watch?v=q-HacOazKsA&t=113) 매뉴얼이에요. 넥 작업할 때 생기면
+- [1:56](https://youtube.com/watch?v=q-HacOazKsA&t=116) 저 책장에서 매뉴얼 꺼내서 보고해.
+- [1:58](https://youtube.com/watch?v=q-HacOazKsA&t=118) 이렇게 정해 놓는 거죠. 똑똑하죠?
+- [2:00](https://youtube.com/watch?v=q-HacOazKsA&t=120) 필요할 때만 꺼내 보니까 평소엔
+- [2:02](https://youtube.com/watch?v=q-HacOazKsA&t=122) 자리도 안 차지하고요. 두 번째
+- [2:04](https://youtube.com/watch?v=q-HacOazKsA&t=124) 선수는 에이전트닷m예요. 이건요 그냥
+- [2:07](https://youtube.com/watch?v=q-HacOazKsA&t=127) 텍스트 파일 하나예요. 프로젝트
+- [2:08](https://youtube.com/watch?v=q-HacOazKsA&t=128) 폴더에 딱 놓여 있어요.
+- [2:09](https://youtube.com/watch?v=q-HacOazKsA&t=129) 비유하자면요. 신입 직원 책상 위에
+- [2:11](https://youtube.com/watch?v=q-HacOazKsA&t=131) 항상 펴져 있는 메모지예요. 책장에
+- [2:13](https://youtube.com/watch?v=q-HacOazKsA&t=133) 꽂아두는게 아니라 눈앞에 딱 펼쳐
+- [2:15](https://youtube.com/watch?v=q-HacOazKsA&t=135) 놓는 거죠. 뭘 하든 항상 보이게.
+- [2:17](https://youtube.com/watch?v=q-HacOazKsA&t=137) 일을 시작할 때마다 안 봐도 그냥
+- [2:18](https://youtube.com/watch?v=q-HacOazKsA&t=138) 눈에 들어오게. 자, 그럼 누가 봐도
+- [2:20](https://youtube.com/watch?v=q-HacOazKsA&t=140) 첫 번째가 더 좋아 보이죠? 필요할
+- [2:22](https://youtube.com/watch?v=q-HacOazKsA&t=142) 때 꺼내 보는게 더 효율적이잖아요.
+- [2:24](https://youtube.com/watch?v=q-HacOazKsA&t=144) 근데 결과는 정반되었어요. 버셀이
+- [2:26](https://youtube.com/watch?v=q-HacOazKsA&t=146) 어떻게 실험했는지 볼게요. 총네 가지
+- [2:28](https://youtube.com/watch?v=q-HacOazKsA&t=148) 상황을 만들었어요. 첫 번째 아무
+- [2:30](https://youtube.com/watch?v=q-HacOazKsA&t=150) 도움 말도 안 주고 그냥 AI한테
+- [2:32](https://youtube.com/watch?v=q-HacOazKsA&t=152) 막히기. 맨봉 상태라고 할게요. 두
+- [2:35](https://youtube.com/watch?v=q-HacOazKsA&t=155) 번째 스킬을 주긴 했는데 알아서
+- [2:36](https://youtube.com/watch?v=q-HacOazKsA&t=156) 쓰라고 두기. 세 번째 스킬을 주면서
+- [2:38](https://youtube.com/watch?v=q-HacOazKsA&t=158) 이거 꼭 써하고 강하게 지시하기.네
+- [2:41](https://youtube.com/watch?v=q-HacOazKsA&t=161) 번째 에이전트. MD 그러니까 눈앞에
+- [2:43](https://youtube.com/watch?v=q-HacOazKsA&t=163) 메모지 방식. 그리고요. 일부러
+- [2:46](https://youtube.com/watch?v=q-HacOazKsA&t=166) 어려운 문제만 골랐어요. AI가 한
+- [2:48](https://youtube.com/watch?v=q-HacOazKsA&t=168) 번도 본 적 없는 새 기능들로만
+- [2:50](https://youtube.com/watch?v=q-HacOazKsA&t=170) 시험지를 만든 거예요. 공정하죠?네
+- [2:52](https://youtube.com/watch?v=q-HacOazKsA&t=172) 명한테 똑같은 제일 어려운 시험을
+- [2:54](https://youtube.com/watch?v=q-HacOazKsA&t=174) 보게 한 거예요. 자, 이제 점수
+- [2:56](https://youtube.com/watch?v=q-HacOazKsA&t=176) 나갑니다. 점수 하나하나 보여
+- [2:58](https://youtube.com/watch?v=q-HacOazKsA&t=178) 드릴게요. 맨봉 상태 53점이에요.
+- [3:00](https://youtube.com/watch?v=q-HacOazKsA&t=180) 딱 반타작이죠. 새 기능이니까 절반은
+- [3:03](https://youtube.com/watch?v=q-HacOazKsA&t=183) 틀려요. 두 번째 스킬을 주고 알아서
+- [3:05](https://youtube.com/watch?v=q-HacOazKsA&t=185) 쓰라고 한 경우. 이것도
+- [3:06](https://youtube.com/watch?v=q-HacOazKsA&t=186) 53점이에요. 네, 잘못 들으신 거
+- [3:08](https://youtube.com/watch?v=q-HacOazKsA&t=188) 아닙니다. 똑같이 53점. 매뉴얼을
+- [3:10](https://youtube.com/watch?v=q-HacOazKsA&t=190) 책장에 꽂아 줬는데도 점수가 1점도
+- [3:12](https://youtube.com/watch?v=q-HacOazKsA&t=192) 안 올랐어요. 왜냐고요? AI가 그
+- [3:14](https://youtube.com/watch?v=q-HacOazKsA&t=194) 매뉴얼을 꺼내 보지를 않은 거예요.
+- [3:16](https://youtube.com/watch?v=q-HacOazKsA&t=196) 세 번째 야이 매뉴얼 꼭 봐 하고
+- [3:17](https://youtube.com/watch?v=q-HacOazKsA&t=197) 강하게 시킨 경우 이제야 좀 올라요.
+- [3:19](https://youtube.com/watch?v=q-HacOazKsA&t=199) 79점 26점이나 뛰었죠. 확실히
+- [3:22](https://youtube.com/watch?v=q-HacOazKsA&t=202) 효과는 있어요. 자 그리고 마지막
+- [3:23](https://youtube.com/watch?v=q-HacOazKsA&t=203) 눈앞에 메머지를 펼쳐둔 에이전트 단
+- [3:25](https://youtube.com/watch?v=q-HacOazKsA&t=205) MD 방식 100점이에요. 다
+- [3:27](https://youtube.com/watch?v=q-HacOazKsA&t=207) 맞았어요. 단 하나도 안 틀렸습니다.
+- [3:29](https://youtube.com/watch?v=q-HacOazKsA&t=209) 빌드도 100점, 검사도 100점,
+- [3:31](https://youtube.com/watch?v=q-HacOazKsA&t=211) 테스트도 100점 전부 만점이에요.
+- [3:33](https://youtube.com/watch?v=q-HacOazKsA&t=213) 그냥 에이전트닷m 파일 하나가요.
+- [3:35](https://youtube.com/watch?v=q-HacOazKsA&t=215) 제일 똑똑하던 스킬을 21점
+- [3:37](https://youtube.com/watch?v=q-HacOazKsA&t=217) 차이로이긴 거예요. 여기서 잠깐요.
+- [3:39](https://youtube.com/watch?v=q-HacOazKsA&t=219) 지금이 결과가 좀 이상하지 않으세요?
+- [3:41](https://youtube.com/watch?v=q-HacOazKsA&t=221) 상식적으로는요. 필요할 때 꺼내 본
+- [3:43](https://youtube.com/watch?v=q-HacOazKsA&t=223) 똑똑한 방식이 이겨야 하잖아요. 근데
+- [3:46](https://youtube.com/watch?v=q-HacOazKsA&t=226) 그냥 항상 펼쳐져는 멍청한 방식이
+- [3:48](https://youtube.com/watch?v=q-HacOazKsA&t=228) 이겼어요. 버셀도 이게 신기했나
+- [3:50](https://youtube.com/watch?v=q-HacOazKsA&t=230) 봐요. 보고서에 이렇게 적었어요.
+- [3:51](https://youtube.com/watch?v=q-HacOazKsA&t=231) 멍청한 방식이 정교한 방식을 이겼다.
+- [3:53](https://youtube.com/watch?v=q-HacOazKsA&t=233) 자, 그럼 진짜 궁금한 거. 도대체
+- [3:55](https://youtube.com/watch?v=q-HacOazKsA&t=235) 왜 이렇게 됐을까요? 지금부터가이
+- [3:57](https://youtube.com/watch?v=q-HacOazKsA&t=237) 영상의 진짜 핵심이에요.
+- [4:00](https://youtube.com/watch?v=q-HacOazKsA&t=240) 먼저 스킬이 왜 졌는지부터 이유가 두
+- [4:02](https://youtube.com/watch?v=q-HacOazKsA&t=242) 가지예요. 첫 번째 이유 AI가
+- [4:05](https://youtube.com/watch?v=q-HacOazKsA&t=245) 매뉴얼을 그냥 안 꺼내 봐요.
+- [4:06](https://youtube.com/watch?v=q-HacOazKsA&t=246) 실험에서요. 열 번 중에 거의 여섯
+- [4:08](https://youtube.com/watch?v=q-HacOazKsA&t=248) 번을 AI가 매뉴얼 존재를 알면서도
+- [4:10](https://youtube.com/watch?v=q-HacOazKsA&t=250) 안 펼쳐봤어요. 이게 무슨
+- [4:12](https://youtube.com/watch?v=q-HacOazKsA&t=252) 상황이냐면요. 신입 직원한테 모르면
+- [4:14](https://youtube.com/watch?v=q-HacOazKsA&t=254) 저 책장 매뉴얼 봐 했더니 모르는
+- [4:16](https://youtube.com/watch?v=q-HacOazKsA&t=256) 채로 그냥 자기 기억으로 일을 해
+- [4:18](https://youtube.com/watch?v=q-HacOazKsA&t=258) 버린 거예요. 어, 이거 예전에
+- [4:20](https://youtube.com/watch?v=q-HacOazKsA&t=260) 했는데요. 하면서요. 근데 그 예전
+- [4:22](https://youtube.com/watch?v=q-HacOazKsA&t=262) 기억이 이미 옛날 거잖아요. 그러니
+- [4:24](https://youtube.com/watch?v=q-HacOazKsA&t=264) 틀리죠. 사실 이거요. 저도 진짜
+- [4:26](https://youtube.com/watch?v=q-HacOazKsA&t=266) 많이 겪었어요. AI가 알아서 스킬을
+- [4:28](https://youtube.com/watch?v=q-HacOazKsA&t=268) 딱 불러주면 얼마나 좋아요. 근데요.
+- [4:30](https://youtube.com/watch?v=q-HacOazKsA&t=270) 이게 생각보다 진짜 안 돼요. 분명
+- [4:32](https://youtube.com/watch?v=q-HacOazKsA&t=272) 스킬을 만들어 놨거든요. 이런 상황에
+- [4:34](https://youtube.com/watch?v=q-HacOazKsA&t=274) 이거 써하고 다 세팅해 놨어요. 근데
+- [4:37](https://youtube.com/watch?v=q-HacOazKsA&t=277) 막상이 상황이 오면요. AI가 그걸
+- [4:39](https://youtube.com/watch?v=q-HacOazKsA&t=279) 안 불러요. 16 번을 그냥
+- [4:41](https://youtube.com/watch?v=q-HacOazKsA&t=281) 지나쳐요. 이번 실험 숫자랑 제
+- [4:43](https://youtube.com/watch?v=q-HacOazKsA&t=283) 경험이 정확히 똑같았어요. 그래서
+- [4:45](https://youtube.com/watch?v=q-HacOazKsA&t=285) 저는요. 이제 자동툴 이거를 거의 안
+- [4:47](https://youtube.com/watch?v=q-HacOazKsA&t=287) 믿어요. 그냥 제가 직접 손으로
+- [4:49](https://youtube.com/watch?v=q-HacOazKsA&t=289) 불러요. 야, 지금이 스킬 써
+- [4:50](https://youtube.com/watch?v=q-HacOazKsA&t=290) 하고요. 이게 마음 편해요. 알아서
+- [4:53](https://youtube.com/watch?v=q-HacOazKsA&t=293) 해 주기 기다리는 것보다 그냥 제가
+- [4:55](https://youtube.com/watch?v=q-HacOazKsA&t=295) 누르는게 100배 확실하거든요.
+- [4:57](https://youtube.com/watch?v=q-HacOazKsA&t=297) 자동은요. 될 때도 있고 안 될 때도
+- [4:58](https://youtube.com/watch?v=q-HacOazKsA&t=298) 있어요. 근데 수동은 100% 돼요.
+- [5:00](https://youtube.com/watch?v=q-HacOazKsA&t=300) 두 번째 이유 이게 더 무서운데요.
+- [5:02](https://youtube.com/watch?v=q-HacOazKsA&t=302) 말 한 마디에 결과가 휙휙 바뀌어요.
+- [5:05](https://youtube.com/watch?v=q-HacOazKsA&t=305) 버셀이 지시문구를 살짝만 바꿔
+- [5:06](https://youtube.com/watch?v=q-HacOazKsA&t=306) 봤거든요. 무조건 매뉴얼부터 봐라고
+- [5:08](https://youtube.com/watch?v=q-HacOazKsA&t=308) 하니까요. AI가 매뉴얼만 보고 적작
+- [5:11](https://youtube.com/watch?v=q-HacOazKsA&t=311) 프로젝트는 안 봤어요. 근데 프로젝트
+- [5:13](https://youtube.com/watch?v=q-HacOazKsA&t=313) 먼저 보고 그다음에 매뉴얼 봐라고
+- [5:14](https://youtube.com/watch?v=q-HacOazKsA&t=314) 하니까요. 이번엔 제대로 일을
+- [5:16](https://youtube.com/watch?v=q-HacOazKsA&t=316) 했어요. 단어 순서 하나 바꿨을
+- [5:18](https://youtube.com/watch?v=q-HacOazKsA&t=318) 뿐인데 결과가 휙휙 바뀐 거예요.이
+- [5:20](https://youtube.com/watch?v=q-HacOazKsA&t=320) 무슨 뜻이냐면요. 스킬은 너무
+- [5:22](https://youtube.com/watch?v=q-HacOazKsA&t=322) 예민해요. 쉽게 말해서요. 지시를
+- [5:23](https://youtube.com/watch?v=q-HacOazKsA&t=323) 아주 정확하게 안 하면 언제 삐끗할지
+- [5:25](https://youtube.com/watch?v=q-HacOazKsA&t=325) 모르는 거죠. 그럼 반대로요.
+- [5:27](https://youtube.com/watch?v=q-HacOazKsA&t=327) 에이전트 냄디는 왜 100점을
+- [5:29](https://youtube.com/watch?v=q-HacOazKsA&t=329) 맞았을까요? 이유가 깔끔하게 세
+- [5:31](https://youtube.com/watch?v=q-HacOazKsA&t=331) 가지예요. 첫 번째 고민할 순간이
+- [5:33](https://youtube.com/watch?v=q-HacOazKsA&t=333) 아예 없어요. 스킬은요. AI가 매번
+- [5:35](https://youtube.com/watch?v=q-HacOazKsA&t=335) 고민을 해야 돼요. 지금 매뉴얼을
+- [5:37](https://youtube.com/watch?v=q-HacOazKsA&t=337) 봐야 하나, 말아야 하나이 고민하는
+- [5:39](https://youtube.com/watch?v=q-HacOazKsA&t=339) 순간이 바로 실수가 터지는
+- [5:41](https://youtube.com/watch?v=q-HacOazKsA&t=341) 지점이에요. 근데 에이전트 MD는요.
+- [5:43](https://youtube.com/watch?v=q-HacOazKsA&t=343) 고민 자체가 없어요. 메모지가 그냥
+- [5:45](https://youtube.com/watch?v=q-HacOazKsA&t=345) 눈앞에 쳐져 있으니까요. 볼지 말지
+- [5:47](https://youtube.com/watch?v=q-HacOazKsA&t=347) 결정할 필요가 없는 거예요. 이미
+- [5:49](https://youtube.com/watch?v=q-HacOazKsA&t=349) 보이니까요. 두 번째 항상 매 순간
+- [5:51](https://youtube.com/watch?v=q-HacOazKsA&t=351) 거기 있어요. 스킬은 필요할 때
+- [5:53](https://youtube.com/watch?v=q-HacOazKsA&t=353) 불러야 하잖아요. 근데 부르는 그
+- [5:55](https://youtube.com/watch?v=q-HacOazKsA&t=355) 타이밍을 AI가 놓칠 수 있어요.
+- [5:57](https://youtube.com/watch?v=q-HacOazKsA&t=357) 에이전트 냄디는요. Aa 일하는 모든
+- [5:59](https://youtube.com/watch?v=q-HacOazKsA&t=359) 순간에 항상 같이 있어요. 놓칠 수가
+- [6:01](https://youtube.com/watch?v=q-HacOazKsA&t=361) 없어요. 세 번째 순서를 고민할 필요
+- [6:04](https://youtube.com/watch?v=q-HacOazKsA&t=364) 없어요. 매뉴얼을 볼까? 코드를 먼저
+- [6:07](https://youtube.com/watch?v=q-HacOazKsA&t=367) 볼까? 이런 순서 고민도 사라져요.
+- [6:09](https://youtube.com/watch?v=q-HacOazKsA&t=369) 그냥 항상 옆에 있으니까 자연스럽게
+- [6:10](https://youtube.com/watch?v=q-HacOazKsA&t=370) 같이 보는 거예요. 정리하자면요.
+- [6:12](https://youtube.com/watch?v=q-HacOazKsA&t=372) 에이전트닷 MD가이긴 비결은 의외로
+- [6:14](https://youtube.com/watch?v=q-HacOazKsA&t=374) 단순해요. AI한테 선택을 안 시킨
+- [6:17](https://youtube.com/watch?v=q-HacOazKsA&t=377) 거예요. 선택을 시키면 틀려요.
+- [6:19](https://youtube.com/watch?v=q-HacOazKsA&t=379) 선택을 안 시키면 안 틀려요. 자,
+- [6:21](https://youtube.com/watch?v=q-HacOazKsA&t=381) 여기서 진짜 중요한 교훈 하나 짓고
+- [6:22](https://youtube.com/watch?v=q-HacOazKsA&t=382) 갈게요. 이거 꼭 기억하세요. 우리는
+- [6:24](https://youtube.com/watch?v=q-HacOazKsA&t=384) 보통요. AI한테 똑똑한 도구를
+- [6:26](https://youtube.com/watch?v=q-HacOazKsA&t=386) 지어주면 더 잘하겠지라고
+- [6:27](https://youtube.com/watch?v=q-HacOazKsA&t=387) 생각하잖아요. 근데 실제로는요.
+- [6:30](https://youtube.com/watch?v=q-HacOazKsA&t=390) 도구가 똑똑할수록 AI가 그걸 쓸지
+- [6:32](https://youtube.com/watch?v=q-HacOazKsA&t=392) 말지 고민하다 삐끗해요. 차라리 그냥
+- [6:34](https://youtube.com/watch?v=q-HacOazKsA&t=394) 정보를 눈앞에 펼쳐 주는게 나아요.
+- [6:36](https://youtube.com/watch?v=q-HacOazKsA&t=396) 능동적으로 쳐쓰게 하지 말고요.
+- [6:38](https://youtube.com/watch?v=q-HacOazKsA&t=398) 가만히 있어도 보이게 하는 거. 이게
+- [6:40](https://youtube.com/watch?v=q-HacOazKsA&t=400) 지금 AI를 다루는 핵심이에요.
+- [6:42](https://youtube.com/watch?v=q-HacOazKsA&t=402) 자,이 원리를 알았으니까 이제 한
+- [6:43](https://youtube.com/watch?v=q-HacOazKsA&t=403) 단계 더 깊은 얘기로가 볼게요.
+- [6:46](https://youtube.com/watch?v=q-HacOazKsA&t=406) 여기서 버셀이 영리했던 부분이 하나
+- [6:48](https://youtube.com/watch?v=q-HacOazKsA&t=408) 더 있어요. 메모지를 눈앞에 펼쳐
+- [6:50](https://youtube.com/watch?v=q-HacOazKsA&t=410) 두면 좋다. 여기까지는 알았어요.
+- [6:52](https://youtube.com/watch?v=q-HacOazKsA&t=412) 근데 문제가 있어요. 문서가 너무
+- [6:53](https://youtube.com/watch?v=q-HacOazKsA&t=413) 길면요. 비유하자면요. 책한 권을
+- [6:55](https://youtube.com/watch?v=q-HacOazKsA&t=415) 통째로 책상에 펼쳐 두는 거예요.
+- [6:57](https://youtube.com/watch?v=q-HacOazKsA&t=417) 그럼 정작 일할 공간이 없었잖아요.
+- [7:00](https://youtube.com/watch?v=q-HacOazKsA&t=420) AI도 똑같아요. 펼쳐둔 내용이 너무
+- [7:02](https://youtube.com/watch?v=q-HacOazKsA&t=422) 많으면 오히려 헷갈려요. 그래서
+- [7:03](https://youtube.com/watch?v=q-HacOazKsA&t=423) 버셀이 뭘 했냐면요. 문서를 확
+- [7:05](https://youtube.com/watch?v=q-HacOazKsA&t=425) 압축했어요. 원래 40 정도 되는
+- [7:07](https://youtube.com/watch?v=q-HacOazKsA&t=427) 분량을요. 8까지 줄였어요. 무려
+- [7:09](https://youtube.com/watch?v=q-HacOazKsA&t=429) 80%를 덜어낸 거예요. 어떻게요?
+- [7:12](https://youtube.com/watch?v=q-HacOazKsA&t=432) 전체 내용을 다 넣지 않았어요. 대신
+- [7:14](https://youtube.com/watch?v=q-HacOazKsA&t=434) 목차만 넣었습니다. 비유하자면요. 책
+- [7:16](https://youtube.com/watch?v=q-HacOazKsA&t=436) 전체를 펼쳐 두는게 아니라 무슨
+- [7:18](https://youtube.com/watch?v=q-HacOazKsA&t=438) 내용이 어느 페이지에 있는지 목차만
+- [7:20](https://youtube.com/watch?v=q-HacOazKsA&t=440) 딱 붙여 둔 거예요. AI가 목차를
+- [7:22](https://youtube.com/watch?v=q-HacOazKsA&t=442) 보고 아, 이건 저기 가서 찾으면
+- [7:24](https://youtube.com/watch?v=q-HacOazKsA&t=444) 되겠네 하고 필요할 때만 펴보는
+- [7:25](https://youtube.com/watch?v=q-HacOazKsA&t=445) 거죠. 근데 신기한 건요. 이렇게
+- [7:27](https://youtube.com/watch?v=q-HacOazKsA&t=447) 80%나
+- [7:29](https://youtube.com/watch?v=q-HacOazKsA&t=449) 줄였는데도 점수는 그대로
+- [7:31](https://youtube.com/watch?v=q-HacOazKsA&t=451) 100점이었어요. 핵심만 남기니까
+- [7:32](https://youtube.com/watch?v=q-HacOazKsA&t=452) 오히려 더 깔끔해진 거예요. 자,
+- [7:34](https://youtube.com/watch?v=q-HacOazKsA&t=454) 그럼 스킬은 이제 쓸모 없는 걸까요?
+- [7:36](https://youtube.com/watch?v=q-HacOazKsA&t=456) 아니요. 그건 또 아니에요. 여기서
+- [7:37](https://youtube.com/watch?v=q-HacOazKsA&t=457) 균형을 잘 잡아야 돼요. 스킬이 진짜
+- [7:39](https://youtube.com/watch?v=q-HacOazKsA&t=459) 빛나는 경우가 따로 있어요.
+- [7:41](https://youtube.com/watch?v=q-HacOazKsA&t=461) 언제냐면요. 내가 직접 시키는 특별한
+- [7:43](https://youtube.com/watch?v=q-HacOazKsA&t=463) 작업일 때예요. 예를 들면요.이
+- [7:45](https://youtube.com/watch?v=q-HacOazKsA&t=465) 프로젝트 통째로 세 버전을 옮겨줘.
+- [7:48](https://youtube.com/watch?v=q-HacOazKsA&t=468) 전체 구조를 싹 바꿔 줘요. 이런
+- [7:50](https://youtube.com/watch?v=q-HacOazKsA&t=470) 건요. 내가 딱 시점을 정해서 지금
+- [7:52](https://youtube.com/watch?v=q-HacOazKsA&t=472) 이거 해 하고 부르는 일이잖아요.
+- [7:54](https://youtube.com/watch?v=q-HacOazKsA&t=474) 이럴 땐 스킬이 딱이에요.
+- [7:55](https://youtube.com/watch?v=q-HacOazKsA&t=475) 비유하자면요. 에이전트 MD는 항상
+- [7:57](https://youtube.com/watch?v=q-HacOazKsA&t=477) 책상에 있는 기본 안내문이에요. 매일
+- [7:59](https://youtube.com/watch?v=q-HacOazKsA&t=479) 보는 거. 스킬은 특별한 날 부르는
+- [8:01](https://youtube.com/watch?v=q-HacOazKsA&t=481) 전문가예요. 필요할 때 딱 불러서 큰
+- [8:03](https://youtube.com/watch?v=q-HacOazKsA&t=483) 일을 맡기는 거.
+- [8:05](https://youtube.com/watch?v=q-HacOazKsA&t=485) 그러니까요. 둘 중 하나만 쓰는게
+- [8:07](https://youtube.com/watch?v=q-HacOazKsA&t=487) 아니라요. 평소 기본 지식은
+- [8:08](https://youtube.com/watch?v=q-HacOazKsA&t=488) 에이전트닷. MD로 항상 펼쳐
+- [8:10](https://youtube.com/watch?v=q-HacOazKsA&t=490) 두고요. 특별한 큰 작업은 스킬로
+- [8:12](https://youtube.com/watch?v=q-HacOazKsA&t=492) 블러스고요. 이렇게 나눠쓰는게
+- [8:14](https://youtube.com/watch?v=q-HacOazKsA&t=494) 정답이에요. 자, 여기까지가
+- [8:15](https://youtube.com/watch?v=q-HacOazKsA&t=495) 이론이었어요. 원리는 다 이해하셨죠?
+- [8:17](https://youtube.com/watch?v=q-HacOazKsA&t=497) 선택을 안 시킨다. 항상 눈앞에
+- [8:19](https://youtube.com/watch?v=q-HacOazKsA&t=499) 펼쳐둔다. 핵심만 암축해서 그럼 이제
+- [8:21](https://youtube.com/watch?v=q-HacOazKsA&t=501) 진짜 궁금하실 거예요. 좋아. 근데
+- [8:23](https://youtube.com/watch?v=q-HacOazKsA&t=503) 나는 이걸 어떻게 써? 지금부터 그걸
+- [8:25](https://youtube.com/watch?v=q-HacOazKsA&t=505) 알려 드릴게요. 생각보다 진짜
+- [8:26](https://youtube.com/watch?v=q-HacOazKsA&t=506) 쉬워요. 넥스트에서 프로젝트 쓰시는
+- [8:28](https://youtube.com/watch?v=q-HacOazKsA&t=508) 분들은요. 진짜 딱 한 줄이면 돼요.
+- [8:31](https://youtube.com/watch?v=q-HacOazKsA&t=511) 터밀력 영영어 하나만 쳐 보세요.
+- [8:34](https://youtube.com/watch?v=q-HacOazKsA&t=514) MPX 넥스트 코드 모 최신 버전
+- [8:37](https://youtube.com/watch?v=q-HacOazKsA&t=517) 에이전트 MD 이거 한 줄 치면요.
+- [8:39](https://youtube.com/watch?v=q-HacOazKsA&t=519) 세 가지를 알아서 다 해 줘요. 첫째
+- [8:41](https://youtube.com/watch?v=q-HacOazKsA&t=521) 내 프로젝트가 어떤 버전인지 알아서
+- [8:42](https://youtube.com/watch?v=q-HacOazKsA&t=522) 확인해요. 둘째 그 버전에 딱 맞는
+- [8:44](https://youtube.com/watch?v=q-HacOazKsA&t=524) 문서를 알아서 내려받아요. 그 셋째
+- [8:46](https://youtube.com/watch?v=q-HacOazKsA&t=526) 그 문서 목차를 압축해서 에이전 스
+- [8:48](https://youtube.com/watch?v=q-HacOazKsA&t=528) MD에 알아서 넣어 줘요. 내가 할
+- [8:50](https://youtube.com/watch?v=q-HacOazKsA&t=530) 일은요. 그냥 엔터 한 번이에요.
+- [8:52](https://youtube.com/watch?v=q-HacOazKsA&t=532) 그럼 끝이에요. 이제 AI한테 코드를
+- [8:54](https://youtube.com/watch?v=q-HacOazKsA&t=534) 시키면요. 옛날 지식이 아니라 새
+- [8:56](https://youtube.com/watch?v=q-HacOazKsA&t=536) 문서를 보고 일을 해요.
+- [8:58](https://youtube.com/watch?v=q-HacOazKsA&t=538) 비유하자면요. 신입 직원 책상 위에
+- [8:59](https://youtube.com/watch?v=q-HacOazKsA&t=539) 최신 업무 매뉴얼을 자동으로 펼쳐 준
+- [9:01](https://youtube.com/watch?v=q-HacOazKsA&t=541) 거예요. 이제 그 직원은 헷갈릴
+- [9:03](https://youtube.com/watch?v=q-HacOazKsA&t=543) 때마다 옆에 있는 메모지를 보고요.
+- [9:05](https://youtube.com/watch?v=q-HacOazKsA&t=545) 정확하게 일을 하는 거죠. 근데 나는
+- [9:07](https://youtube.com/watch?v=q-HacOazKsA&t=547) 넥 안 쓰는데 괜찮아요. 원리는
+- [9:09](https://youtube.com/watch?v=q-HacOazKsA&t=549) 똑같으니까요. 직접 만들어도 돼요.
+- [9:11](https://youtube.com/watch?v=q-HacOazKsA&t=551) 방법 알려 드릴게요. 먼저요.
+- [9:12](https://youtube.com/watch?v=q-HacOazKsA&t=552) 프로젝트 맨 폴더 위에 에이전트.MD
+- [9:14](https://youtube.com/watch?v=q-HacOazKsA&t=554) 파일을 하나 만드세요. 그 안에다가
+- [9:16](https://youtube.com/watch?v=q-HacOazKsA&t=556) AI가 꼭 알아야 할 것들을 적어요.
+- [9:19](https://youtube.com/watch?v=q-HacOazKsA&t=559) 근데 여기서 중요한 거 오늘 베 원리
+- [9:20](https://youtube.com/watch?v=q-HacOazKsA&t=560) 기억나시죠? 길게 쓰지 마세요.
+- [9:22](https://youtube.com/watch?v=q-HacOazKsA&t=562) 핵심만 목차처럼 짧게요. 예를
+- [9:24](https://youtube.com/watch?v=q-HacOazKsA&t=564) 들면요. 우리 프로젝트는 이런 규칙을
+- [9:26](https://youtube.com/watch?v=q-HacOazKsA&t=566) 써. 색깔은 이거. 폰트는 이거.이
+- [9:28](https://youtube.com/watch?v=q-HacOazKsA&t=568) 폴더맨 이런게 들어 있어. 이렇게
+- [9:29](https://youtube.com/watch?v=q-HacOazKsA&t=569) 핵심만 딱딱 적는 거예요. 그리고 한
+- [9:31](https://youtube.com/watch?v=q-HacOazKsA&t=571) 가지 더 문서 맨 위에이 한 줄을 꼭
+- [9:33](https://youtube.com/watch?v=q-HacOazKsA&t=573) 넣으세요. 외운 지식 말고이 문서를
+- [9:35](https://youtube.com/watch?v=q-HacOazKsA&t=575) 먼저 보고 판단해. 이게 진짜
+- [9:37](https://youtube.com/watch?v=q-HacOazKsA&t=577) 중요해요. AI가 자꾸 자기 옛날
+- [9:39](https://youtube.com/watch?v=q-HacOazKsA&t=579) 기억으로 일하려고 하거든요. 근데
+- [9:42](https://youtube.com/watch?v=q-HacOazKsA&t=582) 이걸이 한 줄이 막아 주는 거예요.
+- [9:44](https://youtube.com/watch?v=q-HacOazKsA&t=584) 기억 말고 문서 봐.이 한 마디가
+- [9:46](https://youtube.com/watch?v=q-HacOazKsA&t=586) 100점과 53점을 가르는 거예요.
+- [9:48](https://youtube.com/watch?v=q-HacOazKsA&t=588) 자, 오늘 내용 어떠셨어요? 사실
+- [9:50](https://youtube.com/watch?v=q-HacOazKsA&t=590) 이게요. 단순히 파일 하나 얘기가
+- [9:51](https://youtube.com/watch?v=q-HacOazKsA&t=591) 아니에요. AI를 어떻게 다뤄야
+- [9:54](https://youtube.com/watch?v=q-HacOazKsA&t=594) 하는가? 그 본질에 대한 이야기예요.
+- [9:56](https://youtube.com/watch?v=q-HacOazKsA&t=596) 똑똑하게 만들려고 애쓰지 말고요.
+- [9:58](https://youtube.com/watch?v=q-HacOazKsA&t=598) 헷갈릴 틈을 안 주는 거. 선택을
+- [9:59](https://youtube.com/watch?v=q-HacOazKsA&t=599) 줄이고 눈앞에 펼쳐 주는 거.이 이
+- [10:01](https://youtube.com/watch?v=q-HacOazKsA&t=601) 감각을 한번 익히시면 AI를 다루는
+- [10:03](https://youtube.com/watch?v=q-HacOazKsA&t=603) 실력이 확 달라지실 거예요. 저는요.
+- [10:05](https://youtube.com/watch?v=q-HacOazKsA&t=605) 이런 AI 실전 노하우를요. 매번
+- [10:08](https://youtube.com/watch?v=q-HacOazKsA&t=608) 직접 써보고 깨진 것들만 골라서 나눠
+- [10:10](https://youtube.com/watch?v=q-HacOazKsA&t=610) 드리고 있어요. 더 깊은 인사이트랑
+- [10:12](https://youtube.com/watch?v=q-HacOazKsA&t=612) 바로 썩 자료들은요. 제 스킬샵이랑
+- [10:14](https://youtube.com/watch?v=q-HacOazKsA&t=614) 오프톡방에서 같이 나눠 주고 있어요.
+- [10:16](https://youtube.com/watch?v=q-HacOazKsA&t=616) 댓글을 한번 참고해 주시면
+- [10:18](https://youtube.com/watch?v=q-HacOazKsA&t=618) 감사하겠습니다. 마지막으로 하나만요.
+- [10:20](https://youtube.com/watch?v=q-HacOazKsA&t=620) 오늘이 내용 사실 제 생각이
+- [10:21](https://youtube.com/watch?v=q-HacOazKsA&t=621) 아닙니다. 버셀이 직접 실험하고
+- [10:23](https://youtube.com/watch?v=q-HacOazKsA&t=623) 공개한 자료예요. 이런 좋은
+- [10:25](https://youtube.com/watch?v=q-HacOazKsA&t=625) 자료들이요. 요즘 거의 매주 쏟아져
+- [10:27](https://youtube.com/watch?v=q-HacOazKsA&t=627) 나와요. 근데 다 챙겨보기에 너무
+- [10:28](https://youtube.com/watch?v=q-HacOazKsA&t=628) 많죠. 그래 제가 대신 보고요. 진짜
+- [10:30](https://youtube.com/watch?v=q-HacOazKsA&t=630) 쓸 만한 것들만 골러서 이렇게 풀어
+- [10:32](https://youtube.com/watch?v=q-HacOazKsA&t=632) 드릴게요.
