@@ -1,0 +1,1321 @@
+---
+title: "카파시의 LLM Wiki로 나만의 AI 세컨드 브레인 만들기, 이것만 보세요— 클로드 코드 × 옵시디언 × Graphify"
+source_url: https://youtube.com/watch?v=cNlvrU-KcRg
+video_id: cNlvrU-KcRg
+source_type: youtube
+lang: ko
+analyzed: 2026-05-24
+category: 일반학습
+status: active
+---
+# 카파시의 LLM Wiki로 나만의 AI 세컨드 브레인 만들기, 이것만 보세요— 클로드 코드 × 옵시디언 × Graphify
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** AI 시대의 새로운 지식 관리 메타 조합인 '클로드 코드 + 옵시디언 + LLM 위키 + 그래피파이' 시스템을 실제로 구축하는 과정을 다룬 영상입니다. 기존의 RAG 시스템보다 간단하면서도 복리 형태로 지식을 축적할 수 있는 LLM 위키 방법론을 소개하고, 실제 옵시디언 볼트 생성부터 웹클리퍼 설정, 클로드 코드와의 연동, 그래피파이를 통한 그래프 DB 생성까지 전 과정을 단계별로 시연했습니다. 핵심은 '목적성 있는 수집'을 통해 골드 인 골드 아웃을 실현하는 것이며, 이를 위해 나만의 핵심 맥락을 정의하고 AI와 인터뷰를 통해 개인화된 지식 관리 시스템을 구축하는 방법을 제시했습니다.
+- **Core Message:** AI 시대의 진정한 세컨드 브레인을 구축하려면 무작정 정보를 수집하는 것이 아니라, 명확한 목적과 기준을 가지고 '골드' 수준의 지식을 체계적으로 축적하고 연결해야 한다.
+> 목적성 있는 수집이 되어야 골드가 되는 겁니다
+> 이것을 실행하면 실제로 내 워크플로우/역량이 바뀌는가?
+> 세컨드 브레인을 구축하려다가 포기하시는 분들이 많이 있으신 거 같아요
+❗ 안드레 카파시가 바이브 코딩(2025년 2월), 컨텍스트 엔지니어링(2025년 6월)에 이어 LLM 위키(4월 3일)를 제안하자 48시간 만에 그래피파이가 개발됨
+❗ RAG 시스템은 벡터 DB 설정이 복잡하지만, LLM 위키는 마크다운 파일만 있으면 작동
+❗ 옵시디언을 '아이디어 프론트엔드'라고 부르며 AI 시대의 핵심 도구로 각광받고 있음
+
+## 🚀 실행 (Execute)
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=0) 안녕하세요. 브레인 트리니티의
+- [0:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=1) 브라인입니다. 이번 영상은 엄청나게
+- [0:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=4) 뜨겁고 지금 인기가 급속도로 상승하고
+- [0:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=6) 있는 어 AI의 활용 조합에 대해서
+- [0:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=9) 좀 준비를 하였습니다. 우리가 클로드
+- [0:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=11) 코드라는 강력한 에이전트 하네스
+- [0:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=15) 도구와 어 옵시디언이라는 엄청나게
+- [0:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=17) 강력한 이제 지식 관리 도구 그리고
+- [0:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=20) 거기다가 이제 지식 관리 방법론으로
+- [0:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=22) 새로 각광을 받고 있는 lm 위키와
+- [0:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=24) 그리고 그래프로 활용하는이
+- [0:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=26) 그래피파이이 지식 내용들을 결국에는
+- [0:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=29) 그래프로 활용을 해서 에이전트 하네스
+- [0:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=32) 도구들이 잘 활용할 수 있도록 제공해
+- [0:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=34) 주는이 그래피파이 최신 도구까지
+- [0:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=36) 합한이 조합이 엄청나게 각강을 받고
+- [0:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=39) 있습니다. 그래서 이번 영상에서는 어
+- [0:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=42) 그 개념 관련 개념들에 대해서도
+- [0:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=43) 설명을 드리고 그리고 어떻게 우리가
+- [0:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=45) 직접 한번 시도를 해 볼 수 있을지
+- [0:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=48) 좀 준비를 하였습니다. 요즘 이것이
+- [0:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=51) 거의 메타로 떠오르고 있어요. 그
+- [0:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=53) 말은 즉은이 사용 조합이 아마도
+- [0:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=56) 엄청나게 뜨거워지고 인기가 많아질 것
+- [0:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=59) 같습니다. 그래서 오늘은 그 처음에
+- [1:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=61) 함께 살펴보는 그 좀 의미에서 가지고
+- [1:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=65) 왔습니다. 일단 우리가 어 여기까지
+- [1:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=67) 왔는지 제가 문제 공감 상황부터 좀
+- [1:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=72) 공유를 할게요. 우리가 오픈 컬러나
+- [1:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=74) 이런 클로드 코드 같은 것을 이용을
+- [1:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=76) 할 때 어 보통은 우리가 세팅을 많이
+- [1:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=79) 해 주는게 뭐 클로드에 보통 쓰는게
+- [1:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=81) 이클로드.md 또는 뭐 최지T나 뭐
+- [1:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=85) 제미나 CLI 같은 거는 뭐
+- [1:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=86) 제미나이.md 아니면
+- [1:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=88) 에이전트.md라고 보통 일반화에서
+- [1:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=90) 많이 부르죠. 그런데 저희가 이런
+- [1:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=92) 세팅만을 가지고 AI를 활용을 하다
+- [1:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=94) 보면은 그 대화에서 끝나는 경우도
+- [1:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=97) 있고 그리고 우리의 대화 중에서
+- [1:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=99) 메모리를 일부 저장을 하하긴 하지만
+- [1:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=102) 이게 재활용이 가능한 나의 정보와
+- [1:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=105) 지식을 쌓아 나가기 쉽지 않아요.
+- [1:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=107) 우리가 결국에는이 AI 도구들을
+- [1:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=109) 이용을 하면서 어떠한 작업을
+- [1:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=111) 하든지간에 내가 수집발을 하고 내가
+- [1:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=114) 가치 있게 생각한 그런 정보와
+- [1:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=116) 지식들을 계속 재활용하고 계속
+- [1:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=119) 꺼냈어야 그리고 내 내가 아는 것처럼
+- [2:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=122) 내가 같이 있게 생각하는 것들을 계속
+- [2:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=124) 끄집어내 줄 수 있어야이 활용성이
+- [2:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=126) 늘어난는데요. 세컨드 브레인이
+- [2:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=128) 필요하죠. 근데 우리가 지금까지는이
+- [2:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=131) 에이전트.md나 클로드.md MD
+- [2:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=132) 이런 것만을 가지고 좀 한계가
+- [2:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=134) 있었습니다. 그래서 요즘 해결책으로
+- [2:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=136) 좀 떠오르고 있는 것이 우선
+- [2:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=139) [목을 가다듬음] 옵시디언을 그 이제
+- [2:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=141) 우리가 AI를 활용을 하는데 있어서
+- [2:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=144) 그 밑바탕이 됐은 지식 베이스 지식
+- [2:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=147) 관리 데이터베이스처럼 활용하는게
+- [2:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=150) 각강을 받고 있어요. 그 이유는
+- [2:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=152) 우리가 마크다운으로 문서를 입력을
+- [2:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=154) 하고 오픈 클로나 클로드 코드한테
+- [2:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=158) 만약에 제공을 하면은 얘가 잘
+- [2:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=160) 알아듣고 그리고 문서를 잘 소화할 수
+- [2:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=163) 있습니다. 이 옵시디언이 어 결국에는
+- [2:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=166) 우리가 순정 마크다운 그 AI 툴들이
+- [2:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=169) 아마도 아무래도 뭐 노션이나 뭐 다른
+- [2:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=171) 앱들 같은 조금 이상한 마크다운보다
+- [2:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=174) 옵시디언이 아무래도 그 순정
+- [2:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=176) 마크다운을 기반으로 제일 유용한 어
+- [2:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=179) 지식 관리 앱으로 좀 떠오르고
+- [3:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=181) 있고요. 그리고 안드레 카파시가 4월
+- [3:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=184) 며칠이죠? 아마도 한 4월 2일 정도
+- [3:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=186) 되는 거 같아요. 그때 언급을 한게
+- [3:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=188) 옵시디언이 여기 아이디 프런트
+- [3:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=190) 엔드라고 이야기를 했어요. 그래서
+- [3:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=192) 내가 지식을 입력을 하기 위한 그리고
+- [3:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=195) 조회를 하기 위한 인간을 위한
+- [3:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=197) 프런트엔드 입력 장치 이렇게 활용을
+- [3:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=200) 한다라고 언급을 하면서 엄청나게
+- [3:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=203) 인기가 많아졌는데요. 클로드 코를
+- [3:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=205) 활용을 하는데 옵시디언 같은 툴을
+- [3:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=208) 같이 병행을 해서 활용하시는 부분
+- [3:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=210) 분분들이 엄청나게 많은데 옵시디언을
+- [3:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=213) 활용을 하게 되면은 이렇게 됩니다.
+- [3:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=215) 우리의 주변 세계에서 많은 것들을
+- [3:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=217) 관찰하고 여기서 인사이트를 얻고
+- [3:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=220) 정보와 지식을 남겨야 하잖아요. 어
+- [3:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=222) 저희가 옵시디언을 통해서 마크다운
+- [3:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=224) 파일로 입력을 하게 되고 그리고 제
+- [3:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=227) 이걸 안 가져왔네요.네
+- [3:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=228) 이런 뭐 클로드 코드나 오픈 클로우
+- [3:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=231) 같은 이런 그 AI 툴들이 이렇게
+- [3:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=234) 프로세싱을 해 가지고 어 저희가
+- [3:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=236) 결국에는 MD 파일로 이렇게 구조된
+- [3:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=239) 문서 또는 지식이 나오면은 걔를
+- [4:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=243) 기반으로 뭐 DOCX나 PPT,
+- [4:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=246) PDF, MP4 뭐 프레젠테이션
+- [4:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=248) 자료라든지 이렇게 다양한 형태로 좀
+- [4:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=251) 가공이 돼서 사람들이 지식을 새로운
+- [4:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=253) 지식을 상출하는 그러한 방향으로 많이
+- [4:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=256) 움직이고 있었습니다. 입니다. 그래서
+- [4:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=258) 많은 분들이이 옵시디언하고 클로드
+- [4:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=260) 코드를 많이 활용을 하고 있는데요.이
+- [4:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=262) 세팅의 의는 무엇일까요? 어, 저는
+- [4:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=265) 결국에는 옵시디언에서 나만의 지식
+- [4:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=267) 베이스, 널리 베이스를 쌓아
+- [4:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=269) 나간다라는 어, 것이 매우 인상적인
+- [4:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=271) 거 같아요. 여기서 나의 지식이라는
+- [4:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=273) 것은 내가 인터넷에서 수집을 했더라도
+- [4:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=275) 그냥 어, 좀 무지성하게 막 수집을
+- [4:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=278) 하는게 아니고 우리가 목적을 갖고
+- [4:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=280) 어떤 가치를 느껴서 내가 보고 아,
+- [4:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=283) 진짜로 쓸모 있겠다. 진짜로 가치
+- [4:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=285) 있다라고 느껴 가지고 수집한 것들이
+- [4:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=287) 나의 지식입니다. 미닝이 있어야
+- [4:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=289) 해요. 만약에 내가 왜 수집을 했는지
+- [4:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=292) 이것을 적을 수 없다면은 이거는 진짜
+- [4:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=295) 의도적인 수집이 아니거든요. 그런데
+- [4:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=297) 많은 사람들이 어 결국에는 옵시디언
+- [5:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=300) 안에 목적 있는 수집을 많이 하려고
+- [5:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=302) 하는 것 같습니다.이 목적 있는
+- [5:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=304) 수집이 많이 되어야 우리가 AI가
+- [5:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=306) 활용할 수 있는 골드 데이터가
+- [5:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=309) 늘어나는 겁니다. 목적이는 수집이
+- [5:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=311) 아니면은 내가 인터넷에서 수집을
+- [5:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=313) 해했어도 이게 쓰레기 데이터가 될
+- [5:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=315) 수도 있어요. 쓰레기 데이터가
+- [5:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=318) 들어가면은 쓰레기 데이터가 나옵니다.
+- [5:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=321) 문서의 품질, 산출물의 품질이 좋지
+- [5:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=323) 않습니다. garbage in,
+- [5:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=324) garbage out. 옛날부터
+- [5:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=326) 이것들이 많이 쓰였던 용어인데요.
+- [5:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=328) 저는 이것을 한 3년 전부터 어
+- [5:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=330) gold인드 아웃이라고 부르고
+- [5:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=332) 있습니다.이 골드라는게 결국에는
+- [5:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=335) 인터넷에서 뭐 내가 수집을 했거나
+- [5:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=338) 아니면 뭐 코멘트를 달았거나 어
+- [5:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=340) 새로운 관점으로 내가 의미 있다고
+- [5:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=342) 생각을 해서 수집한 나의 지식들을
+- [5:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=344) 의미를 합니다. 네. 그래서 골드인
+- [5:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=347) 골드 아웃이죠.
+- [5:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=349) 네. 우리가 클로드 코드를 활용을 할
+- [5:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=351) 때 옵시디언 안에서 이렇게 다양한
+- [5:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=354) 지식들을 수집을 할 때 목적이는
+- [5:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=356) 수집이 되어야 골드가 되는 겁니다.
+- [5:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=359) 그런데 문제가 있어요. 이거라는게
+- [6:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=361) 쉽지가 않거든요. 나만의 지식 체계를
+- [6:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=363) 만들고 이것이 AI가 알아서 이렇게
+- [6:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=366) 소화를 해 주고 이렇게 어 좀 체계를
+- [6:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=369) 만드는게 쉽지가 않습니다. 그래서
+- [6:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=372) 세컨드 브레인을 구축을 하려다가
+- [6:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=374) 포기를 하시는 분들이 많이 있으신 거
+- [6:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=376) 같아요. 그런데 그 안드레 카파시
+- [6:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=380) 아저씨가 오픈회의 공동 창립자이죠.
+- [6:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=383) 그 안드레 카파시 아저씨가 또 그
+- [6:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=386) 이상한 걸 외쳤어요. 이상하진
+- [6:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=388) 않습니다. 근데 제가 이상한 걸
+- [6:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=390) 말씀드린 이유가이 바이브 코딩이라는
+- [6:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=392) 것도 2025년 2월 달에 퍼지게 된
+- [6:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=394) 것도 컨텍스트 엔지니어링이라는 것도
+- [6:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=397) 2025년 6월 달에 공급을
+- [6:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=399) 했어요.이 아저씨가. 근데 빵빵
+- [6:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=402) 터졌죠. 그래서 지금은 바이브 코딩이
+- [6:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=404) 엄청나게 유행이잖아요. 아직도
+- [6:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=406) 유행이잖아요. 근데이 아저씨가 4월
+- [6:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=408) 3일이네요.이
+- [6:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=410) LM 위키라는 것에 대해서 스윗을
+- [6:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=413) 날렸는데 이게 또 난리가 난 거예요.
+- [6:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=415) 이분이 날렸으면은 또 엄청 큰 파도가
+- [6:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=418) 옵니다. 그래서이 LM 위키라는
+- [7:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=420) 아이디어를 만들었는데 어 이제 설명을
+- [7:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=422) 드릴 예정이에요. 근데이 lm 위키가
+- [7:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=424) 결국에는 메인 아이디어가 뭐냐면
+- [7:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=426) 클로드 코드나 오픈 AI 코덱스 같은
+- [7:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=429) 이런 툴들을 이용해서 내가 AI어를
+- [7:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=432) 통해서 어떻게 나의 내가 어
+- [7:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=434) 수집해내는 지식 어들이 좀 쌓이고 좀
+- [7:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=438) 연결이 되고 함께 소화를 할 수
+- [7:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=441) 있을지에 대한 프레임워크를 제시를
+- [7:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=443) 했어요. 어 이게 딱 완전하게
+- [7:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=445) 정해지고 완전히 뭐 구조화된 거는
+- [7:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=448) 아니고 큰 아이디어만이 안트라
+- [7:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=450) 카파시가 제공을 하였습니다.이 이
+- [7:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=453) 안드카파시가 제공한 LL 위키를
+- [7:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=455) 가지고 많은 분들이 자기만의 버전으로
+- [7:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=457) 좀 만들어 나가려고 시도를 하고 있는
+- [7:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=459) 거 같아요. 어, 큰 아이디어는 다
+- [7:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=461) 같습니다. 인터넷에서 우리가 또 어떤
+- [7:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=463) 적을 가지고 어떤 의미를 느껴서
+- [7:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=465) 데이터를 수집을 했어요. 이게 논문이
+- [7:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=468) 될 수도 있고 영상이 될 수도 있고
+- [7:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=469) 이미지가 될 수도 있고 아티클이 될
+- [7:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=471) 수도 있습니다. 로라는 폴더 안에
+- [7:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=474) 이렇게 수집이 됩니다. 그러면은
+- [7:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=476) LLM 기반의 에이전트 컴파일러네 뭐
+- [7:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=479) 클로트 코드가 될 수가 있겠죠.
+- [8:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=481) 여기서 인젝스트를 해요.이 폴더
+- [8:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=483) 들어갔으면은 네가이 소스를 읽고
+- [8:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=485) 연관성을 확인을 다른 어 나의 목적
+- [8:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=489) 나의 어떤 기준에 대과 연관성 기존에
+- [8:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=492) 수집한 다른 지식들과 연관성을 가지고
+- [8:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=495) 링크를 생성하고 간극을 채워 가지고
+- [8:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=497) 분해를 해 가지고 재활용할 수 있는이
+- [8:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=500) 지식의 소스로 많이 만들어는
+- [8:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=502) 겁니다.이 재료들을 만들어 내요.이
+- [8:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=504) 재료를 재료들을 가지고 위키라는 폴더
+- [8:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=507) 안에 이제 정리를 합니다. 정리를
+- [8:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=509) 해서이 목차도 만들고요. 그러니까 업
+- [8:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=513) 계속 업데이트가 될 거 아니에요.
+- [8:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=515) 그래서 목차도 만들고 목록도
+- [8:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=516) 만들고요. 그리고 인덱스 이것들을
+- [8:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=518) 계속 쌓여 나간 다음에 계속 하나의
+- [8:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=521) 그 통합된 책으로 쌓여 나가는
+- [8:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=523) 겁니다. 그리고이 개념들에서 개어이
+- [8:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=527) 수집한 것들에서 개념과 개체를 분리를
+- [8:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=529) 시키고 그리고 특정한 규칙에 의해서
+- [8:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=531) 이렇게 위키라는 폴더에 정리를
+- [8:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=533) 합니다. 그리고 난 다음에 llm
+- [8:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=535) [목을 가다듬음]
+- [8:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=536) 러한테 다시 이제 최신화시켜 달라라고
+- [8:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=539) 계속 루프가 도는 거죠. 하나 수집할
+- [9:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=542) 때마다 기존에 있었던 것과 이제
+- [9:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=544) 연결되어서 업데이트가 되고이 목차
+- [9:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=546) 그리고이 위키가 계속 업데이트되는
+- [9:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=549) 것입니다. 근데 이게 막 되는 것이
+- [9:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=551) 아니라 특정한 프로세스와 원칙과
+- [9:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=553) 기준에 의해서 계속 어 일어나는 것이
+- [9:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=556) 매우 큰 포인트입니다.음
+- [9:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=558) 음, 여기서 스키마라는 것이 그냥
+- [9:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=561) LRM한테 야, 네가 매번 할 때
+- [9:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=563) 랜덤으로 하는 것이 아니라 특정한
+- [9:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=566) 방법을 따라라는 것도 있지만 나의
+- [9:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=568) 기준과 목적도 포함이 되어 있어요.
+- [9:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=570) 제가 아까 말씀드렸다시피 우리가
+- [9:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=573) 목적성 있는 수집이 되어야 합니다.
+- [9:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=575) 어, 그러기 때문에이 부분이 엄청나게
+- [9:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=578) 중요해요.이 LM 위키라는 것이 많이
+- [9:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=581) 비교가 되고 있는게 이제 레그입니다.
+- [9:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=584) Retrieval ented
+- [9:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=585) generation. 엄청나게 그 몇
+- [9:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=587) 년 동안에 좀 많이 떠오른
+- [9:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=589) 단어인데요.이
+- [9:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=590) 어 레그랑 LLM 미키의 공통점이라고
+- [9:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=593) 하면은 우리가 특정한 뭐 문서 지식
+- [9:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=596) 데이터베이스 논리 [콧방귀] 베이스를
+- [9:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=598) 주고 그거를 기반으로 LLM이 좀
+- [10:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=600) 답변을 보충을 하는 방식 어 우리가
+- [10:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=603) 리트리벌 특정한 문서를 찾아 가지고
+- [10:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=605) 연관성인 문서를 찾아와서 이거를
+- [10:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=608) 가지고 제너레이션 답변을 만드는 것을
+- [10:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=611) 증강시키는 개념이었는데요. 이것과
+- [10:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=614) 이제 배치되는 다음 개념이라고 보셔도
+- [10:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=618) 될 거 같습니다. 이게 좀 기술적으로
+- [10:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=620) 나온게 아니고 개념적으로 나온 거라서
+- [10:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=622) 어떻게 발전될지를 봐야 될 거
+- [10:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=623) 같아요. 근데이 lm 위키를 만들게
+- [10:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=626) 되면은 세업 복잡도가 복잡하지가
+- [10:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=629) 않아요. 레그는 엄청나게 높습니다.
+- [10:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=631) 왜냐면 어 우리가 문서 데이터베이스가
+- [10:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=634) 한정이 되어 있어야 하고요. 이거를
+- [10:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=637) 가지고 늘 인베딩 모델이라는 걸 거쳐
+- [10:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=640) 가지고 레그 벡터 DV를 만들어 줘야
+- [10:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=642) 해요. 어, 그래서 이거 좀
+- [10:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=644) 힘들었습니다. 그래서 늘 뭔가 세팅이
+- [10:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=647) 복잡했는데 LRM 키 같은 경우는
+- [10:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=649) 그냥 마크다운 파일만 이렇게 알아서
+- [10:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=651) 얘가 정리된 형태로 어, 있으면은
+- [10:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=654) 알아서 작동을 하는 어, 개념이고요.
+- [10:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=657) 인프라도 뭔가 벡터디 아까 말씀을
+- [11:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=660) 드렸었죠. 그런데 얘는 인프라가 필요
+- [11:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=662) 없어요. 그냥 로컬 파일의 어떤 폴더
+- [11:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=663) 안에 잘 정리만 되어 있으면은 되는
+- [11:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=666) 것이고 그 일단은 얘가 검색 신뢰도
+- [11:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=670) 같은 경우에는 가끔씩은 누락게 될
+- [11:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=672) 때가 있습니다. 예를 들어서 문서가
+- [11:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=674) 잘못 정리가 되어 있거나 아니면은 좀
+- [11:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=676) 뭔가 의미가 좀 덜한 어 문서들 좀
+- [11:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=680) 가위지들이 들어왔을 때 잘 정제가 안
+- [11:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=682) 되었을 때는 어 얘가 좀 문제가 있는
+- [11:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=685) 편이었습니다. 레그가요. 그래서
+- [11:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=687) 실뢰도가 낮거나 조금 성능이 낮은
+- [11:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=690) 경우들을 많이 경험을 하셨던 거
+- [11:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=692) 같아요. 근데 LRM 같은 경우는
+- [11:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=693) AI랑 함께 비교를 하면서이
+- [11:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=695) 100%라고 적어 놨는데 저는이 검색
+- [11:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=697) 실뢰도가 100%인지는 모르겠어요.
+- [11:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=699) 하루시가 있을 수도 있고 문서가
+- [11:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=700) 많아지면은 조금 실뢰도가 떨어질 수도
+- [11:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=702) 있습니다. 그런데 어 결국은 이걸
+- [11:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=704) 검색을 하는 것이 특정한 목록이나
+- [11:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=707) 목차 스키마가 있기 때문에 훨씬 더
+- [11:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=710) 어 검색 실러도가 높을 수 있다라고
+- [11:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=712) 볼 수가 있고요. 어 그리고 저는
+- [11:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=714) 제일 중요한게 얘 같습니다. 어,
+- [11:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=716) 지식의 축적이 얘는 복리라고 생각이
+- [11:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=719) 돼요. LM키 저도 지금 테스트를
+- [12:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=721) 하고 계속 활용을 하고 있어요.
+- [12:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=723) 그런데 얘가 복리인 이유가 내가
+- [12:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=725) 위키에 쌓이고 쌓이면은 결국에는
+- [12:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=728) 연결을 해 주는 형태로 얘가 이렇게
+- [12:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=731) 유지가 되니까 이것들을 계속 활용할
+- [12:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=733) 수 있는 복리 형태로 쌓입니다.
+- [12:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=735) 그리고 그랩 이따가 보여 드리겠지만
+- [12:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=737) 그래피파이라는 걸 통해서 그게
+- [12:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=740) 그래프로 연결이 되고 업데이트가 되고
+- [12:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=742) AI가 더 잘 참고해서 활용을 할
+- [12:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=744) 수가 있어요. 그리고 레그 같은
+- [12:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=745) 경우는 늘 우리가 뭐 새로운 문서,
+- [12:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=747) 최신 문서들이 들어왔을 때 그 최신
+- [12:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=749) 문서들이 들어온 것을 가지고 또다시
+- [12:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=751) 업데이트를 시켜야 되는 그런 단점이
+- [12:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=753) 있습니다. 그래서 우리가이 레그
+- [12:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=756) 시스템도 어 벡터 DV도 좋긴 하지만
+- [12:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=759) LRM 위키로 조금 더 잘가 찾을 수
+- [12:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=763) 있도록 하는 그 아이디어입니다. 네.
+- [12:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=765) 그러면은 좀 사전 배경 설명 이제이
+- [12:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=768) 그 지금 이미 지금까지 트렌드에
+- [12:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=770) 대해서 모르셨던 분들을 위해서 제가
+- [12:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=772) 좀 배경을 제공을 했고요. 이제서야
+- [12:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=775) 본격적으로 저희가 이제 LM 위키를
+- [12:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=777) 한번 세팅을 하는 방법 처음부터 하는
+- [13:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=780) 방법을 알려 드리도록 하겠습니다.
+- [13:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=783) 네. 그러면 일단 새로운 옵시디언
+- [13:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=785) 볼트를 한번 만들어 볼게요. 네.
+- [13:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=787) 새로운 옵시디언 볼트를 만들기
+- [13:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=789) 위해서는 저희가 어 일단은 옵시디언
+- [13:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=791) 사용을 하실 줄 안다. 설치가 되어
+- [13:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=793) 있고 쓸 수 줄 안다는 가정하에
+- [13:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=795) 진행을 하겠습니다. 네. 새로운
+- [13:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=797) 볼트를 우리가 만들어 볼게요. 여기서
+- [13:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=800) 크리에이트를 누르고 이름은 아무거나
+- [13:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=802) 일단은 제가 llm 위키 어 브레인
+- [13:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=805) 커리니티라고 만들게요. 어떠한
+- [13:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=808) 것이든지간에 만들어도 상관이
+- [13:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=810) 없습니다. 그래서 브라우즈 해서
+- [13:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=812) 저는음 우선 어 드롭스 안에 하나
+- [13:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=815) 만들어 주겠습니다. 네. 그러면은
+- [13:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=817) 완전 깔끔한 새로운 옵시디엄 볼트가
+- [13:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=820) 이렇게 탄생을 했어요. 네. 옵시디언
+- [13:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=822) 벌터가 탄생을 했고요. 이제 클로드
+- [13:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=825) 코드에서이
+- [13:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=827) 옵시디엄 폴더를 열어서 저희가 함께
+- [13:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=830) 좀 세팅을 해 나갈 예정입니다. 어
+- [13:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=833) 그런데 여러분 좀 우리가 이것을
+- [13:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=836) 세팅을 할 때 어 준비해야 될 것이
+- [13:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=838) 있어요. 제가 앞서 말씀을 드린게
+- [14:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=841) 목적성 있는 수집이 되려면은 결국에는
+- [14:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=844) 나만의 기준 어 AI한테 야 나는
+- [14:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=847) 무엇을 도하고 내가 어떤 목적을
+- [14:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=849) 위해서 수집을 하고 이런 좀 세팅이
+- [14:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=853) 필요합니다. 이게 있어야 우리가이
+- [14:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=855) AI를 훨씬 더 잘 활용을 할 수
+- [14:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=857) 있어요. 그래 가지고음 저는 어 보통
+- [14:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=861) 좀 추천을 드리는 것이 어 새로운
+- [14:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=864) 노트를 만들어서이 세 가지 질문에
+- [14:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=866) 대해서 어 기본적으로 답변을 하는
+- [14:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=869) 겁니다.
+- [14:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=871) 저는 이거를 나의 핵심 맥락이라고 어
+- [14:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=874) 이야기를 하고 싶어요. 어,이 핵심
+- [14:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=876) 맥락이라는게 결국에는 AI한테 지금이
+- [14:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=880) 순간에 내가 AI를 활용을 해서 뭔가
+- [14:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=882) 하려고 하는데 무엇이 관련이 있고
+- [14:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=884) 어떤게 중요하고에 대한 내용이 나의
+- [14:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=887) 핵심 맥락입니다. 이것이 결국에는 뭐
+- [14:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=890) 클로드.md라든지 md라든지 아니면
+- [14:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=892) 어떤 문서에다가 AI가 이걸 알고
+- [14:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=895) 있어야 해요. 그래서 저희가 먼저이
+- [14:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=897) 핵심 맥락이라는 것을 좀 작성을 해
+- [15:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=900) 볼 거예요. 제가 한번 작성을 해
+- [15:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=902) 보겠습니다. 나는 브레인 트리니티로
+- [15:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=905) 개인 지식 관리와 AI를 통해서
+- [15:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=907) 사람들이 자신의 개인의 목표들을
+- [15:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=911) 성취를 할 수 있도록 도와주고 싶은
+- [15:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=915) 어 브레인 브레인 트리니티 브랜드의
+- [15:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=918) 브라이언이야.
+- [15:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=920) 어, 나는 왜 기록을 하고 싶냐면
+- [15:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=923) 결국에는 어, 내가 브레인
+- [15:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=925) 트리니티라는
+- [15:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=926) 것을 통해서 사람들에게 개인 지식
+- [15:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=929) 관리와 AI가 함께 잘 활용을 해서
+- [15:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=933) 내가 기록을 하고 싶은 이유는 내가
+- [15:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=935) 일상 생활 속에서 느끼는 다양한 어떤
+- [15:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=938) 생각들, 감정들 이런 것들을 통해서
+- [15:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=940) 어, 사람들한테 나누어서 나의
+- [15:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=943) 인사이트를 나누어 가지고 이것들을
+- [15:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=946) 좋은 형태로 만들어 낼 수 있는 어떤
+- [15:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=948) 아웃풋의 소재로 활용을 하고 싶어서
+- [15:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=950) 기록을 하고 싶은 것도 있고. 그리고
+- [15:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=952) 두 번째로는 내가 AI 시대 우리가
+- [15:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=954) 그냥 딸깍 해 가지고 만드는 어떤
+- [15:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=957) 아웃풋이 아닌 진짜로 본질적으로
+- [15:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=959) AI을 활용하는 것들에 대해서 좀 나
+- [16:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=961) 인사이트한 생각들을 적고 그것들을
+- [16:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=964) 사람들의 마음을 움직이고 사람들에게
+- [16:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=967) 그 본질적인 내용을 전달하기 위한
+- [16:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=969) 재료로 삼고 싶어서 기록을 하고
+- [16:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=971) 싶어. 나는 만들고 싶은 아웃풋이
+- [16:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=972) 크게 이제 보통 유튜브 채널에서 롱폼
+- [16:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=975) 영상을 만들고 싶고 그리고
+- [16:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=976) 인스타그램에서 쇼폼 케셀 캐러셀의
+- [16:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=980) 카드 뉴스 형태와 그리고 쇼폼
+- [16:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=982) 영상들을 보통 만들고 싶어. 그리고
+- [16:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=984) 요즘은 쓰레디나 링크인 같은 곳에서
+- [16:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=988) 내가 쇼폼 글 쓰기로도 많이 하고
+- [16:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=990) 있어. 네. 다음과 같은 형태로 제가
+- [16:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=992) 좀 STT를 통해서 제 주둥 아리로
+- [16:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=996) 제 바이브로 이렇게 저의 맥락을 좀
+- [16:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=998) 남겨 봤습니다. 네. 이렇게 맥락을
+- [16:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=1001) 남겨 봤고요. 저희가 이제 무엇을 할
+- [16:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=1003) 거냐면요. 어, 얘를 가지고 얘를
+- [16:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=1006) 가지고 어, 세컨드 브레인을
+- [16:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=1009) 이제 구축을 하고 나의 시스템을
+- [16:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=1011) 만들기 위한이 클로드.md 파일을
+- [16:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=1014) 만들 거예요. 이제 AI가 그거를
+- [16:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=1016) 기반으로 나의 체계를 열심히 같이
+- [16:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=1019) 어, 만들어 나갈 어, 예정입니다.
+- [17:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=1021) 네. 일단 저희가 그러면 클로드
+- [17:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=1023) 코드를 열어서 저희 옵시디안이 폴더를
+- [17:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=1026) 제공을 해 줘야 되는데요. 어,
+- [17:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=1027) 일단은 저 같은 경우는이 우리가
+- [17:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=1029) 클로드 코드를 활용하는 여러 방법이
+- [17:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=1031) 있지만 저 안티 그래비티에서 해당
+- [17:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=1034) 폴더를 열어 가지고 저희 옵시디언
+- [17:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=1036) 방금 만든 폴더를 열어 가지고 작업을
+- [17:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=1038) 하려고 합니다. 제가 아까 이제
+- [17:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=1040) 만들었던 것이 이거였죠. lm 위키
+- [17:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=1043) 브레인 트리니티 얘를 제공을
+- [17:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=1045) 하겠습니다. 어 얘를 이제 제공을
+- [17:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=1049) 하면은 어 아까 나의 핵심 맥락이라는
+- [17:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=1051) 것이 이렇게 똑같이 옵시디언에 똑같이
+- [17:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=1055) 이렇게 어 들어갔죠. 그러면은 이제
+- [17:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=1058) 저제가 어 클로스코드를 열어보고 한번
+- [17:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=1062) 대화를 해보고 프롬트도 여러분들께
+- [17:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=1064) 공유를 드리겠습니다. 네. 이렇게 어
+- [17:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=1066) 제가 아까 작성한 나의 핵심
+- [17:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=1068) 맥락이라는 것을 띄어 놓고 클로드를
+- [17:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=1071) 눌러서 클로드를 열어 가지고 좀
+- [17:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=1073) 대화를 나눠 보도록 하겠습니다. 네.
+- [17:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=1075) 일단은 제가 여기서 말씀을 드리고자
+- [17:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=1078) 하는 것은 클로드를 이미 어 클로드
+- [18:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=1081) 코드를 이미 사용한다라는 가정하에
+- [18:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=1084) 진행을 합니다. 클로드 코드를
+- [18:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=1085) 설치하는 방법에 대한 것은 인터넷에
+- [18:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=1088) 어 정보가 되게 많아요. 그래서
+- [18:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=1090) 그거는 생략을 하도록 하겠습니다.
+- [18:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=1092) 네. 저는 다음과 같은 프롬트 입력을
+- [18:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=1094) 해 주겠습니다.이 프롬프트는 제가 다
+- [18:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=1096) 공유를 할 예정입니다. 설명란해서
+- [18:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=1098) 확인해 주세요. 우리는 지금 AI
+- [18:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=1100) 세컨드 브레인을 만들고 있어. 그
+- [18:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=1102) AI 세컨드 브레인의 목적은 세상에
+- [18:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=1104) 있는 정보와 지식들을 체결적으로
+- [18:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=1105) 수집을 하고 이러기 위한 것이야.
+- [18:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=1108) 나의 핵심 맥락은 내가 사전이 작성한
+- [18:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=1110) 자기 소개이고 이걸 읽고 나의 맥락을
+- [18:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=1112) 맞게 어 더욱 나를 더 깊이 이해하기
+- [18:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=1115) 위해 인터뷰해 줘. 이렇게 씁니다.
+- [18:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=1118) 어 제가 처음으로 하는 건 뭐냐면요.
+- [18:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=1120) 나의 핵심 기준을 만들기 위해서
+- [18:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=1123) 이것을 어클로드.mde로 MD로
+- [18:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=1125) 만들기 위한 거예요. 어, 근데 제가
+- [18:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=1128) 물론 이걸 기록을 하긴 했지만은 어,
+- [18:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=1130) 얘를 조금 더 깊게 좀 나를 이해하기
+- [18:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=1133) 위해서 내가 사전에 작성한 것을
+- [18:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=1135) 바탕으로 어, 훨씬 더 디테일하게
+- [18:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=1137) 어, 좀 정보를 뽑아내서 클로드
+- [19:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=1140) 코드의 확실한 기준을 좀이 제공해 줄
+- [19:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=1142) 수 있도록 인터뷰를 진행을 합니다.
+- [19:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=1145) 그러면 한번 인터뷰를 진행을 해
+- [19:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=1148) 볼게요. 여러분들도 한번 해 보시면
+- [19:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=1150) 좋을 것 같습니다. 읽었습니다. 브라
+- [19:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=1152) 님, 반갑습니다. 질문 1. 나는
+- [19:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=1154) 누구인가를 더 깊이 나의 역할, 일,
+- [19:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=1157) 핵심, 감정, 강점 한번 입력을 해
+- [19:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=1159) 보도록 하겠습니다. 내가 지금 브레인
+- [19:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=1162) 트리니티 브라인으로서의 역할은 어,
+- [19:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=1165) 네. 어 이렇게 STT로 제가 혼자서
+- [19:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=1168) 한번 떠들어 봤습니다. 어 나는
+- [19:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=1171) 리더이고 그리고 본질을 전달하는 것을
+- [19:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=1174) 어 매우 중요한 가치관으로 어
+- [19:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=1177) 생각해라고 이렇게 작성을 해
+- [19:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=1179) 주었습니다. 그럼 얘가 이거를 가지고
+- [19:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=1182) 첫 번째 답변을 정리를 하고 그다음에
+- [19:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=1185) 이거를 더 두 번째 왜 기록을 하고
+- [19:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=1187) 싶은가에 대해서도 질문을 하겠습니다.
+- [19:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=1190) 이것도 한번 입력을 해 볼게요. 어,
+- [19:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=1191) 가장 지금 기록해서 잘 안 되고 있는
+- [19:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=1194) 것은 근본적으로 증가되는 형식으로
+- [19:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=1195) 나는 기어를 하고 싶어. 네. 두
+- [19:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=1197) 번째 질문에 대한 대답도 했습니다.
+- [19:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=1199) 가장 잘 안 되고 있는 것은 저는
+- [20:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=1201) 저도 이제 AI를 AI 어 가장네
+- [20:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=1205) 이렇게 ST를 통해서 기록을 해
+- [20:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=1206) 봤습니다. 가장 안 되고 있는 것은
+- [20:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=1209) 뭐 좀 복잡한 메타데이터까지 다
+- [20:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=1211) 연결을 시키고 정리를 하는 것이 잘
+- [20:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=1213) 안 된다라고 말을 하고 있고요. 저도
+- [20:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=1215) 지금 제 시스템에 정리가 조금
+- [20:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=1217) 필요합니다. 그리고 비전 같은 경우는
+- [20:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=1219) 공극적으로 내가 전달한 인사이트를
+- [20:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=1221) 통해서 더욱더 사람들이 AI를
+- [20:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=1222) 본질적으로 잘 활용하는 어 이런
+- [20:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=1225) 부분을 이렇게 작성을 하였습니다.
+- [20:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=1227) 그럼 마지막으로 어떤 아웃풋을 만들고
+- [20:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=1229) 싶은가에 대한 것도 한번 답변을 해
+- [20:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=1232) 볼게요. 어 주요 오디언스 같은
+- [20:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=1236) 경우에는 어네 이렇게 세 번째 어떤
+- [20:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=1238) 아웃풋을 만들고 싶은가까지 입력을
+- [20:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=1241) 하였습니다. 어이 세 가지가 엄청나게
+- [20:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=1243) 중요하다고 생각이 돼요. 결국에는
+- [20:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=1244) 내가 왜 지식 관리를 하는지 그리고
+- [20:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=1247) 내가 어 모아 가지고 지식 관리를
+- [20:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=1250) 통해서 어떤 아웃풋을 만들어 내고
+- [20:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=1252) 싶은지 어이 큰 비전을 정해 줘야
+- [20:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=1254) 얘가 어 내가 수집을 하고 이거
+- [20:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=1257) 정리하는 과정에서 어떻게 관련이
+- [21:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=1260) 있는지를 어 생각을 해서 정리를 하기
+- [21:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=1262) 때문에 매우 중요합니다. 네. 이렇게
+- [21:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=1264) 인터뷰를 통해서 나의 맥락 이렇게 해
+- [21:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=1266) 주었는데요. 저는 이것을 어 업데이트
+- [21:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=1269) 해 줘라고 입력을 할게요. 그러면은이
+- [21:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=1272) 핵심 맥락에 대해서 국체적으로이
+- [21:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=1276) 노트가 업데이트가 되겠습니다. 네.
+- [21:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=1279) 이렇게 업데이트가 됐고요. 어,
+- [21:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=1281) 저희가 지금은 이렇게 마크다 원래
+- [21:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=1284) 입력하는 방법대로 나오지만 결국에는
+- [21:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=1287) 이게 옵시디언을 연결한 것이기 때문에
+- [21:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=1289) 음, 이렇게 나의 문서가 바로
+- [21:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=1291) 업데이트 된 것을 보실 수 있습니다.
+- [21:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=1293) 그다음에 저희가 무엇을 할 거냐면요.
+- [21:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=1294) 이것을 토대로 나의 기준, 나의
+- [21:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=1297) 스키마, 음, 나의 어떤 그 관점들을
+- [21:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=1300) 정리를 하는 어, 클로드.md MD
+- [21:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=1303) 파일을 어 생성을 할 거예요. 그래서
+- [21:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=1305) 제가 다음과 같은 어 것을 이렇게
+- [21:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=1309) 넣었습니다. 내 볼트에 나의 핵심
+- [21:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=1311) 맥락 파일을이 있는데 이걸 가지고
+- [21:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=1314) 클로드 MD를 만들어 줘. 포함할
+- [21:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=1316) 섹션은 어 작업 규칙 뭐 이런 섹션
+- [21:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=1319) 이런 것들을 어 통해서네
+- [22:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=1323) 어 이런 것들을 만들어 달라라고 할
+- [22:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=1325) 거예요. 그래서 이렇게 나의 사전
+- [22:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=1327) 인터뷰 어 내가 머릿속으로 꺼내 놓은
+- [22:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=1330) 얘기들 기준들을 바탕으로 해 달라라고
+- [22:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=1333) 하면은 제가 클러드či 좀 MD를
+- [22:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=1335) 이제 만들어 주겠습니다.네 클로드점
+- [22:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=1338) MD가 생성이 됐는데요.네 네. 여기
+- [22:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=1340) 보면은 어 지금은 어 일단이 핵심
+- [22:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=1344) 맥락을 기반으로 이렇게 나는 누구인가
+- [22:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=1347) 나의 역할들한테 기대하는 것 자극
+- [22:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=1350) 규칙 이런 것들을 어 열심히 적어
+- [22:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=1353) 줬고요. 이게 일단은 매우 기본적인
+- [22:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=1356) 기존이 되는 겁니다. 나중에 내가
+- [22:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=1357) 필요하면은 얘를 계속 더 업데이트하고
+- [22:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=1360) 매우 구체적으로 만들어 줄 수도 어
+- [22:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=1363) 있겠죠. 그런데 일단은 AI가 내가
+- [22:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=1366) 어떤 사람인지 내가 어 클로드 코드
+- [22:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=1369) 너와 함께 지식 관리를 진행 하는데
+- [22:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=1371) 어떤 목적으로 진행하는지 얘가
+- [22:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=1373) 일차적으로 이렇게 준비가 됐습니다.
+- [22:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=1376) 어 이제 해야 하는 것은 저희가 어
+- [22:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=1378) 이거를 기반으로 LRM 위키 아이디어
+- [23:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=1383) LRM 위키 문서를 주면서 거기에
+- [23:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=1385) 맞게 나의 폴더 구조를 만들어 줘라고
+- [23:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=1388) 이제 하면서이 클로즈.mD도 MD도
+- [23:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=1391) 좀 업데이트 시키게끔 우리가 할 수가
+- [23:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=1394) 있습니다. 그래서 다음에는이 프롬트를
+- [23:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=1396) 준비를 하는데요. 여기서 아래는
+- [23:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=1398) 파티에 LM 위키 패턴이야. 이거를
+- [23:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=1401) 읽고 나의 아이디어를 맞게 세팅해
+- [23:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=1403) 줘라고 하는데요. 저는이 링크를
+- [23:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=1406) 이렇게 넣었죠. 여러분들께서 그냥
+- [23:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=1409) 이렇게 어어 이렇게 링크를 남기지
+- [23:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=1412) 말고 어 실제로 저 크롬을 열어서 해
+- [23:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=1414) 볼게요. 네. 실제로 크롬을 열어서
+- [23:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=1416) 실제로 그 내용에 들어가 가지고 얘는
+- [23:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=1419) 복사를 해 보겠습니다. 전체 기본
+- [23:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=1421) 내용을 복사를 하고음 얘를 이렇게
+- [23:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=1425) 넣어 주세요. 그래서 이렇게 하면 될
+- [23:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=1427) 거 같아요. 어이 해 줄 것은이 내
+- [23:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=1430) 목적에 맞게 폴더 구조를라 위키
+- [23:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=1433) 그리고 아웃풋을 만들고 클로드에
+- [23:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=1436) 운영할 규칙 스키마 이런 것들을 어
+- [23:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=1439) 넣어 줘라는 것들을 넣었습니다. 이제
+- [24:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=1442) 결국에는 우리가 우리의 기준들을
+- [24:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=1444) 통해서이 LM 위키를 적용을 시켜
+- [24:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=1447) 가지고 아까 저희가 공유를 드렸던이
+- [24:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=1450) LM 위키의 형태로 이제 만들어 주는
+- [24:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=1454) 것이나 다름이 없죠. 그럼 다시
+- [24:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=1456) 안티그래비티로 돌아가 보겠습니다.
+- [24:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=1457) 그래서 돌아가고 있을 거예요. 다
+- [24:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=1460) 돌아갔네요. 현재 어 클러드 MD를
+- [24:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=1463) 확인을 했고 세팅 계획을 먼저 알려
+- [24:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=1465) 주네요. 폴더 구조는음 이렇게
+- [24:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=1469) 다양하게 되고 있고 그리고 위키도
+- [24:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=1472) 이렇게 내가 세팅을 해 줄게 클로드점
+- [24:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=1475) MD에 섹션을 추가를 하고 클로드md
+- [24:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=1478) 아래 또 하위이 폴더들도 추가를
+- [24:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=1481) 합니다. 어 우리가 클러움 MD 기본
+- [24:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=1485) 것 말고도 그리고 각 폴더마다도 얘를
+- [24:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=1487) 추가를 하면은 어 되게 좋은 것은이
+- [24:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=1490) 해당 폴더 안에 내용들을 이렇게
+- [24:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=1493) 파악을 할 때 얘도 읽어 가지고 그
+- [24:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=1496) 폴더에 대한 맥락도 추가적으로 가지고
+- [24:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=1498) 오게 됩니다. 그래서 한 층 더이
+- [25:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=1501) 클로드가 활용하는 맥락이 풍부해지게
+- [25:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=1503) 돼요. 그래서 이런 것들을 통해서
+- [25:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=1505) 계속 진행해 줘. 음. 이렇게
+- [25:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=1508) 이야기를 해 보겠습니다. 네. 일단은
+- [25:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=1510) 얘가 폴더를 이렇게 뚝딱 만들었어요.
+- [25:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=1512) 그래서 아웃풋,로 위키 이런 내용들이
+- [25:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=1515) 이렇게 들어가 있고요. 그리고
+- [25:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=1516) 클로드.md 파일도 병렬로 생성을
+- [25:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=1518) 하고 있습니다. 생성이 되면은 또
+- [25:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=1520) 확인을 해 보겠습니다. 네. 이렇게
+- [25:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=1521) 생성이 완료된 거 같은데요. 일단은
+- [25:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=1525) 로우 파일 안에 보면은 일단은 각
+- [25:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=1527) 폴더는 어떻게 작동을 하고 하이
+- [25:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=1529) 폴더는 어떤 것들이 들어가는지에 대한
+- [25:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=1531) 이렇게 어 룰들이 들어갔고요. 그리고
+- [25:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=1535) 이제 위키 폴더죠. 위키폴더 안에서도
+- [25:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=1538) 이제 인덱스 로그 그리고이 클로드
+- [25:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=1541) md도 형성이 되면서 그 규칙
+- [25:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=1544) 스키마가 정해졌습니다. 그니까 우리가
+- [25:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=1545) 이론적으로는이
+- [25:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=1547) 노트를 이렇게 열심히 집어 넣을
+- [25:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=1549) 때마다 결국에는이 그이 파 폴더들을
+- [25:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=1554) 접근을 할 때마다이 규칙을 알고
+- [25:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=1556) 거기에 맞게 이제 들어갈 예정입니다.
+- [25:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=1559) 네. 여러분 너무 신기하지 않나요?
+- [26:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=1562) 그 저희가 조금만 인터뷰를 하고
+- [26:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=1564) 그다음에 몇 가지의 프롬프트 그리고
+- [26:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=1566) LM 위키 아이디어를 넣었을 뿐인데
+- [26:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=1569) 이렇게 폴더가 뿅하고 만들어졌어요.
+- [26:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=1572) 그러면 여러분 이렇게 우리가 체계를
+- [26:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=1574) 만들었으니까 잘 입력이 되는지 그리고
+- [26:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=1577) 잘 정리가 되는지 우리가 한번 확인을
+- [26:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=1579) 해 봐야 할 거 같아요. 어 우리가
+- [26:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=1581) 그러면 이렇게 LR키를 잘 활용을
+- [26:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=1583) 해서 수집을 하고 정리를 하고
+- [26:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=1585) 싶으면은 활용할 수 있는 방법이이
+- [26:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=1588) 옵시디언에서 제공을 해 주고 있는 웹
+- [26:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=1590) 클리퍼를 사용을 하는 겁니다.이 웹
+- [26:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=1592) 클리퍼라는 것은 이미
+- [26:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=1594) [목을 가다듬음] 옵시디 사용자들은
+- [26:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=1596) 많이들 아실 텐데요. 인터넷에 있는
+- [26:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=1598) 어떠한 재료이든지간에 내가 가지고 와
+- [26:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=1600) 가지고 저장할 수 있는 어
+- [26:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=1603) 내용입니다. 네.이 이 저장하는게
+- [26:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=1604) 옵시디언에 마크다운의 형식에 맞게 잘
+- [26:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=1607) 저장을 하는 거예요.이 옵시디언
+- [26:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=1609) 웹클리퍼를 설치를 하려면은이 에드트
+- [26:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=1611) 크롬을 누른 다음에이 크롬
+- [26:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=1613) 웹스토어에서 설치를 하시면 됩니다.
+- [26:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=1615) 음. 어, 그런 다음에 어, 여기
+- [26:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=1617) 익스텐션에서 얘를 고정을
+- [26:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=1619) [목을 가다듬음] 시켜 주면은이
+- [27:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=1620) 오른쪽 위에 얘가 뜨거든요. 이거를
+- [27:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=1622) 누르면은 우리가 옵시디언에 인터넷에
+- [27:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=1624) 있는 많은 자료들을 어 편리하게
+- [27:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=1627) 옵시디언에 가지고 올 수가 있습니다.
+- [27:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=1629) 어, 그런데 저희가 [목을 가다듬음]
+- [27:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=1630) 어, 문제는이 옵시디언 웹클리퍼를
+- [27:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=1634) 지금 그냥 디폴트로 제공되는 상태로는
+- [27:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=1639) 우리의 [목을 가다듬음]
+- [27:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=1640) 그 LRM 위키에 맞게 가지고 오기가
+- [27:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=1643) 쉽지 않아요. 그래 가지고음 제가
+- [27:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=1646) 우리 거기 맞는 템플릿을 만들어 줘야
+- [27:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=1648) 합니다. 일단 한번 테스트를 해
+- [27:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=1650) 보면은 그 암호 웹페이지에서 제가
+- [27:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=1653) 얘를 이렇게 누르면은
+- [27:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=1655) [목을 가다듬음] 어디다가 클리핑을
+- [27:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=1656) 할지 이런 것들을 이렇게 우리가
+- [27:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=1658) 선택을 할 수가 있어요. 이렇게
+- [27:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=1661) 다양한 템플릿을 선택을 할 수도
+- [27:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=1662) 있고요. 그러면은 메타데이터를 입력을
+- [27:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=1664) 해 주기도 하고 그다음에 저희가
+- [27:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=1666) 이렇게 어 본문의 내용을 우리가
+- [27:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=1669) 마크다운에 맞게 추출을 해서 저장을
+- [27:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=1672) 할 수가 있는 겁니다. 형태로 저희가
+- [27:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=1675) 어 기본 템플릿으로 옵시디언을
+- [27:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=1677) 추가하기를 누르면은 어 이렇게 아까
+- [28:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=1680) 일단은 어 클리핑이라는 폴더가 좀
+- [28:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=1684) 디폴트로 설정이 돼 있었기 때문에
+- [28:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=1685) 요게 들어와요. 근데 저희가 어
+- [28:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=1687) 이렇게 어 사용을 하게 되면은 현재
+- [28:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=1690) 우리가 정해 놓은 규칙하고는 좀
+- [28:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=1692) 다르잖아요. 그래서 일단 이렇게 어
+- [28:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=1695) 옵시 웹클리퍼로 내가 그 인터넷에
+- [28:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=1697) 있는 자료들을 다 가지고 올 수
+- [28:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=1699) 있지만 문제는 저희가 얘를 삭제를
+- [28:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=1701) 하고 우리의 그 목적에 맞는
+- [28:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=1704) 템플릿들을 만들어 달라라고 해야 할
+- [28:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=1706) 거 같아요. 어 그러는 방법을 제가
+- [28:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=1708) 알려 드리겠습니다. 일단은 저희가
+- [28:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=1711) 옵시디엄 웹클리퍼 설정을 가야
+- [28:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=1712) 되는데요. 오른쪽 위에 우클릭을 해서
+- [28:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=1715) 여기서 옵션을 눌러 주세요. 옵시디어
+- [28:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=1717) 웹클리퍼를 옵션을 들어가면은 어
+- [28:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=1720) 여기서 다양한 설정을 할 수가
+- [28:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=1721) 있는데요. 어, 여기서 우리가 어,
+- [28:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=1724) 기본 템플릿 같은 것을 하나 이용을
+- [28:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=1726) 하면은 저희가 어, 이걸 내보내기 해
+- [28:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=1729) 가지고 AI한테 제공을 해 주면
+- [28:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=1732) 거기에 맞는 웹클리퍼 템플릿들을 얘가
+- [28:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=1734) 제공을 해 줄 거예요. 그럼 여기서
+- [28:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=1736) 어, 내보내기를 해 가지고 우리가
+- [28:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=1738) 제이슨 파일을 이렇게 가지고 올 수
+- [29:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=1740) 있습니다. 그래서 임시로 어, 제가
+- [29:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=1742) 어떻게 할 거냐면요.이
+- [29:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=1743) 안티그래비티에다가
+- [29:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=1745) 저희가 임시로이 제이슨 파일을 그대로
+- [29:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=1749) 가지고 와서 이렇게 입력을 해
+- [29:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=1751) 볼게요. 지금 보고 있는 파일은 내가
+- [29:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=1754) 쉽게 편리하게 옵시디언의 재료
+- [29:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=1757) 정보들을 올 수 있는 나의
+- [29:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=1759) 갱인지식들을 가지고 올 수 있는
+- [29:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=1761) 옵시디언 웹클 clipp퍼 기본
+- [29:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=1762) 템플릿인데네 제가 이렇게 입력을 해
+- [29:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=1764) 줬습니다. 어, 지금 보고 있는
+- [29:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=1766) 파일은 내가 쉽게 나 개인 지식들을
+- [29:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=1769) 가져올 수 있는 웹클리퍼 기분 템플릿
+- [29:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=1771) 내가 로우 파일에 있는 것 지식들을
+- [29:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=1773) 가지고 올 수 있는 템플릿을 만들어
+- [29:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=1774) 줘.이 제이슨 파일을 여러 가지를
+- [29:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=1777) 만들어 줬으면 좋겠고이 템플릿들로
+- [29:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=1779) 수직을 했었을 때 LRM로 인제스트를
+- [29:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=1782) 요청을 했었을 때 위키로 잘 소화할
+- [29:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=1784) 수 있도록 하는 그런 우리가 정한
+- [29:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=1786) 스키마도 잘 연결할 수 있도록 하는
+- [29:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=1787) 것이 중요해. 이렇게
+- [29:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=1788) [목을 가다듬음]
+- [29:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=1789) 언급을 해 볼게요. 이러면은이 제이슨
+- [29:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=1791) 파일들을 우리가 기본 템플릿을 보고
+- [29:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=1794) 여러 가지를 만들어 줄 겁니다. 어,
+- [29:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=1796) 근데 저장 경로를 어, 얘가 알아서
+- [29:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=1799) 어, 이렇게 로우 파일 안에 만들고
+- [30:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=1802) 있는게 아니라 네. 네. 이렇게
+- [30:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=1804) 템플릿들을 얘가 루트 폴더 안에 잘
+- [30:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=1806) 만들고 있습니다. 이게 만들어졌죠?
+- [30:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=1808) 그러면 그러면 아티클 아티클 북네
+- [30:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=1812) 이렇게 파일이 만들어졌고요. 그다음에
+- [30:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=1814) 아티클 유튜브 팟캐스트 책 그리고
+- [30:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=1817) 리서치 연구 자료를 위한 것들이
+- [30:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=1819) 이렇게 어 잘 만들어진 것을 보실
+- [30:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=1822) 수가 있습니다. 그러면은 제가이
+- [30:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=1825) 파일들을 다시 이제 크롬에 있는
+- [30:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=1827) 옵시디움 웹클리퍼에 넣어 가지고 잘
+- [30:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=1830) 가져올 수 있는 형태로 사용이
+- [30:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=1831) 가능하게 만들어야 하거든요. 그럼
+- [30:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=1833) 이렇게 하시면 됩니다. 저희가 여기
+- [30:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=1835) 다시 옵시디언 웹클리퍼로 들어가서네
+- [30:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=1838) 아까 만들었던 저희 옵시디언 폴더
+- [30:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=1840) 안에 다시 파인더로 이렇게
+- [30:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=1842) 들어가면은에 들여오기 여기 임포트
+- [30:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=1844) 버튼에 넣으면은 얘가 어 아티클이
+- [30:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=1848) 템플릿들을 잘 만들어 줄 겁니다.
+- [30:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=1850) 제가 한번 해 볼게요. 들여오기 한
+- [30:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=1851) 다음에 얘를 일단 아티클 만들고
+- [30:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=1854) 그리고 또 드려오기를 통해서이 나머지
+- [30:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=1857) 것들을 다 해 보겠습니다. 이렇게
+- [30:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=1859) 다섯 가지를 다 가지고 왔어요.
+- [31:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=1860) 그래서 어 일단은 기본적으로는 각 그
+- [31:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=1864) 템플릿별로 특정한 사이트에 자동으로
+- [31:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=1867) 작동을 하게끔 되어 있습니다. 어
+- [31:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=1869) 제가 그럼 한번 트리거를 한번 해
+- [31:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=1871) 볼게요. 어 그리고 관련된 이런
+- [31:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=1873) 템플릿 속성들도 잘 가지고 왔고요.
+- [31:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=1875) 그리고 템플릿들도 잘 가지고 와
+- [31:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=1878) 주었습니다. 제가 뭐 예를 들어서
+- [31:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=1880) 어이 사이트 아까 뭐 레그는 이저라
+- [31:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=1882) 카파시가 제안한 L 미키랑 새로운
+- [31:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=1884) 치권 관리 패러다임 이거를 수집을 해
+- [31:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=1886) 본다고 했었을 때 어 얘는 일단 그
+- [31:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=1889) 유튜브 사이트가 없기 때문에 일단은
+- [31:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=1891) 자동 트리거가 안 됐는데요. LR
+- [31:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=1893) 미리 미키 아티클이라는 것을 여기다가
+- [31:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=1895) 이제 아마도 넣을 수가 있을
+- [31:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=1897) 겁니다.네 그러면은이 옵시디언에
+- [31:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=1899) 추가하기 해서 어 누르면은 얘가
+- [31:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=1902) 자동으로 일단은 옵시디언 아티클에
+- [31:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=1905) 이렇게 가지고 왔고요. 그렇죠?
+- [31:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=1908) 유튜브 영상을 하나 해 볼게요.
+- [31:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=1910) 유튜브도 한번 해 볼게요.이 유튜브는
+- [31:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=1912) 제가 제일 좋아하는이 브라이언의
+- [31:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=1914) 브레인트리니티 채널 어 얘를 제
+- [31:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=1917) 가지고 한번 해보도록 하겠습니다.
+- [31:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=1919) 네.이 유튜브 채널을 이렇게 넣고
+- [32:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=1922) 제가 어 얘를 눌러서네 이렇게
+- [32:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=1925) 트랜스크립트까지 가져고 와요. 유튜브
+- [32:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=1927) 채널이다 보니까이 유튜브가 자동으로
+- [32:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=1929) 작동이 됐겠죠? 그리고 이렇게 가지고
+- [32:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=1931) 오겠습니다. 이렇게 가지고 왔고요.
+- [32:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=1934) 지금 그래서 아티클이랑 비디오 안에
+- [32:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=1938) 이렇게 쌓인 것들이 보실 수가
+- [32:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=1940) 있습니다. 음. 이렇게 하면은 내가
+- [32:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=1942) 오 얼굴이 부담스러워. 너무 크다.
+- [32:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=1945) 영화보 어 영화 공보 아 꺼 꺼 꺼
+- [32:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=1947) 부담스러워요. 저도. 네. 이렇게
+- [32:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=1949) [콧방귀]
+- [32:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=1950) 그 어 만들고 다시 저희가 어 몇
+- [32:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=1954) 가지를 이렇게 가지고 왔죠. 어
+- [32:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=1955) 수집을 했어요. 어 그러면은 이제 어
+- [32:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=1958) 수집을 했으면은 이것을 좀 어 수집을
+- [32:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=1962) 위한 인제를 시키는 이제 프롬트를
+- [32:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=1964) 하나 준비를 했습니다.네 제가 단과
+- [32:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=1967) 같은 어 프롬트로 만들었는데요. 일단
+- [32:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=1969) 이것을 한번 프롬트로 입력한 후에
+- [32:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=1971) 우리가 스킬화를 하면 됩니다.네 네.
+- [32:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=1973) 그래서 제가 만든 인젝스트 프롬트가
+- [32:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=1975) 방금 웹클리퍼로 로어에 저장한 글들이
+- [32:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=1978) 있고 이거를 가지고 파일들 읽어 주고
+- [33:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=1980) 나에게 질문한 후에 그리고 위키에
+- [33:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=1983) 반영을 해 줘라고 이렇게
+- [33:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=1986) 만들었습니다. 이게 제가 질문을 하는
+- [33:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=1990) 것은 어 꼭 추가할 필요가 없는데
+- [33:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=1992) 중요한 것은 저희가 목적성 있는
+- [33:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=1995) 수집을 하려면 내가 수집을 하면서도이
+- [33:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=1997) 관련 인사이트 내가 이걸 왜 수집을
+- [33:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=1999) 했는지 코멘트를 달아야 해요. 그래야
+- [33:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=2002) AI가 또 내가 왜 수집을 했는지
+- [33:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=2004) 내가 클로드전 MD에도 기준이 있지만
+- [33:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=2007) 훨씬 더 그 맥락을 잘 이해할 수
+- [33:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=2009) 있게 됩니다. 그러면은 이렇게 입력을
+- [33:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=2011) 하고 한번 보겠습니다. 그러면은 방금
+- [33:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=2014) 웹클리퍼로 저장한 글이 있고
+- [33:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=2015) 인제스트를 해 줘라고 제가 했죠.
+- [33:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=2017) 그러면 소스들을 다 읽고 얘가 요약을
+- [33:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=2021) 하고 그다음에 여기서 여러 엔티티들을
+- [33:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=2023) 분리를 시켜요. 이제 lm이라든지 뭐
+- [33:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=2026) 레그라든지 코덱스 이런 것들을 이렇게
+- [33:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=2029) 분리를 시키네요. 음. 네. 한번
+- [33:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=2031) 볼게요. 제일 중요한 것은 내가이
+- [33:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=2033) 소스를 반영하기 전에 나의 관점을
+- [33:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=2036) 넣는 것이 너무 중요합니다.이 관점에
+- [33:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=2038) 대해서 내가 대답을 할 수 없으면은
+- [34:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=2040) 이게 내가 왜 수집을 했는지 목적성이
+- [34:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=2042) 없는 수집이에요. 그래서 내가 뭐 다
+- [34:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=2045) 읽었던지간에 아니면 일본 읽었던지간에
+- [34:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=2047) 결국에는 이것들을 입력을 해 줘야
+- [34:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=2049) 합니다. 난 이것을 캡처한 것이 ll
+- [34:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2051) 위키와를 좀 더 나중에 잘 수집을 잘
+- [34:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=2055) 공부를 하기 위해서 수집을 한 거고네
+- [34:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=2058) 제가 이렇게 입력을 해 주었습니다.
+- [34:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=2060) 결국에는이 LM 위키를 반영한 브레인
+- [34:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=2062) 트리니트 프로그램을 만들고 싶다라는
+- [34:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=2064) 제 목적 무엇을 하고 싶은지도
+- [34:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=2067) 이야기를 하였습니다. 그래서 지금은이
+- [34:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=2070) 하나를 가지고 제가 열심히 프로세싱을
+- [34:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=2073) 해서 여기 안에 집어넣겠죠. 어디에
+- [34:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=2076) 생성이 되는지 한번 보겠습니다. 네.
+- [34:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=2077) 이렇게 지식들이 몇 가지가 만들어지고
+- [34:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=2079) 있는데요. 예를 들어서 LLM 위키를
+- [34:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=2082) 언급을 하면은네
+- [34:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=2084) 관련된 소스들을 이렇게 연결을 시키고
+- [34:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=2087) 관련 개념들을 이렇게 정리를 해 주고
+- [34:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=2090) 있습니다. 일단은 여기서 여러분들이
+- [34:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=2092) 좀 아셔야 되는 것들이이 개념들이
+- [34:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=2095) 내가 그 지금 다 이해했다고 담기는
+- [34:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=2098) 것들이 아니고 나중에 AI가 내가
+- [35:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=2101) 하고 싶은 것에서 내가이 지식들을
+- [35:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2103) 이용을 해 가지고 어 그냥 활용할 수
+- [35:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=2105) 있는 형태로 나눠서 저장을 한 거지.
+- [35:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=2107) 이게 결국에는 나의 진짜 글들 나의
+- [35:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2111) 지식들이라고 보면은 안 될 거
+- [35:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=2113) 같아요. 그러면은 이제 비디오도 한번
+- [35:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=2114) 해 볼게요. 비디오도 하나 있어.
+- [35:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=2117) 이거는 제 브레인 트리니티와 관련된
+- [35:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=2119) 유튜브 소스 영상을 가지고 왔는데요.
+- [35:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=2122) 얘가인지를 하네요. 브라이언 님의
+- [35:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=2124) 유튜브 영상이군요. 그리고 질문들을
+- [35:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=2126) 또 다시 한번 제가 다뤄 보도록
+- [35:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=2129) 하겠습니다.이 영상을 왜 위키에
+- [35:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=2131) 넣으라고 하냐면 어 결국에는 내가
+- [35:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=2133) llm 위키랑 브레인 트리니티라는
+- [35:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=2136) 개념을 잘 연결을 시켜 가지고 발전을
+- [35:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=2138) 시키고 싶은데 그때 활용을 하고
+- [35:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=2139) 싶어.
+- [35:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=2141) 네. 이렇게 입력을 했어요. 저는
+- [35:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=2143) 결국 LR미키랑 브레인트리네트라는
+- [35:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=2145) 개념을 잘 연결시켜서 어 좀
+- [35:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=2149) 발전시키고 싶다라는 것을 이제
+- [35:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=2151) 이야기를 하였습니다. 네. 여러분 그
+- [35:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=2153) 사이에 이렇게 뭐 브레인 트리니티
+- [35:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=2156) 세컨드 브레인 서드 브레인 이렇게
+- [35:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=2158) 개념들을이 정리를 해 줬고요.
+- [36:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=2160) 그리고네 저도 이제 제 영상까지
+- [36:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2163) 들어오면서네 이러한 위키의 형태로
+- [36:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=2166) 열심히 차곡차곡 쌓이고 있는 모습을
+- [36:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=2168) 보실 수가 있겠습니다. 그러면은 저는
+- [36:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2171) 지금 뭐 어 노트를 두 개 아티클을
+- [36:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=2175) 두 개를 가지고 이렇게 만들어
+- [36:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=2176) 봤는데요. 얘를 좀 더 효율적으로
+- [36:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=2178) 만들기 위해서 저는 얘를 이렇게 하고
+- [36:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=2181) 싶습니다. 지금까지는 대화를 통해서
+- [36:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=2183) 했는데 스킬을 좀 활용을 하고
+- [36:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=2184) 싶어요. 그래서이 대화한 내용을
+- [36:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=2187) 바탕으로 스킬을 만들고 싶어. 그래서
+- [36:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=2189) 새로운 최신 파일들을 확인을 하고
+- [36:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=2191) 이것을 바탕으로 인젝스트 해 주는
+- [36:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=2192) 것까지 하는 지금까지 한 모든
+- [36:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=2194) 프로세스를 보는 슬래시 인제스트
+- [36:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=2197) 스킬을 만들어 줘라고 요청을
+- [36:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=2198) 하였습니다. 그러면은 얘가 그냥 이런
+- [36:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=2201) 대화를 할 필요 없이 슬래시
+- [36:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=2202) 인제스트를 통해서이 자료 하나하나별로
+- [36:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=2205) 자동으로 이렇게 효율적으로 정리를 해
+- [36:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=2208) 주는 이런 워크플로를 만드는거나
+- [36:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=2211) 다름이 없습니다. 그 제가 두 번을
+- [36:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=2213) 하고이 스킬을 만든 것은 뭐냐면요.
+- [36:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=2216) 얘가 아, 내가 한 번만 하는 거
+- [36:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=2217) 아니라 두 번, 세 번 정도 진행을
+- [36:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=2219) 해야 얘가 패턴을 발견을 하고 스킬을
+- [37:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=2221) 더 잘 만들어 주기 때문입니다.
+- [37:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2223) 우리가 스킬 크리에이터가 있기 때문에
+- [37:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=2225) 내가 지금까지 대화를 한 것을 통해서
+- [37:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=2227) 스킬을 만들어 줘 하면은 맥락을 잘
+- [37:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=2229) 이해를 해서 이것을 한 번에 활용할
+- [37:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2231) 수 있는 스킬로 만들어 줍니다. 네.
+- [37:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=2233) 이렇게 스킬 만드는 것을 다 예스를
+- [37:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=2236) 해 주면은 내가 새로운 스킬도 만들어
+- [37:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=2239) 주고요. 네. 이러한 순서대로 이제
+- [37:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=2241) 진행을 해 주게 됩니다. 제가 두
+- [37:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=2243) 가지 스킬을 근데 더 만들어 달라라고
+- [37:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=2245) 할 겁니다. 어,이 두 가지 스킬은
+- [37:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=2247) 뭐냐면요. 어, 첫 번째로는 코리
+- [37:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=2249) 스킬랑 린트 스킬인데요. 코리 스킬은
+- [37:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=2252) 어, 내가 어떤 질문을 하면은 안에
+- [37:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=2255) 있는 내용들을 참고로 내가 답변을 해
+- [37:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=2257) 주는 스킬이에요. 어떻게 보면은 어
+- [37:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=2259) 레그랑 같은 거라고 보시면 될 거
+- [37:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=2261) 같은데 문제이 리트리벌이 우리가 벡터
+- [37:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=2264) DV에서 하는 것이 아니라 위키에
+- [37:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=2266) 있는 나의 문서들을 기반으로 하는
+- [37:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=2268) 것이라고 보면 될 거 같습니다.
+- [37:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=2270) 그리고 린트 스킬인데요. 이거는
+- [37:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=2272) 가끔씩은이
+- [37:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=2274) 전체 위키가 잘 업데이트가 안 될
+- [37:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=2277) 때도 있을 것 같아요. 내용이
+- [37:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=2278) 많아지다 보면은 그러면은 내가
+- [38:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=2281) 코어리를 한 것이나 아니면은 내가
+- [38:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2283) 전체 내용들 중에서 뭔가 깨지거나 어
+- [38:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=2286) 잘 업데이트가 최신화가 안 된 것들이
+- [38:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=2289) 있으면은 이거를 통해서 수정을 하고
+- [38:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2291) 업데이트를 시키는 위키 전체를 조금
+- [38:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=2294) 정리해 주는 도서관을 업데이트 시키는
+- [38:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=2297) 그런 스킬이라고 보시면 될 거
+- [38:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=2298) 같습니다. 네. 네. 이것도 두 가지
+- [38:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=2300) 추가 스킬을 제가 진행을 하였습니다.
+- [38:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=2303) 제가 그리고 무엇을 더 시도를 해 볼
+- [38:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=2305) 거냐면요. 음. 이제는 그 인터넷에서
+- [38:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=2308) 새로 가지고 오는 소스들도 있는데요.
+- [38:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=2310) 제가 어 제 유튜브 영상 세 가지
+- [38:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=2314) 트랜스크립트를 제가 가지고 왔어요.
+- [38:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=2317) 제 유튜브에 있는 제 파일들도 가지고
+- [38:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=2319) 와서 이것들을 다 인스트를 할 수
+- [38:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=2322) 있을지도 한번 보겠습니다. 어 제가
+- [38:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=2325) 그리고 회의한 그런 내용들도
+- [38:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=2327) 있는데요. 여기서 로우 안에 다 넣고
+- [38:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=2330) 이제 인스트를 해 줘. 그런데
+- [38:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=2333) 질문하지 말고
+- [38:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=2337) 뭐가 알아서 간단해서 연결시켜줘.
+- [39:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=2340) 이것도 가능한지 한번 테스트를 해
+- [39:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2343) 보겠습니다.이 글들이 많을수록이 롤을
+- [39:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=2346) 보면서 새로운 것들을 이렇게 발견을
+- [39:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=2349) 하려고 하겠죠. 음. 근데 얘가인지를
+- [39:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2351) 못했네요.로
+- [39:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=2353) 안에어서
+- [39:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=2355) 폴더 말고 다른 루트 폴더를
+- [39:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=2360) 확인해 줘. 예. 네. 그러면은 모든
+- [39:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=2362) 로우 파일들을 보고 얘가 스테러스가
+- [39:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=2365) 인박스가에
+- [39:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=2367) 있어야 된다는 것을 이렇게 말을
+- [39:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=2368) 하는게 아마도 제가 그 옵시디언
+- [39:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=2371) 웹클리퍼를 통해서 가지고 오는 걸
+- [39:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=2372) 설정을 했다 보니까이 제가 외부에서
+- [39:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=2376) 가지고 온 트랜스크립트는 아마도 어
+- [39:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=2378) 그게 없어 가지고인지를 못 했던 거
+- [39:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=2380) 같아요. 그럼 얘가 일단 자동으로
+- [39:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=2382) 처리하는 것도 한번 확인을 해
+- [39:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=2384) 보겠습니다. 네. 얘가 이제 좀
+- [39:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=2386) 읽어오는 걸 보니까 어 어떤
+- [39:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=2388) 소스인지도 파악을 했고 시리즈는
+- [39:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=2390) 묶어서 소스 페이지로 만들겠습니다라고
+- [39:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=2392) 됐는데 이것도 너무 어 똑똑한 거
+- [39:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=2394) 같습니다.네 지금 생성되고네
+- [39:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=2397) 이렇게 소스들도 정리가 되 있고요.
+- [39:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=2398) 그리고 어떤 것들을 생성하고 있는지도
+- [40:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=2400) 좀 보면은 PKM 그리고 목적 있는
+- [40:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2403) 수집 무의식의 의식화 노트의 복리
+- [40:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=2406) 역과 어 커그네트의 탭지적 부채
+- [40:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=2409) COD 프로세스 파락 엄청나게
+- [40:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=2412) 많네요. 얘가 알아서 작성이 되고
+- [40:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=2414) 있어서 어 만약에 어 클로드
+- [40:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=2417) 프로플랜을 쓰고 계신 분들 같은
+- [40:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=2419) 경우에는이 엄청나게 [콧방귀]
+- [40:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=2420) 토큰을 완전 태울 거 같다라는 생각이
+- [40:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=2423) 드요. 네. 이렇게 연관된 것들을 잘
+- [40:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=2425) 이렇게 업데이트를 해 주고 있습니다.
+- [40:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=2426) 어 오랜 시간을 기다려 가지고 이렇게
+- [40:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=2429) 기존에 가지고 온 소스들을 기반으로네
+- [40:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=2433) 위키 안에도 업데이트를 해 준 것을
+- [40:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=2435) 보실 수 있습니다. 이런 내용들이
+- [40:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=2437) 계속 쌓이고 있고요. 결국 위키가
+- [40:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=2439) 어떻게 쌓일지에 대한 것은 어 내가
+- [40:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=2441) 뭐 초반에이 LM키 인터뷰를 통해서
+- [40:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=2444) 진행을 해야 될 것 같다. 어라는
+- [40:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=2447) 생각입니다. 네. 여러분. 네.
+- [40:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=2449) 그리고 여기서 쿼리를 이용을 하면은
+- [40:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=2454) 브레인 트리니티와 LLM 위키 간의
+- [40:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=2457) 상관성
+- [41:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=2460) 알려줘.라고
+- [41:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=2461) 하면은 어 저희가 아까 스킬을
+- [41:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2463) 만들었죠. 어 스킬을 만들어서 그
+- [41:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=2466) 내용을 어 아까 어 이게 어딘가
+- [41:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=2469) 있네요. 그리고 스킬을 입력을 하면은
+- [41:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2471) 얘가 관련된 것들을 이렇게 빠르게
+- [41:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=2474) 찾아와서 LRM 미키, 세컨드
+- [41:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=2476) 브레인, 서드 브레인 이렇게 내용을
+- [41:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=2478) 언급을 하고 그 찾은 내용들을
+- [41:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=2480) 바탕으로 답변을 해 주는 겁니다.음
+- [41:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=2482) 음, 이게 저희가 보통 생각하는
+- [41:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=2485) 레그랑 비슷한 작동 방식인데이 LRM
+- [41:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=2488) 위키는 결국에는 내가 그 벡터 DV가
+- [41:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=2492) 아니라 어 애초에 입력을 하는
+- [41:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=2494) 과정에서 인제터를 하는 과정에서
+- [41:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=2497) AI와 함께 한 것들을 바탕으로
+- [41:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=2499) 답변을 이렇게 주고 관련된음 이런
+- [41:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=2502) 내용들도 이렇게 연결을 시키는 것을
+- [41:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=2505) 보실 수가 있죠. 네. 그래서 여기서
+- [41:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=2507) 어 신테스 저장할까요라고 하면은 어
+- [41:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=2511) 네. 저장해 주세요.라고
+- [41:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=2513) 하면은이 위키 내용들 중에서 내
+- [41:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=2516) 질문들 중에서 어 내가 한번 좀
+- [41:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=2519) 수집을 하고 이해를 한 것들 이렇게
+- [42:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=2521) 지한 것들을 어테시스에 저장을 해
+- [42:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=2524) 주기도 합니다. 그러면 지금까지
+- [42:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=2526) 우리가 한 내용을 바탕으로
+- [42:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=2527) 옵시디언에는 어떻게 보이는지 한번
+- [42:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2531) 공유를 드려 볼게요. 그 사이에
+- [42:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=2533) 노트가 엄청나게 많이 추가되었죠. 로
+- [42:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=2536) 파일 말고 위키 안에서도 각각의 이런
+- [42:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=2539) 어 컨셉들이 추가가 되었고요. 추가가
+- [42:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=2542) 되었고요. 뭐 복리역과 파일 오버앱
+- [42:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=2545) 이런 것들이 다 정리된 모습을 보실
+- [42:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=2548) 수가 있습니다. 그러면 이테시스
+- [42:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=2549) 페이지도 한번 저희가 살펴볼게요.스는
+- [42:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=2553) 내가 어떤 질문을 했으면은 여러
+- [42:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=2555) 소스들을 기반으로 이렇게 어 얘가 내
+- [42:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=2558) 노트 안에 있는 내용들을 가지고
+- [42:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=2560) 이렇게 어 정리를 해 주는데요.
+- [42:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=2563) 여기서 시사점과 브레인 트리니티를
+- [42:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=2565) 완성해야 되는 이유 이런 것들을 또
+- [42:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=2567) 한번네 여러분이 센테스에 있는 내용을
+- [42:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=2569) 한번 보면은 어 일단은 여러 내에 L
+- [42:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=2572) 위키에 있는 소스들을 바탕으로음
+- [42:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=2575) 개념들을 연결시켜 줘 가지고 그을
+- [42:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=2576) 작성을 해 줬어요. 아 이것들이
+- [42:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=2578) 어떻게 보면 위키 안에 여러 퍼진
+- [43:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=2580) 소스들을 우리가 통합을 시켜 가지고
+- [43:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2583) 결국에는 어 하나의 그 보고서 같은
+- [43:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=2586) 느낌이라고 보시면은 될 거
+- [43:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=2588) 같습니다.음 음. 근데 이거를 그대로
+- [43:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=2590) 활용을 하면 안 되고 얘를 참고를
+- [43:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=2592) 해서 내가 또 다른 이제 지식을
+- [43:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=2594) 만들어 내 가는 형태로 활용을 해야
+- [43:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=2596) 되겠죠. 네. 지금까지 LRM를
+- [43:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=2599) 설치를 해보고 만들어 보는 걸 해
+- [43:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=2600) 봤는데요. 어, 여기서 한 발 더
+- [43:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=2602) 나아가서 제가 그래피파이까지 좀
+- [43:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=2604) 다루려고 합니다. 어, 근데 이걸로도
+- [43:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=2606) 충분할 수가 있습니다. 근데 여러분,
+- [43:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=2608) 문제가 있습니다. 문제가 뭐냐면요.
+- [43:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=2611) 우리가이 소스들이 지금은 몇 개가
+- [43:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=2613) 없어요. 근데 엄청 많아질 경우에는
+- [43:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=2615) 얘가 비효율적일 수도 있습니다.
+- [43:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=2616) 그래서 그 그런 어떤 단점이 있다라고
+- [43:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=2620) LRM미크가 만들어진지 얼마 안 돼
+- [43:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=2622) 가지고 누가 코멘트를 남겼어요. 그
+- [43:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=2624) 거기에 대한 댓글로 어이 그래프로
+- [43:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=2627) 작동이 될 수 있는게 있었으면
+- [43:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=2629) 좋겠다. 그래프를 이용을 해 가지고이
+- [43:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=2631) 문서뿐만 아니라이 그래프 정보를 어
+- [43:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=2634) 참고를 해 가지고 LM도 활용할 수
+- [43:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=2636) 있는 방향으로 쓸 수 있었으면
+- [43:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=2637) 좋겠다라고 누군가 이렇게 어 안드레
+- [44:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=2640) 아파시가 외쳤는데 48시간 이로 누가
+- [44:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2643) 만들었습니다. 그래 가지고 이제
+- [44:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=2644) LRM키랑이 그래프까지 하면은이
+- [44:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=2646) 그래프 데이터베이스 약간 그래프
+- [44:08](https://youtube.com/watch?v=cNlvrU-KcRg&t=2648) 레그랑 유사 형태로 활용할 수 있는
+- [44:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=2650) 걸로 이제 좀 발전을 했고 아마도
+- [44:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=2654) 이것이 메타로 좀 작용을 할 거
+- [44:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=2656) 같아요. 우리가 그 제가 좀 상어
+- [44:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=2658) 설명을 드리면은 우리가 이렇게 막
+- [44:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=2661) 소스들이 많더라도 결국에는이 센티스
+- [44:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=2664) 있죠? 네.이 이 내용을 가지고
+- [44:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=2666) 잠깐이 지리를 가지고이 브레인트 me
+- [44:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=2669) llm 위키를 어 만들어 냈을지 언정
+- [44:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=2673) 결국에는 얘가 그랩이라는 도구로
+- [44:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=2676) 서치를 하는 겁니다. 그러니까 무작정
+- [44:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=2679) 키워드로 검색을 하는 거예요. 우리가
+- [44:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=2681) 결국 얘가 옵시디언에 올라가 있는데이
+- [44:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=2683) 그래프에 대한 이런 어 내용들이
+- [44:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=2687) 있습니다.이 그래프 정보들이 어 지금
+- [44:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=2691) 있는데요. 문제는 얘가 어이 그래프를
+- [44:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=2695) 기반으로 얘를 답변을 하는게
+- [44:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=2697) 아니에요. 그래서 좀 문제가 됩니다.
+- [44:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=2699) 그래서 어이 그래피파이라는 도교를
+- [45:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=2702) 통해서이 그래프에 대한 정보를이
+- [45:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=2705) 연결들 기반으로 그래프에 대한 정보를
+- [45:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=2707) 만들어서 클로드 코드가 답변을 한다.
+- [45:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=2709) 활용할 수 있도록 제공을 해 준
+- [45:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2711) 것이이 어 그래피파이라는 도구예요.
+- [45:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=2714) 저희가 그래서 그거를 하고이 영상을
+- [45:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=2716) 마칠 예정인데요.이
+- [45:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=2718) 어 그래피파이라는 도구가네 여기
+- [45:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=2720) 있어요. 그래피파이. 내세 이제
+- [45:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=2723) 누군가 이게 어 만들어 놓은
+- [45:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=2726) 도구이고요. 만들어진지가 얼마 안 돼
+- [45:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=2729) 가지고 아무래도이 영상을 만든 이후에
+- [45:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=2732) 업데이트가 많을 것 같습니다. 근데
+- [45:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=2733) 일단은 핵심은 이거예요. 핵심은
+- [45:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=2736) 뭐냐면요. 네. 옵시디언에 있는이
+- [45:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=2739) 내용들 그리고 마크다운 문서들을
+- [45:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=2741) 그래프로 만들어서 LM이 활용할 수
+- [45:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=2744) 있도록 지식 그래프를 만들어 주는
+- [45:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=2746) 겁니다. 이거 자체가
+- [45:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=2748) knowledge graphs for
+- [45:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=2749) AI coding
+- [45:49](https://youtube.com/watch?v=cNlvrU-KcRg&t=2749) assistant라고 되어 있어요.
+- [45:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=2751) 음. 그래서 얘를 한번 같이 저희가
+- [45:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=2753) 설치를 해 보고 실행을 해 보는 것을
+- [45:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=2755) 한번 할 예정입니다. 어, 일단은
+- [45:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=2757) 파이썬이 설치가 되어 있어야 하고요.
+- [46:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=2760) 어, 기본적으로 피 인스톨 그래픽
+- [46:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=2762) 파일을 통해서 이것을 설치를 하면 될
+- [46:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=2765) 거 같아요. 그리고 우리가 아까
+- [46:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=2767) 대화했던 거에이어서 그냥 해 볼게요.
+- [46:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=2769) 얘가 대화 맥락이 지금 토큰이 좀
+- [46:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2771) 많이 썼긴 했지만 그래도이어서 하면은
+- [46:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=2773) 훨씬 더 잘 작동을 할 것이기 때문에
+- [46:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=2776) 이걸 진행해서
+- [46:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=2778) 그래피파이
+- [46:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=2780) 설치해 줘. 네. 저는 어제 이미
+- [46:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=2783) 설치를 해보고 좀 시도를 해 봐서
+- [46:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=2784) 설치가 이미 되어 있는데요. 그러면
+- [46:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=2787) 시간이 좀 걸리겠지만이 파이썬
+- [46:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=2788) 라이브러리를 설치를 하게 되어
+- [46:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=2791) 있습니다. 네. 그 그런 상태로 제가
+- [46:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=2793) 그래피파이를 한번 해 달라라고 요청을
+- [46:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=2796) 할게요.
+- [46:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=2798) 그래피파이 위키라고 하면은이 내 위키
+- [46:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=2801) 안에 있는 폴더를 다이 그래프 형태로
+- [46:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=2805) 저장을 하게 됩니다. 저는 위키라는
+- [46:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=2807) 폴더를 이렇게 지정을 하였지만 얘가
+- [46:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=2810) 어 조금 더 나아가서 여기 사용하는
+- [46:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=2813) 방법들을 보면요.네 네. 특정한
+- [46:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=2816) 폴더를 폴더나 프로젝트를 내가 만든
+- [46:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=2819) 다음에 결국에는이 그 결과물들이
+- [47:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=2822) 그래프 정보랑 리포트가 있어요.이
+- [47:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=2824) 리포트는 사람이 볼 수 있는
+- [47:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=2827) 형태이고요. 결국에는이
+- [47:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=2829) 그래프.
+- [47:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=2831) 그래프점 제이을 가지고 AI가 활용을
+- [47:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=2835) 할 수 있습니다. 그리고 여기
+- [47:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=2837) 그래프.html이라고이
+- [47:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=2840) 그 시각화된 것도 보여 준다라고
+- [47:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=2842) 합니다. 네. 그래서 시간이 좀
+- [47:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=2844) 걸리겠지만이 그래프로 나가는 것을
+- [47:26](https://youtube.com/watch?v=cNlvrU-KcRg&t=2846) 한번 진행을 해 볼게요. 네. 여러분
+- [47:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=2848) 이렇게 어 완료가 됐고요. 어
+- [47:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=2850) 결국에는 그 이제
+- [47:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=2852) 그래피파이.html이 HTML이
+- [47:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=2854) 있는데요. 어 얘를 누르면은이 그래
+- [47:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=2858) 이렇게 어 얘가 만들어집니다. 지금
+- [47:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=2860) 보면은네 그래프가 어떻게 작동을 하고
+- [47:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=2862) 있는지 보실 수가 있고요. 어떻게
+- [47:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=2864) 연결이 돼 있고이 어 노드에 대한
+- [47:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=2867) 정보부터 그 어떤 커뮤니티들이 있는지
+- [47:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=2870) 이렇게 정보를 분석을 해 주기도
+- [47:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=2873) 합니다. 네. 그 얘는 일단 우리가
+- [47:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=2875) 시각적으로 좀 그냥 확인할 수 있는
+- [47:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=2878) 하나의 리포트라고 보시면은 어 될 거
+- [48:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=2880) 같아요. 그래서이 네이버라고 하면은
+- [48:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2883) 결국에는이 관련된 내용들을 토대로
+- [48:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=2886) 저희가 그 좀 동네라고 하죠. 유사한
+- [48:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=2890) 것들이 높은 것끼리 이렇게 어
+- [48:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=2892) 클러스터들을 보여 주고 있다라고
+- [48:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=2895) 보시면은 될 거 같습니다. 네.
+- [48:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=2897) 그러면은 우리가 이렇게 되었을 때
+- [48:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=2900) 그래프가 만들어졌어요. 그러면은이 그
+- [48:23](https://youtube.com/watch?v=cNlvrU-KcRg&t=2903) 그래피파이라고
+- [48:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=2905) 어 그래프. 이라고 하는이 정보를
+- [48:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=2907) 바탕으로 어 얘가 클로드 코드가
+- [48:30](https://youtube.com/watch?v=cNlvrU-KcRg&t=2910) 활용을 할 수 있어야 돼요. 아까
+- [48:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=2912) 코리 했었을 때는 그냥 질문을 한
+- [48:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=2914) 건데 그러면 이것을 어떻게 이용을 할
+- [48:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=2917) 수 있는지를 보면은 저희가 여기서
+- [48:40](https://youtube.com/watch?v=cNlvrU-KcRg&t=2920) 그래피파이
+- [48:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=2923) 그래피파이
+- [48:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=2925) 이렇게 하면 됩니다. 그래피파이
+- [48:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=2928) 그리고 어 qu리 한다음에 질문을 어
+- [48:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=2931) 열심히 하면 돼요.
+- [48:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=2934) 네. 이렇게 하면은 어 저희가
+- [48:57](https://youtube.com/watch?v=cNlvrU-KcRg&t=2937) 결국에는 아까 질문을 했었어서 이테스
+- [49:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=2941) 안에 있었던 거 있죠? 네. 저희
+- [49:03](https://youtube.com/watch?v=cNlvrU-KcRg&t=2943) 다시 위키 안에 신테스 얘는 어
+- [49:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=2946) 그래프디는 아니었고요. 그냥이
+- [49:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=2949) 텍스트를 기반으로 막 로그나 인덱스
+- [49:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=2952) 이런 것들을 기반으로 했어요. 근데
+- [49:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=2954) 이제는 그래피파이라는 것을 이용을
+- [49:16](https://youtube.com/watch?v=cNlvrU-KcRg&t=2956) 하면은 얘가 그래프 정보를 기반으로
+- [49:19](https://youtube.com/watch?v=cNlvrU-KcRg&t=2959) 이렇게 알려 줍니다. 네. 얘가 어
+- [49:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=2961) 결과물이 네. 네. 그래서이 그래프
+- [49:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=2964) 탐색 결과를 바탕으로 답변을 합니다.
+- [49:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=2967) 이렇게 나오고 있어요. 네. 브레인
+- [49:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=2969) 트리니티 LLM의 근본적인 차이.
+- [49:32](https://youtube.com/watch?v=cNlvrU-KcRg&t=2972) 그래프에서 몇 개의 노드와 몇 개의
+- [49:34](https://youtube.com/watch?v=cNlvrU-KcRg&t=2974) 엣지를 탐색한 결과 같은 문제 다른
+- [49:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=2976) 랩에서 푸는 관계입니다. 이렇게
+- [49:38](https://youtube.com/watch?v=cNlvrU-KcRg&t=2978) 답변을 해 주고 있습니다. 네.
+- [49:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=2981) 추상화 수준 다르다. 관심사 방향이
+- [49:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=2983) 다르다. 근본적인 주어가 다르다.
+- [49:45](https://youtube.com/watch?v=cNlvrU-KcRg&t=2985) 음. 저도 처음 물어보는 건데 너무
+- [49:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=2988) 재밌는 답변인 거 같네요. 네. 그럼
+- [49:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=2990) 그래프를 이용을 해 가지고 우리가
+- [49:52](https://youtube.com/watch?v=cNlvrU-KcRg&t=2992) 그러면 근본적으로 어 우리가 이제
+- [49:54](https://youtube.com/watch?v=cNlvrU-KcRg&t=2994) 수집한 것들을 통해서 우리가 수집한
+- [49:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=2996) 우리만의 연관성 있는 재료들을 통해서
+- [49:59](https://youtube.com/watch?v=cNlvrU-KcRg&t=2999) 이렇게 답변을 해 줄 수도 있겠죠.
+- [50:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=3001) 얘가 또 재밌는 게요. 그이
+- [50:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=3002) 그래피파이 아웃에서 그래프 리포트
+- [50:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=3005) 얘를 마크다운으로도 영어로 이렇게
+- [50:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=3007) 설명을 해 줘요.이 똑같은 내용을
+- [50:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=3010) 저희가 옵시디언 안에서도 결국에는
+- [50:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=3013) 확인을 하실 수가 있습니다.
+- [50:14](https://youtube.com/watch?v=cNlvrU-KcRg&t=3014) 그래피파이 아웃에서 그래프 리포트
+- [50:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=3017) 이걸 통해서 어 어떤 것들을 했는지
+- [50:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=3020) 이렇게 보실 수가 있고요. 어,
+- [50:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=3022) 그리고 내가 만약에이 그래프 만든
+- [50:25](https://youtube.com/watch?v=cNlvrU-KcRg&t=3025) 것을 업데이트를 시키고 싶으면은
+- [50:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=3029) 저희가 어, 새로운 자료들을 넣고
+- [50:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=3031) 그리고 어, 그래피파이 음, 저는
+- [50:35](https://youtube.com/watch?v=cNlvrU-KcRg&t=3035) 지금 할 필요 없겠지만 그래피파이
+- [50:37](https://youtube.com/watch?v=cNlvrU-KcRg&t=3037) 그리고 어, 폴더 이름 위키 어
+- [50:41](https://youtube.com/watch?v=cNlvrU-KcRg&t=3041) 업데이트라고
+- [50:43](https://youtube.com/watch?v=cNlvrU-KcRg&t=3043) 하면은 변경된 부분만 제추출해 가지고
+- [50:46](https://youtube.com/watch?v=cNlvrU-KcRg&t=3046) 어, 업데이트를 그래프로 해 준다라고
+- [50:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=3048) 합니다. 이렇게 활용을 할 수 있을
+- [50:50](https://youtube.com/watch?v=cNlvrU-KcRg&t=3050) 것 같아요. 예. 그래서 일단은
+- [50:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=3053) 진짜로 나의 지식을 바탕으로 이렇게
+- [50:56](https://youtube.com/watch?v=cNlvrU-KcRg&t=3056) 그래프를 실제로 어 그래프
+- [50:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=3058) 데이터베이스를 만들고 우리가 실제로
+- [51:01](https://youtube.com/watch?v=cNlvrU-KcRg&t=3061) 이제 그래프 DB가 너무 어려웠는데
+- [51:04](https://youtube.com/watch?v=cNlvrU-KcRg&t=3064) 그래프 레그가 너무 어려웠는데
+- [51:06](https://youtube.com/watch?v=cNlvrU-KcRg&t=3066) 이제는이 문서들 텍스트 시멘틱한
+- [51:09](https://youtube.com/watch?v=cNlvrU-KcRg&t=3069) 맥락을 바탕으로 어 그래프 DB도
+- [51:11](https://youtube.com/watch?v=cNlvrU-KcRg&t=3071) 쉽게 만들고 쿼리를 하는데도 이렇게
+- [51:13](https://youtube.com/watch?v=cNlvrU-KcRg&t=3073) 그래프까지 활용을 할 수가 있습니다.
+- [51:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=3075) 네. 영상이 엄청나게 길었죠? 네.
+- [51:18](https://youtube.com/watch?v=cNlvrU-KcRg&t=3078) 여러분 지금 영상이 엄청나게 예상했던
+- [51:21](https://youtube.com/watch?v=cNlvrU-KcRg&t=3081) 것보다 길었는데요. 어 그만큼 제가
+- [51:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=3084) 실시간으로이 LM 키를 같이 만들어
+- [51:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=3087) 보고 그다음에 그걸 바탕으로 질문도
+- [51:28](https://youtube.com/watch?v=cNlvrU-KcRg&t=3088) 해 보고 이것을 좀 더 증강시키기
+- [51:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=3091) 위한 목적으로 그래프 렉 우리 그래픽
+- [51:33](https://youtube.com/watch?v=cNlvrU-KcRg&t=3093) 파이까지 다뤄봤습니다. 여러분 앞으로
+- [51:36](https://youtube.com/watch?v=cNlvrU-KcRg&t=3096) 엄청나게 이것이 뜰 예정입니다. 제가
+- [51:39](https://youtube.com/watch?v=cNlvrU-KcRg&t=3099) 장담드립니다. 아니면은이 유튜브 채널
+- [51:42](https://youtube.com/watch?v=cNlvrU-KcRg&t=3102) 삭제는 못 하겠고요. 네. 하여튼
+- [51:44](https://youtube.com/watch?v=cNlvrU-KcRg&t=3104) 엄청나게 인기가 많아질이
+- [51:47](https://youtube.com/watch?v=cNlvrU-KcRg&t=3107) 옵시디언과 클로드 코드 사용은
+- [51:48](https://youtube.com/watch?v=cNlvrU-KcRg&t=3108) 메타라고 보실 수 있을 것 같습니다.
+- [51:51](https://youtube.com/watch?v=cNlvrU-KcRg&t=3111) 근데 여러분 이게 LM이 알아서 해
+- [51:53](https://youtube.com/watch?v=cNlvrU-KcRg&t=3113) 주는게 아니라요. 제일 중요한 거는
+- [51:55](https://youtube.com/watch?v=cNlvrU-KcRg&t=3115) 나의 목적입니다. 목적 없이 내가
+- [51:58](https://youtube.com/watch?v=cNlvrU-KcRg&t=3118) 단순히 진짜로 이걸 왜 수집했지를 어
+- [52:02](https://youtube.com/watch?v=cNlvrU-KcRg&t=3122) 답변을 할 수 없으면은 LRM을
+- [52:05](https://youtube.com/watch?v=cNlvrU-KcRg&t=3125) 제대로 활용을 하는 것이 L을
+- [52:07](https://youtube.com/watch?v=cNlvrU-KcRg&t=3127) 활용하는 건데 그이 목 잘 활용을
+- [52:10](https://youtube.com/watch?v=cNlvrU-KcRg&t=3130) 하게 되는게 아닙니다. 나의 목적이
+- [52:12](https://youtube.com/watch?v=cNlvrU-KcRg&t=3132) 있는 수짐입니다. 그래서 저도이 LM
+- [52:15](https://youtube.com/watch?v=cNlvrU-KcRg&t=3135) 위키랑 그래피파이를 어떻게 내가 나의
+- [52:17](https://youtube.com/watch?v=cNlvrU-KcRg&t=3137) 이제 워크플로우에 적용시킬 수 있을지
+- [52:20](https://youtube.com/watch?v=cNlvrU-KcRg&t=3140) 많이 고민을 할 예정이니까요. 함께
+- [52:22](https://youtube.com/watch?v=cNlvrU-KcRg&t=3142) 따라와 주셨으면 좋겠습니다. 여러분도
+- [52:24](https://youtube.com/watch?v=cNlvrU-KcRg&t=3144) 질문 있으시면은 언제나 댓글로 남겨
+- [52:27](https://youtube.com/watch?v=cNlvrU-KcRg&t=3147) 주시고요. 그리고 다음 영상에서
+- [52:29](https://youtube.com/watch?v=cNlvrU-KcRg&t=3149) 뵙도록 하겠습니다. 감사합니다.
+- [52:31](https://youtube.com/watch?v=cNlvrU-KcRg&t=3151) 안녕. Yeah.
