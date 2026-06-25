@@ -10,8 +10,6 @@ status: active
 ---
 # Claude Code + Graphify = Insane Agentic OS
 
-[[_category-일반학습]]
-
 ## 🧠 이해 (Understand)
 - **Summary:** 이 영상은 Graphify 도구를 소개하는데, 이는 Claude code의 비용과 시간을 절약하면서 정확도를 높이는 도구입니다. Graphify는 코드베이스의 관계와 구조를 이해할 수 있는 지식 그래프를 생성하여, Claude가 전체 코드를 매번 다시 읽지 않고도 코드를 이해할 수 있게 합니다. 영상에서는 Graphify를 Claude code에 설치하는 방법과, 더 나아가 agentic operating system과 연결하여 여러 도구들(Hermes, Claude code 등)을 하나의 통합된 시스템으로 만드는 방법을 보여줍니다. 이를 통해 개발자는 새로운 코드베이스를 빠르게 이해하고, 토큰 사용량을 줄이며, 더 정확한 답변을 얻을 수 있습니다.
 - **Core Message:** Graphify는 코드베이스를 지식 그래프로 변환하여 Claude의 코드 이해 능력을 대폭 향상시키고, agentic operating system과 결합하면 모든 프로젝트를 통합 관리할 수 있는 강력한 개발 환경을 만들 수 있다.
@@ -23,6 +21,9 @@ status: active
 ❗ You can work on your laptop with Claude code and seamlessly continue on mobile with the same mapped understanding
 
 ## 🚀 실행 (Execute)
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=Owv503rTqYY&t=0) Imagine if Claude code was faster,
