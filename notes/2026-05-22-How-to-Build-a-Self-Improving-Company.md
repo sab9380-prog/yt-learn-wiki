@@ -5,12 +5,10 @@ video_id: t-G67yKAHBQ
 source_type: youtube
 lang: en
 analyzed: 2026-05-22
-category: 일반학습
+category: Picks전략
 status: active
 ---
 # How to Build a Self-Improving Company with AI
-
-[[_category-일반학습]]
 
 ## 🧠 이해 (Understand)
 - **Summary:** 이 영상은 AI 시대에 회사 조직을 근본적으로 재설계해야 한다고 주장합니다. 전통적인 로마 군단식 계층 구조(중간 관리층을 통한 정보 전달)에서 벗어나, AI가 중심이 되는 자기개선 루프 시스템으로 전환해야 한다고 설명합니다. 핵심은 회사의 모든 도메인 지식을 AI가 이해할 수 있도록 기록하고 정리하는 것입니다. YC에서는 모든 파트너 이메일, 슬랙 메시지, 오피스 아워를 기록하여 AI가 활용할 수 있게 했고, 이를 통해 사용자 매뉴얼을 자동으로 재생성하는 등의 성과를 얻었습니다. 미래 조직에서 인간은 AI 시스템 주변에서 현실 세계와 인터페이스하는 역할(고위험 상황, 윤리적 판단, 영업 등)을 담당하게 될 것이라고 전망합니다.
@@ -39,6 +37,9 @@ status: active
 - 자료: RAG 시스템 구축을 위한 벡터 데이터베이스
 - 자료: YC의 사용자 매뉴얼 재생성 사례 상세 분석
 - Timeline: 1주차: 데이터 수집 시스템 구축, 2주차: 파일럿 영역 선정 및 설계, 3-4주차: 첫 자기개선 루프 구현 및 테스트
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=t-G67yKAHBQ&t=0) This is based a little bit off a talk
