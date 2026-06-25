@@ -10,8 +10,6 @@ status: active
 ---
 # GStack + Superpowers로 클로드코드 완전히 달라진 사람의 후기
 
-[[_category-일반학습]]
-
 ## 🧠 이해 (Understand)
 - **Summary:** 클로드 코드 사용 시 발생하는 주요 문제들(방향성 흔들림, 불명확한 요구사항, 작업 흐름 단절)을 해결하기 위해 수많은 플러그인을 테스트한 결과, 최종적으로 G-Stack과 SuperPowers 두 개만 남겨서 사용하는 최적화된 워크플로우를 소개합니다. G-Stack의 Office Hours(아이디어 구체화 상담)와 Design Review(AI 슬롭 방지), SuperPowers의 Sub-agent Driven Development(팀 작업 분할)와 Git Worktrees(작업 공간 분리) 기능을 조합하여 체계적인 개발 흐름을 구축합니다. 실제 사용 순서는 Office Hours로 아이디어 정리 → 문서화 → Brainstorming으로 보완 → Writing Plans로 계획서 작성 → 작업 공간 분리 → 팀 단위 개발 진행 순으로 진행하며, 이를 통해 중간에 방향이 바뀌지 않고 매끄러운 결과물을 얻을 수 있습니다.
 - **Core Message:** 클로드 코드의 수많은 플러그인 중 G-Stack과 SuperPowers 두 개만 조합하여 체계적인 워크플로우를 구축하면, 방향성 있고 매끄러운 개발이 가능하다.
@@ -39,6 +37,9 @@ status: active
 - 자료: SuperPowers 깃허브 리포지토리 (설치 방법 확인 필요)
 - 자료: 클로드 코드 확장 프로그램 관리 문서
 - Timeline: 먼저 플러그인 설치하고, 기존 프로젝트에 Office Hours 적용해보며 효과를 체감한 후, 새 프로젝트에 전체 워크플로우 적용
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=af3OJ0L1jEU&t=0) 저 요즘 클로드코드 플러그인 거의 다
