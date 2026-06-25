@@ -1,0 +1,477 @@
+---
+title: "Claude Code를 이 5가지 에이전트 패턴과 함께 쓰면 훨씬 더 잘 작동합니다"
+source_url: https://youtube.com/watch?v=ufr6er69kLs
+video_id: ufr6er69kLs
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# Claude Code를 이 5가지 에이전트 패턴과 함께 쓰면 훨씬 더 잘 작동합니다
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** Claude Code를 효율적으로 활용하기 위한 5가지 AI 에이전트 패턴을 소개하는 영상입니다. 첫 번째 '순차 흐름' 패턴은 작업을 하나씩 차례로 처리하며, 버그 수정부터 배포까지 전체 워크플로우를 자동화합니다. 두 번째 '스플릿 머지' 패턴은 큰 작업을 여러 서브 에이전트로 나누어 병렬 처리한 후 결과를 합치는 방식입니다. 세 번째 '에이전트 팀' 패턴은 여러 에이전트가 공유 소통 채널을 통해 협업하며, 반대 의견 역할도 포함합니다. 네 번째 '오퍼레이터' 패턴은 여러 터미널 세션에서 격리된 환경을 만들어 동시에 다른 버전을 개발할 수 있게 합니다. 마지막 '헤드리스' 패턴은 대시 플래그를 통해 백그라운드에서 자율적으로 실행하며, 라이프 루프와 결합해 완전 자동화가 가능합니다.
+- **Core Message:** Claude Code를 단순히 일대일 대화로 쓰지 말고, 5가지 에이전트 패턴을 활용해 자동화된 워크플로우를 만들어 생산성을 극대화하라.
+> 아직도 클로드 코드를 한 번에 대화 하나씩만 쓰고 있다면 완전히 잘못 쓰고 있는 겁니다.
+> 대부분은 일을 하나 맡기고 그냥 앉아서 기다렸다가 또 다음 일을 주죠. 그건 팀을 운영하는 방식이 아니고 병목일 뿐입니다.
+> 잘만 설정하면 여러분이 커피나 점심 먹으러 간 사이에도 클로드 코드가 혼자 돌아가게 만들 수 있습니다.
+❗ 헤드리스 패턴으로 라이프 루프를 설정하면 AI가 버그를 완전히 고칠 때까지 스스로 반복 실행한다
+❗ 오퍼레이터 패턴으로 여러 터미널에서 동시에 다른 버전을 개발하고 마음에 안 드는 것만 삭제할 수 있다
+❗ 이터레이티브 리뷰 스킬로 5-7개 서브 에이전트가 각각 새 컨텍스트 윈도우에서 동시에 코드를 검토한다
+
+## 📚 핵심 용어
+- **헤드리스:** Claude Code를 UI 없이 백그라운드에서 터미널 명령으로 실행하는 방식 / 택시 기사에게 목적지만 알려주고 잠들어도 도착하는 것처럼, 명령만 주면 알아서 완료될 때까지 돌아간다. / 일반 Claude는 사용자가 계속 대화해야 하지만, 헤드리스는 한 번 명령하면 자율적으로 완료까지 진행한다.
+- **스플릿 머지:** 큰 작업을 여러 서브 에이전트로 나누어 병렬 처리한 후 결과를 합치는 패턴 / 요리를 할 때 여러 명이 각자 다른 재료를 준비한 후 한 명이 최종 요리로 완성하는 것과 같다. / 순차 흐름은 하나씩 차례로 처리하지만, 스플릿 머지는 동시에 여러 작업을 나누어 처리해 시간을 단축한다.
+- **에이전트 팀:** 여러 AI 에이전트가 공유 채널로 소통하며 협업하는 패턴 / 회사 팀 채팅방에서 팀원들이 실시간으로 의견을 주고받으며 프로젝트를 진행하는 것과 같다. / 스플릿 머지는 각자 독립적으로 작업하지만, 에이전트 팀은 서로 소통하며 협업한다.
+- **오퍼레이터:** 여러 터미널 세션에서 각각 격리된 환경을 만들어 동시에 다른 작업을 수행하는 패턴 / 여러 개의 독립된 작업실에서 각각 다른 시제품을 만들고, 마음에 드는 것만 골라내는 것과 같다. / 다른 패턴들은 한 환경에서 작업하지만, 오퍼레이터는 여러 격리된 환경에서 A/B 테스트처럼 진행한다.
+
+## 🚀 실행 (Execute)
+- [ ] Claude Code에서 헤드리스 패턴 테스트 - 간단한 명령을 --prompt 플래그로 실행해보기
+  - 담당: 나
+  - 이유: 가장 강력하고 자동화 가능한 패턴이므로 먼저 익숙해져야 함
+- [ ] 현재 반복 작업 중 스플릿 머지 패턴으로 개선할 수 있는 업무 찾아 서브 에이전트로 나누어 테스트
+  - 담당: 나
+  - 이유: 병렬 처리로 시간을 단축하고 컨텍스트 희석 문제를 해결할 수 있음
+- 자료: 영상 제작자의 스쿨 커뮤니티 (Claude Code 마스터 클래스 포함)
+- 자료: 서브 에이전트 시작 방법 플레이리스트
+- 자료: 버그 수정 워크플로우 자동화 관련 영상
+- 자료: 라이프 루프 설정 방법 영상
+- Timeline: 1단계: 헤드리스 패턴 익히기 (오늘) → 2단계: 기존 업무에 스플릿 머지 적용 (이번 주) → 3단계: 복잡한 프로젝트에 에이전트 팀/오퍼레이터 패턴 도입 (다음 주)
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=ufr6er69kLs&t=0) 아직도 클로드 코드를 한 번에 대화
+- [0:01](https://youtube.com/watch?v=ufr6er69kLs&t=1) 하나씩만 쓰고 있다면 완전히 잘못
+- [0:03](https://youtube.com/watch?v=ufr6er69kLs&t=3) 쓰고 있는 겁니다. 대부분은 일을
+- [0:05](https://youtube.com/watch?v=ufr6er69kLs&t=5) 하나 맡기고 그냥 앉아서 기다렸다가
+- [0:07](https://youtube.com/watch?v=ufr6er69kLs&t=7) 또 다음 일을 주죠. 그건 팀을
+- [0:09](https://youtube.com/watch?v=ufr6er69kLs&t=9) 운영하는 방식이 아니고 병목일
+- [0:11](https://youtube.com/watch?v=ufr6er69kLs&t=11) 뿐입니다. 그래서이 영상에서는
+- [0:13](https://youtube.com/watch?v=ufr6er69kLs&t=13) 여러분이 아주 단순한 방식부터 완전
+- [0:15](https://youtube.com/watch?v=ufr6er69kLs&t=15) 자유령까지 다섯 가지 에이전트 패턴을
+- [0:17](https://youtube.com/watch?v=ufr6er69kLs&t=17) 보여 드리겠습니다. 잘만 설정하면
+- [0:19](https://youtube.com/watch?v=ufr6er69kLs&t=19) 여러분이 커피나 점심 먹으러 간
+- [0:20](https://youtube.com/watch?v=ufr6er69kLs&t=20) 사이에도 클로드 코드가 혼자 돌아가게
+- [0:21](https://youtube.com/watch?v=ufr6er69kLs&t=21) 만들 수 있습니다. 그럼 바로
+- [0:23](https://youtube.com/watch?v=ufr6er69kLs&t=23) 보시죠. 계속하기 전에 말씀드리면
+- [0:25](https://youtube.com/watch?v=ufr6er69kLs&t=25) 제가 최근 스쿨 커뮤니티를
+- [0:27](https://youtube.com/watch?v=ufr6er69kLs&t=27) 열었습니다. 여기서 AI 에이전트와
+- [0:29](https://youtube.com/watch?v=ufr6er69kLs&t=29) 자동화는 물론 훨씬 더 많은 걸 배울
+- [0:30](https://youtube.com/watch?v=ufr6er69kLs&t=30) 수 있습니다. 아마존과 마이크로소프트
+- [0:33](https://youtube.com/watch?v=ufr6er69kLs&t=33) 같은 회사에서 시니어 AI 소프트웨어
+- [0:34](https://youtube.com/watch?v=ufr6er69kLs&t=34) 엔지니어로 일했던 경험을 바탕으로
+- [0:35](https://youtube.com/watch?v=ufr6er69kLs&t=35) 직접 돕고 있습니다.이 커뮤니티에서는
+- [0:38](https://youtube.com/watch?v=ufr6er69kLs&t=38) 제가 직접 만들고 100번 이상
+- [0:40](https://youtube.com/watch?v=ufr6er69kLs&t=40) 판매한 템플릿과 워크플로 같은
+- [0:41](https://youtube.com/watch?v=ufr6er69kLs&t=41) 100개가 넘는 영상 자료를 받게
+- [0:43](https://youtube.com/watch?v=ufr6er69kLs&t=43) 됩니다. 거기에 매주 진행되는 라이브
+- [0:46](https://youtube.com/watch?v=ufr6er69kLs&t=46) 통화도 참여하실 수 있습니다. 예를
+- [0:48](https://youtube.com/watch?v=ufr6er69kLs&t=48) 들면 이번 주에는 클로드 코드 마스터
+- [0:50](https://youtube.com/watch?v=ufr6er69kLs&t=50) 클래스를 진행합니다. 여기서 클로드
+- [0:52](https://youtube.com/watch?v=ufr6er69kLs&t=52) 코드의 정확도를 높이는 방법과 그걸
+- [0:54](https://youtube.com/watch?v=ufr6er69kLs&t=54) 활용해 앱을 만드는 방법을 깊이 있게
+- [0:56](https://youtube.com/watch?v=ufr6er69kLs&t=56) 다룰 예정입니다. 또한 커뮤니티에서
+- [0:58](https://youtube.com/watch?v=ufr6er69kLs&t=58) 충분한 지원도 받으실 수 있어서
+- [1:00](https://youtube.com/watch?v=ufr6er69kLs&t=60) 질문을 올리면 바로 답변을 받을 수
+- [1:01](https://youtube.com/watch?v=ufr6er69kLs&t=61) 있습니다. 그러니 한 단계 더 성장할
+- [1:03](https://youtube.com/watch?v=ufr6er69kLs&t=63) 준비가 되셨다면 지금 바로
+- [1:04](https://youtube.com/watch?v=ufr6er69kLs&t=64) 들어오세요. 커뮤니티에서 뵙겠습니다.
+- [1:07](https://youtube.com/watch?v=ufr6er69kLs&t=67) 자, 이제 첫 번째 에이전트 패턴인
+- [1:09](https://youtube.com/watch?v=ufr6er69kLs&t=69) 순차 흐름을 보겠습니다.이
+- [1:11](https://youtube.com/watch?v=ufr6er69kLs&t=71) 패턴은 말 그대로 AI 에이전트가 한
+- [1:13](https://youtube.com/watch?v=ufr6er69kLs&t=73) 작업씩 차례대로 처리하게 하는
+- [1:14](https://youtube.com/watch?v=ufr6er69kLs&t=74) 방식입니다.
+- [1:16](https://youtube.com/watch?v=ufr6er69kLs&t=76) 보시면 픽스 티켓츠라는 스킬이
+- [1:17](https://youtube.com/watch?v=ufr6er69kLs&t=77) 있습니다.이 이 픽스 티켓은 전체
+- [1:19](https://youtube.com/watch?v=ufr6er69kLs&t=79) 버그 수정 과정을 자동화하려는
+- [1:21](https://youtube.com/watch?v=ufr6er69kLs&t=81) 스킬입니다.
+- [1:23](https://youtube.com/watch?v=ufr6er69kLs&t=83) 예를 들어 소프트웨어에서 버그를
+- [1:24](https://youtube.com/watch?v=ufr6er69kLs&t=84) 발견하면지나 티켓을 만들고 그 스킬을
+- [1:26](https://youtube.com/watch?v=ufr6er69kLs&t=86) 실행합니다. 그러면이 전체 워크플로가
+- [1:28](https://youtube.com/watch?v=ufr6er69kLs&t=88) 돌아가면서 먼저 티켓을 읽고 수정한
+- [1:30](https://youtube.com/watch?v=ufr6er69kLs&t=90) 뒤 배포까지 하게 됩니다. 조금 더
+- [1:33](https://youtube.com/watch?v=ufr6er69kLs&t=93) 자세히 보면이 스킬은 먼저 지라
+- [1:35](https://youtube.com/watch?v=ufr6er69kLs&t=95) MCP를 불러서 티켓을 읽고 그다음
+- [1:38](https://youtube.com/watch?v=ufr6er69kLs&t=98) 플레이 캐라이를 실행해서 제연되는지
+- [1:40](https://youtube.com/watch?v=ufr6er69kLs&t=100) 확인합니다.
+- [1:41](https://youtube.com/watch?v=ufr6er69kLs&t=101) 그다음에는 조사하고 구형까지
+- [1:43](https://youtube.com/watch?v=ufr6er69kLs&t=103) 진행하죠.
+- [1:46](https://youtube.com/watch?v=ufr6er69kLs&t=106) 그다음에는 여러 서브 에이전트가 만든
+- [1:47](https://youtube.com/watch?v=ufr6er69kLs&t=107) 변경 사항을 검토하고 다시
+- [1:49](https://youtube.com/watch?v=ufr6er69kLs&t=109) 플레이라이트 크라이스키를 돌려서 바뀐
+- [1:51](https://youtube.com/watch?v=ufr6er69kLs&t=111) 내용을 검증합니다. 이후 커밋하고
+- [1:53](https://youtube.com/watch?v=ufr6er69kLs&t=113) 배포한 다음 결국 QA 세션에이
+- [1:55](https://youtube.com/watch?v=ufr6er69kLs&t=115) 변경을 넘기게 됩니다. 보시다시피이
+- [1:57](https://youtube.com/watch?v=ufr6er69kLs&t=117) 전체 워크플로는 순서대로 하나씩
+- [2:00](https://youtube.com/watch?v=ufr6er69kLs&t=120) 진행되는 구조입니다. 물론이
+- [2:02](https://youtube.com/watch?v=ufr6er69kLs&t=122) 패턴이라고 해서 서브 에이전트를 여러
+- [2:03](https://youtube.com/watch?v=ufr6er69kLs&t=123) 개 못 쓰는 건 아닙니다. 당연히
+- [2:05](https://youtube.com/watch?v=ufr6er69kLs&t=125) 가능합니다. 예를 들어 QA 단계에서
+- [2:08](https://youtube.com/watch?v=ufr6er69kLs&t=128) 서브 에이전트를 호출하면 메인
+- [2:10](https://youtube.com/watch?v=ufr6er69kLs&t=130) 쓰레드의 컨텍스트를 많이 쓰지 않게
+- [2:11](https://youtube.com/watch?v=ufr6er69kLs&t=131) 할 수 있습니다. 조사용으로 다른
+- [2:14](https://youtube.com/watch?v=ufr6er69kLs&t=134) 서브 에이전트를 둘 수도 있죠. 저는
+- [2:16](https://youtube.com/watch?v=ufr6er69kLs&t=136) 여기서 검토를 맞는 여러 에이전트
+- [2:17](https://youtube.com/watch?v=ufr6er69kLs&t=137) 팀을 따로 두고 있다고
+- [2:18](https://youtube.com/watch?v=ufr6er69kLs&t=138) 말씀드렸습니다.
+- [2:20](https://youtube.com/watch?v=ufr6er69kLs&t=140) 그리고 각 에이전트는 딱 한 영역에만
+- [2:21](https://youtube.com/watch?v=ufr6er69kLs&t=141) 아주 좁게 집중합니다. 예를 들면
+- [2:24](https://youtube.com/watch?v=ufr6er69kLs&t=144) 하나는 프런트 엔드, 하나는 백엔드,
+- [2:26](https://youtube.com/watch?v=ufr6er69kLs&t=146) 또 하나는 테스트를 맞는 식입니다.
+- [2:28](https://youtube.com/watch?v=ufr6er69kLs&t=148) 그러니까 이런 기능들은 여전히 쓸 수
+- [2:30](https://youtube.com/watch?v=ufr6er69kLs&t=150) 있지만 다만 이런 작업들은 순서대로
+- [2:32](https://youtube.com/watch?v=ufr6er69kLs&t=152) 진행돼야 한다는 뜻입니다. 물론
+- [2:34](https://youtube.com/watch?v=ufr6er69kLs&t=154) 제가이 전체 워크플로를 어떻게
+- [2:36](https://youtube.com/watch?v=ufr6er69kLs&t=156) 만들었는지 보고 싶다면 바로이 영상도
+- [2:38](https://youtube.com/watch?v=ufr6er69kLs&t=158) 꼭 보세요. 여러 스킬을 조합해서이
+- [2:41](https://youtube.com/watch?v=ufr6er69kLs&t=161) 전체 과정을 자동화하고 하나의
+- [2:42](https://youtube.com/watch?v=ufr6er69kLs&t=162) 워크플로만으로 여러 작업이 실행되게
+- [2:44](https://youtube.com/watch?v=ufr6er69kLs&t=164) 만든 방법을 설명합니다.이
+- [2:46](https://youtube.com/watch?v=ufr6er69kLs&t=166) 버그 수정 파이프라인에서 여러 작업을
+- [2:48](https://youtube.com/watch?v=ufr6er69kLs&t=168) 처리하는 방식이죠.이 이 영상도 꼭
+- [2:50](https://youtube.com/watch?v=ufr6er69kLs&t=170) 확인해 보세요.이 예시를 보면 시퀀셜
+- [2:52](https://youtube.com/watch?v=ufr6er69kLs&t=172) 플로우 에이전트 패턴이 어떻게
+- [2:54](https://youtube.com/watch?v=ufr6er69kLs&t=174) 동작하는지 분명히 보입니다.이 패턴은
+- [2:56](https://youtube.com/watch?v=ufr6er69kLs&t=176) 이런 워크플로를 만들 때 정말
+- [2:58](https://youtube.com/watch?v=ufr6er69kLs&t=178) 유용합니다. 작업을 반드시 하나씩
+- [3:00](https://youtube.com/watch?v=ufr6er69kLs&t=180) 순서대로 끝내야 하는 자동화에 딱
+- [3:01](https://youtube.com/watch?v=ufr6er69kLs&t=181) 맞습니다. 자, 이게 첫 번째
+- [3:04](https://youtube.com/watch?v=ufr6er69kLs&t=184) 에이전트 패턴이었습니다.
+- [3:06](https://youtube.com/watch?v=ufr6er69kLs&t=186) 두 번째로 볼 에이전트 패턴은 스플릿
+- [3:08](https://youtube.com/watch?v=ufr6er69kLs&t=188) 에머지입니다.
+- [3:10](https://youtube.com/watch?v=ufr6er69kLs&t=190) 쉽게 말하면 큰 작업 하나를 여러
+- [3:11](https://youtube.com/watch?v=ufr6er69kLs&t=191) 서브 에이전트로 나누는 방식입니다.
+- [3:13](https://youtube.com/watch?v=ufr6er69kLs&t=193) 그리고 각 서브 에이전트가 맡은 일을
+- [3:15](https://youtube.com/watch?v=ufr6er69kLs&t=195) 끝내면 마지막에 오케스트레이터로 다시
+- [3:17](https://youtube.com/watch?v=ufr6er69kLs&t=197) 합칩니다. 간단히 말하면 어떤
+- [3:20](https://youtube.com/watch?v=ufr6er69kLs&t=200) 프로젝트를 한다고 해 봅시다.이
+- [3:22](https://youtube.com/watch?v=ufr6er69kLs&t=202) 프로젝트 전체를 에이전트 하나가 다
+- [3:24](https://youtube.com/watch?v=ufr6er69kLs&t=204) 맞는 대신 병렬로 처리할 수 있는
+- [3:26](https://youtube.com/watch?v=ufr6er69kLs&t=206) 작업이라면 여러 서버 에이전트로
+- [3:28](https://youtube.com/watch?v=ufr6er69kLs&t=208) 나눠서 처리하게 만들 수 있습니다.
+- [3:30](https://youtube.com/watch?v=ufr6er69kLs&t=210) 그러면 훨씬 빨리 끝나고 컨텍스트가
+- [3:32](https://youtube.com/watch?v=ufr6er69kLs&t=212) 흐려지는 문제도 줄어서 더
+- [3:34](https://youtube.com/watch?v=ufr6er69kLs&t=214) 정확해집니다.
+- [3:37](https://youtube.com/watch?v=ufr6er69kLs&t=217) 물론 클로드 코드의 정확도를 높이는
+- [3:38](https://youtube.com/watch?v=ufr6er69kLs&t=218) 방법은 다른 영상에서 더 자세히
+- [3:39](https://youtube.com/watch?v=ufr6er69kLs&t=219) 다뤘습니다. 어쨌든 여기서 핵심은
+- [3:42](https://youtube.com/watch?v=ufr6er69kLs&t=222) 작업을 여러 서브 에이전트로 쪼개고
+- [3:44](https://youtube.com/watch?v=ufr6er69kLs&t=224) 각 서브 에이전트가 맡은 일을 끝낸
+- [3:46](https://youtube.com/watch?v=ufr6er69kLs&t=226) 뒤 다시 하나의 세션으로 합치는
+- [3:48](https://youtube.com/watch?v=ufr6er69kLs&t=228) 겁니다.
+- [3:50](https://youtube.com/watch?v=ufr6er69kLs&t=230) 빌드, 리뷰, 테스트 같은 작업이
+- [3:52](https://youtube.com/watch?v=ufr6er69kLs&t=232) 끝나면 다시 하나의 세션으로
+- [3:54](https://youtube.com/watch?v=ufr6er69kLs&t=234) 합쳐집니다. 또는이 경우엔 하나의
+- [3:56](https://youtube.com/watch?v=ufr6er69kLs&t=236) 오케스트레이터로 돌아오는 거죠. 실전
+- [3:58](https://youtube.com/watch?v=ufr6er69kLs&t=238) 예시로는 제가 만든 DB 스킬이
+- [4:00](https://youtube.com/watch?v=ufr6er69kLs&t=240) 있습니다.이
+- [4:02](https://youtube.com/watch?v=ufr6er69kLs&t=242) 스킬은 여러 서브 에이전트를 띄워서
+- [4:04](https://youtube.com/watch?v=ufr6er69kLs&t=244) 데이터베이스 전체를 점검합니다.
+- [4:10](https://youtube.com/watch?v=ufr6er69kLs&t=250) 예를 들어 한 서브 에이전트는
+- [4:12](https://youtube.com/watch?v=ufr6er69kLs&t=252) 스키마를 검토하고 다른 하나는 보안을
+- [4:14](https://youtube.com/watch?v=ufr6er69kLs&t=254) 점검하고 또 다른 하나는 코리를
+- [4:16](https://youtube.com/watch?v=ufr6er69kLs&t=256) 어떻게 개선할지 혹은 인덱스를 추가해
+- [4:19](https://youtube.com/watch?v=ufr6er69kLs&t=259) 조회 속도를 줄일 수 있을지
+- [4:20](https://youtube.com/watch?v=ufr6er69kLs&t=260) 확인합니다.
+- [4:22](https://youtube.com/watch?v=ufr6er69kLs&t=262) 그리고 일부는
+- [4:25](https://youtube.com/watch?v=ufr6er69kLs&t=265) 슈퍼베이스 MCP와 연동해서 전체
+- [4:27](https://youtube.com/watch?v=ufr6er69kLs&t=267) 감사를 진행하기도 합니다. 그리고
+- [4:29](https://youtube.com/watch?v=ufr6er69kLs&t=269) 모든 작업이 끝나면 [목을 가다듬음]
+- [4:30](https://youtube.com/watch?v=ufr6er69kLs&t=270) 찾은 내용들을 하나의 오케스트레이터로
+- [4:33](https://youtube.com/watch?v=ufr6er69kLs&t=273) 다시 모읍니다.
+- [4:35](https://youtube.com/watch?v=ufr6er69kLs&t=275) 물론 서브 에이전트를 더 배우고
+- [4:36](https://youtube.com/watch?v=ufr6er69kLs&t=276) 싶다면 시작하는 방법을 정리한 영상
+- [4:38](https://youtube.com/watch?v=ufr6er69kLs&t=278) 플레이리스트도 있습니다. 서브
+- [4:40](https://youtube.com/watch?v=ufr6er69kLs&t=280) 에이전트로 초보에서 고급까지 가는
+- [4:42](https://youtube.com/watch?v=ufr6er69kLs&t=282) 방법을 볼 수 있으니 꼭 확인해
+- [4:43](https://youtube.com/watch?v=ufr6er69kLs&t=283) 보세요. 자, 여기까지가 DB오딘
+- [4:46](https://youtube.com/watch?v=ufr6er69kLs&t=286) 일시였습니다.이
+- [4:48](https://youtube.com/watch?v=ufr6er69kLs&t=288) 방식은 다른 서브 에이전트 작업에도
+- [4:49](https://youtube.com/watch?v=ufr6er69kLs&t=289) 그대로 적용할 수 있습니다. 제가
+- [4:51](https://youtube.com/watch?v=ufr6er69kLs&t=291) 서브 에이전트를 실제로 자주 쓰는
+- [4:53](https://youtube.com/watch?v=ufr6er69kLs&t=293) 대표적인 워크플로 하나는 리뷰
+- [4:54](https://youtube.com/watch?v=ufr6er69kLs&t=294) 과정입니다. 제가 검토해야 하는
+- [4:56](https://youtube.com/watch?v=ufr6er69kLs&t=296) 요청들을 말하는 거죠. 그래서 제가
+- [4:58](https://youtube.com/watch?v=ufr6er69kLs&t=298) 직접 하나씩 검토하는 대신이 일을
+- [4:59](https://youtube.com/watch?v=ufr6er69kLs&t=299) 여러 에이전트에게 넘길 수 있습니다.
+- [5:02](https://youtube.com/watch?v=ufr6er69kLs&t=302) 여기 보이는 건 제가 만든 리뷰
+- [5:03](https://youtube.com/watch?v=ufr6er69kLs&t=303) 스킬입니다.이
+- [5:05](https://youtube.com/watch?v=ufr6er69kLs&t=305) 스킬은 핵심적으로 서브 에이전트
+- [5:06](https://youtube.com/watch?v=ufr6er69kLs&t=306) 세계를 동시에 실행합니다. 좀 더
+- [5:09](https://youtube.com/watch?v=ufr6er69kLs&t=309) 실전적으로 말하면 제 도구함에는 여러
+- [5:11](https://youtube.com/watch?v=ufr6er69kLs&t=311) 리뷰 에이전트가 있습니다. 여기
+- [5:14](https://youtube.com/watch?v=ufr6er69kLs&t=314) 보이는 것들 중 몇 개는 코드질에
+- [5:15](https://youtube.com/watch?v=ufr6er69kLs&t=315) 집중하고 있습니다. 그리고 여기에는
+- [5:17](https://youtube.com/watch?v=ufr6er69kLs&t=317) 특수 리뷰에 집중하는 것도 몇 개
+- [5:19](https://youtube.com/watch?v=ufr6er69kLs&t=319) 있는데 예를 들면 눈에 잘 띄지 않는
+- [5:20](https://youtube.com/watch?v=ufr6er69kLs&t=320) 실패 테스트 디자인 주석 코드
+- [5:23](https://youtube.com/watch?v=ufr6er69kLs&t=323) 냄새 같은 걸 살펴보면서이 코드가 더
+- [5:25](https://youtube.com/watch?v=ufr6er69kLs&t=325) 리팩토링하기 쉽고 더 확장 가능하도록
+- [5:27](https://youtube.com/watch?v=ufr6er69kLs&t=327) 하려는 겁니다. 맞죠? 그리고 제가
+- [5:30](https://youtube.com/watch?v=ufr6er69kLs&t=330) 만든 멀티에트 팀도 여러 개
+- [5:31](https://youtube.com/watch?v=ufr6er69kLs&t=331) 있습니다. 예를 들어 하나는 팀
+- [5:33](https://youtube.com/watch?v=ufr6er69kLs&t=333) 리뷰에 집중하는데 리뷰어 다섯 명
+- [5:35](https://youtube.com/watch?v=ufr6er69kLs&t=335) 정도를 띄워서 진행합니다.
+- [5:37](https://youtube.com/watch?v=ufr6er69kLs&t=337) 또 리뷰 픽스도 있는데 여기서는
+- [5:39](https://youtube.com/watch?v=ufr6er69kLs&t=339) 나중에 보여 드릴 헤드리스 에이전트
+- [5:41](https://youtube.com/watch?v=ufr6er69kLs&t=341) 패턴을 써서 병렬 리뷰어 여덟 명이
+- [5:43](https://youtube.com/watch?v=ufr6er69kLs&t=343) 자동으로 수정하고 자동으로
+- [5:44](https://youtube.com/watch?v=ufr6er69kLs&t=344) 검토합니다.
+- [5:48](https://youtube.com/watch?v=ufr6er69kLs&t=348) 보시다시피 이게 두 번째 에이전트
+- [5:49](https://youtube.com/watch?v=ufr6er69kLs&t=349) 패턴인 스플릿 에머지의 기본
+- [5:51](https://youtube.com/watch?v=ufr6er69kLs&t=351) 구조입니다.
+- [5:52](https://youtube.com/watch?v=ufr6er69kLs&t=352) 이제 다음으로 볼 패턴은 에이전트
+- [5:54](https://youtube.com/watch?v=ufr6er69kLs&t=354) 틈지입니다.
+- [5:56](https://youtube.com/watch?v=ufr6er69kLs&t=356) 이전에 서브 에이전트 방식과 비교하면
+- [5:58](https://youtube.com/watch?v=ufr6er69kLs&t=358) 여기서는 팀 리더가 있고 모든 서브
+- [6:00](https://youtube.com/watch?v=ufr6er69kLs&t=360) 에이전트가 공유하는 소통 창구가
+- [6:02](https://youtube.com/watch?v=ufr6er69kLs&t=362) 있다는 점이 다릅니다. 이전 서브
+- [6:05](https://youtube.com/watch?v=ufr6er69kLs&t=365) 에이전트 방식에서는 오케스트레이터가
+- [6:06](https://youtube.com/watch?v=ufr6er69kLs&t=366) 여러 서브 에이전트를 띄우지만 그
+- [6:08](https://youtube.com/watch?v=ufr6er69kLs&t=368) 서브 에이전트들끼리는 서로 소통이
+- [6:09](https://youtube.com/watch?v=ufr6er69kLs&t=369) 없습니다. 반면 에이전트 팀에서는
+- [6:12](https://youtube.com/watch?v=ufr6er69kLs&t=372) 우리가 만든 서브 에이전트들이 서로
+- [6:14](https://youtube.com/watch?v=ufr6er69kLs&t=374) 정보를 주고받는 공용 소통 채널이
+- [6:16](https://youtube.com/watch?v=ufr6er69kLs&t=376) 있습니다.
+- [6:20](https://youtube.com/watch?v=ufr6er69kLs&t=380) 그리고 여기 에이전트 팀이 정확히
+- [6:21](https://youtube.com/watch?v=ufr6er69kLs&t=381) 어떻게 동작하는지 보여주는
+- [6:22](https://youtube.com/watch?v=ufr6er69kLs&t=382) 다이어그램도 만들어 주었습니다.
+- [6:25](https://youtube.com/watch?v=ufr6er69kLs&t=385) 보시면 각 에이전트가 같은 소통
+- [6:26](https://youtube.com/watch?v=ufr6er69kLs&t=386) 채널을 공유하고 여기에 일부러 반대
+- [6:28](https://youtube.com/watch?v=ufr6er69kLs&t=388) 의견을 던지는 역할도 둘 수
+- [6:29](https://youtube.com/watch?v=ufr6er69kLs&t=389) 있습니다. 즉 언제나 모든 걸
+- [6:32](https://youtube.com/watch?v=ufr6er69kLs&t=392) 의심하고 지문하는 역할이 하나 더
+- [6:33](https://youtube.com/watch?v=ufr6er69kLs&t=393) 있는 겁니다. 마치 시니어 엔지니어나
+- [6:35](https://youtube.com/watch?v=ufr6er69kLs&t=395) 스태프 엔지니어처럼 각 서브
+- [6:37](https://youtube.com/watch?v=ufr6er69kLs&t=397) 에이전트가 하는 일을 계속 따져 묻는
+- [6:39](https://youtube.com/watch?v=ufr6er69kLs&t=399) 역할입니다.
+- [6:40](https://youtube.com/watch?v=ufr6er69kLs&t=400) 그리고 이들은 모두 같은 작업을 함께
+- [6:42](https://youtube.com/watch?v=ufr6er69kLs&t=402) 맡을 수 있습니다. 맞죠? 예를 들어
+- [6:44](https://youtube.com/watch?v=ufr6er69kLs&t=404) 한 서브 에이전트는 아이디어를 맡고
+- [6:45](https://youtube.com/watch?v=ufr6er69kLs&t=405) 하나는 계획을 맞고 하나는 실행이나
+- [6:47](https://youtube.com/watch?v=ufr6er69kLs&t=407) 리서치를 맡을 수 있습니다. 그리고
+- [6:49](https://youtube.com/watch?v=ufr6er69kLs&t=409) 다른 하나는 그냥 조사만 하거나
+- [6:51](https://youtube.com/watch?v=ufr6er69kLs&t=411) 아니면 계속 검증하고 도전하는 역할을
+- [6:52](https://youtube.com/watch?v=ufr6er69kLs&t=412) 할 수 있습니다. 이들은 모두 공유된
+- [6:55](https://youtube.com/watch?v=ufr6er69kLs&t=415) 계획이나 공유 작업을 가지고 동시에
+- [6:57](https://youtube.com/watch?v=ufr6er69kLs&t=417) 그 일을 같이 진행합니다. 맞죠?
+- [7:00](https://youtube.com/watch?v=ufr6er69kLs&t=420) 핵심은 각자 새로운 컨텍스트 윈도우를
+- [7:02](https://youtube.com/watch?v=ufr6er69kLs&t=422) 갖게 하는 거고 그렇게 하면 작업을
+- [7:04](https://youtube.com/watch?v=ufr6er69kLs&t=424) 훨씬 더 정확하게 끝낼 수
+- [7:05](https://youtube.com/watch?v=ufr6er69kLs&t=425) 있습니다.이
+- [7:07](https://youtube.com/watch?v=ufr6er69kLs&t=427) 패턴은 작업을 여러 서브 에이전트로
+- [7:09](https://youtube.com/watch?v=ufr6er69kLs&t=429) 나누되 에이전트 팀 기능을 통해 서로
+- [7:11](https://youtube.com/watch?v=ufr6er69kLs&t=431) 계속 소통하게 만드는 방식입니다.
+- [7:18](https://youtube.com/watch?v=ufr6er69kLs&t=438) 그리고 에이전트 팀을 더 배우고
+- [7:19](https://youtube.com/watch?v=ufr6er69kLs&t=439) 싶다면 제가 로컬에서 어떻게 설정하고
+- [7:21](https://youtube.com/watch?v=ufr6er69kLs&t=441) 활용하는지 또 일상 업무를
+- [7:23](https://youtube.com/watch?v=ufr6er69kLs&t=443) 최적화하려고 어떤 에이전트 팀을
+- [7:25](https://youtube.com/watch?v=ufr6er69kLs&t=445) 만들었는지 다른 영상을 보시면
+- [7:27](https://youtube.com/watch?v=ufr6er69kLs&t=447) 됩니다.
+- [7:30](https://youtube.com/watch?v=ufr6er69kLs&t=450) 특히 제 일상 업무에서는 프로젝트
+- [7:32](https://youtube.com/watch?v=ufr6er69kLs&t=452) 안에 여러 에이전트 팀을 두고
+- [7:33](https://youtube.com/watch?v=ufr6er69kLs&t=453) 있습니다. 예를 들어 제가 만든 리뷰
+- [7:35](https://youtube.com/watch?v=ufr6er69kLs&t=455) 팀즈 스킬은 특화된 리뷰어네 명과
+- [7:37](https://youtube.com/watch?v=ufr6er69kLs&t=457) 반대 의견 역할 한 명을 띄워서
+- [7:40](https://youtube.com/watch?v=ufr6er69kLs&t=460) 플리퀘스트 전체를 팀 단위로 리뷰하게
+- [7:42](https://youtube.com/watch?v=ufr6er69kLs&t=462) 합니다. 또 스펙을 만들어 병렬
+- [7:45](https://youtube.com/watch?v=ufr6er69kLs&t=465) 리서치 팀처럼 돌릴 수도 있습니다.
+- [7:49](https://youtube.com/watch?v=ufr6er69kLs&t=469) 아이디어나 주제 하나를 놓고 여러
+- [7:51](https://youtube.com/watch?v=ufr6er69kLs&t=471) 에이전트가 각각 따로 조사하게 할
+- [7:53](https://youtube.com/watch?v=ufr6er69kLs&t=473) 수도 있고 전부 끝나면 그 결과를
+- [7:55](https://youtube.com/watch?v=ufr6er69kLs&t=475) 한대 모을 수도 있습니다.
+- [7:59](https://youtube.com/watch?v=ufr6er69kLs&t=479) 이런 종류의 에이전트 패턴은 작업에
+- [8:01](https://youtube.com/watch?v=ufr6er69kLs&t=481) 서로 연결된 구성 요소가 있을 때
+- [8:03](https://youtube.com/watch?v=ufr6er69kLs&t=483) 정말 가장 좋습니다.
+- [8:06](https://youtube.com/watch?v=ufr6er69kLs&t=486) 예를 들어 서브 에이전트 하나가
+- [8:08](https://youtube.com/watch?v=ufr6er69kLs&t=488) 프론트엔드를 맞고 다른 하나가
+- [8:09](https://youtube.com/watch?v=ufr6er69kLs&t=489) 백엔드를 맞는식이 아니라 같은 기능을
+- [8:12](https://youtube.com/watch?v=ufr6er69kLs&t=492) 함께 작업하는 경우 말이죠.
+- [8:15](https://youtube.com/watch?v=ufr6er69kLs&t=495) 예를 들어 만들고 있는 기능의 결제
+- [8:16](https://youtube.com/watch?v=ufr6er69kLs&t=496) 관련이라면 한쪽은 UI 프런트 엔드를
+- [8:19](https://youtube.com/watch?v=ufr6er69kLs&t=499) 맞고 다른 한쪽은 백핸드를 맞게 해서
+- [8:21](https://youtube.com/watch?v=ufr6er69kLs&t=501) 서로 소통하게 할 수 있습니다. 이럴
+- [8:23](https://youtube.com/watch?v=ufr6er69kLs&t=503) 때 에이전트 팀이 딱 맞습니다.
+- [8:26](https://youtube.com/watch?v=ufr6er69kLs&t=506) 가장 안 좋은 경우는 각 에이전트가
+- [8:28](https://youtube.com/watch?v=ufr6er69kLs&t=508) 자기 일만 하고 서로 소통할 필요가
+- [8:30](https://youtube.com/watch?v=ufr6er69kLs&t=510) 전혀 없을 때입니다.
+- [8:32](https://youtube.com/watch?v=ufr6er69kLs&t=512) 그런 경우엔 굳이 에이전트 팀을 쓸
+- [8:34](https://youtube.com/watch?v=ufr6er69kLs&t=514) 이유가 없습니다.
+- [8:37](https://youtube.com/watch?v=ufr6er69kLs&t=517) 이게 에이전트 팀을 언제 써야
+- [8:38](https://youtube.com/watch?v=ufr6er69kLs&t=518) 하는지에 대한 제 생각입니다. 단순히
+- [8:40](https://youtube.com/watch?v=ufr6er69kLs&t=520) 수준을 높이는 것뿐 아니라 언제 써야
+- [8:41](https://youtube.com/watch?v=ufr6er69kLs&t=521) 하는지도 정확히 아는게 중요하죠.
+- [8:43](https://youtube.com/watch?v=ufr6er69kLs&t=523) 이제 다음으로 볼 에이전트 패턴은
+- [8:45](https://youtube.com/watch?v=ufr6er69kLs&t=525) 오퍼레이터입니다.
+- [8:47](https://youtube.com/watch?v=ufr6er69kLs&t=527) 오퍼레이터는 우리가 여는 각 클로드
+- [8:49](https://youtube.com/watch?v=ufr6er69kLs&t=529) 코드 세션마다 격리된 환경을 만들어
+- [8:51](https://youtube.com/watch?v=ufr6er69kLs&t=531) 줍니다.
+- [8:53](https://youtube.com/watch?v=ufr6er69kLs&t=533) 예를 들어 클로드 코드 세션 하나를
+- [8:54](https://youtube.com/watch?v=ufr6er69kLs&t=534) 열고 터미널에서 클로드를 실행해 앱을
+- [8:56](https://youtube.com/watch?v=ufr6er69kLs&t=536) 만들게 한다고 해 보겠습니다. 그리고
+- [8:58](https://youtube.com/watch?v=ufr6er69kLs&t=538) 그 세션에서 애플리케이션을 만들게
+- [8:59](https://youtube.com/watch?v=ufr6er69kLs&t=539) 합니다. 또 새 터미널 세션을 하나
+- [9:02](https://youtube.com/watch?v=ufr6er69kLs&t=542) 열어서 그 안에서 클로드 코드로 다른
+- [9:04](https://youtube.com/watch?v=ufr6er69kLs&t=544) 기능을 작업하게 할 수도 있습니다.
+- [9:12](https://youtube.com/watch?v=ufr6er69kLs&t=552) 이때 그 기능은 앞선 클로드 코드
+- [9:13](https://youtube.com/watch?v=ufr6er69kLs&t=553) 세션과 충돌하지 않는 경리된 환경에서
+- [9:15](https://youtube.com/watch?v=ufr6er69kLs&t=555) 돌아가게 만들고 싶은 겁니다.이
+- [9:17](https://youtube.com/watch?v=ufr6er69kLs&t=557) 방식의 장점은 여러 터미널 세션을
+- [9:18](https://youtube.com/watch?v=ufr6er69kLs&t=558) 동시에 열고 각 세션에서 클로드
+- [9:20](https://youtube.com/watch?v=ufr6er69kLs&t=560) 코드를 따로 돌릴 수 있다는
+- [9:21](https://youtube.com/watch?v=ufr6er69kLs&t=561) 점입니다. 그리고 각 세션은 전부
+- [9:23](https://youtube.com/watch?v=ufr6er69kLs&t=563) 경리된 환경에서 실행됩니다. 그래서
+- [9:26](https://youtube.com/watch?v=ufr6er69kLs&t=566) 서로 다른 터미널 세션이나 클로드
+- [9:28](https://youtube.com/watch?v=ufr6er69kLs&t=568) 코드 세션끼리 충돌이 나지 않습니다.
+- [9:31](https://youtube.com/watch?v=ufr6er69kLs&t=571) 물론 각 세션 안에서는 방금 말씀드린
+- [9:33](https://youtube.com/watch?v=ufr6er69kLs&t=573) 서브 에이전트, 에이전트 팀, 순차
+- [9:36](https://youtube.com/watch?v=ufr6er69kLs&t=576) 워크플로 같은 것들을 그대로 다 쓸
+- [9:38](https://youtube.com/watch?v=ufr6er69kLs&t=578) 수 있습니다.
+- [9:41](https://youtube.com/watch?v=ufr6er69kLs&t=581) 그냥 서로 다른 환경에서 돌아가니까
+- [9:43](https://youtube.com/watch?v=ufr6er69kLs&t=583) 변경 충돌이 아예 생기지 않습니다.
+- [9:46](https://youtube.com/watch?v=ufr6er69kLs&t=586) 그리고 아까 말했듯이 깃워크트리 중
+- [9:48](https://youtube.com/watch?v=ufr6er69kLs&t=588) 하나가 마음에 들지 않으면 그냥
+- [9:49](https://youtube.com/watch?v=ufr6er69kLs&t=589) 지우면 됩니다. 그냥 완전히 없애고
+- [9:52](https://youtube.com/watch?v=ufr6er69kLs&t=592) 다른 세션으로 계속 진행하면 됩니다.
+- [9:56](https://youtube.com/watch?v=ufr6er69kLs&t=596) 예를 들어 랜딩 페이지를 디자인하라고
+- [9:57](https://youtube.com/watch?v=ufr6er69kLs&t=597) 할 수 있고 여기 하나의 세션에서는
+- [9:59](https://youtube.com/watch?v=ufr6er69kLs&t=599) 한 가지 버전을 디자인하게 할 수
+- [10:00](https://youtube.com/watch?v=ufr6er69kLs&t=600) 있습니다. 그리고 또 하나는 두 번째
+- [10:02](https://youtube.com/watch?v=ufr6er69kLs&t=602) 버전. 세 번째는 세 번째 버전을
+- [10:03](https://youtube.com/watch?v=ufr6er69kLs&t=603) 디자인하게 할 수 있죠. 그리고이
+- [10:05](https://youtube.com/watch?v=ufr6er69kLs&t=605) 셋은 모두 각자 환경이 따로 있어서
+- [10:08](https://youtube.com/watch?v=ufr6er69kLs&t=608) 하나가 마음에 안 들면 그킷
+- [10:09](https://youtube.com/watch?v=ufr6er69kLs&t=609) 워크트리만 지우고 변경 사항도 함께
+- [10:11](https://youtube.com/watch?v=ufr6er69kLs&t=611) 없애면 됩니다. 그래도 나머지 두
+- [10:14](https://youtube.com/watch?v=ufr6er69kLs&t=614) 개에는 아무 영향이 없습니다. 그리고
+- [10:16](https://youtube.com/watch?v=ufr6er69kLs&t=616) 그 중 하나가 마음에 들면 다른 건
+- [10:18](https://youtube.com/watch?v=ufr6er69kLs&t=618) 그냥 지우면 됩니다. 그 중 하나만
+- [10:20](https://youtube.com/watch?v=ufr6er69kLs&t=620) 남기고 결국 메인 브랜치로 다시
+- [10:21](https://youtube.com/watch?v=ufr6er69kLs&t=621) 합치면 됩니다. 이렇게 하면 두 가지
+- [10:23](https://youtube.com/watch?v=ufr6er69kLs&t=623) 이점이 있습니다. 하나는 여러 터미널
+- [10:26](https://youtube.com/watch?v=ufr6er69kLs&t=626) 세션을 쓸 수 있어서 훨씬 더 빠르게
+- [10:28](https://youtube.com/watch?v=ufr6er69kLs&t=628) 만들 수 있다는 점입니다.
+- [10:31](https://youtube.com/watch?v=ufr6er69kLs&t=631) 두 번째는 AP 테스트를 훨씬 더
+- [10:33](https://youtube.com/watch?v=ufr6er69kLs&t=633) 쉽게 할 수 있다는 점입니다.
+- [10:35](https://youtube.com/watch?v=ufr6er69kLs&t=635) 예를 들어 UI 변경일 수도 있고
+- [10:37](https://youtube.com/watch?v=ufr6er69kLs&t=637) 아니면 다른 세션에서 백엔드 변경이나
+- [10:39](https://youtube.com/watch?v=ufr6er69kLs&t=639) 데이터베이스 변경을 돌릴 수도
+- [10:40](https://youtube.com/watch?v=ufr6er69kLs&t=640) 있습니다. 변경 내용이 무엇이든 결국
+- [10:43](https://youtube.com/watch?v=ufr6er69kLs&t=643) 같은 작업을 하게 되는 거죠.
+- [10:45](https://youtube.com/watch?v=ufr6er69kLs&t=645) 끝까지 보면 점도가 가장 높거나
+- [10:48](https://youtube.com/watch?v=ufr6er69kLs&t=648) 보기가 가장 좋거나 원하는 결과가
+- [10:50](https://youtube.com/watch?v=ufr6er69kLs&t=650) 가장 잘 나온 걸 고르면 됩니다.
+- [10:52](https://youtube.com/watch?v=ufr6er69kLs&t=652) 그걸 선택하면 생산성이 훨씬
+- [10:54](https://youtube.com/watch?v=ufr6er69kLs&t=654) 올라갑니다.
+- [10:56](https://youtube.com/watch?v=ufr6er69kLs&t=656) AI 에이전트도 실수할 수
+- [10:57](https://youtube.com/watch?v=ufr6er69kLs&t=657) 있으니까요.
+- [10:59](https://youtube.com/watch?v=ufr6er69kLs&t=659) 결과 하나에만 의존하지 않으면 실수할
+- [11:01](https://youtube.com/watch?v=ufr6er69kLs&t=661) 가능성을 줄일 수 있습니다.
+- [11:04](https://youtube.com/watch?v=ufr6er69kLs&t=664) 여러 결과를 받아서 비교한 뒤 그중
+- [11:06](https://youtube.com/watch?v=ufr6er69kLs&t=666) 가장 나은 걸 고르면 됩니다. 바로
+- [11:09](https://youtube.com/watch?v=ufr6er69kLs&t=669) 이게이 에이전트 패턴의 작동
+- [11:10](https://youtube.com/watch?v=ufr6er69kLs&t=670) 방식입니다. 자, 이제 다음 에이전트
+- [11:13](https://youtube.com/watch?v=ufr6er69kLs&t=673) 패턴인 헤드리스로가 보겠습니다. 이건
+- [11:15](https://youtube.com/watch?v=ufr6er69kLs&t=675) 사실 제가 가장 좋아하는 방식인데
+- [11:17](https://youtube.com/watch?v=ufr6er69kLs&t=677) 제가 항상 가장 많이 쓰는 패턴이기도
+- [11:19](https://youtube.com/watch?v=ufr6er69kLs&t=679) 합니다. 기본적으로 클로드 코드를
+- [11:22](https://youtube.com/watch?v=ufr6er69kLs&t=682) 훨씬 더 자율적으로 쓸 수 있게 해
+- [11:23](https://youtube.com/watch?v=ufr6er69kLs&t=683) 줍니다. 핵심은 클로드를 쓸 때
+- [11:29](https://youtube.com/watch?v=ufr6er69kLs&t=689) 보통은 클로드 코드 세션 안에서 직접
+- [11:31](https://youtube.com/watch?v=ufr6er69kLs&t=691) 상호 작용하면서 쓰게 되죠.
+- [11:34](https://youtube.com/watch?v=ufr6er69kLs&t=694) 그냥 클로드 코드 세션 안에서
+- [11:35](https://youtube.com/watch?v=ufr6er69kLs&t=695) 이것저것 입력하면서 진행하는
+- [11:36](https://youtube.com/watch?v=ufr6er69kLs&t=696) 방식입니다. 그런데 여기서 대시 피로
+- [11:39](https://youtube.com/watch?v=ufr6er69kLs&t=699) 프롬프트를 넘기면 됩니다. 예를 들어
+- [11:41](https://youtube.com/watch?v=ufr6er69kLs&t=701) 1+ 1은 뭐냐고 물르면 답을 바로
+- [11:42](https://youtube.com/watch?v=ufr6er69kLs&t=702) 만들어 줍니다. 그리고 그걸
+- [11:45](https://youtube.com/watch?v=ufr6er69kLs&t=705) 백그라운드에서 실행합니다.
+- [11:47](https://youtube.com/watch?v=ufr6er69kLs&t=707) 즉 클로드 세션에 직접 들어가서 상호
+- [11:49](https://youtube.com/watch?v=ufr6er69kLs&t=709) 작용하지 않아도 터미널에서 이걸
+- [11:51](https://youtube.com/watch?v=ufr6er69kLs&t=711) 실행할 수 있습니다. 예를 들어 1
+- [11:53](https://youtube.com/watch?v=ufr6er69kLs&t=713) + 1은 뭐야? 오늘 날씨는 어때
+- [11:54](https://youtube.com/watch?v=ufr6er69kLs&t=714) 같은 걸 부르면 백그라운드에서 돌고
+- [11:56](https://youtube.com/watch?v=ufr6er69kLs&t=716) 결과한 터미널로 다시 돌려줍니다. 왜
+- [11:58](https://youtube.com/watch?v=ufr6er69kLs&t=718) 강력하냐면 명령만 넘겨도 클로드 코드
+- [12:01](https://youtube.com/watch?v=ufr6er69kLs&t=721) 세션이 알아서 실행하게 만들 수
+- [12:03](https://youtube.com/watch?v=ufr6er69kLs&t=723) 있어서 자동화 완전 자율화가
+- [12:05](https://youtube.com/watch?v=ufr6er69kLs&t=725) 가능해지기 때문입니다.
+- [12:07](https://youtube.com/watch?v=ufr6er69kLs&t=727) 지금 저는 클로드 코드 세션 안에
+- [12:09](https://youtube.com/watch?v=ufr6er69kLs&t=729) 있습니다.
+- [12:11](https://youtube.com/watch?v=ufr6er69kLs&t=731) 저는 이렇게 말할 겁니다. 이걸
+- [12:13](https://youtube.com/watch?v=ufr6er69kLs&t=733) 실행해 보라고요. 그러면 기본적으로
+- [12:15](https://youtube.com/watch?v=ufr6er69kLs&t=735) 이걸 실행하고 여기서 더 나아가 여러
+- [12:18](https://youtube.com/watch?v=ufr6er69kLs&t=738) 스킬과도 결합할 수 있습니다. 예를
+- [12:21](https://youtube.com/watch?v=ufr6er69kLs&t=741) 들어이 작업을 예약해서 매일 오전
+- [12:22](https://youtube.com/watch?v=ufr6er69kLs&t=742) 7시에이 명령을 실행하게 할 수
+- [12:24](https://youtube.com/watch?v=ufr6er69kLs&t=744) 있죠. 완전히 자율적으로 하거나
+- [12:27](https://youtube.com/watch?v=ufr6er69kLs&t=747) 20분마다 실행하게 하거나 어떤
+- [12:29](https://youtube.com/watch?v=ufr6er69kLs&t=749) 트리거가 발생할 때마다 실행하게 할
+- [12:31](https://youtube.com/watch?v=ufr6er69kLs&t=751) 수도 있습니다. 그렇죠? 이런 작업에
+- [12:34](https://youtube.com/watch?v=ufr6er69kLs&t=754) 대해 온갖 설정을 할 수 있습니다.
+- [12:37](https://youtube.com/watch?v=ufr6er69kLs&t=757) 더 나아가 라이프루프와도 합칠 수
+- [12:39](https://youtube.com/watch?v=ufr6er69kLs&t=759) 있습니다.
+- [12:41](https://youtube.com/watch?v=ufr6er69kLs&t=761) 라이프루프는 제가 실제로
+- [12:41](https://youtube.com/watch?v=ufr6er69kLs&t=761) [목을 가다듬음] 영상을 하나
+- [12:42](https://youtube.com/watch?v=ufr6er69kLs&t=762) 만들기도 했는데 핵심은 AI
+- [12:44](https://youtube.com/watch?v=ufr6er69kLs&t=764) 에이전트를 완전히 자율적으로 돌려서
+- [12:45](https://youtube.com/watch?v=ufr6er69kLs&t=765) 뭔가를 고치게 할 수 있다는 겁니다.
+- [12:47](https://youtube.com/watch?v=ufr6er69kLs&t=767) 버그일 수도 있고 UI를 더 다듬는
+- [12:49](https://youtube.com/watch?v=ufr6er69kLs&t=769) 작업일 수도 있고 특정 워크플로일
+- [12:50](https://youtube.com/watch?v=ufr6er69kLs&t=770) 수도 있는데 그걸 끝날 때까지 계속
+- [12:52](https://youtube.com/watch?v=ufr6er69kLs&t=772) 반복하게 할 수 있습니다. 끝날
+- [12:54](https://youtube.com/watch?v=ufr6er69kLs&t=774) 때까지 계속 순환하게 두는 겁니다.
+- [12:56](https://youtube.com/watch?v=ufr6er69kLs&t=776) 예를 들어 여기에 중단점을 하나 두고
+- [12:59](https://youtube.com/watch?v=ufr6er69kLs&t=779) 이걸 고치고 싶다고 하면 됩니다.
+- [13:01](https://youtube.com/watch?v=ufr6er69kLs&t=781) 그러면 아직 안 고쳐졌다면 계속
+- [13:03](https://youtube.com/watch?v=ufr6er69kLs&t=783) [목을 가다듬음] 실행하게 두는
+- [13:04](https://youtube.com/watch?v=ufr6er69kLs&t=784) 거죠.이
+- [13:05](https://youtube.com/watch?v=ufr6er69kLs&t=785) 이 방식의 힘은 제가 이걸 리뷰
+- [13:07](https://youtube.com/watch?v=ufr6er69kLs&t=787) 과정에 쓸 수 있었다는데 있습니다.
+- [13:09](https://youtube.com/watch?v=ufr6er69kLs&t=789) 몇 번 리뷰할지, 얼마나 반복해서
+- [13:11](https://youtube.com/watch?v=ufr6er69kLs&t=791) 검토할지 지정해 두고 그냥 실행하게
+- [13:13](https://youtube.com/watch?v=ufr6er69kLs&t=793) 두면 됩니다. 예를 들어 첫 번째
+- [13:16](https://youtube.com/watch?v=ufr6er69kLs&t=796) 반복에서는 여러 에이전트를 돌려서
+- [13:18](https://youtube.com/watch?v=ufr6er69kLs&t=798) 이게 괜찮은지 확인합니다.
+- [13:20](https://youtube.com/watch?v=ufr6er69kLs&t=800) 그다음 두 번째 세 번째 반복이
+- [13:23](https://youtube.com/watch?v=ufr6er69kLs&t=803) 이어집니다. 각 반복은 아까 말씀드린
+- [13:26](https://youtube.com/watch?v=ufr6er69kLs&t=806) 것처럼 헤드리스 명령으로 새 컨텍스트
+- [13:28](https://youtube.com/watch?v=ufr6er69kLs&t=808) 윈도우를 열어 다시 검토합니다.
+- [13:33](https://youtube.com/watch?v=ufr6er69kLs&t=813) 여기서 하는 핵심은 결국 내용을
+- [13:34](https://youtube.com/watch?v=ufr6er69kLs&t=814) 요약하려는 겁니다. 모든 걸 하나의
+- [13:37](https://youtube.com/watch?v=ufr6er69kLs&t=817) 보고서로 정리해서 하나의 결과로 묶는
+- [13:39](https://youtube.com/watch?v=ufr6er69kLs&t=819) 거죠.
+- [13:42](https://youtube.com/watch?v=ufr6er69kLs&t=822) 예를 들면 첫 번째 세션이 끝나고 두
+- [13:44](https://youtube.com/watch?v=ufr6er69kLs&t=824) 번째 세션도 끝나고 세 번째 세션도
+- [13:46](https://youtube.com/watch?v=ufr6er69kLs&t=826) 끝납니다. 그러면 제가 찾은 모든
+- [13:49](https://youtube.com/watch?v=ufr6er69kLs&t=829) 결과를 하나로 묻게 됩니다. 그리고
+- [13:51](https://youtube.com/watch?v=ufr6er69kLs&t=831) 정확히 그런 식으로 동작합니다.
+- [13:54](https://youtube.com/watch?v=ufr6er69kLs&t=834) 저는 이걸 이터레이티브 리뷰라는
+- [13:55](https://youtube.com/watch?v=ufr6er69kLs&t=835) 하나의 스킬로 묶어뒀고 여기 보이는게
+- [13:58](https://youtube.com/watch?v=ufr6er69kLs&t=838) 바로 그 스킬입니다.
+- [14:01](https://youtube.com/watch?v=ufr6er69kLs&t=841) 이제 이걸 다섯 번 반복해서 리뷰해
+- [14:03](https://youtube.com/watch?v=ufr6er69kLs&t=843) 주세요라고 지정합니다.
+- [14:05](https://youtube.com/watch?v=ufr6er69kLs&t=845) 그리고 플리퀘스트 URL이나 브렌치
+- [14:07](https://youtube.com/watch?v=ufr6er69kLs&t=847) 이름만 주면 변경 사항을 검토합니다.
+- [14:10](https://youtube.com/watch?v=ufr6er69kLs&t=850) 먼저 스킬을 읽고 규칙을 정확히
+- [14:12](https://youtube.com/watch?v=ufr6er69kLs&t=852) 파악합니다.
+- [14:14](https://youtube.com/watch?v=ufr6er69kLs&t=854) 그다음 SH 스크립트를 실행합니다.
+- [14:17](https://youtube.com/watch?v=ufr6er69kLs&t=857) MD 파일에 저장된 프롬프트를 읽어서
+- [14:19](https://youtube.com/watch?v=ufr6er69kLs&t=859) 그 명령을 그대로 돌리는 거죠.
+- [14:21](https://youtube.com/watch?v=ufr6er69kLs&t=861) 그리고 각 세션은 세 컨텍스트
+- [14:23](https://youtube.com/watch?v=ufr6er69kLs&t=863) 윈도우를 사용합니다.
+- [14:25](https://youtube.com/watch?v=ufr6er69kLs&t=865) 이렇게 세 컨텍스트로 헤드리스 작업을
+- [14:27](https://youtube.com/watch?v=ufr6er69kLs&t=867) 돌리면 대략 다섯에서 일곱 개의 서브
+- [14:29](https://youtube.com/watch?v=ufr6er69kLs&t=869) 에이전트를 한꺼번에 뛰워 동시에
+- [14:31](https://youtube.com/watch?v=ufr6er69kLs&t=871) 실행합니다.
+- [14:35](https://youtube.com/watch?v=ufr6er69kLs&t=875) 그리고 실행될 때마다 각각 세
+- [14:36](https://youtube.com/watch?v=ufr6er69kLs&t=876) 컨텍스트 윈도우를 받습니다. 그
+- [14:38](https://youtube.com/watch?v=ufr6er69kLs&t=878) 뒤에는 모든 반복에서 나온 발견
+- [14:40](https://youtube.com/watch?v=ufr6er69kLs&t=880) 사항을 모아서 하나의 보고서로
+- [14:42](https://youtube.com/watch?v=ufr6er69kLs&t=882) 정리합니다.
+- [14:45](https://youtube.com/watch?v=ufr6er69kLs&t=885) 그리고 이렇게 띄우는 여러 서브
+- [14:46](https://youtube.com/watch?v=ufr6er69kLs&t=886) 에이전트도 우리가 원하는 종류로
+- [14:48](https://youtube.com/watch?v=ufr6er69kLs&t=888) 얼마든지 고를 수 있습니다. 앞에서
+- [14:50](https://youtube.com/watch?v=ufr6er69kLs&t=890) 말씀드린 것처럼 말이죠.

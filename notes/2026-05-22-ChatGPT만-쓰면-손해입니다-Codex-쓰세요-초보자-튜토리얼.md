@@ -1,0 +1,969 @@
+---
+title: "ChatGPT만 쓰면 손해입니다. Codex 쓰세요! (초보자 튜토리얼)"
+source_url: https://youtube.com/watch?v=ir8Lax4Q38o
+video_id: ir8Lax4Q38o
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# ChatGPT만 쓰면 손해입니다. Codex 쓰세요! (초보자 튜토리얼)
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** ChatGPT 구독 내에서 사용할 수 있는 오픈AI의 코덱스(Codex)를 활용한 실무 업무 자동화 방법을 소개합니다. 코덱스는 Claude Coder와 유사한 코딩 에이전트이지만 프로젝트 폴더 기반으로 작동하여 문서 작업과 프로젝트 관리에 더 적합합니다. 실제 AI 자동화 컨설팅 제안서 PPT를 만드는 과정을 통해 폴더 설정, 기준 문서 작성(agent.md, design.md, business_context.md, deck_brief.md), 계획 수립, 리서치, 이미지 생성, PPT 제작, 검수까지의 전체 워크플로우를 시연합니다. 단순히 프롬프트 하나로 작업하는 것이 아니라, 작업 환경과 기준 문서를 체계적으로 구축한 후 계획적으로 접근하는 것이 핵심입니다.
+- **Core Message:** 코덱스는 긴 프롬프트가 아닌 체계적인 작업 환경 구축과 계획적 접근을 통해 리서치부터 검수까지 전체 업무 프로세스를 자동화하는 도구입니다.
+> 코덱스는 프로젝트 폴더 기반으로 작동한다
+> 긴 프롬프트 하나보다 요런 구조를 만들고 이 문서들을 고도화해 나가는게 더 중요하다
+> AI 결과물은 생성보다 계획 수립과 검수가 굉장히 중요합니다
+❗ ChatGPT 구독만으로도 Claude Coder 유사한 코덱스를 무료 사용 가능
+❗ 20분 만에 리서치부터 PPT 제작, 검수까지 완전 자동화
+❗ 컴퓨터 유즈로 PowerPoint를 직접 열어 최종 검증까지 수행
+
+## 📚 핵심 용어
+- **코덱스(Codex):** OpenAI에서 제공하는 프로젝트 폴더 기반 AI 작업 도구로, ChatGPT 구독으로 사용 가능한 Claude Coder 유사 서비스 / 개인 비서가 프로젝트 전용 사무실에서 관련 자료를 모두 참조하며 일하는 것과 같다. 단순 질답이 아닌 체계적 업무 수행. / ChatGPT는 즉석 질답용, 코덱스는 프로젝트 관리용. ChatGPT가 상담창구라면 코덱스는 전담 업무팀이다.
+- **agent.md:** 코덱스가 작업할 때 참조하는 핵심 지침서로, 목표, 원칙, 제약사항 등을 명시한 마크다운 문서 / 신입사원에게 주는 업무 매뉴얼과 같다. 이 문서를 보고 AI가 어떻게, 무엇을, 왜 해야 하는지 판단한다. / 프롬프트는 일회성 지시, agent.md는 지속적 업무 기준. 프롬프트가 당장 할 일이라면 agent.md는 업무 철학이다.
+- **컴퓨터 유즈:** AI가 사용자 컴퓨터를 직접 제어하여 앱 실행, 파일 열기, 검수 등을 수행하는 기능 / 원격 근무자가 내 컴퓨터에 접속해서 대신 작업하는 것과 같다. 마우스 움직임까지 AI가 직접 조작한다. / 일반 AI는 텍스트만 생성, 컴퓨터 유즈는 실제 작업 수행. 설계도 그리기 vs 실제 건설하기의 차이.
+
+## 🚀 실행 (Execute)
+- [ ] 코덱스 앱 설치하고 프로젝트 폴더 하나 생성해서 기본 구조 실험해보기
+  - 담당: 나
+  - 이유: 영상의 핵심인 폴더 기반 작업 환경을 직접 체험해야 코덱스의 장점을 이해할 수 있음
+- [ ] 내 업무용 agent.md와 design.md 템플릿 작성하기
+  - 담당: 나
+  - 이유: 체계적인 기준 문서가 있어야 원하는 품질의 결과물을 안정적으로 얻을 수 있음
+- 자료: 코덱스 앱 (ChatGPT 구독 필요)
+- 자료: design.md 예시 사이트 (영상에서 언급한 유명 브랜드 디자인 가이드)
+- 자료: GitHub 계정 (버전 관리용)
+- 자료: GPT o1 모델 활용 가이드 (확인 필요)
+- Timeline: 1단계(앱 설치/기본 사용): 오늘, 2단계(기준 문서 작성): 이번 주, 3단계(실제 프로젝트 적용): 다음 주
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=0) 여러분 혹시 아직 채비티나 재미나면
+- [0:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=2) 쓰고 계신가요? 아니면 클로드 코드가
+- [0:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=4) 좋다고 해서 한번 써 보고 싶긴 한데
+- [0:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=6) 추가로 구독을 해야 되다 보니까
+- [0:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=8) 비용이 부담된 적이 있지 않으신가요?
+- [0:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=10) 그렇다면 지금 당장 오픈 AI에
+- [0:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=13) 코덱스를 써 보셔야 됩니다.이
+- [0:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=14) 코덱스는 오픈 AI 버전의 클로드
+- [0:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=17) 코드라고 생각하시면 되는데요. 코딩
+- [0:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=19) 장어뿐만 아니라 일반 사무원
+- [0:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=20) 업무에서도 채집보다 더 강력합니다.
+- [0:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=23) 물론 채집피나 재미나이로도 우리가
+- [0:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=26) 여러 문서 작업을 할 수는 있죠.
+- [0:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=27) 우리가 프롬프트로 어떤 작업을
+- [0:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=29) 요청하기도 하고 아이디어도 받아서
+- [0:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=31) 결과물을 복사 붙여 넣게 할 수도
+- [0:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=33) 있고 아니면 요즘은 커넥터 같은
+- [0:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=35) 것들을 활용해서 최지피pt나 재미나이
+- [0:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=37) 안에서도 바로 문서 결과물을 생성하는
+- [0:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=40) 작업도 하실 수가 있습니다. 근데
+- [0:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=42) 대부분의 사무를 할 때는 단순히
+- [0:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=44) 하나의 결과물을 만든다기보다는 그
+- [0:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=46) 결과물과 관련된 여러 문서들을
+- [0:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=48) 참조해서 특정 결과물을 생성해 내야
+- [0:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=50) 되죠. 그리고 그 결과물도 매번
+- [0:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=53) 반복적으로 생성을 해서 또 관리를 해
+- [0:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=55) 줘야 됩니다. 이렇게 프로젝트를
+- [0:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=56) 관리하는 측면에 있어서는 최지T보다
+- [0:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=59) 코덱스가 더 적합한 툴이라고 할 수
+- [1:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=61) 있는데요. 내가 작업하고 싶은 폴더를
+- [1:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=63) 하나 생성해 두고 거기서 뭐 PPT
+- [1:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=66) 파일이나 이미지 파일 그리고 검수
+- [1:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=68) 리포트 이런 것들을 한 눈에 다
+- [1:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=70) 관리하실 수가 있습니다. 보통 AI에
+- [1:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=72) 관심 있으신 분들이라면 채치T 정도는
+- [1:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=75) 다 구독을 하고 계시죠. 그 채비T
+- [1:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=77) 구독 안에서 후덱스를 활용하실 수가
+- [1:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=79) 있습니다. 그래서 오늘은 제한서
+- [1:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=81) PPT를 예시로 하나 만들어 보면서
+- [1:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=83) 코렉스 앱을 실무해서 어떻게 활용해
+- [1:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=85) 볼 수 있을지 알아보도록 하겠습니다.
+- [1:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=87) 에이전팅 AI2를 활용해서 업무
+- [1:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=89) 효율을 높이시고 싶은 분들이라면 오늘
+- [1:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=92) 영상 도움되실 테니까요. 영상 끝까지
+- [1:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=94) 시청하시고 코덱스를 활용하셔서
+- [1:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=96) 여러분의 업무 생산성 높여 보시면
+- [1:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=98) 좋을 것 같습니다. 자, 채치T에
+- [1:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=99) 들어와 보시면 왼쪽에 이렇게 코덱스
+- [1:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=102) 섹션이 있는데요. 코덱스 한번 눌러
+- [1:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=104) 보시면 이렇게 세 가지 방식으로
+- [1:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=106) 코덱스를 설치할 수 있는 걸 보실 수
+- [1:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=108) 있습니다.이 중에 저는 개인적으로 앱
+- [1:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=111) 다운로드 버전을 추천드립니다. 사실
+- [1:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=112) 저는 클로드 코드 같은 경우는
+- [1:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=114) 아직까지는 CLI를 주로 활용하고
+- [1:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=116) 있는데 코덱스는 제가 개인적으로
+- [1:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=118) 사용해 봤을 때 CLI보다 오히려
+- [2:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=120) 앱이 잘 만들어져 있어서 앱보를
+- [2:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=122) 활용하는게 더 사용성이 좋더라고요.
+- [2:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=124) 그래서 일단 처음 시작해 보고 싶으신
+- [2:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=126) 분들은 앱으로 시작하는 거를
+- [2:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=128) 추천드립니다.요 코덱스 앱은 맥이랑
+- [2:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=130) 윈도우 둘 다 지원을 하고는
+- [2:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=131) 있는데요. 컴퓨터 유즈 같은 기능은
+- [2:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=133) 아직은 맥버전만 제공하는 거
+- [2:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=135) 같으니까요. 그런 부분은 염두해
+- [2:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=137) 두시면 좋을 것 같습니다. 자, 여기
+- [2:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=138) 표시된 OS별 그 다운로드 버튼을
+- [2:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=140) 누르셔서 다운로드 하시고 코덱스
+- [2:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=143) 앱으로 들어와 보시면 됩니다. 자,
+- [2:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=144) 이렇게 코덱스 앱을 실행하시고 채치T
+- [2:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=146) 계정으로 로그인을 해 주시면 되고요.
+- [2:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=149) 들어와서 보시면 이렇게 좀 채찍랑
+- [2:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=151) 유사한 화면이 뜨게 됩니다. 네,
+- [2:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=153) 여기서 가장 큰 차이점은 앞서 제가
+- [2:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=155) 코덱스는 프로젝트 폴더 기반으로
+- [2:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=157) 작동을 한다고 말씀드렸죠. 그래서
+- [2:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=159) 채팅 화면도 있긴 하지만 기본적으로
+- [2:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=161) 여기 이렇게 프로젝트 폴더를 선택하게
+- [2:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=164) 되어 있습니다. 여기서요 폴더가 이제
+- [2:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=167) 우리가 어떤 작업을 할 때 그 업무와
+- [2:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=169) 관련된 문서들이 저장되는 공간이라고
+- [2:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=171) 생각을 하시면 돼요. 그래서 코덱스를
+- [2:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=173) 활용하실 때는이 작업 공간을 먼저
+- [2:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=175) 세팅을 해 주시는게 좋은데요. 오늘
+- [2:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=177) 만들어 볼 프로젝트 폴더는 이런
+- [2:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=178) 식으로 가져가 버리고 합니다. 우리가
+- [3:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=180) 코덱스 PPT 데모라는 디렉토리를
+- [3:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=183) 하나 만들 거고요. 그 안에
+- [3:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=185) 에이전트, MD, 뭐 브랜드,
+- [3:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=187) 컨텍스트, 에츠스, 아웃풋 이렇게
+- [3:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=189) 폴더를 생성하고 또 이제 작업
+- [3:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=191) 요청하기 전에 기본적으로 좀 세팅을
+- [3:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=193) 해 줘야 되는 문서들 에이전트 MD나
+- [3:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=196) 디자인 MD, 뭐 비즈니스 컨텍스트
+- [3:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=197) MD, 덱브리프 이런 문서들을 좀
+- [3:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=200) 생성을 해 주도록 하겠습니다. 자,
+- [3:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=201) 하나씩 차근차근 세팅을 해 보도록 할
+- [3:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=203) 텐데요. 먼저 상위 디렉토리부터 하나
+- [3:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=205) 생성을 해 주도록 할게요. 왼쪽에
+- [3:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=207) 프로젝트 쪽에 보시면 이렇게 새로운
+- [3:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=209) 프로젝트를 추가하실 수가 있고요.
+- [3:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=211) 여기서 ex스팅 폴더를 누르시면 이제
+- [3:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=214) 내 로컬 디렉토리에서 새 폴더를
+- [3:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=217) 생성하고 그거를 지정해서 활용하실
+- [3:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=219) 수가 있습니다. 자, 여기 들어와서
+- [3:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=221) 저는 코덱스 PPT 데모라는 폴더를
+- [3:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=224) 하나 만들고요. 요거를 선택을 해
+- [3:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=225) 주도록 하겠습니다. 자, 그럼 이렇게
+- [3:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=227) 코덱스 PPT 데모라는 프로젝트가
+- [3:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=229) 생성이 됐죠? 자, 그리고 우리가
+- [3:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=231) 코덱스에서 작업을 하기 전에 먼저
+- [3:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=234) 작업 폴더를 기으로 관리를 해 주는게
+- [3:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=236) 좋거든요. 여기서 깃은 처음 들어
+- [3:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=238) 보시는 분들도 계실 수 있는데요.
+- [3:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=239) 쉽게 표현하자면 우리가 폴더에서 어떤
+- [4:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=242) 작업들을 할 때 파일 변경 사항들을
+- [4:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=244) 저장을 해 주고 나중에 필요하면
+- [4:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=246) 원복도 할 수 있게 이렇게 버전
+- [4:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=248) 관리를 해 주는 시스템이라고
+- [4:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=250) 생각하시면 됩니다. 우리가 에이전틱
+- [4:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=251) AI를 활용할 때 대부분 업무를
+- [4:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=254) AI한테 위임을 하게 되잖아요. 근데
+- [4:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=256) AI가 일을 하다 보면 당연히 잘못된
+- [4:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=258) 결과물을 생성하는 경우도 생길 수
+- [4:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=260) 있겠죠. 그런 경우에 이제 이전
+- [4:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=261) 버전으로 원복을 해야 될 때가 발생할
+- [4:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=264) 수 있습니다. 그래서 이런 버전 관리
+- [4:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=265) 시스템을 활용하시는게 굉장히
+- [4:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=267) 중요한데요. 설정하는 방법은 굉장히
+- [4:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=269) 간단합니다. 그냥 여기 채팅창에 어
+- [4:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=271) 해당 프로젝트를 기초 계열화를 해
+- [4:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=273) 줘. 그리고 기터브에도 리모트 퍼블릭
+- [4:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=276) 리포지토리를 생성해 줘. 요렇게
+- [4:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=277) 요청을 해 주겠습니다. 자, 여기서
+- [4:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=279) 기터브라는 건 뭐냐면 우리가 로컬에서
+- [4:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=281) 기술로 이제 버전 관리를 해 주는데
+- [4:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=283) 요거를 이제 클라우드에 웹상에도
+- [4:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=285) 어딘가에 똑같이 싱크를 해서 관리해
+- [4:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=288) 주는 데가 있으면 편하겠죠? 그러면
+- [4:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=290) 이제 내 컴퓨터가 아니어도 다른
+- [4:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=291) 컴퓨터에서도 내가 하던 작업을이어서
+- [4:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=293) 진행할 수도 있을 거고요. 아니면 내
+- [4:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=295) 로컬 파일이 뭔가 문제가 생길 수도
+- [4:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=297) 있잖아요. 그렇더라도 다시 기터브에서
+- [5:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=300) 받아다가 그대로이어서 작업을 할 수
+- [5:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=302) 있을 거예요. 그래서 보통 기을 하실
+- [5:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=304) 때 기터브에도 문서를 동일하게 싱크를
+- [5:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=307) 해서 올려 놓고 버전 관리를 하시는
+- [5:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=309) 거를 추천드립니다. 그래서 요렇게
+- [5:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=310) 프롬프트 하나만 하시면 코덱스가
+- [5:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=313) 알아서 이해를 하고 이제 다 세팅을
+- [5:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=315) 해 주게 됩니다. 그리고 처음
+- [5:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=316) 세팅하실 때는 아마 기터브 계정
+- [5:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=318) 연동이 안 돼 있으실 수 있어서 그
+- [5:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=320) 부분에 대해서 이제 요청이 들어올 수
+- [5:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=322) 있어요. 그러면 기터브 들어가셔서
+- [5:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=324) 계정 하나 만드시고 그거를 이제
+- [5:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=326) 연동을 해 주시면 됩니다. 코덱스가
+- [5:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=328) 이제 연동하는 방법을 잘 알려 줄
+- [5:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=330) 테니까요. 그거 따라서 이제 연동만
+- [5:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=331) 해 주시면 되고요. 자, 지금 보시면
+- [5:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=333) 코덱스 PPT 데모라는 퍼블릭
+- [5:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=335) 저장소를 만들고 연동하고 있는 걸
+- [5:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=338) 보실 수 있습니다. 네. 그럼 완료를
+- [5:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=339) 했죠. 그럼이 코덱스기 UI에 대해서
+- [5:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=342) 조금 더 구체적으로 살펴보도록
+- [5:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=343) 할게요. 밑에 보시면 일단 채팅창이
+- [5:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=346) 있죠? 여기 채팅창에서 플러스 버튼
+- [5:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=348) 누르시고 뭐 포토나 파일 같은 것도
+- [5:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=350) 추가하실 수 있고 플랜 모드라고 해서
+- [5:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=353) 계획을 먼저 받아보고 싶으실 때 요거
+- [5:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=355) 활성화해 주실 수 있고요. 그다음에
+- [5:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=356) 플러그인이라고 어 외부 스킬을 우리가
+- [5:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=359) 로드해서 활용하실 수가 있습니다.
+- [6:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=360) 요거는 이따가 좀 더 다뤄보도록
+- [6:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=362) 할게요. 그리고 모드라고 해서이
+- [6:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=364) 모드에서 우리가 어떤 방식으로 작업을
+- [6:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=366) 할 건지 설정을 해 줄 수 있는데요.
+- [6:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=368) 처음에는 오토 리뷰를 추천을
+- [6:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=370) 드립니다.요 요 오토 리뷰가 이제
+- [6:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=372) 기본적으로 코덱스가 웬만한 작업을 다
+- [6:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=374) 진행을 하다가 어 좀 민감한 작업들에
+- [6:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=377) 대해서만 이제 컨펌 요청을 하는 그런
+- [6:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=379) 모드라고 생각하시면 돼요. 그래서
+- [6:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=380) 요걸로 먼저 하시다가 나중에 이제
+- [6:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=382) 익숙해지시고 어느 정도 세팅을 잘 해
+- [6:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=384) 놨다 할 때 이제 풀 엑세스로 변경을
+- [6:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=386) 해서 활용하시면 됩니다. 저는 오토
+- [6:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=388) 리뷰를 일단 해 놓게요. 그리고 밑에
+- [6:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=390) 보시면 work 로컬리라고 있죠?
+- [6:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=392) 로컬 폴더에서 작업을 하고 싶기
+- [6:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=394) 때문에 워크 로컬리로 해 두고요.
+- [6:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=396) 브랜치를 메인으로 일단 두시면
+- [6:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=397) 됩니다. 그리고 모델 선택할 수
+- [6:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=399) 있는데요. 지금 최신 모델인 GPT
+- [6:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=401) 5.5 선택해 주시고 인텔리전스는
+- [6:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=403) 그냥 엑스트라 하이로 두도록 할게요.
+- [6:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=405) 자, 이렇게 하고 자, 우측 상단에도
+- [6:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=407) 보시면 몇 가지 옵션들이 있는데요.
+- [6:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=409) 여기 셋업 런 액션 눌러 보시면
+- [6:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=411) 여기서 몇 가지 이제 환경 설정 같은
+- [6:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=413) 거 하실 수가 있습니다. 처음에 셋업
+- [6:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=416) 할 때 필요한 것들을 여기다 넣어
+- [6:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=418) 주는 건데 어, 기본적으로는 보통은
+- [7:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=420) 할 일이 없어요. 네. 나중에 이제
+- [7:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=422) 어떤 환경 설정을 해서 작업 셀업을
+- [7:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=424) 하고 싶다 할 때 활용하실 수 있는
+- [7:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=425) 옵션이라고 생각하시면 되고요. 어,
+- [7:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=427) 중요한 거는 여기 맨 우측 버튼 눌러
+- [7:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=429) 보시면 요렇게 화면이 뜨잖아요. 요게
+- [7:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=432) 결과물을 생성했을 때 그 결과물을
+- [7:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=434) 확인할 수 있는 창입니다. 그래서
+- [7:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=435) 굉장히 유용하거든요. 이제 작업한
+- [7:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=437) 거를 바로 우측해서 확인할 수 있는
+- [7:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=439) 탭이고요. 그 옆에 톡을 터미널이라고
+- [7:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=441) 해서 요걸 누르시면 이렇게 터미널
+- [7:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=443) 작업도 밑에서 바로 하실 수 있고요.
+- [7:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=445) 그 왼쪽에는 이제 파일을 여기서
+- [7:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=448) 모니터링을 할 수 있긴 하지만 실제로
+- [7:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=450) 들어가서 뭐 편집이라든가 추가적인
+- [7:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=453) 작업을 하고 싶다 하실 때는 여기서
+- [7:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=455) 다양한 앱으로 접근하실 수가
+- [7:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=457) 있습니다. 보통은 이제 저는 VS
+- [7:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=459) 코드로 들어가서 작업을 하는 편인데요
+- [7:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=461) vs 코드 이렇게 그럼 지금 폴더로
+- [7:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=463) 이렇게 들어오게 되죠.이 이 폴더에서
+- [7:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=465) 추가 작업을 하실 수도 있습니다. 그
+- [7:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=467) 외에 코덱스에서 제공해 주는 여러
+- [7:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=469) 옵션들은 보통이 채팅 창에서 슬래시를
+- [7:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=472) 해 보시면 이렇게 여러 가지 옵션들이
+- [7:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=474) 뜨거든요. 모델 선택도 여기서 고르실
+- [7:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=476) 수 있고요. 이제 person날리티
+- [7:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=478) 이런 거를 고르실 수 있는데 보통
+- [7:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=479) 이제 업무 진행을 하실 때는이
+- [8:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=481) 프라그매틱 선택하시는 걸
+- [8:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=483) 추천드리고요. 만약에 업무가 아니고
+- [8:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=485) 좀 개인적으로 뭐 대화하면서 여러
+- [8:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=487) 가지 논의를 하고 싶다 하실 때요
+- [8:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=489) 프렌리를 선택하실 수도 있습니다. 그
+- [8:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=492) 외에 맨 밑에 보시면 이제 우리가
+- [8:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=494) 가지고 있는 활용할 수 있는 스킬들도
+- [8:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=496) 리스트가 쭉 뜨고요. 또 한 가지
+- [8:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=498) 재밌는 거는 여기 이제 펫이라 하는
+- [8:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=499) 것도 있거든요.요 펫을 한번 눌러
+- [8:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=501) 보시면 이런 식으로 우리의 펫이 하나
+- [8:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=503) 뜨게 됩니다. 그리고 우리가 어떤
+- [8:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=504) 작업을 하게 되면 그 어떤 작업을
+- [8:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=506) 하고 있는지를 얘가 이제 알려 주게
+- [8:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=508) 되거든요. 그래서 요게 이제 코덱스를
+- [8:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=510) 보고 있지 않는 화면에서도요 펫이
+- [8:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=513) 계속 떠 있기 때문에 요거 보면서
+- [8:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=515) 지금 코덱스가 어디까지 작업을
+- [8:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=516) 했는지를 한 눈에 이제 또 확인을 할
+- [8:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=518) 수 있는 장점이 있습니다. 그래서
+- [8:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=520) 요거 한번 켜 놓고 작업을 해 보도록
+- [8:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=521) 하겠습니다. 자, 그다음에 우리가
+- [8:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=523) 지금 예시로 제한서 PPT를 만들어
+- [8:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=526) 볼 건데요. 앞서 이제 플러스에
+- [8:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=527) 보시면 플러그인이라는게 있었죠?요
+- [8:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=529) 플러그인을 구체적으로 보시려면 왼쪽
+- [8:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=532) 상단에 보시면 플러그인 옵션이
+- [8:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=533) 있습니다. 여기 들어가 보시면 일단
+- [8:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=535) 오픈 AI가 기본적으로 제공하는 여러
+- [8:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=538) 플러그인들이 리스업이 되어 있거든요.
+- [9:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=540) 우리가 업무에서 활용하는 다양한
+- [9:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=542) 툴들이 보통 기본으로 또 제공이
+- [9:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=544) 됩니다. 여기 뭐 스프레드시트,
+- [9:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=545) 프레젠테이션 슬렉 노션 GL
+- [9:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=548) 구글 드라이버 이런 것들이 있죠.이
+- [9:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=549) 이 중에서 우리는 PPT를 제작을 할
+- [9:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=551) 거니까이 프레젠테이션 스킬 있죠?요
+- [9:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=553) 프레젠테이션 스킬을 활성화를 해
+- [9:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=555) 주시면 됩니다. 그러면 이제 PPT
+- [9:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=557) 제작을 할 때이 코덱스가 좀 더
+- [9:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=559) 똑똑하게 프레젠테이션 생성을 진행을
+- [9:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=562) 해 주게 돼요. 프레젠테이션 외에도
+- [9:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=564) 어 컴퓨터 컨트롤 하고 싶다 하면
+- [9:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=566) 컴퓨터 유즈 선택을 해 주시면
+- [9:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=567) 되고요. 브라우저 컨트롤을 해서 어떤
+- [9:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=569) 작업을 하고 싶다 하면 브라우저
+- [9:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=570) 유즈도 선택해 주시면 좋습니다. 자,
+- [9:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=572) 이렇게 프레젠테이션 플러그인까지 켜
+- [9:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=574) 주셨으면 이제 제한서 작업을 해
+- [9:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=576) 봐야겠죠. 물론 우리가 여기서 그냥
+- [9:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=578) 이렇게 뭐 AI 자동화 컨설팅 제한서
+- [9:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=580) PPT 만들어 줘라고 해서 작업을
+- [9:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=582) 요청할 수도 있겠죠. 이렇게도
+- [9:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=584) 결과물이 뭔가 나오긴 하겠지만 우리가
+- [9:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=586) 원하는 결과물을 만들기는 어려울 수
+- [9:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=588) 있겠죠. 왜냐면 코덱스가 우리 사업에
+- [9:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=591) 대해서 뭐 고객 정보에 대해서 말투
+- [9:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=594) 디자인 기준, 뭐 검수 기준 이런
+- [9:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=596) 것들을 전혀 모르는 상황이잖아요.
+- [9:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=598) 그래서 작업을 시키기 전에 그런
+- [10:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=600) 기본적인 백그라운드 정보를 넣어
+- [10:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=602) 주시는게 좋습니다. 그리고 이거를
+- [10:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=603) 넣는 프롬프트를 작성하는 과정에서이
+- [10:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=606) GPT 5.5에 좀 커스텀된
+- [10:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=608) 프롬프트를 넣어 주시는게 좋겠죠.
+- [10:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=610) 최근에 오픈 AI에서 GPT 5.5에
+- [10:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=612) 적합한 컴퓨터 가이드를 공개했는데요.
+- [10:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=614) 핵심은 간단합니다. 과정을 너무 길게
+- [10:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=617) 하나하나 상세하게 설명하기보다는 뭐
+- [10:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=619) 목표나 성공 기준, 제약, 출력,
+- [10:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=621) 멈춘 기준 이런 거를 알려 주라고
+- [10:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=623) 하는데요. 그러니까 쉽게 말하자면
+- [10:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=625) 어떻게 할지 전부 지시를 하기보다
+- [10:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=627) 좋은 결과물이 어떤 모습인지에 대해서
+- [10:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=630) 그 기준을 명확하게 세워 주고 실제로
+- [10:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=632) 그 기준에 도달하기 위한 그 방법론은
+- [10:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=635) 호덱스가 좀 자유롭게 할 수 있게
+- [10:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=637) 그렇게 구조를 짜 주는게 좋은
+- [10:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=639) 프롬프트라고 합니다. 그래서 예를
+- [10:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=640) 들자면 뭐 이렇게 되겠죠. 우리의
+- [10:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=642) 목표는 일단 우리가 지금 요런
+- [10:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=644) 방식으로 폴더를 셋업을 해 주고
+- [10:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=646) 싶어요. 그래서 그곧 초안을 생성을
+- [10:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=648) 해 달라고 할 건데요. 목표가 이제
+- [10:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=650) AI 자동화 컨설팅 제한서 PPT
+- [10:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=652) 제작용 폴더를 준비하는 거고 성공
+- [10:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=654) 기준은 요런 폴더를 제작을 해 줘야
+- [10:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=656) 된다. 그리고 제약 사항은 아직
+- [10:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=658) PPT 파일을 만드는 건 아니고요.
+- [10:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=659) 초보자가 읽어도 이해되는 쉬운 말로
+- [11:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=661) 작성을 해라. 뭐 요런 내용들을
+- [11:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=663) 써웠습니다. 출력은 어떤 걸 해 줘야
+- [11:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=665) 되고 멈춘 기준은 파일 만든 뒤에는
+- [11:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=667) 다음 작업을 하지 말고네 확인을
+- [11:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=669) 기다려 달라. 요렇게 해서 한번
+- [11:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=670) 요청을 해 보겠습니다. 네. 그러면
+- [11:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=672) 지금 AI 자동화 컨설팅 제한서
+- [11:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=674) PPT 만들기 전 준비 문서를 생성해
+- [11:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=677) 준다고 하고 있죠. 그리고이 폴더만
+- [11:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=679) 만드는게 아니고 그 안에다가 제가
+- [11:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=681) 초안도 작성을 해 달라고 했거든요.
+- [11:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=683) 그래서 초안 작성까지 한 번에 진행을
+- [11:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=685) 해 주게 됩니다. 네. 그러면 이렇게
+- [11:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=687) 문서 작성이 완료되었다고 하는데요.
+- [11:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=689) 여기 이렇게 파일들이 생성이 됐죠?
+- [11:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=691) 한번 눌러 보시면 이렇게 우측에 바로
+- [11:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=693) 어떤 식으로 생성을 해 줬는지를
+- [11:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=694) 확인하실 수가 있습니다. 에이전트
+- [11:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=696) MD 생성해 줬고 여기서이 폴더의
+- [11:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=699) 목적이 뭐고 작업할 때 퇴치킬 원칙
+- [11:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=701) 뭐 폴더 구조 작성 톤 이런 것들을
+- [11:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=704) 작성해 줬고 디자인md에서
+- [11:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=706) 디자인을 어떤 식으로 해 줄 건지에
+- [11:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=708) 대한 내용을 넣어 줬고요. 비즈니스
+- [11:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=710) 컨텍스트에서 우리가 이제 어떤 사업을
+- [11:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=712) 하고 있는지 요런 것들을 가안으로
+- [11:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=714) 이렇게 넣어 줬습니다. 그리고 덱
+- [11:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=716) 브리프에서 슬라이드 덱을 만들 때
+- [11:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=718) 덱에 어떤 내용을 넣을 건지 그
+- [12:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=720) 구체적인 그 구조를 또 요렇게 설명해
+- [12:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=722) 주는 문서가 작성된 걸 보실 수
+- [12:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=724) 있습니다. 근데 여기서부터가 가장
+- [12:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=725) 중요한데요. 보통 채치피pt 제미나를
+- [12:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=728) 활용할 때는 기본적으로 내가 프롬프트
+- [12:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=731) 하나를 잘 작성을 해서 그거를 가지고
+- [12:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=733) 어떤 특정 결과물을 얻어내는 식으로
+- [12:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=736) 보통 작업을 했죠. 근데이 코덱스는
+- [12:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=738) 그런 식으로 쓰시면 안 되고
+- [12:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=739) 프롬프트가 하나가 중요하다기보다는
+- [12:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=741) 기본적으로 이제 코덱스가 참조해서
+- [12:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=743) 작업을 할 때 참조하는 그 문서
+- [12:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=746) 구조를 잘 작성해 주는게 내가
+- [12:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=748) 요청하는 프롬프트보다 훨씬
+- [12:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=750) 중요합니다. 그래서 우리가 지금 기본
+- [12:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=751) 골격을 만들어 놓은 요전트.md,
+- [12:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=754) design.md,
+- [12:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=755) 비즈니스컨텍스트.md,md
+- [12:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=757) mdbrift.md MD 요런 구조를
+- [12:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=759) 하나 만들어 두셨다면 여기 안에 이제
+- [12:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=762) 내용을 우리가 커스텀을 잘 해 주셔야
+- [12:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=764) 돼요. 그래서 내가 원하는 결과물에
+- [12:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=765) 대한 의도가 정확하게이네 가지 문서에
+- [12:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=768) 반영이 되었는지를 이제 체크하고
+- [12:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=770) 고도화에 나가시면 결과물 자체는
+- [12:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=772) 요거에 맞게 코덱스가 잘 생성을 해
+- [12:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=774) 주게 됩니다. 그래서 긴 프롬프트
+- [12:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=776) 하나보다 요런 구조를 만들고이
+- [12:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=778) 문서들을 고도화해 나가는게 더
+- [13:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=780) 중요하다라는 것만 잘 알아 주시면
+- [13:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=783) 되고요. 자, 그러면이 문서들을
+- [13:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=785) 하나씩 좀 고도화를 해 보도록
+- [13:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=786) 할게요.이 이 초환을 그대로 쓰지
+- [13:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=788) 않고 몇 가지 인풋을 주도록
+- [13:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=790) 하겠습니다. 먼저 디자인 보시면 뭐
+- [13:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=793) 사실 컬러라든가 이런 것들에 대해서
+- [13:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=795) 구체적인 어떤 디자인 가이드가 없죠.
+- [13:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=797) 뭐 자가는 어떻게 해주면 좋겠고
+- [13:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=799) 본트는 어떻게 해주면 좋겠고 요런
+- [13:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=801) 사항들이 하나도 들어가 있지가
+- [13:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=802) 않습니다. 그래서 그런 것들을 좀 잘
+- [13:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=804) 넣어 주는게 좋은데요. 원래 이제
+- [13:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=806) 담당하는 브랜드가 있으시면 그
+- [13:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=807) 브랜드에 가이드라인을 넣어 주시면
+- [13:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=809) 되고요. 아니면 회사에 아직 그런
+- [13:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=810) 문서가 없어서 새롭게 좀 생성을 해야
+- [13:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=813) 된다라고 했을 때는 여기
+- [13:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=814) 이제겟dign.md라는 MD라는
+- [13:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=816) 사이트가 있거든요. 여기에 예시로 어
+- [13:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=819) 유명한 브랜드들의 디자인닷 MD 이제
+- [13:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=821) 상세 설명을 작성해 준게 있습니다.
+- [13:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=824) 그래서 여기 쭉 나오는데 예를 들면
+- [13:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=826) 뭐 스타벅스 한번 들어가 볼까요?
+- [13:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=827) 스타벅스 들어가서 여기 디자인 MD
+- [13:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=830) 눌러 보시면 요런 이제 문구가 있죠.
+- [13:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=832) 요거를 카피를 하시고요. 가져와서
+- [13:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=835) 수정을 해 주시면 되겠죠. 요걸 이제
+- [13:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=836) 그대로 사용하실 수도 있겠지만 내용을
+- [13:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=838) 좀 수정해서 우리 브랜드에 맞게 이제
+- [14:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=841) 적용을 해 주면 되겠죠. 여기
+- [14:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=842) 디자인된 MD에서 오픈 에디터를
+- [14:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=844) 선택을 할게요. 네. 그러면 요렇게
+- [14:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=846) VS 코드로요 디자인된 MD가 뜨게
+- [14:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=848) 되고요. 여기다가요 스타벅스 버전을
+- [14:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=851) 붙여 넣기를 해 주겠습니다. 붙여
+- [14:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=852) 넣기 해 주고 근데이 영문으로 되어
+- [14:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=854) 있잖아요. 우리가 이제 한글로
+- [14:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=856) 제한서를 만들 거기 때문에 그 부분에
+- [14:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=858) 대해서만 좀 수정해 달라고 하면
+- [14:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=859) 되겠죠. 그래서 요렇게 디자인된 MD
+- [14:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=861) 문서에 영문으로 예시를 넣었는데 한글
+- [14:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=864) 제한사에 맞게 한글로 수정해 달라.
+- [14:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=866) 그리고 스타벅스 풍은 유지하되
+- [14:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=867) 스타벅스 로고나 뭐 스타벅스와 관련된
+- [14:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=870) 예시는 제거를 해 줘. 요렇게 요청을
+- [14:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=871) 해 보겠습니다. 그러면 우리가
+- [14:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=873) 복사부처했기 때문에이 기본적으로 좋은
+- [14:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=876) 디자인 MD를 만들 수 있는 볼은 다
+- [14:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=878) 만들어 놨어요. 코덱스가 보고 한글로
+- [14:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=881) 이제 최적화를 해 주고 또 너무
+- [14:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=883) 스타벅스 그 커피와 관련된 그런 정보
+- [14:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=885) 같은 경우는 좀 이제 제거하는 식으로
+- [14:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=888) 커스텀을 해 주겠죠. 그리고 여기
+- [14:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=889) 보시면 지금 작업을 할 때요 펫이
+- [14:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=891) 열심히 일을 하고 있는게 보이시죠?
+- [14:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=893) 여기에 뭐 AI 제한서 PPT 폴더
+- [14:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=896) 준비를 지금 진행하고 있다는 거를
+- [14:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=899) 보실 수 있습니다. 자, 그러면
+- [15:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=900) 이렇게 수정을 잘 해줬죠? 이번에는
+- [15:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=902) 보시면 색 사용 기준이나 뭐 색 조합
+- [15:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=905) 예시, 글자 기준, 추천 글꼴, 뭐
+- [15:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=908) 슬라이드 구성 기준, 자주 쓸
+- [15:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=910) 슬라이드 유형 요런 것들을 다
+- [15:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=912) 세세하게 이렇게 정리해 주는 걸 보실
+- [15:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=914) 수 있습니다. 그래서 아까 초안보다
+- [15:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=916) 훨씬 자세하고 괜찮게 작성이 되죠.
+- [15:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=918) 여러분들도 꼭 스타벅스가 아니더라도
+- [15:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=920) 뭔가 이제 벤치마킹 하고 싶은
+- [15:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=922) 디자인m 파일을 하나 붙여 넣게
+- [15:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=925) 하시고 그다음에 우리 브랜드 내가
+- [15:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=927) 원하는 브랜드에 맞는 방향으로 수정
+- [15:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=929) 요청만 코덱셋 해 주시면 요렇게
+- [15:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=931) 깔끔하게 작성을 해 줍니다. 자,
+- [15:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=933) 그러면 그다음에 이제 또 다른 문서
+- [15:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=935) 수정을 해 보도록 할게요. 예를 들면
+- [15:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=937) 지금 비즈니스 컨텍스트 있죠? 여기에
+- [15:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=939) 이제 비즈니스 배경에 대한 내용이
+- [15:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=941) 들어가 있는데요. 여기도 몇 가지
+- [15:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=942) 인풋을 주도록 할게요. 우리 대상
+- [15:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=944) 고객은 내부 개발팀이 없는 10명에서
+- [15:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=947) 한 50명 정도 규모의 SMB 대표다
+- [15:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=949) 이렇게 하고요. 뭐 고객의 문제
+- [15:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=951) 그리고 제한 서비스 제공 솔루션
+- [15:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=953) 툴에서 뭐 코덱스나 클로드 코드
+- [15:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=956) NA덴 이렇게 써 주겠습니다. 업무
+- [15:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=958) 자동화 솔루션 이렇게 하고 기존에
+- [16:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=961) 초환이 있으니까 기존
+- [16:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=962) 비즈니스컨텍스트.닷m에
+- [16:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=964) 아래 내용을 참고해서 보완을 해
+- [16:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=966) 달라. 요런 식으로 요청을 해
+- [16:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=968) 주겠습니다. 그럼 요거를 그대로 이제
+- [16:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=970) 덮어씌우기보다는 어 기존에 가지고
+- [16:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=972) 있는 초안에도 좀 어느 정도 의미
+- [16:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=974) 있는 내용들이 있으니까요 추가 정보를
+- [16:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=976) 활용해서 이제 보완을 할 수 있겠죠.
+- [16:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=978) 네. 그러면 이렇게 내용을 좀 보완을
+- [16:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=980) 해 줬죠. 뭐 예상 고객이나 제한
+- [16:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=982) 서비스, 뭐 제공 솔루션 툴 이런
+- [16:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=984) 것들이 훨씬 구체화가 됐습니다.
+- [16:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=986) 그다음에는 에이전트.md도 좀
+- [16:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=989) 구체화를 해 보도록 할게요. 동일하게
+- [16:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=991) 인풋을 주면서 에이전트.md MD
+- [16:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=993) 내용을 보완해 달라고 요청하겠습니다.
+- [16:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=996) 이때도 지금 프롬프트를 보시면 뭐
+- [16:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=998) 목표를 먼저 주고요. 그다음에 제작
+- [16:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=1000) 규칙, 뭐 안전 규칙 요런 식으로 좀
+- [16:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=1002) 결과물이 어떤 식으로 나와야 되는지를
+- [16:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=1004) 기준으로 좀 설명을 해 줬어요. 문서
+- [16:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=1006) 작성하실 때 특히이 에이전스.m가
+- [16:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1009) MD가 가장 중요한 문서 중에
+- [16:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=1010) 하나거든요. 기본적으로 코덱스가
+- [16:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=1012) 요거를 보고 작업 지침을 수행을 하기
+- [16:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=1015) 때문에 여기서 이제 우리가 원하는
+- [16:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1017) 목표에 대해서 굉장히 구체적으로
+- [16:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1019) 이해를 하고 또 작업을 할 때 지켜야
+- [17:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1021) 될 원칙 이런 것들을 다 확인할 수
+- [17:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1023) 있게 해 주는게 중요합니다. 그리고
+- [17:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=1025) 우리가 별도의 문서들도 생성을
+- [17:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=1026) 했잖아요. 그래서요 별도의 문서들을
+- [17:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=1028) 이런 식으로 추가 작업을 할 때 이제
+- [17:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=1030) 참조할 수 있게 링크를 걸어 주시는게
+- [17:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=1032) 중요해요. 그래서 브랜드 디자인 관련
+- [17:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=1034) 작업을 할 때는 뭐 브랜드의 디자인닷
+- [17:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=1036) MD를 참고해야 되고 고객의 문제에
+- [17:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=1038) 대해서 파악하고 우리 사업이 어떤
+- [17:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=1040) 것들을 담당하는지를 파악할 때는
+- [17:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=1042) 비즈니스 컨텍스트를 참고하고 슬라이드
+- [17:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=1043) 흐름을 확인할 때는 덱브리프를
+- [17:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1045) 참고하고 요런 식으로 그 우리가
+- [17:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=1047) 생성한 파일들을 잘 참조해 주시는게
+- [17:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=1049) 중요합니다. 자, 마지막으로 덱
+- [17:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=1051) 브리프 문서도 좀 수정해 줄게요.
+- [17:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=1053) 지금도 어느 정도 구체적으로 적어
+- [17:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=1055) 주긴 했지만 우리가 원하는 방향이랑
+- [17:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=1057) 좀 다른 것들이 있을 수 있잖아요.
+- [17:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=1059) 그래서 그런 부분들을 보안 요청을 해
+- [17:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=1061) 주시면 됩니다. 그리고 지금 비즈니스
+- [17:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=1062) 컨텍스트 문서도 수정이 되었기 때문에
+- [17:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1065) 그거랑 또 맥락을 맞춰서 수정을
+- [17:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=1067) 한다고 얘기를 해 주고 있죠. 굉장히
+- [17:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1069) 똑똑하게 코덱스가 우리가 넣어 준 그
+- [17:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=1071) 프로젝트 폴더에 그 파일들을 참조해서
+- [17:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=1073) 작업을 진행하는 걸 보실 수
+- [17:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=1075) 있습니다. 네. 그러면 또 수정을 해
+- [17:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1077) 줬는데요. 뭐 주 슬라이드 흐름이나
+- [17:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1079) 뭐 각 슬라이드에서 말할 내용,
+- [18:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=1080) 필요한 자료, 정해야 될 것들 요런
+- [18:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1083) 것들이 나와 있고요. 여기도 우리가
+- [18:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=1085) 툴를 이제 지정을 해 줬으니까 코덱스
+- [18:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=1086) 클로드 코드 NA 뭐 요렇게
+- [18:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=1088) 넣어줬고요. 여기서 추가적으로 최근에
+- [18:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=1091) 최pt가 이미지 모델을 또 새롭게
+- [18:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=1093) 출시를 했잖아요. 그 이미지 퀄리티도
+- [18:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1095) 괜찮아서 제가 영상으로 다른 적도
+- [18:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=1097) 있는데요.이 코덱스 안에서도
+- [18:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=1099) 최지pt의 이미지 모델을 바로
+- [18:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=1100) 활용하실 수가 있거든요. 그래서 그걸
+- [18:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=1102) 활용해서 PPT에 들어가야 될
+- [18:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=1104) 이미지도 좀 추가해 주는 내용을요
+- [18:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=1107) 덱브리프에도 넣어 주면 좋을 것
+- [18:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=1108) 같아요. 그래서 요렇게 요청해
+- [18:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=1109) 주겠습니다. 덱 브리프랑 에전트
+- [18:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=1111) MD에 이미지가 필요한 영역은 이미지
+- [18:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1114) 젠을 이용해서 삽입할 수 있게 수정을
+- [18:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=1116) 해 달라. 그리고 전체 덱에서
+- [18:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=1118) 이미지가 최소 세 개 정도를 활용되는
+- [18:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=1120) 거를 권장해 달라. 이렇게 요청해
+- [18:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=1121) 보겠습니다. 그러면 이제 이미지
+- [18:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=1123) 생선과 관련해서 대게 어떤 식으로
+- [18:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1125) 접목을 시킬 건지 그 내용도 추가를
+- [18:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=1127) 해 주겠죠. 네. 자, 그럼 요렇게
+- [18:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1129) 이미지 젠을 활용할 때 어떤 식으로
+- [18:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=1131) 넣을 건지 요렇게 추가해 주는 걸
+- [18:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=1133) 보실 수 있습니다. 자, 그러면
+- [18:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=1134) 이제요네 가지 문서들을 다 세팅을 해
+- [18:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1137) 줬으니까 이제 실제로 제한서 작업을
+- [19:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=1140) 요청해 보도록 하겠습니다. 자, 그럼
+- [19:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1141) 요청을 해 줄 텐데요. 우리가 바로
+- [19:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1143) 최종본을 요청하기보다는 먼저 지금
+- [19:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=1146) 2번까지 우리가 작업을 했죠? 그래서
+- [19:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=1148) 3번 이제 플랜을 먼저 받아보도록
+- [19:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=1149) 할게요. 그래서 PPT 제작을
+- [19:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=1151) 요청하기 전에 먼저 코덱스가 어떤
+- [19:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=1153) 식으로 접근을 할 건지 계획을 수립해
+- [19:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1155) 달라고 요청하고 그 계획에 대해서 또
+- [19:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=1157) 수정이 필요하면 수정 요청을 해
+- [19:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=1159) 주도록 하겠습니다. 자, 계획
+- [19:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=1160) 요청하실 때는 플러스 버튼을 보시면
+- [19:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=1162) 플랫 모드가 있죠? 플랜 모드를 켜
+- [19:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=1164) 주시고요. 요렇게 요청해 볼게요.
+- [19:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1165) 그래서 여성용 가방을 판매하는 온라인
+- [19:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=1168) 쇼핑몰 대상 열장짜리 AI 자동화
+- [19:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=1170) 컨설팅 제한서 PPT를 만들고 싶다.
+- [19:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=1173) 이렇게 한번 요청을 해 보도록
+- [19:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1174) 하겠습니다. 그리고 성공 기준에
+- [19:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=1175) 대해서 잘 설명을 해 줬고요. 이때
+- [19:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=1178) 해당 업계의 페인포인트나 적절한
+- [19:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=1180) 솔루션에 대해서 리서치도 진행을
+- [19:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=1181) 요청할게요. 자, 그러면 지금 계획
+- [19:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=1183) 수립 단계라는 걸 파악을 했죠?
+- [19:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1185) 그리고 PPT를 만들지는 않고 먼저
+- [19:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=1187) 어떤 식으로 제작을 할 건지 계획을
+- [19:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1189) 수립하게 됩니다. 이렇게 계획을
+- [19:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=1191) 수립해 주시는게 좋은 게요. 어쨌든
+- [19:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=1193) PPT 덱을 만드는 작업이라는게 꽤
+- [19:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=1195) 무거운 작업이거든요. 그럼 사용량을
+- [19:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1197) 어느 정도 잡아먹긴 하겠죠. 물론
+- [19:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1199) 이제 코덱스가 클로드 코드보다는 좀
+- [20:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1201) 사용량이 넉넉한 편이긴 합니다.
+- [20:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1203) 그래도 어쨌든 좀 효율적으로 작업을
+- [20:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=1205) 하시기 위해서는 이렇게 좀 무거운
+- [20:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=1207) 작업들은 계획을 좀 최적화를 한
+- [20:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=1209) 다음에 한 번에 좀 원하는 결과물을
+- [20:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=1211) 생성하시는게 더 효율적입니다. 네.
+- [20:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=1213) 보면은 이렇게 또 질문도 주죠.
+- [20:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1215) 리서치 근거는 어느 시장 기준으로
+- [20:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=1217) 잡을까요? 했을 때 어레맨드 한국
+- [20:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=1219) 중심으로 하고요. 최종 목적이
+- [20:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=1221) 무엇이냐? 일단 파일럿 미팅이라고
+- [20:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=1223) 할게요. 그리고 고객사는 어떻게
+- [20:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1225) 표현할까요? 어, 실명 반영을
+- [20:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=1227) 하겠습니다. 네. 그러면 이렇게
+- [20:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=1229) 계획을 보여 주고 있는데요. 익스드
+- [20:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=1231) 플래을 해서 한번 내용을 확인해
+- [20:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=1232) 보도록 하겠습니다. 목표 요약 잘 해
+- [20:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1234) 줬고 뭐 제한 목적, 시장 기준,
+- [20:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=1237) 디자인 만들 목록 요렇게 리스톱해
+- [20:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=1240) 줬고요. 슬라이드 구성한 핵심
+- [20:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=1242) 메시지랑 근거 시각화 요런 것들 잘
+- [20:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=1244) 정리를 해 줬습니다. 네. 깔끔하죠?
+- [20:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=1246) 근데 여기서 뭐 나중에 수정을 해
+- [20:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=1248) 주고 싶은 부분이 있다 하면은 여기서
+- [20:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=1250) 먼저 수정을 해 주시면 돼요. 그러면
+- [20:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=1251) 우리가 결과물까지 다 생성하면서 토큰
+- [20:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=1254) 낭비하지 않고 방향을 한 번에 이제
+- [20:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=1256) 픽스를 해 줄 수 있겠죠. 어,
+- [20:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1257) 지금은 괜찮다고 가정을 해보고
+- [20:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1259) 진행하겠습니다. 자, 그러면 이제
+- [21:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=1260) 승인해야 될 지점이 있었기 때문에
+- [21:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=1262) 어, 질문을 주고 있죠. 고객사 명을
+- [21:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=1264) 알려 달라고 합니다. 뭐 예시로 하나
+- [21:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=1266) 만들어 볼게요. 뭐 그린 토트백이라고
+- [21:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=1268) 하겠습니다. 그리고 지금 로고도
+- [21:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=1270) 제공해 주면 그 로고도 넣어 줄 수
+- [21:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=1272) 있는데요. 일단은 무로고로 진행을 해
+- [21:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=1274) 보도록 하겠습니다. 그러면 지금 외브
+- [21:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=1276) 리서치부터 진행하는 걸 보실 수
+- [21:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=1278) 있습니다. 이제 작업이 완료되면 같이
+- [21:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=1281) 결과물을 확인해 보도록 하겠습니다.
+- [21:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=1282) 네. 그러면 이제 슬라이드 생성을
+- [21:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1285) 완료했다고 합니다. 한 20분 정도가
+- [21:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=1287) 걸렸고요. 우리가 리서치뿐만 아니라
+- [21:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=1290) 리서치하고 이미지 생송도 하고 PPT
+- [21:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=1292) 제작도 해 주고 그다음에 검수까지 한
+- [21:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1294) 번에 진행을 해 줬거든요. 그리고
+- [21:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=1296) 검수한 내용도 요약을 해 줬고요.
+- [21:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=1298) 리서치 한 문서도 요렇게 다 생성을
+- [21:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=1301) 해 줬습니다. 여기 지금 온라인몰
+- [21:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=1303) 리서치 요약도 주고 AI 자동화
+- [21:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1305) 솔루션 맵 그리고 슬라이드 계획
+- [21:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=1307) 열도로 작성해 주고 그걸 가지고
+- [21:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1309) PPT 제작을 해 줬는데요. 한번
+- [21:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=1310) 같이 확인을 해 보도록 하겠습니다.
+- [21:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=1312) PPT 파일 누르시면 요렇게 바로
+- [21:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=1314) 간단하게 리뷰를 해 볼 수 있는 창이
+- [21:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1317) 띄워집니다. 조금 키워 볼까요?
+- [21:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1319) 보시면 어떤가요? 그게 괜찮게 제작이
+- [22:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1321) 되지 않았나요? 여기 그 느낌도 제가
+- [22:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=1324) 그 스타벅스 풍을 가지고 디자인
+- [22:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=1327) MD를 작성을 해 줬죠. 그래서 그런
+- [22:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=1329) 느낌이 반영된 걸 보실 수 있고요.
+- [22:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=1331) 우리 고객사를 그린 토트백이라는
+- [22:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=1333) 가상의 업체를 선정을 했기 때문에
+- [22:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1335) 그거에 맞게 또 이미지 같은 것도 잘
+- [22:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=1337) 제작해서 넣어 준 걸 보실 수
+- [22:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=1339) 있습니다. 네. 들어가 보면 요렇게
+- [22:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=1341) 내용도 넣어 줬고요. 이미지도 이렇게
+- [22:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=1343) 넣어줬죠. 이미지도 제가 세 개 넣어
+- [22:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1345) 달라고 했어요. 그래서 1번, 3번,
+- [22:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=1347) 6번에 요렇게 이미지 추가를 해
+- [22:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=1349) 줬고요. 특화 문제 같은 거 넣어
+- [22:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=1351) 줬고 먼저 자동화 업무 세 가지
+- [22:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1354) 선택도 해 줬고요. 후덱스를 업무
+- [22:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=1356) 자동화 설계 허으로 두고 어떤 것들
+- [22:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=1358) 하면 좋은지 요렇게 정리해 줬습니다.
+- [22:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=1360) 그리고 4주 동안 어떻게 진행을 할
+- [22:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=1361) 거고 뭐 효과는 숫자로 확인합니다.
+- [22:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=1364) 하고 운영 리스크 관리. 최종적으로
+- [22:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=1366) 다음 미팅에서 뭐 파일 범위만 정하면
+- [22:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1369) 됩니다. 이렇게 원샷으로 굉장히
+- [22:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=1371) 괜찮은 수준의 제한서를 작성해 주는
+- [22:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=1373) 걸 보실 수 있습니다. 네, 여기서
+- [22:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=1375) 이제 느끼셨겠지만 이게 20분 정도나
+- [22:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1377) 걸렸잖아요. 그리고 리서치를 해서이
+- [22:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1379) 수치들도 다 실제 그 리서치 기반으로
+- [23:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1381) 뽑아 준 거거든요. 근데 이렇게 잘
+- [23:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1383) 작동하게 하기 위해서는 앞서 보여
+- [23:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=1385) 드렸던요 기준 문서를 잘 세팅을 하고
+- [23:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=1388) 계획을 잘 수립하시는게 굉장히
+- [23:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=1390) 중요합니다. 이렇게 안 하고 어설픈
+- [23:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=1392) 문서와 어설픈 계획을 가지고 혹은
+- [23:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=1394) 계획도 없이 PPT 작업을 요청하시게
+- [23:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=1397) 되면 뭐 몇십분에 걸려서 작업을
+- [23:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=1399) 했는데 어 의미 없는 작업물이 나올
+- [23:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=1401) 수 있겠죠. 이렇게 한 번에 잘
+- [23:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=1402) 나오긴 했는데 혹시 모르니까 검수를
+- [23:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1405) 또 추가적으로 해 보고 싶다고 해
+- [23:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=1407) 보겠습니다. 그러면 여기서 요렇게
+- [23:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=1409) 골뱅이 해 보시면 여기 그 플러그인이
+- [23:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=1411) 뜨거든요. 프레젠테이션 선택을 해
+- [23:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=1413) 주시고 방금 마무된 ppt를 한 번
+- [23:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=1415) 더 검수해 달라고 하겠습니다. 네.
+- [23:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=1417) 이미 원샷으로 너무 잘해 줘 가지고
+- [23:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=1419) 사실 거의 피드백이 없긴 하거든요.
+- [23:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=1421) 근데 그래도 조금 더 개선할 수 있는
+- [23:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=1423) 포인트가 있을지 레이아웃 측면 그리고
+- [23:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1425) 내용 측면에서 한번 검수 요청을 해
+- [23:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=1428) 보도록 할게요. 그리고 뭐 레이아웃은
+- [23:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1429) 잘 나오더라도 내용이나 어떤 플로우
+- [23:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=1432) 이런 측면에서 실제로 제한소 작성하실
+- [23:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=1434) 때는 의견이 있으실 수 있겠죠. 그럼
+- [23:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=1436) 어쨌든 요렇게 골뱅이 프레젠테이션스
+- [23:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=1438) 하시고 피드백을 주시면 됩니다.
+- [24:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=1440) 그리고 그때 이제 성공 기준 같은
+- [24:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=1442) 거를 잘 작성을 해 주시면 그 기준에
+- [24:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=1444) 맞게 코덱스가 또 개선을 해 주게
+- [24:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=1446) 됩니다. 그리고 요렇게 슬라이드로도
+- [24:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=1448) 작성을 해 주지만 제가 한 눈에 볼
+- [24:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=1450) 수 있도록 요런 리뷰 몬타주 PNG
+- [24:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=1453) 파일도 생성을 해 놨거든요. 요게
+- [24:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1455) 이제 한 눈에 되게 어떤 느낌으로
+- [24:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=1457) 이렇게 구성이 되어 있는지를 볼 수
+- [24:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=1459) 있게 해 주기 때문에 요런 이미지도
+- [24:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=1461) 하나 만들어 보시는 걸 추천드려요.
+- [24:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=1462) 그러면 딱 흐름에 맞게 어떤 느낌으로
+- [24:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1465) 요게 이제 슬라이드가 진행되는지를
+- [24:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=1467) 보실 수가 있죠. 요것도 지금
+- [24:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=1469) 코덱스가 확인하고 검수를 하고
+- [24:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=1471) 있습니다. 네. 그러면 결과가
+- [24:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=1473) 나왔는데요. 보시면 렌더 확인 문제는
+- [24:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=1475) 없었고 추측이랑 추가 확인 했으면
+- [24:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=1478) 하는 것들 몇 가지 좀 뽑아
+- [24:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=1480) 줬습니다. 그러면 지금 제한 준
+- [24:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=1482) 것처럼 슬라이드 2랑 6에서 그 정보
+- [24:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1485) 관련해서 팩트 체크하고 필요시 수정해
+- [24:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=1487) 달라고 하겠습니다. 보시면 여기요
+- [24:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1489) 수치들 그리고 여기 툴 관련해서
+- [24:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=1492) 내용들이 뭐 과정되거나 뭐 틀린
+- [24:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=1495) 정보는 없는지 더블 체크를 할 수
+- [24:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=1496) 있겠죠. 그리고 요런 거 관련해서도
+- [24:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=1498) 항상 소스 문서를 참조를 해 달라
+- [25:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1501) 요런 식으로 하시면 그 소스 문서를
+- [25:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1503) 들어가서 우리가 내용을 추가적으로
+- [25:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=1505) 확인해 볼 수 있습니다. 네. 그러면
+- [25:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=1507) 슬라이드 2와 6에 대해서 내용을 좀
+- [25:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=1510) 수정을 해 줬어요. 조금 더 이제
+- [25:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=1512) 최신 정보, 최신 통계 기반으로
+- [25:14](https://youtube.com/watch?v=ir8Lax4Q38o&t=1514) 수정을 해 줬습니다. 자, 그러면
+- [25:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=1516) 요렇게 최종 PPT가 제작이
+- [25:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=1517) 됐는데요. 우리가 슬라이드 작업하다
+- [25:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=1520) 보면 어, 내가 분명히 만든 그
+- [25:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=1521) 환경에서는 잘 나오는데 막상 또
+- [25:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=1524) 파워포인트에서 실행을 했을 때 깨지는
+- [25:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=1526) 경우가 또 생길 수 있죠. 줄바음이
+- [25:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=1528) 좀 어색하게 진행이 된다라던가 폰트가
+- [25:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=1531) 깨진다라던가 뭐 그런 경우가 발생할
+- [25:33](https://youtube.com/watch?v=ir8Lax4Q38o&t=1533) 수도 있는데요. 그래서 그 내용도
+- [25:35](https://youtube.com/watch?v=ir8Lax4Q38o&t=1535) 체크를 해 줘야 되는데 코덱스에는
+- [25:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=1536) 컴퓨터 유지라는 기능이 있습니다.
+- [25:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=1538) 그래서 코덱스에게 그 작업마저도 다
+- [25:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=1541) 요청을 하실 수가 있어요. 그래서
+- [25:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=1542) 골뱅이 하시고 컴퓨터 해서이 컴퓨터
+- [25:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1545) 유즈를 활성화하실 수 있고요. 여기서
+- [25:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=1547) 파워포인트를 실행해서 최종적으로
+- [25:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=1550) ppt를 열고 확인을 해 달라 요렇게
+- [25:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=1552) 요청을 해 보겠습니다. 그러면
+- [25:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=1553) 파워포인트를 실행하고 최종적으로
+- [25:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=1556) 결과물이 괜찮은지까지 코덱스가 직접
+- [25:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1559) 체크를 해 주고 이제 결과 리포트를
+- [26:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1561) 생성해 주게 됩니다. 그러면 지금
+- [26:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1563) 제한서를 작성하데 있어서 들어가야 될
+- [26:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=1565) 리서치 작업 앞단의 작업부터
+- [26:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=1568) 최종적으로 파워포인트까지 실행해서
+- [26:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=1570) 우리가 최종 결과물이 제대로 나왔는지
+- [26:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=1572) 검소하는 적어까지 and드투 엔드로
+- [26:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1575) 모든 거를 다 이제 코덱스가 해 줄
+- [26:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=1577) 수 있겠죠. 자, 그러면
+- [26:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=1579) 프레젠테이션이 이런 식으로 뜨게 될
+- [26:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=1581) 겁니다. 요거를 이제 컴퓨터 유즈가
+- [26:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=1583) 직접 넘기면서 장표별로 다 확인을
+- [26:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=1586) 하게 돼요. 지금 저 파워포인트에
+- [26:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=1588) 보이는 마우스 포인터가 제 마우스
+- [26:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=1590) 포인트가 아니고 이제 컴퓨터 유지의
+- [26:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=1592) 마우스 포인터거든요. 자, 보면 이런
+- [26:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1594) 식으로 넘기면서 체크를 하고 있는 걸
+- [26:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=1597) 보실 수 있습니다. 그러면 지금 편집
+- [26:39](https://youtube.com/watch?v=ir8Lax4Q38o&t=1599) 화면 기준으로 1에서 10번까지 모두
+- [26:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=1601) 정상적으로 열렸고 뭐 문제는 딱히
+- [26:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=1603) 보이지 않았다. 그래서 이제
+- [26:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1605) 슬라이드쇼를 처음부터 실행해서 열장을
+- [26:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=1607) 전체 넘김으로 또 확인해 본다고
+- [26:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1609) 합니다. 그래서 이렇게 지금 슬라이드
+- [26:51](https://youtube.com/watch?v=ir8Lax4Q38o&t=1611) 쇼로 또 장표를 하나씩 넘기면서 마치
+- [26:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=1613) 사람도 보통 그렇게 보잖아요. 편집
+- [26:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=1616) 화면 보고 그다음에 슬라이드 쇼로
+- [26:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1617) 한번 또 보는데 요렇게 코덱스도
+- [26:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1619) 작업을 진행하는 걸 보실 수
+- [27:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1621) 있습니다. 네. 일단 슬라이드 1에서
+- [27:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1623) 10까지 모두 정상 표기가 됐고요.
+- [27:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=1625) 뭐 딱히 문자가 되는 거는 보이지
+- [27:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=1627) 않는 거 같습니다. 그러면 최종적으로
+- [27:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=1629) 최종 파일과 검수 결과를 정리를 해
+- [27:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=1631) 주고 이제 다음에 우리가 템플릿화
+- [27:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=1633) 하면 좋은 그런 정보가 있을지 좀
+- [27:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1635) 의견을 달라고 해 보겠습니다. 네.
+- [27:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=1637) 그러면 최종적으로 정리를 해 주죠.
+- [27:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=1639) 최종 정리 문서 한번 보시면 산출물
+- [27:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=1642) 목록이랑 뭐 검수 결과 요약 그리고
+- [27:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1645) 사람이 마지막으로 확인해야 될 것 뭐
+- [27:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=1647) 템플릿화 하는 거 제한 이렇게 내용을
+- [27:29](https://youtube.com/watch?v=ir8Lax4Q38o&t=1649) 주죠. 여기서 이제 우리가 좀
+- [27:31](https://youtube.com/watch?v=ir8Lax4Q38o&t=1651) 추가적으로 템블리터 하고 싶은 그런
+- [27:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1654) 내용이 있다 하면은 그거를 좀 더
+- [27:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=1656) 우리가 문서를 고도화해 나가면
+- [27:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=1658) 다음에는 그냥 프롬프트로 뭐 고객사
+- [27:41](https://youtube.com/watch?v=ir8Lax4Q38o&t=1661) 정보만 딱 주면 제한서를 바로 그냥
+- [27:43](https://youtube.com/watch?v=ir8Lax4Q38o&t=1663) 센스 있게 우리가 원하는 스타일로
+- [27:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1665) 생성을 해 줄 수 있겠죠. 네.
+- [27:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=1667) 그래서 이렇게 코덱스로 제한석 가이드
+- [27:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1669) 문서를 간단히 셋업하고 리서치부터
+- [27:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=1672) PPT 제작 그리고 검수까지 한 번이
+- [27:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=1674) 다 진행하는 방법을 살펴봤는데요.
+- [27:56](https://youtube.com/watch?v=ir8Lax4Q38o&t=1676) 마지막으로 코덱스를 좀 더 효율적으로
+- [27:58](https://youtube.com/watch?v=ir8Lax4Q38o&t=1678) 활용하기 위한 팁을 몇 가지 드리도록
+- [28:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1681) 하겠습니다. 자, 먼저 지금 우리가
+- [28:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1683) 에이전트 MD라는게 있는데 그 외에도
+- [28:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=1685) 코덱스가 이전에 내가 요청했던 내용에
+- [28:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=1687) 대해서 기억을 하고 작업을 할 수
+- [28:10](https://youtube.com/watch?v=ir8Lax4Q38o&t=1690) 있으면 좀 더 효율적일 수 있겠죠.
+- [28:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=1692) 그래서 그렇게 기억을 하게 해
+- [28:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=1693) 주시려면 슬래시하시고 메모리스를
+- [28:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1695) 들어가 보시면 이렇게 메모리를
+- [28:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=1698) 사용하게 할 건지 그리고 제너레이트
+- [28:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=1700) 메모리를 할 수 있게 할 건지를
+- [28:22](https://youtube.com/watch?v=ir8Lax4Q38o&t=1702) 설정하실 수가 있습니다. 그래서
+- [28:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=1703) 요거를 활성화해 주시면 되고요. 두
+- [28:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1705) 번째로는 이제 반복적인 작업은 항상
+- [28:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=1708) 스킬을 생성해서 활용하시는게
+- [28:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=1710) 좋은데요. 지금 우리는 이렇게
+- [28:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=1712) 프레젠테이션이라는 플러그인을 이미
+- [28:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1714) 설치를 해서 누군가가 만들어 준
+- [28:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=1716) 스킬을 그대로 쓰게 되는데요.
+- [28:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=1718) 오픈에서 제공하는 스킬은 아니지만 내
+- [28:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=1720) 워크플로어에서 의미 있는 어떤 반복
+- [28:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=1722) 작업이 있다 하시면 골뱅이 하시고
+- [28:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1725) 스킬 크리에이터라는게 있습니다.
+- [28:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=1727) 그래서 스킬 크리에이터 하시고
+- [28:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=1728) 그다음에 내 스킬에 대해서 설명을
+- [28:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=1730) 해서 스킬을 하나 만드시고요. 그
+- [28:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=1732) 스킬을 가지고 이제 작업을 하시면 좀
+- [28:54](https://youtube.com/watch?v=ir8Lax4Q38o&t=1734) 더 이제 원하는 작업을 반복적으로
+- [28:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1737) 일관되게 실행하실 수가 있습니다.
+- [28:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1739) 그리고 내 스킬은 아닌데 다른 사람이
+- [29:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1741) 뭐 기터부에 올려 놓은 스킬 같은게
+- [29:02](https://youtube.com/watch?v=ir8Lax4Q38o&t=1742) 또 있을 수 있잖아요. 그런 경우에는
+- [29:04](https://youtube.com/watch?v=ir8Lax4Q38o&t=1744) 스킬 인스톨러라는게 있습니다. 그래서
+- [29:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=1746) 요거를 설정해 주시고 기터브에 올라와
+- [29:08](https://youtube.com/watch?v=ir8Lax4Q38o&t=1748) 있는 스킬 같은 거 URL을 넣고
+- [29:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=1751) 설치해 달라고 요청하시면 알아서 잘
+- [29:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=1753) 설치를 해 주게 됩니다. 그래서 항상
+- [29:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1755) 스킬을 활용해서 반복 작업을
+- [29:17](https://youtube.com/watch?v=ir8Lax4Q38o&t=1757) 진행하시는 걸 추천드리고요. 세
+- [29:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=1758) 번째로는 우리가 에이전트 MD에 잘
+- [29:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=1761) 작성을 해 주면 사실 GPT 5.5는
+- [29:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=1764) 웬만한 작업은 다 잘 실행을 해
+- [29:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=1766) 주거든요. 근데 작업이 이제
+- [29:27](https://youtube.com/watch?v=ir8Lax4Q38o&t=1767) 복잡해지면 복잡해질수록 놓치는 경우가
+- [29:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=1770) 또 발생할 수가 있습니다. 그래서
+- [29:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=1772) 그런 경우에는 이제 어떤 거를이
+- [29:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1774) 모델이 놓치는지를 잘 살펴보시고 특정
+- [29:37](https://youtube.com/watch?v=ir8Lax4Q38o&t=1777) 부분들을 훅을 활용해서 무조건
+- [29:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=1780) 실행하게 하실 수가 있거든요. 요거는
+- [29:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=1782) 일종에 코드 작업으로 자동화를 하는
+- [29:45](https://youtube.com/watch?v=ir8Lax4Q38o&t=1785) 거라고 생각하시면 돼요. 그래서 뭐
+- [29:46](https://youtube.com/watch?v=ir8Lax4Q38o&t=1786) 결과물이 나왔을 때 특정 체크리스트를
+- [29:49](https://youtube.com/watch?v=ir8Lax4Q38o&t=1789) 항상 확인하고 검증해 줘. 이런
+- [29:52](https://youtube.com/watch?v=ir8Lax4Q38o&t=1792) 작업을 요청하고 싶을 수 있잖아요.
+- [29:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=1793) 근데 이제 이게 에이전트 MD에
+- [29:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=1795) 들어가 있는데도 제대로 실행을 못
+- [29:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1797) 한다라고 했을 때는 속을 활용해서 뭐
+- [29:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1799) 요런 식으로 요청을 해 주시면 훅
+- [30:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1801) 세팅하는 방법을 코덱스가 알려 줄
+- [30:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1803) 거예요. 그럼 코덱스랑 대화하시면서
+- [30:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=1805) 그렇게 후으로 세팅해서 작업하시는
+- [30:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=1807) 것도 나중에 추후에 고려해 보시면
+- [30:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=1809) 좋을 것 같습니다. 일단 일반적인
+- [30:11](https://youtube.com/watch?v=ir8Lax4Q38o&t=1811) 간단한 작업들은 에이전트 스 MD만
+- [30:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=1813) 최적화를 해 주셔도 잘 작동할
+- [30:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1815) 건데요. 그럼에도 이제 놓치는게
+- [30:16](https://youtube.com/watch?v=ir8Lax4Q38o&t=1816) 생긴다 하실 때이 훅도 고려해 보시면
+- [30:19](https://youtube.com/watch?v=ir8Lax4Q38o&t=1819) 좋을 것 같습니다. 네. 정리해 보면
+- [30:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=1821) 오늘의 핵심은 이제 세 가지로 요약을
+- [30:24](https://youtube.com/watch?v=ir8Lax4Q38o&t=1824) 해 볼 수 있는데요. 먼저 첫 번째로
+- [30:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1825) 코덱스 앱은 채팅방이 아니라 프로젝트
+- [30:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=1828) 폴더를 맡기는 앱입니다. 그래서이
+- [30:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=1830) 프로젝트 폴더를 잘 생성을 해 주시고
+- [30:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=1832) 기 세팅 해 주시는게 중요하고요. 두
+- [30:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1834) 번째로는 좋은 결과물을 만들기
+- [30:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=1836) 위해서는 긴 프롬프트를 하나
+- [30:38](https://youtube.com/watch?v=ir8Lax4Q38o&t=1838) 작성하는게 아니라 좋은 작업 환경을
+- [30:40](https://youtube.com/watch?v=ir8Lax4Q38o&t=1840) 만들어 주시는게 중요합니다. 그래서
+- [30:42](https://youtube.com/watch?v=ir8Lax4Q38o&t=1842) 앞서 살펴봤던 뭐 에이전트단 MD,
+- [30:44](https://youtube.com/watch?v=ir8Lax4Q38o&t=1844) 디자인단 MD 이런 문서들을 잘
+- [30:47](https://youtube.com/watch?v=ir8Lax4Q38o&t=1847) 세팅을 해 주시는게 굉장히
+- [30:48](https://youtube.com/watch?v=ir8Lax4Q38o&t=1848) 중요합니다. 그리고 세 번째로는 AI
+- [30:50](https://youtube.com/watch?v=ir8Lax4Q38o&t=1850) 결과물은 생성보다 계획 수립과 검수가
+- [30:53](https://youtube.com/watch?v=ir8Lax4Q38o&t=1853) 굉장히 중요합니다. 그래서 이제
+- [30:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=1855) 처음에 생성 요청하시기 전에 플랜을
+- [30:57](https://youtube.com/watch?v=ir8Lax4Q38o&t=1857) 받아보시고요. 플랜을 고도화하시는 걸
+- [30:59](https://youtube.com/watch?v=ir8Lax4Q38o&t=1859) 추천드립니다. 그리고 플랜 모드에서
+- [31:01](https://youtube.com/watch?v=ir8Lax4Q38o&t=1861) 플랜 잘 수립하신 다음에 이제 생성을
+- [31:03](https://youtube.com/watch?v=ir8Lax4Q38o&t=1863) 하게 되면 생성한 거 가지고 검수
+- [31:05](https://youtube.com/watch?v=ir8Lax4Q38o&t=1865) 작업을 또 요청하실 수 있고요.
+- [31:07](https://youtube.com/watch?v=ir8Lax4Q38o&t=1867) 그리고 이렇게 한번 1에서 4까지 잘
+- [31:09](https://youtube.com/watch?v=ir8Lax4Q38o&t=1869) 진행하셨으면 요거를 이제 반복적으로
+- [31:12](https://youtube.com/watch?v=ir8Lax4Q38o&t=1872) 실행해야 될 수 있잖아요. 그래서
+- [31:13](https://youtube.com/watch?v=ir8Lax4Q38o&t=1873) 반복 실행하실 때는 메모리나 스킬
+- [31:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1875) 그리고 훅 같은 거를 활용하셔서 반복
+- [31:18](https://youtube.com/watch?v=ir8Lax4Q38o&t=1878) 작업 효율적으로 진행해 보시면 좋을
+- [31:20](https://youtube.com/watch?v=ir8Lax4Q38o&t=1880) 것 같습니다. 여러분은 코덱스 앱으로
+- [31:21](https://youtube.com/watch?v=ir8Lax4Q38o&t=1881) 어떤 업무 자동화를 해 보고
+- [31:23](https://youtube.com/watch?v=ir8Lax4Q38o&t=1883) 싶으신가요? 댓글로 의견 남겨 주시면
+- [31:25](https://youtube.com/watch?v=ir8Lax4Q38o&t=1885) 좋을 것 같고요. 그럼 저는 또
+- [31:26](https://youtube.com/watch?v=ir8Lax4Q38o&t=1886) 생소성을 높일 수 있는 시스템을
+- [31:28](https://youtube.com/watch?v=ir8Lax4Q38o&t=1888) 구축하는 방법을 가지고 찾아뵙도록 할
+- [31:30](https://youtube.com/watch?v=ir8Lax4Q38o&t=1890) 테니까요. 관심 있으신 분들은 구독과
+- [31:32](https://youtube.com/watch?v=ir8Lax4Q38o&t=1892) 좋아요, 알림 설정해 주시면
+- [31:34](https://youtube.com/watch?v=ir8Lax4Q38o&t=1894) 감사하겠습니다. 지금까지 시민개
+- [31:36](https://youtube.com/watch?v=ir8Lax4Q38o&t=1896) 구시였습니다. 입니다.
+- [31:55](https://youtube.com/watch?v=ir8Lax4Q38o&t=1915) [음악]
+- [32:06](https://youtube.com/watch?v=ir8Lax4Q38o&t=1926) เฮ [음악]
+- [32:15](https://youtube.com/watch?v=ir8Lax4Q38o&t=1935) [음악]

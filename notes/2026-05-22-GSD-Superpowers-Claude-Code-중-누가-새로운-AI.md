@@ -1,0 +1,901 @@
+---
+title: "GSD, Superpowers, Claude Code 중 누가 새로운 AI 최강자일까요?"
+source_url: https://youtube.com/watch?v=wWuSWRKUuj4
+video_id: wWuSWRKUuj4
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# GSD, Superpowers, Claude Code 중 누가 새로운 AI 최강자일까요?
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 클로드 코드의 3가지 사용 방식을 실제 웹사이트 개발 프로젝트로 비교 테스트한 결과를 다룬다. GSD, 슈퍼파워스, 기본 클로드 코드로 동일한 AI 에이전시 웹사이트(랜딩페이지, 블로그, 블로그 생성기)를 만들어 시간, 토큰 사용량, 최종 결과물 품질을 비교했다. 결과는 예상과 달랐는데, 기본 클로드 코드가 20분/20만 토큰으로 가장 효율적이었고, 슈퍼파워스는 1시간/25만 토큰, GSD는 1시간 45분/120만 토큰이 소요되었다. 최종 결과물의 품질 차이는 미미했지만, 슈퍼파워스만 첫 시도에서 모든 기능이 완벽하게 작동했다. 결론적으로 대부분의 경우 기본 클로드 코드가 가장 효율적이고, 정말 복잡한 프로젝트일 때만 슈퍼파워스를 사용하라고 권한다.
+- **Core Message:** 복잡성 대비 효율성을 고려할 때, 대부분의 개발 작업에서는 기본 클로드 코드가 가장 실용적인 선택이다.
+> 만약 제가 이걸 다 섞어 놓고 나중에 사실 이건 슈퍼파워스가 한 거라는 반전이 밝혀졌다고 해도 여러분은 신경 안 썼을 겁니다.
+> 20분이냐 60분이냐의 차이가 가장 큽니다. 제 생각엔 적어도 그건 모든 것 중에서 가장 큰 차이점이라서 그걸 많이 기준으로 삼아야 합니다.
+> 사용 사례의 99%, 사용자 99%는 그냥 기본 클로드 코드를 쓰는게 제일 맞습니다. 더 빠르니까요.
+❗ GSD는 계획 단계에서만 60만 토큰을 사용했는데, 이는 기본 클로드 코드 전체 사용량(20만)의 3배
+❗ 최종 결과물의 디자인 품질은 세 도구 모두 거의 차이가 없었고, 구분하기 어려운 수준이었다
+❗ 슈퍼파워스만 첫 시도에서 모든 기능이 정상 작동했지만, 나머지 둘은 블로그 생성기에서 404 에러가 발생했다
+
+## 📚 핵심 용어
+- **오케스트레이션 레이어:** 클로드 코드 위에서 복잡한 프로젝트를 체계적으로 관리하는 추가 시스템 / 오케스트라 지휘자 같은 역할이다. 개별 연주자(기본 기능)들을 조율해서 하나의 완성된 공연을 만들어낸다. / 기본 클로드 코드는 솔로 연주, 오케스트레이션 레이어는 교향악단 지휘. 복잡도는 높아지지만 체계성이 증가한다.
+- **서브 에이전트 기반 개발:** 큰 작업을 작은 단위로 나누어 각각을 별도의 AI 세션에서 처리하는 방식 / 팀 프로젝트에서 각자 맡은 부분을 따로 작업한 뒤 합치는 것과 같다. 한 사람이 모든 걸 기억할 필요가 없다. / 기본 방식은 한 사람이 모든 일을 기억하며 작업, 서브 에이전트는 전문가팀이 분업. 기억 부담은 줄지만 조율이 필요하다.
+- **컨텍스트 붕괴:** AI가 대화가 길어지면서 앞서 한 말이나 작업 내용을 제대로 기억하지 못하는 현상 / 긴 회의에서 처음에 한 얘기를 까먹는 것과 같다. 대화가 길어질수록 앞의 맥락을 놓치게 된다. / 짧은 대화는 집중된 면담, 긴 대화는 마라톤 회의. 길어질수록 초점이 흐려지고 일관성이 떨어진다.
+- **비주얼 컴패니언:** 슈퍼파워스의 기능으로 여러 디자인 옵션을 시각적으로 미리 보여주는 도구 / 인테리어 업체에서 방 꾸미기 전에 3D로 여러 스타일을 보여주는 것과 같다. 말로만 설명하지 않고 눈으로 직접 확인할 수 있다. / 기본 방식은 말로만 설명하는 것, 비주얼 컴패니언은 실제 샘플을 보여주는 것. 소통은 명확해지지만 선택에 시간이 걸린다.
+
+## 🚀 실행 (Execute)
+- [ ] 현재 진행 중인 프로젝트의 복잡도를 객관적으로 평가하고, 기본 클로드 코드로 충분한지 판단
+  - 담당: 나
+  - 이유: 시간과 비용 효율성을 고려하여 적절한 도구를 선택해야 불필요한 리소스 낭비를 막을 수 있음
+- [ ] 슈퍼파워스 플러그인을 클로드 코드에 설치하고 간단한 테스트 프로젝트로 비주얼 컴패니언 기능 체험
+  - 담당: 나
+  - 이유: 정말 복잡한 프로젝트가 나왔을 때 바로 사용할 수 있도록 미리 익숙해져야 함
+- 자료: 슈퍼파워스 공식 플러그인 (클로드 코드 내 /plugins에서 검색)
+- 자료: GSD 설치 명령어 (영상에서 언급되었으나 구체적 명령어 확인 필요)
+- 자료: 클로드 코드 마스터 클래스 (영상 제작자의 고정 댓글에서 링크 확인 가능)
+- Timeline: 현재 프로젝트 복잡도 평가 → 기본 클로드 코드로 시작 → 필요시에만 슈퍼파워스 도입 순으로 진행
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=0) GSD를 써야 할까요? 슈퍼파우스를
+- [0:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=2) 써야 할까요? 아니면 둘 다 시간
+- [0:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=4) 낭비일까요?
+- [0:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=7) 그 질문에 답하려고 슈퍼파워스,
+- [0:09](https://youtube.com/watch?v=wWuSWRKUuj4&t=9) GSD, 그리고 기본 클로드 코드를
+- [0:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=12) 직접 비교해 봤습니다.
+- [0:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=15) 똑같은 외 맵을 만들게 한 뒤 최종
+- [0:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=17) 결과물과 사용한 토큰수 그리고
+- [0:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=19) 완성까지 걸린 시간을 기준으로
+- [0:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=21) 평가합니다.
+- [0:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=23) 그런데 승자는 예상과 다릅니다. 이제
+- [0:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=26) GSD, 슈퍼파워스 그리고 기본
+- [0:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=28) 클로드 코드 비교 테스트를 하기 전에
+- [0:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=30) 먼저 GSD와 슈퍼파워스가 정확히
+- [0:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=32) 뭐고 어떻게 동작하고 서로 뭐가
+- [0:35](https://youtube.com/watch?v=wWuSWRKUuj4&t=35) 다른지 짧게 보겠습니다.
+- [0:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=40) GSD와 슈퍼파우스는 같은
+- [0:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=41) 계열입니다. 둘 다 오케스트레이션
+- [0:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=44) 레이어로 클로드 코드 위에서 복잡한
+- [0:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=47) 프로젝트를 다루는 방식을 바꿉니다.
+- [0:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=51) 더 강력한 계획 시스템과 테스트
+- [0:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=53) 시스템을 넣고 둘 다 서브 에이전트
+- [0:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=55) 기반 개발을 활용해
+- [0:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=59) 컨텍스트 붕괴를 막습니다. 실제
+- [1:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=61) 단계를 과정을 보면 공통점은 더
+- [1:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=63) 뚜렷해집니다.
+- [1:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=65) 슈퍼파워스의 처음 세 단계는 뭘
+- [1:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=67) 할까요?
+- [1:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=68) 계획을 세우고 아이디어를 모으고
+- [1:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=70) 겟워크트리를 쓰고 그다음 계획을
+- [1:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=72) 적습니다. GST는 뭘 할까요?
+- [1:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=75) 새 프로젝트를 시작하고 계획을 논의한
+- [1:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=78) 뒤 그 계획을 단계별로 나눕니다. 큰
+- [1:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=81) 아이디어를 더 잡고 구체적인 원자
+- [1:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=83) 단위 작업으로 쪼개서 나중에 서브
+- [1:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=85) 에이전트들이 맡아 처리하게 합니다.
+- [1:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=90) 계획이 정해지면 슈퍼파워스는 뭘
+- [1:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=92) 할까요?
+- [1:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=93) 서브 에이전트 기반 대발을
+- [1:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=94) 진행합니다. 계속이 얘기를 하게
+- [1:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=96) 되네요. 기본 클로드 코드처럼 같은
+- [1:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=99) 세션에서 전부 실행해 버리게 두지
+- [1:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=101) 않고 컨텍스트 창도 계속 채우지
+- [1:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=103) 않습니다.
+- [1:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=105) 배신 각 서브 에이전트의 특정 작업을
+- [1:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=107) 하나씩 맡깁니다. 그러면 사실상
+- [1:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=110) 깨끗한 컨텍스트 창을 유지할 수
+- [1:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=111) 있어서 더 나은 결과가 나와야
+- [1:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=113) 합니다. 그래서 이게 4단계와
+- [1:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=116) 5단계에서 일어납니다.
+- [1:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=118) 슈퍼파워스에는 테스트 주도 개발도
+- [2:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=120) 포함됩니다.
+- [2:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=121) GSD 쪽은 그냥 하나의 실행
+- [2:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=123) 단계입니다.
+- [2:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=126) 슈퍼파워스의 4단계와 5단계를 거의
+- [2:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=128) GSD의 4단계 하나에 넣은 셈이고
+- [2:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=130) 그다음 마무리합니다.
+- [2:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=133) 코드 리뷰를 하고 그다음 전부
+- [2:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=134) 머지합니다. GST은 뭘 할까요?
+- [2:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=137) 작업을 검증한 뒤 배포하고 커밋하고
+- [2:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=139) 피아를 만들고 끝입니다. 정말 아주
+- [2:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=142) 비슷합니다.
+- [2:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=144) 그리고 차이점을 보면 꽤 미묘합니다.
+- [2:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=147) 슈퍼파워스는 특히 테스트 주도 개발과
+- [2:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=150) 레드 그린 리팩터 개념에 아주 무게를
+- [2:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=152) 둡니다. 슈퍼파워스 안에 실제 스킬을
+- [2:35](https://youtube.com/watch?v=wWuSWRKUuj4&t=155) 보면 핵심은이 철칙입니다.
+- [2:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=161) 실패하는 테스트가 먼저 없으면
+- [2:42](https://youtube.com/watch?v=wWuSWRKUuj4&t=162) 프로덕션 코드는 만들지 않습니다.
+- [2:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=164) 기능용 코드를 만들려고 하면 그
+- [2:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=166) 기능에 대한 테스트부터 만듭니다.
+- [2:49](https://youtube.com/watch?v=wWuSWRKUuj4&t=169) 먼저 테스트를 실패하게 만든 뒤 그
+- [2:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=171) 테스트를 통과하는데 필요한 최소한의
+- [2:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=172) 코드만 작성합니다.
+- [2:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=174) 그다음엔 레드 그린 리펙터로
+- [2:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=176) 들어갑니다. 구체적인 내용은 기터브
+- [2:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=179) 안에 스킬에서 확인하시면 됩니다.
+- [3:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=180) 아래에 전부 링크해 둘게요. 반면
+- [3:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=183) GSD는 상태와 컨텍스트를 훨씬
+- [3:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=184) 강조합니다.
+- [3:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=186) 그래서 계획한 일, 이미 한 일,
+- [3:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=188) 앞으로 할 일을 참조하는 마크다운
+- [3:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=190) 파일을 계속 만듭니다.
+- [3:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=196) 리어먼츠 마크다운 파일, 로드맵
+- [3:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=198) 마크다운 파일, 여러 단계 같은
+- [3:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=199) 것들이요. 매우 명확하고 모든 걸 다
+- [3:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=202) 적어둡니다. 그 의도는 서브 에이전트
+- [3:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=204) 실행이 많고 콘텐츠를 계속
+- [3:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=206) 리셋하더라도 우리가 지금 어디에 있고
+- [3:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=207) 어디로 가는지 알려주는 부급성 같은
+- [3:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=209) 기준점이 항상 필요하다는 겁니다.
+- [3:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=211) 그게 GSD의 생각입니다. 하지만
+- [3:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=213) 사실 그 차이는 꽤 미묘합니다.
+- [3:35](https://youtube.com/watch?v=wWuSWRKUuj4&t=215) 그래서 많은 부분은 느낌에 달려 있고
+- [3:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=217) 오늘 그걸 보게 될 겁니다. 또
+- [3:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=219) 우리가 볼 건 제가 맡긴 작업을
+- [3:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=221) 끝내는데 각 도구가 얼마나
+- [3:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=223) 걸리는지입니다.
+- [3:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=225) 그리고 토큰수입니다. 비용은 항상
+- [3:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=227) 신경 써야 하니까요. 하지만 그 전에
+- [3:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=230) 설치는 매우 간단합니다. 슈퍼파워스는
+- [3:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=233) 클로드 코드의 공식 플러그인
+- [3:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=234) 라이브러리에 있습니다. 그래서 클로드
+- [3:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=236) 코드 안에서 슬래시 플러그인을 치면
+- [3:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=238) 슈퍼파워스가 바로 보입니다.
+- [4:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=241) 그리고 GSD는이 명령어 하나만
+- [4:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=243) 실행하면 전부 설치됩니다. 그럼
+- [4:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=245) 오늘이 세 도구를 어떻게 테스트할지
+- [4:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=246) 볼까요? 오늘은이 세 도구가 우리
+- [4:09](https://youtube.com/watch?v=wWuSWRKUuj4&t=249) AI 에이전시 체이스 AI의
+- [4:11](https://youtube.com/watch?v=wWuSWRKUuj4&t=251) 웹사이트를 만들어 주는지 볼 겁니다.
+- [4:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=254) 그리고이 웹사이트엔 세 가지가
+- [4:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=255) 필요합니다. 첫째, 랜딩 페이지가
+- [4:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=258) 필요합니다. 이건 가장 쉬운
+- [4:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=260) 요구예요. 히어로 섹션, 소개,
+- [4:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=263) 서비스 그리고 리드 수치폼이 있으면
+- [4:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=264) 됩니다. 그래서 아주 단순한 요청을
+- [4:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=266) 얼마나 잘 처리하는지 보는 겁니다.
+- [4:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=268) 그리고 웹 디자인과 스킬 구출을
+- [4:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=270) 어떻게 하는지도 보고 싶습니다.
+- [4:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=272) 프런트 핸드 디자인 스킬을 쓸까요?
+- [4:35](https://youtube.com/watch?v=wWuSWRKUuj4&t=275) 왜냐하면 제가 그걸 직접 말해 주지
+- [4:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=276) 않을 거니까요. 두 번과 세 번은
+- [4:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=278) 결국 블로그 생성기를 만드는
+- [4:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=279) 작업입니다. 그래서이 단계에서는
+- [4:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=281) 사람들이 들어와서 제 블로그를 보고
+- [4:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=283) 여러 글을 확인하고 눌러서 읽을 수
+- [4:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=285) 있는 페이지가 있었으면 합니다. 아주
+- [4:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=287) 기본적인 기능이죠. 그리고 세 번은
+- [4:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=290) 실제 블로그 생성기 자체입니다. 이건
+- [4:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=292) 숨겨진 관리자 페이지라서 내비게이션
+- [4:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=294) 바에는 넣고 싶지 않습니다. 유튜브
+- [4:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=296) 영상 URL이든 기사 URL이든
+- [4:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=298) 됩니다. 그다음 그 URL에서 모든
+- [5:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=301) 내용을 긁어오고 싶습니다.
+- [5:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=304) 그리고 엔스로픽 STK를 써서 그
+- [5:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=306) 정보로 깔끔한 블로그 글을 만들었으면
+- [5:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=308) 합니다. 유튜브 영상이나 기사 내용을
+- [5:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=310) 바탕으로 제 말투로요. 그리고 원본의
+- [5:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=313) 썸네일이나 대표 이미지도 함께
+- [5:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=314) 가져와서 새 로그 글로 저장하고
+- [5:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=316) 싶습니다.
+- [5:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=318) 시간상 여기서는 인증은 따로 하지
+- [5:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=320) 않습니다.이 세 도구라면 전부
+- [5:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=323) 슈퍼베이스 KI로 무리없이 처리할 수
+- [5:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=324) 있다고 봅니다. 그리고 둘 다의 기본
+- [5:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=327) 기술 스택과 어느 정도의 디자인
+- [5:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=329) 가이드를 줍니다.
+- [5:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=331) 하지만 핵심은 같은 기준으로 평가할
+- [5:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=333) 수 있을만큼 방향은 주대.
+- [5:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=337) 너무 빡빡하게 묶지는 않는 겁니다.
+- [5:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=339) 그래야 그냥 지시만 따라 하진
+- [5:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=340) 않죠.이 이 프롬프트를 어떻게
+- [5:42](https://youtube.com/watch?v=wWuSWRKUuj4&t=342) 풀어내는지 보고 싶습니다. 왜냐하면
+- [5:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=345) 대본을 실제로 어떻게 가져올지
+- [5:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=347) 유튜브에서 썸네일을 어떻게 뽑을지
+- [5:49](https://youtube.com/watch?v=wWuSWRKUuj4&t=349) 같은 부분은
+- [5:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=351) 제가 준 URL들에서 대본을 어떻게
+- [5:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=353) 가져올지 실제 블로그 생성용 시스템
+- [5:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=355) 프롬프트를 어떻게 짤지 말투를 어떻게
+- [5:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=357) 잡을지 또 특정 클로드 코드 스킬을
+- [5:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=359) 쓸지 같은 건 열어뒀기 때문입니다.
+- [6:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=361) 그래서 이런 부분에서
+- [6:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=363) GSD, 슈퍼파워스 그리고 기본
+- [6:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=366) 클로드 코드 사이의 차이를 볼 수
+- [6:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=368) 있어야 합니다.
+- [6:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=373) 그래서 저는 지난 달에 클로드 코드
+- [6:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=375) 마스터 클래스를 막 출시했습니다.
+- [6:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=378) 기술 배경이 없어도 제로에서 AI
+- [6:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=380) 개발자로 가는 가장 좋은
+- [6:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=381) 방법입니다.이
+- [6:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=383) 도구에 대해 알아야 할 모든 걸 알려
+- [6:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=385) 드리고 실제 활용 사례에 집중합니다.
+- [6:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=387) 그리고 중요한 건 이걸 정말 매주
+- [6:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=389) 업데이트 한다는 점입니다.
+- [6:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=391) 시작한 이후로 벌써 추가 콘텐츠를
+- [6:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=393) 거의 세 시간이나 더 넣었습니다.
+- [6:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=396) 제이스 A플러스의 고정 댓글에서
+- [6:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=398) 링크를 찾을 수 있습니다. 함께 해
+- [6:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=400) 주시면 좋겠습니다. 그럼 테스트를
+- [6:42](https://youtube.com/watch?v=wWuSWRKUuj4&t=402) 시작해 보죠. 여기에는 GSD,
+- [6:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=405) 슈퍼파워스, 그리고 클로드 코드가
+- [6:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=406) 있습니다. 헷갈리지 않도록 제가 어느
+- [6:49](https://youtube.com/watch?v=wWuSWRKUuj4&t=409) 탭에 있는지도 아주 구체적으로 말할
+- [6:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=410) 겁니다. 그리고 아래 상태 표시들도
+- [6:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=412) 있는데 여기에 제가 어떤 디렉터리에
+- [6:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=414) 있는지 정확히 표시됩니다.
+- [6:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=417) 전부 다른 디렉터리에 있으니까요.
+- [7:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=420) 그래서 슈퍼파워스 쪽은 슈퍼파워스
+- [7:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=422) 브레인스토밍 스킬이 노드된 걸 볼 수
+- [7:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=424) 있습니다.
+- [7:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=426) 그리고 슈퍼파워스는 꽤 유연하게
+- [7:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=428) 움직입니다. 슈퍼파우스 플러브인을
+- [7:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=430) 실제로 설치하면 스킬이 14개 15개
+- [7:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=433) 이상 로드됩니다.
+- [7:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=435) 위도는 클로드 코드가 지금 어떤
+- [7:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=437) 식으로 말하고 있는지 그리고 작업
+- [7:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=439) 흐름에 어디에 있는지 보고 필요한
+- [7:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=441) 스킬을 알아서 호출하는 겁니다.
+- [7:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=445) JSD에서는 디렉터리 안에서 GSD
+- [7:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=447) 뉴 프로젝트 같은 명시적인 슬래시
+- [7:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=449) 명령을 쓰는 것과는 조금 다릅니다.
+- [7:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=454) 그래서 GSD가 가장 먼저
+- [7:35](https://youtube.com/watch?v=wWuSWRKUuj4&t=455) 반응했습니다.
+- [7:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=457) 몇 분 뒤에는 질문도 되묻더군요.
+- [7:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=461) 우리가 꽤 탄탄한 프롬프트를 줬기
+- [7:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=463) 때문에 브리프가 꽤 완전하다고
+- [7:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=465) 했습니다. 하지만 좋았던 건 취향
+- [7:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=468) 관련 판단을 스스로 설명해 준다는
+- [7:49](https://youtube.com/watch?v=wWuSWRKUuj4&t=469) 점입니다. 그리고 바로 프롬프트에
+- [7:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=472) 넣지 않았지만 차별점이 될 만한 몇
+- [7:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=474) 가지도 짚어냅니다.
+- [7:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=476) 그래서 랜딩 페이지에 어떤 서비스를
+- [7:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=478) 원하는지는 따로 지정하지 않았는데네
+- [7:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=479) 가지 옵션을 줍니다. 그리고 대본과
+- [8:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=482) 히어로 이미지를 유튜브용으로 어떻게
+- [8:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=484) 처리할지도 짚어 줍니다.
+- [8:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=487) 그래서 일단 프로젝트를 만들게
+- [8:09](https://youtube.com/watch?v=wWuSWRKUuj4&t=489) 두겠습니다. 자, 이제 슈퍼파워스를
+- [8:11](https://youtube.com/watch?v=wWuSWRKUuj4&t=491) 봅시다. 일단 슈퍼파워스는 비주얼
+- [8:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=494) 컴패니언 제한을 건너뛴다고 말합니다.
+- [8:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=497) 저는 비주얼 컴패니언 제한을 원한다고
+- [8:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=499) 하겠습니다. 슈퍼파워스와 GSD를
+- [8:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=501) 가르는 큰 차별점 중 하나이기
+- [8:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=503) 때문입니다. 그래서 실제로 어떻게
+- [8:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=505) 동작하는지 보고 싶습니다. URL을
+- [8:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=508) 가져오는 방법처럼 몇 가지 디자인
+- [8:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=509) 결정도 있습니다.
+- [8:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=511) 이것도 GSD처럼 해석의 여지를 좀
+- [8:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=514) 남겨 둔 부분이었습니다.
+- [8:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=517) 장단점과 추첨까지 담아서 세 가지
+- [8:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=519) 옵션을 줍니다.
+- [8:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=521) 실제 썸네일 전략도 그렇습니다.
+- [8:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=524) 그래서 GST보다 이런 제한들을 더
+- [8:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=526) 깊게 가져왔습니다.
+- [8:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=528) 같은 흐름이 서비스, 디자인 시스템,
+- [8:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=530) 그리고 에러 처리와 엣지 케이스에서도
+- [8:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=532) 이어집니다.
+- [8:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=534) 전체적으로 보면 돌아온 내용
+- [8:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=536) 하나하나가 더 깊이 있습니다. 그래서
+- [8:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=538) 저는 좋아 보이지만 프런트엔드 미감을
+- [9:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=540) 확실히 맞추려면 비주얼 컴패니언도
+- [9:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=541) 한번 보고 싶다고 접었습니다.
+- [9:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=543) 프런트엔드 미감을 확실히 맞추기
+- [9:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=545) 위해서입니다. 그러자 비주얼
+- [9:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=547) 컴패니언이 다시 왔고 이건 정말 멋진
+- [9:09](https://youtube.com/watch?v=wWuSWRKUuj4&t=549) 기능 중 하나입니다.
+- [9:11](https://youtube.com/watch?v=wWuSWRKUuj4&t=551) 그래서 대부 서버를 띄웠고 이제 어떤
+- [9:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=553) 미감을 가져갈지 물어보는데 실제
+- [9:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=555) 옵션이네 개나 눈앞에 있습니다. 앞에
+- [9:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=558) 바로 보여주는 점이 좋습니다.
+- [9:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=560) 시각적으로 뭘 할지 보여주고 옵션
+- [9:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=562) 하나마다 개발 서버를 따로 띄우는 건
+- [9:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=564) 또 다르니까요.
+- [9:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=566) 한 번에 전부 보일 때는 느낌이
+- [9:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=568) 완전히 다릅니다. 이게 슈퍼파우스에서
+- [9:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=570) 제가 제일 좋아하는 부분 중
+- [9:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=571) 하나입니다. 그렇긴 한데 다들 너무
+- [9:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=574) 비슷합니다.
+- [9:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=576) 아직 확 끌리는 건 없습니다.이
+- [9:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=579) 중에서는 아마웜 에디토리얼이 제일
+- [9:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=581) 낮습니다.
+- [9:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=583) 일렉트릭 라임은 좀 별로해요.
+- [9:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=586) 리니어 폴리시는 그냥 AI 슬록처럼
+- [9:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=588) 보입니다. 일단 이걸로 가겠습니다.
+- [9:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=591) 최소한 시각적인 건 있네요. 저는
+- [9:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=593) 비주얼 컴패니언이 정말 좋습니다.
+- [9:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=596) 그래서 슈퍼파워스의 옵션씨가 좋다고
+- [9:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=597) 말했더니 이제 더 볼 만한 옵션을 몇
+- [9:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=599) 개 보여 주네요. 그 미안. 그러니까
+- [10:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=602) 그런 색감을 가져와서 이제 히어로
+- [10:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=604) 섹션으로 들어갑니다.
+- [10:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=610) 이제 웹페이지를 계속 더 구체적으로
+- [10:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=612) 파고 드는 거죠.
+- [10:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=614) 두 번째 건 좀 더 가운데에 배치돼
+- [10:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=616) 있습니다.
+- [10:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=619) 그리고 세 번째는 여기 쪽에 뭔가가
+- [10:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=621) 있고 피처드 느낌과 나뉘어 있습니다.
+- [10:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=626) 사실 현실에서는 아마 이런 식으로
+- [10:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=628) 하고 여기 있는 건 좀 잘라낼 것
+- [10:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=630) 같습니다. 좀 별로거든요.
+- [10:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=633) 그래도 템플릿스로는 좋습니다.
+- [10:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=636) 시작점으로는 괜찮죠.
+- [10:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=638) 그래서 시로 가겠습니다.
+- [10:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=640) 이제 슈퍼파우스 비주얼 컴패니언이
+- [10:42](https://youtube.com/watch?v=wWuSWRKUuj4&t=642) 랜딩 페이지의 모든 섹션을 하나씩
+- [10:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=644) 안내해 줍니다. 뒤는 생략하겠습니다.
+- [10:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=647) 요점은 아실 테니까요. 이제
+- [10:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=650) 슈퍼파워스가 우리 웹사이트 스펙을 써
+- [10:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=652) 놨고 이제 검토하라고 합니다. 펴서
+- [10:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=655) 확인하고 우리가 승인하면 실제로
+- [10:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=657) 라이팅 플랜 스킬을 써서 구현 계획을
+- [10:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=659) 만들어 냅니다.
+- [11:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=663) 그러니까 이건 앞으로 뭘 할지에 대한
+- [11:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=665) 대략적인 초한청 사진입니다. 그리고
+- [11:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=667) 여기 그 디자인 스펙이 보입니다.
+- [11:09](https://youtube.com/watch?v=wWuSWRKUuj4&t=669) 전체적으로는 포괄적이지만 여러분이
+- [11:11](https://youtube.com/watch?v=wWuSWRKUuj4&t=671) 봐야 할 부분은 맨 아래입니다. 바로
+- [11:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=673) 핵심 판단 사항입니다. 여기까지
+- [11:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=675) 슈퍼파워스가 대신 내려준 결정이 뭔지
+- [11:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=677) 보는 거예요. 아직 이견이 있다면
+- [11:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=679) 여기서 바로 짚어져야 합니다. 예를
+- [11:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=681) 들면 실제 블로그 콘텐츠를 만드는
+- [11:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=682) 숨은 유아래를 두고 실제 블로그
+- [11:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=684) 콘텐츠 생성은 거기서 다 하고 내비
+- [11:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=687) 라벨은 라이팅으로 쓰고 생성되는
+- [11:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=689) 보이스도 어떻게 할지 정해 둡니다.
+- [11:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=691) 그리고 예전에 해병대 조종사였는데
+- [11:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=693) 지금은 AI 컨설턴트라고 나오네요.
+- [11:35](https://youtube.com/watch?v=wWuSWRKUuj4&t=695) 알겠습니다. 그리고 이건 실제 사용자
+- [11:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=697) 수준의 클라우드 메모리에서 가져온
+- [11:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=698) 내용입니다. 보안에 대해서도 어느
+- [11:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=700) 정도 얘기합니다. 말했듯이 여기서는
+- [11:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=703) 대모용이라 인증은 따로 안 합니다.
+- [11:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=706) 그리고 좀 이상하다고 느껴지죠. 그냥
+- [11:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=708) 보완상 숨겨두는 방식일 뿐입니다.
+- [11:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=710) 그래서 그 점을 짚어줍니다. 이제
+- [11:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=712) 슈퍼파우스에 괜찮다고 말해
+- [11:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=713) 주겠습니다. 이제 실제로 계획을
+- [11:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=716) 작성할 겁니다. 그리고 그 스킬이
+- [11:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=718) 로드되는 것도 보입니다. 슈퍼파워로
+- [12:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=721) 그 작업을 하는 동안 GST는 계획을
+- [12:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=723) 짜기 전에 자체적으로 리서치를
+- [12:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=725) 진행하고 있었습니다.
+- [12:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=727) 그래서 리서처네 명을 병렬로
+- [12:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=728) 띄웠습니다. 스펙 리서치 하나, 기능
+- [12:11](https://youtube.com/watch?v=wWuSWRKUuj4&t=731) 리서치 하나, 그리고 아키텍처와 한정
+- [12:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=733) 리서치 두 개를 더 돌렸습니다. 여기
+- [12:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=735) 보이시죠? 각각 토큰을 꽤 많이
+- [12:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=737) 씁니다. 그렇죠? 7만5천, 33천,
+- [12:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=741) 5만1천, 그리고 61천입니다.
+- [12:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=743) 하지만 꽤 새롭거나 흔하지 않은 일을
+- [12:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=745) 할 때는 이런 리서처들이 정말 큰
+- [12:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=748) 도움이 됩니다.
+- [12:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=754) 장기적으로 보면 더 그렇습니다. 오늘
+- [12:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=757) 우리가 하는 건 꽤 단순한 웹자인
+- [12:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=758) 블로그 생성기예요. 이런 건 이미
+- [12:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=761) 많이 봤습니다. 그래도 테스트를
+- [12:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=763) 공정하게 맞추려고 이리서처
+- [12:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=765) 에이전트들도 돌려봤습니다.
+- [12:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=770) 그다음 그 리서치를 전부
+- [12:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=771) 종합했습니다.
+- [12:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=773) 여기 보시면이 단계에는 손에 4.6을
+- [12:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=775) 씁니다. 그래서 대부분은 GSD의
+- [12:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=777) 오퍼스포를 마음껏 했더라도 정보를
+- [12:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=779) 종합하는 정도고 그 프로젝트에서
+- [13:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=781) 새롭거나 독특한 일을 시키는게
+- [13:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=783) 아니라면 더 작고 저렴한 모델로
+- [13:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=785) 종합을 처리합니다.
+- [13:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=787) 이런네 개 에이전트 리서치 방식은이
+- [13:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=792) 방식은 슈퍼파워스보다 더 탄탄합니다.
+- [13:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=794) 슈퍼파워스는 이런 걸 잘 안 합니다.
+- [13:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=796) 아시다시피 도구 사용이 30번에
+- [13:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=798) 토큰도 9만1천이 들었습니다.
+- [13:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=800) 15분이나 걸립니다. 시간이 꽤
+- [13:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=802) 들죠. 리서치를 마치면 우리가 방금
+- [13:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=805) 본 MD 파일처럼 요구 사항을
+- [13:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=806) 정의합니다. 방금 슈퍼파워스에서 본
+- [13:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=808) 것처럼 GSB도 비슷한 일을 하지만
+- [13:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=810) 더 크게 합니다. 여러 문서를
+- [13:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=812) 만듭니다. 그래서 요구 사항 문서를
+- [13:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=814) 만듭니다. 로드맵 문서도 만들죠.
+- [13:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=818) 사실 슈퍼파워스가 하던 걸 여러
+- [13:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=820) 문서로 나눠 놓은 셈입니다. 그
+- [13:42](https://youtube.com/watch?v=wWuSWRKUuj4&t=822) 문서들은 로드맵, 상태, 요구 사항,
+- [13:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=825) 나중엔 단계 같은 것들입니다.
+- [13:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=828) 그리고 35분쯤 되면 이게 시간이 꽤
+- [13:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=830) 걸린다는 걸 알 수 있습니다. 잠깐
+- [13:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=832) 멈추고 기본 클로드 코드를 보면
+- [13:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=834) 계획이 이미 올라와 있고 준비된
+- [13:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=836) 상태입니다. 한동안은 아직 아무것도
+- [13:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=838) 실행하지 않았습니다.
+- [14:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=841) 전체적으로는 아마 5분에서 6분쯤
+- [14:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=843) 걸렸고 제 느낌엔 좀 느린
+- [14:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=844) 편이었어요. 반면 GST는 아직도
+- [14:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=847) 36분째 진행 중입니다. 잠시 뒤
+- [14:09](https://youtube.com/watch?v=wWuSWRKUuj4&t=849) 다시 슈퍼파워스로 돌아가겠습니다.
+- [14:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=852) 슈퍼파워스가 웹사이트 계획 마크다운을
+- [14:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=854) 막 끝냈습니다.
+- [14:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=856) GSD가 로드맵이랑 여러 작업을 마칠
+- [14:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=858) 때까지 슈퍼파워스를 다시 한번
+- [14:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=860) 봅시다.
+- [14:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=865) 방금 웹사이트 계획을 만든 겁니다.
+- [14:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=867) 여기엔 28개 작업과 2,500줄이
+- [14:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=869) 들어 있습니다. 코드로 다시
+- [14:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=871) 돌아가서이 폴더에 독스 아래로 내려가
+- [14:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=874) 스펙 문서를 보는 대신 구현 계획을
+- [14:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=876) 한번 보겠습니다.
+- [14:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=884) 바로 이런 걸 말하는 겁니다.
+- [14:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=886) 스펙 문서보다 대량 열배는 더
+- [14:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=888) 깁니다.
+- [14:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=892) 그러니까 여기엔 할 일이 정말
+- [14:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=893) 많습니다.
+- [14:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=896) 이제 슈퍼파워스는 두 가지 실행
+- [14:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=898) 옵션을 제공합니다.
+- [15:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=900) 하나는 서브 에이전트 기반 방식인데
+- [15:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=901) 각 작업마다 별도 서브 에이전트를
+- [15:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=903) 두는 점에서 GSD와 아주
+- [15:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=904) 비슷합니다. 그래서 각자 컨텍스트
+- [15:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=906) 윈도우도 따로 갖게 되지만 여기 적힌
+- [15:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=908) 것처럼 그건 트레이드오프입니다.
+- [15:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=910) 28개 작업이면 부담이 꽤 크니까요.
+- [15:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=912) 대부분은 단순한 작업인데 정말 너무
+- [15:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=914) 과한 옵션이 필요한지 묻는
+- [15:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=915) 수준입니다. 두 번째 옵션은 1라인
+- [15:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=918) 익스큐션입니다.
+- [15:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=919) 즉 같은 세션에서 계속 진행하대
+- [15:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=921) 필요할 때만 멈춰서 검토하는 방식이고
+- [15:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=924) 훨씬 빠릅니다.이
+- [15:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=927) 이라인 익스큐션은 여기서 기본 클로드
+- [15:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=929) 코드로 작업하는 방식과 훨씬
+- [15:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=930) 비슷합니다. 그냥 바로 진행하는
+- [15:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=932) 거죠. 권한은 건너뛰고 바로 진행하는
+- [15:35](https://youtube.com/watch?v=wWuSWRKUuj4&t=935) 거죠.
+- [15:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=936) 슈퍼파워스가 일라인 익스큐션을
+- [15:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=938) 추천하니까 우리도 그 방식으로
+- [15:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=940) 가겠습니다.
+- [15:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=943) 보시면 슈퍼파워스의 플랜스킬이
+- [15:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=944) 정상적으로 로드됐습니다. 이제 작업을
+- [15:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=946) 시작할 거고 마침 GSD도 우리
+- [15:49](https://youtube.com/watch?v=wWuSWRKUuj4&t=949) 프로젝트의 큰 계획을 방금
+- [15:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=950) 끝냈습니다.
+- [15:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=952) 그래서 프로젝트 MD, 리qu이어먼츠
+- [15:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=955) MD, 로드맵 MD, 스테이트 MD,
+- [15:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=958) 클라우드 MD를 만들었고 찾은 리서치
+- [16:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=960) 자료용 폴더도 하나 생성했습니다.
+- [16:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=962) GSD는 예순 다섯 개 요구 사항이
+- [16:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=964) 담긴 8단계를 제안하고 있습니다.
+- [16:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=966) 그리고 전에 말했듯이 이걸 실행할 때
+- [16:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=968) GS는 꽤 딱딱한 편입니다. 슬래시
+- [16:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=970) 클리어 다음 슬래시 커맨드 다시
+- [16:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=972) 슬래시 클리어 또 슬래시 커맨드 이런
+- [16:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=975) 식이죠. 그래서 아주 딱딱 끊기듯
+- [16:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=977) 하나 끝나면 다음, 또 다음 이런
+- [16:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=979) 흐름입니다. 그래서 단계가 아주
+- [16:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=981) 분명한 반면 슈퍼파워스는 조금 더
+- [16:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=984) 유연하다고 할 수 있습니다.
+- [16:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=986) 그냥 말로 풀어서 설명하면 됩니다.
+- [16:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=989) 필요할 때 명령이나 스킬을 알아서
+- [16:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=990) 불러옵니다. GSD는 좀 더 명확하게
+- [16:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=992) 단계가 나뉘어 있습니다. 이제
+- [16:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=994) GSD로 실행을 시작하기 전에 아직은
+- [16:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=997) 전부 계획 단계라는 걸 기억하세요.
+- [16:42](https://youtube.com/watch?v=wWuSWRKUuj4&t=1002) 이건 계획과 리서치용 서브
+- [16:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=1004) 에이전트들의 전체 토큰수입니다.
+- [16:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1008) 합치면 45만9,862입니다.
+- [16:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=1011) 그게 실제 사용량으로는 어떤 의미인지
+- [16:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=1013) 누가 알겠어요?
+- [16:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=1015) 하루 중 쓰느냐, 어떤 플랜이냐에
+- [16:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=1017) 따라 완전히 달라집니다.
+- [17:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=1021) 그래도 계획용으로는 대략 46만
+- [17:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=1023) 토큰쯤 됩니다. 게다가 지금은
+- [17:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=1025) 16%니까 15만쯤으로 치죠. 아주
+- [17:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=1028) 깔끔한 숫자로 가보죠.
+- [17:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=1030) 계획 단계에서 GST는 토큰이
+- [17:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=1032) 6제로만 개쯤됩니다.
+- [17:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=1034) 전체 소요 시간은 대략 40분 정도로
+- [17:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=1036) 보면 됩니다.
+- [17:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=1040) 이걸 기준선인 일반 클로드 코드 계획
+- [17:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=1041) 단계와 비교해 보면 그건 약 10분이
+- [17:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=1043) 걸렸고 토큰은 약 5만 개였습니다.
+- [17:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=1048) 이제 슈퍼파워스의 계획 단계 토큰
+- [17:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=1050) 사용량은 약 20만 개였습니다.
+- [17:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=1058) 그러니까 슈퍼파워스는 20만,
+- [17:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=1059) GSD는 60만, 클로드 코드는
+- [17:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=1061) 5만이었습니다. 클로드 코드는
+- [17:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=1063) 10분, 슈퍼파워스는 40분,
+- [17:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=1065) GSD도 약 40분이었습니다.
+- [17:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=1067) 그래서이 세 가지의 큰 차이 중
+- [17:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1068) 하나는 소요 시간입니다. 두
+- [17:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=1070) 오케스트레이션 레이어와 일반 클로드
+- [17:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=1071) 코드의 큰 차이 중 하나는
+- [17:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=1072) 시간입니다. 그런데 GSD와
+- [17:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=1074) 슈퍼파우스를 비교하면 토큰 사용량
+- [17:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=1075) 차이도 꽤 큽니다. GST는 리서치에
+- [17:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=1078) 훨씬 무게를 두기 때문입니다.
+- [18:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=1081) 보셨듯이 병렬 서브 에이전트네 개가
+- [18:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=1083) 여러 계획을 동시에 했거든요.이
+- [18:09](https://youtube.com/watch?v=wWuSWRKUuj4&t=1089) 프로젝트에 그게 꼭 필요했냐고요?
+- [18:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=1092) 하지만 큰 프로젝트라면 분명 필요하고
+- [18:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=1093) 그만큼 토큰 차이도 생깁니다. 다만
+- [18:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=1096) 이건 아직 첫 번째 체크포인트 즉
+- [18:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=1097) 대획과 리서치 단계일 뿐입니다. 이제
+- [18:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=1100) 실행할 차례예요. 클로드 코드는 이미
+- [18:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=1102) 시작했고 슈퍼파워스도 이미
+- [18:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=1103) 시작했습니다. 저도 GST를
+- [18:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=1105) 시작하겠습니다.
+- [18:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=1107) 이제 실행 단계. 특히 GST는 다른
+- [18:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=1109) 것들보다 더 손이 많이 갑니다.
+- [18:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=1113) 계획과 리서치를 끝내고 그냥 자기
+- [18:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=1114) 결과만 써두는 식은 아닙니다. 그냥
+- [18:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=1117) 시작만 시켜 놓고 30분 뒤에 와서
+- [18:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=1118) 완성보을 받는 식은 아니에요. 각
+- [18:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=1120) 단계마다 적어도 어느 정도는 여러분의
+- [18:42](https://youtube.com/watch?v=wWuSWRKUuj4&t=1122) 입력이 필요할 겁니다. 최소한 시작할
+- [18:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=1126) 때는요.
+- [18:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=1127) 왜냐하면 먼저 각 단계를 같이
+- [18:49](https://youtube.com/watch?v=wWuSWRKUuj4&t=1129) 얘기하면서 여러분 머릿속과 정확히
+- [18:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=1131) 같은지 확인하고 싶어 하거든요. 내
+- [18:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=1134) 머릿속 생각을 클러드 코드에 그대로
+- [18:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=1135) 말해 주는 거죠. 그 기능이 실제로
+- [18:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=1137) 뭘 하길 원하는 건가요? 그게 실제로
+- [18:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=1139) 어떻게 생기 원하는지도 정해요. 정말
+- [19:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=1142) 아주 세세해집니다. 솔직히 좀 귀찮긴
+- [19:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=1144) 합니다. 하지만 이게 아주 복잡한
+- [19:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=1146) 거라면 제대로 맞추는게 아마
+- [19:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=1147) 중요하겠죠. 그래서 이런 건 다
+- [19:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=1150) 저울질해 봐야 합니다.
+- [19:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=1152) 그리고 우리가 결국 따져볼 건 이렇게
+- [19:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=1154) 왔다 갔다 한게 정말 더 나은
+- [19:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=1155) 제품으로 이어졌느냐는 거예요. 그래서
+- [19:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=1158) 시간도 생각해서 모든 과정을 하나하나
+- [19:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=1160) 다 보여 드리진 않겠습니다.
+- [19:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=1162) GSD의 각 단계를요. 다시 말하지만
+- [19:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=1165) 실제로 GSD로 그렇게 진행한 예시는
+- [19:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=1167) 앞에서 링크한 영상을 보시면 됩니다.
+- [19:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=1170) 이게 GSD와 슈퍼파워스 그리고
+- [19:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=1172) 당연히 클로드 코드에 큰 차이 중
+- [19:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=1174) 하나라는 점만 이해하시면 됩니다.
+- [19:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=1179) 슈퍼파워스 얘기가 나와서 말인데이
+- [19:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=1181) 시점의 구현은 끝났습니다.
+- [19:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=1184) 총 25만 토큰을 썼고 기획 단계
+- [19:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=1186) 이후 15분이 지났습니다. 그래서
+- [19:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1188) 이제 뭘 할지 묻고 있고 추천은
+- [19:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=1190) 브랜치를 그대로 두자는 거예요.
+- [19:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=1192) 그래서 그냥 내 추천대로 가겠습니다.
+- [19:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=1194) 하고 답할 겁니다. 그러면
+- [19:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=1196) 슈퍼파워스가 만든 것의 요약, 정상
+- [19:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=1198) 동작이 확인된 것, 수동 검증이나
+- [20:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=1200) 수정이 필요한데 확인 못 한 것,
+- [20:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=1202) 그리고 내림 판단까지 다시 정리해
+- [20:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=1204) 줍니다. 그리고이 시점에서 제I도
+- [20:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=1208) 업데이트 할 겁니다. 그래야 실제로
+- [20:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=1210) 동작하니까요.
+- [20:11](https://youtube.com/watch?v=wWuSWRKUuj4&t=1211) 좋습니다.
+- [20:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=1213) 이제 전부 실행을 마쳤네요.
+- [20:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=1216) 이제 보고 있는 건 각 도구의 원샷
+- [20:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=1218) 결과물입니다.
+- [20:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=1220) 여기 보시는 건 GSD, 슈퍼파워스,
+- [20:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=1222) 그리고 기본 클로드 코드입니다.
+- [20:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=1224) 참고로 여기까지 오기까지 걸린 시간을
+- [20:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=1226) 보면 GSD가 압도적으로 가장 오래
+- [20:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=1229) 걸렸습니다.
+- [20:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=1232) 이건 전부 화면 밖에서 각 단계를
+- [20:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=1233) 돌리면서 기획시키고 실행시키고 하늘아
+- [20:35](https://youtube.com/watch?v=wWuSWRKUuj4&t=1235) 걸린 시간입니다. 한시간이요. 그리고
+- [20:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=1238) GSD의 실행 단계에서만 총 60만
+- [20:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=1241) 토큰이 들었습니다.
+- [20:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=1243) 그래서 기획 단계 시작부터 원샷
+- [20:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=1245) 결과물이 나오기까지를 합치면
+- [20:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=1250) 총 120만 토큰에 1한시간 45분이
+- [20:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=1252) 걸린 셈입니다. 슈퍼파워스는 실행에
+- [20:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=1254) 추가로 약 5만 토큰 약 15분
+- [20:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=1257) 정도만 더 들었습니다.
+- [21:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=1262) 즉 슈퍼파워스가 첫프트에서 실제
+- [21:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=1264) 결과물까지 가는데 데는 총 시간과
+- [21:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=1265) 토큰은이 정도였습니다. 총 한시간
+- [21:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=1268) 25만 토큰이었습니다.
+- [21:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=1270) 그리고 클로드 코드는 약 15분에 총
+- [21:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=1273) 20만 토큰 정도였습니다.
+- [21:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=1279) 차이가 꽤 크죠.
+- [21:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=1283) 압도적으로 가장 길고 가장 무거웠고
+- [21:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=1285) 예상대로 기본 상태에선 클로드 코드가
+- [21:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=1287) 가장 빨랐습니다.
+- [21:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=1293) 그럼 그렇게 토큰을 많이 쓴 시간이
+- [21:35](https://youtube.com/watch?v=wWuSWRKUuj4&t=1295) 갑어치가 있었는지 봅시다.
+- [21:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=1298) 그냥 평범한 배경 같죠?
+- [21:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=1301) 전체적으로 거의 검은색이고 아주
+- [21:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=1303) 기본적입니다.
+- [21:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=1305) 주황색 톤이 조금 들어가 있습니다.
+- [21:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1308) 나쁘진 않은데 그렇다고 확 끌리진
+- [21:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=1310) 않아요.
+- [21:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=1312) 이건 AI가 처음 만든 결과였습니다.
+- [21:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=1316) 전체적으로 꽤 평범해 보입니다.
+- [21:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=1319) 블로그를 누르면 예시 내용이 들어
+- [22:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=1321) 있는 블로그가 나옵니다.
+- [22:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=1324) 그리고 이것도 보기엔 괜찮습니다.
+- [22:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=1326) 이제 블로그 생성 부분을 봅시다.
+- [22:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=1328) 뒤쪽에 있는 작은 스튜디오
+- [22:09](https://youtube.com/watch?v=wWuSWRKUuj4&t=1329) 페이지입니다. 그런데 링크를 따라가
+- [22:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=1332) 보면 404가 뜹니다. 그러니까
+- [22:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=1334) 블로그 스튜디오 생성기는 첫 번째
+- [22:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=1336) 결과부터 제대로 동작하지 않습니다.
+- [22:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=1339) 그래서 GSD의 문제를 알려줬고 지금
+- [22:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=1341) 수정 중입니다. 그동안 슈퍼파워스가
+- [22:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=1344) 뭘 줬는지 봅시다.
+- [22:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=1347) 슈퍼파워스가 돌려준 결과는
+- [22:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=1348) 이렇습니다. 그리고 프런트엔드
+- [22:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=1350) 디자인은 우리가 비주얼 컴패니언에서
+- [22:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=1352) 본 것과 똑같습니다. 역시 특별한 건
+- [22:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=1354) 없네요. 이런 류는 정말 좋은 지시를
+- [22:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=1357) 아주 많이 주거나 스킬을 잔뜩 넣어
+- [22:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=1359) 주지 않으면 프런트 엔드 디자인을 잘
+- [22:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=1361) 못 합니다.
+- [22:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=1363) 그래서 취향이랑 프런트 엔드 디자인
+- [22:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=1365) 넓게는 디자인 작업 전반을 해석에
+- [22:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=1366) 맡겨 버리면 결국 이런 결과를 얻게
+- [22:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1368) 됩니다. AI가 만든 티가 나는
+- [22:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=1370) 결과물이죠. 그래도 기본 베이스로는
+- [22:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=1372) 괜찮습니다. 블로그 화면은
+- [22:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=1374) 이렇습니다. 이미지도 있고 블로그
+- [22:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=1377) 구성도 다 들어 있습니다.
+- [23:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=1381) 스튜디오 섹션으로 가면 이건 첫 번째
+- [23:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=1383) 시도에 바로 작동합니다. 생성기가
+- [23:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=1385) 보이고 최근 영상 링크 하나를 넣으면
+- [23:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=1387) 초안을 만들어 주고 맞는 썸네일도
+- [23:09](https://youtube.com/watch?v=wWuSWRKUuj4&t=1389) 가져오고 내용도 제대로 잡습니다.
+- [23:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=1392) 왜냐하면 그 영상에서 제가 다룬
+- [23:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=1393) 내용이 바로 코덱스, 클로드 코드,
+- [23:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=1397) 옵시디언, 그리고 오토 리서치 같은
+- [23:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=1399) 것들이었거든요.
+- [23:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=1401) 그래서 말한 대로 정확히 해낸
+- [23:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=1402) 겁니다. 그 점은 정말 좋습니다.
+- [23:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=1406) 이제 기본 상태의 클로드 코드만 따로
+- [23:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=1408) 봅시다.
+- [23:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=1411) 아주 무난한 수준입니다.
+- [23:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=1413) 솔직히 말하면 별로 대단한 건 없죠.
+- [23:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=1416) 프런트 핸드 디자인은 지시를 별로 안
+- [23:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=1418) 줬을 때이 세 사이에 큰 차이가
+- [23:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=1420) 있나요?
+- [23:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=1426) 아니요. 솔직히 별 차이 없습니다.
+- [23:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=1430) 저한테이 셋 중 아무거나 하나를
+- [23:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=1432) 만들어 보라고 해도 저는 차이를 못
+- [23:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=1434) 알아볼 것 같아요. 자, 블로그를
+- [23:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=1436) 한번 보죠.
+- [23:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=1438) 가짜 글 몇 개가 들어 있고
+- [24:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=1440) 보시다시피 무난해 보입니다.
+- [24:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=1442) 아주 밋밋하고 딱히
+- [24:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=1446) 별다른 건 없지만 작동은 합니다.
+- [24:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=1450) 이제 스튜디오
+- [24:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=1452) 블로그 제너레이터 부분이 이걸로
+- [24:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=1453) 되는지 보죠. 그런데 GSD 때처럼
+- [24:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=1455) 이건 안 됩니다. 404페이지가 떠서
+- [24:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=1458) 링크를 찾을 수 없다고 나오네요.
+- [24:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=1460) 그래서 GSB 때처럼 기본 클로드
+- [24:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=1462) 코드에게 이걸 고치라고 했고 지금
+- [24:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=1464) 고치는 중인 동안 블로그 제너레이터를
+- [24:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=1466) 고치는 동안 GSD가 두 번째
+- [24:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=1468) 시도에서 뭘 했는지 다시 보겠습니다.
+- [24:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=1471) GSD가 해결한 거 같네요. 여기
+- [24:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=1473) URL을 붙여 넣고 추환이 생성되는지
+- [24:35](https://youtube.com/watch?v=wWuSWRKUuj4&t=1475) 보죠.
+- [24:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=1477) 좋습니다. 이렇게 추항과 마크다운이
+- [24:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=1479) 돌아옵니다.
+- [24:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=1481) 이라인에서 바로바로 편집할 수 있는
+- [24:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=1483) 점이 정말 좋네요.
+- [24:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=1487) 그리고 실제 내용도 맞게 들어
+- [24:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1488) 있습니다.
+- [24:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=1491) 그리고 실제 미리 보기도 볼 수
+- [24:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=1492) 있어서 좋습니다.
+- [24:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=1495) 솔직히 말하면 GST가 이렇게
+- [24:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=1497) 처음부터 1라인 편집기를 앞에 두는
+- [24:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=1499) 구현이 슈퍼파우스보다 더 마음에
+- [25:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=1501) 듭니다.
+- [25:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=1504) 그리고 이제 우리 블로그 안에서도 볼
+- [25:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=1505) 수 있네요. 마지막으로 기본 상태에
+- [25:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=1508) 클로드 코드로 돌아와 보겠습니다.
+- [25:11](https://youtube.com/watch?v=wWuSWRKUuj4&t=1511) 에러를 고쳤고 이제 블로그
+- [25:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=1513) 제너레이터를 볼 수 있습니다.
+- [25:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=1516) 슈퍼파워스처럼 한 번 주니까 그냥
+- [25:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=1518) 자동으로 만들어 버리더군요.
+- [25:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=1521) GSD처럼 초안으로 볼 기회도 수정할
+- [25:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=1523) 기회도 주지 않았습니다. 여기 저의
+- [25:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=1526) 상도 썸네일이 있고 올바른 정보는
+- [25:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=1528) 전부 가져왔습니다.
+- [25:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=1530) 그리고 여기 실제 블로그 페이지 안에
+- [25:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=1532) 있습니다. 자,이 모든 걸 통해
+- [25:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=1534) 우리가 얻을 수 있는 건 뭘까요?이
+- [25:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=1536) 셋이이 맞대결에서 실제로 승자인
+- [25:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=1538) 걸까요?
+- [25:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=1541) 좋습니다. 간단히 정리해 보죠.
+- [25:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=1543) 작업에 걸린 총 시간으로 보면 클로드
+- [25:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=1545) 코드 기본 상태는 약
+- [25:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=1546) 20분이었습니다.
+- [25:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1548) 슈퍼파워스는 약 1한시간, GST는
+- [25:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=1551) 105분, 그러니까 1시간 45분이
+- [25:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=1553) 걸렸습니다.
+- [25:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=1558) 토큰 기준으로 보면 클로드 코드는 약
+- [26:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=1560) 20만, 슈퍼파워스는 25만
+- [26:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=1561) 정도였습니다. 그리고 GST는
+- [26:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=1564) 120만 토큰이었습니다.
+- [26:07](https://youtube.com/watch?v=wWuSWRKUuj4&t=1567) 그래서 이건 다 객관적인 수치입니다.
+- [26:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=1570) 주관적으로는 실제로 만들어 낸 결과를
+- [26:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=1572) 우리가 어떻게 받느냐는 거죠?
+- [26:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=1576) 이쪽 저쪽으로 아주 강한 의견이
+- [26:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=1578) 있느냐면
+- [26:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=1580) 답은 아마 아니 겁니다. 만약 제가
+- [26:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=1583) 이걸 다 섞어 놓고 나중에 사실 이건
+- [26:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=1586) 슈퍼파워스가 한 거라는 반전이
+- [26:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=1587) 밝혀졌다고 해도
+- [26:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=1590) 그리고 이게 사실은 기본 상태의
+- [26:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=1592) 클로드 코드였다고 해도 여러분은 신경
+- [26:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=1593) 안 썼을 겁니다. 아마 차이도 못
+- [26:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=1596) 느꼈을 겁니다. 이들 중에서 진짜
+- [26:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=1598) 차이는 슈퍼파워스가 첫 시도의 제
+- [26:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=1600) 역할을 해냈다는 전뿐이었습니다.
+- [26:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=1605) 물론 그걸 원샷으로 끝냈다고 칭찬할
+- [26:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=1606) 수도 있죠. 한 번에 끝내면 물론
+- [26:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1608) 좋고 두 번째 시도에 되더라도 저는
+- [26:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=1610) 괜찮습니다. 지금 아마 떠오르는
+- [26:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=1612) 생각은 테스트가 허술했다는 거겠죠.
+- [26:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=1616) 이건 슈퍼파워스나 특히 GSD가
+- [26:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=1618) 차이를 벌릴만큼 복잡한 테스트는
+- [27:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=1620) 아니었다는 거예요.
+- [27:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=1622) 그런 논리의 문제는 그렇다면 도대체
+- [27:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=1625) 어디서 선을 그어야 하느냐는
+- [27:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=1626) 겁니다.이
+- [27:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=1630) 가상의 작업이 어느 정도는 복잡해야
+- [27:11](https://youtube.com/watch?v=wWuSWRKUuj4&t=1631) GS나 슈퍼파워스를 써서 많은
+- [27:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=1632) 사람들한테 토큰보다 더 시간을들을
+- [27:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=1634) 만하다고 볼 수 있느냐는 거죠. 그게
+- [27:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=1636) 토큰보다도 더 같이 있느냐는
+- [27:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=1637) 뜻입니다. 분명한가요? 당연한가요?
+- [27:21](https://youtube.com/watch?v=wWuSWRKUuj4&t=1641) 제 생각엔 아니요. 전혀 아닙니다.
+- [27:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=1644) 물론 이론적으로는 아주 복잡한
+- [27:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=1646) 작업이라면 그럴 만하다고 인정할 수는
+- [27:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=1648) 있죠.
+- [27:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=1652) 문제는 그걸 미리 정의하고 알아내는
+- [27:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=1654) 겁니다. 앞에 노인 작업의 복잡도를
+- [27:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=1657) 잘못 판단하면 잘못 선택해서 GSD를
+- [27:40](https://youtube.com/watch?v=wWuSWRKUuj4&t=1660) 쓰든 슈퍼파워스를 쓰든 그냥
+- [27:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=1666) 클로드 코드보다 40분을 더 쓰게
+- [27:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=1667) 되거나 GSD로 갔다면 80분을 더
+- [27:49](https://youtube.com/watch?v=wWuSWRKUuj4&t=1669) 쓰게 되는 승입니다. 그건 큰
+- [27:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=1670) 차이죠. 왜냐하면 솔직히 내가 다시
+- [27:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=1673) 이걸 하고 오늘이 셋 중 승자가
+- [27:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=1675) 누구냐고 묻는다면 클로드 코드입니다.
+- [27:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=1678) 그리고 이건 거의 비교가 안 됩니다.
+- [28:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=1680) 이유는 토큰이 아니라 시간이기
+- [28:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=1681) 때문이죠. 물론 아주 꼼꼼하게 따지면
+- [28:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=1684) 이게 가장 별로라고 말할 수도
+- [28:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=1685) 있겠죠. 그런데 뭐 어떻습니까? 아마
+- [28:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=1688) 제일 별로일 수도 있지만 대신 제가
+- [28:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=1690) 이걸로 40분을 더 작업할 수 있었고
+- [28:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=1692) GSD였으면 80분을 더 쓸 수
+- [28:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=1694) 있었던 거죠. 그러면 뭐가 더 나아질
+- [28:16](https://youtube.com/watch?v=wWuSWRKUuj4&t=1696) 것 같나요? 제가 방금 만든이 GSD
+- [28:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=1699) 결과물일까요? 아니면 클로드 코드랑
+- [28:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=1700) 80분 더 쓴 결과일까요? 아니면
+- [28:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=1702) 클로드 코드랑 40분 더 쓴
+- [28:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=1704) 결과일까요?
+- [28:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=1708) 거의 자명하죠. 그렇죠?
+- [28:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=1711) 그래서 결국 제 입장은 뭐냐면
+- [28:33](https://youtube.com/watch?v=wWuSWRKUuj4&t=1713) 이렇습니다.
+- [28:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=1716) 제 생각엔 이런 오케스트레이션
+- [28:37](https://youtube.com/watch?v=wWuSWRKUuj4&t=1717) 레이어를 쓸 땐 그럴 만한 이유가
+- [28:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=1719) 있어야 합니다. 오늘 하나를 쓴다면
+- [28:42](https://youtube.com/watch?v=wWuSWRKUuj4&t=1722) 슈퍼파워스를 쓰겠습니다.
+- [28:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=1724) 모르는 작업이고 너무 복잡할지 판단이
+- [28:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=1726) 안 될 때. 그러니까 아무도 정확히
+- [28:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1728) 어디인지 모르는 그 가상의 경계선
+- [28:49](https://youtube.com/watch?v=wWuSWRKUuj4&t=1729) 말입니다. 지금 그 근처까지 온 것
+- [28:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=1732) 같다면 저는 슈퍼파워스를 쓸 겁니다.
+- [28:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=1735) 토큰년에서 저를 짓누르지 않을 걸
+- [28:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=1736) 아닐까요?
+- [28:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=1738) 그러면 저는 그냥 60분 동안 다른
+- [29:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=1740) 일을 하면 됩니다. 반대로 GSD를
+- [29:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=1743) 쓰면 키보드 앞에 붙어 있어야 하죠.
+- [29:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=1746) 제대로 활용하려면 계획 단계 전부를
+- [29:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=1748) 거쳐야 하고 시간이 오래 걸리고
+- [29:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=1750) 토큰도 많이 듭니다.
+- [29:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=1755) 제가 틀리면 정말 타격이 큽니다.
+- [29:18](https://youtube.com/watch?v=wWuSWRKUuj4&t=1758) JSB에 그렇게 많은 시간을 쓰는 건
+- [29:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=1760) 정말 아픕니다.이
+- [29:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=1762) 영상도 그냥 앉아서 이런 작업들을 다
+- [29:23](https://youtube.com/watch?v=wWuSWRKUuj4&t=1763) 따라가다 보니 결과가 그렇게까지
+- [29:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=1765) 갑어치가 없는 것 같아서
+- [29:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=1766) 힘들었습니다. 그래서 정말 너무
+- [29:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=1768) 복잡해서 슈퍼파워스가 필요하다고
+- [29:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=1769) 판단하면 그때는 그걸 정당화할 수
+- [29:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=1772) 있다고 봅니다. 하지만 정말
+- [29:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=1774) 그렇게까지 복잡하지 않다면 설령
+- [29:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=1776) 복잡한 작업이라도 기능별로 쪽에서
+- [29:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=1778) 조금씩 더해 갈 수 있지 않을까요?
+- [29:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=1784) 그리고 조금씩이라는 건 사실 다른
+- [29:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=1785) 선택지보다 훨씬 빠르다는 뜻입니다.
+- [29:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=1787) 저는 그냥 기본 클로드 코드를 쓰고
+- [29:49](https://youtube.com/watch?v=wWuSWRKUuj4&t=1789) 있으니까요. 이게 다른 옵션들보다
+- [29:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=1791) 훨씬 빠릅니다.
+- [29:54](https://youtube.com/watch?v=wWuSWRKUuj4&t=1794) 또 하나는 GSD가 나왔을 때 저도
+- [29:56](https://youtube.com/watch?v=wWuSWRKUuj4&t=1796) 그때 GSD에 관한 영상을 만들었는데
+- [29:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=1798) 그 당시엔 정말 좋게 봤습니다.
+- [30:02](https://youtube.com/watch?v=wWuSWRKUuj4&t=1802) 슈퍼파워스도 마찬가지였습니다.
+- [30:04](https://youtube.com/watch?v=wWuSWRKUuj4&t=1804) 처음 나왔을 때는 클로드 코드가 지금
+- [30:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=1806) 같은 상태가 아니었습니다. 그리고
+- [30:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=1808) 벌써 사람들이 요즘 클로드 코드는
+- [30:09](https://youtube.com/watch?v=wWuSWRKUuj4&t=1809) 너프됐다고 불평하는 소리가 들리는데
+- [30:11](https://youtube.com/watch?v=wWuSWRKUuj4&t=1811) 제가 말하는 건 그게 아닙니다. 제가
+- [30:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=1813) 말하는 건 문제를 접근하는 방식,
+- [30:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=1815) 일부 스케폴딩, 그리고 하니스 자체가
+- [30:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=1817) 작동하는 방식입니다.
+- [30:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=1820) 대규모 계획을 세워서 실행할 때
+- [30:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=1822) 컨텍스트를 지우고 이렇게 할까요?라고
+- [30:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=1824) 라고 묻는 기능만 봐도 그때는 아예
+- [30:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=1826) 없었습니다.
+- [30:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=1829) 그때 클로드 코드는 지금보다
+- [30:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=1831) 컨텍스트가 망가지는 문제에 훨씬 더
+- [30:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=1832) 취약했습니다.
+- [30:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=1834) GSD가 처음 나왔을 때 저는 정말
+- [30:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=1836) 감탄했습니다.
+- [30:38](https://youtube.com/watch?v=wWuSWRKUuj4&t=1838) 컨텍스트를 제대로 다뤄 주는구나
+- [30:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=1839) 싶었습니다. 지금은 클로드 코드도
+- [30:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=1841) 그런 기능을 많이 가져왔습니다.
+- [30:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=1843) 그러니까 기본 클로드 코드와 이런
+- [30:44](https://youtube.com/watch?v=wWuSWRKUuj4&t=1844) 도구들 사이에 격차는 많이
+- [30:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=1845) 줄었습니다. 동시에 실행 속도 차이는
+- [30:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1848) 엄청나게 벌어졌고이 속도 차이는
+- [30:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=1850) 무시할 수 없습니다.
+- [30:58](https://youtube.com/watch?v=wWuSWRKUuj4&t=1858) 20분이냐 60분이냐의 차이가 가장
+- [31:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=1860) 큽니다. 제 생각엔 적어도 그건 모든
+- [31:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=1863) 것 중에서 가장 큰 차이점이라서 그걸
+- [31:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=1865) 많이 기준으로 삼아야 합니다.
+- [31:13](https://youtube.com/watch?v=wWuSWRKUuj4&t=1873) 제 생각엔 사용 사례의 99%,
+- [31:15](https://youtube.com/watch?v=wWuSWRKUuj4&t=1875) 사용자 99%는 그냥 기본 클로드
+- [31:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=1877) 코드를 쓰는게 제일 맞습니다. 더
+- [31:20](https://youtube.com/watch?v=wWuSWRKUuj4&t=1880) 빠르니까요.
+- [31:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=1882) 출력이 더 좋지 않더라도 그 격차를
+- [31:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=1884) 메우고 다른 사람들보다 앞서 나갈
+- [31:26](https://youtube.com/watch?v=wWuSWRKUuj4&t=1886) 시간은 훨씬 더 많습니다.
+- [31:28](https://youtube.com/watch?v=wWuSWRKUuj4&t=1888) 프로젝트가 정말 복잡하고 추가 힘이
+- [31:30](https://youtube.com/watch?v=wWuSWRKUuj4&t=1890) 필요하다고 생각하면 슈퍼파워스를
+- [31:32](https://youtube.com/watch?v=wWuSWRKUuj4&t=1892) 쓰세요.
+- [31:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=1894) GSD에 비해 상대적으로 가볍고 쓰는
+- [31:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=1896) 느낌도 훨씬 낫습니다.
+- [31:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=1903) 솔직히 말씀드리겠습니다.
+- [31:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=1905) 슈퍼파워스는 훨씬 더 자연스럽게
+- [31:46](https://youtube.com/watch?v=wWuSWRKUuj4&t=1906) 돌아갑니다. 그냥 말로 지시하면
+- [31:48](https://youtube.com/watch?v=wWuSWRKUuj4&t=1908) 필요한 스킬을 불러옵니다. 이제 굳이
+- [31:51](https://youtube.com/watch?v=wWuSWRKUuj4&t=1911) 이리저리 번거롭게 할 필요가
+- [31:52](https://youtube.com/watch?v=wWuSWRKUuj4&t=1912) 없습니다.
+- [31:55](https://youtube.com/watch?v=wWuSWRKUuj4&t=1915) 좀 과합니다. 왜 GST2가
+- [31:57](https://youtube.com/watch?v=wWuSWRKUuj4&t=1917) 나왔는지는 이해해요. GC 2.0은
+- [31:59](https://youtube.com/watch?v=wWuSWRKUuj4&t=1919) 그 문제를 줄이려고 나온 거겠죠.
+- [32:01](https://youtube.com/watch?v=wWuSWRKUuj4&t=1921) 그런데 그것도 잘 안 됩니다. 클로드
+- [32:03](https://youtube.com/watch?v=wWuSWRKUuj4&t=1923) 코드 맥스 플랜을 못 쓰니까 결국
+- [32:05](https://youtube.com/watch?v=wWuSWRKUuj4&t=1925) 말도 안 되는 가격을 내하거든요.
+- [32:06](https://youtube.com/watch?v=wWuSWRKUuj4&t=1926) 그러니까 그걸로 끝이죠.이 이
+- [32:08](https://youtube.com/watch?v=wWuSWRKUuj4&t=1928) 설명이이 전체 이야기를 좀 더
+- [32:10](https://youtube.com/watch?v=wWuSWRKUuj4&t=1930) 이해하는데 도움이 됐으면 좋겠습니다.
+- [32:12](https://youtube.com/watch?v=wWuSWRKUuj4&t=1932) 기본 클로드 코드만 써도 충분히
+- [32:14](https://youtube.com/watch?v=wWuSWRKUuj4&t=1934) 괜찮을 겁니다.
+- [32:17](https://youtube.com/watch?v=wWuSWRKUuj4&t=1937) 정말 필요할 때만 슈퍼파워스를
+- [32:19](https://youtube.com/watch?v=wWuSWRKUuj4&t=1939) 꺼냈으면 됩니다. 프로젝트 단위로
+- [32:22](https://youtube.com/watch?v=wWuSWRKUuj4&t=1942) 스킬을 활용하시면 됩니다. 솔직히
+- [32:24](https://youtube.com/watch?v=wWuSWRKUuj4&t=1944) GST가 꼭 필요하다고 말하긴
+- [32:25](https://youtube.com/watch?v=wWuSWRKUuj4&t=1945) 어렵습니다. 정말 말도 안 되게
+- [32:27](https://youtube.com/watch?v=wWuSWRKUuj4&t=1947) 복잡한 일을 하면서 모든 단계를 다
+- [32:29](https://youtube.com/watch?v=wWuSWRKUuj4&t=1949) 손잡고 안내받고 싶은 경우가
+- [32:31](https://youtube.com/watch?v=wWuSWRKUuj4&t=1951) 아니라면요. 여기까지입니다.
+- [32:34](https://youtube.com/watch?v=wWuSWRKUuj4&t=1954) 늘 그렇듯 댓글로 어떤 생각이었는지
+- [32:36](https://youtube.com/watch?v=wWuSWRKUuj4&t=1956) 알려 주세요. 슈퍼파워스와 GSD를
+- [32:39](https://youtube.com/watch?v=wWuSWRKUuj4&t=1959) 어떻게 쓰고 있는지 그리고 제가
+- [32:41](https://youtube.com/watch?v=wWuSWRKUuj4&t=1961) 적용하면서 어디서 실수했는지도 듣고
+- [32:43](https://youtube.com/watch?v=wWuSWRKUuj4&t=1963) 싶습니다.
+- [32:45](https://youtube.com/watch?v=wWuSWRKUuj4&t=1965) 클로드 코드 마스터 클래스를 직접
+- [32:47](https://youtube.com/watch?v=wWuSWRKUuj4&t=1967) 확인해 보시려면 꼭 한번 보세요.
+- [32:50](https://youtube.com/watch?v=wWuSWRKUuj4&t=1970) 제 고정 댓글도 확인해 보시고요.
+- [32:53](https://youtube.com/watch?v=wWuSWRKUuj4&t=1973) Gra

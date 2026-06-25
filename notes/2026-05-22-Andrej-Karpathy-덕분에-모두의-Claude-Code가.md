@@ -1,0 +1,598 @@
+---
+title: "Andrej Karpathy 덕분에 모두의 Claude Code가 10배 강해졌습니다"
+source_url: https://youtube.com/watch?v=nldkPgp3aIA
+video_id: nldkPgp3aIA
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# Andrej Karpathy 덕분에 모두의 Claude Code가 10배 강해졌습니다
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 안드레이 카파티가 제안한 RAM 지식 위키 시스템을 5분만에 구축하는 방법을 설명합니다. 복잡한 벡터 데이터베이스나 RAG 없이 마크다운 파일과 Claude로 개인 지식 베이스를 만들어 YouTube 영상, 문서, 연구 자료들을 자동으로 정리하고 연결합니다. Obsidian으로 시각화하면 지식 간 관계와 패턴을 그래프로 볼 수 있고, 기존 대화형 AI와 달리 지식이 누적되어 '이자'처럼 쌓입니다. 토큰 비용도 95% 절약되며, 개인~중소 규모 프로젝트에 매우 효과적입니다.
+- **Core Message:** 복잡한 인프라 없이 마크다운과 Claude만으로 지식이 누적되는 개인 위키 시스템을 구축할 수 있다.
+> 일반적인 AI 채팅은 휘발성이 있어서 대화가 끝나면 지식도 사라지기 때문입니다. 하지만 카파티의 램 위키를 쓰는 이 방식은 지식이 은행 이자처럼 쌓이게 만듭니다.
+> 텐서한 벡터 데이터베이스도 임베딩즈도 복잡한 인프라도 필요 없습니다. 그냥 마크다운 파일이 들어 있는 폴더 하나면 끝입니다.
+> 한 사용자가 흩어진 파일 383개와 회의 녹취 100개가 넘는 걸 압축된 위키로 만들고 클로드로 검색할 때 토큰 사용량을 95% 줄였습니다.
+❗ 36개 YouTube 영상을 처리하는데 14분밖에 걸리지 않음
+❗ 383개 파일과 100개 회의 녹취를 위키로 만들어 토큰 사용량 95% 절약
+❗ 복잡한 벡터 데이터베이스 없이 마크다운 파일만으로 관계 기반 지식 그래프 구현 가능
+
+## 📚 핵심 용어
+- **RAM 지식 위키:** 마크다운 파일들을 Claude가 자동으로 정리해 만든 개인 지식 베이스 / 도서관 사서가 책들을 읽고 카드 색인을 만들듯이, Claude가 자료를 읽고 위키 페이지와 연결을 자동 생성한다. / 일반 RAG는 유사도로 검색하지만, RAM 위키는 링크를 따라가며 관계를 이해해 더 맥락적인 답을 준다.
+- **토큰 효율성:** AI 사용 시 입력 텍스트 양을 줄여 비용을 절약하는 것 / 전화 통화에서 요점만 말해 통화료를 줄이듯이, AI에게 핵심만 전달해 처리 비용을 줄인다. / 기존 RAG는 매번 전체 문서를 검색하지만, 위키는 정리된 요약과 인덱스만 읽어 토큰을 95% 절약한다.
+- **지식 누적 시스템:** 대화가 끝나도 지식이 사라지지 않고 계속 쌓이는 구조 / 은행 이자처럼 시간이 지날수록 지식이 복리로 쌓여, 나중에 더 풍부한 답변을 받을 수 있다. / 일반 AI 채팅은 대화 끝나면 모든 맥락이 사라지지만, 위키는 모든 지식이 파일로 보존되어 계속 활용된다.
+
+## 🚀 실행 (Execute)
+- [ ] Obsidian 설치하고 데모 볼트 생성해 보기
+  - 담당: 나
+  - 이유: 지식 관계를 시각적으로 확인하며 위키 구조를 이해할 수 있음
+- [ ] 개인 관심 주제(업무/취미 등) 하나 선정해서 RAM 위키 시스템 구축
+  - 담당: 나
+  - 이유: 실제 사용해봐야 시스템의 효과와 한계를 체감할 수 있음
+- 자료: Obsidian Web Clipper (크롬 확장프로그램)
+- 자료: 안드레이 카파티의 원본 RAM 지식 아이디어 트위터 글
+- 자료: Claude Pro 또는 API 접근권한
+- Timeline: 1) Obsidian 설치 → 2) 관심 주제 자료 5-10개 수집 → 3) Claude로 위키 생성 → 4) 관계 그래프 확인 → 5) 추가 자료로 확장 테스트
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=nldkPgp3aIA&t=0) 지금 보시는 건 제 유튜브 영상
+- [0:02](https://youtube.com/watch?v=nldkPgp3aIA&t=2) 36개를 보기 좋게 정리한 제대로 된
+- [0:05](https://youtube.com/watch?v=nldkPgp3aIA&t=5) 지식 시스템입니다.
+- [0:07](https://youtube.com/watch?v=nldkPgp3aIA&t=7) 오늘 영상에서는 이걸 5분 만에
+- [0:08](https://youtube.com/watch?v=nldkPgp3aIA&t=8) 설정하는 방법을 보여 드리겠습니다.
+- [0:10](https://youtube.com/watch?v=nldkPgp3aIA&t=10) 정말 정말 쉽습니다. 여기 보시면
+- [0:12](https://youtube.com/watch?v=nldkPgp3aIA&t=12) 서로 다른 노드와 여러 패턴이
+- [0:13](https://youtube.com/watch?v=nldkPgp3aIA&t=13) 나타납니다. 패턴이 보이기
+- [0:15](https://youtube.com/watch?v=nldkPgp3aIA&t=15) 시작합니다. 더 확대해 보면이 작은
+- [0:17](https://youtube.com/watch?v=nldkPgp3aIA&t=17) 점 하나하나가 무엇을 뜻하는지 알 수
+- [0:18](https://youtube.com/watch?v=nldkPgp3aIA&t=18) 있습니다. 예를 들면 이건제 영상 중
+- [0:21](https://youtube.com/watch?v=nldkPgp3aIA&t=21) 하나인 일만 달러짜리 에이전트
+- [0:22](https://youtube.com/watch?v=nldkPgp3aIA&t=22) 워크플로우입니다. 태그도 있고 영상
+- [0:24](https://youtube.com/watch?v=nldkPgp3aIA&t=24) 링크도 있고 원본 파일도 있습니다.
+- [0:27](https://youtube.com/watch?v=nldkPgp3aIA&t=27) 그리고이 영상이 뭔지 핵심 포인트가
+- [0:30](https://youtube.com/watch?v=nldkPgp3aIA&t=30) 뭔지도 설명해 줍니다. 가장 멋진 건
+- [0:32](https://youtube.com/watch?v=nldkPgp3aIA&t=32) 백크를 따라가면서 원하는 곳까지 갈
+- [0:34](https://youtube.com/watch?v=nldkPgp3aIA&t=34) 수 있다는 점입니다. 더블
+- [0:36](https://youtube.com/watch?v=nldkPgp3aIA&t=36) 프레이워크로 가는 백크도 있고 클로드
+- [0:37](https://youtube.com/watch?v=nldkPgp3aIA&t=37) 코드로 가는 백크도 있고 제가 말한
+- [0:39](https://youtube.com/watch?v=nldkPgp3aIA&t=39) 여러 도구로 가는 백크도 있습니다.
+- [0:41](https://youtube.com/watch?v=nldkPgp3aIA&t=41) 퍼플렉서티 비주얼 스튜디오 코드 네노
+- [0:43](https://youtube.com/watch?v=nldkPgp3aIA&t=43) 버네너 레이던 M 같은 것들입니다.
+- [0:45](https://youtube.com/watch?v=nldkPgp3aIA&t=45) 또 W2 프레임워크 권한 우회 모드
+- [0:48](https://youtube.com/watch?v=nldkPgp3aIA&t=48) 사람 검토 체크포인트 같은 기법도
+- [0:50](https://youtube.com/watch?v=nldkPgp3aIA&t=50) 들어 있습니다. 이게 계속 쌓이면 각
+- [0:53](https://youtube.com/watch?v=nldkPgp3aIA&t=53) 부구 사이의 패턴과 관계가 보이기
+- [0:54](https://youtube.com/watch?v=nldkPgp3aIA&t=54) 시작합니다. 각 스킬, 또 제가
+- [0:57](https://youtube.com/watch?v=nldkPgp3aIA&t=57) 유튜브에서 언급한 모든 MCP 서버
+- [0:58](https://youtube.com/watch?v=nldkPgp3aIA&t=58) 사이에 패턴과 관계가 보이기
+- [0:59](https://youtube.com/watch?v=nldkPgp3aIA&t=59) 시작합니다. 이제 이런 시스템이
+- [1:02](https://youtube.com/watch?v=nldkPgp3aIA&t=62) 갖춰졌으니 아주 효율적으로 검색할 수
+- [1:04](https://youtube.com/watch?v=nldkPgp3aIA&t=64) 있습니다.
+- [1:06](https://youtube.com/watch?v=nldkPgp3aIA&t=66) 더 놀라운 건 제가 그냥 이렇게
+- [1:08](https://youtube.com/watch?v=nldkPgp3aIA&t=68) 말했단 겁니다. 클로드 코드 최근
+- [1:10](https://youtube.com/watch?v=nldkPgp3aIA&t=70) 영상들 대본을 가져와서 전부 정리해
+- [1:12](https://youtube.com/watch?v=nldkPgp3aIA&t=72) 줘. 정말로 관계를 하나하나 직접
+- [1:14](https://youtube.com/watch?v=nldkPgp3aIA&t=74) 만들 필요가 전혀 없었습니다. 그냥
+- [1:16](https://youtube.com/watch?v=nldkPgp3aIA&t=76) 알아서 다 정리해 줬거든요. 그리고
+- [1:18](https://youtube.com/watch?v=nldkPgp3aIA&t=78) 여기에는 더 작은 버전도 있는데 이건
+- [1:20](https://youtube.com/watch?v=nldkPgp3aIA&t=80) 제 개인 브레인에 가깝습니다. 제
+- [1:22](https://youtube.com/watch?v=nldkPgp3aIA&t=82) 개인적인 샘에서 일어나는 일들을
+- [1:23](https://youtube.com/watch?v=nldkPgp3aIA&t=83) 담아둔 겁니다. 어페이나 제 유튜브
+- [1:26](https://youtube.com/watch?v=nldkPgp3aIA&t=86) 채널, 여러 사업, 직원들, 2분기
+- [1:29](https://youtube.com/watch?v=nldkPgp3aIA&t=89) 과제 같은 것들 말이죠.
+- [1:31](https://youtube.com/watch?v=nldkPgp3aIA&t=91) 이건 제 개인적인 세컨드 브레인에 더
+- [1:33](https://youtube.com/watch?v=nldkPgp3aIA&t=93) 가깝습니다.
+- [1:37](https://youtube.com/watch?v=nldkPgp3aIA&t=97) 지식 시스템 하나가 있는 승이고 이걸
+- [1:38](https://youtube.com/watch?v=nldkPgp3aIA&t=98) 합칠 수도 따로 둘 수도 있습니다.
+- [1:40](https://youtube.com/watch?v=nldkPgp3aIA&t=100) 또 지식 시스템을 계속 더 만들고이
+- [1:42](https://youtube.com/watch?v=nldkPgp3aIA&t=102) 문맥이 필요한 다른 AI 에이전트들에
+- [1:44](https://youtube.com/watch?v=nldkPgp3aIA&t=104) 연결할 수도 있습니다. 정말 엄청
+- [1:46](https://youtube.com/watch?v=nldkPgp3aIA&t=106) 멋집니다. 그래서 안드레카오퍼씨가
+- [1:48](https://youtube.com/watch?v=nldkPgp3aIA&t=108) 알름 지식 베이스에 대한 짧은 글을
+- [1:49](https://youtube.com/watch?v=nldkPgp3aIA&t=109) 올리면서 자기가 이걸 어떻게 쓰는지도
+- [1:51](https://youtube.com/watch?v=nldkPgp3aIA&t=111) 설명했습니다. 그리고 며칠 만에
+- [1:53](https://youtube.com/watch?v=nldkPgp3aIA&t=113) X에서 엄청난 반응을 얻었습니다.
+- [1:56](https://youtube.com/watch?v=nldkPgp3aIA&t=116) 그럼 간단히 살펴보고이어서 이걸 거의
+- [1:58](https://youtube.com/watch?v=nldkPgp3aIA&t=118) 5분 만에 설정하는 방법을 보여
+- [1:59](https://youtube.com/watch?v=nldkPgp3aIA&t=119) 드리겠습니다.
+- [2:01](https://youtube.com/watch?v=nldkPgp3aIA&t=121) 생각보다 훨씬 간단합니다. 제가
+- [2:04](https://youtube.com/watch?v=nldkPgp3aIA&t=124) 최근에 아주 유용하다고 느낀 건
+- [2:05](https://youtube.com/watch?v=nldkPgp3aIA&t=125) 램으로 관심 있는 주제별 개인 지식
+- [2:06](https://youtube.com/watch?v=nldkPgp3aIA&t=126) 베이스를 만드는 겁니다. 단계도 여러
+- [2:09](https://youtube.com/watch?v=nldkPgp3aIA&t=129) 개가 있는데 첫 번째는 데이터
+- [2:10](https://youtube.com/watch?v=nldkPgp3aIA&t=130) 수집입니다. 기본적으로 원본 문서를
+- [2:13](https://youtube.com/watch?v=nldkPgp3aIA&t=133) 넣는 단계입니다. 그러니까 PDF를
+- [2:15](https://youtube.com/watch?v=nldkPgp3aIA&t=135) 클로드 코드에 넣으면 나머지는 클로드
+- [2:17](https://youtube.com/watch?v=nldkPgp3aIA&t=137) 코드가 알아서 처리합니다. 그는
+- [2:19](https://youtube.com/watch?v=nldkPgp3aIA&t=139) ID로 업시디언을 씁니다. 사실
+- [2:21](https://youtube.com/watch?v=nldkPgp3aIA&t=141) 그렇게 획기적인 건 아닙니다.
+- [2:23](https://youtube.com/watch?v=nldkPgp3aIA&t=143) 어브시디언은 마크다운 파일을 시적으로
+- [2:25](https://youtube.com/watch?v=nldkPgp3aIA&t=145) 보여 줄 뿐입니다. 예를 들면 여기
+- [2:27](https://youtube.com/watch?v=nldkPgp3aIA&t=147) 있는이 업시디언 프로젝트에 유튜브
+- [2:29](https://youtube.com/watch?v=nldkPgp3aIA&t=149) 대본 관련 자료가 전부 그대로 들어
+- [2:30](https://youtube.com/watch?v=nldkPgp3aIA&t=150) 있습니다. 똑같은 방식입니다. 여기
+- [2:34](https://youtube.com/watch?v=nldkPgp3aIA&t=154) 원본 유튜브 대본들이 있고 제가 보여
+- [2:35](https://youtube.com/watch?v=nldkPgp3aIA&t=155) 드렸던 그 위키도 있습니다. 클로드
+- [2:38](https://youtube.com/watch?v=nldkPgp3aIA&t=158) 코드가 제 유튜브 대본으로 만든 여러
+- [2:39](https://youtube.com/watch?v=nldkPgp3aIA&t=159) 폴더가 들어 있죠.
+- [2:41](https://youtube.com/watch?v=nldkPgp3aIA&t=161) 그리고 Q&A의 단계에서는 유튜브나
+- [2:43](https://youtube.com/watch?v=nldkPgp3aIA&t=163) 리서치에 대해 질문하면 미키 전체를
+- [2:45](https://youtube.com/watch?v=nldkPgp3aIA&t=165) 훨씬 효율적으로 훑어서 아주 똑똑한
+- [2:48](https://youtube.com/watch?v=nldkPgp3aIA&t=168) 답을 줍니다.
+- [2:53](https://youtube.com/watch?v=nldkPgp3aIA&t=173) 그는 여기서 이렇게 말합니다. 처음엔
+- [2:55](https://youtube.com/watch?v=nldkPgp3aIA&t=175) 펜지까지 써야 하나 했는데 렘이 꽤
+- [2:57](https://youtube.com/watch?v=nldkPgp3aIA&t=177) 잘해 주더라는 거죠. 모든 문서의
+- [2:59](https://youtube.com/watch?v=nldkPgp3aIA&t=179) 인덱스 파일과 간단한 요약을 꽤 잘
+- [3:01](https://youtube.com/watch?v=nldkPgp3aIA&t=181) 자동으로 관리해 줍니다.이 정도
+- [3:03](https://youtube.com/watch?v=nldkPgp3aIA&t=183) 규모에서는 중요한 관련 데이터를 꽤
+- [3:05](https://youtube.com/watch?v=nldkPgp3aIA&t=185) 쉽게 읽어냅니다.
+- [3:07](https://youtube.com/watch?v=nldkPgp3aIA&t=187) 지금은 기사 100개 정도 약 50만
+- [3:09](https://youtube.com/watch?v=nldkPgp3aIA&t=189) 단어를 다루고 있습니다. 나중에 더
+- [3:11](https://youtube.com/watch?v=nldkPgp3aIA&t=191) 다룰 내용도 있지만 핵심은 원본
+- [3:12](https://youtube.com/watch?v=nldkPgp3aIA&t=192) 데이터를 클로드 코드에 넘긴다는
+- [3:13](https://youtube.com/watch?v=nldkPgp3aIA&t=193) 겁니다. 그걸 비교하고 정리한 다음
+- [3:16](https://youtube.com/watch?v=nldkPgp3aIA&t=196) 관계까지 맞춰서 알맞은 곳에 넣어
+- [3:18](https://youtube.com/watch?v=nldkPgp3aIA&t=198) 줍니다. 그러면 무엇이든 질문할 수
+- [3:20](https://youtube.com/watch?v=nldkPgp3aIA&t=200) 있죠. 또 노드나 관계에서 비어 있는
+- [3:23](https://youtube.com/watch?v=nldkPgp3aIA&t=203) 부분을 찾아주고 직접 리서치에서 그
+- [3:25](https://youtube.com/watch?v=nldkPgp3aIA&t=205) 빈칸까지 메워 줍니다. 자, 그럼
+- [3:27](https://youtube.com/watch?v=nldkPgp3aIA&t=207) 이게 왜 중요한 걸까요?
+- [3:29](https://youtube.com/watch?v=nldkPgp3aIA&t=209) 일반적인 AI 채팅은 휘발성이 있어서
+- [3:31](https://youtube.com/watch?v=nldkPgp3aIA&t=211) 대화가 끝나면 지식도 사라지기
+- [3:33](https://youtube.com/watch?v=nldkPgp3aIA&t=213) 때문입니다. 하지만 카오퍼시의 랩
+- [3:35](https://youtube.com/watch?v=nldkPgp3aIA&t=215) 위키를 쓰는이 방식은 지식이 은행
+- [3:37](https://youtube.com/watch?v=nldkPgp3aIA&t=217) 이자처럼 쌓이게 만듭니다. X에서는
+- [3:39](https://youtube.com/watch?v=nldkPgp3aIA&t=219) 이걸 게임 체인저라고 부릅니다.
+- [3:41](https://youtube.com/watch?v=nldkPgp3aIA&t=221) AI가 모든 걸 기억하는 지치지 않는
+- [3:43](https://youtube.com/watch?v=nldkPgp3aIA&t=223) 동료처럼 느껴지고 정리도 잘 유지되기
+- [3:44](https://youtube.com/watch?v=nldkPgp3aIA&t=224) 때문입니다. 게다가 정말 단순해서
+- [3:46](https://youtube.com/watch?v=nldkPgp3aIA&t=226) 설정하는데 5분이면 됩니다. 직접
+- [3:49](https://youtube.com/watch?v=nldkPgp3aIA&t=229) 보여 드리겠습니다. 텐시한 벡터
+- [3:51](https://youtube.com/watch?v=nldkPgp3aIA&t=231) 데이터베이스도 인베딩즈도 복잡한
+- [3:52](https://youtube.com/watch?v=nldkPgp3aIA&t=232) 인프라도 필요 없습니다. 그냥
+- [3:54](https://youtube.com/watch?v=nldkPgp3aIA&t=234) 마웃다운 파일이 들어 있는 폴더
+- [3:55](https://youtube.com/watch?v=nldkPgp3aIA&t=235) 하나면 끝입니다. 말 그대로 위에
+- [3:57](https://youtube.com/watch?v=nldkPgp3aIA&t=237) 볼트 하나만 있으면 됩니다.이
+- [3:59](https://youtube.com/watch?v=nldkPgp3aIA&t=239) 예시에서는 이름이 마이 위키입니다.
+- [4:01](https://youtube.com/watch?v=nldkPgp3aIA&t=241) 여기 RAW 폴더에 모든 자료를
+- [4:03](https://youtube.com/watch?v=nldkPgp3aIA&t=243) 넣습니다. 그리고 위키 폴더가 있는데
+- [4:05](https://youtube.com/watch?v=nldkPgp3aIA&t=245) 렘이 RAW에서 가져온 걸 위키로
+- [4:07](https://youtube.com/watch?v=nldkPgp3aIA&t=247) 정리해 넣는 곳입니다. 여기에는 렘이
+- [4:09](https://youtube.com/watch?v=nldkPgp3aIA&t=249) 만들어 줄 위키 페이지들이
+- [4:10](https://youtube.com/watch?v=nldkPgp3aIA&t=250) 들어갑니다. 인덱스와 로그도 따로
+- [4:12](https://youtube.com/watch?v=nldkPgp3aIA&t=252) 있습니다. 예를 들어 제 유튜브
+- [4:15](https://youtube.com/watch?v=nldkPgp3aIA&t=255) 트랜스크립프트 볼트의 인덱스는 여기
+- [4:16](https://youtube.com/watch?v=nldkPgp3aIA&t=256) 있습니다. 보시면 여러 도구가 있고
+- [4:19](https://youtube.com/watch?v=nldkPgp3aIA&t=259) 클릭하면 바로 해당 페이지로
+- [4:20](https://youtube.com/watch?v=nldkPgp3aIA&t=260) 이동합니다. 그 아래에는 다양한
+- [4:22](https://youtube.com/watch?v=nldkPgp3aIA&t=262) 기법과 에이전트 팀즈 섭에이전트가
+- [4:24](https://youtube.com/watch?v=nldkPgp3aIA&t=264) 있습니다. 퍼미션 모주즈와 더블
+- [4:26](https://youtube.com/watch?v=nldkPgp3aIA&t=266) 프레임워크도 있습니다. 또 MCP
+- [4:29](https://youtube.com/watch?v=nldkPgp3aIA&t=269) 서버즈, 렉 바이브 코딩 같은 여러
+- [4:31](https://youtube.com/watch?v=nldkPgp3aIA&t=271) 개념과 자료도 정리되 있습니다.
+- [4:33](https://youtube.com/watch?v=nldkPgp3aIA&t=273) 유튜브 영상들입니다. 그리고 사람이나
+- [4:36](https://youtube.com/watch?v=nldkPgp3aIA&t=276) 비교 항목이 생기면 그것들도 여기
+- [4:37](https://youtube.com/watch?v=nldkPgp3aIA&t=277) 인덱스에 들어갑니다. 그리고
+- [4:39](https://youtube.com/watch?v=nldkPgp3aIA&t=279) 아퍼레이션 히스토리인 로그도
+- [4:41](https://youtube.com/watch?v=nldkPgp3aIA&t=281) 있습니다.이
+- [4:42](https://youtube.com/watch?v=nldkPgp3aIA&t=282) 유튜브 프로젝트에서는 아직 로그가
+- [4:44](https://youtube.com/watch?v=nldkPgp3aIA&t=284) 크지 않습니다.
+- [4:46](https://youtube.com/watch?v=nldkPgp3aIA&t=286) 초기 36개 유튜브 영상을 한꺼번에
+- [4:48](https://youtube.com/watch?v=nldkPgp3aIA&t=288) 돌렸기 때문입니다. 하지만 이제 새
+- [4:50](https://youtube.com/watch?v=nldkPgp3aIA&t=290) 영상이 생길 때마다 가져와 반영하라고
+- [4:51](https://youtube.com/watch?v=nldkPgp3aIA&t=291) 시킬 수 있습니다. 위키에 넣어
+- [4:53](https://youtube.com/watch?v=nldkPgp3aIA&t=293) 주세요. 그리고 업데이트 할 때마다
+- [4:55](https://youtube.com/watch?v=nldkPgp3aIA&t=295) 매번 확인해 보죠. 그리고 당연히
+- [4:57](https://youtube.com/watch?v=nldkPgp3aIA&t=297) 클로도 필요합니다. 프로젝트가 어떻게
+- [5:00](https://youtube.com/watch?v=nldkPgp3aIA&t=300) 돌아가는지, 어떻게 검색하는지, 또
+- [5:02](https://youtube.com/watch?v=nldkPgp3aIA&t=302) 어떻게 업데이트 하는지 설명해 주는
+- [5:04](https://youtube.com/watch?v=nldkPgp3aIA&t=304) MD입니다.
+- [5:05](https://youtube.com/watch?v=nldkPgp3aIA&t=305) 비용 측면에서도 크고 토큰 효율과
+- [5:08](https://youtube.com/watch?v=nldkPgp3aIA&t=308) 장기적인 가치도 큽니다.
+- [5:10](https://youtube.com/watch?v=nldkPgp3aIA&t=310) 한 사용자가 흩어진 파일 383개와
+- [5:12](https://youtube.com/watch?v=nldkPgp3aIA&t=312) 회의 녹취 100개가 넘는 걸 압축된
+- [5:14](https://youtube.com/watch?v=nldkPgp3aIA&t=314) 위키로 만들고 클로드로 검색할 때
+- [5:16](https://youtube.com/watch?v=nldkPgp3aIA&t=316) 토큰 사용량을 95% 줄였습니다.
+- [5:19](https://youtube.com/watch?v=nldkPgp3aIA&t=319) 물론 지금도 토큰 관리와 효율성은
+- [5:20](https://youtube.com/watch?v=nldkPgp3aIA&t=320) 엄청 큰 화재이고 앞으로도 계속 그럴
+- [5:22](https://youtube.com/watch?v=nldkPgp3aIA&t=322) 겁니다. 또 정말 좋은 점이 하나 더
+- [5:24](https://youtube.com/watch?v=nldkPgp3aIA&t=324) 있습니다. 비트어브 저장소를 복사해
+- [5:27](https://youtube.com/watch?v=nldkPgp3aIA&t=327) 와야 하는 것도 아니고 복잡한 설정도
+- [5:29](https://youtube.com/watch?v=nldkPgp3aIA&t=329) 없다는 점입니다.
+- [5:31](https://youtube.com/watch?v=nldkPgp3aIA&t=331) 그냥 클로드 코드에게 안드레이
+- [5:33](https://youtube.com/watch?v=nldkPgp3aIA&t=333) 카오퍼씨의이 아이디어를 읽고
+- [5:34](https://youtube.com/watch?v=nldkPgp3aIA&t=334) 구현하라고 말하면 됩니다. X에서는
+- [5:37](https://youtube.com/watch?v=nldkPgp3aIA&t=337) 이제 이런 식으로 2026년에
+- [5:38](https://youtube.com/watch?v=nldkPgp3aIA&t=338) 아이에트형 소프트웨어와 제품이
+- [5:39](https://youtube.com/watch?v=nldkPgp3aIA&t=339) 만들어질 거라고 이야기합니다. 큰
+- [5:41](https://youtube.com/watch?v=nldkPgp3aIA&t=341) 아이디어만 주면 알아서 만들어 준다는
+- [5:43](https://youtube.com/watch?v=nldkPgp3aIA&t=343) 거죠. 파워퍼씨도 이렇게
+- [5:45](https://youtube.com/watch?v=nldkPgp3aIA&t=345) 말했습니다.이 프롬프트를 일부러 좀
+- [5:47](https://youtube.com/watch?v=nldkPgp3aIA&t=347) 모하게 남겨뒀습니다. 여러분이
+- [5:49](https://youtube.com/watch?v=nldkPgp3aIA&t=349) 프로젝트에 맞게 직접 바꿔 쓸 수
+- [5:50](https://youtube.com/watch?v=nldkPgp3aIA&t=350) 있도록요. 그리고 지금 제 두 개의
+- [5:52](https://youtube.com/watch?v=nldkPgp3aIA&t=352) 다른 볼트에서 프로젝트의 실제 목적과
+- [5:55](https://youtube.com/watch?v=nldkPgp3aIA&t=355) 맥락을 이해하면서 어떻게 조금씩
+- [5:56](https://youtube.com/watch?v=nldkPgp3aIA&t=356) 달라졌는지 보여 드리겠습니다.
+- [5:58](https://youtube.com/watch?v=nldkPgp3aIA&t=358) 좋습니다. 방금 보여 드린게 원래
+- [6:00](https://youtube.com/watch?v=nldkPgp3aIA&t=360) 트위고 그다음에 그가 이렇게
+- [6:02](https://youtube.com/watch?v=nldkPgp3aIA&t=362) 덧붙였습니다. 이건 바이럴이 됐네요.
+- [6:05](https://youtube.com/watch?v=nldkPgp3aIA&t=365) 그래서 아이디어를 간단히 정리해
+- [6:06](https://youtube.com/watch?v=nldkPgp3aIA&t=366) 보겠습니다. 이걸 열어보면 이게
+- [6:09](https://youtube.com/watch?v=nldkPgp3aIA&t=369) 어떻게 작동하는지 왜 이런 아키텍처와
+- [6:11](https://youtube.com/watch?v=nldkPgp3aIA&t=371) 인덱싱이 필요한지에 대한 핵심 설명이
+- [6:13](https://youtube.com/watch?v=nldkPgp3aIA&t=373) 또 나옵니다. 참고로 여기서 그가
+- [6:16](https://youtube.com/watch?v=nldkPgp3aIA&t=376) 이렇게 말합니다.이 부분은 일부러
+- [6:18](https://youtube.com/watch?v=nldkPgp3aIA&t=378) 모하게 남겨뒀습니다. 그래야 여러분이
+- [6:20](https://youtube.com/watch?v=nldkPgp3aIA&t=380) 직접 손 보고 자기 프로젝트에 맞게
+- [6:21](https://youtube.com/watch?v=nldkPgp3aIA&t=381) 바꿀 수 있으니까요. 이건 잠시 뒤에
+- [6:23](https://youtube.com/watch?v=nldkPgp3aIA&t=383) 다시 보겠습니다.
+- [6:25](https://youtube.com/watch?v=nldkPgp3aIA&t=385) 그런데 먼저 할 준비 단계가 하나
+- [6:27](https://youtube.com/watch?v=nldkPgp3aIA&t=387) 있습니다. 필수는 아니지만 관계를
+- [6:30](https://youtube.com/watch?v=nldkPgp3aIA&t=390) 보기 좋은 프런트 엔드가 있으면
+- [6:31](https://youtube.com/watch?v=nldkPgp3aIA&t=391) 좋아서 어브시디언을 설치할 겁니다.
+- [6:34](https://youtube.com/watch?v=nldkPgp3aIA&t=394) 앱드를 보면 완전히 무료인 도구라는
+- [6:36](https://youtube.com/watch?v=nldkPgp3aIA&t=396) 걸 확인할 수 있고 그걸 다운로드
+- [6:38](https://youtube.com/watch?v=nldkPgp3aIA&t=398) 하시면 됩니다.
+- [6:39](https://youtube.com/watch?v=nldkPgp3aIA&t=399) 운영 체제에 맞는 걸 받아서 설치
+- [6:41](https://youtube.com/watch?v=nldkPgp3aIA&t=401) 마법사를 열고앱을 실행하면 이렇게
+- [6:43](https://youtube.com/watch?v=nldkPgp3aIA&t=403) 보일 겁니다.
+- [6:46](https://youtube.com/watch?v=nldkPgp3aIA&t=406) 여기서는 세 볼트를 만들 겁니다.
+- [6:49](https://youtube.com/watch?v=nldkPgp3aIA&t=409) 아래를 보면 허브레인이 있고 유튜브
+- [6:51](https://youtube.com/watch?v=nldkPgp3aIA&t=411) 트랜스크립프치도 있습니다. 좀 더
+- [6:53](https://youtube.com/watch?v=nldkPgp3aIA&t=413) 크게 볼게요. 이제 볼트 관리로 가서
+- [6:56](https://youtube.com/watch?v=nldkPgp3aIA&t=416) 새로 만들고 이름만 정하면 됩니다.
+- [6:59](https://youtube.com/watch?v=nldkPgp3aIA&t=419) 저는 이걸 데모 볼트라고
+- [7:00](https://youtube.com/watch?v=nldkPgp3aIA&t=420) 부르겠습니다. 이걸 저장할 위치를
+- [7:02](https://youtube.com/watch?v=nldkPgp3aIA&t=422) 선택하세요.
+- [7:03](https://youtube.com/watch?v=nldkPgp3aIA&t=423) 저는 그냥 데스크톱에 두고이 볼트를
+- [7:06](https://youtube.com/watch?v=nldkPgp3aIA&t=426) 만들겠습니다.
+- [7:08](https://youtube.com/watch?v=nldkPgp3aIA&t=428) 그다음에는 클로드 코드를 실행하던
+- [7:10](https://youtube.com/watch?v=nldkPgp3aIA&t=430) 곳으로 가면 됩니다.
+- [7:12](https://youtube.com/watch?v=nldkPgp3aIA&t=432) 이번엔 베스코드에서 하니까 그 폴더를
+- [7:14](https://youtube.com/watch?v=nldkPgp3aIA&t=434) 열어 줍니다. 데모 볼트를 열면
+- [7:16](https://youtube.com/watch?v=nldkPgp3aIA&t=436) 됩니다. 어시디언이 열리고 웰컴
+- [7:19](https://youtube.com/watch?v=nldkPgp3aIA&t=439) MD가 보일 겁니다. 이제 클로드를
+- [7:21](https://youtube.com/watch?v=nldkPgp3aIA&t=441) 열겠습니다. 터미널에서 클로드를
+- [7:23](https://youtube.com/watch?v=nldkPgp3aIA&t=443) 실행할 거예요. 요즘은 클로드를 쓸
+- [7:26](https://youtube.com/watch?v=nldkPgp3aIA&t=446) 때 터미널이 더 마음에 듭니다. 저는
+- [7:28](https://youtube.com/watch?v=nldkPgp3aIA&t=448) 베스 코드 안에서 하는 걸 선호해요.
+- [7:31](https://youtube.com/watch?v=nldkPgp3aIA&t=451) 그냥 상태 표시들도 볼 수 있고
+- [7:32](https://youtube.com/watch?v=nldkPgp3aIA&t=452) 기능도 조금 더 많아서요.
+- [7:35](https://youtube.com/watch?v=nldkPgp3aIA&t=455) 클로드 코드를 열어두고 이렇게 진행할
+- [7:37](https://youtube.com/watch?v=nldkPgp3aIA&t=457) 거예요. 이제 안드레이 카워퍼씨가
+- [7:39](https://youtube.com/watch?v=nldkPgp3aIA&t=459) 올린 은미키 아이디어로 다시 돌아가
+- [7:41](https://youtube.com/watch?v=nldkPgp3aIA&t=461) 보겠습니다.
+- [7:43](https://youtube.com/watch?v=nldkPgp3aIA&t=463) 이걸 전부 복사해서 클로드 코드로
+- [7:45](https://youtube.com/watch?v=nldkPgp3aIA&t=465) 돌아가 그대로 붙여 넣을 거예요.
+- [7:47](https://youtube.com/watch?v=nldkPgp3aIA&t=467) 그러니까 이게 바로 프롬프트예요.
+- [7:49](https://youtube.com/watch?v=nldkPgp3aIA&t=469) 카오퍼 시가준 우리가 필요한 걸 전부
+- [7:51](https://youtube.com/watch?v=nldkPgp3aIA&t=471) 만들어 줄트입니다.
+- [7:53](https://youtube.com/watch?v=nldkPgp3aIA&t=473) 그걸 보내기 전에 이걸 먼저 넣을
+- [7:55](https://youtube.com/watch?v=nldkPgp3aIA&t=475) 거예요. 여러분은 캡처에서 그대로
+- [7:58](https://youtube.com/watch?v=nldkPgp3aIA&t=478) 써도 됩니다. 핵심은 이제 당신은
+- [8:00](https://youtube.com/watch?v=nldkPgp3aIA&t=480) 젤르미키 에이전트라는 거예요.이
+- [8:02](https://youtube.com/watch?v=nldkPgp3aIA&t=482) 아이디어 파일을 그대로 제 완전한
+- [8:04](https://youtube.com/watch?v=nldkPgp3aIA&t=484) 세컨드 브레인으로 구현하세요.
+- [8:05](https://youtube.com/watch?v=nldkPgp3aIA&t=485) 클라우드 스키마를 만들고 어쩌고저쩌고
+- [8:07](https://youtube.com/watch?v=nldkPgp3aIA&t=487) 하라는 뜻이죠. 즉 방금
+- [8:09](https://youtube.com/watch?v=nldkPgp3aIA&t=489) 카워퍼씨에게서 얻은이 아이디어로
+- [8:11](https://youtube.com/watch?v=nldkPgp3aIA&t=491) 무엇을 해야 하는지 알려 주는
+- [8:12](https://youtube.com/watch?v=nldkPgp3aIA&t=492) 거예요. 어쨌든 오른쪽에는 클로드
+- [8:15](https://youtube.com/watch?v=nldkPgp3aIA&t=495) 코드가 돌아가고 있고 왼쪽에는
+- [8:16](https://youtube.com/watch?v=nldkPgp3aIA&t=496) 어브시디언 볼트가 있어요. 방금 두
+- [8:19](https://youtube.com/watch?v=nldkPgp3aIA&t=499) 폴더가 만들어진게 보이죠? 보시다시피
+- [8:22](https://youtube.com/watch?v=nldkPgp3aIA&t=502) 위키도 만들어졌습니다. 기본으로는
+- [8:24](https://youtube.com/watch?v=nldkPgp3aIA&t=504) 폴더네 개를 넣어 놨어요.
+- [8:25](https://youtube.com/watch?v=nldkPgp3aIA&t=505) 어날로시스 컨셉프츠 엔터티즈
+- [8:28](https://youtube.com/watch?v=nldkPgp3aIA&t=508) 소원시즈가 들어갔습니다. 이제 내용을
+- [8:30](https://youtube.com/watch?v=nldkPgp3aIA&t=510) 채워가면서이 구조가 정말 맞는지 다시
+- [8:33](https://youtube.com/watch?v=nldkPgp3aIA&t=513) 얘기해 볼 수 있어요. 제 개인
+- [8:36](https://youtube.com/watch?v=nldkPgp3aIA&t=516) 세컨드 브레인에서는 위키가 그냥
+- [8:37](https://youtube.com/watch?v=nldkPgp3aIA&t=517) 마크다운 파이브이에요. 구조가 따로
+- [8:39](https://youtube.com/watch?v=nldkPgp3aIA&t=519) 없죠. 어떤 경우엔 그게 오히려
+- [8:41](https://youtube.com/watch?v=nldkPgp3aIA&t=521) 좋습니다. 카퍼시도 이렇게 말했어요.
+- [8:44](https://youtube.com/watch?v=nldkPgp3aIA&t=524) 가끔은 정말 단순하고 평평하게 즉
+- [8:46](https://youtube.com/watch?v=nldkPgp3aIA&t=526) 하위 폴더 없이 너무 과하게 정리하지
+- [8:48](https://youtube.com/watch?v=nldkPgp3aIA&t=528) 않는 방식을 좋아한다고요. 그런데 제
+- [8:50](https://youtube.com/watch?v=nldkPgp3aIA&t=530) 유튜브 트랜스크리프트 예시에서는 서로
+- [8:52](https://youtube.com/watch?v=nldkPgp3aIA&t=532) 다른 하위 폴더들이 있었죠. 이번에는
+- [8:55](https://youtube.com/watch?v=nldkPgp3aIA&t=535) 그 방식이 더 맞는 것 같아요.
+- [8:57](https://youtube.com/watch?v=nldkPgp3aIA&t=537) 그리고 보시면 클로 MD도
+- [8:58](https://youtube.com/watch?v=nldkPgp3aIA&t=538) 만들어졌습니다. 인덱스와 로그를
+- [9:00](https://youtube.com/watch?v=nldkPgp3aIA&t=540) 만들고 위키 안에 몇 개 폴더도
+- [9:01](https://youtube.com/watch?v=nldkPgp3aIA&t=541) 만들어 놨어요. 이제는 이렇게
+- [9:03](https://youtube.com/watch?v=nldkPgp3aIA&t=543) 말하네요. 자, 한번 해 보자고요.
+- [9:06](https://youtube.com/watch?v=nldkPgp3aIA&t=546) 첫 번째 소스를 IW 폴더에 넣고
+- [9:08](https://youtube.com/watch?v=nldkPgp3aIA&t=548) 가져오라고 말하는 거예요. 좋아요.
+- [9:10](https://youtube.com/watch?v=nldkPgp3aIA&t=550) 저는 지금 AI 2027이라는
+- [9:12](https://youtube.com/watch?v=nldkPgp3aIA&t=552) 웹사이트에 와 있어요. 아직 안 읽어
+- [9:14](https://youtube.com/watch?v=nldkPgp3aIA&t=554) 보셨다면 꽤 흥미롭게 읽을 만한
+- [9:16](https://youtube.com/watch?v=nldkPgp3aIA&t=556) 글이에요. 이걸 제 볼트에 넣고
+- [9:18](https://youtube.com/watch?v=nldkPgp3aIA&t=558) 싶다고 해 볼게요. 제가 할 수 있는
+- [9:20](https://youtube.com/watch?v=nldkPgp3aIA&t=560) 건 그냥 페이지 전체를 복수하는
+- [9:21](https://youtube.com/watch?v=nldkPgp3aIA&t=561) 거죠. 그럼 좀 이상하게 들어올 수도
+- [9:23](https://youtube.com/watch?v=nldkPgp3aIA&t=563) 있어요. 아니면 어브시디언 확장
+- [9:25](https://youtube.com/watch?v=nldkPgp3aIA&t=565) 프로그램을 쓰면 돼요. 웹에서 바로
+- [9:27](https://youtube.com/watch?v=nldkPgp3aIA&t=567) 글을 가져와서 볼트에 넣을 수
+- [9:29](https://youtube.com/watch?v=nldkPgp3aIA&t=569) 있습니다. 정말 쉽죠?이 이 확장
+- [9:31](https://youtube.com/watch?v=nldkPgp3aIA&t=571) 프로그램은 어시디언 웹 클리퍼예요.
+- [9:33](https://youtube.com/watch?v=nldkPgp3aIA&t=573) 크롬에 추가하면 됩니다. 원하는 글에
+- [9:36](https://youtube.com/watch?v=nldkPgp3aIA&t=576) 들어가서 확장 프로그램을 클릭하고
+- [9:38](https://youtube.com/watch?v=nldkPgp3aIA&t=578) 어브시디언 웹 클리퍼를 연 다음 그냥
+- [9:40](https://youtube.com/watch?v=nldkPgp3aIA&t=580) 볼트에 넣으면 됩니다. 그리고
+- [9:42](https://youtube.com/watch?v=nldkPgp3aIA&t=582) 여기서는 IAW로 설정해요. 실제로
+- [9:45](https://youtube.com/watch?v=nldkPgp3aIA&t=585) 들어갈 폴더가 여기거든요. 그다음
+- [9:47](https://youtube.com/watch?v=nldkPgp3aIA&t=587) 에드투 어브시디언을 누르고
+- [9:49](https://youtube.com/watch?v=nldkPgp3aIA&t=589) 어브시디언을 열면 됩니다. 이제
+- [9:52](https://youtube.com/watch?v=nldkPgp3aIA&t=592) JRAW 섹션을 보면 AI 2027
+- [9:54](https://youtube.com/watch?v=nldkPgp3aIA&t=594) 소스가 들어와 있어요. 제목도 소스로
+- [9:56](https://youtube.com/watch?v=nldkPgp3aIA&t=596) 잡혀 있고 아직 내용이 아주 많이
+- [9:58](https://youtube.com/watch?v=nldkPgp3aIA&t=598) 채워지진 않았는데 그건 클로드 코드에
+- [10:00](https://youtube.com/watch?v=nldkPgp3aIA&t=600) 름이 해 줄 거예요. 여기 파일이
+- [10:02](https://youtube.com/watch?v=nldkPgp3aIA&t=602) 있습니다. 클로드 코드를 열고 이렇게
+- [10:04](https://youtube.com/watch?v=nldkPgp3aIA&t=604) 말할 거예요. 좋아요. 방금 AI
+- [10:07](https://youtube.com/watch?v=nldkPgp3aIA&t=607) 2027이라는 글을 RAW에
+- [10:09](https://youtube.com/watch?v=nldkPgp3aIA&t=609) 넣었어요. 이제 AI 2027라는
+- [10:11](https://youtube.com/watch?v=nldkPgp3aIA&t=611) 글을 RAW에 넣었어요. 이걸 가져와
+- [10:13](https://youtube.com/watch?v=nldkPgp3aIA&t=613) 정리해 주실 수 있나요? 몇 가지
+- [10:15](https://youtube.com/watch?v=nldkPgp3aIA&t=615) 질문이 나올 수도 있어요. 무언가를
+- [10:17](https://youtube.com/watch?v=nldkPgp3aIA&t=617) 가져와 정리하기 전에 이렇게 말해
+- [10:18](https://youtube.com/watch?v=nldkPgp3aIA&t=618) 두는 것도 좋아요. 참고로이
+- [10:20](https://youtube.com/watch?v=nldkPgp3aIA&t=620) 프로젝트는이 프로젝트는 제 세컨드
+- [10:22](https://youtube.com/watch?v=nldkPgp3aIA&t=622) 브레인 용도예요. 개인적인 거,
+- [10:24](https://youtube.com/watch?v=nldkPgp3aIA&t=624) 비즈니스 관련 뭐든 괜찮아요. 아니면
+- [10:27](https://youtube.com/watch?v=nldkPgp3aIA&t=627) 그냥 리서치 프로젝트라고 해도
+- [10:28](https://youtube.com/watch?v=nldkPgp3aIA&t=628) 됩니다. 여기에는 제가 배우고 싶은
+- [10:30](https://youtube.com/watch?v=nldkPgp3aIA&t=630) 글이랑 알고 있는 것들을 다 넣을
+- [10:31](https://youtube.com/watch?v=nldkPgp3aIA&t=631) 거예요. 보셨듯이 프로젝트는 여러
+- [10:34](https://youtube.com/watch?v=nldkPgp3aIA&t=634) 방식으로 설정할 수 있어요.
+- [10:36](https://youtube.com/watch?v=nldkPgp3aIA&t=636) 유튜브용으로도 만들 수 있고 개인
+- [10:37](https://youtube.com/watch?v=nldkPgp3aIA&t=637) 세컨드 브레인용으로도 만들 수
+- [10:39](https://youtube.com/watch?v=nldkPgp3aIA&t=639) 있어요. 이제 이건이 글을 읽으면서이
+- [10:42](https://youtube.com/watch?v=nldkPgp3aIA&t=642) 내용을 익히 어디에 넣을지 판단할
+- [10:43](https://youtube.com/watch?v=nldkPgp3aIA&t=643) 거예요. 이걸 그냥 MD파이 하나로만
+- [10:46](https://youtube.com/watch?v=nldkPgp3aIA&t=646) 만들지는 않아요. 다섯 개를 만들
+- [10:48](https://youtube.com/watch?v=nldkPgp3aIA&t=648) 수도 있고 열 개를 만들 수도
+- [10:49](https://youtube.com/watch?v=nldkPgp3aIA&t=649) 있어요. 그리고 만들어진 각 섹션끼리
+- [10:52](https://youtube.com/watch?v=nldkPgp3aIA&t=652) 서로 연결도 생길 거예요.
+- [10:55](https://youtube.com/watch?v=nldkPgp3aIA&t=655) 즉 나름대로 청킹을 하고 있는
+- [10:56](https://youtube.com/watch?v=nldkPgp3aIA&t=656) 셈이죠. 여기서 하나 짓고 넘어가면이
+- [10:58](https://youtube.com/watch?v=nldkPgp3aIA&t=658) 화장 프로그램에서 여기로 가서 옵션을
+- [11:01](https://youtube.com/watch?v=nldkPgp3aIA&t=661) 열어보면 기본으로 폴더가 저장되는
+- [11:02](https://youtube.com/watch?v=nldkPgp3aIA&t=662) 위치를 바꿀 수 있어요. 로케이션
+- [11:05](https://youtube.com/watch?v=nldkPgp3aIA&t=665) 섹션에 있습니다. 기본값은
+- [11:07](https://youtube.com/watch?v=nldkPgp3aIA&t=667) 클리핑즈인데 그냥 RAW로 바꿔
+- [11:10](https://youtube.com/watch?v=nldkPgp3aIA&t=670) 주세요. 알겠죠? 그러면 이렇게 여러
+- [11:13](https://youtube.com/watch?v=nldkPgp3aIA&t=673) 질문이 다시 돌아와요. 맞죠? 예를
+- [11:16](https://youtube.com/watch?v=nldkPgp3aIA&t=676) 들면이 글의 핵심 요점은 이렇습니다.
+- [11:17](https://youtube.com/watch?v=nldkPgp3aIA&t=677) 어쩌고저쩌고 하면서요. 그리고 이제
+- [11:20](https://youtube.com/watch?v=nldkPgp3aIA&t=680) 이런 걸 물어요.이 글에서 뭘
+- [11:21](https://youtube.com/watch?v=nldkPgp3aIA&t=681) 강조하고 싶나요? 초점은 뭐죠? 어느
+- [11:24](https://youtube.com/watch?v=nldkPgp3aIA&t=684) 정도까지 세세하게 볼 건가요? 계획은
+- [11:27](https://youtube.com/watch?v=nldkPgp3aIA&t=687) 뭔가요? 아주 꼼꼼하게요. 저는
+- [11:29](https://youtube.com/watch?v=nldkPgp3aIA&t=689) AI가 어디로 가는지 보는게 제
+- [11:31](https://youtube.com/watch?v=nldkPgp3aIA&t=691) 관심사예요.
+- [11:32](https://youtube.com/watch?v=nldkPgp3aIA&t=692) 그리고 참고로 지금이 볼트에 만드는이
+- [11:35](https://youtube.com/watch?v=nldkPgp3aIA&t=695) 프로젝트는 기본적으로 AI 관련
+- [11:37](https://youtube.com/watch?v=nldkPgp3aIA&t=697) 리서치를 쏟아 넣는 제 공간이 될
+- [11:39](https://youtube.com/watch?v=nldkPgp3aIA&t=699) 거예요.
+- [11:40](https://youtube.com/watch?v=nldkPgp3aIA&t=700) 그러니까 이걸 잘 정리해 줘서 내가
+- [11:42](https://youtube.com/watch?v=nldkPgp3aIA&t=702) 검색도 할 수 있고 생각도 계속
+- [11:43](https://youtube.com/watch?v=nldkPgp3aIA&t=703) 이어갈 수 있게 해 주세요. 이런
+- [11:45](https://youtube.com/watch?v=nldkPgp3aIA&t=705) 식으로 더 많은 맥락을 줘서
+- [11:47](https://youtube.com/watch?v=nldkPgp3aIA&t=707) 프로젝트를 계속 쌓아가는 모습이라고
+- [11:49](https://youtube.com/watch?v=nldkPgp3aIA&t=709) 보시면 됩니다.
+- [11:52](https://youtube.com/watch?v=nldkPgp3aIA&t=712) 그래서 저는 여기서 그래프 뷰로 바꿔
+- [11:54](https://youtube.com/watch?v=nldkPgp3aIA&t=714) 볼 텐데 위키 파일들이 하나씩
+- [11:56](https://youtube.com/watch?v=nldkPgp3aIA&t=716) 만들어지는 과정을 보면 재미있을 것
+- [11:58](https://youtube.com/watch?v=nldkPgp3aIA&t=718) 같아요.
+- [11:59](https://youtube.com/watch?v=nldkPgp3aIA&t=719) 관련된 연결들이 전부 만들어질 거고
+- [12:02](https://youtube.com/watch?v=nldkPgp3aIA&t=722) 그걸 실시간으로 볼 수 있습니다.
+- [12:05](https://youtube.com/watch?v=nldkPgp3aIA&t=725) 좋아요. 이제 위키 페이지가 전부
+- [12:07](https://youtube.com/watch?v=nldkPgp3aIA&t=727) 만들어지고 있고 원래 AI 2027
+- [12:09](https://youtube.com/watch?v=nldkPgp3aIA&t=729) 글의 내용이 워낙 많아서 약 25개
+- [12:11](https://youtube.com/watch?v=nldkPgp3aIA&t=731) 정도 만들 거라고 나왔네요. 좋아요.
+- [12:14](https://youtube.com/watch?v=nldkPgp3aIA&t=734) 첫 번째가 방금 들어왔고 두 번째도
+- [12:16](https://youtube.com/watch?v=nldkPgp3aIA&t=736) 방금 추가됐습니다.
+- [12:18](https://youtube.com/watch?v=nldkPgp3aIA&t=738) 이제 허브가 어디고 그냥 작은 개별
+- [12:20](https://youtube.com/watch?v=nldkPgp3aIA&t=740) 노드만 있는지도 보이기 시작하실
+- [12:21](https://youtube.com/watch?v=nldkPgp3aIA&t=741) 거예요. 이건 큰 허브입니다. 일라이
+- [12:25](https://youtube.com/watch?v=nldkPgp3aIA&t=745) 하머스 데니얼 같은 이름이 보이고요.
+- [12:27](https://youtube.com/watch?v=nldkPgp3aIA&t=747) 여기서도 연결 관계가 보입니다. AI
+- [12:29](https://youtube.com/watch?v=nldkPgp3aIA&t=749) 거버넌스, 오픈 브레인, 슈퍼휴먼
+- [12:32](https://youtube.com/watch?v=nldkPgp3aIA&t=752) 코더 같은 것들과의 여러 관계도
+- [12:33](https://youtube.com/watch?v=nldkPgp3aIA&t=753) 보입니다. 좋아요.이 인제스트에는 약
+- [12:36](https://youtube.com/watch?v=nldkPgp3aIA&t=756) 10분 정도 걸렸습니다. 그러니까
+- [12:38](https://youtube.com/watch?v=nldkPgp3aIA&t=758) 가끔은 전부 읽고 정리하는데 조금
+- [12:40](https://youtube.com/watch?v=nldkPgp3aIA&t=760) 기다려야 하지만 물론 힘든 작업은
+- [12:43](https://youtube.com/watch?v=nldkPgp3aIA&t=763) 많이 대신해 줍니다.
+- [12:47](https://youtube.com/watch?v=nldkPgp3aIA&t=767) 제가 유튜브 트랜스크립프트 36개를
+- [12:48](https://youtube.com/watch?v=nldkPgp3aIA&t=768) 한꺼번에 올렸을 때는 약 14분
+- [12:50](https://youtube.com/watch?v=nldkPgp3aIA&t=770) 걸렸습니다. 상황에 따라 좀 다르긴
+- [12:52](https://youtube.com/watch?v=nldkPgp3aIA&t=772) 한데 미키 페이지 23개를 만들었고
+- [12:54](https://youtube.com/watch?v=nldkPgp3aIA&t=774) 소스도 있습니다. 사람 여섯 명 조직
+- [12:57](https://youtube.com/watch?v=nldkPgp3aIA&t=777) 다섯 개 AI 시스템 페이지 한 개가
+- [13:00](https://youtube.com/watch?v=nldkPgp3aIA&t=780) 있고 기술적 정렬과 지정학 분석 같은
+- [13:03](https://youtube.com/watch?v=nldkPgp3aIA&t=783) 개념도 들어 있습니다. 그 관계를 더
+- [13:06](https://youtube.com/watch?v=nldkPgp3aIA&t=786) 잘 만들고 구조를 더 좋게 하도록
+- [13:08](https://youtube.com/watch?v=nldkPgp3aIA&t=788) 질문도 던집니다.
+- [13:11](https://youtube.com/watch?v=nldkPgp3aIA&t=791) 이제 이걸 조금 더 깊게 열어서
+- [13:12](https://youtube.com/watch?v=nldkPgp3aIA&t=792) 실제로 여기서 뭘 했는지 보겠습니다.
+- [13:15](https://youtube.com/watch?v=nldkPgp3aIA&t=795) 일단 이게 주요 관계가 다 들어 있는
+- [13:17](https://youtube.com/watch?v=nldkPgp3aIA&t=797) 소스입니다.
+- [13:18](https://youtube.com/watch?v=nldkPgp3aIA&t=798) 그러니까 다른 글을 더 넣기 시작하면
+- [13:21](https://youtube.com/watch?v=nldkPgp3aIA&t=801) 또 다른 큰 노드들이 보일 거고 어떤
+- [13:23](https://youtube.com/watch?v=nldkPgp3aIA&t=803) 경우에는 우리가 올린 다른 자료들과
+- [13:25](https://youtube.com/watch?v=nldkPgp3aIA&t=805) 컴퓨터 스케일링 같은 관계도 생길
+- [13:27](https://youtube.com/watch?v=nldkPgp3aIA&t=807) 겁니다.
+- [13:29](https://youtube.com/watch?v=nldkPgp3aIA&t=809) 그럼 메인 소스를 클릭해 보면 어떤
+- [13:31](https://youtube.com/watch?v=nldkPgp3aIA&t=811) 태그를 잡았는지 볼 수 있습니다.
+- [13:33](https://youtube.com/watch?v=nldkPgp3aIA&t=813) 작성자 정보도 있고 여기저기 눌러볼
+- [13:35](https://youtube.com/watch?v=nldkPgp3aIA&t=815) 수 있습니다. 오픈 AI로 가는
+- [13:37](https://youtube.com/watch?v=nldkPgp3aIA&t=817) 링크가 있네요. 좋아요. 오픈 AI가
+- [13:40](https://youtube.com/watch?v=nldkPgp3aIA&t=820) 뭔지 볼까요? AI 2027 안에
+- [13:42](https://youtube.com/watch?v=nldkPgp3aIA&t=822) 청고 문원도 있고요. 오픈 AI와
+- [13:44](https://youtube.com/watch?v=nldkPgp3aIA&t=824) 연결된 다른 항목들도 있습니다. 마델
+- [13:46](https://youtube.com/watch?v=nldkPgp3aIA&t=826) 스펙도 있네요. 좋아요. 마델
+- [13:48](https://youtube.com/watch?v=nldkPgp3aIA&t=828) 스펙으로 들어왔습니다. 한번 보죠.
+- [13:51](https://youtube.com/watch?v=nldkPgp3aIA&t=831) 마델 스펙에 대한 다른 내용도 볼 수
+- [13:52](https://youtube.com/watch?v=nldkPgp3aIA&t=832) 있습니다. 그리고 얼램신 모델이
+- [13:54](https://youtube.com/watch?v=nldkPgp3aIA&t=834) 어떻게 작동하는지도 볼 수 있습니다.
+- [13:56](https://youtube.com/watch?v=nldkPgp3aIA&t=836) 이렇게 관계가 다 연결되는게 정말
+- [13:58](https://youtube.com/watch?v=nldkPgp3aIA&t=838) 정말 멋집니다. 우리가 본 건 하나의
+- [14:01](https://youtube.com/watch?v=nldkPgp3aIA&t=841) 글에서 뽑아내서 자동으로 정리하고
+- [14:02](https://youtube.com/watch?v=nldkPgp3aIA&t=842) 연결한 겁니다. 그럼 이제 궁금한 건
+- [14:05](https://youtube.com/watch?v=nldkPgp3aIA&t=845) 여기서 뭘 하느냐는 거죠?이 이 환경
+- [14:07](https://youtube.com/watch?v=nldkPgp3aIA&t=847) 안에서 바로 검색할 수도 있고 다른
+- [14:09](https://youtube.com/watch?v=nldkPgp3aIA&t=849) 곳에서 검색할 수도 있습니다. 그건
+- [14:12](https://youtube.com/watch?v=nldkPgp3aIA&t=852) 전적으로 어떻게 쓰고 싶은지에 달려
+- [14:13](https://youtube.com/watch?v=nldkPgp3aIA&t=853) 있습니다. 예를 들어 제 유튜브
+- [14:15](https://youtube.com/watch?v=nldkPgp3aIA&t=855) 프로젝트에서는 아마 이걸 그냥 여기
+- [14:17](https://youtube.com/watch?v=nldkPgp3aIA&t=857) 둔 채로 쓸 것 같습니다. 유튜브에
+- [14:19](https://youtube.com/watch?v=nldkPgp3aIA&t=859) 대해 질문하고 싶거나 이걸
+- [14:20](https://youtube.com/watch?v=nldkPgp3aIA&t=860) 웹사이트처럼 바꾸고 싶을 때도 여기서
+- [14:21](https://youtube.com/watch?v=nldkPgp3aIA&t=861) 바로 할 수 있습니다. 또 필요하면
+- [14:24](https://youtube.com/watch?v=nldkPgp3aIA&t=864) 다른 프로젝트를이 폴더에 연결할 수도
+- [14:26](https://youtube.com/watch?v=nldkPgp3aIA&t=866) 있습니다. 필요한게 다 여기 있고
+- [14:28](https://youtube.com/watch?v=nldkPgp3aIA&t=868) 위키를 훑고 인덱스도 읽을 수 있고
+- [14:30](https://youtube.com/watch?v=nldkPgp3aIA&t=870) 클럼들을 줘서 프로젝트 구조까지
+- [14:32](https://youtube.com/watch?v=nldkPgp3aIA&t=872) 이야기할 수 있으니까요. 예를 들면
+- [14:35](https://youtube.com/watch?v=nldkPgp3aIA&t=875) 이건 그냥 책.
+- [14:37](https://youtube.com/watch?v=nldkPgp3aIA&t=877) 세컨드 브레인으로 회의 녹음이나 클릭
+- [14:39](https://youtube.com/watch?v=nldkPgp3aIA&t=879) 채널, 요약 같은 것들을 다 넣어
+- [14:41](https://youtube.com/watch?v=nldkPgp3aIA&t=881) 두는 곳입니다.
+- [14:45](https://youtube.com/watch?v=nldkPgp3aIA&t=885) 이건 제 이그 ex젝티브 어시스턴트에
+- [14:46](https://youtube.com/watch?v=nldkPgp3aIA&t=886) 쓰고 싶은 기능입니다. 그래서 여기
+- [14:48](https://youtube.com/watch?v=nldkPgp3aIA&t=888) 허이라는 이그 ex젝티브 어시턴트에서
+- [14:49](https://youtube.com/watch?v=nldkPgp3aIA&t=889) 제가 한 건이 클로드로가 보면 MD
+- [14:52](https://youtube.com/watch?v=nldkPgp3aIA&t=892) MD를 보면 위키 패스가 있는 걸 볼
+- [14:53](https://youtube.com/watch?v=nldkPgp3aIA&t=893) 수 있습니다. 그래서 제 얘기나 제
+- [14:56](https://youtube.com/watch?v=nldkPgp3aIA&t=896) 비즈니스에 대해 아직 모르는게 있으면
+- [14:58](https://youtube.com/watch?v=nldkPgp3aIA&t=898) 기본적으로 브레임 볼트로 가면
+- [15:00](https://youtube.com/watch?v=nldkPgp3aIA&t=900) 됩니다.
+- [15:02](https://youtube.com/watch?v=nldkPgp3aIA&t=902) 그 디렉터리로 들어가서 미키를 읽는
+- [15:03](https://youtube.com/watch?v=nldkPgp3aIA&t=903) 거예요. 하트캐시도 읽을 수 있는데
+- [15:05](https://youtube.com/watch?v=nldkPgp3aIA&t=905) 이건 조금 있다 설명하겠습니다.
+- [15:07](https://youtube.com/watch?v=nldkPgp3aIA&t=907) 인덱스도 읽을 수 있고 도메인
+- [15:09](https://youtube.com/watch?v=nldkPgp3aIA&t=909) 서인덱스도 읽을 수 있고 여기 있는
+- [15:10](https://youtube.com/watch?v=nldkPgp3aIA&t=910) 걸 전부 검색할 수도 있습니다.
+- [15:13](https://youtube.com/watch?v=nldkPgp3aIA&t=913) 그리고 저는 정말 필요할 때만 위키를
+- [15:14](https://youtube.com/watch?v=nldkPgp3aIA&t=914) 읽으라고 했습니다. 굳이 안 읽어도
+- [15:17](https://youtube.com/watch?v=nldkPgp3aIA&t=917) 되는 작업들도 있으니까요. 이건 전부
+- [15:19](https://youtube.com/watch?v=nldkPgp3aIA&t=919) 제 비즈니스 지식입니다. 혹시 제
+- [15:21](https://youtube.com/watch?v=nldkPgp3aIA&t=921) 이그 제T티브 어시스턴트 설정 영상을
+- [15:23](https://youtube.com/watch?v=nldkPgp3aIA&t=923) 보신 분들은 아시겠지만 예전에는이
+- [15:25](https://youtube.com/watch?v=nldkPgp3aIA&t=925) 프로젝트 안에서 칸텍스트 파일로
+- [15:27](https://youtube.com/watch?v=nldkPgp3aIA&t=927) 이렇게 했습니다. 그런데이 방식으로
+- [15:29](https://youtube.com/watch?v=nldkPgp3aIA&t=929) 바꾸고 나서는이 프로젝트에서 실제로
+- [15:31](https://youtube.com/watch?v=nldkPgp3aIA&t=931) 쓰는 토큰수가 줄어드는 걸 봤습니다.
+- [15:33](https://youtube.com/watch?v=nldkPgp3aIA&t=933) 하트캐시 얘기를 하자면 제 유튜브
+- [15:36](https://youtube.com/watch?v=nldkPgp3aIA&t=936) 쪽에는 이게 없었습니다.
+- [15:39](https://youtube.com/watch?v=nldkPgp3aIA&t=939) 그래서 유튜브로가 보면 하트캐시가
+- [15:40](https://youtube.com/watch?v=nldkPgp3aIA&t=940) 없는 걸 볼 수 있습니다. 하지만
+- [15:42](https://youtube.com/watch?v=nldkPgp3aIA&t=942) 위키 안에 헛 브레인으로 가면 여기
+- [15:44](https://youtube.com/watch?v=nldkPgp3aIA&t=944) 하트 MD가 있는 걸 볼 수
+- [15:45](https://youtube.com/watch?v=nldkPgp3aIA&t=945) 있습니다.
+- [15:47](https://youtube.com/watch?v=nldkPgp3aIA&t=947) 대략 500단어 또는 500자 정도를
+- [15:49](https://youtube.com/watch?v=nldkPgp3aIA&t=949) 저장하는 캐시인데 네이트가 방금 준
+- [15:51](https://youtube.com/watch?v=nldkPgp3aIA&t=951) 최신 정보나 우리가 방금 나눈 대화
+- [15:53](https://youtube.com/watch?v=nldkPgp3aIA&t=953) 같은 걸 담아둡니다. 제 이그
+- [15:55](https://youtube.com/watch?v=nldkPgp3aIA&t=955) 제커티브 어시스턴트 맥락에서는 이게
+- [15:57](https://youtube.com/watch?v=nldkPgp3aIA&t=957) 정말 유용합니다. 여러 위키 페이지를
+- [15:59](https://youtube.com/watch?v=nldkPgp3aIA&t=959) 일일이 크롤링하지 않아도 되게 해
+- [16:01](https://youtube.com/watch?v=nldkPgp3aIA&t=961) 주니까요. 하지만 유튜브
+- [16:03](https://youtube.com/watch?v=nldkPgp3aIA&t=963) 트랜스크리프트 프로젝트 같은 경우에는
+- [16:04](https://youtube.com/watch?v=nldkPgp3aIA&t=964) 하트캐시가 크게 필요하지 않습니다.
+- [16:06](https://youtube.com/watch?v=nldkPgp3aIA&t=966) 그리고 제가 언급만 하고 자세히는 안
+- [16:08](https://youtube.com/watch?v=nldkPgp3aIA&t=968) 한게 하나 더 있는데 바로
+- [16:10](https://youtube.com/watch?v=nldkPgp3aIA&t=970) 린팅입니다.
+- [16:11](https://youtube.com/watch?v=nldkPgp3aIA&t=971) 카퍼시는 위키 전체 헬스 책을 돌려서
+- [16:13](https://youtube.com/watch?v=nldkPgp3aIA&t=973) 일관성 없는 데이터를 찾고 빠진
+- [16:15](https://youtube.com/watch?v=nldkPgp3aIA&t=975) 데이터를 웹 검색으로 메우고 체클
+- [16:16](https://youtube.com/watch?v=nldkPgp3aIA&t=976) 후보가 될 만한 흥미로운 연결도
+- [16:17](https://youtube.com/watch?v=nldkPgp3aIA&t=977) 찾는다고 말합니다. 데이터는 웹
+- [16:19](https://youtube.com/watch?v=nldkPgp3aIA&t=979) 검색으로 보완하고 체클 후보가 될
+- [16:21](https://youtube.com/watch?v=nldkPgp3aIA&t=981) 만한 흥미로운 연결도 찾아낸다고
+- [16:22](https://youtube.com/watch?v=nldkPgp3aIA&t=982) 합니다. 그러니까 메일이든 매주든
+- [16:25](https://youtube.com/watch?v=nldkPgp3aIA&t=985) 원할 때 민트를 돌려서 모든게 확장
+- [16:27](https://youtube.com/watch?v=nldkPgp3aIA&t=987) 가능하고 올바른 구조로 정리돼 있는지
+- [16:29](https://youtube.com/watch?v=nldkPgp3aIA&t=989) 확인해 주는 겁니다. 심지어 다시
+- [16:32](https://youtube.com/watch?v=nldkPgp3aIA&t=992) 와서 이걸 완전히 이해하지
+- [16:34](https://youtube.com/watch?v=nldkPgp3aIA&t=994) 못하겠어요. 조금 더 정보를 주실 수
+- [16:36](https://youtube.com/watch?v=nldkPgp3aIA&t=996) 있나요? 아니면 도움이 될 만한
+- [16:38](https://youtube.com/watch?v=nldkPgp3aIA&t=998) 자료를 더 가져올 수 있나요? 라고
+- [16:39](https://youtube.com/watch?v=nldkPgp3aIA&t=999) 말할 수도 있습니다. 그래서
+- [16:41](https://youtube.com/watch?v=nldkPgp3aIA&t=1001) 마지막으로 다루고 싶은 질문은 이게
+- [16:43](https://youtube.com/watch?v=nldkPgp3aIA&t=1003) 서맨틱 서치의 레이지를 없애
+- [16:45](https://youtube.com/watch?v=nldkPgp3aIA&t=1005) 버리느냐는 겁니다. 답은 아니지만
+- [16:47](https://youtube.com/watch?v=nldkPgp3aIA&t=1007) 어느 정도는 맞습니다. 프로젝트의
+- [16:50](https://youtube.com/watch?v=nldkPgp3aIA&t=1010) 목표와 컨텍스트의 목표 그리고 얼마나
+- [16:51](https://youtube.com/watch?v=nldkPgp3aIA&t=1011) 많은 컨텍스트를 갖고 있느냐의
+- [16:52](https://youtube.com/watch?v=nldkPgp3aIA&t=1012) 문제입니다. 그래서 클로드 코드로
+- [16:55](https://youtube.com/watch?v=nldkPgp3aIA&t=1015) 아주 간단한 표를 하나 만들었습니다.
+- [16:57](https://youtube.com/watch?v=nldkPgp3aIA&t=1017) 저는 허브레인의 카워퍼시의 램 지식에
+- [16:59](https://youtube.com/watch?v=nldkPgp3aIA&t=1019) 대한 정보를 잔뜩 넣어두고 그냥
+- [17:00](https://youtube.com/watch?v=nldkPgp3aIA&t=1020) 이렇게 말했어요. 이걸 좀 최대한
+- [17:03](https://youtube.com/watch?v=nldkPgp3aIA&t=1023) 쉽게 설명해 주고 아주 간단하게
+- [17:05](https://youtube.com/watch?v=nldkPgp3aIA&t=1025) 정리해서 일반적인 서멘틱 서치
+- [17:07](https://youtube.com/watch?v=nldkPgp3aIA&t=1027) 레이즈랑 비교해 줄래?
+- [17:11](https://youtube.com/watch?v=nldkPgp3aIA&t=1031) 그러자 카워퍼시의 아이디어를
+- [17:13](https://youtube.com/watch?v=nldkPgp3aIA&t=1033) 찾아냈습니다. 데이터베이스 대신 잘
+- [17:15](https://youtube.com/watch?v=nldkPgp3aIA&t=1035) 정리된 마크다운 파일만 해매 주는
+- [17:16](https://youtube.com/watch?v=nldkPgp3aIA&t=1036) 방식이고 여기서는 실제 서메틱 서치와
+- [17:18](https://youtube.com/watch?v=nldkPgp3aIA&t=1038) 비교하고 있습니다. 사실 그냥 여기서
+- [17:20](https://youtube.com/watch?v=nldkPgp3aIA&t=1040) 읽는게 낫겠네요.
+- [17:23](https://youtube.com/watch?v=nldkPgp3aIA&t=1043) 즉 유사도 검색이 아니라 인덱스를
+- [17:24](https://youtube.com/watch?v=nldkPgp3aIA&t=1044) 읽고 링크를 따라가며 찾는
+- [17:26](https://youtube.com/watch?v=nldkPgp3aIA&t=1046) 방식입니다. 그래서 단순히이 청크들이
+- [17:28](https://youtube.com/watch?v=nldkPgp3aIA&t=1048) 비슷해 보이네라고 하는게 아니라
+- [17:30](https://youtube.com/watch?v=nldkPgp3aIA&t=1050) 링크라서 관계를 더 깊이 이해하게
+- [17:32](https://youtube.com/watch?v=nldkPgp3aIA&t=1052) 됩니다. 인프라 관점에서는 말 그대로
+- [17:34](https://youtube.com/watch?v=nldkPgp3aIA&t=1054) 마크다운만 있으면 됩니다. 그러니까
+- [17:36](https://youtube.com/watch?v=nldkPgp3aIA&t=1056) 아까 말했듯이 어브시디언도 필요
+- [17:37](https://youtube.com/watch?v=nldkPgp3aIA&t=1057) 없습니다.이 마크다운 파일들만 있으면
+- [17:40](https://youtube.com/watch?v=nldkPgp3aIA&t=1060) 됩니다. 반면 서맨틱 서치를 쓰려면
+- [17:42](https://youtube.com/watch?v=nldkPgp3aIA&t=1062) 인베딩 모델이 필요합니다. 벡터
+- [17:44](https://youtube.com/watch?v=nldkPgp3aIA&t=1064) 데이터베이스와 청킹 파이프라인도
+- [17:45](https://youtube.com/watch?v=nldkPgp3aIA&t=1065) 필요하죠. 반면 이쪽 비용은 거의
+- [17:47](https://youtube.com/watch?v=nldkPgp3aIA&t=1067) 공차입니다. 토큰 비용 정도만
+- [17:49](https://youtube.com/watch?v=nldkPgp3aIA&t=1069) 들고요. 반면 저쪽은 계속되는 연상과
+- [17:51](https://youtube.com/watch?v=nldkPgp3aIA&t=1071) 저장 비용이 들 수 있습니다. 유지
+- [17:53](https://youtube.com/watch?v=nldkPgp3aIA&t=1073) 보수할 때도 그냥 린트 돌리고
+- [17:55](https://youtube.com/watch?v=nldkPgp3aIA&t=1075) 정리하고 그를 더 추가하면 됩니다.
+- [17:58](https://youtube.com/watch?v=nldkPgp3aIA&t=1078) 무언가 바뀌면 다시 인베딩하는 대신
+- [18:00](https://youtube.com/watch?v=nldkPgp3aIA&t=1080) 그냥 컨텍스트를 더 넣어 주면
+- [18:02](https://youtube.com/watch?v=nldkPgp3aIA&t=1082) 됩니다. 하지만 지금 램 날리지
+- [18:04](https://youtube.com/watch?v=nldkPgp3aIA&t=1084) 위키의 약점은 당연히 기업 규모로
+- [18:06](https://youtube.com/watch?v=nldkPgp3aIA&t=1086) 크게 확장되기 어렵다는 겁니다. 결국
+- [18:09](https://youtube.com/watch?v=nldkPgp3aIA&t=1089) 파일 묶음일 뿐이니까요.
+- [18:11](https://youtube.com/watch?v=nldkPgp3aIA&t=1091) 그래서이 부분은 일반적인 서맨틱
+- [18:13](https://youtube.com/watch?v=nldkPgp3aIA&t=1093) 서치나리지 그래프, 나잇레지 같은
+- [18:15](https://youtube.com/watch?v=nldkPgp3aIA&t=1095) 도구를 쓰는 것보다 점점 더 비싸질
+- [18:17](https://youtube.com/watch?v=nldkPgp3aIA&t=1097) 가능성이 큽니다.
+- [18:22](https://youtube.com/watch?v=nldkPgp3aIA&t=1102) 인덱스가 잘된 수백페이지 정도라면
+- [18:23](https://youtube.com/watch?v=nldkPgp3aIA&t=1103) 위키 그래프로 충분합니다. 하지만
+- [18:26](https://youtube.com/watch?v=nldkPgp3aIA&t=1106) 문서가 수백만 개로 늘어나면 적어도
+- [18:28](https://youtube.com/watch?v=nldkPgp3aIA&t=1108) 2026년 4월 기준으로 지금의 모델
+- [18:30](https://youtube.com/watch?v=nldkPgp3aIA&t=1110) 상태를 생각했을 때는 전통적인
+- [18:32](https://youtube.com/watch?v=nldkPgp3aIA&t=1112) Rage 파이프라인을 쓰는 쪽이
+- [18:33](https://youtube.com/watch?v=nldkPgp3aIA&t=1113) 좋습니다.
+- [18:35](https://youtube.com/watch?v=nldkPgp3aIA&t=1115) 오늘은 여기까지 하겠습니다. 새로운
+- [18:38](https://youtube.com/watch?v=nldkPgp3aIA&t=1118) 걸 배우셨거나 영상이 즐거우셨길
+- [18:39](https://youtube.com/watch?v=nldkPgp3aIA&t=1119) 바랍니다. 그랬다면 좋아요
+- [18:41](https://youtube.com/watch?v=nldkPgp3aIA&t=1121) 부탁드립니다. 큰 도움이 됩니다.
+- [18:43](https://youtube.com/watch?v=nldkPgp3aIA&t=1123) 그리고이 영상 다음으로 직접 나만의
+- [18:45](https://youtube.com/watch?v=nldkPgp3aIA&t=1125) 이그 제티브 어시스턴트를 만들고이
+- [18:47](https://youtube.com/watch?v=nldkPgp3aIA&t=1127) 어브시디언 볼트에 연결하는 방법이
+- [18:48](https://youtube.com/watch?v=nldkPgp3aIA&t=1128) 궁금하다면 꼭 위에 있는이 영상을
+- [18:49](https://youtube.com/watch?v=nldkPgp3aIA&t=1129) 보세요. 제가 이그 제티브
+- [18:51](https://youtube.com/watch?v=nldkPgp3aIA&t=1131) 어시스턴트를 어떻게 만들었는지 그리고
+- [18:53](https://youtube.com/watch?v=nldkPgp3aIA&t=1133) 어떤 관점으로 생각해야 하는지도
+- [18:55](https://youtube.com/watch?v=nldkPgp3aIA&t=1135) 설명합니다. 거기서 뵙면 좋겠고
+- [18:57](https://youtube.com/watch?v=nldkPgp3aIA&t=1137) 아니면
