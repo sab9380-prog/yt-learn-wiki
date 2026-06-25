@@ -1,0 +1,561 @@
+---
+title: "The Multi-Agent Architecture That Actually Ships — Luke Alvoeiro, Factory"
+source_url: https://youtube.com/watch?v=ow1we5PzK-o
+video_id: ow1we5PzK-o
+source_type: youtube
+lang: en
+analyzed: 2026-06-15
+category: 일반학습
+status: active
+---
+# The Multi-Agent Architecture That Actually Ships — Luke Alvoeiro, Factory
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** Luke는 Factory에서 Missions라는 멀티 에이전트 시스템을 소개합니다. 현재 소프트웨어 개발의 병목점은 지능이 아닌 인간의 주의력이라고 주장하며, 이를 해결하기 위해 16일 동안 자율적으로 실행되는 에이전트 팀 시스템을 개발했습니다. Missions는 Orchestrator(기획), Workers(구현), Validators(검증)의 3역할 구조로 작동하며, 직렬 실행과 구조화된 핸드오프를 통해 에러율을 극적으로 낮췄습니다. 핵심은 코드 작성 전에 정의하는 Validation Contract로, 구현과 독립적으로 정확성을 정의합니다.
+- **Core Message:** 소프트웨어 개발의 병목점은 지능이 아닌 인간의 주의력이며, 이를 해결하기 위해서는 단순한 AI 에이전트가 아닌 구조화된 멀티 에이전트 시스템이 필요하다
+> The bottleneck in software engineering nowadays is not intelligence. It's now limited by human attention.
+> Tests written after implementation don't catch bugs. They confirm decisions.
+> You're only as strong as your weakest link. And if you're locked into one model provider, then you're constrained by that family's weakest capability.
+❗ 16일간 연속 실행되는 최장 미션 기록을 달성했으며, 30일까지 가능할 것으로 예상
+❗ 대부분의 실행 시간은 토큰 생성이 아닌 실제 애플리케이션과 상호작용하는 QA 검증에 소요됨
+❗ 완성된 코드의 50%가 테스트 코드이며, 90% 코드 커버리지 달성
+
+## 🚀 실행 (Execute)
+
+## 📝 자막 전문
+- [0:07](https://youtube.com/watch?v=ow1we5PzK-o&t=7) [music]
+- [0:15](https://youtube.com/watch?v=ow1we5PzK-o&t=15) >> Hi everyone. My name is Luke and my goal
+- [0:18](https://youtube.com/watch?v=ow1we5PzK-o&t=18) is that 20 minutes from now you'll be
+- [0:20](https://youtube.com/watch?v=ow1we5PzK-o&t=20) able to assemble agent teams that can
+- [0:22](https://youtube.com/watch?v=ow1we5PzK-o&t=22) complete tasks orders of magnitude
+- [0:24](https://youtube.com/watch?v=ow1we5PzK-o&t=24) harder than what you can complete with a
+- [0:25](https://youtube.com/watch?v=ow1we5PzK-o&t=25) single agent today.
+- [0:27](https://youtube.com/watch?v=ow1we5PzK-o&t=27) A little bit about me. So
+- [0:30](https://youtube.com/watch?v=ow1we5PzK-o&t=30) I come from a background in dev tools.
+- [0:32](https://youtube.com/watch?v=ow1we5PzK-o&t=32) About 2 and 1/2 years ago I started a
+- [0:34](https://youtube.com/watch?v=ow1we5PzK-o&t=34) project at Block which is where I was
+- [0:36](https://youtube.com/watch?v=ow1we5PzK-o&t=36) working at the time. And that project
+- [0:38](https://youtube.com/watch?v=ow1we5PzK-o&t=38) evolved into Goose.
+- [0:40](https://youtube.com/watch?v=ow1we5PzK-o&t=40) Goose is now one of the leading coding
+- [0:43](https://youtube.com/watch?v=ow1we5PzK-o&t=43) agents is open source
+- [0:45](https://youtube.com/watch?v=ow1we5PzK-o&t=45) and it's recently was was donated to the
+- [0:47](https://youtube.com/watch?v=ow1we5PzK-o&t=47) AI
+- [0:48](https://youtube.com/watch?v=ow1we5PzK-o&t=48) agentic AI Foundation. So it's been
+- [0:51](https://youtube.com/watch?v=ow1we5PzK-o&t=51) really cool to see.
+- [0:52](https://youtube.com/watch?v=ow1we5PzK-o&t=52) Now nowadays I work at Factory where I
+- [0:55](https://youtube.com/watch?v=ow1we5PzK-o&t=55) lead our core agent harness and
+- [0:57](https://youtube.com/watch?v=ow1we5PzK-o&t=57) Factory's mission is to
+- [0:59](https://youtube.com/watch?v=ow1we5PzK-o&t=59) bring autonomy to the entire software
+- [1:01](https://youtube.com/watch?v=ow1we5PzK-o&t=61) development life cycle.
+- [1:04](https://youtube.com/watch?v=ow1we5PzK-o&t=64) So I want to start off with a claim.
+- [1:06](https://youtube.com/watch?v=ow1we5PzK-o&t=66) The bottleneck in software engineering
+- [1:07](https://youtube.com/watch?v=ow1we5PzK-o&t=67) nowadays is not intelligence. It's now
+- [1:10](https://youtube.com/watch?v=ow1we5PzK-o&t=70) limited by human attention.
+- [1:12](https://youtube.com/watch?v=ow1we5PzK-o&t=72) Even the best engineers can only
+- [1:14](https://youtube.com/watch?v=ow1we5PzK-o&t=74) complete a couple of tasks at a time.
+- [1:17](https://youtube.com/watch?v=ow1we5PzK-o&t=77) They may have a backlog of 50 features
+- [1:19](https://youtube.com/watch?v=ow1we5PzK-o&t=79) but they can only drive a few forward
+- [1:21](https://youtube.com/watch?v=ow1we5PzK-o&t=81) per day because every task requires
+- [1:23](https://youtube.com/watch?v=ow1we5PzK-o&t=83) their attention. Every commit needs
+- [1:25](https://youtube.com/watch?v=ow1we5PzK-o&t=85) their review.
+- [1:26](https://youtube.com/watch?v=ow1we5PzK-o&t=86) Today's models are smart enough to
+- [1:28](https://youtube.com/watch?v=ow1we5PzK-o&t=88) figure out all 50 of these tasks but
+- [1:30](https://youtube.com/watch?v=ow1we5PzK-o&t=90) there's not enough uh just bandwidth to
+- [1:33](https://youtube.com/watch?v=ow1we5PzK-o&t=93) supervise their implementation.
+- [1:36](https://youtube.com/watch?v=ow1we5PzK-o&t=96) So we kept asking ourselves what if a
+- [1:39](https://youtube.com/watch?v=ow1we5PzK-o&t=99) human decides what to build and then a
+- [1:41](https://youtube.com/watch?v=ow1we5PzK-o&t=101) system figures out how to do so. Right?
+- [1:43](https://youtube.com/watch?v=ow1we5PzK-o&t=103) An agent could just work for hours for
+- [1:45](https://youtube.com/watch?v=ow1we5PzK-o&t=105) days and you come back to finish work.
+- [1:47](https://youtube.com/watch?v=ow1we5PzK-o&t=107) So that's what I'm here to talk about.
+- [1:50](https://youtube.com/watch?v=ow1we5PzK-o&t=110) When you start researching multi-agent
+- [1:52](https://youtube.com/watch?v=ow1we5PzK-o&t=112) frameworks and systems you quickly
+- [1:54](https://youtube.com/watch?v=ow1we5PzK-o&t=114) realize that the field's a bit of a
+- [1:55](https://youtube.com/watch?v=ow1we5PzK-o&t=115) mess. Everyone has their own framework,
+- [1:58](https://youtube.com/watch?v=ow1we5PzK-o&t=118) their own terminology, their own
+- [2:00](https://youtube.com/watch?v=ow1we5PzK-o&t=120) opinions of what works and doesn't work.
+- [2:02](https://youtube.com/watch?v=ow1we5PzK-o&t=122) And so I want to propose a simple
+- [2:04](https://youtube.com/watch?v=ow1we5PzK-o&t=124) taxonomy. There's five frontier
+- [2:06](https://youtube.com/watch?v=ow1we5PzK-o&t=126) multi-agent frameworks.
+- [2:07](https://youtube.com/watch?v=ow1we5PzK-o&t=127) One is delegation. Right? This is where
+- [2:09](https://youtube.com/watch?v=ow1we5PzK-o&t=129) one agent spawns another agent and the
+- [2:12](https://youtube.com/watch?v=ow1we5PzK-o&t=132) parent agent may say go figure out the
+- [2:14](https://youtube.com/watch?v=ow1we5PzK-o&t=134) database schema and then gets a response
+- [2:16](https://youtube.com/watch?v=ow1we5PzK-o&t=136) back.
+- [2:17](https://youtube.com/watch?v=ow1we5PzK-o&t=137) This is the simplest form of multi-agent
+- [2:19](https://youtube.com/watch?v=ow1we5PzK-o&t=139) communication as what most people
+- [2:21](https://youtube.com/watch?v=ow1we5PzK-o&t=141) implement first. You have you know sub
+- [2:24](https://youtube.com/watch?v=ow1we5PzK-o&t=144) agents and coding tools are the most
+- [2:26](https://youtube.com/watch?v=ow1we5PzK-o&t=146) common example.
+- [2:28](https://youtube.com/watch?v=ow1we5PzK-o&t=148) The other one is creator verifier.
+- [2:30](https://youtube.com/watch?v=ow1we5PzK-o&t=150) Right? Where one agent builds something
+- [2:32](https://youtube.com/watch?v=ow1we5PzK-o&t=152) and then you have another agent that
+- [2:33](https://youtube.com/watch?v=ow1we5PzK-o&t=153) checks that work.
+- [2:35](https://youtube.com/watch?v=ow1we5PzK-o&t=155) And the key here is like a separation of
+- [2:37](https://youtube.com/watch?v=ow1we5PzK-o&t=157) concerns. The parent the the agent that
+- [2:39](https://youtube.com/watch?v=ow1we5PzK-o&t=159) implemented the the code is has some
+- [2:42](https://youtube.com/watch?v=ow1we5PzK-o&t=162) cost bias. Right? Wants that code to
+- [2:43](https://youtube.com/watch?v=ow1we5PzK-o&t=163) work.
+- [2:45](https://youtube.com/watch?v=ow1we5PzK-o&t=165) A fresh agent with fresh context is way
+- [2:46](https://youtube.com/watch?v=ow1we5PzK-o&t=166) more likely to find issues and this is
+- [2:48](https://youtube.com/watch?v=ow1we5PzK-o&t=168) why we do code review as humans as well.
+- [2:52](https://youtube.com/watch?v=ow1we5PzK-o&t=172) Another one is direct communication.
+- [2:54](https://youtube.com/watch?v=ow1we5PzK-o&t=174) This is when agents communicate without
+- [2:56](https://youtube.com/watch?v=ow1we5PzK-o&t=176) a central coordinator. Right? It's the
+- [2:57](https://youtube.com/watch?v=ow1we5PzK-o&t=177) kind of like DMing each other.
+- [3:00](https://youtube.com/watch?v=ow1we5PzK-o&t=180) It's hard to get right though because
+- [3:02](https://youtube.com/watch?v=ow1we5PzK-o&t=182) state fragments across conversations
+- [3:04](https://youtube.com/watch?v=ow1we5PzK-o&t=184) without that coordinator and there's no
+- [3:07](https://youtube.com/watch?v=ow1we5PzK-o&t=187) single source of truth.
+- [3:09](https://youtube.com/watch?v=ow1we5PzK-o&t=189) The next one is negotiation. Right?
+- [3:11](https://youtube.com/watch?v=ow1we5PzK-o&t=191) Negotiation is when agents communicate
+- [3:15](https://youtube.com/watch?v=ow1we5PzK-o&t=195) but over a shared resource. So that may
+- [3:17](https://youtube.com/watch?v=ow1we5PzK-o&t=197) be you know they want to use the same
+- [3:18](https://youtube.com/watch?v=ow1we5PzK-o&t=198) API. They want to modify the same
+- [3:21](https://youtube.com/watch?v=ow1we5PzK-o&t=201) portion of the code base.
+- [3:23](https://youtube.com/watch?v=ow1we5PzK-o&t=203) But negotiation doesn't need to be
+- [3:24](https://youtube.com/watch?v=ow1we5PzK-o&t=204) adversarial. In fact the best use case
+- [3:26](https://youtube.com/watch?v=ow1we5PzK-o&t=206) is when there is
+- [3:28](https://youtube.com/watch?v=ow1we5PzK-o&t=208) net positive sum trading. Right? And
+- [3:30](https://youtube.com/watch?v=ow1we5PzK-o&t=210) that's
+- [3:32](https://youtube.com/watch?v=ow1we5PzK-o&t=212) when agents have like a potential
+- [3:34](https://youtube.com/watch?v=ow1we5PzK-o&t=214) win-win situation while interacting. And
+- [3:37](https://youtube.com/watch?v=ow1we5PzK-o&t=217) then the last one is broadcast and that
+- [3:39](https://youtube.com/watch?v=ow1we5PzK-o&t=219) is when one agent sends information to
+- [3:40](https://youtube.com/watch?v=ow1we5PzK-o&t=220) many.
+- [3:41](https://youtube.com/watch?v=ow1we5PzK-o&t=221) Think of it like you know status
+- [3:43](https://youtube.com/watch?v=ow1we5PzK-o&t=223) updates, new context that applies to
+- [3:46](https://youtube.com/watch?v=ow1we5PzK-o&t=226) everyone, you shared constraints.
+- [3:48](https://youtube.com/watch?v=ow1we5PzK-o&t=228) It's a bit less flashy than the other
+- [3:51](https://youtube.com/watch?v=ow1we5PzK-o&t=231) ones but it's critical for maintaining
+- [3:53](https://youtube.com/watch?v=ow1we5PzK-o&t=233) coherence over long-running tasks.
+- [3:56](https://youtube.com/watch?v=ow1we5PzK-o&t=236) And so when you have all of these
+- [3:57](https://youtube.com/watch?v=ow1we5PzK-o&t=237) different building blocks how do you
+- [4:00](https://youtube.com/watch?v=ow1we5PzK-o&t=240) assemble that into a system that can run
+- [4:02](https://youtube.com/watch?v=ow1we5PzK-o&t=242) for many days?
+- [4:03](https://youtube.com/watch?v=ow1we5PzK-o&t=243) So missions is our answer. It's a system
+- [4:06](https://youtube.com/watch?v=ow1we5PzK-o&t=246) that combines four of those. Delegation,
+- [4:08](https://youtube.com/watch?v=ow1we5PzK-o&t=248) creator verifier,
+- [4:10](https://youtube.com/watch?v=ow1we5PzK-o&t=250) broadcast and negotiation
+- [4:12](https://youtube.com/watch?v=ow1we5PzK-o&t=252) into a single workflow. You describe a
+- [4:15](https://youtube.com/watch?v=ow1we5PzK-o&t=255) goal.
+- [4:16](https://youtube.com/watch?v=ow1we5PzK-o&t=256) You scope that through a conversation.
+- [4:18](https://youtube.com/watch?v=ow1we5PzK-o&t=258) You approve a plan and then the system
+- [4:20](https://youtube.com/watch?v=ow1we5PzK-o&t=260) handles execution for hours or days and
+- [4:23](https://youtube.com/watch?v=ow1we5PzK-o&t=263) that enables you to focus on something
+- [4:25](https://youtube.com/watch?v=ow1we5PzK-o&t=265) else.
+- [4:27](https://youtube.com/watch?v=ow1we5PzK-o&t=267) Notably a mission is not a single agent
+- [4:29](https://youtube.com/watch?v=ow1we5PzK-o&t=269) session. It's an ecosystem of agents
+- [4:31](https://youtube.com/watch?v=ow1we5PzK-o&t=271) that communicate through structured
+- [4:33](https://youtube.com/watch?v=ow1we5PzK-o&t=273) handoffs and shared state.
+- [4:36](https://youtube.com/watch?v=ow1we5PzK-o&t=276) It uses a three-role architecture.
+- [4:38](https://youtube.com/watch?v=ow1we5PzK-o&t=278) There's orchestrator, there's workers
+- [4:40](https://youtube.com/watch?v=ow1we5PzK-o&t=280) and then there's validators.
+- [4:42](https://youtube.com/watch?v=ow1we5PzK-o&t=282) The orchestrator handles planning. When
+- [4:44](https://youtube.com/watch?v=ow1we5PzK-o&t=284) you describe what you want the
+- [4:45](https://youtube.com/watch?v=ow1we5PzK-o&t=285) orchestrator is kind of like your
+- [4:46](https://youtube.com/watch?v=ow1we5PzK-o&t=286) sounding board. Ask you the right
+- [4:48](https://youtube.com/watch?v=ow1we5PzK-o&t=288) strategic questions. It
+- [4:51](https://youtube.com/watch?v=ow1we5PzK-o&t=291) you know
+- [4:52](https://youtube.com/watch?v=ow1we5PzK-o&t=292) checks out if there's any unclear
+- [4:54](https://youtube.com/watch?v=ow1we5PzK-o&t=294) requirements in in the problem space and
+- [4:56](https://youtube.com/watch?v=ow1we5PzK-o&t=296) then it eventually produces a plan that
+- [4:58](https://youtube.com/watch?v=ow1we5PzK-o&t=298) includes features, milestones and then
+- [5:00](https://youtube.com/watch?v=ow1we5PzK-o&t=300) something that's called a validation
+- [5:01](https://youtube.com/watch?v=ow1we5PzK-o&t=301) contract. And that validation contract
+- [5:04](https://youtube.com/watch?v=ow1we5PzK-o&t=304) defines what done sort of means before
+- [5:07](https://youtube.com/watch?v=ow1we5PzK-o&t=307) any coding is done.
+- [5:09](https://youtube.com/watch?v=ow1we5PzK-o&t=309) And I'll come back to why that matters
+- [5:10](https://youtube.com/watch?v=ow1we5PzK-o&t=310) because it turns out to be really
+- [5:11](https://youtube.com/watch?v=ow1we5PzK-o&t=311) important to the system.
+- [5:13](https://youtube.com/watch?v=ow1we5PzK-o&t=313) The next role are workers. They handle
+- [5:16](https://youtube.com/watch?v=ow1we5PzK-o&t=316) implementation.
+- [5:17](https://youtube.com/watch?v=ow1we5PzK-o&t=317) When a feature is assigned to a worker
+- [5:20](https://youtube.com/watch?v=ow1we5PzK-o&t=320) that worker has clean context, no
+- [5:22](https://youtube.com/watch?v=ow1we5PzK-o&t=322) accumulated baggage, no degraded
+- [5:24](https://youtube.com/watch?v=ow1we5PzK-o&t=324) attention. Right? The worker reads its
+- [5:26](https://youtube.com/watch?v=ow1we5PzK-o&t=326) spec. It implements the feature and then
+- [5:28](https://youtube.com/watch?v=ow1we5PzK-o&t=328) commits
+- [5:30](https://youtube.com/watch?v=ow1we5PzK-o&t=330) by Git allowing the next worker to
+- [5:32](https://youtube.com/watch?v=ow1we5PzK-o&t=332) inherit a clean slate and a working code
+- [5:34](https://youtube.com/watch?v=ow1we5PzK-o&t=334) base. And then the last role are
+- [5:35](https://youtube.com/watch?v=ow1we5PzK-o&t=335) validators. They handle verification.
+- [5:38](https://youtube.com/watch?v=ow1we5PzK-o&t=338) And so most systems validate by maybe
+- [5:40](https://youtube.com/watch?v=ow1we5PzK-o&t=340) running lint, type check, tests. Maybe
+- [5:43](https://youtube.com/watch?v=ow1we5PzK-o&t=343) they do code review.
+- [5:45](https://youtube.com/watch?v=ow1we5PzK-o&t=345) Missions does all of that but we also
+- [5:47](https://youtube.com/watch?v=ow1we5PzK-o&t=347) validate behavior. Instead of just
+- [5:49](https://youtube.com/watch?v=ow1we5PzK-o&t=349) asking you know does the code look
+- [5:51](https://youtube.com/watch?v=ow1we5PzK-o&t=351) right? We wonder does this work end to
+- [5:53](https://youtube.com/watch?v=ow1we5PzK-o&t=353) end? That's the difference that lets
+- [5:56](https://youtube.com/watch?v=ow1we5PzK-o&t=356) lets missions run for many hours, many
+- [5:58](https://youtube.com/watch?v=ow1we5PzK-o&t=358) days in a row without drifting. And
+- [6:00](https://youtube.com/watch?v=ow1we5PzK-o&t=360) making it work had to involve sort of
+- [6:03](https://youtube.com/watch?v=ow1we5PzK-o&t=363) rethinking validation entirely.
+- [6:06](https://youtube.com/watch?v=ow1we5PzK-o&t=366) So
+- [6:07](https://youtube.com/watch?v=ow1we5PzK-o&t=367) when you've worked with coding agents
+- [6:09](https://youtube.com/watch?v=ow1we5PzK-o&t=369) before you've probably seen this pattern
+- [6:11](https://youtube.com/watch?v=ow1we5PzK-o&t=371) where an agent builds a feature.
+- [6:13](https://youtube.com/watch?v=ow1we5PzK-o&t=373) It writes some tests. The tests pass.
+- [6:15](https://youtube.com/watch?v=ow1we5PzK-o&t=375) There's full coverage.
+- [6:17](https://youtube.com/watch?v=ow1we5PzK-o&t=377) But the tests were sort of shaped by the
+- [6:19](https://youtube.com/watch?v=ow1we5PzK-o&t=379) code not by what the code was attempting
+- [6:21](https://youtube.com/watch?v=ow1we5PzK-o&t=381) to actually do.
+- [6:23](https://youtube.com/watch?v=ow1we5PzK-o&t=383) Tests written after implementation don't
+- [6:25](https://youtube.com/watch?v=ow1we5PzK-o&t=385) catch bugs. They confirm decisions. So
+- [6:28](https://youtube.com/watch?v=ow1we5PzK-o&t=388) if you rely on validation like that your
+- [6:31](https://youtube.com/watch?v=ow1we5PzK-o&t=391) system will eventually drift.
+- [6:34](https://youtube.com/watch?v=ow1we5PzK-o&t=394) That's why this validation contract
+- [6:35](https://youtube.com/watch?v=ow1we5PzK-o&t=395) exists. It's written during planning
+- [6:38](https://youtube.com/watch?v=ow1we5PzK-o&t=398) before any code and it defines
+- [6:40](https://youtube.com/watch?v=ow1we5PzK-o&t=400) correctness independently of
+- [6:41](https://youtube.com/watch?v=ow1we5PzK-o&t=401) implementation. So for a complex project
+- [6:44](https://youtube.com/watch?v=ow1we5PzK-o&t=404) this can be hundreds of assertions and
+- [6:47](https://youtube.com/watch?v=ow1we5PzK-o&t=407) each feature is assigned one or more
+- [6:48](https://youtube.com/watch?v=ow1we5PzK-o&t=408) assertions that it must satisfy.
+- [6:50](https://youtube.com/watch?v=ow1we5PzK-o&t=410) The sum of all features must mean that
+- [6:53](https://youtube.com/watch?v=ow1we5PzK-o&t=413) every assertion is covered.
+- [6:57](https://youtube.com/watch?v=ow1we5PzK-o&t=417) After each after each milestone of
+- [6:59](https://youtube.com/watch?v=ow1we5PzK-o&t=419) features we have two types of validators
+- [7:02](https://youtube.com/watch?v=ow1we5PzK-o&t=422) that run.
+- [7:03](https://youtube.com/watch?v=ow1we5PzK-o&t=423) So you have the scrutiny validator and
+- [7:05](https://youtube.com/watch?v=ow1we5PzK-o&t=425) the user testing validator. The first
+- [7:07](https://youtube.com/watch?v=ow1we5PzK-o&t=427) one
+- [7:08](https://youtube.com/watch?v=ow1we5PzK-o&t=428) is more traditional. It runs the test
+- [7:09](https://youtube.com/watch?v=ow1we5PzK-o&t=429) suite, type checking, lints and
+- [7:11](https://youtube.com/watch?v=ow1we5PzK-o&t=431) critically it spawns
+- [7:13](https://youtube.com/watch?v=ow1we5PzK-o&t=433) dedicated code review agents for each
+- [7:15](https://youtube.com/watch?v=ow1we5PzK-o&t=435) completed feature within the milestone.
+- [7:17](https://youtube.com/watch?v=ow1we5PzK-o&t=437) And then the second one which is the
+- [7:19](https://youtube.com/watch?v=ow1we5PzK-o&t=439) user testing validator is more
+- [7:21](https://youtube.com/watch?v=ow1we5PzK-o&t=441) interesting. It kind of acts like a QA
+- [7:22](https://youtube.com/watch?v=ow1we5PzK-o&t=442) engineer. It spawns the application. It
+- [7:25](https://youtube.com/watch?v=ow1we5PzK-o&t=445) interacts with it through computer use
+- [7:27](https://youtube.com/watch?v=ow1we5PzK-o&t=447) or something similar to that. It fills
+- [7:30](https://youtube.com/watch?v=ow1we5PzK-o&t=450) out forms, you know,
+- [7:32](https://youtube.com/watch?v=ow1we5PzK-o&t=452) checks that pages render correctly,
+- [7:34](https://youtube.com/watch?v=ow1we5PzK-o&t=454) clicks buttons and ensures that
+- [7:36](https://youtube.com/watch?v=ow1we5PzK-o&t=456) functional flows work holistically.
+- [7:38](https://youtube.com/watch?v=ow1we5PzK-o&t=458) So this step takes significantly longer
+- [7:41](https://youtube.com/watch?v=ow1we5PzK-o&t=461) than the previous one of the scrutiny
+- [7:43](https://youtube.com/watch?v=ow1we5PzK-o&t=463) validator
+- [7:44](https://youtube.com/watch?v=ow1we5PzK-o&t=464) because the the system is interacting
+- [7:46](https://youtube.com/watch?v=ow1we5PzK-o&t=466) with a live application. And what we've
+- [7:48](https://youtube.com/watch?v=ow1we5PzK-o&t=468) noticed is that missions most of the
+- [7:50](https://youtube.com/watch?v=ow1we5PzK-o&t=470) missions wall clock time is actually
+- [7:52](https://youtube.com/watch?v=ow1we5PzK-o&t=472) spent here waiting for this like real
+- [7:54](https://youtube.com/watch?v=ow1we5PzK-o&t=474) world execution to occur instead of
+- [7:56](https://youtube.com/watch?v=ow1we5PzK-o&t=476) generating tokens.
+- [7:59](https://youtube.com/watch?v=ow1we5PzK-o&t=479) Critically neither validator has seen
+- [8:01](https://youtube.com/watch?v=ow1we5PzK-o&t=481) the code before.
+- [8:03](https://youtube.com/watch?v=ow1we5PzK-o&t=483) They're not invested in the
+- [8:04](https://youtube.com/watch?v=ow1we5PzK-o&t=484) implementation and so validation is
+- [8:06](https://youtube.com/watch?v=ow1we5PzK-o&t=486) adversarial by design.
+- [8:09](https://youtube.com/watch?v=ow1we5PzK-o&t=489) Okay. So then validation catches bugs.
+- [8:11](https://youtube.com/watch?v=ow1we5PzK-o&t=491) Right? But for a system that runs for
+- [8:14](https://youtube.com/watch?v=ow1we5PzK-o&t=494) many days you also need to make sure
+- [8:15](https://youtube.com/watch?v=ow1we5PzK-o&t=495) that context isn't lost between the
+- [8:18](https://youtube.com/watch?v=ow1we5PzK-o&t=498) agents.
+- [8:19](https://youtube.com/watch?v=ow1we5PzK-o&t=499) When a worker finishes a feature it
+- [8:21](https://youtube.com/watch?v=ow1we5PzK-o&t=501) doesn't just say I'm done.
+- [8:23](https://youtube.com/watch?v=ow1we5PzK-o&t=503) It fills out a structured handoff
+- [8:24](https://youtube.com/watch?v=ow1we5PzK-o&t=504) detailing what was completed, what was
+- [8:27](https://youtube.com/watch?v=ow1we5PzK-o&t=507) left undone, what commands were run
+- [8:29](https://youtube.com/watch?v=ow1we5PzK-o&t=509) throughout that that agent loop and what
+- [8:32](https://youtube.com/watch?v=ow1we5PzK-o&t=512) were the the exit codes of those
+- [8:33](https://youtube.com/watch?v=ow1we5PzK-o&t=513) commands.
+- [8:35](https://youtube.com/watch?v=ow1we5PzK-o&t=515) What issues were discovered and did it
+- [8:37](https://youtube.com/watch?v=ow1we5PzK-o&t=517) abide by the procedures that the
+- [8:39](https://youtube.com/watch?v=ow1we5PzK-o&t=519) orchestrator defined for that worker?
+- [8:43](https://youtube.com/watch?v=ow1we5PzK-o&t=523) That's how we catch issues and how the
+- [8:45](https://youtube.com/watch?v=ow1we5PzK-o&t=525) system self-heals.
+- [8:47](https://youtube.com/watch?v=ow1we5PzK-o&t=527) The errors get caught at milestone
+- [8:49](https://youtube.com/watch?v=ow1we5PzK-o&t=529) boundaries. Corrective work gets scoped
+- [8:51](https://youtube.com/watch?v=ow1we5PzK-o&t=531) and the mission sort of like pulls
+- [8:53](https://youtube.com/watch?v=ow1we5PzK-o&t=533) itself back on track. Not by hoping that
+- [8:55](https://youtube.com/watch?v=ow1we5PzK-o&t=535) agents remember what happened but by
+- [8:57](https://youtube.com/watch?v=ow1we5PzK-o&t=537) forcing them to write it down and then
+- [9:00](https://youtube.com/watch?v=ow1we5PzK-o&t=540) actually address issues and I'll I'll
+- [9:03](https://youtube.com/watch?v=ow1we5PzK-o&t=543) present on that in just a sec.
+- [9:06](https://youtube.com/watch?v=ow1we5PzK-o&t=546) Our longest mission ran for 16 days
+- [9:08](https://youtube.com/watch?v=ow1we5PzK-o&t=548) which is much longer than a full sprint
+- [9:10](https://youtube.com/watch?v=ow1we5PzK-o&t=550) and we believe that they can run for 30.
+- [9:13](https://youtube.com/watch?v=ow1we5PzK-o&t=553) That's only possible because of the
+- [9:14](https://youtube.com/watch?v=ow1we5PzK-o&t=554) structure.
+- [9:17](https://youtube.com/watch?v=ow1we5PzK-o&t=557) So once we had this architecture the
+- [9:18](https://youtube.com/watch?v=ow1we5PzK-o&t=558) next question became became how do we
+- [9:21](https://youtube.com/watch?v=ow1we5PzK-o&t=561) actually run it? Right?
+- [9:23](https://youtube.com/watch?v=ow1we5PzK-o&t=563) The most obvious choice is like
+- [9:25](https://youtube.com/watch?v=ow1we5PzK-o&t=565) parallelism. If you have 10 agents
+- [9:27](https://youtube.com/watch?v=ow1we5PzK-o&t=567) running at one point in time then you
+- [9:29](https://youtube.com/watch?v=ow1we5PzK-o&t=569) have 10 times the throughput. But we
+- [9:32](https://youtube.com/watch?v=ow1we5PzK-o&t=572) tried that and it doesn't really work
+- [9:33](https://youtube.com/watch?v=ow1we5PzK-o&t=573) for tasks in the like software dev
+- [9:35](https://youtube.com/watch?v=ow1we5PzK-o&t=575) domain because agents conflict. They
+- [9:37](https://youtube.com/watch?v=ow1we5PzK-o&t=577) step on each other's changes. They
+- [9:39](https://youtube.com/watch?v=ow1we5PzK-o&t=579) duplicate work. They make inconsistent
+- [9:41](https://youtube.com/watch?v=ow1we5PzK-o&t=581) architectural decisions. And so the
+- [9:44](https://youtube.com/watch?v=ow1we5PzK-o&t=584) coordination overhead ends up
+- [9:46](https://youtube.com/watch?v=ow1we5PzK-o&t=586) eating up the speed gains all the while
+- [9:48](https://youtube.com/watch?v=ow1we5PzK-o&t=588) you're burning tokens.
+- [9:50](https://youtube.com/watch?v=ow1we5PzK-o&t=590) The difference with missions is that we
+- [9:51](https://youtube.com/watch?v=ow1we5PzK-o&t=591) run features serially.
+- [9:53](https://youtube.com/watch?v=ow1we5PzK-o&t=593) So there's only one worker or validator
+- [9:56](https://youtube.com/watch?v=ow1we5PzK-o&t=596) running at any given point in time.
+- [9:58](https://youtube.com/watch?v=ow1we5PzK-o&t=598) Within a feature, we allow for
+- [10:00](https://youtube.com/watch?v=ow1we5PzK-o&t=600) parallelization on read-only operations.
+- [10:03](https://youtube.com/watch?v=ow1we5PzK-o&t=603) So, you have something like
+- [10:05](https://youtube.com/watch?v=ow1we5PzK-o&t=605) searching through the code base or
+- [10:06](https://youtube.com/watch?v=ow1we5PzK-o&t=606) researching APIs, all that gets
+- [10:08](https://youtube.com/watch?v=ow1we5PzK-o&t=608) parallelized. Within validators, we also
+- [10:11](https://youtube.com/watch?v=ow1we5PzK-o&t=611) parallelize read-only operations such as
+- [10:13](https://youtube.com/watch?v=ow1we5PzK-o&t=613) code review.
+- [10:15](https://youtube.com/watch?v=ow1we5PzK-o&t=615) This is serial execution with with
+- [10:17](https://youtube.com/watch?v=ow1we5PzK-o&t=617) targeted internal parallelization. It
+- [10:19](https://youtube.com/watch?v=ow1we5PzK-o&t=619) seems slower on paper, but the error
+- [10:21](https://youtube.com/watch?v=ow1we5PzK-o&t=621) rate drops dramatically, and when you
+- [10:23](https://youtube.com/watch?v=ow1we5PzK-o&t=623) have tasks that run for many days, this
+- [10:25](https://youtube.com/watch?v=ow1we5PzK-o&t=625) sort of correctness compounds.
+- [10:29](https://youtube.com/watch?v=ow1we5PzK-o&t=629) Now,
+- [10:30](https://youtube.com/watch?v=ow1we5PzK-o&t=630) your your standard chat interface
+- [10:32](https://youtube.com/watch?v=ow1we5PzK-o&t=632) doesn't really work for something that
+- [10:34](https://youtube.com/watch?v=ow1we5PzK-o&t=634) lasts many days. At a quick glance, you
+- [10:36](https://youtube.com/watch?v=ow1we5PzK-o&t=636) need to be able to be able to see how
+- [10:37](https://youtube.com/watch?v=ow1we5PzK-o&t=637) much of the project have you completed,
+- [10:39](https://youtube.com/watch?v=ow1we5PzK-o&t=639) and what's what amount of the budget
+- [10:41](https://youtube.com/watch?v=ow1we5PzK-o&t=641) that you originally like set off with
+- [10:43](https://youtube.com/watch?v=ow1we5PzK-o&t=643) have you burned through.
+- [10:45](https://youtube.com/watch?v=ow1we5PzK-o&t=645) So, using a mission actually, we built
+- [10:47](https://youtube.com/watch?v=ow1we5PzK-o&t=647) mission control, which is a dedicated
+- [10:49](https://youtube.com/watch?v=ow1we5PzK-o&t=649) view for this. You can see what does
+- [10:51](https://youtube.com/watch?v=ow1we5PzK-o&t=651) what is active worker doing right now,
+- [10:53](https://youtube.com/watch?v=ow1we5PzK-o&t=653) uh read off handoff summary is that
+- [10:55](https://youtube.com/watch?v=ow1we5PzK-o&t=655) detail. What did the worker the
+- [10:56](https://youtube.com/watch?v=ow1we5PzK-o&t=656) validator discover,
+- [10:58](https://youtube.com/watch?v=ow1we5PzK-o&t=658) um how it's going to sort of like alter
+- [11:00](https://youtube.com/watch?v=ow1we5PzK-o&t=660) its course moving forward.
+- [11:03](https://youtube.com/watch?v=ow1we5PzK-o&t=663) Or,
+- [11:04](https://youtube.com/watch?v=ow1we5PzK-o&t=664) you could just, you know,
+- [11:06](https://youtube.com/watch?v=ow1we5PzK-o&t=666) go check out, um
+- [11:08](https://youtube.com/watch?v=ow1we5PzK-o&t=668) go hang out with your friends that
+- [11:09](https://youtube.com/watch?v=ow1we5PzK-o&t=669) night. This entire view lets you just
+- [11:11](https://youtube.com/watch?v=ow1we5PzK-o&t=671) run missions asynchronously, and you
+- [11:13](https://youtube.com/watch?v=ow1we5PzK-o&t=673) could be plugged in as a project manager
+- [11:15](https://youtube.com/watch?v=ow1we5PzK-o&t=675) overseeing implementation, or you could
+- [11:17](https://youtube.com/watch?v=ow1we5PzK-o&t=677) just, you know, go and and uh hang out
+- [11:20](https://youtube.com/watch?v=ow1we5PzK-o&t=680) with your friends.
+- [11:22](https://youtube.com/watch?v=ow1we5PzK-o&t=682) Okay. So, the right model in each role.
+- [11:24](https://youtube.com/watch?v=ow1we5PzK-o&t=684) Um
+- [11:26](https://youtube.com/watch?v=ow1we5PzK-o&t=686) everything here sort of assumes one
+- [11:28](https://youtube.com/watch?v=ow1we5PzK-o&t=688) thing, and that is that you're using the
+- [11:30](https://youtube.com/watch?v=ow1we5PzK-o&t=690) right model in each role. Planning
+- [11:32](https://youtube.com/watch?v=ow1we5PzK-o&t=692) benefits from slow, careful reasoning,
+- [11:35](https://youtube.com/watch?v=ow1we5PzK-o&t=695) implementation from fast code fluency
+- [11:37](https://youtube.com/watch?v=ow1we5PzK-o&t=697) and creativity, validation benefits from
+- [11:40](https://youtube.com/watch?v=ow1we5PzK-o&t=700) uh precise instruction following, right?
+- [11:42](https://youtube.com/watch?v=ow1we5PzK-o&t=702) And so, no single model nor model
+- [11:44](https://youtube.com/watch?v=ow1we5PzK-o&t=704) provider is best at all three of these.
+- [11:47](https://youtube.com/watch?v=ow1we5PzK-o&t=707) Using systems like missions requires the
+- [11:49](https://youtube.com/watch?v=ow1we5PzK-o&t=709) development of a new skill, which
+- [11:51](https://youtube.com/watch?v=ow1we5PzK-o&t=711) internally we've been calling droid
+- [11:52](https://youtube.com/watch?v=ow1we5PzK-o&t=712) whispering,
+- [11:53](https://youtube.com/watch?v=ow1we5PzK-o&t=713) but it's this idea that you need to be
+- [11:54](https://youtube.com/watch?v=ow1we5PzK-o&t=714) able to mentally model how different
+- [11:57](https://youtube.com/watch?v=ow1we5PzK-o&t=717) LLMs interact, where they fail, how
+- [11:59](https://youtube.com/watch?v=ow1we5PzK-o&t=719) those failures compound over a multi-day
+- [12:01](https://youtube.com/watch?v=ow1we5PzK-o&t=721) run,
+- [12:02](https://youtube.com/watch?v=ow1we5PzK-o&t=722) and then you need to make a deliberate
+- [12:03](https://youtube.com/watch?v=ow1we5PzK-o&t=723) choice as to which model sits in which
+- [12:05](https://youtube.com/watch?v=ow1we5PzK-o&t=725) seat.
+- [12:06](https://youtube.com/watch?v=ow1we5PzK-o&t=726) Theo, the engineer who built our
+- [12:08](https://youtube.com/watch?v=ow1we5PzK-o&t=728) missions prototype, came up with our our
+- [12:10](https://youtube.com/watch?v=ow1we5PzK-o&t=730) model defaults, but we really encourage
+- [12:12](https://youtube.com/watch?v=ow1we5PzK-o&t=732) people to make these uh their own and
+- [12:14](https://youtube.com/watch?v=ow1we5PzK-o&t=734) customize them to the needs of their
+- [12:15](https://youtube.com/watch?v=ow1we5PzK-o&t=735) project.
+- [12:17](https://youtube.com/watch?v=ow1we5PzK-o&t=737) So, for example, validation might use a
+- [12:19](https://youtube.com/watch?v=ow1we5PzK-o&t=739) different model provider entirely to
+- [12:21](https://youtube.com/watch?v=ow1we5PzK-o&t=741) make sure that it's not biased by the
+- [12:22](https://youtube.com/watch?v=ow1we5PzK-o&t=742) same training data.
+- [12:24](https://youtube.com/watch?v=ow1we5PzK-o&t=744) This is a structural advantage of a
+- [12:26](https://youtube.com/watch?v=ow1we5PzK-o&t=746) model-agnostic architecture.
+- [12:28](https://youtube.com/watch?v=ow1we5PzK-o&t=748) You're only as strong as your weakest
+- [12:30](https://youtube.com/watch?v=ow1we5PzK-o&t=750) link. And if you're locked into one
+- [12:31](https://youtube.com/watch?v=ow1we5PzK-o&t=751) model provider, then you're constrained
+- [12:34](https://youtube.com/watch?v=ow1we5PzK-o&t=754) by that family's weakest capability.
+- [12:36](https://youtube.com/watch?v=ow1we5PzK-o&t=756) As models continue to specialize,
+- [12:39](https://youtube.com/watch?v=ow1we5PzK-o&t=759) the ability to put the right model in
+- [12:40](https://youtube.com/watch?v=ow1we5PzK-o&t=760) the right seat becomes a compounding
+- [12:42](https://youtube.com/watch?v=ow1we5PzK-o&t=762) advantage.
+- [12:44](https://youtube.com/watch?v=ow1we5PzK-o&t=764) It works in the other direction, too. If
+- [12:45](https://youtube.com/watch?v=ow1we5PzK-o&t=765) you're using missions, the structure of
+- [12:48](https://youtube.com/watch?v=ow1we5PzK-o&t=768) that can compensate for models that are
+- [12:50](https://youtube.com/watch?v=ow1we5PzK-o&t=770) not quite at like the frontier level
+- [12:52](https://youtube.com/watch?v=ow1we5PzK-o&t=772) performance. So, the validation
+- [12:54](https://youtube.com/watch?v=ow1we5PzK-o&t=774) contracts, the milestone checkpoints,
+- [12:57](https://youtube.com/watch?v=ow1we5PzK-o&t=777) they allow you to run missions very very
+- [12:59](https://youtube.com/watch?v=ow1we5PzK-o&t=779) successfully even using open-weight
+- [13:01](https://youtube.com/watch?v=ow1we5PzK-o&t=781) models.
+- [13:04](https://youtube.com/watch?v=ow1we5PzK-o&t=784) Now, this all sounds quite theoretical.
+- [13:06](https://youtube.com/watch?v=ow1we5PzK-o&t=786) What does it actually look like in
+- [13:07](https://youtube.com/watch?v=ow1we5PzK-o&t=787) production?
+- [13:08](https://youtube.com/watch?v=ow1we5PzK-o&t=788) I've got an example of building a clone
+- [13:10](https://youtube.com/watch?v=ow1we5PzK-o&t=790) of Slack right here. This slide has a
+- [13:12](https://youtube.com/watch?v=ow1we5PzK-o&t=792) ton of info, but I'll walk you through
+- [13:14](https://youtube.com/watch?v=ow1we5PzK-o&t=794) just a few things that I want to call
+- [13:15](https://youtube.com/watch?v=ow1we5PzK-o&t=795) out.
+- [13:16](https://youtube.com/watch?v=ow1we5PzK-o&t=796) 60% of our time is spent on
+- [13:19](https://youtube.com/watch?v=ow1we5PzK-o&t=799) implementation,
+- [13:20](https://youtube.com/watch?v=ow1we5PzK-o&t=800) and 60% of our tokens as well.
+- [13:23](https://youtube.com/watch?v=ow1we5PzK-o&t=803) Notice how validation never succeeds on
+- [13:25](https://youtube.com/watch?v=ow1we5PzK-o&t=805) the first go. That's in the mission
+- [13:28](https://youtube.com/watch?v=ow1we5PzK-o&t=808) What's it?
+- [13:29](https://youtube.com/watch?v=ow1we5PzK-o&t=809) The one on the bottom left. Um we almost
+- [13:32](https://youtube.com/watch?v=ow1we5PzK-o&t=812) always have to create follow-up
+- [13:33](https://youtube.com/watch?v=ow1we5PzK-o&t=813) features. So, it really demonstrates
+- [13:35](https://youtube.com/watch?v=ow1we5PzK-o&t=815) like the value of a system that does
+- [13:37](https://youtube.com/watch?v=ow1we5PzK-o&t=817) this QA loop.
+- [13:38](https://youtube.com/watch?v=ow1we5PzK-o&t=818) You end up with with 50% of your lines
+- [13:41](https://youtube.com/watch?v=ow1we5PzK-o&t=821) of code at the very end, in the bottom
+- [13:42](https://youtube.com/watch?v=ow1we5PzK-o&t=822) right, being tests, and 90% of your uh
+- [13:46](https://youtube.com/watch?v=ow1we5PzK-o&t=826) code is covered by those tests.
+- [13:49](https://youtube.com/watch?v=ow1we5PzK-o&t=829) And lastly, we take advantage of prompt
+- [13:51](https://youtube.com/watch?v=ow1we5PzK-o&t=831) caching heavily to make sure that we're
+- [13:53](https://youtube.com/watch?v=ow1we5PzK-o&t=833) sort of offsetting
+- [13:54](https://youtube.com/watch?v=ow1we5PzK-o&t=834) um
+- [13:55](https://youtube.com/watch?v=ow1we5PzK-o&t=835) the the price of running such a long
+- [13:57](https://youtube.com/watch?v=ow1we5PzK-o&t=837) task.
+- [14:00](https://youtube.com/watch?v=ow1we5PzK-o&t=840) People have really taken to missions,
+- [14:01](https://youtube.com/watch?v=ow1we5PzK-o&t=841) and it's been awesome to see what folks
+- [14:03](https://youtube.com/watch?v=ow1we5PzK-o&t=843) have been building with them. Um some
+- [14:06](https://youtube.com/watch?v=ow1we5PzK-o&t=846) examples I've included in this slide,
+- [14:07](https://youtube.com/watch?v=ow1we5PzK-o&t=847) but ones that I want to call out are
+- [14:09](https://youtube.com/watch?v=ow1we5PzK-o&t=849) specifically in the enterprise setting,
+- [14:11](https://youtube.com/watch?v=ow1we5PzK-o&t=851) which is where Factory really shines. Um
+- [14:13](https://youtube.com/watch?v=ow1we5PzK-o&t=853) they've been used to prototype new ideas
+- [14:15](https://youtube.com/watch?v=ow1we5PzK-o&t=855) and features overnight, to um
+- [14:18](https://youtube.com/watch?v=ow1we5PzK-o&t=858) make sure that people can uh build
+- [14:20](https://youtube.com/watch?v=ow1we5PzK-o&t=860) internal tools at increasingly rapid
+- [14:22](https://youtube.com/watch?v=ow1we5PzK-o&t=862) rates, to run huge refactors and
+- [14:24](https://youtube.com/watch?v=ow1we5PzK-o&t=864) migrations, for ML search uh research,
+- [14:27](https://youtube.com/watch?v=ow1we5PzK-o&t=867) sorry, and to modernize uh codebases so
+- [14:30](https://youtube.com/watch?v=ow1we5PzK-o&t=870) that agents are more productive in them.
+- [14:33](https://youtube.com/watch?v=ow1we5PzK-o&t=873) Um one thing that I wanted to talk about
+- [14:35](https://youtube.com/watch?v=ow1we5PzK-o&t=875) was also this concept of like the bitter
+- [14:38](https://youtube.com/watch?v=ow1we5PzK-o&t=878) lesson, because every person building
+- [14:40](https://youtube.com/watch?v=ow1we5PzK-o&t=880) multi-agent systems has this fear of the
+- [14:43](https://youtube.com/watch?v=ow1we5PzK-o&t=883) next model release sort of like making
+- [14:45](https://youtube.com/watch?v=ow1we5PzK-o&t=885) their their architecture obsolete
+- [14:47](https://youtube.com/watch?v=ow1we5PzK-o&t=887) overnight.
+- [14:48](https://youtube.com/watch?v=ow1we5PzK-o&t=888) Um so,
+- [14:50](https://youtube.com/watch?v=ow1we5PzK-o&t=890) when we were building missions, we
+- [14:51](https://youtube.com/watch?v=ow1we5PzK-o&t=891) decided we had to make this system get
+- [14:53](https://youtube.com/watch?v=ow1we5PzK-o&t=893) better with every model improvement.
+- [14:56](https://youtube.com/watch?v=ow1we5PzK-o&t=896) This means that almost all of the
+- [14:58](https://youtube.com/watch?v=ow1we5PzK-o&t=898) orchestration logic is defined in
+- [14:59](https://youtube.com/watch?v=ow1we5PzK-o&t=899) prompts and skills,
+- [15:01](https://youtube.com/watch?v=ow1we5PzK-o&t=901) um instead of like a hard-coded state
+- [15:03](https://youtube.com/watch?v=ow1we5PzK-o&t=903) machine.
+- [15:04](https://youtube.com/watch?v=ow1we5PzK-o&t=904) How it decomposes failures and um
+- [15:07](https://youtube.com/watch?v=ow1we5PzK-o&t=907) or decomposes features and handles
+- [15:08](https://youtube.com/watch?v=ow1we5PzK-o&t=908) failures is all in about like 700 lines
+- [15:11](https://youtube.com/watch?v=ow1we5PzK-o&t=911) of text, and four sentences of this can
+- [15:14](https://youtube.com/watch?v=ow1we5PzK-o&t=914) alter the execution strategy pretty
+- [15:16](https://youtube.com/watch?v=ow1we5PzK-o&t=916) dramatically.
+- [15:17](https://youtube.com/watch?v=ow1we5PzK-o&t=917) Worker behavior is driven by skills that
+- [15:19](https://youtube.com/watch?v=ow1we5PzK-o&t=919) the orchestrator defines per mission, so
+- [15:21](https://youtube.com/watch?v=ow1we5PzK-o&t=921) you get very customized behavior,
+- [15:24](https://youtube.com/watch?v=ow1we5PzK-o&t=924) and the only deterministic logic is very
+- [15:26](https://youtube.com/watch?v=ow1we5PzK-o&t=926) thin, and it's focused on enabling
+- [15:28](https://youtube.com/watch?v=ow1we5PzK-o&t=928) models to do what they do best while the
+- [15:30](https://youtube.com/watch?v=ow1we5PzK-o&t=930) system handles like the bookkeeping,
+- [15:32](https://youtube.com/watch?v=ow1we5PzK-o&t=932) right? Stuff like running validation and
+- [15:34](https://youtube.com/watch?v=ow1we5PzK-o&t=934) ensuring that progress is blocked when
+- [15:36](https://youtube.com/watch?v=ow1we5PzK-o&t=936) there are some handoff issues that are
+- [15:37](https://youtube.com/watch?v=ow1we5PzK-o&t=937) not addressed.
+- [15:39](https://youtube.com/watch?v=ow1we5PzK-o&t=939) So, missions sort of ensure the the
+- [15:40](https://youtube.com/watch?v=ow1we5PzK-o&t=940) discipline, and the models provide the
+- [15:43](https://youtube.com/watch?v=ow1we5PzK-o&t=943) intelligence uh using primitives that
+- [15:45](https://youtube.com/watch?v=ow1we5PzK-o&t=945) they're already familiar with, like
+- [15:47](https://youtube.com/watch?v=ow1we5PzK-o&t=947) agents.md skills etc.
+- [15:51](https://youtube.com/watch?v=ow1we5PzK-o&t=951) So, what does this unlock?
+- [15:53](https://youtube.com/watch?v=ow1we5PzK-o&t=953) Remember the bottleneck that I started
+- [15:54](https://youtube.com/watch?v=ow1we5PzK-o&t=954) off with? Human attention.
+- [15:56](https://youtube.com/watch?v=ow1we5PzK-o&t=956) The economics are sort of changing.
+- [15:58](https://youtube.com/watch?v=ow1we5PzK-o&t=958) Before, a team of five engineers might
+- [15:59](https://youtube.com/watch?v=ow1we5PzK-o&t=959) be able to
+- [16:00](https://youtube.com/watch?v=ow1we5PzK-o&t=960) uh work on 10 work streams at any given
+- [16:03](https://youtube.com/watch?v=ow1we5PzK-o&t=963) point in time.
+- [16:04](https://youtube.com/watch?v=ow1we5PzK-o&t=964) Now, maybe with missions, we can bring
+- [16:06](https://youtube.com/watch?v=ow1we5PzK-o&t=966) that up to 30.
+- [16:07](https://youtube.com/watch?v=ow1we5PzK-o&t=967) The team can focus on interesting
+- [16:09](https://youtube.com/watch?v=ow1we5PzK-o&t=969) problems such as
+- [16:11](https://youtube.com/watch?v=ow1we5PzK-o&t=971) uh the architecture, product decisions,
+- [16:13](https://youtube.com/watch?v=ow1we5PzK-o&t=973) um instead of uh worrying about the
+- [16:15](https://youtube.com/watch?v=ow1we5PzK-o&t=975) execution per se.
+- [16:17](https://youtube.com/watch?v=ow1we5PzK-o&t=977) And the important thing is the codebase
+- [16:20](https://youtube.com/watch?v=ow1we5PzK-o&t=980) ends up cleaner than when you started.
+- [16:22](https://youtube.com/watch?v=ow1we5PzK-o&t=982) The end-to-end tests, the unit tests,
+- [16:24](https://youtube.com/watch?v=ow1we5PzK-o&t=984) the skills, the structure that missions
+- [16:26](https://youtube.com/watch?v=ow1we5PzK-o&t=986) provide uh means that agents and humans
+- [16:29](https://youtube.com/watch?v=ow1we5PzK-o&t=989) are more productive in that environment
+- [16:31](https://youtube.com/watch?v=ow1we5PzK-o&t=991) moving forward.
+- [16:33](https://youtube.com/watch?v=ow1we5PzK-o&t=993) So, now that you understand how missions
+- [16:35](https://youtube.com/watch?v=ow1we5PzK-o&t=995) are structured and how they actually
+- [16:36](https://youtube.com/watch?v=ow1we5PzK-o&t=996) work, you can see that they're really a
+- [16:38](https://youtube.com/watch?v=ow1we5PzK-o&t=998) composition of those original um
+- [16:41](https://youtube.com/watch?v=ow1we5PzK-o&t=1001) strategies, right? Delegation shows up
+- [16:43](https://youtube.com/watch?v=ow1we5PzK-o&t=1003) everywhere in how the orchestrator
+- [16:45](https://youtube.com/watch?v=ow1we5PzK-o&t=1005) spawns workers and how we spawn research
+- [16:48](https://youtube.com/watch?v=ow1we5PzK-o&t=1008) sub-agents. Creator-verifier is
+- [16:50](https://youtube.com/watch?v=ow1we5PzK-o&t=1010) fundamental in that validation and
+- [16:51](https://youtube.com/watch?v=ow1we5PzK-o&t=1011) implementation are always separate
+- [16:53](https://youtube.com/watch?v=ow1we5PzK-o&t=1013) agents with separate context. Broadcast
+- [16:55](https://youtube.com/watch?v=ow1we5PzK-o&t=1015) runs through the shared mission state
+- [16:57](https://youtube.com/watch?v=ow1we5PzK-o&t=1017) that every agent references, and
+- [16:59](https://youtube.com/watch?v=ow1we5PzK-o&t=1019) negotiation shows up at milestone
+- [17:01](https://youtube.com/watch?v=ow1we5PzK-o&t=1021) boundaries, where the orchestrator
+- [17:02](https://youtube.com/watch?v=ow1we5PzK-o&t=1022) defines, you know, does this does this
+- [17:04](https://youtube.com/watch?v=ow1we5PzK-o&t=1024) handoff summary sort of like look
+- [17:06](https://youtube.com/watch?v=ow1we5PzK-o&t=1026) correct? Do we need to create follow-up
+- [17:08](https://youtube.com/watch?v=ow1we5PzK-o&t=1028) features rescope etc.
+- [17:11](https://youtube.com/watch?v=ow1we5PzK-o&t=1031) But strategies aren't enough. You need
+- [17:13](https://youtube.com/watch?v=ow1we5PzK-o&t=1033) the connective tissue. You need uh these
+- [17:15](https://youtube.com/watch?v=ow1we5PzK-o&t=1035) structured handoffs so that agents don't
+- [17:17](https://youtube.com/watch?v=ow1we5PzK-o&t=1037) lose context, you need the right model
+- [17:19](https://youtube.com/watch?v=ow1we5PzK-o&t=1039) in each role, and you need an
+- [17:20](https://youtube.com/watch?v=ow1we5PzK-o&t=1040) architecture that will improve with each
+- [17:22](https://youtube.com/watch?v=ow1we5PzK-o&t=1042) model improvement.
+- [17:24](https://youtube.com/watch?v=ow1we5PzK-o&t=1044) So,
+- [17:25](https://youtube.com/watch?v=ow1we5PzK-o&t=1045) what I like to think about is that
+- [17:27](https://youtube.com/watch?v=ow1we5PzK-o&t=1047) people in this room who are thinking in
+- [17:28](https://youtube.com/watch?v=ow1we5PzK-o&t=1048) terms of agent ecosystems, who develop
+- [17:31](https://youtube.com/watch?v=ow1we5PzK-o&t=1051) an intuition for how different models
+- [17:32](https://youtube.com/watch?v=ow1we5PzK-o&t=1052) compose under pressure, um that those
+- [17:35](https://youtube.com/watch?v=ow1we5PzK-o&t=1055) folks are going to be really shipping
+- [17:36](https://youtube.com/watch?v=ow1we5PzK-o&t=1056) the next generation of innovation.
+- [17:38](https://youtube.com/watch?v=ow1we5PzK-o&t=1058) Uh there's a lot of open questions
+- [17:40](https://youtube.com/watch?v=ow1we5PzK-o&t=1060) still, right? Um how do we further
+- [17:42](https://youtube.com/watch?v=ow1we5PzK-o&t=1062) parallelize the workload of missions so
+- [17:44](https://youtube.com/watch?v=ow1we5PzK-o&t=1064) that they run faster? How do we start
+- [17:46](https://youtube.com/watch?v=ow1we5PzK-o&t=1066) orchestrating missions themselves into
+- [17:48](https://youtube.com/watch?v=ow1we5PzK-o&t=1068) even more complex workflows?
+- [17:50](https://youtube.com/watch?v=ow1we5PzK-o&t=1070) Uh but the data from production missions
+- [17:51](https://youtube.com/watch?v=ow1we5PzK-o&t=1071) is clear. This works on real projects at
+- [17:54](https://youtube.com/watch?v=ow1we5PzK-o&t=1074) scale today.
+- [17:56](https://youtube.com/watch?v=ow1we5PzK-o&t=1076) So,
+- [17:57](https://youtube.com/watch?v=ow1we5PzK-o&t=1077) this is what I'll leave you with. Open
+- [17:59](https://youtube.com/watch?v=ow1we5PzK-o&t=1079) Droid,
+- [18:00](https://youtube.com/watch?v=ow1we5PzK-o&t=1080) try running /missions,
+- [18:03](https://youtube.com/watch?v=ow1we5PzK-o&t=1083) argue with the orchestrator about the
+- [18:04](https://youtube.com/watch?v=ow1we5PzK-o&t=1084) scope,
+- [18:05](https://youtube.com/watch?v=ow1we5PzK-o&t=1085) approve the plan, and then go do
+- [18:07](https://youtube.com/watch?v=ow1we5PzK-o&t=1087) something else.
+- [18:08](https://youtube.com/watch?v=ow1we5PzK-o&t=1088) I'm excited to see what you guys build,
+- [18:10](https://youtube.com/watch?v=ow1we5PzK-o&t=1090) and I'll be around to answer any
+- [18:11](https://youtube.com/watch?v=ow1we5PzK-o&t=1091) questions uh for the rest of the day.
+- [18:13](https://youtube.com/watch?v=ow1we5PzK-o&t=1093) Thanks.
+- [18:14](https://youtube.com/watch?v=ow1we5PzK-o&t=1094) >> [applause]
+- [18:18](https://youtube.com/watch?v=ow1we5PzK-o&t=1098) [music]

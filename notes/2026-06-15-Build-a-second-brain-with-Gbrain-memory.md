@@ -1,0 +1,244 @@
+---
+title: "Build a second brain with Gbrain - memory for AI agents"
+source_url: https://youtube.com/watch?v=j55r_higKIo
+video_id: j55r_higKIo
+source_type: youtube
+lang: en
+analyzed: 2026-06-15
+category: 일반학습
+status: active
+---
+# Build a second brain with Gbrain - memory for AI agents
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 개발자가 AI의 빠른 발전 속도를 따라가기 위해 G brain이라는 오픈소스 도구로 '제2의 뇌'를 구축한 경험을 공유합니다. G brain은 노트, 문서, YouTube, X(트위터) 콘텐츠를 자동 수집하여 검색 가능한 지식 그래프로 변환하고, AI 에이전트가 패턴을 인식하고 관계를 추적할 수 있게 합니다. Y Combinator 사장 Garry Tan이 만든 이 도구는 기존 ChatGPT 같은 AI와 달리 구조화된 외부 메모리를 제공하여 시간이 지날수록 더 스마트해지는 시스템을 구현합니다.
+- **Core Message:** AI 시대에 정보 과부하를 해결하려면 단순한 채팅 기록이 아닌 구조화된 외부 메모리 시스템이 필요하다.
+> AI agents forget. They have limited context windows, and they don't naturally compound knowledge over weeks and months.
+> It gives your agents a real external memory, and it's searchable, it's connected, it's editable, it doesn't burn a lot of tokens.
+> If you're working with large amounts of your own data, you need something more structured than just chat history.
+❗ Y Combinator는 연간 수백 개 회사에 투자하며, 수천 개의 관계와 이메일을 관리해야 함
+❗ G brain은 LLM 호출 없이도 자동으로 객체 연결을 생성함
+❗ 하이브리드 검색이 키워드, 의미, 관계 검색을 동시에 수행함
+
+## 🚀 실행 (Execute)
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=j55r_higKIo&t=0) I built myself a second brain. Why?
+- [0:02](https://youtube.com/watch?v=j55r_higKIo&t=2) Well, if you want to keep up with the
+- [0:04](https://youtube.com/watch?v=j55r_higKIo&t=4) pace at which AI is moving, you have two
+- [0:06](https://youtube.com/watch?v=j55r_higKIo&t=6) options. You can either spend all day in
+- [0:09](https://youtube.com/watch?v=j55r_higKIo&t=9) front of a screen and fry your brain, or
+- [0:11](https://youtube.com/watch?v=j55r_higKIo&t=11) you can build a system that
+- [0:13](https://youtube.com/watch?v=j55r_higKIo&t=13) automatically collects signal, does
+- [0:16](https://youtube.com/watch?v=j55r_higKIo&t=16) pattern recognition, and learns with
+- [0:18](https://youtube.com/watch?v=j55r_higKIo&t=18) you.
+- [0:18](https://youtube.com/watch?v=j55r_higKIo&t=18) Now, AI agents are great for this, but
+- [0:20](https://youtube.com/watch?v=j55r_higKIo&t=20) AI agents forget. They have limited
+- [0:22](https://youtube.com/watch?v=j55r_higKIo&t=22) context windows, and they don't
+- [0:24](https://youtube.com/watch?v=j55r_higKIo&t=24) naturally compound knowledge over weeks
+- [0:27](https://youtube.com/watch?v=j55r_higKIo&t=27) and months. So, how do you build a
+- [0:28](https://youtube.com/watch?v=j55r_higKIo&t=28) second brain that gets smarter over
+- [0:31](https://youtube.com/watch?v=j55r_higKIo&t=31) time? Well, I built one using G brain.
+- [0:34](https://youtube.com/watch?v=j55r_higKIo&t=34) It's an open-source project. It collects
+- [0:36](https://youtube.com/watch?v=j55r_higKIo&t=36) your notes, your documents, your content
+- [0:38](https://youtube.com/watch?v=j55r_higKIo&t=38) from YouTube, X, and it turns it into a
+- [0:42](https://youtube.com/watch?v=j55r_higKIo&t=42) searchable, self-wiring knowledge graph
+- [0:45](https://youtube.com/watch?v=j55r_higKIo&t=45) for your AI agents. And agents can then
+- [0:48](https://youtube.com/watch?v=j55r_higKIo&t=48) spot patterns and follow relationships
+- [0:51](https://youtube.com/watch?v=j55r_higKIo&t=51) and become a great extension of your
+- [0:54](https://youtube.com/watch?v=j55r_higKIo&t=54) brain. Let me show you how it works. So,
+- [0:56](https://youtube.com/watch?v=j55r_higKIo&t=56) here's G brain. You can find it on
+- [0:58](https://youtube.com/watch?v=j55r_higKIo&t=58) GitHub. I will link to the repository in
+- [1:00](https://youtube.com/watch?v=j55r_higKIo&t=60) the show notes. It was created by Garry
+- [1:02](https://youtube.com/watch?v=j55r_higKIo&t=62) Tan, the president of Y Combinator. And
+- [1:05](https://youtube.com/watch?v=j55r_higKIo&t=65) Y Combinator will invest in hundreds of
+- [1:07](https://youtube.com/watch?v=j55r_higKIo&t=67) companies a year. So, you can imagine
+- [1:09](https://youtube.com/watch?v=j55r_higKIo&t=69) that this person has to stay on top of
+- [1:12](https://youtube.com/watch?v=j55r_higKIo&t=72) hundreds of companies, if not thousands,
+- [1:14](https://youtube.com/watch?v=j55r_higKIo&t=74) thousands of relationships, thousands
+- [1:17](https://youtube.com/watch?v=j55r_higKIo&t=77) and thousands of emails, lots of
+- [1:19](https://youtube.com/watch?v=j55r_higKIo&t=79) meetings. How do you make sense of all
+- [1:22](https://youtube.com/watch?v=j55r_higKIo&t=82) of that chaos?
+- [1:23](https://youtube.com/watch?v=j55r_higKIo&t=83) That's why he created this tool. And so,
+- [1:25](https://youtube.com/watch?v=j55r_higKIo&t=85) G brain turns messy notes into connected
+- [1:27](https://youtube.com/watch?v=j55r_higKIo&t=87) memory. It finds the important things,
+- [1:30](https://youtube.com/watch?v=j55r_higKIo&t=90) links them together, tracks how they
+- [1:32](https://youtube.com/watch?v=j55r_higKIo&t=92) change over time, and uses those
+- [1:34](https://youtube.com/watch?v=j55r_higKIo&t=94) connections to search better. And that
+- [1:36](https://youtube.com/watch?v=j55r_higKIo&t=96) better context means your agents can
+- [1:39](https://youtube.com/watch?v=j55r_higKIo&t=99) then do the things you want them to do
+- [1:41](https://youtube.com/watch?v=j55r_higKIo&t=101) better.
+- [1:42](https://youtube.com/watch?v=j55r_higKIo&t=102) And so, whenever you add or update a
+- [1:45](https://youtube.com/watch?v=j55r_higKIo&t=105) note, G brain looks for the important
+- [1:48](https://youtube.com/watch?v=j55r_higKIo&t=108) things mentioned in it, like companies,
+- [1:50](https://youtube.com/watch?v=j55r_higKIo&t=110) people products strategies ideas and
+- [1:54](https://youtube.com/watch?v=j55r_higKIo&t=114) instead of treating the note as plain
+- [1:57](https://youtube.com/watch?v=j55r_higKIo&t=117) text, it starts turning it into
+- [1:58](https://youtube.com/watch?v=j55r_higKIo&t=118) connected objects. That's what creates
+- [2:01](https://youtube.com/watch?v=j55r_higKIo&t=121) type links means. And it does this
+- [2:03](https://youtube.com/watch?v=j55r_higKIo&t=123) without making any LLM calls or burning
+- [2:06](https://youtube.com/watch?v=j55r_higKIo&t=126) any tokens. And it has hybrid search,
+- [2:09](https://youtube.com/watch?v=j55r_higKIo&t=129) meaning it will use more than one kind
+- [2:12](https://youtube.com/watch?v=j55r_higKIo&t=132) of search at the same time. So, it'll do
+- [2:15](https://youtube.com/watch?v=j55r_higKIo&t=135) keyword search, semantic or vector
+- [2:17](https://youtube.com/watch?v=j55r_higKIo&t=137) search, and relationship or graph
+- [2:20](https://youtube.com/watch?v=j55r_higKIo&t=140) search, which allows it to better reach
+- [2:22](https://youtube.com/watch?v=j55r_higKIo&t=142) the information you need. And it is
+- [2:25](https://youtube.com/watch?v=j55r_higKIo&t=145) self-wiring, which means that when you
+- [2:27](https://youtube.com/watch?v=j55r_higKIo&t=147) add notes, gBrain automatically starts
+- [2:29](https://youtube.com/watch?v=j55r_higKIo&t=149) linking people, companies, strategies,
+- [2:31](https://youtube.com/watch?v=j55r_higKIo&t=151) and pages together. It has a structured
+- [2:34](https://youtube.com/watch?v=j55r_higKIo&t=154) timeline, which means the brain also
+- [2:36](https://youtube.com/watch?v=j55r_higKIo&t=156) keeps track of what happened over time.
+- [2:38](https://youtube.com/watch?v=j55r_higKIo&t=158) This is useful because knowledge
+- [2:40](https://youtube.com/watch?v=j55r_higKIo&t=160) changes.
+- [2:41](https://youtube.com/watch?v=j55r_higKIo&t=161) And it has backlink boosted ranking.
+- [2:44](https://youtube.com/watch?v=j55r_higKIo&t=164) That means that search results are not
+- [2:47](https://youtube.com/watch?v=j55r_higKIo&t=167) ranked only by text similarity, they're
+- [2:49](https://youtube.com/watch?v=j55r_higKIo&t=169) also boosted if they are well connected
+- [2:51](https://youtube.com/watch?v=j55r_higKIo&t=171) inside the brain. So, the more relevant
+- [2:54](https://youtube.com/watch?v=j55r_higKIo&t=174) connections a note has, the more likely
+- [2:56](https://youtube.com/watch?v=j55r_higKIo&t=176) it is to show up as important in a
+- [2:59](https://youtube.com/watch?v=j55r_higKIo&t=179) search.
+- [3:00](https://youtube.com/watch?v=j55r_higKIo&t=180) Now, to set up gBrain, the first thing
+- [3:02](https://youtube.com/watch?v=j55r_higKIo&t=182) you want to do is have an agent running.
+- [3:04](https://youtube.com/watch?v=j55r_higKIo&t=184) You can set up an open claw agent, or
+- [3:06](https://youtube.com/watch?v=j55r_higKIo&t=186) you can set up a Hermes agent, and you
+- [3:08](https://youtube.com/watch?v=j55r_higKIo&t=188) can use one of these one-click deploy
+- [3:11](https://youtube.com/watch?v=j55r_higKIo&t=191) templates, which allows you to easily
+- [3:13](https://youtube.com/watch?v=j55r_higKIo&t=193) launch one of these agents and host it
+- [3:16](https://youtube.com/watch?v=j55r_higKIo&t=196) on a virtual private server like
+- [3:18](https://youtube.com/watch?v=j55r_higKIo&t=198) Railway. Now, I'm running my open claw
+- [3:20](https://youtube.com/watch?v=j55r_higKIo&t=200) agent on the Alpha Claw Harness, which
+- [3:23](https://youtube.com/watch?v=j55r_higKIo&t=203) is just a wrapper that helps you deploy
+- [3:26](https://youtube.com/watch?v=j55r_higKIo&t=206) and manage your open claw agent a little
+- [3:28](https://youtube.com/watch?v=j55r_higKIo&t=208) bit easier, and it gives you better
+- [3:29](https://youtube.com/watch?v=j55r_higKIo&t=209) observability to that agent. And I
+- [3:32](https://youtube.com/watch?v=j55r_higKIo&t=212) deployed it on Railway using this
+- [3:34](https://youtube.com/watch?v=j55r_higKIo&t=214) template, and I'll link to this in the
+- [3:36](https://youtube.com/watch?v=j55r_higKIo&t=216) show notes. To give you an idea of how
+- [3:38](https://youtube.com/watch?v=j55r_higKIo&t=218) this works, so your agent will access
+- [3:41](https://youtube.com/watch?v=j55r_higKIo&t=221) some source of data, whether that's your
+- [3:43](https://youtube.com/watch?v=j55r_higKIo&t=223) meeting notes, your sales calls, your
+- [3:45](https://youtube.com/watch?v=j55r_higKIo&t=225) emails,
+- [3:47](https://youtube.com/watch?v=j55r_higKIo&t=227) your X timeline. It will take that data,
+- [3:50](https://youtube.com/watch?v=j55r_higKIo&t=230) and it'll write text files.
+- [3:52](https://youtube.com/watch?v=j55r_higKIo&t=232) These are dot md files and Gbrain will
+- [3:55](https://youtube.com/watch?v=j55r_higKIo&t=235) sync this in a Git repo
+- [3:58](https://youtube.com/watch?v=j55r_higKIo&t=238) and then Gbrain will create embeddings
+- [4:01](https://youtube.com/watch?v=j55r_higKIo&t=241) of those files, metadata, page titles,
+- [4:04](https://youtube.com/watch?v=j55r_higKIo&t=244) file paths, timestamps, and it will
+- [4:07](https://youtube.com/watch?v=j55r_higKIo&t=247) store that into a database. I'm using
+- [4:10](https://youtube.com/watch?v=j55r_higKIo&t=250) Superbase for mine. And that is what
+- [4:12](https://youtube.com/watch?v=j55r_higKIo&t=252) then becomes searchable. Now, I'm
+- [4:14](https://youtube.com/watch?v=j55r_higKIo&t=254) bringing data from my X timeline,
+- [4:17](https://youtube.com/watch?v=j55r_higKIo&t=257) YouTube channels, and a lot of it is
+- [4:19](https://youtube.com/watch?v=j55r_higKIo&t=259) around startup ideas and go-to-market
+- [4:22](https://youtube.com/watch?v=j55r_higKIo&t=262) strategies and people that are creating
+- [4:24](https://youtube.com/watch?v=j55r_higKIo&t=264) businesses. So, if I go into the folders
+- [4:27](https://youtube.com/watch?v=j55r_higKIo&t=267) tab here in Alpha Claw, I can show you
+- [4:29](https://youtube.com/watch?v=j55r_higKIo&t=269) my brain here.
+- [4:31](https://youtube.com/watch?v=j55r_higKIo&t=271) You can see that we've got companies,
+- [4:33](https://youtube.com/watch?v=j55r_higKIo&t=273) we've got we've got people,
+- [4:36](https://youtube.com/watch?v=j55r_higKIo&t=276) for example, founders, Adam Guild here
+- [4:39](https://youtube.com/watch?v=j55r_higKIo&t=279) created the world's first AI CMO for
+- [4:42](https://youtube.com/watch?v=j55r_higKIo&t=282) restaurants, and many other founders.
+- [4:45](https://youtube.com/watch?v=j55r_higKIo&t=285) You can see that we have signals.
+- [4:49](https://youtube.com/watch?v=j55r_higKIo&t=289) So, for example, here it says seven AI
+- [4:52](https://youtube.com/watch?v=j55r_higKIo&t=292) businesses you can start with Claude
+- [4:54](https://youtube.com/watch?v=j55r_higKIo&t=294) agents.
+- [4:55](https://youtube.com/watch?v=j55r_higKIo&t=295) This one says automate your entire job
+- [4:57](https://youtube.com/watch?v=j55r_higKIo&t=297) with Claude co-work. The lessons here
+- [4:59](https://youtube.com/watch?v=j55r_higKIo&t=299) are AI primarily automates tasks within
+- [5:02](https://youtube.com/watch?v=j55r_higKIo&t=302) jobs, not entire jobs. Focus on
+- [5:05](https://youtube.com/watch?v=j55r_higKIo&t=305) identifying and automating these
+- [5:07](https://youtube.com/watch?v=j55r_higKIo&t=307) granular tasks.
+- [5:09](https://youtube.com/watch?v=j55r_higKIo&t=309) So, these are some signals that you'll
+- [5:10](https://youtube.com/watch?v=j55r_higKIo&t=310) see
+- [5:11](https://youtube.com/watch?v=j55r_higKIo&t=311) and there's a ton of them. We've got
+- [5:13](https://youtube.com/watch?v=j55r_higKIo&t=313) go-to-market strategies here, for
+- [5:15](https://youtube.com/watch?v=j55r_higKIo&t=315) example, freemium, multi-channel launch,
+- [5:18](https://youtube.com/watch?v=j55r_higKIo&t=318) partnerships, and all of this gets
+- [5:20](https://youtube.com/watch?v=j55r_higKIo&t=320) collected automatically. The agents go
+- [5:23](https://youtube.com/watch?v=j55r_higKIo&t=323) out there as new content is published,
+- [5:25](https://youtube.com/watch?v=j55r_higKIo&t=325) it'll run background jobs to collect
+- [5:27](https://youtube.com/watch?v=j55r_higKIo&t=327) them and write these documents and
+- [5:29](https://youtube.com/watch?v=j55r_higKIo&t=329) create these links and connections and
+- [5:31](https://youtube.com/watch?v=j55r_higKIo&t=331) now I can search them and I can ask my
+- [5:33](https://youtube.com/watch?v=j55r_higKIo&t=333) agent questions. So, let's give that a
+- [5:35](https://youtube.com/watch?v=j55r_higKIo&t=335) try. So, I went over to my Alpha Claw
+- [5:37](https://youtube.com/watch?v=j55r_higKIo&t=337) and Telegram and I asked it, "What are
+- [5:39](https://youtube.com/watch?v=j55r_higKIo&t=339) some lessons Florian Douarreault used to
+- [5:42](https://youtube.com/watch?v=j55r_higKIo&t=342) scale his SaaS?"
+- [5:44](https://youtube.com/watch?v=j55r_higKIo&t=344) And the this is the following response.
+- [5:46](https://youtube.com/watch?v=j55r_higKIo&t=346) Validate with paid users before scaling.
+- [5:49](https://youtube.com/watch?v=j55r_higKIo&t=349) Use two kinds of marketing, viral
+- [5:51](https://youtube.com/watch?v=j55r_higKIo&t=351) marketing and boring marketing. Post
+- [5:53](https://youtube.com/watch?v=j55r_higKIo&t=353) daily where your ideal customer profile
+- [5:56](https://youtube.com/watch?v=j55r_higKIo&t=356) already hangs out and don't run paid ads
+- [5:59](https://youtube.com/watch?v=j55r_higKIo&t=359) too early.
+- [6:01](https://youtube.com/watch?v=j55r_higKIo&t=361) Uh and so on and so forth. So,
+- [6:03](https://youtube.com/watch?v=j55r_higKIo&t=363) lots of great ideas. And to compare
+- [6:05](https://youtube.com/watch?v=j55r_higKIo&t=365) that, I'd like to actually just put this
+- [6:07](https://youtube.com/watch?v=j55r_higKIo&t=367) into chat GPT cuz I am running this on
+- [6:10](https://youtube.com/watch?v=j55r_higKIo&t=370) uh GPT 5.5 model, but let's see what the
+- [6:13](https://youtube.com/watch?v=j55r_higKIo&t=373) what answer we would get if we just put
+- [6:15](https://youtube.com/watch?v=j55r_higKIo&t=375) it into the standard chat. So, the same
+- [6:17](https://youtube.com/watch?v=j55r_higKIo&t=377) exact question in chat GPT gives me the
+- [6:20](https://youtube.com/watch?v=j55r_higKIo&t=380) following answer. Distribution is the
+- [6:22](https://youtube.com/watch?v=j55r_higKIo&t=382) product's oxygen. Ride waves instead of
+- [6:24](https://youtube.com/watch?v=j55r_higKIo&t=384) trying to create them. Use content as
+- [6:26](https://youtube.com/watch?v=j55r_higKIo&t=386) compounding acquisition channel.
+- [6:29](https://youtube.com/watch?v=j55r_higKIo&t=389) This answer seems a little bit more
+- [6:30](https://youtube.com/watch?v=j55r_higKIo&t=390) generic to me and it has a little less
+- [6:33](https://youtube.com/watch?v=j55r_higKIo&t=393) context around what I'm doing. If you go
+- [6:36](https://youtube.com/watch?v=j55r_higKIo&t=396) back to Telegram, it actually knows the
+- [6:37](https://youtube.com/watch?v=j55r_higKIo&t=397) project I'm working on and so again,
+- [6:39](https://youtube.com/watch?v=j55r_higKIo&t=399) it's catering its answer to my projects,
+- [6:42](https://youtube.com/watch?v=j55r_higKIo&t=402) but it's also a little bit more
+- [6:44](https://youtube.com/watch?v=j55r_higKIo&t=404) actionable. So, let's try another
+- [6:45](https://youtube.com/watch?v=j55r_higKIo&t=405) example that really demonstrates the
+- [6:47](https://youtube.com/watch?v=j55r_higKIo&t=407) power of the G brain. So, I said compare
+- [6:49](https://youtube.com/watch?v=j55r_higKIo&t=409) what founders in my brain say about cold
+- [6:52](https://youtube.com/watch?v=j55r_higKIo&t=412) outbound versus product-led growth, who
+- [6:55](https://youtube.com/watch?v=j55r_higKIo&t=415) advocates what.
+- [6:56](https://youtube.com/watch?v=j55r_higKIo&t=416) And you can see that it says for cold
+- [6:59](https://youtube.com/watch?v=j55r_higKIo&t=419) outbound, you also have from Chatbase or
+- [7:01](https://youtube.com/watch?v=j55r_higKIo&t=421) for product-led growth, Jeremy from Task
+- [7:04](https://youtube.com/watch?v=j55r_higKIo&t=424) Magic and it's citing the exact document
+- [7:07](https://youtube.com/watch?v=j55r_higKIo&t=427) where the data is sitting.
+- [7:10](https://youtube.com/watch?v=j55r_higKIo&t=430) And then it ultimately makes a
+- [7:12](https://youtube.com/watch?v=j55r_higKIo&t=432) recommendation for my product
+- [7:15](https://youtube.com/watch?v=j55r_higKIo&t=435) specifically. Now, you might say that
+- [7:16](https://youtube.com/watch?v=j55r_higKIo&t=436) chat GPT will give you good enough
+- [7:18](https://youtube.com/watch?v=j55r_higKIo&t=438) answers, but ultimately that corpus of
+- [7:21](https://youtube.com/watch?v=j55r_higKIo&t=441) data, that context is very hard to just
+- [7:25](https://youtube.com/watch?v=j55r_higKIo&t=445) give to chat GPT and so you're just
+- [7:27](https://youtube.com/watch?v=j55r_higKIo&t=447) going to get generic answers as I have
+- [7:29](https://youtube.com/watch?v=j55r_higKIo&t=449) here. And just to do one more that is
+- [7:32](https://youtube.com/watch?v=j55r_higKIo&t=452) very personalized to me, I asked, what
+- [7:35](https://youtube.com/watch?v=j55r_higKIo&t=455) were the top go-to-market insights from
+- [7:37](https://youtube.com/watch?v=j55r_higKIo&t=457) my Twitter feed today and here they are.
+- [7:40](https://youtube.com/watch?v=j55r_higKIo&t=460) That's it for this video. I know that
+- [7:42](https://youtube.com/watch?v=j55r_higKIo&t=462) Claude, ChatGPT, and Gemini are all
+- [7:44](https://youtube.com/watch?v=j55r_higKIo&t=464) starting to build memory into their
+- [7:46](https://youtube.com/watch?v=j55r_higKIo&t=466) products, and that's going to be very
+- [7:48](https://youtube.com/watch?v=j55r_higKIo&t=468) useful. But, from my experience, if
+- [7:50](https://youtube.com/watch?v=j55r_higKIo&t=470) you're working with large amounts of
+- [7:51](https://youtube.com/watch?v=j55r_higKIo&t=471) your own data,
+- [7:53](https://youtube.com/watch?v=j55r_higKIo&t=473) you need something more structured than
+- [7:54](https://youtube.com/watch?v=j55r_higKIo&t=474) just chat history. That's why I like
+- [7:56](https://youtube.com/watch?v=j55r_higKIo&t=476) Gbrain. It gives your agents a real
+- [7:59](https://youtube.com/watch?v=j55r_higKIo&t=479) external memory, and it's searchable,
+- [8:01](https://youtube.com/watch?v=j55r_higKIo&t=481) it's connected, it's editable, it
+- [8:03](https://youtube.com/watch?v=j55r_higKIo&t=483) doesn't burn a lot of tokens, and you're
+- [8:05](https://youtube.com/watch?v=j55r_higKIo&t=485) not locked into a specific platform
+- [8:07](https://youtube.com/watch?v=j55r_higKIo&t=487) because it's open source, and you can
+- [8:09](https://youtube.com/watch?v=j55r_higKIo&t=489) move your data. It's a great tool. Give
+- [8:11](https://youtube.com/watch?v=j55r_higKIo&t=491) it a try. And if you found this video
+- [8:13](https://youtube.com/watch?v=j55r_higKIo&t=493) useful, please hit like and subscribe.
+- [8:15](https://youtube.com/watch?v=j55r_higKIo&t=495) It encourages me to continue to make
+- [8:17](https://youtube.com/watch?v=j55r_higKIo&t=497) these videos. I'll see you in the next
+- [8:19](https://youtube.com/watch?v=j55r_higKIo&t=499) one.

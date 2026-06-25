@@ -1,0 +1,369 @@
+---
+title: "Claude Code + Graphify = Insane Agentic OS"
+source_url: https://youtube.com/watch?v=Owv503rTqYY
+video_id: Owv503rTqYY
+source_type: youtube
+lang: en
+analyzed: 2026-06-11
+category: 일반학습
+status: active
+---
+# Claude Code + Graphify = Insane Agentic OS
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 이 영상은 Graphify 도구를 소개하는데, 이는 Claude code의 비용과 시간을 절약하면서 정확도를 높이는 도구입니다. Graphify는 코드베이스의 관계와 구조를 이해할 수 있는 지식 그래프를 생성하여, Claude가 전체 코드를 매번 다시 읽지 않고도 코드를 이해할 수 있게 합니다. 영상에서는 Graphify를 Claude code에 설치하는 방법과, 더 나아가 agentic operating system과 연결하여 여러 도구들(Hermes, Claude code 등)을 하나의 통합된 시스템으로 만드는 방법을 보여줍니다. 이를 통해 개발자는 새로운 코드베이스를 빠르게 이해하고, 토큰 사용량을 줄이며, 더 정확한 답변을 얻을 수 있습니다.
+- **Core Message:** Graphify는 코드베이스를 지식 그래프로 변환하여 Claude의 코드 이해 능력을 대폭 향상시키고, agentic operating system과 결합하면 모든 프로젝트를 통합 관리할 수 있는 강력한 개발 환경을 만들 수 있다.
+> Without the map, it skims the whole repo every single conversation or it just sits in the context. But with the map, we can actually answer from summaries
+> Think of Graphify as the ability to speak any language in any country
+> Rereading actually is the tax that we're saving here
+❗ Graphify can show exactly how much money you're saving per conversation in dollars and cents
+❗ The system creates a shared brain where all tools (Hermes, Claude code, dashboard) read from one registry
+❗ You can work on your laptop with Claude code and seamlessly continue on mobile with the same mapped understanding
+
+## 🚀 실행 (Execute)
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=Owv503rTqYY&t=0) Imagine if Claude code was faster,
+- [0:02](https://youtube.com/watch?v=Owv503rTqYY&t=2) cheaper, and incredibly accurate.
+- [0:05](https://youtube.com/watch?v=Owv503rTqYY&t=5) Graphify just solved Claude code's
+- [0:07](https://youtube.com/watch?v=Owv503rTqYY&t=7) biggest problem. And it makes all of
+- [0:09](https://youtube.com/watch?v=Owv503rTqYY&t=9) this possible by creating a knowledge
+- [0:12](https://youtube.com/watch?v=Owv503rTqYY&t=12) graph of any project for Claude to use.
+- [0:14](https://youtube.com/watch?v=Owv503rTqYY&t=14) And in this video, I'll show you exactly
+- [0:16](https://youtube.com/watch?v=Owv503rTqYY&t=16) how to use it and how you can 10x beyond
+- [0:18](https://youtube.com/watch?v=Owv503rTqYY&t=18) this by having it within an agentic
+- [0:21](https://youtube.com/watch?v=Owv503rTqYY&t=21) operating system, even if you've never
+- [0:24](https://youtube.com/watch?v=Owv503rTqYY&t=24) used it before, unlocking capabilities
+- [0:26](https://youtube.com/watch?v=Owv503rTqYY&t=26) that nobody else is using right now. And
+- [0:28](https://youtube.com/watch?v=Owv503rTqYY&t=28) if you're new, I'm Jack. I built some of
+- [0:30](https://youtube.com/watch?v=Owv503rTqYY&t=30) my last tech startups with a gazillion
+- [0:31](https://youtube.com/watch?v=Owv503rTqYY&t=31) customers. Now I'm building my own AI
+- [0:33](https://youtube.com/watch?v=Owv503rTqYY&t=33) businesses. And actually I hit the stuff
+- [0:34](https://youtube.com/watch?v=Owv503rTqYY&t=34) that actually works. So if you haven't
+- [0:36](https://youtube.com/watch?v=Owv503rTqYY&t=36) already, grab that beautiful coffee and
+- [0:38](https://youtube.com/watch?v=Owv503rTqYY&t=38) let's dive straight in. So Graphify
+- [0:40](https://youtube.com/watch?v=Owv503rTqYY&t=40) creates this beautiful overview of all
+- [0:42](https://youtube.com/watch?v=Owv503rTqYY&t=42) of your projects, or if you're using it
+- [0:44](https://youtube.com/watch?v=Owv503rTqYY&t=44) within an agentic operating system, like
+- [0:46](https://youtube.com/watch?v=Owv503rTqYY&t=46) I'm going to show you in this video, it
+- [0:48](https://youtube.com/watch?v=Owv503rTqYY&t=48) takes it to a completely new level. But
+- [0:51](https://youtube.com/watch?v=Owv503rTqYY&t=51) we have to actually start by
+- [0:53](https://youtube.com/watch?v=Owv503rTqYY&t=53) understanding what Graphify physically
+- [0:55](https://youtube.com/watch?v=Owv503rTqYY&t=55) is. In a nutshell, what Graphify does is
+- [0:57](https://youtube.com/watch?v=Owv503rTqYY&t=57) gives Claude code a map. What do I mean
+- [1:00](https://youtube.com/watch?v=Owv503rTqYY&t=60) by that? Well, let's say for example
+- [1:01](https://youtube.com/watch?v=Owv503rTqYY&t=61) that every code base represents a
+- [1:03](https://youtube.com/watch?v=Owv503rTqYY&t=63) foreign country. Let's say we go to
+- [1:05](https://youtube.com/watch?v=Owv503rTqYY&t=65) France or Germany. Without it, we have
+- [1:07](https://youtube.com/watch?v=Owv503rTqYY&t=67) to learn a language, we kind of have to
+- [1:08](https://youtube.com/watch?v=Owv503rTqYY&t=68) translate it. But think of Graphify is
+- [1:11](https://youtube.com/watch?v=Owv503rTqYY&t=71) the ability to speak any language in any
+- [1:13](https://youtube.com/watch?v=Owv503rTqYY&t=73) country. You can communicate a lot
+- [1:15](https://youtube.com/watch?v=Owv503rTqYY&t=75) faster, you can understand exactly
+- [1:16](https://youtube.com/watch?v=Owv503rTqYY&t=76) what's going on, and it just reduces any
+- [1:19](https://youtube.com/watch?v=Owv503rTqYY&t=79) latency. But it does a lot more than
+- [1:20](https://youtube.com/watch?v=Owv503rTqYY&t=80) that, but it really helps you understand
+- [1:22](https://youtube.com/watch?v=Owv503rTqYY&t=82) conceptually what Graphify is doing. So
+- [1:24](https://youtube.com/watch?v=Owv503rTqYY&t=84) think of it like this. We have code. So
+- [1:26](https://youtube.com/watch?v=Owv503rTqYY&t=86) this could be any application we've got.
+- [1:28](https://youtube.com/watch?v=Owv503rTqYY&t=88) It could be the agentic operating
+- [1:30](https://youtube.com/watch?v=Owv503rTqYY&t=90) system, the thing that you're building.
+- [1:31](https://youtube.com/watch?v=Owv503rTqYY&t=91) And in effect of what happens is
+- [1:33](https://youtube.com/watch?v=Owv503rTqYY&t=93) Graphify understands the relationships
+- [1:36](https://youtube.com/watch?v=Owv503rTqYY&t=96) of all the components within it that
+- [1:38](https://youtube.com/watch?v=Owv503rTqYY&t=98) makes it easier, faster, better for
+- [1:40](https://youtube.com/watch?v=Owv503rTqYY&t=100) Claude to talk to it. Meaning it spends
+- [1:43](https://youtube.com/watch?v=Owv503rTqYY&t=103) way less tokens when you actually have a
+- [1:45](https://youtube.com/watch?v=Owv503rTqYY&t=105) conversation with it. I actually covered
+- [1:47](https://youtube.com/watch?v=Owv503rTqYY&t=107) it on the channel over a month ago, but
+- [1:48](https://youtube.com/watch?v=Owv503rTqYY&t=108) I want to go deeper in it today to show
+- [1:50](https://youtube.com/watch?v=Owv503rTqYY&t=110) you exactly how it can upgrade your
+- [1:51](https://youtube.com/watch?v=Owv503rTqYY&t=111) setup. At the end of the day, it reads,
+- [1:53](https://youtube.com/watch?v=Owv503rTqYY&t=113) not summarizes. It clusters things into
+- [1:55](https://youtube.com/watch?v=Owv503rTqYY&t=115) modules. It ranks what it calls the god
+- [1:58](https://youtube.com/watch?v=Owv503rTqYY&t=118) nodes of the individual project, which
+- [1:59](https://youtube.com/watch?v=Owv503rTqYY&t=119) are the load-bearing files, and then it
+- [2:01](https://youtube.com/watch?v=Owv503rTqYY&t=121) labels facts versus guesses, things that
+- [2:04](https://youtube.com/watch?v=Owv503rTqYY&t=124) it actually extracts and things that it
+- [2:06](https://youtube.com/watch?v=Owv503rTqYY&t=126) infers from its order. Now, what does a
+- [2:08](https://youtube.com/watch?v=Owv503rTqYY&t=128) map actually physically help us do?
+- [2:10](https://youtube.com/watch?v=Owv503rTqYY&t=130) Well, number one is we get instantly
+- [2:11](https://youtube.com/watch?v=Owv503rTqYY&t=131) orientated with anything. So, say you
+- [2:13](https://youtube.com/watch?v=Owv503rTqYY&t=133) want to download ClaudeBot or you want
+- [2:15](https://youtube.com/watch?v=Owv503rTqYY&t=135) to download Hermes, you can actually
+- [2:17](https://youtube.com/watch?v=Owv503rTqYY&t=137) talk to this straight away and
+- [2:18](https://youtube.com/watch?v=Owv503rTqYY&t=138) understand what's going on. You get
+- [2:20](https://youtube.com/watch?v=Owv503rTqYY&t=140) grounded answers, you can understand and
+- [2:22](https://youtube.com/watch?v=Owv503rTqYY&t=142) visualize the impact of all the inter
+- [2:24](https://youtube.com/watch?v=Owv503rTqYY&t=144) basically all the interconnections. You
+- [2:26](https://youtube.com/watch?v=Owv503rTqYY&t=146) can query it instead of using grep,
+- [2:28](https://youtube.com/watch?v=Owv503rTqYY&t=148) which is basically like a search. It is
+- [2:30](https://youtube.com/watch?v=Owv503rTqYY&t=150) always fresh, and it isn't just code,
+- [2:32](https://youtube.com/watch?v=Owv503rTqYY&t=152) you get comprehensive understanding
+- [2:34](https://youtube.com/watch?v=Owv503rTqYY&t=154) beyond what the code is actually about.
+- [2:36](https://youtube.com/watch?v=Owv503rTqYY&t=156) So, again, instant orientation, grounded
+- [2:37](https://youtube.com/watch?v=Owv503rTqYY&t=157) answers, blast radius, every dependency
+- [2:40](https://youtube.com/watch?v=Owv503rTqYY&t=160) before you start editing it. For
+- [2:41](https://youtube.com/watch?v=Owv503rTqYY&t=161) example, in the community I have, I give
+- [2:43](https://youtube.com/watch?v=Owv503rTqYY&t=163) away this Claude code and Hermes
+- [2:45](https://youtube.com/watch?v=Owv503rTqYY&t=165) operating system. Maybe you want to add
+- [2:46](https://youtube.com/watch?v=Owv503rTqYY&t=166) things to it. Well, using GraphiFi lets
+- [2:49](https://youtube.com/watch?v=Owv503rTqYY&t=169) you understand all of the
+- [2:50](https://youtube.com/watch?v=Owv503rTqYY&t=170) interdependencies within this code, so
+- [2:52](https://youtube.com/watch?v=Owv503rTqYY&t=172) you know exactly what affects everything
+- [2:54](https://youtube.com/watch?v=Owv503rTqYY&t=174) else without spending a googolplexian
+- [2:57](https://youtube.com/watch?v=Owv503rTqYY&t=177) understanding and paying to do that.
+- [2:58](https://youtube.com/watch?v=Owv503rTqYY&t=178) That's how freaking cool it is, and it's
+- [3:00](https://youtube.com/watch?v=Owv503rTqYY&t=180) always fresh. Now, the real key thing
+- [3:02](https://youtube.com/watch?v=Owv503rTqYY&t=182) that you need to understand before we
+- [3:03](https://youtube.com/watch?v=Owv503rTqYY&t=183) set this up is that rereading actually
+- [3:05](https://youtube.com/watch?v=Owv503rTqYY&t=185) is the tax that we're saving here.
+- [3:07](https://youtube.com/watch?v=Owv503rTqYY&t=187) Without the map, it skims the whole repo
+- [3:09](https://youtube.com/watch?v=Owv503rTqYY&t=189) every single conversation or it just
+- [3:11](https://youtube.com/watch?v=Owv503rTqYY&t=191) sits in the context. But with the map,
+- [3:13](https://youtube.com/watch?v=Owv503rTqYY&t=193) we can actually answer from summaries,
+- [3:15](https://youtube.com/watch?v=Owv503rTqYY&t=195) which is super beneficial, and every
+- [3:17](https://youtube.com/watch?v=Owv503rTqYY&t=197) session compounds. So, to set it up, we
+- [3:19](https://youtube.com/watch?v=Owv503rTqYY&t=199) head over to this GitHub repo, and I'm
+- [3:20](https://youtube.com/watch?v=Owv503rTqYY&t=200) just going to go ahead and copy the
+- [3:21](https://youtube.com/watch?v=Owv503rTqYY&t=201) code, and then let's you straight over
+- [3:23](https://youtube.com/watch?v=Owv503rTqYY&t=203) to Claude code. Brilliant. And within
+- [3:24](https://youtube.com/watch?v=Owv503rTqYY&t=204) Claude code, you're going to say, "Hey
+- [3:26](https://youtube.com/watch?v=Owv503rTqYY&t=206) there, dude." Dude is very important. I
+- [3:28](https://youtube.com/watch?v=Owv503rTqYY&t=208) want to go ahead, I want you to clone
+- [3:29](https://youtube.com/watch?v=Owv503rTqYY&t=209) this repo, and I'd like you to open up
+- [3:31](https://youtube.com/watch?v=Owv503rTqYY&t=211) my Let's call this open up Hermes as a
+- [3:34](https://youtube.com/watch?v=Owv503rTqYY&t=214) test project, and basically open up the
+- [3:36](https://youtube.com/watch?v=Owv503rTqYY&t=216) GraphiFi window. Okay, send this one
+- [3:38](https://youtube.com/watch?v=Owv503rTqYY&t=218) off. I should say, "Dude, it is very,
+- [3:40](https://youtube.com/watch?v=Owv503rTqYY&t=220) very important." And then you basically
+- [3:41](https://youtube.com/watch?v=Owv503rTqYY&t=221) just drop in the URL. Now, if you're
+- [3:44](https://youtube.com/watch?v=Owv503rTqYY&t=224) listening to this and thinking, "Jack,
+- [3:45](https://youtube.com/watch?v=Owv503rTqYY&t=225) this sounds to me like you're speaking
+- [3:47](https://youtube.com/watch?v=Owv503rTqYY&t=227) Japanese." I have got a full Claude code
+- [3:49](https://youtube.com/watch?v=Owv503rTqYY&t=229) course, I'll put a link down below. I
+- [3:50](https://youtube.com/watch?v=Owv503rTqYY&t=230) take you from foundation setup through
+- [3:52](https://youtube.com/watch?v=Owv503rTqYY&t=232) to building beautiful websites, powerful
+- [3:54](https://youtube.com/watch?v=Owv503rTqYY&t=234) features, and stuff I have never shared
+- [3:56](https://youtube.com/watch?v=Owv503rTqYY&t=236) on YouTube. I get messages about this
+- [3:58](https://youtube.com/watch?v=Owv503rTqYY&t=238) daily. It is the most comprehensive
+- [4:00](https://youtube.com/watch?v=Owv503rTqYY&t=240) thing I have ever built. It lives I
+- [4:01](https://youtube.com/watch?v=Owv503rTqYY&t=241) update it all the time. You get this and
+- [4:03](https://youtube.com/watch?v=Owv503rTqYY&t=243) you also get access to the big beautiful
+- [4:05](https://youtube.com/watch?v=Owv503rTqYY&t=245) operating system. You can just
+- [4:06](https://youtube.com/watch?v=Owv503rTqYY&t=246) immediately access it. So, I'll put a
+- [4:08](https://youtube.com/watch?v=Owv503rTqYY&t=248) link down below so you can grab that if
+- [4:09](https://youtube.com/watch?v=Owv503rTqYY&t=249) that would be beneficial for you. Now,
+- [4:11](https://youtube.com/watch?v=Owv503rTqYY&t=251) what's going to happen here is Claude is
+- [4:13](https://youtube.com/watch?v=Owv503rTqYY&t=253) basically going to download it. It's
+- [4:14](https://youtube.com/watch?v=Owv503rTqYY&t=254) already got the repo which is fine. And
+- [4:16](https://youtube.com/watch?v=Owv503rTqYY&t=256) then what it will do is index that
+- [4:18](https://youtube.com/watch?v=Owv503rTqYY&t=258) particular file. So, the way this works
+- [4:20](https://youtube.com/watch?v=Owv503rTqYY&t=260) is you can basically when you download
+- [4:21](https://youtube.com/watch?v=Owv503rTqYY&t=261) the Graph i Skill is you can graph i so
+- [4:24](https://youtube.com/watch?v=Owv503rTqYY&t=264) to speak any particular project that
+- [4:26](https://youtube.com/watch?v=Owv503rTqYY&t=266) you've got and then it just enables you
+- [4:28](https://youtube.com/watch?v=Owv503rTqYY&t=268) to query that project um in a much more
+- [4:30](https://youtube.com/watch?v=Owv503rTqYY&t=270) meaningful way. You understand the
+- [4:32](https://youtube.com/watch?v=Owv503rTqYY&t=272) relationships and interdependencies of
+- [4:35](https://youtube.com/watch?v=Owv503rTqYY&t=275) it rather than just looking at flat code
+- [4:36](https://youtube.com/watch?v=Owv503rTqYY&t=276) and it just makes the whole experience
+- [4:38](https://youtube.com/watch?v=Owv503rTqYY&t=278) way better. And when done, this is the
+- [4:41](https://youtube.com/watch?v=Owv503rTqYY&t=281) Hermes system. You can see now I've got
+- [4:43](https://youtube.com/watch?v=Owv503rTqYY&t=283) all the interactive graphs here. Now,
+- [4:44](https://youtube.com/watch?v=Owv503rTqYY&t=284) it's basically a big beautiful circle.
+- [4:47](https://youtube.com/watch?v=Owv503rTqYY&t=287) Kind of looks like planet Earth to some
+- [4:48](https://youtube.com/watch?v=Owv503rTqYY&t=288) extent, right? Shows you all the
+- [4:50](https://youtube.com/watch?v=Owv503rTqYY&t=290) communities. Realistically though, this
+- [4:51](https://youtube.com/watch?v=Owv503rTqYY&t=291) is just a kind of visuality thing. I can
+- [4:54](https://youtube.com/watch?v=Owv503rTqYY&t=294) unlink communities if I want to. But you
+- [4:55](https://youtube.com/watch?v=Owv503rTqYY&t=295) can generally see that when we look at
+- [4:57](https://youtube.com/watch?v=Owv503rTqYY&t=297) this graph, what's helpful to understand
+- [4:58](https://youtube.com/watch?v=Owv503rTqYY&t=298) is the clustering uh where all the
+- [5:01](https://youtube.com/watch?v=Owv503rTqYY&t=301) things actually link together. But the
+- [5:02](https://youtube.com/watch?v=Owv503rTqYY&t=302) real magic happens when you give it a
+- [5:04](https://youtube.com/watch?v=Owv503rTqYY&t=304) prompt. So, I might come back and say,
+- [5:06](https://youtube.com/watch?v=Owv503rTqYY&t=306) "Hey there, I'd like to go ahead and
+- [5:07](https://youtube.com/watch?v=Owv503rTqYY&t=307) summarize what this repo is using the
+- [5:10](https://youtube.com/watch?v=Owv503rTqYY&t=310) Graph i Skill." Okay, go ahead and this
+- [5:12](https://youtube.com/watch?v=Owv503rTqYY&t=312) is an example now whenever you're
+- [5:13](https://youtube.com/watch?v=Owv503rTqYY&t=313) basically talking about any repo, we can
+- [5:14](https://youtube.com/watch?v=Owv503rTqYY&t=314) use this Graph i Skill to drastically
+- [5:17](https://youtube.com/watch?v=Owv503rTqYY&t=317) cut our costs out. And then just like
+- [5:18](https://youtube.com/watch?v=Owv503rTqYY&t=318) that, we've got a basic summation from
+- [5:21](https://youtube.com/watch?v=Owv503rTqYY&t=321) Claude code explaining the differences
+- [5:23](https://youtube.com/watch?v=Owv503rTqYY&t=323) about it and it's understood all of that
+- [5:25](https://youtube.com/watch?v=Owv503rTqYY&t=325) which is great information. And it's
+- [5:26](https://youtube.com/watch?v=Owv503rTqYY&t=326) used Graph i to go ahead and do that.
+- [5:27](https://youtube.com/watch?v=Owv503rTqYY&t=327) You can just compare by the way using
+- [5:29](https://youtube.com/watch?v=Owv503rTqYY&t=329) Graph i and not Graph i and you will
+- [5:31](https://youtube.com/watch?v=Owv503rTqYY&t=331) understand the difference as to why this
+- [5:33](https://youtube.com/watch?v=Owv503rTqYY&t=333) actually saves you so much time. But not
+- [5:35](https://youtube.com/watch?v=Owv503rTqYY&t=335) only does it save you time, it saves
+- [5:36](https://youtube.com/watch?v=Owv503rTqYY&t=336) cost, it's just a more effective way of
+- [5:39](https://youtube.com/watch?v=Owv503rTqYY&t=339) talking to and understanding any kind of
+- [5:41](https://youtube.com/watch?v=Owv503rTqYY&t=341) code base which is a really important
+- [5:42](https://youtube.com/watch?v=Owv503rTqYY&t=342) skill. But we can take it one step
+- [5:44](https://youtube.com/watch?v=Owv503rTqYY&t=344) further. Now, here is the Agentech
+- [5:46](https://youtube.com/watch?v=Owv503rTqYY&t=346) operating system. Now, the interesting
+- [5:48](https://youtube.com/watch?v=Owv503rTqYY&t=348) thing about this operating system, as
+- [5:49](https://youtube.com/watch?v=Owv503rTqYY&t=349) you know, it connects to many other
+- [5:50](https://youtube.com/watch?v=Owv503rTqYY&t=350) things. It lets us bring in everything
+- [5:52](https://youtube.com/watch?v=Owv503rTqYY&t=352) from Hermes, everything doing with
+- [5:54](https://youtube.com/watch?v=Owv503rTqYY&t=354) Claude code, anti-gravity codex.
+- [5:56](https://youtube.com/watch?v=Owv503rTqYY&t=356) Everything is in one location. I can see
+- [5:58](https://youtube.com/watch?v=Owv503rTqYY&t=358) my spend. I can see my skills. I It
+- [6:00](https://youtube.com/watch?v=Owv503rTqYY&t=360) dreams for me overnight to find
+- [6:02](https://youtube.com/watch?v=Owv503rTqYY&t=362) improvements based on our chat history.
+- [6:04](https://youtube.com/watch?v=Owv503rTqYY&t=364) It does a lot of incredible beautiful
+- [6:06](https://youtube.com/watch?v=Owv503rTqYY&t=366) things that just saves lots of time.
+- [6:07](https://youtube.com/watch?v=Owv503rTqYY&t=367) I've got a lot of videos on it on the
+- [6:09](https://youtube.com/watch?v=Owv503rTqYY&t=369) channel. But, the really interesting
+- [6:10](https://youtube.com/watch?v=Owv503rTqYY&t=370) thing for us here that we can do is we
+- [6:12](https://youtube.com/watch?v=Owv503rTqYY&t=372) can actually now look at different
+- [6:14](https://youtube.com/watch?v=Owv503rTqYY&t=374) coding graphs that I've kind of ingested
+- [6:15](https://youtube.com/watch?v=Owv503rTqYY&t=375) here and ask questions about it. Say for
+- [6:17](https://youtube.com/watch?v=Owv503rTqYY&t=377) example, you want to connect this to
+- [6:18](https://youtube.com/watch?v=Owv503rTqYY&t=378) Hermes, you can do it. Now, check this
+- [6:20](https://youtube.com/watch?v=Owv503rTqYY&t=380) out. I've got the Claude code operating
+- [6:21](https://youtube.com/watch?v=Owv503rTqYY&t=381) system here. I can now see on the
+- [6:23](https://youtube.com/watch?v=Owv503rTqYY&t=383) right-hand side, look. Here's a number
+- [6:24](https://youtube.com/watch?v=Owv503rTqYY&t=384) of files, number of links, number of
+- [6:25](https://youtube.com/watch?v=Owv503rTqYY&t=385) clauses. I get these deep this detailed
+- [6:27](https://youtube.com/watch?v=Owv503rTqYY&t=387) information, as well as how much money
+- [6:29](https://youtube.com/watch?v=Owv503rTqYY&t=389) I'm actually going to be saving per
+- [6:30](https://youtube.com/watch?v=Owv503rTqYY&t=390) conversation in dollars and cents. And
+- [6:33](https://youtube.com/watch?v=Owv503rTqYY&t=393) what's really cool is you can actually
+- [6:34](https://youtube.com/watch?v=Owv503rTqYY&t=394) then have these quicker fire things
+- [6:36](https://youtube.com/watch?v=Owv503rTqYY&t=396) here. Like let's say for example, I've
+- [6:37](https://youtube.com/watch?v=Owv503rTqYY&t=397) got Claude OS and I want to understand
+- [6:39](https://youtube.com/watch?v=Owv503rTqYY&t=399) what does this project do. I can
+- [6:40](https://youtube.com/watch?v=Owv503rTqYY&t=400) actually click that, come down here, and
+- [6:42](https://youtube.com/watch?v=Owv503rTqYY&t=402) I can connect it to Hermes, and I can
+- [6:44](https://youtube.com/watch?v=Owv503rTqYY&t=404) just have a conversation directly in my
+- [6:46](https://youtube.com/watch?v=Owv503rTqYY&t=406) Claude code operating system about
+- [6:48](https://youtube.com/watch?v=Owv503rTqYY&t=408) anything, and it's all fully connected
+- [6:50](https://youtube.com/watch?v=Owv503rTqYY&t=410) from Hermes agent to Claude code to this
+- [6:52](https://youtube.com/watch?v=Owv503rTqYY&t=412) incredible Claude code operating system.
+- [6:54](https://youtube.com/watch?v=Owv503rTqYY&t=414) And it just lets us connect everything
+- [6:56](https://youtube.com/watch?v=Owv503rTqYY&t=416) together. And when we put it inside the
+- [6:58](https://youtube.com/watch?v=Owv503rTqYY&t=418) operating system, as I say, Graph 5
+- [7:00](https://youtube.com/watch?v=Owv503rTqYY&t=420) makes the map, and the Agentyc OS makes
+- [7:01](https://youtube.com/watch?v=Owv503rTqYY&t=421) it always on, shared, and
+- [7:03](https://youtube.com/watch?v=Owv503rTqYY&t=423) conversational. And here's why it's so
+- [7:04](https://youtube.com/watch?v=Owv503rTqYY&t=424) important. We have now one shared brain
+- [7:06](https://youtube.com/watch?v=Owv503rTqYY&t=426) with all of this stuff, right? So,
+- [7:08](https://youtube.com/watch?v=Owv503rTqYY&t=428) Hermes, Claude code, and the dashboard,
+- [7:09](https://youtube.com/watch?v=Owv503rTqYY&t=429) they read one registry registry and
+- [7:11](https://youtube.com/watch?v=Owv503rTqYY&t=431) graph once. What does that mean? Let's
+- [7:13](https://youtube.com/watch?v=Owv503rTqYY&t=433) say that you're doing work at your
+- [7:15](https://youtube.com/watch?v=Owv503rTqYY&t=435) laptop on Claude code, then your mobile,
+- [7:16](https://youtube.com/watch?v=Owv503rTqYY&t=436) you can now actually connect this with
+- [7:17](https://youtube.com/watch?v=Owv503rTqYY&t=437) open Claude and Hermes, and we're all
+- [7:19](https://youtube.com/watch?v=Owv503rTqYY&t=439) reading off the same page because it's
+- [7:21](https://youtube.com/watch?v=Owv503rTqYY&t=441) already been done in one system. It's a
+- [7:23](https://youtube.com/watch?v=Owv503rTqYY&t=443) map that you can talk to. So, whenever
+- [7:24](https://youtube.com/watch?v=Owv503rTqYY&t=444) you want to understand anything about
+- [7:26](https://youtube.com/watch?v=Owv503rTqYY&t=446) any project, you can literally just go
+- [7:28](https://youtube.com/watch?v=Owv503rTqYY&t=448) to this operating system, select the
+- [7:30](https://youtube.com/watch?v=Owv503rTqYY&t=450) thing you want to chat to, and then have
+- [7:31](https://youtube.com/watch?v=Owv503rTqYY&t=451) a full conversation with it, and it's
+- [7:33](https://youtube.com/watch?v=Owv503rTqYY&t=453) all completely connected. You can also
+- [7:35](https://youtube.com/watch?v=Owv503rTqYY&t=455) import any GitHub repo you want to. So,
+- [7:37](https://youtube.com/watch?v=Owv503rTqYY&t=457) let's say for example, I grab one from
+- [7:38](https://youtube.com/watch?v=Owv503rTqYY&t=458) GitHub right now. So, this is a is a
+- [7:40](https://youtube.com/watch?v=Owv503rTqYY&t=460) design one that I made. Let's say I just
+- [7:41](https://youtube.com/watch?v=Owv503rTqYY&t=461) simply come down, I copy the code, I
+- [7:43](https://youtube.com/watch?v=Owv503rTqYY&t=463) come straight back over there to our
+- [7:45](https://youtube.com/watch?v=Owv503rTqYY&t=465) beautiful operating system. I can come
+- [7:47](https://youtube.com/watch?v=Owv503rTqYY&t=467) down here to add project at the top. I
+- [7:49](https://youtube.com/watch?v=Owv503rTqYY&t=469) literally just drop it in, I click on
+- [7:50](https://youtube.com/watch?v=Owv503rTqYY&t=470) graph it, it costs us beautifully zero
+- [7:52](https://youtube.com/watch?v=Owv503rTqYY&t=472) dollars, and now this is essentially
+- [7:53](https://youtube.com/watch?v=Owv503rTqYY&t=473) running graph it fine on our computer,
+- [7:56](https://youtube.com/watch?v=Owv503rTqYY&t=476) and now we have power design, which
+- [7:57](https://youtube.com/watch?v=Owv503rTqYY&t=477) explains everything that goes on in
+- [7:59](https://youtube.com/watch?v=Owv503rTqYY&t=479) power design. Here's a brand style MD,
+- [8:00](https://youtube.com/watch?v=Owv503rTqYY&t=480) here's a responsive behavior, here's our
+- [8:02](https://youtube.com/watch?v=Owv503rTqYY&t=482) layout, and now if I want to, I can
+- [8:04](https://youtube.com/watch?v=Owv503rTqYY&t=484) literally just talk to Hermes agent
+- [8:06](https://youtube.com/watch?v=Owv503rTqYY&t=486) about it or Claude code. That's how
+- [8:08](https://youtube.com/watch?v=Owv503rTqYY&t=488) powerful this is. And now if I want to,
+- [8:09](https://youtube.com/watch?v=Owv503rTqYY&t=489) I can literally just have a conversation
+- [8:11](https://youtube.com/watch?v=Owv503rTqYY&t=491) with power design straight away. For
+- [8:12](https://youtube.com/watch?v=Owv503rTqYY&t=492) example, if you're using the Hermes app,
+- [8:14](https://youtube.com/watch?v=Owv503rTqYY&t=494) I can also come down and say, "Hey there
+- [8:15](https://youtube.com/watch?v=Owv503rTqYY&t=495) dude, could you use the graph it skill
+- [8:17](https://youtube.com/watch?v=Owv503rTqYY&t=497) to tell me about the Claude code
+- [8:19](https://youtube.com/watch?v=Owv503rTqYY&t=499) operating system and how it works?" And
+- [8:21](https://youtube.com/watch?v=Owv503rTqYY&t=501) our Hermes itself can go ahead and
+- [8:22](https://youtube.com/watch?v=Owv503rTqYY&t=502) actually use all that information if you
+- [8:24](https://youtube.com/watch?v=Owv503rTqYY&t=504) give it the ability, as I show you right
+- [8:26](https://youtube.com/watch?v=Owv503rTqYY&t=506) now. I come over here for example, I've
+- [8:27](https://youtube.com/watch?v=Owv503rTqYY&t=507) got a specific prompt that you literally
+- [8:29](https://youtube.com/watch?v=Owv503rTqYY&t=509) just come down, you show this prompt
+- [8:30](https://youtube.com/watch?v=Owv503rTqYY&t=510) right here, you copy it, and this is the
+- [8:32](https://youtube.com/watch?v=Owv503rTqYY&t=512) full instructions of how to connect
+- [8:33](https://youtube.com/watch?v=Owv503rTqYY&t=513) everything together, and that will work
+- [8:35](https://youtube.com/watch?v=Owv503rTqYY&t=515) flawlessly. Or if you're building your
+- [8:37](https://youtube.com/watch?v=Owv503rTqYY&t=517) own agent operating system, I would
+- [8:38](https://youtube.com/watch?v=Owv503rTqYY&t=518) recommend that you get some kind of
+- [8:40](https://youtube.com/watch?v=Owv503rTqYY&t=520) dashboard like this, so you can
+- [8:41](https://youtube.com/watch?v=Owv503rTqYY&t=521) literally clearly and easily and
+- [8:43](https://youtube.com/watch?v=Owv503rTqYY&t=523) visually just dip into different repos
+- [8:45](https://youtube.com/watch?v=Owv503rTqYY&t=525) and very quickly add it to your computer
+- [8:47](https://youtube.com/watch?v=Owv503rTqYY&t=527) to actually understand and query those
+- [8:49](https://youtube.com/watch?v=Owv503rTqYY&t=529) files without wasting any time. And so
+- [8:51](https://youtube.com/watch?v=Owv503rTqYY&t=531) the idea here is that it's wired into
+- [8:53](https://youtube.com/watch?v=Owv503rTqYY&t=533) everything, okay? You basically you can
+- [8:55](https://youtube.com/watch?v=Owv503rTqYY&t=535) feed your oven out of your memory,
+- [8:56](https://youtube.com/watch?v=Owv503rTqYY&t=536) Hermes can ask everything from Telegram,
+- [8:58](https://youtube.com/watch?v=Owv503rTqYY&t=538) which is fantastic because it can just
+- [9:00](https://youtube.com/watch?v=Owv503rTqYY&t=540) automatically reach out to you and ask
+- [9:02](https://youtube.com/watch?v=Owv503rTqYY&t=542) you questions. And so ideally we want to
+- [9:03](https://youtube.com/watch?v=Owv503rTqYY&t=543) take this further by having one brand
+- [9:05](https://youtube.com/watch?v=Owv503rTqYY&t=545) that's kind of shared by everything
+- [9:07](https://youtube.com/watch?v=Owv503rTqYY&t=547) together. Graph it fine isn't Claude
+- [9:08](https://youtube.com/watch?v=Owv503rTqYY&t=548) code, Hermes, and your own operating
+- [9:10](https://youtube.com/watch?v=Owv503rTqYY&t=550) system, so we can connect everything
+- [9:12](https://youtube.com/watch?v=Owv503rTqYY&t=552) together into one beautiful system. And
+- [9:14](https://youtube.com/watch?v=Owv503rTqYY&t=554) so one of the biggest benefits of this
+- [9:16](https://youtube.com/watch?v=Owv503rTqYY&t=556) is you're not going to spend a I could
+- [9:17](https://youtube.com/watch?v=Owv503rTqYY&t=557) say a god telling tokens actually
+- [9:19](https://youtube.com/watch?v=Owv503rTqYY&t=559) querying and understanding any new code
+- [9:22](https://youtube.com/watch?v=Owv503rTqYY&t=562) base. It is going to give you more
+- [9:23](https://youtube.com/watch?v=Owv503rTqYY&t=563) accurate answers as well. So if you want
+- [9:25](https://youtube.com/watch?v=Owv503rTqYY&t=565) to take something like this or any file
+- [9:27](https://youtube.com/watch?v=Owv503rTqYY&t=567) or project that you see and you want to
+- [9:29](https://youtube.com/watch?v=Owv503rTqYY&t=569) do certain amends to it, you're going to
+- [9:31](https://youtube.com/watch?v=Owv503rTqYY&t=571) have less time wasted on iterating it
+- [9:33](https://youtube.com/watch?v=Owv503rTqYY&t=573) because Claude can actually understand
+- [9:35](https://youtube.com/watch?v=Owv503rTqYY&t=575) what the code base is. And likewise now
+- [9:36](https://youtube.com/watch?v=Owv503rTqYY&t=576) you can go back and ask Claude the same
+- [9:38](https://youtube.com/watch?v=Owv503rTqYY&t=578) question. I'd like to show you how it
+- [9:39](https://youtube.com/watch?v=Owv503rTqYY&t=579) integrates with every software, just so
+- [9:41](https://youtube.com/watch?v=Owv503rTqYY&t=581) you know exactly how to connect
+- [9:43](https://youtube.com/watch?v=Owv503rTqYY&t=583) everything together. Having come down
+- [9:44](https://youtube.com/watch?v=Owv503rTqYY&t=584) here now, for example, it's gone down
+- [9:45](https://youtube.com/watch?v=Owv503rTqYY&t=585) and explained the Claude code operating
+- [9:47](https://youtube.com/watch?v=Owv503rTqYY&t=587) system. Explained the relationships, the
+- [9:49](https://youtube.com/watch?v=Owv503rTqYY&t=589) nodes, how it all connects together,
+- [9:51](https://youtube.com/watch?v=Owv503rTqYY&t=591) which is fantastic because basically
+- [9:53](https://youtube.com/watch?v=Owv503rTqYY&t=593) Hermes Agent is also connected to Claude
+- [9:55](https://youtube.com/watch?v=Owv503rTqYY&t=595) code, but again, you can do just
+- [9:56](https://youtube.com/watch?v=Owv503rTqYY&t=596) anything you want to. You can just run
+- [9:58](https://youtube.com/watch?v=Owv503rTqYY&t=598) it directly on Claude code and only have
+- [9:59](https://youtube.com/watch?v=Owv503rTqYY&t=599) it here and just speak to Claude code.
+- [10:01](https://youtube.com/watch?v=Owv503rTqYY&t=601) Any of these options are possible, but
+- [10:03](https://youtube.com/watch?v=Owv503rTqYY&t=603) now we have a beautiful visual interface
+- [10:05](https://youtube.com/watch?v=Owv503rTqYY&t=605) to actually just make it easy and
+- [10:07](https://youtube.com/watch?v=Owv503rTqYY&t=607) understand, rather than jumping from
+- [10:08](https://youtube.com/watch?v=Owv503rTqYY&t=608) chat window to chat window. Now,
+- [10:10](https://youtube.com/watch?v=Owv503rTqYY&t=610) Graphyte is incredible, but if you're
+- [10:11](https://youtube.com/watch?v=Owv503rTqYY&t=611) not using an agentic operating system,
+- [10:14](https://youtube.com/watch?v=Owv503rTqYY&t=614) you're leaving so much value on the
+- [10:15](https://youtube.com/watch?v=Owv503rTqYY&t=615) table. So, the next thing we need to do
+- [10:17](https://youtube.com/watch?v=Owv503rTqYY&t=617) is learn how to set one of those up by
+- [10:19](https://youtube.com/watch?v=Owv503rTqYY&t=619) watching this video right here.
