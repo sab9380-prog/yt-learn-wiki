@@ -1,0 +1,407 @@
+---
+title: "The Karpathy CLAUDE.md File That 43,000 Developers Installed in 1 Week (Full Breakdown)"
+source_url: https://youtube.com/watch?v=d8BGxfW3Vj4
+video_id: d8BGxfW3Vj4
+source_type: youtube
+lang: en
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# The Karpathy CLAUDE.md File That 43,000 Developers Installed in 1 Week (Full Breakdown)
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** André Karpathy가 AI 에이전트의 주요 실수들을 분석한 트위트를 바탕으로, 개발자 Forest가 만든 'claw.md' 파일이 Claude Code의 성능을 획기적으로 개선시키고 있다. 이 단일 파일은 43,000명이 한 주 만에 설치했으며, 4가지 핵심 원칙을 구현한다: 1) 코딩 전 사고하기 - 가정하지 말고 먼저 질문하기, 2) 단순함 우선 - 과도한 구축보다 최소한의 코드로, 3) 정확한 변경 - 요청하지 않은 부분은 건드리지 않기, 4) 목표 지향적 실행 - 명령보다는 성공 기준 제공하기. 실제 테스트에서 vanilla Claude Code와 비교했을 때, Karpathy 원칙을 적용한 버전이 일관되게 더 나은 결과를 보여준다.
+- **Core Message:** 단일 claw.md 파일을 통해 AI 에이전트의 4가지 핵심 원칙을 구현하면 Claude Code의 성능과 정확도를 극적으로 향상시킬 수 있다.
+> Without this rule, Claude assumes what you want. With it, Claude asks first.
+> It's almost always better to have your agent ask you questions in order to clarify intent before it starts building
+> Changing your approach from imperative to declarative will get you better results each time
+❗ 43,000명이 단 일주일 만에 이 claw.md 파일을 설치했다
+❗ André Karpathy의 원본 트위트가 8백만 뷰를 기록했다
+❗ AI 에이전트들이 기본적으로 1000줄 이상의 비효율적인 코드를 작성하려 하지만, 원칙 적용 시 100줄 이하로 줄일 수 있다
+
+## 📚 핵심 용어
+- **claw.md:** Claude Code의 행동을 개선하는 설정 파일로, André Karpathy의 원칙을 코드화한 것 / 컴퓨터의 운영체제 설정 파일과 같다. 한 번 설치하면 프로그램 전체의 작동 방식이 바뀐다. / 일반 프롬프트는 한 번만 적용되지만, claw.md는 모든 대화에서 지속적으로 AI 행동을 개선한다.
+- **Think Before Coding:** AI가 코딩 시작 전에 요구사항을 명확히 확인하고 질문하는 원칙 / 요리 전 레시피를 확인하는 것과 같다. 재료와 방법을 먼저 묻고 나서 요리를 시작한다. / 기본 AI는 추측해서 바로 코딩하지만, 이 원칙은 확인 후 정확한 코딩을 한다.
+- **Surgical Changes:** 요청된 부분만 정확히 수정하고 관련 없는 코드는 건드리지 않는 원칙 / 외과의사가 병든 부위만 정확히 수술하듯, 필요한 코드만 딱 수정한다. / 일반 AI는 관련 없는 코드까지 '개선'하려 하지만, 이는 요청한 부분만 수정한다.
+- **Goal-driven Execution:** 명령보다는 원하는 최종 결과나 성공 기준을 제시해 AI가 최적 방법을 찾게 하는 원칙 / 직원에게 '이렇게 해'보다 '이런 결과를 만들어줘'라고 말하는 것과 같다. / 명령형은 과정을 지시하지만, 목표형은 결과를 제시해 AI가 최적 방법을 찾게 한다.
+
+## 🚀 실행 (Execute)
+- [ ] GitHub에서 andre-karpathy-skills 레포지토리를 방문해 claw.md 파일을 다운로드하고 내 Claude Code 환경에 적용하기
+  - 담당: 나
+  - 이유: 영상에서 검증된 성능 향상을 직접 경험하고 AI 코딩 효율성을 높일 수 있다
+- [ ] 기존 claw.md가 있다면 Karpathy 원칙과 통합하는 방법을 테스트하기
+  - 담당: 나
+  - 이유: 기존 설정을 유지하면서 새 원칙의 이점을 최대화할 수 있다
+- 자료: GitHub - andre-karpathy-skills 레포지토리
+- 자료: André Karpathy의 원본 트위트 (AI 에이전트 실수 분석)
+- 자료: Claude Code 공식 문서 (claw.md 파일 설정 방법)
+- Timeline: 즉시 claw.md 적용 → 일주일 내 기존 설정과 통합 테스트 → 실제 프로젝트에서 4가지 원칙 적용 연습
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=0) What if one file can fix the biggest
+- [0:01](https://youtube.com/watch?v=d8BGxfW3Vj4&t=1) problems that every cloud code user
+- [0:03](https://youtube.com/watch?v=d8BGxfW3Vj4&t=3) deals with? Well, Andre Carpathy listed
+- [0:05](https://youtube.com/watch?v=d8BGxfW3Vj4&t=5) down the top mistakes that every AI
+- [0:07](https://youtube.com/watch?v=d8BGxfW3Vj4&t=7) agent makes, and this single claw.md
+- [0:10](https://youtube.com/watch?v=d8BGxfW3Vj4&t=10) file just codified the fixes for those
+- [0:12](https://youtube.com/watch?v=d8BGxfW3Vj4&t=12) mistakes. And almost 43,000 people
+- [0:14](https://youtube.com/watch?v=d8BGxfW3Vj4&t=14) installed it just in the past week. In
+- [0:17](https://youtube.com/watch?v=d8BGxfW3Vj4&t=17) this video, I'll break down what this
+- [0:18](https://youtube.com/watch?v=d8BGxfW3Vj4&t=18) magical claw.md does, how it improves
+- [0:21](https://youtube.com/watch?v=d8BGxfW3Vj4&t=21) your AI agent setup so that you too can
+- [0:23](https://youtube.com/watch?v=d8BGxfW3Vj4&t=23) use Claude as good as how Karpati does
+- [0:25](https://youtube.com/watch?v=d8BGxfW3Vj4&t=25) it. And if you're new here, my name is
+- [0:26](https://youtube.com/watch?v=d8BGxfW3Vj4&t=26) Jay. I spent over a decade working with
+- [0:27](https://youtube.com/watch?v=d8BGxfW3Vj4&t=27) brands you probably know. Have been in
+- [0:29](https://youtube.com/watch?v=d8BGxfW3Vj4&t=29) AI since my masters in data science and
+- [0:31](https://youtube.com/watch?v=d8BGxfW3Vj4&t=31) now I run our AI solutions practice in
+- [0:33](https://youtube.com/watch?v=d8BGxfW3Vj4&t=33) one of the largest AI communities
+- [0:34](https://youtube.com/watch?v=d8BGxfW3Vj4&t=34) globally. Let's get started.
+- [0:39](https://youtube.com/watch?v=d8BGxfW3Vj4&t=39) So some time ago, Andre Karpati, who
+- [0:41](https://youtube.com/watch?v=d8BGxfW3Vj4&t=41) previously headed Tesla AI and also part
+- [0:43](https://youtube.com/watch?v=d8BGxfW3Vj4&t=43) of the founding team of OpenAI, made
+- [0:45](https://youtube.com/watch?v=d8BGxfW3Vj4&t=45) this now viral tweet where he provided a
+- [0:47](https://youtube.com/watch?v=d8BGxfW3Vj4&t=47) good analysis of how to work with agents
+- [0:50](https://youtube.com/watch?v=d8BGxfW3Vj4&t=50) better. It's actually a pretty detailed
+- [0:51](https://youtube.com/watch?v=d8BGxfW3Vj4&t=51) one and you can see here at the bottom
+- [0:53](https://youtube.com/watch?v=d8BGxfW3Vj4&t=53) that it already garnered 7 almost 8
+- [0:55](https://youtube.com/watch?v=d8BGxfW3Vj4&t=55) million views at this point. Now a lot
+- [0:57](https://youtube.com/watch?v=d8BGxfW3Vj4&t=57) of people took note of this tweet once
+- [0:58](https://youtube.com/watch?v=d8BGxfW3Vj4&t=58) again because over the past week what
+- [1:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=60) happened was this repo called Andre
+- [1:02](https://youtube.com/watch?v=d8BGxfW3Vj4&t=62) Karpati skills just shot up in
+- [1:04](https://youtube.com/watch?v=d8BGxfW3Vj4&t=64) popularity over at GitHub now at over
+- [1:06](https://youtube.com/watch?v=d8BGxfW3Vj4&t=66) 43,000 stars and it was made and
+- [1:08](https://youtube.com/watch?v=d8BGxfW3Vj4&t=68) published by this developer Forest. So
+- [1:10](https://youtube.com/watch?v=d8BGxfW3Vj4&t=70) credit where it's due. And if you go to
+- [1:12](https://youtube.com/watch?v=d8BGxfW3Vj4&t=72) this skill, what it is is basically a
+- [1:14](https://youtube.com/watch?v=d8BGxfW3Vj4&t=74) single claw.md file to improve claude
+- [1:16](https://youtube.com/watch?v=d8BGxfW3Vj4&t=76) code behavior which is derived from the
+- [1:18](https://youtube.com/watch?v=d8BGxfW3Vj4&t=78) observations from that tweet. And I
+- [1:20](https://youtube.com/watch?v=d8BGxfW3Vj4&t=80) think the reason why it became so
+- [1:21](https://youtube.com/watch?v=d8BGxfW3Vj4&t=81) popular and viral over the past week is
+- [1:23](https://youtube.com/watch?v=d8BGxfW3Vj4&t=83) simply because of how simple it is. It's
+- [1:25](https://youtube.com/watch?v=d8BGxfW3Vj4&t=85) one claw.md file that you just drop into
+- [1:27](https://youtube.com/watch?v=d8BGxfW3Vj4&t=87) your claw code. And also the solution
+- [1:29](https://youtube.com/watch?v=d8BGxfW3Vj4&t=89) that it provides here are boiled down to
+- [1:31](https://youtube.com/watch?v=d8BGxfW3Vj4&t=91) four key principles which I'll talk
+- [1:32](https://youtube.com/watch?v=d8BGxfW3Vj4&t=92) about in a bit. And I think regardless
+- [1:34](https://youtube.com/watch?v=d8BGxfW3Vj4&t=94) whether you want to use this claw.md
+- [1:36](https://youtube.com/watch?v=d8BGxfW3Vj4&t=96) file or not, learning about these
+- [1:37](https://youtube.com/watch?v=d8BGxfW3Vj4&t=97) principles will level up how you use
+- [1:39](https://youtube.com/watch?v=d8BGxfW3Vj4&t=99) your AI agents in order to make sure
+- [1:41](https://youtube.com/watch?v=d8BGxfW3Vj4&t=101) that you get the output that you want
+- [1:42](https://youtube.com/watch?v=d8BGxfW3Vj4&t=102) whenever you work with claude. But if
+- [1:44](https://youtube.com/watch?v=d8BGxfW3Vj4&t=104) you were looking to install this and try
+- [1:45](https://youtube.com/watch?v=d8BGxfW3Vj4&t=105) this out yourself, what you can simply
+- [1:47](https://youtube.com/watch?v=d8BGxfW3Vj4&t=107) do is to provide your Claude code with
+- [1:48](https://youtube.com/watch?v=d8BGxfW3Vj4&t=108) this GitHub link. But if you're already
+- [1:50](https://youtube.com/watch?v=d8BGxfW3Vj4&t=110) using clawed code, most likely you
+- [1:51](https://youtube.com/watch?v=d8BGxfW3Vj4&t=111) already have a claw.md file. In which
+- [1:54](https://youtube.com/watch?v=d8BGxfW3Vj4&t=114) case, it would be better for you to
+- [1:55](https://youtube.com/watch?v=d8BGxfW3Vj4&t=115) provide a more detailed prompt like this
+- [1:57](https://youtube.com/watch?v=d8BGxfW3Vj4&t=117) where you explain to your agent that
+- [1:58](https://youtube.com/watch?v=d8BGxfW3Vj4&t=118) you're giving it a set of guidelines
+- [2:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=120) called karpati skills and more
+- [2:01](https://youtube.com/watch?v=d8BGxfW3Vj4&t=121) importantly to suggest to you how you
+- [2:03](https://youtube.com/watch?v=d8BGxfW3Vj4&t=123) can best integrate it to your specific
+- [2:05](https://youtube.com/watch?v=d8BGxfW3Vj4&t=125) setup. So this more detailed
+- [2:06](https://youtube.com/watch?v=d8BGxfW3Vj4&t=126) installation prompt, I will link it down
+- [2:07](https://youtube.com/watch?v=d8BGxfW3Vj4&t=127) below if you need it. But as I
+- [2:09](https://youtube.com/watch?v=d8BGxfW3Vj4&t=129) mentioned, the core of this claw.md file
+- [2:11](https://youtube.com/watch?v=d8BGxfW3Vj4&t=131) are these four principles that I think
+- [2:13](https://youtube.com/watch?v=d8BGxfW3Vj4&t=133) are worth learning no matter what AI
+- [2:14](https://youtube.com/watch?v=d8BGxfW3Vj4&t=134) agent you use. So the first principle
+- [2:16](https://youtube.com/watch?v=d8BGxfW3Vj4&t=136) that it instills to your agent is that
+- [2:18](https://youtube.com/watch?v=d8BGxfW3Vj4&t=138) it allows claude code to think before
+- [2:20](https://youtube.com/watch?v=d8BGxfW3Vj4&t=140) coding. And just to refer back to what
+- [2:21](https://youtube.com/watch?v=d8BGxfW3Vj4&t=141) Andre wrote here, you can see he
+- [2:22](https://youtube.com/watch?v=d8BGxfW3Vj4&t=142) mentioned that the most common category
+- [2:24](https://youtube.com/watch?v=d8BGxfW3Vj4&t=144) of mistake that these agents make is
+- [2:26](https://youtube.com/watch?v=d8BGxfW3Vj4&t=146) that the models make wrong assumptions
+- [2:28](https://youtube.com/watch?v=d8BGxfW3Vj4&t=148) on your behalf and just run along with
+- [2:29](https://youtube.com/watch?v=d8BGxfW3Vj4&t=149) them without checking. They also don't
+- [2:31](https://youtube.com/watch?v=d8BGxfW3Vj4&t=151) manage their confusion. They don't see
+- [2:32](https://youtube.com/watch?v=d8BGxfW3Vj4&t=152) clarifications and they don't surface
+- [2:35](https://youtube.com/watch?v=d8BGxfW3Vj4&t=155) inconsistencies. And so the core idea
+- [2:37](https://youtube.com/watch?v=d8BGxfW3Vj4&t=157) for this principle is this. Without this
+- [2:39](https://youtube.com/watch?v=d8BGxfW3Vj4&t=159) rule, Claude assumes what you want. With
+- [2:41](https://youtube.com/watch?v=d8BGxfW3Vj4&t=161) it, Claude asks first. And so if you
+- [2:43](https://youtube.com/watch?v=d8BGxfW3Vj4&t=163) were to boil down one key principle that
+- [2:45](https://youtube.com/watch?v=d8BGxfW3Vj4&t=165) you should follow in order to upgrade
+- [2:46](https://youtube.com/watch?v=d8BGxfW3Vj4&t=166) how you should work with agents better,
+- [2:48](https://youtube.com/watch?v=d8BGxfW3Vj4&t=168) it is basically this. It is almost
+- [2:50](https://youtube.com/watch?v=d8BGxfW3Vj4&t=170) always better to have your agent ask you
+- [2:52](https://youtube.com/watch?v=d8BGxfW3Vj4&t=172) questions in order to clarify intent
+- [2:54](https://youtube.com/watch?v=d8BGxfW3Vj4&t=174) before it starts building and coding
+- [2:56](https://youtube.com/watch?v=d8BGxfW3Vj4&t=176) things for you. And so just to
+- [2:57](https://youtube.com/watch?v=d8BGxfW3Vj4&t=177) illustrate this, what I have here are
+- [2:58](https://youtube.com/watch?v=d8BGxfW3Vj4&t=178) two cloud code sessions. This one
+- [3:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=180) doesn't have the karpati claw.md and
+- [3:02](https://youtube.com/watch?v=d8BGxfW3Vj4&t=182) this one is where I loaded that claw MD
+- [3:04](https://youtube.com/watch?v=d8BGxfW3Vj4&t=184) we just talked about. And what I'm going
+- [3:05](https://youtube.com/watch?v=d8BGxfW3Vj4&t=185) to do is just give each of these agents
+- [3:07](https://youtube.com/watch?v=d8BGxfW3Vj4&t=187) a copy of this rubric application to
+- [3:09](https://youtube.com/watch?v=d8BGxfW3Vj4&t=189) illustrate the difference between the
+- [3:10](https://youtube.com/watch?v=d8BGxfW3Vj4&t=190) approaches of these agents with one of
+- [3:12](https://youtube.com/watch?v=d8BGxfW3Vj4&t=192) the agents not having this Kpati
+- [3:14](https://youtube.com/watch?v=d8BGxfW3Vj4&t=194) principle baked in and the other agent
+- [3:16](https://youtube.com/watch?v=d8BGxfW3Vj4&t=196) following the principle that we just
+- [3:17](https://youtube.com/watch?v=d8BGxfW3Vj4&t=197) talked about. So now just to show the
+- [3:19](https://youtube.com/watch?v=d8BGxfW3Vj4&t=199) difference between these two. If I send
+- [3:20](https://youtube.com/watch?v=d8BGxfW3Vj4&t=200) the same task to both of them where I'm
+- [3:22](https://youtube.com/watch?v=d8BGxfW3Vj4&t=202) simply requesting let's say to add a
+- [3:23](https://youtube.com/watch?v=d8BGxfW3Vj4&t=203) toggle for light mode to the rubric app.
+- [3:25](https://youtube.com/watch?v=d8BGxfW3Vj4&t=205) If we send it to both with this one to
+- [3:27](https://youtube.com/watch?v=d8BGxfW3Vj4&t=207) recap has that Karpati skill and claw.md
+- [3:30](https://youtube.com/watch?v=d8BGxfW3Vj4&t=210) already installed. And so now that both
+- [3:31](https://youtube.com/watch?v=d8BGxfW3Vj4&t=211) of those sessions are done, you can see
+- [3:33](https://youtube.com/watch?v=d8BGxfW3Vj4&t=213) this one without the carpatic claw. MD
+- [3:35](https://youtube.com/watch?v=d8BGxfW3Vj4&t=215) confirmed to me that there is a light
+- [3:36](https://youtube.com/watch?v=d8BGxfW3Vj4&t=216) mode toggle. But if I look at the
+- [3:38](https://youtube.com/watch?v=d8BGxfW3Vj4&t=218) application it's working on, it doesn't
+- [3:40](https://youtube.com/watch?v=d8BGxfW3Vj4&t=220) actually have it. And if you compare
+- [3:41](https://youtube.com/watch?v=d8BGxfW3Vj4&t=221) that with this session which was working
+- [3:43](https://youtube.com/watch?v=d8BGxfW3Vj4&t=223) on this localhost 10,01, this also
+- [3:46](https://youtube.com/watch?v=d8BGxfW3Vj4&t=226) confirmed to me that the toggle is in
+- [3:47](https://youtube.com/watch?v=d8BGxfW3Vj4&t=227) the top right bar next to search. And
+- [3:49](https://youtube.com/watch?v=d8BGxfW3Vj4&t=229) you can see that it is actually here.
+- [3:51](https://youtube.com/watch?v=d8BGxfW3Vj4&t=231) And it was able to implement that
+- [3:52](https://youtube.com/watch?v=d8BGxfW3Vj4&t=232) because it actually thought through the
+- [3:54](https://youtube.com/watch?v=d8BGxfW3Vj4&t=234) problem and even was able to decide what
+- [3:56](https://youtube.com/watch?v=d8BGxfW3Vj4&t=236) are the right colors across all of the
+- [3:58](https://youtube.com/watch?v=d8BGxfW3Vj4&t=238) other icons in here. which if you
+- [4:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=240) compare that to this one which was
+- [4:01](https://youtube.com/watch?v=d8BGxfW3Vj4&t=241) coming from the agent without that
+- [4:03](https://youtube.com/watch?v=d8BGxfW3Vj4&t=243) claw.md file, it thought that it was
+- [4:05](https://youtube.com/watch?v=d8BGxfW3Vj4&t=245) able to do the task but not really. And
+- [4:07](https://youtube.com/watch?v=d8BGxfW3Vj4&t=247) if you want to sort of peek under the
+- [4:08](https://youtube.com/watch?v=d8BGxfW3Vj4&t=248) hood on why the karpati claw.md is more
+- [4:11](https://youtube.com/watch?v=d8BGxfW3Vj4&t=251) proficient with what it just did. If you
+- [4:13](https://youtube.com/watch?v=d8BGxfW3Vj4&t=253) ask both to outline the steps that they
+- [4:15](https://youtube.com/watch?v=d8BGxfW3Vj4&t=255) just took, you can see the vanilla claw
+- [4:17](https://youtube.com/watch?v=d8BGxfW3Vj4&t=257) code, it did do some detailed steps like
+- [4:19](https://youtube.com/watch?v=d8BGxfW3Vj4&t=259) finding the right files, reading the CSS
+- [4:21](https://youtube.com/watch?v=d8BGxfW3Vj4&t=261) variables, and trying to add a light
+- [4:23](https://youtube.com/watch?v=d8BGxfW3Vj4&t=263) theme CSS. But if you just compare that
+- [4:25](https://youtube.com/watch?v=d8BGxfW3Vj4&t=265) with the outline of the steps of the
+- [4:26](https://youtube.com/watch?v=d8BGxfW3Vj4&t=266) Karpati claude code, you can see this is
+- [4:29](https://youtube.com/watch?v=d8BGxfW3Vj4&t=269) much more detailed versus what the
+- [4:30](https://youtube.com/watch?v=d8BGxfW3Vj4&t=270) vanilla claw code did. And so the result
+- [4:32](https://youtube.com/watch?v=d8BGxfW3Vj4&t=272) of that is that with just one prompt, it
+- [4:34](https://youtube.com/watch?v=d8BGxfW3Vj4&t=274) was able to oneshot this light theme for
+- [4:36](https://youtube.com/watch?v=d8BGxfW3Vj4&t=276) us without any issues. Now, real quick,
+- [4:38](https://youtube.com/watch?v=d8BGxfW3Vj4&t=278) we just released the Agentic AI
+- [4:39](https://youtube.com/watch?v=d8BGxfW3Vj4&t=279) masterass for our members at
+- [4:41](https://youtube.com/watch?v=d8BGxfW3Vj4&t=281) RoboNuggets, which takes you from zero
+- [4:42](https://youtube.com/watch?v=d8BGxfW3Vj4&t=282) to mastery when working with agents.
+- [4:45](https://youtube.com/watch?v=d8BGxfW3Vj4&t=285) There's a link to the community in the
+- [4:46](https://youtube.com/watch?v=d8BGxfW3Vj4&t=286) pinned comment below. We've got founders
+- [4:47](https://youtube.com/watch?v=d8BGxfW3Vj4&t=287) in there who landed their first client
+- [4:49](https://youtube.com/watch?v=d8BGxfW3Vj4&t=289) in weeks, live build sessions where we
+- [4:50](https://youtube.com/watch?v=d8BGxfW3Vj4&t=290) create this stuff together, and the
+- [4:52](https://youtube.com/watch?v=d8BGxfW3Vj4&t=292) actual templates behind what I showed in
+- [4:53](https://youtube.com/watch?v=d8BGxfW3Vj4&t=293) this video. The community is also the
+- [4:55](https://youtube.com/watch?v=d8BGxfW3Vj4&t=295) reason these lessons get made. So see
+- [4:56](https://youtube.com/watch?v=d8BGxfW3Vj4&t=296) that below if that's for you. The second
+- [4:58](https://youtube.com/watch?v=d8BGxfW3Vj4&t=298) principle that it implements is to put
+- [5:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=300) simplicity first. And just going back to
+- [5:01](https://youtube.com/watch?v=d8BGxfW3Vj4&t=301) what Andre wrote here, he mentioned that
+- [5:03](https://youtube.com/watch?v=d8BGxfW3Vj4&t=303) these AI agents by default will
+- [5:05](https://youtube.com/watch?v=d8BGxfW3Vj4&t=305) implement an inefficient, bloated, and
+- [5:07](https://youtube.com/watch?v=d8BGxfW3Vj4&t=307) brittle construction, which is sometimes
+- [5:09](https://youtube.com/watch?v=d8BGxfW3Vj4&t=309) over a thousand lines of code. And it's
+- [5:10](https://youtube.com/watch?v=d8BGxfW3Vj4&t=310) up to you to challenge that. And only
+- [5:12](https://youtube.com/watch?v=d8BGxfW3Vj4&t=312) then will they be able to realize that
+- [5:14](https://youtube.com/watch?v=d8BGxfW3Vj4&t=314) they can actually cut it down to 100
+- [5:15](https://youtube.com/watch?v=d8BGxfW3Vj4&t=315) lines or less. And so without this
+- [5:17](https://youtube.com/watch?v=d8BGxfW3Vj4&t=317) principle, your AI agent tends to
+- [5:18](https://youtube.com/watch?v=d8BGxfW3Vj4&t=318) overbuild. But with it, Claude is
+- [5:20](https://youtube.com/watch?v=d8BGxfW3Vj4&t=320) writing the minimum. And the reason by
+- [5:22](https://youtube.com/watch?v=d8BGxfW3Vj4&t=322) the way why this is so important is
+- [5:23](https://youtube.com/watch?v=d8BGxfW3Vj4&t=323) because you have to remember that these
+- [5:25](https://youtube.com/watch?v=d8BGxfW3Vj4&t=325) AI agents, they are mostly trained on
+- [5:27](https://youtube.com/watch?v=d8BGxfW3Vj4&t=327) production code bases. And so they
+- [5:29](https://youtube.com/watch?v=d8BGxfW3Vj4&t=329) default to production patterns, which is
+- [5:31](https://youtube.com/watch?v=d8BGxfW3Vj4&t=331) mostly large scale in nature. And so
+- [5:33](https://youtube.com/watch?v=d8BGxfW3Vj4&t=333) when you ask for a simple feature ad, it
+- [5:35](https://youtube.com/watch?v=d8BGxfW3Vj4&t=335) tends to overthink, it tends to
+- [5:36](https://youtube.com/watch?v=d8BGxfW3Vj4&t=336) overbuild. But what this claw.md file
+- [5:38](https://youtube.com/watch?v=d8BGxfW3Vj4&t=338) does is that it allows your agent to put
+- [5:40](https://youtube.com/watch?v=d8BGxfW3Vj4&t=340) simplicity first. So now for our second
+- [5:42](https://youtube.com/watch?v=d8BGxfW3Vj4&t=342) test, what I'll be doing is asking both
+- [5:44](https://youtube.com/watch?v=d8BGxfW3Vj4&t=344) of these agents to add a search bar that
+- [5:46](https://youtube.com/watch?v=d8BGxfW3Vj4&t=346) filters the tab list. So let's send that
+- [5:48](https://youtube.com/watch?v=d8BGxfW3Vj4&t=348) over and we'll see what the difference
+- [5:50](https://youtube.com/watch?v=d8BGxfW3Vj4&t=350) are between these two. And once those
+- [5:52](https://youtube.com/watch?v=d8BGxfW3Vj4&t=352) two are done again, the vanilla cloud
+- [5:53](https://youtube.com/watch?v=d8BGxfW3Vj4&t=353) code confirmed to me that the filter
+- [5:55](https://youtube.com/watch?v=d8BGxfW3Vj4&t=355) search bar is available. But if I
+- [5:57](https://youtube.com/watch?v=d8BGxfW3Vj4&t=357) refresh this local host 10,000, it
+- [5:59](https://youtube.com/watch?v=d8BGxfW3Vj4&t=359) wasn't really able to implement that,
+- [6:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=360) which in contrast to the Kurpatic claude
+- [6:02](https://youtube.com/watch?v=d8BGxfW3Vj4&t=362) code, you can see it was able to
+- [6:04](https://youtube.com/watch?v=d8BGxfW3Vj4&t=364) successfully add this filter which I
+- [6:06](https://youtube.com/watch?v=d8BGxfW3Vj4&t=366) wanted where if I just type in there, it
+- [6:08](https://youtube.com/watch?v=d8BGxfW3Vj4&t=368) will be able to find the specific tab
+- [6:09](https://youtube.com/watch?v=d8BGxfW3Vj4&t=369) that I want. And in fact, I was curious
+- [6:11](https://youtube.com/watch?v=d8BGxfW3Vj4&t=371) because the vanilla cloud code doesn't
+- [6:13](https://youtube.com/watch?v=d8BGxfW3Vj4&t=373) seem to be changing anything in the app
+- [6:14](https://youtube.com/watch?v=d8BGxfW3Vj4&t=374) that it's working on. But you can see
+- [6:16](https://youtube.com/watch?v=d8BGxfW3Vj4&t=376) here that it does know exactly the
+- [6:18](https://youtube.com/watch?v=d8BGxfW3Vj4&t=378) application on port 10,000, which is
+- [6:20](https://youtube.com/watch?v=d8BGxfW3Vj4&t=380) this one. But because it doesn't have
+- [6:21](https://youtube.com/watch?v=d8BGxfW3Vj4&t=381) the karpati skill, it tends to fall to
+- [6:23](https://youtube.com/watch?v=d8BGxfW3Vj4&t=383) the same agentic traps that this claw.md
+- [6:25](https://youtube.com/watch?v=d8BGxfW3Vj4&t=385) is hoping to address. And so for the
+- [6:27](https://youtube.com/watch?v=d8BGxfW3Vj4&t=387) kpati claw code, I just ask it how it
+- [6:29](https://youtube.com/watch?v=d8BGxfW3Vj4&t=389) implemented principle 2 in that build.
+- [6:31](https://youtube.com/watch?v=d8BGxfW3Vj4&t=391) You can see it made deliberate decisions
+- [6:33](https://youtube.com/watch?v=d8BGxfW3Vj4&t=393) around not having complex logic to track
+- [6:35](https://youtube.com/watch?v=d8BGxfW3Vj4&t=395) which separators are between visible
+- [6:37](https://youtube.com/watch?v=d8BGxfW3Vj4&t=397) tabs and also didn't add other items
+- [6:40](https://youtube.com/watch?v=d8BGxfW3Vj4&t=400) which I didn't ask for. And what's even
+- [6:42](https://youtube.com/watch?v=d8BGxfW3Vj4&t=402) better is that the amount of lines that
+- [6:43](https://youtube.com/watch?v=d8BGxfW3Vj4&t=403) it added is only 20 lines which is much
+- [6:45](https://youtube.com/watch?v=d8BGxfW3Vj4&t=405) more simple and lean versus what the
+- [6:47](https://youtube.com/watch?v=d8BGxfW3Vj4&t=407) vanilla claw code added which is more
+- [6:49](https://youtube.com/watch?v=d8BGxfW3Vj4&t=409) than 50% of that. So you can imagine for
+- [6:52](https://youtube.com/watch?v=d8BGxfW3Vj4&t=412) bigger code bases and bigger builds then
+- [6:54](https://youtube.com/watch?v=d8BGxfW3Vj4&t=414) having this principle does really help.
+- [6:56](https://youtube.com/watch?v=d8BGxfW3Vj4&t=416) The third principle is the ability to
+- [6:58](https://youtube.com/watch?v=d8BGxfW3Vj4&t=418) make surgical changes. And the key
+- [7:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=420) observation that you may have also seen
+- [7:02](https://youtube.com/watch?v=d8BGxfW3Vj4&t=422) these agents do is this piece by Andre
+- [7:04](https://youtube.com/watch?v=d8BGxfW3Vj4&t=424) where he said that they still sometimes
+- [7:06](https://youtube.com/watch?v=d8BGxfW3Vj4&t=426) change or remove comments in code that
+- [7:07](https://youtube.com/watch?v=d8BGxfW3Vj4&t=427) they don't like or don't sufficiently
+- [7:09](https://youtube.com/watch?v=d8BGxfW3Vj4&t=429) understand even if it is orthogonal or
+- [7:12](https://youtube.com/watch?v=d8BGxfW3Vj4&t=432) not related to the task at hand. And so
+- [7:14](https://youtube.com/watch?v=d8BGxfW3Vj4&t=434) without this rule Claude and your other
+- [7:15](https://youtube.com/watch?v=d8BGxfW3Vj4&t=435) agents tend to improve things that you
+- [7:18](https://youtube.com/watch?v=d8BGxfW3Vj4&t=438) didn't ask for. But with it Claude
+- [7:19](https://youtube.com/watch?v=d8BGxfW3Vj4&t=439) changes only what it is that you want.
+- [7:21](https://youtube.com/watch?v=d8BGxfW3Vj4&t=441) Now, what's interesting about this
+- [7:22](https://youtube.com/watch?v=d8BGxfW3Vj4&t=442) principle is that it is actually one of
+- [7:24](https://youtube.com/watch?v=d8BGxfW3Vj4&t=444) the sneakiest failure mode for agents
+- [7:27](https://youtube.com/watch?v=d8BGxfW3Vj4&t=447) because it does look helpful if when,
+- [7:29](https://youtube.com/watch?v=d8BGxfW3Vj4&t=449) let's say, your agent writes multiple
+- [7:30](https://youtube.com/watch?v=d8BGxfW3Vj4&t=450) lines of code, but it's sort of like
+- [7:32](https://youtube.com/watch?v=d8BGxfW3Vj4&t=452) productivity for productivity's sake. If
+- [7:34](https://youtube.com/watch?v=d8BGxfW3Vj4&t=454) you can do the job in two lines of code,
+- [7:36](https://youtube.com/watch?v=d8BGxfW3Vj4&t=456) then that not only simplifies your
+- [7:38](https://youtube.com/watch?v=d8BGxfW3Vj4&t=458) setup, but it also consumes less tokens
+- [7:40](https://youtube.com/watch?v=d8BGxfW3Vj4&t=460) for you. So now for this third
+- [7:42](https://youtube.com/watch?v=d8BGxfW3Vj4&t=462) principle, the test that I'll do is to
+- [7:44](https://youtube.com/watch?v=d8BGxfW3Vj4&t=464) have them both update the font from
+- [7:46](https://youtube.com/watch?v=d8BGxfW3Vj4&t=466) outfit to this font called enter. And
+- [7:48](https://youtube.com/watch?v=d8BGxfW3Vj4&t=468) then let's see what they will actually
+- [7:50](https://youtube.com/watch?v=d8BGxfW3Vj4&t=470) do. And so looking at those two
+- [7:51](https://youtube.com/watch?v=d8BGxfW3Vj4&t=471) sessions, you can see this one is still
+- [7:53](https://youtube.com/watch?v=d8BGxfW3Vj4&t=473) working because even though it confirmed
+- [7:55](https://youtube.com/watch?v=d8BGxfW3Vj4&t=475) to me that it actually changed the
+- [7:56](https://youtube.com/watch?v=d8BGxfW3Vj4&t=476) fonts, if you look at the dashboard
+- [7:58](https://youtube.com/watch?v=d8BGxfW3Vj4&t=478) here, it is still the same font as what
+- [7:59](https://youtube.com/watch?v=d8BGxfW3Vj4&t=479) we started with. And so this might be a
+- [8:01](https://youtube.com/watch?v=d8BGxfW3Vj4&t=481) common problem for you where when you're
+- [8:03](https://youtube.com/watch?v=d8BGxfW3Vj4&t=483) working with AI agents because it
+- [8:05](https://youtube.com/watch?v=d8BGxfW3Vj4&t=485) doesn't have those best practices in
+- [8:06](https://youtube.com/watch?v=d8BGxfW3Vj4&t=486) mind. You actually end up spending more
+- [8:08](https://youtube.com/watch?v=d8BGxfW3Vj4&t=488) tokens because the bills and the changes
+- [8:10](https://youtube.com/watch?v=d8BGxfW3Vj4&t=490) that you want reflected are not properly
+- [8:12](https://youtube.com/watch?v=d8BGxfW3Vj4&t=492) being updated. And so right now this
+- [8:13](https://youtube.com/watch?v=d8BGxfW3Vj4&t=493) session is basically just burning
+- [8:15](https://youtube.com/watch?v=d8BGxfW3Vj4&t=495) through my tokens in order to just
+- [8:17](https://youtube.com/watch?v=d8BGxfW3Vj4&t=497) assess why this particular issue is
+- [8:19](https://youtube.com/watch?v=d8BGxfW3Vj4&t=499) present. Meanwhile, if I go to this
+- [8:20](https://youtube.com/watch?v=d8BGxfW3Vj4&t=500) Karpati cloud code version, the one with
+- [8:22](https://youtube.com/watch?v=d8BGxfW3Vj4&t=502) the light mode, you can see that it was
+- [8:24](https://youtube.com/watch?v=d8BGxfW3Vj4&t=504) able to successfully change the font
+- [8:26](https://youtube.com/watch?v=d8BGxfW3Vj4&t=506) into this new one called enter. And
+- [8:28](https://youtube.com/watch?v=d8BGxfW3Vj4&t=508) again, that's just one command. It was
+- [8:30](https://youtube.com/watch?v=d8BGxfW3Vj4&t=510) able to find every instance of outfit
+- [8:32](https://youtube.com/watch?v=d8BGxfW3Vj4&t=512) and replace it within the codebase. And
+- [8:34](https://youtube.com/watch?v=d8BGxfW3Vj4&t=514) here you can see I just asked it how it
+- [8:35](https://youtube.com/watch?v=d8BGxfW3Vj4&t=515) implemented principal tree in that whole
+- [8:37](https://youtube.com/watch?v=d8BGxfW3Vj4&t=517) build. And you can see what it did here
+- [8:38](https://youtube.com/watch?v=d8BGxfW3Vj4&t=518) is to only apply surgical changes and
+- [8:41](https://youtube.com/watch?v=d8BGxfW3Vj4&t=521) not reformat or restructure any of the
+- [8:43](https://youtube.com/watch?v=d8BGxfW3Vj4&t=523) font family declarations. Not
+- [8:45](https://youtube.com/watch?v=d8BGxfW3Vj4&t=525) reorganizing the Google fonts URL and
+- [8:47](https://youtube.com/watch?v=d8BGxfW3Vj4&t=527) basically just leaving out and not
+- [8:49](https://youtube.com/watch?v=d8BGxfW3Vj4&t=529) touching anything that it shouldn't
+- [8:50](https://youtube.com/watch?v=d8BGxfW3Vj4&t=530) touch. Meanwhile, this vanilla cloud
+- [8:52](https://youtube.com/watch?v=d8BGxfW3Vj4&t=532) code is still working through its errors
+- [8:54](https://youtube.com/watch?v=d8BGxfW3Vj4&t=534) and is just spending tokens left and
+- [8:56](https://youtube.com/watch?v=d8BGxfW3Vj4&t=536) right. And the final principle that it
+- [8:57](https://youtube.com/watch?v=d8BGxfW3Vj4&t=537) implements for your cloud code is the
+- [8:59](https://youtube.com/watch?v=d8BGxfW3Vj4&t=539) ability to have goal-driven execution.
+- [9:01](https://youtube.com/watch?v=d8BGxfW3Vj4&t=541) And this now operates within the core
+- [9:03](https://youtube.com/watch?v=d8BGxfW3Vj4&t=543) concept you need to understand which is
+- [9:04](https://youtube.com/watch?v=d8BGxfW3Vj4&t=544) defining what done looks like. And just
+- [9:06](https://youtube.com/watch?v=d8BGxfW3Vj4&t=546) going back to the Karpati tweet, you can
+- [9:08](https://youtube.com/watch?v=d8BGxfW3Vj4&t=548) see he mentioned here that LLMs are
+- [9:10](https://youtube.com/watch?v=d8BGxfW3Vj4&t=550) exceptionally good at looping until they
+- [9:12](https://youtube.com/watch?v=d8BGxfW3Vj4&t=552) meet specific goals. And so instead of
+- [9:14](https://youtube.com/watch?v=d8BGxfW3Vj4&t=554) telling it what to do, just give it
+- [9:15](https://youtube.com/watch?v=d8BGxfW3Vj4&t=555) success criteria or a specific goal in
+- [9:18](https://youtube.com/watch?v=d8BGxfW3Vj4&t=558) mind and just leave it to explore. And
+- [9:20](https://youtube.com/watch?v=d8BGxfW3Vj4&t=560) that is how you can extract the most
+- [9:21](https://youtube.com/watch?v=d8BGxfW3Vj4&t=561) value from these AI agents. And he also
+- [9:23](https://youtube.com/watch?v=d8BGxfW3Vj4&t=563) mentions here that changing your
+- [9:25](https://youtube.com/watch?v=d8BGxfW3Vj4&t=565) approach from imperative, which is
+- [9:26](https://youtube.com/watch?v=d8BGxfW3Vj4&t=566) basically commanding agents on how to do
+- [9:28](https://youtube.com/watch?v=d8BGxfW3Vj4&t=568) things to declarative, which is you
+- [9:30](https://youtube.com/watch?v=d8BGxfW3Vj4&t=570) declaring what you want out of these
+- [9:32](https://youtube.com/watch?v=d8BGxfW3Vj4&t=572) agents, then you'll be able to get
+- [9:34](https://youtube.com/watch?v=d8BGxfW3Vj4&t=574) better results each time. And to
+- [9:35](https://youtube.com/watch?v=d8BGxfW3Vj4&t=575) illustrate this principle, you can see
+- [9:37](https://youtube.com/watch?v=d8BGxfW3Vj4&t=577) what I did here is to ask our agent to
+- [9:39](https://youtube.com/watch?v=d8BGxfW3Vj4&t=579) make a version of this skill trees view,
+- [9:41](https://youtube.com/watch?v=d8BGxfW3Vj4&t=581) which is a nice visual view here in
+- [9:43](https://youtube.com/watch?v=d8BGxfW3Vj4&t=583) rubric of each of our agents and what
+- [9:45](https://youtube.com/watch?v=d8BGxfW3Vj4&t=585) are the specific skills that they have
+- [9:47](https://youtube.com/watch?v=d8BGxfW3Vj4&t=587) access to would be. But here I just ask
+- [9:48](https://youtube.com/watch?v=d8BGxfW3Vj4&t=588) a version where the goal is for the user
+- [9:51](https://youtube.com/watch?v=d8BGxfW3Vj4&t=591) to be able to select an icon for each
+- [9:53](https://youtube.com/watch?v=d8BGxfW3Vj4&t=593) agent here. And so when it was done, you
+- [9:56](https://youtube.com/watch?v=d8BGxfW3Vj4&t=596) can see that when I click on each of
+- [9:58](https://youtube.com/watch?v=d8BGxfW3Vj4&t=598) these agents, you now have the ability
+- [10:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=600) to change the icons, which if I select,
+- [10:02](https://youtube.com/watch?v=d8BGxfW3Vj4&t=602) let's say, this one for the beta agent,
+- [10:04](https://youtube.com/watch?v=d8BGxfW3Vj4&t=604) it will update that icon cleanly in the
+- [10:06](https://youtube.com/watch?v=d8BGxfW3Vj4&t=606) UI as well. And you can see what I did
+- [10:08](https://youtube.com/watch?v=d8BGxfW3Vj4&t=608) for this prompt is to just give it a
+- [10:10](https://youtube.com/watch?v=d8BGxfW3Vj4&t=610) goal, right? So I just ask it to think
+- [10:11](https://youtube.com/watch?v=d8BGxfW3Vj4&t=611) of a way for the user to be able to
+- [10:13](https://youtube.com/watch?v=d8BGxfW3Vj4&t=613) select an icon for each agent. I didn't
+- [10:15](https://youtube.com/watch?v=d8BGxfW3Vj4&t=615) really specify which part of the user
+- [10:17](https://youtube.com/watch?v=d8BGxfW3Vj4&t=617) interface here should the icons live in.
+- [10:19](https://youtube.com/watch?v=d8BGxfW3Vj4&t=619) And I also didn't specify how many icon
+- [10:22](https://youtube.com/watch?v=d8BGxfW3Vj4&t=622) options it should provide or what are
+- [10:23](https://youtube.com/watch?v=d8BGxfW3Vj4&t=623) the designs. Now you can obviously be
+- [10:25](https://youtube.com/watch?v=d8BGxfW3Vj4&t=625) more imperative or prescriptive to your
+- [10:27](https://youtube.com/watch?v=d8BGxfW3Vj4&t=627) agent on where each icon should live.
+- [10:29](https://youtube.com/watch?v=d8BGxfW3Vj4&t=629) But I think if you have this claw MD and
+- [10:31](https://youtube.com/watch?v=d8BGxfW3Vj4&t=631) there is that goal-driven mindset for
+- [10:33](https://youtube.com/watch?v=d8BGxfW3Vj4&t=633) your agent, then if you provide a clear
+- [10:36](https://youtube.com/watch?v=d8BGxfW3Vj4&t=636) end in mind and a definition of done,
+- [10:38](https://youtube.com/watch?v=d8BGxfW3Vj4&t=638) then it'll be able to work through
+- [10:39](https://youtube.com/watch?v=d8BGxfW3Vj4&t=639) pretty much the best course of action
+- [10:41](https://youtube.com/watch?v=d8BGxfW3Vj4&t=641) for that build that you're giving it.
+- [10:43](https://youtube.com/watch?v=d8BGxfW3Vj4&t=643) And there you go. All the principles
+- [10:44](https://youtube.com/watch?v=d8BGxfW3Vj4&t=644) that Andre Karpati himself uses to
+- [10:46](https://youtube.com/watch?v=d8BGxfW3Vj4&t=646) improve his cla code setup now publicly
+- [10:48](https://youtube.com/watch?v=d8BGxfW3Vj4&t=648) available through this repo. I hope that
+- [10:50](https://youtube.com/watch?v=d8BGxfW3Vj4&t=650) was useful and if it is then consider
+- [10:52](https://youtube.com/watch?v=d8BGxfW3Vj4&t=652) subscribing because that helps us a lot
+- [10:53](https://youtube.com/watch?v=d8BGxfW3Vj4&t=653) to put out more educational content like
+- [10:55](https://youtube.com/watch?v=d8BGxfW3Vj4&t=655) this. And if you want to learn how to
+- [10:56](https://youtube.com/watch?v=d8BGxfW3Vj4&t=656) automatically build slides with cloud
+- [10:58](https://youtube.com/watch?v=d8BGxfW3Vj4&t=658) code just like the one I showed in this
+- [10:59](https://youtube.com/watch?v=d8BGxfW3Vj4&t=659) video then you can watch this video
+- [11:01](https://youtube.com/watch?v=d8BGxfW3Vj4&t=661) next. I'll see you guys next time. Thank
+- [11:02](https://youtube.com/watch?v=d8BGxfW3Vj4&t=662) you.
