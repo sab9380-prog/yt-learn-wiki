@@ -5,12 +5,10 @@ video_id: z9CwM-DAe5Q
 source_type: youtube
 lang: en
 analyzed: 2026-05-22
-category: 일반학습
+category: Picks전략
 status: active
 ---
 # Claude Code Design just became UNSTOPPABLE
-
-[[_category-일반학습]]
 
 ## 🧠 이해 (Understand)
 - **Summary:** 이 영상은 Claude Code를 활용한 새로운 디자인 시스템을 소개합니다. AI가 생성하는 획일적인 디자인(AI slop)을 극복하고, 디자인을 코드로 체계화하여 무한 복제 가능한 시스템을 만드는 방법을 설명합니다. GitHub의 'Awesome Design' 레포지토리를 활용해 웹사이트, 프레젠테이션 등을 한 번에 생성하고, Firecrawl 같은 도구로 브랜드 가이드라인을 자동 추출하는 5단계 프로세스를 제시합니다. 핵심은 디자인을 예술이 아닌 코드화 가능한 시스템으로 접근하는 것입니다.
@@ -39,6 +37,9 @@ status: active
 - 자료: Krea API (이미지 생성용)
 - 자료: Cursor/Windsurf (IDE 환경)
 - Timeline: 1주차: Claude Code 환경 설정 및 Firecrawl 연동, 2주차: 첫 디자인 스킬 완성 및 테스트, 이후: 다른 디자인 포맷으로 확장
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=0) Cloud Code just became the world's

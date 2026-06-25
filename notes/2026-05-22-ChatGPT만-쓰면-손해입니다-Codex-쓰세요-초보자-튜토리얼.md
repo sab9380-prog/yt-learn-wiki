@@ -5,12 +5,10 @@ video_id: ir8Lax4Q38o
 source_type: youtube
 lang: ko
 analyzed: 2026-05-22
-category: 일반학습
+category: Picks전략
 status: active
 ---
 # ChatGPT만 쓰면 손해입니다. Codex 쓰세요! (초보자 튜토리얼)
-
-[[_category-일반학습]]
 
 ## 🧠 이해 (Understand)
 - **Summary:** ChatGPT 구독 내에서 사용할 수 있는 오픈AI의 코덱스(Codex)를 활용한 실무 업무 자동화 방법을 소개합니다. 코덱스는 Claude Coder와 유사한 코딩 에이전트이지만 프로젝트 폴더 기반으로 작동하여 문서 작업과 프로젝트 관리에 더 적합합니다. 실제 AI 자동화 컨설팅 제안서 PPT를 만드는 과정을 통해 폴더 설정, 기준 문서 작성(agent.md, design.md, business_context.md, deck_brief.md), 계획 수립, 리서치, 이미지 생성, PPT 제작, 검수까지의 전체 워크플로우를 시연합니다. 단순히 프롬프트 하나로 작업하는 것이 아니라, 작업 환경과 기준 문서를 체계적으로 구축한 후 계획적으로 접근하는 것이 핵심입니다.
@@ -39,6 +37,9 @@ status: active
 - 자료: GitHub 계정 (버전 관리용)
 - 자료: GPT o1 모델 활용 가이드 (확인 필요)
 - Timeline: 1단계(앱 설치/기본 사용): 오늘, 2단계(기준 문서 작성): 이번 주, 3단계(실제 프로젝트 적용): 다음 주
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=0) 여러분 혹시 아직 채비티나 재미나면

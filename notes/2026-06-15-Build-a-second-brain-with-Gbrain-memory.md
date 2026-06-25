@@ -5,12 +5,10 @@ video_id: j55r_higKIo
 source_type: youtube
 lang: en
 analyzed: 2026-06-15
-category: 일반학습
+category: Picks전략
 status: active
 ---
 # Build a second brain with Gbrain - memory for AI agents
-
-[[_category-일반학습]]
 
 ## 🧠 이해 (Understand)
 - **Summary:** 개발자가 AI의 빠른 발전 속도를 따라가기 위해 G brain이라는 오픈소스 도구로 '제2의 뇌'를 구축한 경험을 공유합니다. G brain은 노트, 문서, YouTube, X(트위터) 콘텐츠를 자동 수집하여 검색 가능한 지식 그래프로 변환하고, AI 에이전트가 패턴을 인식하고 관계를 추적할 수 있게 합니다. Y Combinator 사장 Garry Tan이 만든 이 도구는 기존 ChatGPT 같은 AI와 달리 구조화된 외부 메모리를 제공하여 시간이 지날수록 더 스마트해지는 시스템을 구현합니다.
@@ -23,6 +21,9 @@ status: active
 ❗ 하이브리드 검색이 키워드, 의미, 관계 검색을 동시에 수행함
 
 ## 🚀 실행 (Execute)
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=j55r_higKIo&t=0) I built myself a second brain. Why?

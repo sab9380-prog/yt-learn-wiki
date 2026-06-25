@@ -10,8 +10,6 @@ status: active
 ---
 # The Multi-Agent Architecture That Actually Ships — Luke Alvoeiro, Factory
 
-[[_category-일반학습]]
-
 ## 🧠 이해 (Understand)
 - **Summary:** 소프트웨어 엔지니어링의 병목은 더 이상 AI의 지능이 아니라 인간의 주의(attention) 부족이다. 발표자 Luke는 Factory에서 개발한 'Missions' 시스템을 소개하며, 이는 오케스트레이터·워커·밸리데이터 3가지 역할로 구성된 멀티 에이전트 아키텍처다. 핵심은 코드 작성 전에 '검증 계약(Validation Contract)'을 먼저 정의해 구현과 무관하게 정확성 기준을 세우는 것이다. 에이전트들은 병렬이 아닌 직렬로 실행되며, 각 기능 완료 시 구조화된 핸드오프 문서를 작성해 컨텍스트 손실을 방지한다. 검증은 코드 리뷰와 실제 앱을 직접 조작하는 사용자 테스트 방식으로 이중 수행된다. 실제로 16일간 연속 실행에 성공했으며, 최종 코드의 50%가 테스트 코드, 90% 커버리지를 달성했다. 아키텍처 로직은 하드코딩이 아닌 프롬프트(약 700줄 텍스트)로 정의해 모델이 개선될수록 시스템도 함께 강해지도록 설계했다. 팀 5명이 10개 작업을 동시에 처리하던 것을 Missions으로 30개까지 확장 가능하다고 주장한다.
 - **Core Message:** AI 에이전트의 병목은 지능이 아닌 인간의 주의력이므로, 검증 계약·직렬 실행·구조화된 핸드오프로 며칠간 자율 실행하는 에이전트 생태계를 설계해야 한다.
@@ -44,12 +42,8 @@ status: active
 - 자료: 발표자 Luke 관련 추가 자료: 'Bitter Lesson' 원문 (Richard Sutton, 2019) — 모델 개선과 아키텍처 설계 철학 이해에 필수
 - Timeline: 1주차: Goose 설치 및 /missions 첫 실행 + Factory/Goose 문서 분석 → 2주차: Validation Contract 템플릿 설계 및 소규모 프로젝트에 파일럿 적용 → 3~4주차: 역할별 모델 배치(Droid Whispering) 실험 및 결과 비교
 
-## ⏰ 타임스탬프
-- [0:16](https://www.youtube.com/watch?v=ow1we5PzK-o&t=16) — 발표 시작: 소프트웨어 엔지니어링의 병목은 지능이 아닌 인간의 주의력(attention)이라는 핵심 주장 제시
-- [0:16](https://www.youtube.com/watch?v=ow1we5PzK-o&t=16) — 멀티 에이전트 5가지 유형 분류 시작: 위임·창조-검증·직접통신·협상·브로드캐스트
-- [0:16](https://www.youtube.com/watch?v=ow1we5PzK-o&t=16) — Missions 아키텍처 설명: 오케스트레이터·워커·밸리데이터 3역할 구조와 Validation Contract 개념 등장
-- [0:16](https://www.youtube.com/watch?v=ow1we5PzK-o&t=16) — 직렬 실행 전략 설명: 병렬 실행 시도 후 실패한 이유와 직렬+내부 선택적 병렬화 방식으로 전환한 배경
-- [0:16](https://www.youtube.com/watch?v=ow1we5PzK-o&t=16) — Droid Whispering 개념 및 역할별 최적 모델 배치 전략, Bitter Lesson 대응 방식(프롬프트 기반 오케스트레이션) 설명
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
 
 ## 📝 자막 전문
 - [0:07](https://www.youtube.com/watch?v=ow1we5PzK-o&t=7) [music]

@@ -10,8 +10,6 @@ status: active
 ---
 # 세계가 주목한 Karpathy LLM Wiki, 진짜 돌아가는 도구를 만들었습니다 | MindVault
 
-[[_category-일반학습]]
-
 ## 🧠 이해 (Understand)
 - **Summary:** 안드레이 카파시의 LLM 위키 패턴을 구현한 오픈소스 도구 마인드볼트를 소개한다. AI 코딩 도구가 프로젝트 맥락을 잊어버리는 문제와 토큰 낭비를 해결하기 위해 개발된 도구로, 3레이어 아키텍처(검색-그래프-위키)를 통해 기존 대비 60배 토큰을 절약한다. 7개 AI 도구와 자동 연동되며, 13개 프로그래밍 언어를 지원한다. 한번 설치하면 백그라운드 데몬이 파일 변경을 감지해 지식 베이스를 자동 업데이트하고, 시스템 레벨에서 프로젝트 컨텍스트를 자동 주입한다.
 - **Core Message:** AI 코딩 도구의 맥락 망각 문제를 자동화된 지식 베이스 관리로 해결하여 토큰을 60배 절약한다
@@ -39,6 +37,9 @@ status: active
 - 자료: 지원 AI 도구: Claude Code, Cursor, GitHub Copilot, Windsurf, Gemini Code Assist, Cline, Aider
 - 자료: BM25 알고리즘, NetworkX 라이브러리 (Python 생태계 기반 도구들)
 - Timeline: 1단계(오늘): 설치 및 기본 테스트 → 2단계(이번 주): 주요 프로젝트 적용 및 효과 측정 → 3단계: 팀 전체 도입 검토
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=LxMhb8HIL7A&t=0) 안드레이 카파시가 제한 LM 위키

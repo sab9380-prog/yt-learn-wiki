@@ -10,8 +10,6 @@ status: active
 ---
 # Top 10 Claude Code Frontend Design Skills, Plugins, & CLIs
 
-[[_category-일반학습]]
-
 ## 🧠 이해 (Understand)
 - **Summary:** 이 영상은 Claude Code로 웹사이트를 만들 때 나타나는 AI slop(획일적인 디자인 - 보라색 그라데이션, Inter 폰트, 동일한 카드 레이아웃)을 피하기 위한 10가지 도구를 소개한다. Impeccable(AI slop 패턴을 방지하는 18개 명령어 스킬), Skill UI(기존 웹사이트 디자인을 분석해 스킬로 변환), WebGPU(GPU 기반 애니메이션), Awesome Design(유명 사이트 디자인 시스템을 마크다운으로 제공), Stitch(구글의 시각적 디자인 도구), UI UX Pro Max(산업별 특화 디자인 규칙), 21st.dev(컴포넌트 라이브러리), Taste skill(AI에 디자인 취향 부여), Google Fonts, Playwright CLI(테스팅) 등을 다룬다. 이 도구들은 모두 Claude Code의 약점인 프론트엔드 디자인을 보완하여 차별화된 웹사이트를 만들 수 있게 도와준다.
 - **Core Message:** Claude Code의 획일적인 디자인 문제를 해결하기 위해 특화된 도구와 스킬을 활용하여 차별화된 웹사이트를 만들 수 있다.
@@ -44,6 +42,9 @@ status: active
 - 자료: Awesome Design GitHub (50k+ 스타)
 - 자료: Google Fonts 라이브러리
 - Timeline: 1주차: Impeccable 설치 및 적용, 2주차: 컴포넌트 라이브러리 탐색 및 테스트, 이후: 새 프로젝트마다 Stitch 활용한 사전 목업 작업
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=Q9ty3eopOPs&t=0) There is a monster inside of Claude Code

@@ -10,8 +10,6 @@ status: active
 ---
 # The Multi-Agent Architecture That Actually Ships — Luke Alvoeiro, Factory
 
-[[_category-일반학습]]
-
 ## 🧠 이해 (Understand)
 - **Summary:** Luke는 Factory에서 Missions라는 멀티 에이전트 시스템을 소개합니다. 현재 소프트웨어 개발의 병목점은 지능이 아닌 인간의 주의력이라고 주장하며, 이를 해결하기 위해 16일 동안 자율적으로 실행되는 에이전트 팀 시스템을 개발했습니다. Missions는 Orchestrator(기획), Workers(구현), Validators(검증)의 3역할 구조로 작동하며, 직렬 실행과 구조화된 핸드오프를 통해 에러율을 극적으로 낮췄습니다. 핵심은 코드 작성 전에 정의하는 Validation Contract로, 구현과 독립적으로 정확성을 정의합니다.
 - **Core Message:** 소프트웨어 개발의 병목점은 지능이 아닌 인간의 주의력이며, 이를 해결하기 위해서는 단순한 AI 에이전트가 아닌 구조화된 멀티 에이전트 시스템이 필요하다
@@ -23,6 +21,9 @@ status: active
 ❗ 완성된 코드의 50%가 테스트 코드이며, 90% 코드 커버리지 달성
 
 ## 🚀 실행 (Execute)
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
 
 ## 📝 자막 전문
 - [0:07](https://youtube.com/watch?v=ow1we5PzK-o&t=7) [music]

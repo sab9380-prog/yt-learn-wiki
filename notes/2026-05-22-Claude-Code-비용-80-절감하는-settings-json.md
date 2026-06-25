@@ -10,8 +10,6 @@ status: active
 ---
 # Claude Code 비용 80% 절감하는 settings.json 3줄과 14만명이 쓰는 everything-claude-code 설정법
 
-[[_category-일반학습]]
-
 ## 🧠 이해 (Understand)
 - **Summary:** 클로드 코드를 오래 사용하다 보면 갑자기 성능이 떨어지는 '컨텍스트 로트' 현상이 발생한다. 이는 어텐션 희석, 명령 충돌, 토큰 예산 압박, 관련성 미스매치 등의 구조적 문제 때문이다. 14만 명이 스타를 준 'Everything Claude Code' GitHub 저장소가 이 문제의 해법을 제시한다. 이 저장소는 앤트로픽 해커톤 우승자 아판 무스타파가 10개월간 매일 다듬은 클로드 코드 설정으로, 38개 서브 에이전트와 56개 스킬, 72개 슬래시 명령어를 포함한다. 비용을 80% 절감하는 핵심은 settings.json에서 모델을 Opus 대신 Sonnet으로, maxThinkingTokens를 1만으로, 서브에이전트 모델을 Haiku로 설정하는 것이다. 또한 지속 학습 시스템으로 사용자의 코딩 패턴을 학습하고 재사용 가능한 스킬로 승격시키며, 에이전트 쉴드라는 보안 스캐너도 함께 제공한다.
 - **Core Message:** 클로드 코드의 성능 저하는 구조적 문제이며, 검증된 오픈소스 솔루션으로 비용과 성능 문제를 동시에 해결할 수 있다.
@@ -39,6 +37,9 @@ status: active
 - 자료: Agent Shield 보안 스캐너 (mpx ecc agent-shield scan)
 - 자료: 영상 설명란의 핵심 가이드 PDF (heatjes.*/tips 링크)
 - Timeline: 1단계(오늘): 비용 절감 설정 → 2단계(이번 주): 핵심 플러그인 설치 → 3단계(여유 시): 메모리 학습 시스템과 보안 스캐너 활용
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=4rN-UWKSmp0&t=0) 클로드 코드를 한참 쓰다 보면 갑자기

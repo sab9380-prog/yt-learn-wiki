@@ -5,12 +5,10 @@ video_id: cNlvrU-KcRg
 source_type: youtube
 lang: ko
 analyzed: 2026-05-24
-category: 일반학습
+category: Picks전략
 status: active
 ---
 # 카파시의 LLM Wiki로 나만의 AI 세컨드 브레인 만들기, 이것만 보세요— 클로드 코드 × 옵시디언 × Graphify
-
-[[_category-일반학습]]
 
 ## 🧠 이해 (Understand)
 - **Summary:** AI 시대의 새로운 지식 관리 메타 조합인 '클로드 코드 + 옵시디언 + LLM 위키 + 그래피파이' 시스템을 실제로 구축하는 과정을 다룬 영상입니다. 기존의 RAG 시스템보다 간단하면서도 복리 형태로 지식을 축적할 수 있는 LLM 위키 방법론을 소개하고, 실제 옵시디언 볼트 생성부터 웹클리퍼 설정, 클로드 코드와의 연동, 그래피파이를 통한 그래프 DB 생성까지 전 과정을 단계별로 시연했습니다. 핵심은 '목적성 있는 수집'을 통해 골드 인 골드 아웃을 실현하는 것이며, 이를 위해 나만의 핵심 맥락을 정의하고 AI와 인터뷰를 통해 개인화된 지식 관리 시스템을 구축하는 방법을 제시했습니다.
@@ -23,6 +21,9 @@ status: active
 ❗ 옵시디언을 '아이디어 프론트엔드'라고 부르며 AI 시대의 핵심 도구로 각광받고 있음
 
 ## 🚀 실행 (Execute)
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=0) 안녕하세요. 브레인 트리니티의
