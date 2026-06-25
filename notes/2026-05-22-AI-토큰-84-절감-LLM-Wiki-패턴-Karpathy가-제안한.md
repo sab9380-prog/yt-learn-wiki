@@ -1,0 +1,331 @@
+---
+title: "AI 토큰 84% 절감 LLM Wiki 패턴, Karpathy가 제안한 컨텍스트 관리법"
+source_url: https://youtube.com/watch?v=5uTpUYw8Of4
+video_id: 5uTpUYw8Of4
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# AI 토큰 84% 절감 LLM Wiki 패턴, Karpathy가 제안한 컨텍스트 관리법
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** AI가 매번 문서를 처음부터 다시 읽어야 하는 치명적 약점으로 인해 토큰이 크게 낭비되고 있다. 383개 문서가 47,000개 토큰을 소비했는데, 테슬라 AI 책임자 출신 안드레이 카파시가 제안한 LLM 위키 패턴을 적용하면 7,700개 토큰으로 84% 절약이 가능하다. LLM 위키는 AI가 원본 문서를 미리 핵심만 정리한 요약본을 만들어서 이후 질문 시 요약본만 참조하는 방식이다. 원본 소스 계층, 위키 계층, 스키마 계층으로 구성되며, 인제스트(자료 소화), 쿼리(질문 응답), 린트(점검) 과정을 통해 지속적으로 최적화된다. 클로드 코드 사용자는 /compact, /clear 명령어와 claude.md 최적화, LLM 위키 컴파일러 플러그인 활용으로 즉시 토큰을 절약할 수 있다.
+- **Core Message:** AI가 매번 문서를 처음부터 읽는 비효율을 해결하기 위해 핵심만 정리한 위키를 만들어 토큰을 84%까지 절약할 수 있다.
+> AI한테 문서 383개를 줬더니 토큰을 47,000개나 먹어치웠습니다. 그런데 똑같은 문서를 어떤 방식으로 정리하니까 7,700개로 줄었습니다. 84%가 줄어든 겁니다.
+> 지금 많은 분들이 AI 토큰비로 소를 잃고 계신 겁니다.
+> 같은 AI를 쓰면서도 누구는 토큰을 펑펑 쓰고 누구는 84%를 아깝니다. 여러분은 어떤 쪽이 되고 싶으신가요?
+❗ 마크다운 파일 383개(13.1MB)가 위키로 컴파일되니 13개 기사로 압축됨(81배 압축)
+❗ 회의 녹취록 130개(12만2,625줄)가 하나의 요약 파일 244줄로 압축됨(503배 압축)
+❗ 위키 컴파일 초기 비용(3,500-8,000원)은 첫 세션부터 바로 본전을 뽑을 수 있음
+
+## 📚 핵심 용어
+- **LLM 위키:** AI가 원본 문서를 미리 핵심만 정리한 요약본을 만들어서 이후 질문 시 요약본만 참조하는 방식. / 도서관 책들을 다 읽고 미리 요약 노트를 만들어 둔 것. 질문할 때마다 도서관 가지 않고 책상 위 노트만 보면 된다. / RAG는 질문마다 도서관에서 책을 찾아 읽는 것, LLM 위키는 미리 정리한 요약 노트만 보는 것. 매번 검색 vs 한 번 정리.
+- **컨텍스트:** AI가 한 번에 기억할 수 있는 정보의 양으로, AI의 단기 기억력을 뜻한다. / 사람이 대화할 때 앞에서 한 말을 기억하는 것처럼, AI도 이전 내용을 기억해야 대화가 이어진다. / 토큰은 정보 처리 단위, 컨텍스트는 기억 용량. 토큰은 연료, 컨텍스트는 연료 탱크 크기.
+- **토큰:** AI가 정보를 처리하는 기본 단위로, 대략 한 단어가 한 토큰에 해당한다. / 복사기에서 종이 한 장당 요금을 매기는 것처럼, AI는 토큰 하나하나마다 비용이 든다. / 글자는 사람이 보는 단위, 토큰은 AI가 처리하는 단위. 같은 글이라도 토큰 개수는 다를 수 있다.
+- **인제스트:** 새로운 문서를 AI가 읽고 핵심을 추출해서 위키에 반영하는 자료 소화 과정. / 도서관에 새 책이 들어오면 사서가 읽고 목록을 정리해서 카탈로그에 추가하는 과정과 같다. / RAG는 질문할 때마다 검색, 인제스트는 미리 정리해서 저장. 실시간 검색 vs 사전 준비.
+
+## 🚀 실행 (Execute)
+- [ ] 클로드 코드에서 /compact 명령어와 claude.md 파일 최적화 적용하기
+  - 담당: 나
+  - 이유: 바로 적용 가능한 기본 토큰 절약법으로 즉시 효과를 볼 수 있음
+- [ ] LLM 위키 컴파일러 플러그인 설치 및 테스트
+  - 담당: 나
+  - 이유: 프로젝트 문서가 많다면 84% 토큰 절약 효과로 비용 대비 효율이 매우 높음
+- 자료: LLM 위키 컴파일러 플러그인 (GitHub에서 다운로드 - 확인 필요)
+- 자료: 안드레이 카파시의 LLM 위키 관련 자료
+- 자료: 클로드 코드 명령어 가이드
+- Timeline: 1단계: 오늘 클로드 코드 기본 최적화 적용 → 2단계: 이번 주 내 위키 컴파일러 도입 검토 → 3단계: 프로젝트 규모에 따라 플러그인 본격 활용
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=5uTpUYw8Of4&t=0) AI한테 문서 383개를 줬더니
+- [0:03](https://youtube.com/watch?v=5uTpUYw8Of4&t=3) 토큰을 47,000개나
+- [0:04](https://youtube.com/watch?v=5uTpUYw8Of4&t=4) 먹어치웠습니다. 그런데 똑같은 문서를
+- [0:07](https://youtube.com/watch?v=5uTpUYw8Of4&t=7) 어떤 방식으로 정리하니까
+- [0:08](https://youtube.com/watch?v=5uTpUYw8Of4&t=8) 7,700개로 줄었습니다. 84%가
+- [0:12](https://youtube.com/watch?v=5uTpUYw8Of4&t=12) 줄어든 겁니다. 이게 말이 됩니까?
+- [0:14](https://youtube.com/watch?v=5uTpUYw8Of4&t=14) 되더라고요. 오늘 영상에서는 테슬라의
+- [0:16](https://youtube.com/watch?v=5uTpUYw8Of4&t=16) AI 책임자 출신 안드레이 카파시가
+- [0:19](https://youtube.com/watch?v=5uTpUYw8Of4&t=19) 제한한 LLM 위키라는 개념을 알려
+- [0:21](https://youtube.com/watch?v=5uTpUYw8Of4&t=21) 드리겠습니다. AI 코딩하면서 토큰비
+- [0:23](https://youtube.com/watch?v=5uTpUYw8Of4&t=23) 나가는게 아까우신 분. AI가 자꾸
+- [0:26](https://youtube.com/watch?v=5uTpUYw8Of4&t=26) 앞에서 했던 얘기를 잊어버려서 멘탈이
+- [0:28](https://youtube.com/watch?v=5uTpUYw8Of4&t=28) 흔들리는 분. 오늘이 영상 하나로
+- [0:30](https://youtube.com/watch?v=5uTpUYw8Of4&t=30) 해결하실 수 있습니다. 반대로이
+- [0:32](https://youtube.com/watch?v=5uTpUYw8Of4&t=32) 개념을 모르면 여러분은 계속 토큰을
+- [0:35](https://youtube.com/watch?v=5uTpUYw8Of4&t=35) 낭비하면서 AI한테 같은 말을
+- [0:37](https://youtube.com/watch?v=5uTpUYw8Of4&t=37) 반복하게 됩니다. 영상을 끝까지
+- [0:39](https://youtube.com/watch?v=5uTpUYw8Of4&t=39) 보시면 오늘 당장 적용할 수 있는
+- [0:41](https://youtube.com/watch?v=5uTpUYw8Of4&t=41) 실전 팁까지 알려 드리겠습니다. 오늘
+- [0:44](https://youtube.com/watch?v=5uTpUYw8Of4&t=44) 영상은 크게 세 파트로 구성됩니다.
+- [0:46](https://youtube.com/watch?v=5uTpUYw8Of4&t=46) 첫 번째는 AI의 치명적인 약점.
+- [0:49](https://youtube.com/watch?v=5uTpUYw8Of4&t=49) 매번 처음부터 다시 읽는 문제입니다.
+- [0:51](https://youtube.com/watch?v=5uTpUYw8Of4&t=51) 두 번째는 카파시가 제안한 해결책인
+- [0:54](https://youtube.com/watch?v=5uTpUYw8Of4&t=54) LLM 위키 패턴이고요. 세 번째는
+- [0:56](https://youtube.com/watch?v=5uTpUYw8Of4&t=56) 여러분이 오늘 당장 적용할 수 있는
+- [0:58](https://youtube.com/watch?v=5uTpUYw8Of4&t=58) 실정 컨텍스트 관리법입니다. 자,
+- [1:01](https://youtube.com/watch?v=5uTpUYw8Of4&t=61) 그러면 첫 번째 파트부터
+- [1:03](https://youtube.com/watch?v=5uTpUYw8Of4&t=63) 시작하겠습니다. AI 코딩을 해 보신
+- [1:05](https://youtube.com/watch?v=5uTpUYw8Of4&t=65) 분이라면 한 번쯤 이런 경험 있으실
+- [1:07](https://youtube.com/watch?v=5uTpUYw8Of4&t=67) 겁니다. 분명히 아까 설명했는데
+- [1:09](https://youtube.com/watch?v=5uTpUYw8Of4&t=69) AI가 또 같은 걸 물어봅니다.
+- [1:12](https://youtube.com/watch?v=5uTpUYw8Of4&t=72) 아니면 이전에 만든 코드를 완전히
+- [1:13](https://youtube.com/watch?v=5uTpUYw8Of4&t=73) 잊어버리고 전혀 다른 방식으로 새로
+- [1:16](https://youtube.com/watch?v=5uTpUYw8Of4&t=76) 만들어 버립니다. 이게 바로 컨텍스트
+- [1:18](https://youtube.com/watch?v=5uTpUYw8Of4&t=78) 문제입니다. 컨텍스트라는 건 AI가
+- [1:21](https://youtube.com/watch?v=5uTpUYw8Of4&t=81) 한 번에 기억할 수 있는 정보의
+- [1:22](https://youtube.com/watch?v=5uTpUYw8Of4&t=82) 양인데요. 쉽게 말하면 AI의 단기
+- [1:25](https://youtube.com/watch?v=5uTpUYw8Of4&t=85) 기억력이라고 보시면 됩니다. 우리가
+- [1:27](https://youtube.com/watch?v=5uTpUYw8Of4&t=87) 대화할 때 앞에서 한 말을 기억하고
+- [1:30](https://youtube.com/watch?v=5uTpUYw8Of4&t=90) 있어야 뒷말이 이어지잖아요. AI도
+- [1:32](https://youtube.com/watch?v=5uTpUYw8Of4&t=92) 마찬가지입니다. 그런데이 기억 용량에
+- [1:35](https://youtube.com/watch?v=5uTpUYw8Of4&t=95) 한 개가 있습니다. 여기서 토큰이라는
+- [1:37](https://youtube.com/watch?v=5uTpUYw8Of4&t=97) 개념이 나옵니다. 토큰은 AI가
+- [1:39](https://youtube.com/watch?v=5uTpUYw8Of4&t=99) 정보를 처리하는 기본 단위인데 대략
+- [1:42](https://youtube.com/watch?v=5uTpUYw8Of4&t=102) 한 단어가 한 토큰이라고 보시면
+- [1:44](https://youtube.com/watch?v=5uTpUYw8Of4&t=104) 됩니다. AI한테 문서를 주면 그
+- [1:46](https://youtube.com/watch?v=5uTpUYw8Of4&t=106) 문서의 글자수만큼 토큰을 소비하는
+- [1:48](https://youtube.com/watch?v=5uTpUYw8Of4&t=108) 거예요. 그리고이 토큰 하나하나가 다
+- [1:52](https://youtube.com/watch?v=5uTpUYw8Of4&t=112) 돈입니다. API로 AI를 쓰시는
+- [1:54](https://youtube.com/watch?v=5uTpUYw8Of4&t=114) 분들은 토큰수에 비례해서 요금이
+- [1:56](https://youtube.com/watch?v=5uTpUYw8Of4&t=116) 청구되거든요. 구독 플랜이라도 토큰을
+- [1:59](https://youtube.com/watch?v=5uTpUYw8Of4&t=119) 많이 쓰면 사용량 제한에 걸리고요.
+- [2:01](https://youtube.com/watch?v=5uTpUYw8Of4&t=121) 그래서 토큰을 아끼는게 곧 돈을
+- [2:03](https://youtube.com/watch?v=5uTpUYw8Of4&t=123) 아끼는 겁니다. 문제는 지금 대부분의
+- [2:06](https://youtube.com/watch?v=5uTpUYw8Of4&t=126) AI 도구들이이 토큰을 엄청나게
+- [2:08](https://youtube.com/watch?v=5uTpUYw8Of4&t=128) 낭비하고 있다는 겁니다. 예를 들어
+- [2:10](https://youtube.com/watch?v=5uTpUYw8Of4&t=130) 여러분이 회사에서 프로젝트 문서
+- [2:12](https://youtube.com/watch?v=5uTpUYw8Of4&t=132) 100개를 AI한테 줬다고 해
+- [2:14](https://youtube.com/watch?v=5uTpUYw8Of4&t=134) 봅시다. AI한테 어떤 기능이 어떻게
+- [2:17](https://youtube.com/watch?v=5uTpUYw8Of4&t=137) 동작하는지 물어보면이 100개 문서를
+- [2:19](https://youtube.com/watch?v=5uTpUYw8Of4&t=139) 전부 훑어 봅니다. 다음에 다른
+- [2:21](https://youtube.com/watch?v=5uTpUYw8Of4&t=141) 질문을 하면 또 100개를 전부 훑어
+- [2:23](https://youtube.com/watch?v=5uTpUYw8Of4&t=143) 봅니다. 매번 매 질문마다요. 이걸
+- [2:26](https://youtube.com/watch?v=5uTpUYw8Of4&t=146) 레그라고 하는데 검색 증강 생성이라는
+- [2:29](https://youtube.com/watch?v=5uTpUYw8Of4&t=149) 기술입니다. 질문이 들어올 때마다
+- [2:32](https://youtube.com/watch?v=5uTpUYw8Of4&t=152) 관련 문서를 검색해서 AI에게 넘겨
+- [2:34](https://youtube.com/watch?v=5uTpUYw8Of4&t=154) 주는 방식이죠. 이게 나쁜 건 아닌데
+- [2:37](https://youtube.com/watch?v=5uTpUYw8Of4&t=157) 문제는 효율이 너무 떨어진다는
+- [2:38](https://youtube.com/watch?v=5uTpUYw8Of4&t=158) 겁니다. 비율을 하나 해 볼게요.
+- [2:40](https://youtube.com/watch?v=5uTpUYw8Of4&t=160) 여러분 회사에 신입 사원이 들어왔다고
+- [2:42](https://youtube.com/watch?v=5uTpUYw8Of4&t=162) 상상해 보세요. 근데이 신입이 좀
+- [2:45](https://youtube.com/watch?v=5uTpUYw8Of4&t=165) 특이합니다. 매일 아침 출근할 때마다
+- [2:47](https://youtube.com/watch?v=5uTpUYw8Of4&t=167) 기억이 리셋됩니다. 어제 했던 업무
+- [2:50](https://youtube.com/watch?v=5uTpUYw8Of4&t=170) 프로젝트 히스토리 회의로 전부 다
+- [2:52](https://youtube.com/watch?v=5uTpUYw8Of4&t=172) 까먹은 상태로 출근합니다. 그래서
+- [2:54](https://youtube.com/watch?v=5uTpUYw8Of4&t=174) 매일 아침 서류함에 있는 문서
+- [2:55](https://youtube.com/watch?v=5uTpUYw8Of4&t=175) 100개를 처음부터 다시 읽어야
+- [2:57](https://youtube.com/watch?v=5uTpUYw8Of4&t=177) 합니다. 기가 막히죠. 월요일에 읽고
+- [3:00](https://youtube.com/watch?v=5uTpUYw8Of4&t=180) 화요일에도 읽고 수요일에도 또 읽고이
+- [3:03](https://youtube.com/watch?v=5uTpUYw8Of4&t=183) 신입이 똑똑하긴 한데 매번 처음부터
+- [3:05](https://youtube.com/watch?v=5uTpUYw8Of4&t=185) 다시 시작하니까 업무 효율이
+- [3:07](https://youtube.com/watch?v=5uTpUYw8Of4&t=187) 바닥입니다. 지금 AI가 정확히이
+- [3:10](https://youtube.com/watch?v=5uTpUYw8Of4&t=190) 상황인 겁니다. 더 웃긴 건이
+- [3:12](https://youtube.com/watch?v=5uTpUYw8Of4&t=192) 신입한테 서류를 넘겨 줄 때마다
+- [3:14](https://youtube.com/watch?v=5uTpUYw8Of4&t=194) 복사비가 든다는 겁니다. 서류가 한
+- [3:16](https://youtube.com/watch?v=5uTpUYw8Of4&t=196) 장이면 돈이 얼마 안 들지만
+- [3:17](https://youtube.com/watch?v=5uTpUYw8Of4&t=197) 100장짜리 서류를 매번 복사해서
+- [3:19](https://youtube.com/watch?v=5uTpUYw8Of4&t=199) 주면 복사비가 어마어마해집니다.
+- [3:21](https://youtube.com/watch?v=5uTpUYw8Of4&t=201) 소일코 외양간 고친다는 말이
+- [3:23](https://youtube.com/watch?v=5uTpUYw8Of4&t=203) 있잖아요. 지금 많은 분들이 AI
+- [3:25](https://youtube.com/watch?v=5uTpUYw8Of4&t=205) 토큰비로 소를 잃고 계신 겁니다.
+- [3:27](https://youtube.com/watch?v=5uTpUYw8Of4&t=207) 근데 외양간을 고치는 방법이
+- [3:29](https://youtube.com/watch?v=5uTpUYw8Of4&t=209) 있습니다. 바로 카파시의 LLM 위키
+- [3:31](https://youtube.com/watch?v=5uTpUYw8Of4&t=211) 패턴입니다. 아, 참이 영상은 핑거로
+- [3:34](https://youtube.com/watch?v=5uTpUYw8Of4&t=214) 만들었습니다. 이런 영상을 딸깍으로
+- [3:37](https://youtube.com/watch?v=5uTpUYw8Of4&t=217) 만드시려면 핑크닷이에 접속해 보세요.
+- [3:40](https://youtube.com/watch?v=5uTpUYw8Of4&t=220) 설명란에 링크가 있습니다. 제가 직접
+- [3:42](https://youtube.com/watch?v=5uTpUYw8Of4&t=222) 녹음하고 편집해 하루 종일 만든
+- [3:44](https://youtube.com/watch?v=5uTpUYw8Of4&t=224) 영상은 조회수가 1천000도 안
+- [3:46](https://youtube.com/watch?v=5uTpUYw8Of4&t=226) 나왔는데 딸깍 만든 영상들은 몇만의
+- [3:49](https://youtube.com/watch?v=5uTpUYw8Of4&t=229) 조회수가 나오면서 영상마다 몇 만
+- [3:51](https://youtube.com/watch?v=5uTpUYw8Of4&t=231) 원의 조회수 수익, 수십만 원의 강의
+- [3:54](https://youtube.com/watch?v=5uTpUYw8Of4&t=234) 판매 수익이 있습니다. 판매하시는
+- [3:55](https://youtube.com/watch?v=5uTpUYw8Of4&t=235) 전문 서비스나 상품이 있다면 딸각으로
+- [3:58](https://youtube.com/watch?v=5uTpUYw8Of4&t=238) 만든 영상으로 내 서비스를 홍보할 수
+- [4:00](https://youtube.com/watch?v=5uTpUYw8Of4&t=240) 있어요. 두 번째 파트 카파시의
+- [4:03](https://youtube.com/watch?v=5uTpUYw8Of4&t=243) 해결책입니다. 안드레이 카파시라는
+- [4:05](https://youtube.com/watch?v=5uTpUYw8Of4&t=245) 분은 테슬라에서 AI 디렉터를 지냈고
+- [4:07](https://youtube.com/watch?v=5uTpUYw8Of4&t=247) 오픈 AI 창립 멤버이기도 한 AI
+- [4:10](https://youtube.com/watch?v=5uTpUYw8Of4&t=250) 업계에서는 모르는 사람이 없는
+- [4:12](https://youtube.com/watch?v=5uTpUYw8Of4&t=252) 분입니다. 이분이 최근에 제안한게
+- [4:14](https://youtube.com/watch?v=5uTpUYw8Of4&t=254) LLM 위키라는 개념인데 아이디어
+- [4:17](https://youtube.com/watch?v=5uTpUYw8Of4&t=257) 자체는 놀라울 정도로 단순합니다.
+- [4:19](https://youtube.com/watch?v=5uTpUYw8Of4&t=259) AI한테 원본 문서를 매번 읽히지
+- [4:21](https://youtube.com/watch?v=5uTpUYw8Of4&t=261) 말고 AI가 미리 핵심만 정리한
+- [4:24](https://youtube.com/watch?v=5uTpUYw8Of4&t=264) 위키를 만들어서 이후에는 그 위키만
+- [4:27](https://youtube.com/watch?v=5uTpUYw8Of4&t=267) 참조하게 하자는 겁니다. 구조를 쉽게
+- [4:29](https://youtube.com/watch?v=5uTpUYw8Of4&t=269) 설명하면 3계층으로 이루어져
+- [4:31](https://youtube.com/watch?v=5uTpUYw8Of4&t=271) 있습니다. 첫째, 원본 소스
+- [4:33](https://youtube.com/watch?v=5uTpUYw8Of4&t=273) 계층입니다. 이건 도서관에 있는
+- [4:35](https://youtube.com/watch?v=5uTpUYw8Of4&t=275) 책들이라고 생각하시면 됩니다. 회의로
+- [4:37](https://youtube.com/watch?v=5uTpUYw8Of4&t=277) 기술 문서, 이메일, 코드 등 날 것
+- [4:40](https://youtube.com/watch?v=5uTpUYw8Of4&t=280) 그대로의 자료들이에요. 양이 엄청나고
+- [4:43](https://youtube.com/watch?v=5uTpUYw8Of4&t=283) 정리가 안 돼 있습니다. 둘째, 위티
+- [4:45](https://youtube.com/watch?v=5uTpUYw8Of4&t=285) 계층입니다. 이건 도서관 책들을 읽고
+- [4:48](https://youtube.com/watch?v=5uTpUYw8Of4&t=288) 핵심만 정리한 요약 노트입니다.
+- [4:50](https://youtube.com/watch?v=5uTpUYw8Of4&t=290) AI가 원본 자료들을 읽고 중요한
+- [4:52](https://youtube.com/watch?v=5uTpUYw8Of4&t=292) 내용만 추려서 주제별로 깔끔하게
+- [4:54](https://youtube.com/watch?v=5uTpUYw8Of4&t=294) 정리해 놓은 거예요. 셋째, 스키마
+- [4:57](https://youtube.com/watch?v=5uTpUYw8Of4&t=297) 계층입니다. 이건 목차와 규칙이에요.
+- [5:00](https://youtube.com/watch?v=5uTpUYw8Of4&t=300) 위키를 어떤 구조로 만들지, 어떤
+- [5:02](https://youtube.com/watch?v=5uTpUYw8Of4&t=302) 형식을 따를지 정해 놓은 설정
+- [5:04](https://youtube.com/watch?v=5uTpUYw8Of4&t=304) 파일입니다. 클러드 코드의 클로드
+- [5:06](https://youtube.com/watch?v=5uTpUYw8Of4&t=306) MD 같은 거라고 보시면 됩니다.
+- [5:08](https://youtube.com/watch?v=5uTpUYw8Of4&t=308) 핵심이 뭐냐면 기존 레그 방식은
+- [5:10](https://youtube.com/watch?v=5uTpUYw8Of4&t=310) 질문할 때마다 도서관에 가서 책을
+- [5:12](https://youtube.com/watch?v=5uTpUYw8Of4&t=312) 찾아 읽는 거예요. 반면에 LLM
+- [5:14](https://youtube.com/watch?v=5uTpUYw8Of4&t=314) 미키는 미리 책을 다 읽고 요약
+- [5:16](https://youtube.com/watch?v=5uTpUYw8Of4&t=316) 노트를 만들어 놓은 거죠. 질문이
+- [5:18](https://youtube.com/watch?v=5uTpUYw8Of4&t=318) 들어오면 도서관까지 갈 필요 없이
+- [5:21](https://youtube.com/watch?v=5uTpUYw8Of4&t=321) 책상 위에 요약 노트만 보면 됩니다.
+- [5:23](https://youtube.com/watch?v=5uTpUYw8Of4&t=323) 카파시의 표현을 빌리면 지식이
+- [5:25](https://youtube.com/watch?v=5uTpUYw8Of4&t=325) 컴파일된 상태로 유지되기 때문에 매번
+- [5:28](https://youtube.com/watch?v=5uTpUYw8Of4&t=328) 처음부터 다시 추출할 필요가 없다는
+- [5:29](https://youtube.com/watch?v=5uTpUYw8Of4&t=329) 겁니다. 실제로 이게 얼마나
+- [5:31](https://youtube.com/watch?v=5uTpUYw8Of4&t=331) 효과적인지 숫자로 보여 드리겠습니다.
+- [5:34](https://youtube.com/watch?v=5uTpUYw8Of4&t=334) 한 개발자가이 개념을 바탕으로 LLM
+- [5:37](https://youtube.com/watch?v=5uTpUYw8Of4&t=337) 위키 컴파일러라는 플러그인을
+- [5:38](https://youtube.com/watch?v=5uTpUYw8Of4&t=338) 만들었는데요. 실제 데이터가 어이가
+- [5:41](https://youtube.com/watch?v=5uTpUYw8Of4&t=341) 없을 정도입니다. 마크다운 파일
+- [5:43](https://youtube.com/watch?v=5uTpUYw8Of4&t=343) 383개
+- [5:44](https://youtube.com/watch?v=5uTpUYw8Of4&t=344) 총 13.1MB의 1MB의 문서가
+- [5:46](https://youtube.com/watch?v=5uTpUYw8Of4&t=346) 있었습니다. 이걸 위키로 컴파일하니까
+- [5:49](https://youtube.com/watch?v=5uTpUYw8Of4&t=349) 13개 기사로 압축됐습니다. 81배
+- [5:51](https://youtube.com/watch?v=5uTpUYw8Of4&t=351) 압축이에요. 더 놀라운 건 회의
+- [5:54](https://youtube.com/watch?v=5uTpUYw8Of4&t=354) 녹치록 데이터입니다. 130개의 회의
+- [5:56](https://youtube.com/watch?v=5uTpUYw8Of4&t=356) 녹치록이 있었는데 총 12만2,625
+- [6:00](https://youtube.com/watch?v=5uTpUYw8Of4&t=360) 줄이었어요. 이걸 위키로 정리하니까
+- [6:02](https://youtube.com/watch?v=5uTpUYw8Of4&t=362) 하나의 요약 파일 244줄로
+- [6:04](https://youtube.com/watch?v=5uTpUYw8Of4&t=364) 줄었습니다. 503배의 압축입니다.
+- [6:07](https://youtube.com/watch?v=5uTpUYw8Of4&t=367) 이게 무슨 압축 프로그램도 아니고
+- [6:09](https://youtube.com/watch?v=5uTpUYw8Of4&t=369) 어떻게 이렇게 되냐고요? 불필요한
+- [6:12](https://youtube.com/watch?v=5uTpUYw8Of4&t=372) 반복, 의미없는 잡담, 중복 내용을
+- [6:14](https://youtube.com/watch?v=5uTpUYw8Of4&t=374) AI가 전부 걸러내고 핵심만 남기니까
+- [6:17](https://youtube.com/watch?v=5uTpUYw8Of4&t=377) 가능한 겁니다. 토큰 절감 효과도
+- [6:19](https://youtube.com/watch?v=5uTpUYw8Of4&t=379) 드라마틱합니다. 세션을 시작할 때
+- [6:21](https://youtube.com/watch?v=5uTpUYw8Of4&t=381) 로딩되는 컨텍스트가 47,000
+- [6:23](https://youtube.com/watch?v=5uTpUYw8Of4&t=383) 토큰에서 7,700 토큰으로
+- [6:25](https://youtube.com/watch?v=5uTpUYw8Of4&t=385) 줄었습니다. 84% 감소해요. 질문
+- [6:28](https://youtube.com/watch?v=5uTpUYw8Of4&t=388) 한번 할 때마다 소비되는 리서치
+- [6:30](https://youtube.com/watch?v=5uTpUYw8Of4&t=390) 토큰도 8,개에서 600개로
+- [6:32](https://youtube.com/watch?v=5uTpUYw8Of4&t=392) 떨어졌습니다. 역시 84%
+- [6:34](https://youtube.com/watch?v=5uTpUYw8Of4&t=394) 감소입니다. 이게 한 번 질문할
+- [6:36](https://youtube.com/watch?v=5uTpUYw8Of4&t=396) 때마다의 절감량이니까 하루에 질문을
+- [6:39](https://youtube.com/watch?v=5uTpUYw8Of4&t=399) 50번 한다고 치면 절약되는 토큰이
+- [6:41](https://youtube.com/watch?v=5uTpUYw8Of4&t=401) 어마어마합니다. 티끌 모아 태산이라는
+- [6:43](https://youtube.com/watch?v=5uTpUYw8Of4&t=403) 말이 딱 맞는 상황이에요. 그러면이
+- [6:45](https://youtube.com/watch?v=5uTpUYw8Of4&t=405) 위키가 어떻게 만들어지고 관리되는지
+- [6:47](https://youtube.com/watch?v=5uTpUYw8Of4&t=407) 좀 더 구체적으로 설명해
+- [6:48](https://youtube.com/watch?v=5uTpUYw8Of4&t=408) 드리겠습니다. 크게 세 가지 과정이
+- [6:50](https://youtube.com/watch?v=5uTpUYw8Of4&t=410) 있습니다. 첫째는 인제스트, 그러니까
+- [6:53](https://youtube.com/watch?v=5uTpUYw8Of4&t=413) 자료 소화 과정입니다. 새로운 문서가
+- [6:55](https://youtube.com/watch?v=5uTpUYw8Of4&t=415) 들어오면 AI가 그 문서를 읽고
+- [6:58](https://youtube.com/watch?v=5uTpUYw8Of4&t=418) 핵심을 추출합니다. 그리고 관련된
+- [7:00](https://youtube.com/watch?v=5uTpUYw8Of4&t=420) 위키지들을 찾아서 업데이트 합니다.
+- [7:03](https://youtube.com/watch?v=5uTpUYw8Of4&t=423) 하나의 문서가 들어오면 보통
+- [7:04](https://youtube.com/watch?v=5uTpUYw8Of4&t=424) 10개에서 15개의 위키지에 영향을
+- [7:07](https://youtube.com/watch?v=5uTpUYw8Of4&t=427) 줍니다. 새로운 정보가 기존 지식과
+- [7:09](https://youtube.com/watch?v=5uTpUYw8Of4&t=429) 연결되면서 전체적으로 업데이트 되는
+- [7:11](https://youtube.com/watch?v=5uTpUYw8Of4&t=431) 거예요. 둘째는 쿼리, 질문, 응답
+- [7:14](https://youtube.com/watch?v=5uTpUYw8Of4&t=434) 과정입니다. 누군가 질문을 하면
+- [7:17](https://youtube.com/watch?v=5uTpUYw8Of4&t=437) AI가 위키에서 답을 찾아서 알려
+- [7:19](https://youtube.com/watch?v=5uTpUYw8Of4&t=439) 줍니다. 여기서 진짜 멋진 부분이
+- [7:21](https://youtube.com/watch?v=5uTpUYw8Of4&t=441) 나오는데 좋은 답변이 나오면 그
+- [7:24](https://youtube.com/watch?v=5uTpUYw8Of4&t=444) 답변을 다시 위키에 저장합니다.
+- [7:26](https://youtube.com/watch?v=5uTpUYw8Of4&t=446) 카파시는 이걸 지식 화합이라고
+- [7:28](https://youtube.com/watch?v=5uTpUYw8Of4&t=448) 표현했는데 질문과 답변을 통해서
+- [7:30](https://youtube.com/watch?v=5uTpUYw8Of4&t=450) 위키의 지식이 계속 풍부해지는
+- [7:32](https://youtube.com/watch?v=5uTpUYw8Of4&t=452) 겁니다. 마치 백과 사전이 저절로
+- [7:34](https://youtube.com/watch?v=5uTpUYw8Of4&t=454) 점점 더 똑똑해지는 느낌이에요. 이쯤
+- [7:37](https://youtube.com/watch?v=5uTpUYw8Of4&t=457) 되면 AI가 알아서 공부까지 하는
+- [7:38](https://youtube.com/watch?v=5uTpUYw8Of4&t=458) 거니까 우리보다 나은 거 아닙니까?
+- [7:41](https://youtube.com/watch?v=5uTpUYw8Of4&t=461) 셋째는 린트 점검 과정입니다.
+- [7:43](https://youtube.com/watch?v=5uTpUYw8Of4&t=463) 주기적으로 AI가 위키를 점검해서
+- [7:45](https://youtube.com/watch?v=5uTpUYw8Of4&t=465) 모순되는 내용이 없는지, 오래된
+- [7:47](https://youtube.com/watch?v=5uTpUYw8Of4&t=467) 정보가 없는지, 연결이 끊어진 고압
+- [7:50](https://youtube.com/watch?v=5uTpUYw8Of4&t=470) 페이지가 없는지 확인합니다. 마치
+- [7:52](https://youtube.com/watch?v=5uTpUYw8Of4&t=472) 도서관 사서가 정기적으로 서과를
+- [7:54](https://youtube.com/watch?v=5uTpUYw8Of4&t=474) 정리하는 것처럼요.이 세 과정에 계속
+- [7:56](https://youtube.com/watch?v=5uTpUYw8Of4&t=476) 돌아가면서 위키가 항상 최신 상태를
+- [7:59](https://youtube.com/watch?v=5uTpUYw8Of4&t=479) 유지하게 됩니다. 사서도이 정도
+- [8:01](https://youtube.com/watch?v=5uTpUYw8Of4&t=481) 성실함은 없을 겁니다. 세 번째
+- [8:02](https://youtube.com/watch?v=5uTpUYw8Of4&t=482) 파트, 오늘 당장 해보는 실전
+- [8:04](https://youtube.com/watch?v=5uTpUYw8Of4&t=484) 컨텍스트 관리입니다. 아, 여기까지
+- [8:06](https://youtube.com/watch?v=5uTpUYw8Of4&t=486) 듣고 좀 짜치기 어렵다 느끼시는 분들
+- [8:08](https://youtube.com/watch?v=5uTpUYw8Of4&t=488) 계실 텐데 걱정하지 마세요.
+- [8:10](https://youtube.com/watch?v=5uTpUYw8Of4&t=490) 지금부터는 위키 개념을 몰라도 바로
+- [8:13](https://youtube.com/watch?v=5uTpUYw8Of4&t=493) 써 먹을 수 있는 실전 팁을 알려
+- [8:15](https://youtube.com/watch?v=5uTpUYw8Of4&t=495) 드리겠습니다. 가장 기본적인 것부터
+- [8:17](https://youtube.com/watch?v=5uTpUYw8Of4&t=497) 시작합시다. 클로드 코드를 쓰시는
+- [8:19](https://youtube.com/watch?v=5uTpUYw8Of4&t=499) 분이라면 세 가지만 기억하세요.
+- [8:21](https://youtube.com/watch?v=5uTpUYw8Of4&t=501) 첫째, 슬래시 콤팩트 명령어입니다.
+- [8:24](https://youtube.com/watch?v=5uTpUYw8Of4&t=504) 대화가 길어지면 AI의 기억 탱크가
+- [8:26](https://youtube.com/watch?v=5uTpUYw8Of4&t=506) 가득 차는데 이때 슬래시 콤팩트를
+- [8:28](https://youtube.com/watch?v=5uTpUYw8Of4&t=508) 입력하면 지금까지의 대화 내용을
+- [8:30](https://youtube.com/watch?v=5uTpUYw8Of4&t=510) 요약해서 압축합니다. 연료 탱크에서
+- [8:33](https://youtube.com/watch?v=5uTpUYw8Of4&t=513) 찌꺼기를 빼고 순수한 연료만 남기는
+- [8:35](https://youtube.com/watch?v=5uTpUYw8Of4&t=515) 거예요. 둘째 슬래시 클리어
+- [8:38](https://youtube.com/watch?v=5uTpUYw8Of4&t=518) 명령어입니다. 주제가 완전히 바뀔
+- [8:40](https://youtube.com/watch?v=5uTpUYw8Of4&t=520) 때는 깨끗하게 새 대화를 시작하는게
+- [8:42](https://youtube.com/watch?v=5uTpUYw8Of4&t=522) 낫습니다. 이전 대화의 잔재가 새로운
+- [8:45](https://youtube.com/watch?v=5uTpUYw8Of4&t=525) 작업을 방해하거든요. 이사할 때 짐을
+- [8:47](https://youtube.com/watch?v=5uTpUYw8Of4&t=527) 다 버리고 가는 것처럼 가끔은
+- [8:49](https://youtube.com/watch?v=5uTpUYw8Of4&t=529) 과감하게 비워야 합니다. 셋째,
+- [8:52](https://youtube.com/watch?v=5uTpUYw8Of4&t=532) 클로드 MD 파일 최적화입니다.이
+- [8:54](https://youtube.com/watch?v=5uTpUYw8Of4&t=534) 파일이 너무 길면 오히려 토큰을
+- [8:56](https://youtube.com/watch?v=5uTpUYw8Of4&t=536) 낭비합니다. 200에서 500줄
+- [8:58](https://youtube.com/watch?v=5uTpUYw8Of4&t=538) 사이로 유지하시고 정말 중요한 규칙만
+- [9:00](https://youtube.com/watch?v=5uTpUYw8Of4&t=540) 남겨 두세요. 이제 한 단계 더
+- [9:02](https://youtube.com/watch?v=5uTpUYw8Of4&t=542) 나아가서 LLM 위키 컴파일러
+- [9:04](https://youtube.com/watch?v=5uTpUYw8Of4&t=544) 플러그인을 써 보겠습니다. 이건
+- [9:06](https://youtube.com/watch?v=5uTpUYw8Of4&t=546) 카파시의 위키 개념을 클러드 코드에서
+- [9:08](https://youtube.com/watch?v=5uTpUYw8Of4&t=548) 바로 쓸 수 있게 만든 도구인데요.
+- [9:10](https://youtube.com/watch?v=5uTpUYw8Of4&t=550) 설치 방법은 간단합니다. 깃업에서
+- [9:13](https://youtube.com/watch?v=5uTpUYw8Of4&t=553) 다운로드하고 설정 파일에 추가하면
+- [9:15](https://youtube.com/watch?v=5uTpUYw8Of4&t=555) 됩니다. 설치하고 나면 여러분의
+- [9:17](https://youtube.com/watch?v=5uTpUYw8Of4&t=557) 프로젝트 문서들을 자동으로 분석해서
+- [9:19](https://youtube.com/watch?v=5uTpUYw8Of4&t=559) 위키로 컴파일합니다. 이후에는 AI가
+- [9:22](https://youtube.com/watch?v=5uTpUYw8Of4&t=562) 원본 문서 대신이 컴파일된 위키를
+- [9:24](https://youtube.com/watch?v=5uTpUYw8Of4&t=564) 참조하면서 작업하기 때문에 토큰을
+- [9:26](https://youtube.com/watch?v=5uTpUYw8Of4&t=566) 극적으로 절약할 수 있습니다. 비용
+- [9:28](https://youtube.com/watch?v=5uTpUYw8Of4&t=568) 얘기도 빼놓을 수 없죠. 초기 컴파일
+- [9:30](https://youtube.com/watch?v=5uTpUYw8Of4&t=570) 비용은 모델에 따라이 달러 60에서
+- [9:34](https://youtube.com/watch?v=5uTpUYw8Of4&t=574) 13달러 정도입니다. 하나로 대략
+- [9:36](https://youtube.com/watch?v=5uTpUYw8Of4&t=576) 3,500원에서 8,000원
+- [9:38](https://youtube.com/watch?v=5uTpUYw8Of4&t=578) 사이에요. 그리고 매일 새로운 문서가
+- [9:40](https://youtube.com/watch?v=5uTpUYw8Of4&t=580) 추가될 때마다 드는 증분 비용은
+- [9:42](https://youtube.com/watch?v=5uTpUYw8Of4&t=582) 30에서 1달러 50c 하나로
+- [9:45](https://youtube.com/watch?v=5uTpUYw8Of4&t=585) 400원에서 2,000원 정도입니다.
+- [9:47](https://youtube.com/watch?v=5uTpUYw8Of4&t=587) 여기서 현타올 수 있는 부분인데요.이
+- [9:50](https://youtube.com/watch?v=5uTpUYw8Of4&t=590) 비용이 비싸 보이시나요? 사실 손익
+- [9:52](https://youtube.com/watch?v=5uTpUYw8Of4&t=592) 분기점이 첫 번째 세션입니다. 위키
+- [9:54](https://youtube.com/watch?v=5uTpUYw8Of4&t=594) 없이 작업하면 매 세션마다
+- [9:56](https://youtube.com/watch?v=5uTpUYw8Of4&t=596) 47,000 토큰을 태우는데 위키를
+- [9:59](https://youtube.com/watch?v=5uTpUYw8Of4&t=599) 쓰면 7,700 토큰만 쓰니까 첫
+- [10:01](https://youtube.com/watch?v=5uTpUYw8Of4&t=601) 세션부터 바로 본전을 뽑는 겁니다.
+- [10:03](https://youtube.com/watch?v=5uTpUYw8Of4&t=603) 이건 뭐 투자라기보다 상식에 가깝죠.
+- [10:06](https://youtube.com/watch?v=5uTpUYw8Of4&t=606) 정리해 드리겠습니다. 오늘 핵심은 세
+- [10:08](https://youtube.com/watch?v=5uTpUYw8Of4&t=608) 가지입니다. 첫째, AI는 매번
+- [10:10](https://youtube.com/watch?v=5uTpUYw8Of4&t=610) 문서를 처음부터 다시 읽는 치명적인
+- [10:12](https://youtube.com/watch?v=5uTpUYw8Of4&t=612) 약점이 있고 이게 토큰 낭비와
+- [10:15](https://youtube.com/watch?v=5uTpUYw8Of4&t=615) 비효율의 원인입니다. 둘째, 카파시가
+- [10:17](https://youtube.com/watch?v=5uTpUYw8Of4&t=617) 제한한 LM 위키는 AI가 미리
+- [10:20](https://youtube.com/watch?v=5uTpUYw8Of4&t=620) 문서를 정리해서 이후에는 요약 본만
+- [10:23](https://youtube.com/watch?v=5uTpUYw8Of4&t=623) 참조하는 방식으로 토큰을 84%까지
+- [10:26](https://youtube.com/watch?v=5uTpUYw8Of4&t=626) 줄일 수 있습니다. 셋째, 지금 당장
+- [10:29](https://youtube.com/watch?v=5uTpUYw8Of4&t=629) 슬래시 콤팩트, 클로드 MD 최적화
+- [10:31](https://youtube.com/watch?v=5uTpUYw8Of4&t=631) 그리고 위키 컴파일러 플러그인으로
+- [10:34](https://youtube.com/watch?v=5uTpUYw8Of4&t=634) 여러분의 AI 워크플로우를 혁신할 수
+- [10:36](https://youtube.com/watch?v=5uTpUYw8Of4&t=636) 있습니다. AI 시대의 도구를 잘
+- [10:38](https://youtube.com/watch?v=5uTpUYw8Of4&t=638) 쓰는 것과 못 쓰는 것의 차이는 점점
+- [10:40](https://youtube.com/watch?v=5uTpUYw8Of4&t=640) 더 벌어지고 있습니다. 같은 AI를
+- [10:42](https://youtube.com/watch?v=5uTpUYw8Of4&t=642) 쓰면서도 누구는 토큰을 펑펑 쓰고
+- [10:45](https://youtube.com/watch?v=5uTpUYw8Of4&t=645) 누구는 84%를 아깁니다. 여러분은
+- [10:48](https://youtube.com/watch?v=5uTpUYw8Of4&t=648) 어떤 쪽이 되고 싶으신가요? 댓글로
+- [10:50](https://youtube.com/watch?v=5uTpUYw8Of4&t=650) AI 코딩할 때 가장 답답한 순간을
+- [10:52](https://youtube.com/watch?v=5uTpUYw8Of4&t=652) 알려 주세요. 다른 분들의 경험도
+- [10:54](https://youtube.com/watch?v=5uTpUYw8Of4&t=654) 도움이 될 겁니다.

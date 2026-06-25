@@ -1,0 +1,1226 @@
+---
+title: "토스 PO 출신 대표가 사내 ERP와 AI 에이전트를 직접 만들고 AI 네이티브 컴퍼니로 거듭난 방법 (윤용승 대표, 윤자동)"
+source_url: https://youtube.com/watch?v=CVmbidt-3ro
+video_id: CVmbidt-3ro
+source_type: youtube
+lang: ko
+analyzed: 2026-05-23
+category: 일반학습
+status: active
+---
+# 토스 PO 출신 대표가 사내 ERP와 AI 에이전트를 직접 만들고 AI 네이티브 컴퍼니로 거듭난 방법 (윤용승 대표, 윤자동)
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 윤자동(윤용승 대표)이 자신의 회사를 위해 직접 개발한 AI 기반 사내 업무 통합 플랫폼 '윤비서'를 소개하는 영상입니다. 윤비서는 프로젝트 관리, 고객 관리, 일정 관리, 견적서 발행, 세금계산서 자동 발행, 명함 OCR, 메일 통합, 매출 관리 등 회사의 모든 업무를 한 곳에서 처리할 수 있는 시스템입니다. 특히 Plaud 녹음기를 통한 회의록 자동 기록, 구글 드라이브 연동, 홈택스 API 연동, 슬랙 연동 등을 통해 업무 프로세스를 완전 자동화했습니다. 윤비서는 Claude와도 연결되어 모든 데이터베이스에 대한 질문과 분석을 AI가 수행하며, 일정 알림, 업무 보고서 자동 생성 등 사람의 기억에 의존하지 않는 시스템적 업무 환경을 구축했습니다.
+- **Core Message:** 소규모 회사도 AI와 API를 활용해 맞춤형 사내 업무 통합 플랫폼을 직접 구축하여 모든 업무를 자동화하고 데이터 기반 의사결정을 할 수 있다.
+> 불편한 것만 저는 자동화를 해요. 불편하지 않으면 자동화를 하지 않습니다.
+> 데이터가 모여 있어야 된다. 컨텍스트가 중요하다.
+> 기억하지 않아도 시스템이 나를 일하게 만드는 구조를 만드는게 중요하다.
+❗ 하루 평균 3.5시간씩 녹음하여 150일간 700개 이상의 회의록을 자동 기록
+❗ 명함 OCR 처리 비용이 한 달 내내 사용해도 약 50원
+❗ 메뉴 하나 개발하는데 약 1시간, 재직증명서 시스템은 30초 만에 구축
+
+## 📚 핵심 용어
+- **윤비서:** 윤자동 회사에서 자체 개발한 AI 기반 사내 업무 통합 플랫폼 / 회사의 모든 업무를 한 곳에서 처리하는 만능 비서같은 시스템. 마치 개인 비서가 일정, 고객관리, 회계까지 다 처리해주는 것처럼 작동한다. / 노션은 정보 저장소, 윤비서는 실제 업무 처리까지 자동화하는 실행 시스템. 노션은 사람이 직접 해야 하지만 윤비서는 AI가 대신 처리한다.
+- **데이터 중앙집중화:** 회사의 모든 데이터를 한 곳에 모아 통합 관리하고 AI가 분석할 수 있게 하는 것 / 모든 서류를 한 곳에 정리해둔 완벽한 사무실 서랍장. 필요한 정보를 즉시 찾을 수 있고, AI가 전체 상황을 파악해 조언할 수 있다. / 기존은 데이터가 여기저기 분산(노션, 구글, 메일), 중앙집중화는 모든 데이터가 한 곳에서 연결. 분산은 AI가 전체 맥락을 모르지만 집중화는 완전한 맥락 제공.
+- **API 통합:** 서로 다른 서비스들을 프로그래밍으로 연결해 데이터를 자동으로 주고받게 하는 것 / 각기 다른 회사의 시스템들이 전화선으로 연결되어 자동으로 대화하는 것. 홈택스, 구글, 슬랙이 서로 필요한 정보를 알아서 주고받는다. / 수동 연동은 사람이 복사/붙여넣기로 옮기는 것, API 통합은 시스템끼리 자동으로 데이터 전송. 수동은 실수 위험과 시간 소모, API는 정확하고 즉시 처리.
+
+## 🚀 실행 (Execute)
+- [ ] 현재 회사의 업무 프로세스와 사용 중인 도구들을 전면 점검하여 자동화 가능한 영역 식별
+  - 담당: 나
+  - 이유: 윤비서 같은 통합 시스템 구축 전에 현재 상황 파악과 우선순위 설정이 필수
+- [ ] Claude Desktop과 MCP/API를 활용해 간단한 업무 자동화 프로토타입 구축 (예: 프로젝트 관리 + 고객 관리)
+  - 담당: 나
+  - 이유: 작은 규모로 시작해서 점진적으로 확장하는 윤자동 방식 적용
+- 자료: Claude Desktop MCP 설정 가이드
+- 자료: Google Workspace API 문서
+- 자료: 홈택스 API 연동 가이드
+- 자료: Plaud 녹음기 (확인 필요)
+- 자료: Zapier 자동화 템플릿
+- Timeline: 1주차: 현황 분석 → 2-3주차: 프로토타입 구축 → 4주차: 테스트 및 개선 → 이후 점진적 기능 확장
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=CVmbidt-3ro&t=0) 700개가 넘는 녹음을 하고 있고
+- [0:01](https://youtube.com/watch?v=CVmbidt-3ro&t=1) 여기에 자동으로 다 기록이 되고
+- [0:03](https://youtube.com/watch?v=CVmbidt-3ro&t=3) 있고요.이 기록을 바탕으로 견적 소도
+- [0:05](https://youtube.com/watch?v=CVmbidt-3ro&t=5) 발행을 자동으로 할 수 있고 계약이
+- [0:07](https://youtube.com/watch?v=CVmbidt-3ro&t=7) 되면은 다시 프로젝트를 생성하고
+- [0:09](https://youtube.com/watch?v=CVmbidt-3ro&t=9) 관리하고 윤비서도 클로드 코드로 다
+- [0:11](https://youtube.com/watch?v=CVmbidt-3ro&t=11) 연결해 놓거든요. 모든 데이터베이스에
+- [0:13](https://youtube.com/watch?v=CVmbidt-3ro&t=13) 대한 질문을 하면은 조언해 주고
+- [0:14](https://youtube.com/watch?v=CVmbidt-3ro&t=14) 분석해 주고 도와줍니다. 명함을
+- [0:16](https://youtube.com/watch?v=CVmbidt-3ro&t=16) 받으면 저희는 바로 촬영을 하고요.
+- [0:17](https://youtube.com/watch?v=CVmbidt-3ro&t=17) 그냥 제 핸드폰에 그 사람의 연락처가
+- [0:19](https://youtube.com/watch?v=CVmbidt-3ro&t=19) 자동으로 생겨요. 그리고이 프로젝트나
+- [0:21](https://youtube.com/watch?v=CVmbidt-3ro&t=21) 이런 데서 각자가 등록하는 매출을
+- [0:23](https://youtube.com/watch?v=CVmbidt-3ro&t=23) 여기에 같이 집계가 되게끔 다 되고
+- [0:25](https://youtube.com/watch?v=CVmbidt-3ro&t=25) 있어요. 실제로 저는 태근 계산서
+- [0:26](https://youtube.com/watch?v=CVmbidt-3ro&t=26) 발행을 저는 여기서 해요. 내용만
+- [0:27](https://youtube.com/watch?v=CVmbidt-3ro&t=27) 채워 가지고 발행 요청 누르면은
+- [0:29](https://youtube.com/watch?v=CVmbidt-3ro&t=29) 실제로 홈택스로 세금 계산서 발행이
+- [0:30](https://youtube.com/watch?v=CVmbidt-3ro&t=30) 자동으로 됩니다. 뭐 이런 식으로 할
+- [0:32](https://youtube.com/watch?v=CVmbidt-3ro&t=32) 일들을 여기에서 생성하면은 자동으로
+- [0:35](https://youtube.com/watch?v=CVmbidt-3ro&t=35) 담당자한테 할 일을 할당을 해
+- [0:37](https://youtube.com/watch?v=CVmbidt-3ro&t=37) 줍니다. 저희 윤비서가 아침마다
+- [0:39](https://youtube.com/watch?v=CVmbidt-3ro&t=39) 이렇게 일정을 알려줍니다. 1일 진행
+- [0:41](https://youtube.com/watch?v=CVmbidt-3ro&t=41) 보고라고 하면서 저녁 6시가 되면은
+- [0:43](https://youtube.com/watch?v=CVmbidt-3ro&t=43) 항상 저희가 했던 프로젝트를 전부 다
+- [0:45](https://youtube.com/watch?v=CVmbidt-3ro&t=45) 얘가 정리를 다 해 줘요. 알아서.
+- [0:46](https://youtube.com/watch?v=CVmbidt-3ro&t=46) >> 안녕하세요. 구독자 여러분. 오늘
+- [0:48](https://youtube.com/watch?v=CVmbidt-3ro&t=48) 하우아이 AI 팟캐스트에는
+- [0:50](https://youtube.com/watch?v=CVmbidt-3ro&t=50) 윤자동이라고 하는 채널을 운영하고
+- [0:52](https://youtube.com/watch?v=CVmbidt-3ro&t=52) 있는 크리에이터자 또 동일한 이름의
+- [0:54](https://youtube.com/watch?v=CVmbidt-3ro&t=54) 회사를 운영하고 계신 윤용승 대표님을
+- [0:56](https://youtube.com/watch?v=CVmbidt-3ro&t=56) 모셨습니다. 대표님께서는 지금 회사
+- [0:59](https://youtube.com/watch?v=CVmbidt-3ro&t=59) 내부에 P를 직접 다 모두 다 구축을
+- [1:02](https://youtube.com/watch?v=CVmbidt-3ro&t=62) 하셔 가지고 어 예전에 제가 그
+- [1:04](https://youtube.com/watch?v=CVmbidt-3ro&t=64) 내용을 잠깐 얼핏 봤었는데요. 정말
+- [1:06](https://youtube.com/watch?v=CVmbidt-3ro&t=66) 놀랍게 엄청 많은 것들을 이미 구현을
+- [1:08](https://youtube.com/watch?v=CVmbidt-3ro&t=68) 해 놓으셨더라고요. 그래서 P 도구를
+- [1:11](https://youtube.com/watch?v=CVmbidt-3ro&t=71) 구독할 필요가 없구나. 나도 스스로
+- [1:13](https://youtube.com/watch?v=CVmbidt-3ro&t=73) 저렇게까지 만들어 봐야 되겠다라고
+- [1:15](https://youtube.com/watch?v=CVmbidt-3ro&t=75) 하는 영감을 많이 얻을 수가 있었는데
+- [1:17](https://youtube.com/watch?v=CVmbidt-3ro&t=77) 오늘 그 내용을 함께 소개해 드려고
+- [1:19](https://youtube.com/watch?v=CVmbidt-3ro&t=79) 싶습니다. 네. 네. 윤재동 대표님
+- [1:21](https://youtube.com/watch?v=CVmbidt-3ro&t=81) 안녕하세요.
+- [1:21](https://youtube.com/watch?v=CVmbidt-3ro&t=81) >> 네, 안녕하세요. 반갑습니다.
+- [1:23](https://youtube.com/watch?v=CVmbidt-3ro&t=83) >> 네. 네. 한번 자기 소개
+- [1:24](https://youtube.com/watch?v=CVmbidt-3ro&t=84) 부탁드리겠습니다.
+- [1:25](https://youtube.com/watch?v=CVmbidt-3ro&t=85) >> 네. 네, 저는 윤자동이라는 브랜드를
+- [1:28](https://youtube.com/watch?v=CVmbidt-3ro&t=88) 운영을 하고 있는 윤용승입니다.
+- [1:29](https://youtube.com/watch?v=CVmbidt-3ro&t=89) 유튜브도 운영을 하고 있고요.
+- [1:31](https://youtube.com/watch?v=CVmbidt-3ro&t=91) 조시님과 하는 일이 굉장히
+- [1:32](https://youtube.com/watch?v=CVmbidt-3ro&t=92) 비슷합니다. 어, 업무 자동화 주제로
+- [1:36](https://youtube.com/watch?v=CVmbidt-3ro&t=96) 교육 사업도 하고 있고 자동화
+- [1:37](https://youtube.com/watch?v=CVmbidt-3ro&t=97) 에이전시를 운영을 하고 있어서
+- [1:39](https://youtube.com/watch?v=CVmbidt-3ro&t=99) 자동화가 필요한 기업 혹은 개인에게
+- [1:42](https://youtube.com/watch?v=CVmbidt-3ro&t=102) 도움을 드리는 일을 하고 있습니다.
+- [1:44](https://youtube.com/watch?v=CVmbidt-3ro&t=104) 한 2년 전까지 1인 기업으로 3,
+- [1:47](https://youtube.com/watch?v=CVmbidt-3ro&t=107) 4년 정도 하다가 지금은 저까지
+- [1:50](https://youtube.com/watch?v=CVmbidt-3ro&t=110) 포함해서 아홉 명 정도의 팀원들과
+- [1:52](https://youtube.com/watch?v=CVmbidt-3ro&t=112) 함께 같이 일을 하고 있습니다.
+- [1:53](https://youtube.com/watch?v=CVmbidt-3ro&t=113) >> 네. 아, 사세가 엄청 커지셨습니다.
+- [1:55](https://youtube.com/watch?v=CVmbidt-3ro&t=115) 대단하십니다. 과거에는 토스에서 오로
+- [1:58](https://youtube.com/watch?v=CVmbidt-3ro&t=118) 근무를 하셨는데
+- [2:00](https://youtube.com/watch?v=CVmbidt-3ro&t=120) >> 창업을 하시게 된 계기가 어떻게
+- [2:01](https://youtube.com/watch?v=CVmbidt-3ro&t=121) 되는지 그냥 그런 부분들 좀 알려
+- [2:03](https://youtube.com/watch?v=CVmbidt-3ro&t=123) 주시면 어, 좀 더 윤재동님 모르시는
+- [2:05](https://youtube.com/watch?v=CVmbidt-3ro&t=125) 분들 위해서 많이 도움이 될 거
+- [2:06](https://youtube.com/watch?v=CVmbidt-3ro&t=126) 같아요. 네. 아, 이제 토스에서
+- [2:08](https://youtube.com/watch?v=CVmbidt-3ro&t=128) 프로덕트 오너라고 하는 근무를 좀
+- [2:11](https://youtube.com/watch?v=CVmbidt-3ro&t=131) 하다가 처음 들어갔을 때는 한 몇 년
+- [2:13](https://youtube.com/watch?v=CVmbidt-3ro&t=133) 정도 배우면서 영량을 키우고 싶었는데
+- [2:16](https://youtube.com/watch?v=CVmbidt-3ro&t=136) 거기에서 둘째가 생겼어요. 그래
+- [2:18](https://youtube.com/watch?v=CVmbidt-3ro&t=138) 가지고 좀 더 육가에 집중을 하고
+- [2:21](https://youtube.com/watch?v=CVmbidt-3ro&t=141) 싶다라는 생각과 함께 그렇게 된 거
+- [2:23](https://youtube.com/watch?v=CVmbidt-3ro&t=143) 빨리 창업을 하라는 어떤 신에
+- [2:25](https://youtube.com/watch?v=CVmbidt-3ro&t=145) 계시구나라는 이제 신호라고 생각을
+- [2:27](https://youtube.com/watch?v=CVmbidt-3ro&t=147) 해서 나오자마자 육가를 한 6개월
+- [2:31](https://youtube.com/watch?v=CVmbidt-3ro&t=151) 정도에 좀 집중을 했고요. 6개월
+- [2:32](https://youtube.com/watch?v=CVmbidt-3ro&t=152) 정도 하다 보니까 아 몸이
+- [2:34](https://youtube.com/watch?v=CVmbidt-3ro&t=154) 근질근질거려 가지고 안 되겠더라고요.
+- [2:35](https://youtube.com/watch?v=CVmbidt-3ro&t=155) 그죠? 안 되겠다. 그래서 바로 그냥
+- [2:38](https://youtube.com/watch?v=CVmbidt-3ro&t=158) 창업하고 그때부터 이제 일을 시작을
+- [2:40](https://youtube.com/watch?v=CVmbidt-3ro&t=160) 했습니다.
+- [2:40](https://youtube.com/watch?v=CVmbidt-3ro&t=160) >> 네. 증자동이라고 한 회사는 그럼
+- [2:42](https://youtube.com/watch?v=CVmbidt-3ro&t=162) 주론 어떤 업무를 하고 있나요? 크게
+- [2:44](https://youtube.com/watch?v=CVmbidt-3ro&t=164) 아까 말씀드린 대로 두 가지 업무를
+- [2:46](https://youtube.com/watch?v=CVmbidt-3ro&t=166) 하는데 우선 자동화 에이전시가 메인
+- [2:49](https://youtube.com/watch?v=CVmbidt-3ro&t=169) 업무이고요. 자동화가 필요한
+- [2:51](https://youtube.com/watch?v=CVmbidt-3ro&t=171) 기업들에게서 연락이 옵니다. 어떤
+- [2:54](https://youtube.com/watch?v=CVmbidt-3ro&t=174) 일들을 하고 계신지 확인하고 어떤
+- [2:56](https://youtube.com/watch?v=CVmbidt-3ro&t=176) 자동화를 구축을 해 드려야 되는지
+- [2:58](https://youtube.com/watch?v=CVmbidt-3ro&t=178) 컨설팅이 먼저 필요하고 컨설팅을
+- [3:00](https://youtube.com/watch?v=CVmbidt-3ro&t=180) 통해서 솔루션이 필요하면은 개발을 해
+- [3:03](https://youtube.com/watch?v=CVmbidt-3ro&t=183) 드리기도 하고 프로세스를 분석을 해
+- [3:05](https://youtube.com/watch?v=CVmbidt-3ro&t=185) 드리기도 하고 사이트가 필요하면
+- [3:07](https://youtube.com/watch?v=CVmbidt-3ro&t=187) 사이트를 만들고 그런 일들을 하고
+- [3:08](https://youtube.com/watch?v=CVmbidt-3ro&t=188) 있고요. 그리고 또 하나는 교신님도
+- [3:10](https://youtube.com/watch?v=CVmbidt-3ro&t=190) 요즘 기업 강의를 엄청 많이 하시지만
+- [3:12](https://youtube.com/watch?v=CVmbidt-3ro&t=192) 저도 기업에서 많이 그런 문의가 오다
+- [3:15](https://youtube.com/watch?v=CVmbidt-3ro&t=195) 보니까 그리고 또 저는 조금 더
+- [3:16](https://youtube.com/watch?v=CVmbidt-3ro&t=196) 자동화라는 도메인의 약간 특화가
+- [3:18](https://youtube.com/watch?v=CVmbidt-3ro&t=198) 되어서 진짜 실무로 자동화를 할 수
+- [3:21](https://youtube.com/watch?v=CVmbidt-3ro&t=201) 있는 여러 가지 뭐 툴들을 활용한
+- [3:24](https://youtube.com/watch?v=CVmbidt-3ro&t=204) 그런 교육 그런어 두 가지를 같이
+- [3:26](https://youtube.com/watch?v=CVmbidt-3ro&t=206) 하고 있는데 두 개가 좀 연계가 되는
+- [3:28](https://youtube.com/watch?v=CVmbidt-3ro&t=208) 거 같아요. 교육을 들으니까 좋았는데
+- [3:30](https://youtube.com/watch?v=CVmbidt-3ro&t=210) 아 근데 당장 이런 솔루션이
+- [3:31](https://youtube.com/watch?v=CVmbidt-3ro&t=211) 필요하니까 바로 구축 좀 해 주세요.
+- [3:33](https://youtube.com/watch?v=CVmbidt-3ro&t=213) 해서 솔루션 구축으로 넘어가기도 하고
+- [3:36](https://youtube.com/watch?v=CVmbidt-3ro&t=216) 솔루션 구축을 하고 나니까 저희
+- [3:38](https://youtube.com/watch?v=CVmbidt-3ro&t=218) 직원들도 이런 걸 만들기 위해서 어떤
+- [3:40](https://youtube.com/watch?v=CVmbidt-3ro&t=220) 영향을 기르면 되나요? 교육 좀 해
+- [3:42](https://youtube.com/watch?v=CVmbidt-3ro&t=222) 주세요. 그러면 또 가서 교육을 해
+- [3:43](https://youtube.com/watch?v=CVmbidt-3ro&t=223) 드리기도 하는 그런 일들을 하고
+- [3:45](https://youtube.com/watch?v=CVmbidt-3ro&t=225) 있습니다.
+- [3:46](https://youtube.com/watch?v=CVmbidt-3ro&t=226) >> 네. 저희가 하는 일이 되게 비슷한데
+- [3:49](https://youtube.com/watch?v=CVmbidt-3ro&t=229) 살짝 특이한 세부적인 도메인이 약간
+- [3:52](https://youtube.com/watch?v=CVmbidt-3ro&t=232) 갈린듯한 느낌이 들었었어요. 저는
+- [3:54](https://youtube.com/watch?v=CVmbidt-3ro&t=234) 조직의 AX 쪽에 대해서 좀 더 많이
+- [3:57](https://youtube.com/watch?v=CVmbidt-3ro&t=237) 포커스가 되고 있고요. 이제 윤재홍
+- [4:00](https://youtube.com/watch?v=CVmbidt-3ro&t=240) 님은 약간 전반적인 회사에 정말 순수
+- [4:02](https://youtube.com/watch?v=CVmbidt-3ro&t=242) 자동화 이런 부분들에 워낙 또 그
+- [4:05](https://youtube.com/watch?v=CVmbidt-3ro&t=245) 10년이 넘는 경력을 갖고 계시는
+- [4:07](https://youtube.com/watch?v=CVmbidt-3ro&t=247) 대단한 분이시기 때문에 그런 부분에
+- [4:09](https://youtube.com/watch?v=CVmbidt-3ro&t=249) 있어서 많은 분들이 또 도움을 얻는
+- [4:10](https://youtube.com/watch?v=CVmbidt-3ro&t=250) 거 같습니다. 오늘 좀 소개해 주실
+- [4:12](https://youtube.com/watch?v=CVmbidt-3ro&t=252) 내용이 좀 있다고 들었었어요. 일단
+- [4:14](https://youtube.com/watch?v=CVmbidt-3ro&t=254) 윤자동 회사가 직접 P를 만들어
+- [4:17](https://youtube.com/watch?v=CVmbidt-3ro&t=257) 가지고 산내 업무 전부를 다 자연으로
+- [4:19](https://youtube.com/watch?v=CVmbidt-3ro&t=259) 다루고 있는 AI 비서까지
+- [4:21](https://youtube.com/watch?v=CVmbidt-3ro&t=261) 만들었다라고 들었었습니다. 그래서 좀
+- [4:24](https://youtube.com/watch?v=CVmbidt-3ro&t=264) 어 소개를 해 주실 수 있을까요?
+- [4:25](https://youtube.com/watch?v=CVmbidt-3ro&t=265) >> 네. 다들 뭐 슬렉 뭐 노션 이런
+- [4:28](https://youtube.com/watch?v=CVmbidt-3ro&t=268) 것들 많이 사용을 하실 거예요.
+- [4:31](https://youtube.com/watch?v=CVmbidt-3ro&t=271) 특히나 이제 노션이 어떤 작은
+- [4:33](https://youtube.com/watch?v=CVmbidt-3ro&t=273) 기업이라고 한다면은 ERP를 구축하는
+- [4:36](https://youtube.com/watch?v=CVmbidt-3ro&t=276) 것은 사실 너무나 큰 일이기 때문에
+- [4:39](https://youtube.com/watch?v=CVmbidt-3ro&t=279) 그냥 노션에서 데이터베이스를 구축하고
+- [4:42](https://youtube.com/watch?v=CVmbidt-3ro&t=282) 좀 예쁘게 만들어서 사용을 하면은
+- [4:45](https://youtube.com/watch?v=CVmbidt-3ro&t=285) 별도의 큰 비용 없이 사용을 할 수
+- [4:47](https://youtube.com/watch?v=CVmbidt-3ro&t=287) 있고 저희도 그렇게 사용을 하고
+- [4:48](https://youtube.com/watch?v=CVmbidt-3ro&t=288) 있었는데 생각보다 조금 이제
+- [4:50](https://youtube.com/watch?v=CVmbidt-3ro&t=290) 파워풀하게 사용을 하려고 하다 보니
+- [4:53](https://youtube.com/watch?v=CVmbidt-3ro&t=293) 아무래도 딱 맞춘 기성 제품이다
+- [4:56](https://youtube.com/watch?v=CVmbidt-3ro&t=296) 보니까 정말 나한테 맞는 커스텀이 좀
+- [4:59](https://youtube.com/watch?v=CVmbidt-3ro&t=299) 어렵더라고요. 그 기성 제품에 약간
+- [5:01](https://youtube.com/watch?v=CVmbidt-3ro&t=301) 이제 불편함이 조금씩 생기다 보니까
+- [5:04](https://youtube.com/watch?v=CVmbidt-3ro&t=304) 어 이럴 거면 그냥 요즘에 AI
+- [5:06](https://youtube.com/watch?v=CVmbidt-3ro&t=306) 성능이 워낙 좋아서 어 우리 회사에
+- [5:09](https://youtube.com/watch?v=CVmbidt-3ro&t=309) 노션으로는 해결되지 않은 좀 불편한
+- [5:11](https://youtube.com/watch?v=CVmbidt-3ro&t=311) 부분들을 우리가 직접 만들어서 제품을
+- [5:14](https://youtube.com/watch?v=CVmbidt-3ro&t=314) 한번 만들어 써 보는 건 어떨까라는
+- [5:16](https://youtube.com/watch?v=CVmbidt-3ro&t=316) 생각으로 사실 만들게 됐었고 추정하고
+- [5:19](https://youtube.com/watch?v=CVmbidt-3ro&t=319) 또 만들고 쓰고 이거를 지금 한 두
+- [5:22](https://youtube.com/watch?v=CVmbidt-3ro&t=322) 몇 달째 좀 반복을 하다 보니까 꽤
+- [5:25](https://youtube.com/watch?v=CVmbidt-3ro&t=325) 생각보다 쓸 만한 어 어떤 제품이
+- [5:28](https://youtube.com/watch?v=CVmbidt-3ro&t=328) 나오지 않았나 생각이 돼서 지금
+- [5:30](https://youtube.com/watch?v=CVmbidt-3ro&t=330) 저희가 엄청 잘 쓰고 있고 이제
+- [5:32](https://youtube.com/watch?v=CVmbidt-3ro&t=332) 요거를 좀 잘 준비해서 다른 기업에도
+- [5:35](https://youtube.com/watch?v=CVmbidt-3ro&t=335) 좀 도입을 어 해 보려고 준비를 하고
+- [5:37](https://youtube.com/watch?v=CVmbidt-3ro&t=337) 있습니다.
+- [5:38](https://youtube.com/watch?v=CVmbidt-3ro&t=338) >> 아 너무너무 좋습니다. 오늘 그
+- [5:40](https://youtube.com/watch?v=CVmbidt-3ro&t=340) 대모를 볼 수 있다는게 너무 저도
+- [5:41](https://youtube.com/watch?v=CVmbidt-3ro&t=341) 신나고 더 자세히 이야기 나눠보고
+- [5:43](https://youtube.com/watch?v=CVmbidt-3ro&t=343) 싶고요. 저희 회사에도 필요해요
+- [5:45](https://youtube.com/watch?v=CVmbidt-3ro&t=345) 사실. 아 제가 윤재동 님의 제품들을
+- [5:48](https://youtube.com/watch?v=CVmbidt-3ro&t=348) 한번 저희도 한번 탐고해 볼 수
+- [5:50](https://youtube.com/watch?v=CVmbidt-3ro&t=350) 있으면 너무 좋을 것 같습니다. 네.
+- [5:51](https://youtube.com/watch?v=CVmbidt-3ro&t=351) 그 제품 이름은 뭐라고 말씀해
+- [5:53](https://youtube.com/watch?v=CVmbidt-3ro&t=353) 주셨죠? 저는 지난번에
+- [5:54](https://youtube.com/watch?v=CVmbidt-3ro&t=354) >> 네. 저는 옛날부터 어 좀 큰 기업에
+- [5:58](https://youtube.com/watch?v=CVmbidt-3ro&t=358) 있을 때 대기업 회장님이나 사장님들은
+- [6:00](https://youtube.com/watch?v=CVmbidt-3ro&t=360) 비서가 항상 있잖아요. 아 나도 저런
+- [6:02](https://youtube.com/watch?v=CVmbidt-3ro&t=362) 사람이 하나 있으면은 그런 비서가 한
+- [6:05](https://youtube.com/watch?v=CVmbidt-3ro&t=365) 분 계시면 너무 업무를 더 편리하게
+- [6:07](https://youtube.com/watch?v=CVmbidt-3ro&t=367) 할 수 있을 것 같은데 근데 그렇게
+- [6:09](https://youtube.com/watch?v=CVmbidt-3ro&t=369) 하기에는 고정비도 그렇고 아직까지
+- [6:12](https://youtube.com/watch?v=CVmbidt-3ro&t=372) 그럴 내가 어 수준은 아니지라고
+- [6:14](https://youtube.com/watch?v=CVmbidt-3ro&t=374) 생각을 해서 아 그러면은 우리 AI
+- [6:17](https://youtube.com/watch?v=CVmbidt-3ro&t=377) 비설 만들자라고 해서 제가 윤비서라는
+- [6:19](https://youtube.com/watch?v=CVmbidt-3ro&t=379) 이름으로 만들었습니다.이
+- [6:21](https://youtube.com/watch?v=CVmbidt-3ro&t=381) >> 네이밍 기가 막힌 거 같습니다. 네.
+- [6:24](https://youtube.com/watch?v=CVmbidt-3ro&t=384) 윤자동라는 이름 느낌도 뭔가 어
+- [6:26](https://youtube.com/watch?v=CVmbidt-3ro&t=386) 자동화 되게 잘해 줄 것 같은 그런
+- [6:28](https://youtube.com/watch?v=CVmbidt-3ro&t=388) 회사의 느낌도 나는데 비서도 잘해 줄
+- [6:30](https://youtube.com/watch?v=CVmbidt-3ro&t=390) 것 같다. 그런 느낌의 네이밍이 되는
+- [6:32](https://youtube.com/watch?v=CVmbidt-3ro&t=392) 거 같아요. 너무 재밌고 한번 화면을
+- [6:35](https://youtube.com/watch?v=CVmbidt-3ro&t=395) 공유해 주셔서 한번 보여 주실 수
+- [6:37](https://youtube.com/watch?v=CVmbidt-3ro&t=397) 있을까요?
+- [6:38](https://youtube.com/watch?v=CVmbidt-3ro&t=398) >> 네. 네. 제가 화면을 한번 공유를
+- [6:39](https://youtube.com/watch?v=CVmbidt-3ro&t=399) 하겠습니다. 지금 화면에 보고 계시는
+- [6:42](https://youtube.com/watch?v=CVmbidt-3ro&t=402) 사이트가 이제 윤비서라고 하는
+- [6:44](https://youtube.com/watch?v=CVmbidt-3ro&t=404) 사이트고요. 지금은 저희 제가
+- [6:46](https://youtube.com/watch?v=CVmbidt-3ro&t=406) 개발하고 있는요 로컬 화면이고
+- [6:48](https://youtube.com/watch?v=CVmbidt-3ro&t=408) 실제로는 이제 배포된 사이트에서 저희
+- [6:51](https://youtube.com/watch?v=CVmbidt-3ro&t=411) 전 직원이 같이 활용을 하고
+- [6:52](https://youtube.com/watch?v=CVmbidt-3ro&t=412) 있습니다. 그리고 마침 여기에 마스킹
+- [6:54](https://youtube.com/watch?v=CVmbidt-3ro&t=414) 기능을 최근에 뒀어요. 그래 가지고
+- [6:57](https://youtube.com/watch?v=CVmbidt-3ro&t=417) 요런 시현을 할 때도 개인 정보 이슈
+- [6:59](https://youtube.com/watch?v=CVmbidt-3ro&t=419) 없이 뭔가 볼 수 있게끔 그래서 진짜
+- [7:02](https://youtube.com/watch?v=CVmbidt-3ro&t=422) 데이터가 다 진짜 데이터입니다.
+- [7:04](https://youtube.com/watch?v=CVmbidt-3ro&t=424) >> 아, 네네.
+- [7:05](https://youtube.com/watch?v=CVmbidt-3ro&t=425) >> 네. 그렇고요. 저희가이 윤비서를
+- [7:09](https://youtube.com/watch?v=CVmbidt-3ro&t=429) 처음 사용하게 된 계기가 아마
+- [7:12](https://youtube.com/watch?v=CVmbidt-3ro&t=432) 주시님도 그렇겠지만 프로젝트가 굉장히
+- [7:14](https://youtube.com/watch?v=CVmbidt-3ro&t=434) 많잖아요. 그걸 관리하는게 너무
+- [7:16](https://youtube.com/watch?v=CVmbidt-3ro&t=436) 어렵더라고요. 그래서 저희 진행 중인
+- [7:18](https://youtube.com/watch?v=CVmbidt-3ro&t=438) 프로젝트가 지금 35건이 있는데요.이
+- [7:22](https://youtube.com/watch?v=CVmbidt-3ro&t=442) 35권에 대해서 어디까지 진행이 됐고
+- [7:24](https://youtube.com/watch?v=CVmbidt-3ro&t=444) 어디까지 안 되어 있고 그 각각의
+- [7:27](https://youtube.com/watch?v=CVmbidt-3ro&t=447) 데이터는 어떻게 되어 있고 이런
+- [7:28](https://youtube.com/watch?v=CVmbidt-3ro&t=448) 것들을 일단 관리하기가 어려웠고
+- [7:30](https://youtube.com/watch?v=CVmbidt-3ro&t=450) 그래서 이거를 처음에는 노션으로
+- [7:32](https://youtube.com/watch?v=CVmbidt-3ro&t=452) 저희가 하고 있었습니다. 근데 노션이
+- [7:34](https://youtube.com/watch?v=CVmbidt-3ro&t=454) 좀 불편한 점이 데이터가 좀 많아지고
+- [7:37](https://youtube.com/watch?v=CVmbidt-3ro&t=457) 뷰가 많아지고 하다 보면은 좀
+- [7:39](https://youtube.com/watch?v=CVmbidt-3ro&t=459) 느려지는 문제가 있고 그리고 가장
+- [7:42](https://youtube.com/watch?v=CVmbidt-3ro&t=462) 불편한 건 일단 모바일에서 사용하기가
+- [7:44](https://youtube.com/watch?v=CVmbidt-3ro&t=464) 너무 어렵다라는 좀 그런 점이
+- [7:46](https://youtube.com/watch?v=CVmbidt-3ro&t=466) 있었고요. 그리고 관계 데이터 같은
+- [7:47](https://youtube.com/watch?v=CVmbidt-3ro&t=467) 거를 막 사용하다 보면은 이게 더
+- [7:49](https://youtube.com/watch?v=CVmbidt-3ro&t=469) 복잡해져서 노션에 익숙하지 않은
+- [7:51](https://youtube.com/watch?v=CVmbidt-3ro&t=471) 사람은 잘 사용하기 어려운 존재가
+- [7:54](https://youtube.com/watch?v=CVmbidt-3ro&t=474) 있어서 이참에 우리가 그냥 다이렉트로
+- [7:56](https://youtube.com/watch?v=CVmbidt-3ro&t=476) 이런 사이트를 만들어 보자라는
+- [7:58](https://youtube.com/watch?v=CVmbidt-3ro&t=478) 생각으로 이제 만들게 되었고 지금은
+- [8:00](https://youtube.com/watch?v=CVmbidt-3ro&t=480) 여기에서 이제 한 100몇 개의
+- [8:02](https://youtube.com/watch?v=CVmbidt-3ro&t=482) 프로젝트를 전부 다 관리를 하고
+- [8:04](https://youtube.com/watch?v=CVmbidt-3ro&t=484) 있습니다. 여기에서 뭐 프로젝트도
+- [8:07](https://youtube.com/watch?v=CVmbidt-3ro&t=487) 관리하고 고객들도 관리를 하고 힐도
+- [8:09](https://youtube.com/watch?v=CVmbidt-3ro&t=489) 관리하고 이런 식으로 하고 있고요.
+- [8:11](https://youtube.com/watch?v=CVmbidt-3ro&t=491) 아마 제일 먼저 하는 거는 고객이랑
+- [8:13](https://youtube.com/watch?v=CVmbidt-3ro&t=493) 미팅을 한단 말이죠. 그럼 저희가
+- [8:15](https://youtube.com/watch?v=CVmbidt-3ro&t=495) 미팅을 하게 되면은 아마 조신님도
+- [8:18](https://youtube.com/watch?v=CVmbidt-3ro&t=498) 플라우드 사용하시죠? 네. 플라우드
+- [8:20](https://youtube.com/watch?v=CVmbidt-3ro&t=500) 하나 좀 보여 드리면은 150일 동안
+- [8:23](https://youtube.com/watch?v=CVmbidt-3ro&t=503) 700개가 넘는 녹음을 하고 있고
+- [8:25](https://youtube.com/watch?v=CVmbidt-3ro&t=505) 하루에 평균 3.5시간씩 지금 녹음을
+- [8:27](https://youtube.com/watch?v=CVmbidt-3ro&t=507) 하고 있고 저뿐만 아니라 저희 전직원
+- [8:30](https://youtube.com/watch?v=CVmbidt-3ro&t=510) 다이 기계를 사서 매일매일 녹음을
+- [8:32](https://youtube.com/watch?v=CVmbidt-3ro&t=512) 하고 있는데요. 이것이 녹음이 될
+- [8:34](https://youtube.com/watch?v=CVmbidt-3ro&t=514) 때마다요 사이트에 들어와서 이거를 다
+- [8:37](https://youtube.com/watch?v=CVmbidt-3ro&t=517) 보고 있지만 생각보다 여기에 들어와서
+- [8:39](https://youtube.com/watch?v=CVmbidt-3ro&t=519) 이걸 다시 또 내용들을 읽고 하는
+- [8:42](https://youtube.com/watch?v=CVmbidt-3ro&t=522) 것이 좀 번거롭더라고요. 그래 가지고
+- [8:44](https://youtube.com/watch?v=CVmbidt-3ro&t=524) 안 되겠다. 이걸 또 자동화하자라고
+- [8:46](https://youtube.com/watch?v=CVmbidt-3ro&t=526) 해서 플라우드로 들어오는 것을
+- [8:48](https://youtube.com/watch?v=CVmbidt-3ro&t=528) 제피어라고 하는이 노코드 자동화 2를
+- [8:52](https://youtube.com/watch?v=CVmbidt-3ro&t=532) 사용을 하면은 녹음이 끝나자마자
+- [8:54](https://youtube.com/watch?v=CVmbidt-3ro&t=534) 제피어로 전송이 되고 제피어에서 받아
+- [8:56](https://youtube.com/watch?v=CVmbidt-3ro&t=536) 가지고 저희 산해 시스템 윤비서로
+- [8:59](https://youtube.com/watch?v=CVmbidt-3ro&t=539) 전송을 해 줍니다. 그러면 산해
+- [9:01](https://youtube.com/watch?v=CVmbidt-3ro&t=541) 시스템 윤비서에 지금까지 수많은
+- [9:03](https://youtube.com/watch?v=CVmbidt-3ro&t=543) 녹음들이 여기에 자동으로 다 기록이
+- [9:05](https://youtube.com/watch?v=CVmbidt-3ro&t=545) 되고 있고요.이 이 기록을 바탕으로
+- [9:08](https://youtube.com/watch?v=CVmbidt-3ro&t=548) 어디선가 뭐 견적서 같은 걸 내
+- [9:10](https://youtube.com/watch?v=CVmbidt-3ro&t=550) 주세요라고 한다던가 할 일을
+- [9:12](https://youtube.com/watch?v=CVmbidt-3ro&t=552) 정리한다던가 할 때 이걸 통해서
+- [9:14](https://youtube.com/watch?v=CVmbidt-3ro&t=554) 여기에 뭐 견적 관리 이런 데가
+- [9:16](https://youtube.com/watch?v=CVmbidt-3ro&t=556) 있어서 견적 관리에서는 견적소도
+- [9:18](https://youtube.com/watch?v=CVmbidt-3ro&t=558) 발행을 자동으로 할 수 있고 그거
+- [9:21](https://youtube.com/watch?v=CVmbidt-3ro&t=561) 가지고 계약이 되면은 다시 프로젝트
+- [9:23](https://youtube.com/watch?v=CVmbidt-3ro&t=563) 관리해서 프로젝트를 생성하고 관리하고
+- [9:25](https://youtube.com/watch?v=CVmbidt-3ro&t=565) 또 할 일이 생기면은 할 일 관리에서
+- [9:28](https://youtube.com/watch?v=CVmbidt-3ro&t=568) 내용들을 또 관리해서 칸반보드로도
+- [9:30](https://youtube.com/watch?v=CVmbidt-3ro&t=570) 이런 식으로 할 일을 관리하는 그런
+- [9:32](https://youtube.com/watch?v=CVmbidt-3ro&t=572) 전반적인 업무를 어 한 번에 관리할
+- [9:36](https://youtube.com/watch?v=CVmbidt-3ro&t=576) 수 있는 시스템이고 저희에게 딱 맞는
+- [9:38](https://youtube.com/watch?v=CVmbidt-3ro&t=578) 시스템이다라고 볼 수 있을 것
+- [9:39](https://youtube.com/watch?v=CVmbidt-3ro&t=579) 같아요. 일정도 다 관리되기 때문에
+- [9:42](https://youtube.com/watch?v=CVmbidt-3ro&t=582) 캘린더로 여기서 실제로 하고 있는
+- [9:44](https://youtube.com/watch?v=CVmbidt-3ro&t=584) 오늘도 막 일정이 한 여섯 개 정도로
+- [9:46](https://youtube.com/watch?v=CVmbidt-3ro&t=586) 캐 있는데 뭐 이런 것도 관리가 되고
+- [9:48](https://youtube.com/watch?v=CVmbidt-3ro&t=588) >> 이게 결국에는 AI 바이브 코딩으로
+- [9:51](https://youtube.com/watch?v=CVmbidt-3ro&t=591) 저희가 만들다 보니까 메뉴를 만드는데
+- [9:54](https://youtube.com/watch?v=CVmbidt-3ro&t=594) 있어서 생각보다 리소스가 많이 안
+- [9:56](https://youtube.com/watch?v=CVmbidt-3ro&t=596) 들어가요. 대부분 다 뭐 한 시간에
+- [9:58](https://youtube.com/watch?v=CVmbidt-3ro&t=598) 메뉴 하나씩 만들 수 있을 정도로
+- [10:00](https://youtube.com/watch?v=CVmbidt-3ro&t=600) 시간이 많이 들어가지 않기 때문에 어
+- [10:02](https://youtube.com/watch?v=CVmbidt-3ro&t=602) 기능이 하나 필요하다 그러면은 그냥
+- [10:04](https://youtube.com/watch?v=CVmbidt-3ro&t=604) 그때그때 만들어서 쓰고 불편하다 그럼
+- [10:06](https://youtube.com/watch?v=CVmbidt-3ro&t=606) 또 바로 수정해서 쓰고 이런 식으로
+- [10:08](https://youtube.com/watch?v=CVmbidt-3ro&t=608) 하다 보니까 이게 기능이 지금 메뉴가
+- [10:11](https://youtube.com/watch?v=CVmbidt-3ro&t=611) 뭐 한 20개 정도 되는 거 같은데
+- [10:13](https://youtube.com/watch?v=CVmbidt-3ro&t=613) 뭐 다 만드는데 엄청나게 시간이 많이
+- [10:15](https://youtube.com/watch?v=CVmbidt-3ro&t=615) 걸리거나 그러지는 않았습니다.
+- [10:16](https://youtube.com/watch?v=CVmbidt-3ro&t=616) >> 약간 그 그때그때 수요가 발생할
+- [10:18](https://youtube.com/watch?v=CVmbidt-3ro&t=618) 때마다 모듈식으로 계속 붙여 나가는
+- [10:20](https://youtube.com/watch?v=CVmbidt-3ro&t=620) 형태로 했었나요? 어떻게이 프로그램이
+- [10:22](https://youtube.com/watch?v=CVmbidt-3ro&t=622) 여기까지 발전되게 온 거예요? 자,
+- [10:25](https://youtube.com/watch?v=CVmbidt-3ro&t=625) 첫 번째는 딱 두 개였어요. 오로지
+- [10:27](https://youtube.com/watch?v=CVmbidt-3ro&t=627) 두 개. 여기 아무것도 없었고
+- [10:29](https://youtube.com/watch?v=CVmbidt-3ro&t=629) 프로젝트 관리 하나, 고객 관리
+- [10:32](https://youtube.com/watch?v=CVmbidt-3ro&t=632) 하나.
+- [10:33](https://youtube.com/watch?v=CVmbidt-3ro&t=633) >> 왜냐면 고객을 여기다 일단 써야
+- [10:34](https://youtube.com/watch?v=CVmbidt-3ro&t=634) 되니까
+- [10:35](https://youtube.com/watch?v=CVmbidt-3ro&t=635) >> 저희가 뭐 사업자 등록증 뭐 이런
+- [10:37](https://youtube.com/watch?v=CVmbidt-3ro&t=637) 것도 관리해야 되고 하다 보니까 고객
+- [10:39](https://youtube.com/watch?v=CVmbidt-3ro&t=639) 관리를 위해서 하나. 그리고 프로젝트
+- [10:41](https://youtube.com/watch?v=CVmbidt-3ro&t=641) 하나. 그리고 할 일이나 이런 것도
+- [10:43](https://youtube.com/watch?v=CVmbidt-3ro&t=643) 안 썼어요. 그냥 그거는 각자 쓰자.
+- [10:45](https://youtube.com/watch?v=CVmbidt-3ro&t=645) 그리고 일정 구글 캘린더 쓰자. 뭐
+- [10:47](https://youtube.com/watch?v=CVmbidt-3ro&t=647) 노션에 필요한 거 정리해야 돼.
+- [10:49](https://youtube.com/watch?v=CVmbidt-3ro&t=649) 메모해야 돼. 그럼 뭐 노션에다가
+- [10:51](https://youtube.com/watch?v=CVmbidt-3ro&t=651) 써라 그랬죠. 그 두 개만 일단
+- [10:53](https://youtube.com/watch?v=CVmbidt-3ro&t=653) 만들어서 출시되는데 그냥 하루 걸렸던
+- [10:56](https://youtube.com/watch?v=CVmbidt-3ro&t=656) 거 같아요. 그래서 오늘 생각하다가
+- [10:58](https://youtube.com/watch?v=CVmbidt-3ro&t=658) 두 개를 바로 만들고 다음날
+- [11:01](https://youtube.com/watch?v=CVmbidt-3ro&t=661) 직원들한테요 두 개 만들었으니까 써
+- [11:02](https://youtube.com/watch?v=CVmbidt-3ro&t=662) 보자 하고 이제 뿌렸었죠. 그렇군요.
+- [11:05](https://youtube.com/watch?v=CVmbidt-3ro&t=665) 그럼 그로부터 프로젝트가 이게
+- [11:07](https://youtube.com/watch?v=CVmbidt-3ro&t=667) 점진적으로 들어오면서 계속 모든
+- [11:09](https://youtube.com/watch?v=CVmbidt-3ro&t=669) 직원들이 쓰게 됐는데 보니까는 할
+- [11:11](https://youtube.com/watch?v=CVmbidt-3ro&t=671) 일라든가 이런 것들 보면 어떤
+- [11:13](https://youtube.com/watch?v=CVmbidt-3ro&t=673) 느낌이냐면 되게 인터널 프로덕트
+- [11:15](https://youtube.com/watch?v=CVmbidt-3ro&t=675) 그러니까 사내의 직원들이 계속이
+- [11:17](https://youtube.com/watch?v=CVmbidt-3ro&t=677) 정기적인 할 일이 있을 경우라든가
+- [11:19](https://youtube.com/watch?v=CVmbidt-3ro&t=679) 뭔가 서로의 일들을 공유할 수 있는
+- [11:22](https://youtube.com/watch?v=CVmbidt-3ro&t=682) 그런 조직 관리 시스템 이런 쪽으로
+- [11:24](https://youtube.com/watch?v=CVmbidt-3ro&t=684) 좀 더 발전도 된 거 같아요.
+- [11:25](https://youtube.com/watch?v=CVmbidt-3ro&t=685) 그러니까 말 그대로 외주를 좀 받아서
+- [11:27](https://youtube.com/watch?v=CVmbidt-3ro&t=687) 프로젝트를 관리하는 형태뿐만 아니라
+- [11:29](https://youtube.com/watch?v=CVmbidt-3ro&t=689) 경영이라든가 테스크 관리라든가 이런
+- [11:31](https://youtube.com/watch?v=CVmbidt-3ro&t=691) 것들로 좀 더 많이 퍼진 느낌이
+- [11:33](https://youtube.com/watch?v=CVmbidt-3ro&t=693) 듭니다.
+- [11:34](https://youtube.com/watch?v=CVmbidt-3ro&t=694) 그건지도 좀 말씀해 주시면 좋을 것
+- [11:36](https://youtube.com/watch?v=CVmbidt-3ro&t=696) 같아요. 일단 개인 할 관리만 했을
+- [11:39](https://youtube.com/watch?v=CVmbidt-3ro&t=699) 때 문제가 뭐냐면 저희 내부에서는
+- [11:41](https://youtube.com/watch?v=CVmbidt-3ro&t=701) 서로 간의 할당해 주고 그 할당된
+- [11:44](https://youtube.com/watch?v=CVmbidt-3ro&t=704) 일을 얼마나 했는지를 체크해야 되는
+- [11:46](https://youtube.com/watch?v=CVmbidt-3ro&t=706) 일들이 좀 많았어요. 서로 협업을
+- [11:47](https://youtube.com/watch?v=CVmbidt-3ro&t=707) 하다 보니까. 그럼 나는 가만히
+- [11:49](https://youtube.com/watch?v=CVmbidt-3ro&t=709) 있지만 다른 사람이 나한테도 일을
+- [11:51](https://youtube.com/watch?v=CVmbidt-3ro&t=711) 할당해 줘야 되고 그게 어디까지
+- [11:52](https://youtube.com/watch?v=CVmbidt-3ro&t=712) 진행됐는지도 알아야 되고 이제 이런
+- [11:55](https://youtube.com/watch?v=CVmbidt-3ro&t=715) 문제가 있다 보니 개인적인 어떤 메모
+- [11:58](https://youtube.com/watch?v=CVmbidt-3ro&t=718) 형태 할 일로는 안 되고 이거를
+- [12:00](https://youtube.com/watch?v=CVmbidt-3ro&t=720) 전체적으로 좀 관리하는 기능이 좀
+- [12:02](https://youtube.com/watch?v=CVmbidt-3ro&t=722) 필요하다라고 했고 할 일을 부여하면은
+- [12:04](https://youtube.com/watch?v=CVmbidt-3ro&t=724) 그 사람한테 노티도 가야 되다 보니까
+- [12:07](https://youtube.com/watch?v=CVmbidt-3ro&t=727) 그런 것들은 저희가 사용하고 있는
+- [12:08](https://youtube.com/watch?v=CVmbidt-3ro&t=728) 슬랙 메신저로 알림을 같이 연동해서
+- [12:11](https://youtube.com/watch?v=CVmbidt-3ro&t=731) 뭐 보여 드릴까요? 뭐 이런 식으로
+- [12:13](https://youtube.com/watch?v=CVmbidt-3ro&t=733) 할 일들을 여기에서 생성하면은
+- [12:16](https://youtube.com/watch?v=CVmbidt-3ro&t=736) 자동으로 이걸 만든 사람이 어디에
+- [12:19](https://youtube.com/watch?v=CVmbidt-3ro&t=739) 누군가 담당자한테 이런 식으로 할
+- [12:21](https://youtube.com/watch?v=CVmbidt-3ro&t=741) 일을 할당을 해 줍니다.
+- [12:23](https://youtube.com/watch?v=CVmbidt-3ro&t=743) >> 그런 것들이 자동으로 오기 때문에
+- [12:25](https://youtube.com/watch?v=CVmbidt-3ro&t=745) 그리고 필요하면 여기서 쓰레드에서
+- [12:26](https://youtube.com/watch?v=CVmbidt-3ro&t=746) 같이 이야기를 할 수도 있고요.
+- [12:27](https://youtube.com/watch?v=CVmbidt-3ro&t=747) 그래서 알림 기능은 홈페이지에는
+- [12:29](https://youtube.com/watch?v=CVmbidt-3ro&t=749) 만들지 않았어요. 왜냐면은
+- [12:30](https://youtube.com/watch?v=CVmbidt-3ro&t=750) 사이트에서는 알림을 만들면은 앱이
+- [12:33](https://youtube.com/watch?v=CVmbidt-3ro&t=753) 아니기 때문에 또 모바일 같은 데서는
+- [12:35](https://youtube.com/watch?v=CVmbidt-3ro&t=755) 알림을 받을 수가 없잖아요. 그것도
+- [12:37](https://youtube.com/watch?v=CVmbidt-3ro&t=757) 뭐 PWA 쓰고 뭐 하면 앱으로 하면
+- [12:39](https://youtube.com/watch?v=CVmbidt-3ro&t=759) 된다곤 하지만 그건 이제
+- [12:40](https://youtube.com/watch?v=CVmbidt-3ro&t=760) 오버스펙이라고 생각을 했고 알림과
+- [12:42](https://youtube.com/watch?v=CVmbidt-3ro&t=762) 소통은 최대한 슬 같은 메신저에서
+- [12:45](https://youtube.com/watch?v=CVmbidt-3ro&t=765) 그리고 나머지 진짜 데이터 정리라던가
+- [12:48](https://youtube.com/watch?v=CVmbidt-3ro&t=768) 이런 것들은 시스템에서 이렇게 하고
+- [12:50](https://youtube.com/watch?v=CVmbidt-3ro&t=770) 있고 또 필요한 파일 관리 같은
+- [12:52](https://youtube.com/watch?v=CVmbidt-3ro&t=772) 거라던가 이런 거는이 시스템으로 하지
+- [12:55](https://youtube.com/watch?v=CVmbidt-3ro&t=775) 않고 저희는 구글 드라이브로 씁니다.
+- [12:57](https://youtube.com/watch?v=CVmbidt-3ro&t=777) 그래서 여기에서 구글 드라이브로 다
+- [12:59](https://youtube.com/watch?v=CVmbidt-3ro&t=779) 연동을 또 해 놨어요.
+- [13:01](https://youtube.com/watch?v=CVmbidt-3ro&t=781) >> 저게 다 폴더예요?
+- [13:02](https://youtube.com/watch?v=CVmbidt-3ro&t=782) >> 네. 요게 다 폴더고요. 이거를
+- [13:04](https://youtube.com/watch?v=CVmbidt-3ro&t=784) 실제로 구글 드라이브에도 자동으로 다
+- [13:06](https://youtube.com/watch?v=CVmbidt-3ro&t=786) 연결이 돼요. 그게 로다의 방주.
+- [13:09](https://youtube.com/watch?v=CVmbidt-3ro&t=789) 여기 있다.
+- [13:10](https://youtube.com/watch?v=CVmbidt-3ro&t=790) >> 로다의 방주 파일. 여기에 구글
+- [13:13](https://youtube.com/watch?v=CVmbidt-3ro&t=793) 드라이브로 연동이 돼서
+- [13:15](https://youtube.com/watch?v=CVmbidt-3ro&t=795) >> 실제로 자료가 요게 구글 드라이브
+- [13:17](https://youtube.com/watch?v=CVmbidt-3ro&t=797) 파일들 이런 식으로 다 나오거든요.
+- [13:19](https://youtube.com/watch?v=CVmbidt-3ro&t=799) >> 어. 오,
+- [13:20](https://youtube.com/watch?v=CVmbidt-3ro&t=800) >> 이런 파일들 다 있는데 동영상도 여기
+- [13:23](https://youtube.com/watch?v=CVmbidt-3ro&t=803) 있고 뭐 있고 한데 이거는 저희 따로
+- [13:26](https://youtube.com/watch?v=CVmbidt-3ro&t=806) S3라던가 이런 그걸 사용해서 파일을
+- [13:29](https://youtube.com/watch?v=CVmbidt-3ro&t=809) 관리하면은 결국 그것도 트래픽마다
+- [13:31](https://youtube.com/watch?v=CVmbidt-3ro&t=811) 돈을 내야 되잖아요. 그리고 보안
+- [13:32](https://youtube.com/watch?v=CVmbidt-3ro&t=812) 이슈도 있을 수 있고. 근데 이거를
+- [13:34](https://youtube.com/watch?v=CVmbidt-3ro&t=814) 저희는 구글 드라이브로 다 관리를
+- [13:36](https://youtube.com/watch?v=CVmbidt-3ro&t=816) 해서 예를 들어 이런 데이터가 있다
+- [13:38](https://youtube.com/watch?v=CVmbidt-3ro&t=818) 그러면 세 창에 여기서도 바로 이렇게
+- [13:40](https://youtube.com/watch?v=CVmbidt-3ro&t=820) 구글 드라이브니까 구글 시트처럼
+- [13:42](https://youtube.com/watch?v=CVmbidt-3ro&t=822) 여기서 볼 수도 있고 세 창에서
+- [13:44](https://youtube.com/watch?v=CVmbidt-3ro&t=824) 열기하면은 이거 자체가 구글 시트로
+- [13:46](https://youtube.com/watch?v=CVmbidt-3ro&t=826) 열리기도 하고 이거를 구글
+- [13:48](https://youtube.com/watch?v=CVmbidt-3ro&t=828) 드라이브에서도 부탁 볼 수 있는
+- [13:49](https://youtube.com/watch?v=CVmbidt-3ro&t=829) 거죠. 이렇게 드라이브로. 그럼이
+- [13:51](https://youtube.com/watch?v=CVmbidt-3ro&t=831) 파일을 다른 사람도 보고 싶어. 그럼
+- [13:52](https://youtube.com/watch?v=CVmbidt-3ro&t=832) 공유해서이 공유는 구글 드라이브의
+- [13:55](https://youtube.com/watch?v=CVmbidt-3ro&t=835) 기능이니까 제가 여기다가 그 사람만
+- [13:57](https://youtube.com/watch?v=CVmbidt-3ro&t=837) 특정 사람만 초대할 수도 있고 보안
+- [13:59](https://youtube.com/watch?v=CVmbidt-3ro&t=839) 문제가 다 해결이 되는 거죠. 그
+- [14:00](https://youtube.com/watch?v=CVmbidt-3ro&t=840) 구글 드라이브 API로 한 거예요?
+- [14:02](https://youtube.com/watch?v=CVmbidt-3ro&t=842) MCP로 한 거예요?
+- [14:03](https://youtube.com/watch?v=CVmbidt-3ro&t=843) >> 네, API로 했습니다.
+- [14:05](https://youtube.com/watch?v=CVmbidt-3ro&t=845) >> API 있군요. 그렇군요.
+- [14:06](https://youtube.com/watch?v=CVmbidt-3ro&t=846) >> 네. 저희는 거의 대부분 API를
+- [14:08](https://youtube.com/watch?v=CVmbidt-3ro&t=848) 많이 사용을 해요. MCP가 필요한
+- [14:10](https://youtube.com/watch?v=CVmbidt-3ro&t=850) 경우도 사용을 하는데 여기이
+- [14:12](https://youtube.com/watch?v=CVmbidt-3ro&t=852) 홈페이지에서는 완벽하게 작동을 해야
+- [14:15](https://youtube.com/watch?v=CVmbidt-3ro&t=855) 되니까 가능한 API를 사용하고
+- [14:17](https://youtube.com/watch?v=CVmbidt-3ro&t=857) 있고요. 그리고 실제로 클로드
+- [14:18](https://youtube.com/watch?v=CVmbidt-3ro&t=858) 코드로도 조금 이따가 보여 드릴 텐데
+- [14:20](https://youtube.com/watch?v=CVmbidt-3ro&t=860) 클로드 코드로도 연결되는 거는
+- [14:22](https://youtube.com/watch?v=CVmbidt-3ro&t=862) MCP를 사용하거나 아니면 아예
+- [14:24](https://youtube.com/watch?v=CVmbidt-3ro&t=864) 요즘에는 이제 MCP보다 CL를 더
+- [14:26](https://youtube.com/watch?v=CVmbidt-3ro&t=866) 많이 사용하다 보니까 구글
+- [14:28](https://youtube.com/watch?v=CVmbidt-3ro&t=868) 워크스페이스 CLI라고 하는 걸
+- [14:29](https://youtube.com/watch?v=CVmbidt-3ro&t=869) 사용해서 구글 모든 기능들 이메일도
+- [14:33](https://youtube.com/watch?v=CVmbidt-3ro&t=873) 연동하고 어 이런 드라이브라던가 이런
+- [14:35](https://youtube.com/watch?v=CVmbidt-3ro&t=875) 것들을 다 연동하고 있습니다.
+- [14:36](https://youtube.com/watch?v=CVmbidt-3ro&t=876) >> 어 너무 멋집니다. 네. 일단은 그
+- [14:38](https://youtube.com/watch?v=CVmbidt-3ro&t=878) 프로젝트 관리가 되게 홀더밸러 체계화
+- [14:41](https://youtube.com/watch?v=CVmbidt-3ro&t=881) 돼 있다는게 되게 너무너무 재밌고
+- [14:43](https://youtube.com/watch?v=CVmbidt-3ro&t=883) >> 네. 그래서 지금 사용한지 저희 이거
+- [14:44](https://youtube.com/watch?v=CVmbidt-3ro&t=884) 이제 두 달 됐거든요.
+- [14:46](https://youtube.com/watch?v=CVmbidt-3ro&t=886) >> 근데 벌써 이제 프로젝트가 한
+- [14:48](https://youtube.com/watch?v=CVmbidt-3ro&t=888) 123번 그니까 120개가 넘어갔기
+- [14:50](https://youtube.com/watch?v=CVmbidt-3ro&t=890) 때문에
+- [14:51](https://youtube.com/watch?v=CVmbidt-3ro&t=891) >> 너무 잘 사용이 되고 있고 누군가가
+- [14:54](https://youtube.com/watch?v=CVmbidt-3ro&t=894) 하고 있는 프로젝트에 대해서
+- [14:55](https://youtube.com/watch?v=CVmbidt-3ro&t=895) 궁금하면은 아무나 들어가서 이걸 다
+- [14:57](https://youtube.com/watch?v=CVmbidt-3ro&t=897) 같이 볼 수 있고 히스토리가 남고
+- [15:00](https://youtube.com/watch?v=CVmbidt-3ro&t=900) 그리고 이게 한 곳에 다 모여 있기
+- [15:01](https://youtube.com/watch?v=CVmbidt-3ro&t=901) 때문에 가장 중요한게 저희는이
+- [15:03](https://youtube.com/watch?v=CVmbidt-3ro&t=903) 윤비서도 클로드 코드로 다 연결 해
+- [15:06](https://youtube.com/watch?v=CVmbidt-3ro&t=906) 놓거든요. 그래서 클로드 코드한테
+- [15:08](https://youtube.com/watch?v=CVmbidt-3ro&t=908) 넘어가서 그 윤비서에 있는 모든
+- [15:10](https://youtube.com/watch?v=CVmbidt-3ro&t=910) 데이터베이스에 대한 질문을 하면은
+- [15:13](https://youtube.com/watch?v=CVmbidt-3ro&t=913) 클라우드에 데이터가 있더라도 로컬에
+- [15:15](https://youtube.com/watch?v=CVmbidt-3ro&t=915) 있는 것처럼 바로바로 데이터를 다
+- [15:17](https://youtube.com/watch?v=CVmbidt-3ro&t=917) 당겨 와서 다 조언해 주고 분석해
+- [15:20](https://youtube.com/watch?v=CVmbidt-3ro&t=920) 주고 도와줍니다.
+- [15:21](https://youtube.com/watch?v=CVmbidt-3ro&t=921) >> 어 좋습니다. 그러면은 이제 프로젝트
+- [15:23](https://youtube.com/watch?v=CVmbidt-3ro&t=923) 관리 있고 할 일 관리가 있는 거
+- [15:24](https://youtube.com/watch?v=CVmbidt-3ro&t=924) 같고 또 다른 메뉴 같은 거 좀 더
+- [15:26](https://youtube.com/watch?v=CVmbidt-3ro&t=926) 전반적으로 소개해 주실 수 있을까요?
+- [15:28](https://youtube.com/watch?v=CVmbidt-3ro&t=928) >> 네. 당연히 일정 관리도 이렇게 하고
+- [15:29](https://youtube.com/watch?v=CVmbidt-3ro&t=929) 있고요. 일정도 심지어 구글
+- [15:32](https://youtube.com/watch?v=CVmbidt-3ro&t=932) 캘린더랑도 다 연동이 되어 있어서
+- [15:34](https://youtube.com/watch?v=CVmbidt-3ro&t=934) 일정을 등록하면은 구글 캘린더에서도
+- [15:37](https://youtube.com/watch?v=CVmbidt-3ro&t=937) 생기고 구글 캘린더로 등록해도 여기도
+- [15:39](https://youtube.com/watch?v=CVmbidt-3ro&t=939) 오고 구글 캘린더 보니까 이렇게
+- [15:41](https://youtube.com/watch?v=CVmbidt-3ro&t=941) 주변로 이렇게 일별로 이런 것도
+- [15:44](https://youtube.com/watch?v=CVmbidt-3ro&t=944) 있더라고요. 부터 어 구글 똑같이
+- [15:46](https://youtube.com/watch?v=CVmbidt-3ro&t=946) 이런 것들은 만들어 놨고 단축키
+- [15:48](https://youtube.com/watch?v=CVmbidt-3ro&t=948) WMD 이렇게 누르면은 요것도 뷰도
+- [15:51](https://youtube.com/watch?v=CVmbidt-3ro&t=951) 바뀌게끔 뭐 이런 것도 지금 되어
+- [15:54](https://youtube.com/watch?v=CVmbidt-3ro&t=954) 있고 그리고 메일도 Gma하고 이렇게
+- [15:56](https://youtube.com/watch?v=CVmbidt-3ro&t=956) 다 연동이 되어 있어요. 그래서
+- [15:58](https://youtube.com/watch?v=CVmbidt-3ro&t=958) 메일도 Gma 오면은 여기로도 다 올
+- [16:00](https://youtube.com/watch?v=CVmbidt-3ro&t=960) 수 있게끔 되어 있고 명함 뭐 이런
+- [16:03](https://youtube.com/watch?v=CVmbidt-3ro&t=963) 것도 만약에 이런 식으로 명함을
+- [16:05](https://youtube.com/watch?v=CVmbidt-3ro&t=965) 받으면 저희는 바로 촬영을 하고요.
+- [16:07](https://youtube.com/watch?v=CVmbidt-3ro&t=967) 사실 명함 엄청 많이 받으시잖아요.
+- [16:08](https://youtube.com/watch?v=CVmbidt-3ro&t=968) 주신님도
+- [16:09](https://youtube.com/watch?v=CVmbidt-3ro&t=969) >> 저 저 지금 잠시만요. 저 명암이
+- [16:12](https://youtube.com/watch?v=CVmbidt-3ro&t=972) 이만큼이나 있어요. 지금 이걸
+- [16:14](https://youtube.com/watch?v=CVmbidt-3ro&t=974) >> 제거도 보여 드릴까요? 저 이게 한
+- [16:16](https://youtube.com/watch?v=CVmbidt-3ro&t=976) 달 사이에 받은 영화입니다.
+- [16:17](https://youtube.com/watch?v=CVmbidt-3ro&t=977) >> 그러니까 저 이거 지금 여기 있다가
+- [16:20](https://youtube.com/watch?v=CVmbidt-3ro&t=980) 해 놓고 저렇게 관리를 못 하고
+- [16:22](https://youtube.com/watch?v=CVmbidt-3ro&t=982) 있었는데 야 저
+- [16:23](https://youtube.com/watch?v=CVmbidt-3ro&t=983) >> 그죠? 이게 지금 한 세 통
+- [16:24](https://youtube.com/watch?v=CVmbidt-3ro&t=984) 있거든요. 이런게 사실 명언 받자마자
+- [16:27](https://youtube.com/watch?v=CVmbidt-3ro&t=987) 핸드폰은 연락처 등록도 잘 못 해요.
+- [16:29](https://youtube.com/watch?v=CVmbidt-3ro&t=989) 바쁘니까. 그럼
+- [16:30](https://youtube.com/watch?v=CVmbidt-3ro&t=990) >> 나중에 막 모르는 전화번호로 왔는데
+- [16:32](https://youtube.com/watch?v=CVmbidt-3ro&t=992) 아 제가 명함 등록을 안 해 놔서 좀
+- [16:34](https://youtube.com/watch?v=CVmbidt-3ro&t=994) 뻘쭘한 상황도 생기고 좀 민망하기도
+- [16:37](https://youtube.com/watch?v=CVmbidt-3ro&t=997) 하고 그리고 이제 직원분들이 명암
+- [16:39](https://youtube.com/watch?v=CVmbidt-3ro&t=999) 있는 분한테 연락을 하려고 하면
+- [16:41](https://youtube.com/watch?v=CVmbidt-3ro&t=1001) 전화번호 모르니까 저한테 물어본단
+- [16:43](https://youtube.com/watch?v=CVmbidt-3ro&t=1003) 말이죠. 그러면 난 또 막 아 명함
+- [16:44](https://youtube.com/watch?v=CVmbidt-3ro&t=1004) 어디지? 하면서 막 찾아야 되고 이런
+- [16:46](https://youtube.com/watch?v=CVmbidt-3ro&t=1006) 문제가 항상 있던게 제가 너무
+- [16:48](https://youtube.com/watch?v=CVmbidt-3ro&t=1008) 불편해서 아 불편해 그럼 자동화 저의
+- [16:52](https://youtube.com/watch?v=CVmbidt-3ro&t=1012) 약간 철학이거든요. 불편한 것만 저는
+- [16:54](https://youtube.com/watch?v=CVmbidt-3ro&t=1014) 자동화를 해요. 저는 불편하지 않고
+- [16:57](https://youtube.com/watch?v=CVmbidt-3ro&t=1017) 자동화를 하지 않습니다.
+- [16:58](https://youtube.com/watch?v=CVmbidt-3ro&t=1018) >> 이전에 리멤버라고 하는 명암 관리
+- [17:00](https://youtube.com/watch?v=CVmbidt-3ro&t=1020) 앱이라든가 구글 캘린더 어 드라이브
+- [17:03](https://youtube.com/watch?v=CVmbidt-3ro&t=1023) 했었던 것들을 한 군데 싹 다 모아
+- [17:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1025) 놓는 형태로 비즈니스에 최적화된
+- [17:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1028) 형태로 다 해 놓는 거예요. 근데
+- [17:09](https://youtube.com/watch?v=CVmbidt-3ro&t=1029) 저게 지금 셀프 개발이 다 가능하다
+- [17:11](https://youtube.com/watch?v=CVmbidt-3ro&t=1031) 보니까 지금 요것도 사실은 OCR
+- [17:13](https://youtube.com/watch?v=CVmbidt-3ro&t=1033) 같은 걸로 바로 그냥 별도의 설치
+- [17:15](https://youtube.com/watch?v=CVmbidt-3ro&t=1035) 없이 바로 가능한 거잖아요. 지금
+- [17:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1037) >> 재미나 가지고 사용하고 있고 이거 R
+- [17:19](https://youtube.com/watch?v=CVmbidt-3ro&t=1039) 한번 쳐봤자 비용도
+- [17:21](https://youtube.com/watch?v=CVmbidt-3ro&t=1041) >> 뭐 한 0.1원도 안 들어요. 이거
+- [17:24](https://youtube.com/watch?v=CVmbidt-3ro&t=1044) 한 달 내내 해야 한 달에 한 50원
+- [17:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1046) 나옵니다.
+- [17:28](https://youtube.com/watch?v=CVmbidt-3ro&t=1048) >> 너무 멋집니다. 그러면 저희 회사에
+- [17:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1050) 맞춤화된 명암 관리가 다 적재돼
+- [17:31](https://youtube.com/watch?v=CVmbidt-3ro&t=1051) 가지고 직원들이 가지고 오는 명함들이
+- [17:34](https://youtube.com/watch?v=CVmbidt-3ro&t=1054) 다 저기다 통합 관리가 된다는
+- [17:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1055) 거잖아요.
+- [17:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1055) >> 네. 여기에 아예 주소 록이 되는
+- [17:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1057) 거고요. 더 좋은 건 구글의 컨택트
+- [17:40](https://youtube.com/watch?v=CVmbidt-3ro&t=1060) API가 있거든요. 연락처 API.
+- [17:42](https://youtube.com/watch?v=CVmbidt-3ro&t=1062) 그래서 이걸 찍으면은 그냥 제
+- [17:44](https://youtube.com/watch?v=CVmbidt-3ro&t=1064) 핸드폰에 그 사람의 연락처가 자동으로
+- [17:46](https://youtube.com/watch?v=CVmbidt-3ro&t=1066) 생겨요.
+- [17:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1067) >> 아, 그렇구나.
+- [17:48](https://youtube.com/watch?v=CVmbidt-3ro&t=1068) >> 핸드폰에 전화번호 추가하고 이름
+- [17:50](https://youtube.com/watch?v=CVmbidt-3ro&t=1070) 추가하고 할 필요가 없어요.
+- [17:51](https://youtube.com/watch?v=CVmbidt-3ro&t=1071) >> 야,
+- [17:52](https://youtube.com/watch?v=CVmbidt-3ro&t=1072) >> 그러면은
+- [17:52](https://youtube.com/watch?v=CVmbidt-3ro&t=1072) >> 진짜 어, 레벨이긴 하네. 네.
+- [17:55](https://youtube.com/watch?v=CVmbidt-3ro&t=1075) >> 귀찮으니까 핸드폰 번호랑 이름만 딱
+- [17:57](https://youtube.com/watch?v=CVmbidt-3ro&t=1077) 쓰고 끝나잖아요, 보통.
+- [17:59](https://youtube.com/watch?v=CVmbidt-3ro&t=1079) >> 네. 근데 저 명함을 찍어서 자동
+- [18:00](https://youtube.com/watch?v=CVmbidt-3ro&t=1080) 등록하면은 이메일 주소도 나오고 실제
+- [18:02](https://youtube.com/watch?v=CVmbidt-3ro&t=1082) 사무실 주소까지도 주소록게 자동으로
+- [18:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1085) 다 기록이 됩니다.
+- [18:06](https://youtube.com/watch?v=CVmbidt-3ro&t=1086) >> 너무 좋네요. 메일 관리는 왜 있는
+- [18:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1088) 거예요?
+- [18:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1088) >> 아, 메일 관리는 이것도 불편해서
+- [18:10](https://youtube.com/watch?v=CVmbidt-3ro&t=1090) 만든 건데 저희 직원이 요청한
+- [18:12](https://youtube.com/watch?v=CVmbidt-3ro&t=1092) 거였어요. 아, 맨날 프로젝트를
+- [18:14](https://youtube.com/watch?v=CVmbidt-3ro&t=1094) 보다가 그 사람이랑 소통했던 이메일을
+- [18:16](https://youtube.com/watch?v=CVmbidt-3ro&t=1096) 보기 위해서 GL을 다시 열어서
+- [18:18](https://youtube.com/watch?v=CVmbidt-3ro&t=1098) 들어가는게 불편하다. 그래서 여기서
+- [18:20](https://youtube.com/watch?v=CVmbidt-3ro&t=1100) 메일도 다 볼 수 있으면 안 되냐?
+- [18:21](https://youtube.com/watch?v=CVmbidt-3ro&t=1101) 그래서 어, 그래, 불편해. 그럼
+- [18:23](https://youtube.com/watch?v=CVmbidt-3ro&t=1103) 만들어야지. 그래서 또 만들었죠.
+- [18:25](https://youtube.com/watch?v=CVmbidt-3ro&t=1105) 그러니까 이제
+- [18:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1106) >> 근데 대표 메일만 넣은 거예요?
+- [18:27](https://youtube.com/watch?v=CVmbidt-3ro&t=1107) 아니면은 다른 직원 메일도 같이
+- [18:29](https://youtube.com/watch?v=CVmbidt-3ro&t=1109) 들어가 있는 거예요?
+- [18:29](https://youtube.com/watch?v=CVmbidt-3ro&t=1109) >> 이거는 그 각자의 메일을 다 넣을 수
+- [18:31](https://youtube.com/watch?v=CVmbidt-3ro&t=1111) 있게 여기 이제 설정을 할 수
+- [18:33](https://youtube.com/watch?v=CVmbidt-3ro&t=1113) 있습니다.
+- [18:33](https://youtube.com/watch?v=CVmbidt-3ro&t=1113) >> 아, 그 모든 직원들의 메일을
+- [18:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1115) 통합으로 오픈해서 관리를 하고 볼 수
+- [18:38](https://youtube.com/watch?v=CVmbidt-3ro&t=1118) 있게끔 해 놨다라는 거군요.
+- [18:40](https://youtube.com/watch?v=CVmbidt-3ro&t=1120) >> 네, 맞습니다.
+- [18:40](https://youtube.com/watch?v=CVmbidt-3ro&t=1120) >> 심박하네요. 다른 어떤 회사들은
+- [18:43](https://youtube.com/watch?v=CVmbidt-3ro&t=1123) 하나의 메일로만 그냥 오게끔 해
+- [18:44](https://youtube.com/watch?v=CVmbidt-3ro&t=1124) 놨는데 지금은 직원 메일들이 한꺼번에
+- [18:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1127) 연동이 돼 있으니까 회사 메일이니까
+- [18:48](https://youtube.com/watch?v=CVmbidt-3ro&t=1128) 개인 이메일이라고 볼 순 없는
+- [18:50](https://youtube.com/watch?v=CVmbidt-3ro&t=1130) 거잖아요. 정확히 말하면.
+- [18:51](https://youtube.com/watch?v=CVmbidt-3ro&t=1131) >> 그렇죠. 뭐 그거는 직원분들이 다
+- [18:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1133) 동의를 해서 그렇게 쓰고 있는
+- [18:54](https://youtube.com/watch?v=CVmbidt-3ro&t=1134) 업무용입니까?
+- [18:55](https://youtube.com/watch?v=CVmbidt-3ro&t=1135) >> 그렇죠? 네. 그래서 그 업무용으로
+- [18:57](https://youtube.com/watch?v=CVmbidt-3ro&t=1137) 그냥 통합을 했기 때문에 각자가
+- [18:59](https://youtube.com/watch?v=CVmbidt-3ro&t=1139) 커뮤니케이션 하는 것들을 자 저기서
+- [19:00](https://youtube.com/watch?v=CVmbidt-3ro&t=1140) 통합으로 보면서 검색도 할 수 있고
+- [19:03](https://youtube.com/watch?v=CVmbidt-3ro&t=1143) 필요하다면은 그 컨택 포인트들을 찾아
+- [19:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1145) 가지고 그분들께 연락도 자기가 취할
+- [19:07](https://youtube.com/watch?v=CVmbidt-3ro&t=1147) 수 있고 약간 그런 식으로 통합
+- [19:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1148) 관리를 해 놨다라는 거네요. 너무너무
+- [19:10](https://youtube.com/watch?v=CVmbidt-3ro&t=1150) 재밌습니다. 그렇게도 하면서 이제
+- [19:12](https://youtube.com/watch?v=CVmbidt-3ro&t=1152) 나중에 클러드 코드에도 연동을 시켜
+- [19:15](https://youtube.com/watch?v=CVmbidt-3ro&t=1155) 가지고 뭐 오늘 왔던 이메일들 같은
+- [19:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1157) 거를 뭔가 정리해 달라고 한다던가 뭐
+- [19:19](https://youtube.com/watch?v=CVmbidt-3ro&t=1159) 이런 식으로 다 데이터가 계속 쌓이게
+- [19:21](https://youtube.com/watch?v=CVmbidt-3ro&t=1161) 되는 거죠. 야, 너무 좋다. 다른
+- [19:25](https://youtube.com/watch?v=CVmbidt-3ro&t=1165) 메뉴가 또 있나요?
+- [19:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1166) >> 아직 더 있는데 당연한 건데 이제
+- [19:28](https://youtube.com/watch?v=CVmbidt-3ro&t=1168) 매출도 관리를 해야 되니까.
+- [19:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1170) >> 음. 음매도 여기서 다리를 하고
+- [19:32](https://youtube.com/watch?v=CVmbidt-3ro&t=1172) 있고요. 저희가 윤자동닷컴이라고 하는
+- [19:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1175) 옛날에 4년 전에 만든 건데
+- [19:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1177) 아이맵으로 만든 거거든요. 이게
+- [19:39](https://youtube.com/watch?v=CVmbidt-3ro&t=1179) >> 그래서 아이맵으로 만들면은 그 결제가
+- [19:40](https://youtube.com/watch?v=CVmbidt-3ro&t=1180) 아이맵에 결제되다 보니까 그 결제되는
+- [19:43](https://youtube.com/watch?v=CVmbidt-3ro&t=1183) 것을 또 관리하려면은 너무 좀
+- [19:45](https://youtube.com/watch?v=CVmbidt-3ro&t=1185) 귀찮았어요. 그래서 그것도 윤비서의
+- [19:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1187) 아이맵 동기화 버튼
+- [19:49](https://youtube.com/watch?v=CVmbidt-3ro&t=1189) >> 누르면은 그런 것들이 여기에서
+- [19:51](https://youtube.com/watch?v=CVmbidt-3ro&t=1191) 자동으로 아이맵에서 결제된 거는
+- [19:52](https://youtube.com/watch?v=CVmbidt-3ro&t=1192) 여기로 다 연동이 됩니다. 아관
+- [19:56](https://youtube.com/watch?v=CVmbidt-3ro&t=1196) 다서 그리고이 프로젝트나 이런데서
+- [19:59](https://youtube.com/watch?v=CVmbidt-3ro&t=1199) 자가 등록하는 매출을 여기에 같이
+- [20:02](https://youtube.com/watch?v=CVmbidt-3ro&t=1202) 집계가 되게끔 다 되고 있어요.
+- [20:04](https://youtube.com/watch?v=CVmbidt-3ro&t=1204) >> 진짜 죽인다. 그니까
+- [20:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1205) >> 심지어 저것도 됩니다. 아마 이거는
+- [20:07](https://youtube.com/watch?v=CVmbidt-3ro&t=1207) 하신 분들 별로 없을 걸요. 그
+- [20:09](https://youtube.com/watch?v=CVmbidt-3ro&t=1209) 실제로 입금이 저희한테 들어오잖아요.
+- [20:12](https://youtube.com/watch?v=CVmbidt-3ro&t=1212) 돈이 그러면은 입금됐을 때 핸드폰으로
+- [20:15](https://youtube.com/watch?v=CVmbidt-3ro&t=1215) 저한테 푸시 알림이 오잖아요. 은행
+- [20:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1217) 앱 설치해 놓으니까. 맞아요.
+- [20:18](https://youtube.com/watch?v=CVmbidt-3ro&t=1218) >> 핸드폰 푸시을 자동으로 캐치해서
+- [20:21](https://youtube.com/watch?v=CVmbidt-3ro&t=1221) 그것을 비서 API로 쏴줘서 입금
+- [20:24](https://youtube.com/watch?v=CVmbidt-3ro&t=1224) 관리 들어가면 여기에 돈이 들어온
+- [20:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1226) 내역도 나와요.
+- [20:27](https://youtube.com/watch?v=CVmbidt-3ro&t=1227) >> 아, 그
+- [20:27](https://youtube.com/watch?v=CVmbidt-3ro&t=1227) >> 그래서 입금도 자동으로 다 관리가
+- [20:29](https://youtube.com/watch?v=CVmbidt-3ro&t=1229) 되고 돈 나가는 거 지금 요거는 지금
+- [20:31](https://youtube.com/watch?v=CVmbidt-3ro&t=1231) 좀 만들고 있거든요. 법인 카드 사용
+- [20:33](https://youtube.com/watch?v=CVmbidt-3ro&t=1233) 내역이라든가 회사에서 나가는 뭐
+- [20:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1235) 임대료라든가 각종 여러 가지 부대
+- [20:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1237) 비용들이 다 관리를 하면은 이제
+- [20:39](https://youtube.com/watch?v=CVmbidt-3ro&t=1239) 매입이랑 매출이랑 이런 것들을 또 다
+- [20:41](https://youtube.com/watch?v=CVmbidt-3ro&t=1241) 자동으로 관리할 수 있게 되는 거죠.
+- [20:43](https://youtube.com/watch?v=CVmbidt-3ro&t=1243) 그럼 나중에 이걸로 세무사에서 그
+- [20:45](https://youtube.com/watch?v=CVmbidt-3ro&t=1245) 필요한 자료 같은 거 달라고 하면은
+- [20:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1247) 그것도 쉽게 바로 세무사 전달 용으로
+- [20:50](https://youtube.com/watch?v=CVmbidt-3ro&t=1250) 뽑을 수 있고 아직은 구현하지
+- [20:52](https://youtube.com/watch?v=CVmbidt-3ro&t=1252) 않았는데 다음에 할 것은 이제 각자
+- [20:55](https://youtube.com/watch?v=CVmbidt-3ro&t=1255) 개인이 사용을 한 법인 카드에 영수증
+- [20:58](https://youtube.com/watch?v=CVmbidt-3ro&t=1258) 같은 걸 첨부해야 되는 경우가 있단
+- [20:59](https://youtube.com/watch?v=CVmbidt-3ro&t=1259) 말이죠. 항목이 필요한 경우 이제
+- [21:01](https://youtube.com/watch?v=CVmbidt-3ro&t=1261) 그런 거는 영수증 찍어서 여기다가
+- [21:03](https://youtube.com/watch?v=CVmbidt-3ro&t=1263) 그냥 영수증 스캔한 거 바로 올리기만
+- [21:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1265) 하면은 그 결제 내용이랑 자동으로
+- [21:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1268) 연동되고 OCR로 내용도 인식해
+- [21:10](https://youtube.com/watch?v=CVmbidt-3ro&t=1270) 가지고 항목까지 쩌저해 가지고
+- [21:12](https://youtube.com/watch?v=CVmbidt-3ro&t=1272) 세무서에서도 실시간으로 볼 수 있게
+- [21:14](https://youtube.com/watch?v=CVmbidt-3ro&t=1274) 저희 담당 세무사님한테 바로 전달드릴
+- [21:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1277) 예정이에요. 그런 것도 하면은 아
+- [21:19](https://youtube.com/watch?v=CVmbidt-3ro&t=1279) 이것도 맨날 부과세 신고할 때마다
+- [21:21](https://youtube.com/watch?v=CVmbidt-3ro&t=1281) 너무 귀찮은 거예요. 그래가지고 아
+- [21:23](https://youtube.com/watch?v=CVmbidt-3ro&t=1283) 이거 어떻게 하면 자동할 수 없을까
+- [21:25](https://youtube.com/watch?v=CVmbidt-3ro&t=1285) 또 고민을 하고 있었던 찰라여서 요거
+- [21:27](https://youtube.com/watch?v=CVmbidt-3ro&t=1287) 또 이제 다음 저희 개발할 내용으로
+- [21:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1290) 지금 백로그에 넣어 둔 상태입니다.
+- [21:32](https://youtube.com/watch?v=CVmbidt-3ro&t=1292) >> 그랬군요. 그랬군요. 너무 너무
+- [21:34](https://youtube.com/watch?v=CVmbidt-3ro&t=1294) 재밌습니다. 매출 관리는 대체 어떻게
+- [21:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1297) 이루어지는 거예요? 정확히
+- [21:38](https://youtube.com/watch?v=CVmbidt-3ro&t=1298) >> 일단 매출을 여기서 프로젝트가 발생이
+- [21:41](https://youtube.com/watch?v=CVmbidt-3ro&t=1301) 되면 여기서 매출을 등록을 사람이
+- [21:43](https://youtube.com/watch?v=CVmbidt-3ro&t=1303) 하거든요. 그거를 여기서 일단 보여
+- [21:46](https://youtube.com/watch?v=CVmbidt-3ro&t=1306) 주는게 기본적으로 하나 있는 거고 그
+- [21:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1307) 외에 홈택스랑도 연동이 다 되어
+- [21:49](https://youtube.com/watch?v=CVmbidt-3ro&t=1309) 있습니다.
+- [21:50](https://youtube.com/watch?v=CVmbidt-3ro&t=1310) >> 그래서 실제로 저는 세금 계산서
+- [21:52](https://youtube.com/watch?v=CVmbidt-3ro&t=1312) 발행을 전 여기서 해요.
+- [21:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1313) >> 여기서 매출이 나오면은 매출 세금
+- [21:56](https://youtube.com/watch?v=CVmbidt-3ro&t=1316) 계산서 발행 누르면은 이렇게 세금
+- [21:57](https://youtube.com/watch?v=CVmbidt-3ro&t=1317) 계산서 발행할 수 있게끔 되고요
+- [21:59](https://youtube.com/watch?v=CVmbidt-3ro&t=1319) 고객의 정보가 있으면은 그 고객
+- [22:02](https://youtube.com/watch?v=CVmbidt-3ro&t=1322) 정보랑 다 알아서 당겨와요. 여기
+- [22:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1325) 공급자 저희 정보 그리고 상대방
+- [22:07](https://youtube.com/watch?v=CVmbidt-3ro&t=1327) 사업자 정보가 여기는 아직 없어서
+- [22:09](https://youtube.com/watch?v=CVmbidt-3ro&t=1329) 비어 있는데 여기다가 넣으면 되고
+- [22:11](https://youtube.com/watch?v=CVmbidt-3ro&t=1331) 이렇게 해서 다 넣으면 내용만 채워
+- [22:13](https://youtube.com/watch?v=CVmbidt-3ro&t=1333) 가지고 발행 요청 누르면은 실제로
+- [22:15](https://youtube.com/watch?v=CVmbidt-3ro&t=1335) 홈택스로 세금 계산서 발행이 자동으로
+- [22:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1337) 됩니다.
+- [22:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1337) >> 음.
+- [22:18](https://youtube.com/watch?v=CVmbidt-3ro&t=1338) >> 그래서
+- [22:19](https://youtube.com/watch?v=CVmbidt-3ro&t=1339) >> 세금 계산서 발행도 제가 안 해요.
+- [22:21](https://youtube.com/watch?v=CVmbidt-3ro&t=1341) 저희 직원들 담당 직원들이 각자
+- [22:23](https://youtube.com/watch?v=CVmbidt-3ro&t=1343) 알아서 합니다.
+- [22:24](https://youtube.com/watch?v=CVmbidt-3ro&t=1344) >> 네. 네. 오, 그렇군요. 저는 세금
+- [22:27](https://youtube.com/watch?v=CVmbidt-3ro&t=1347) 계산서 발행 API까지는 제가 연동해
+- [22:29](https://youtube.com/watch?v=CVmbidt-3ro&t=1349) 가지고 저는 또 쓰고는 있었는데이
+- [22:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1350) 통합 시스템이 저는 되게 좋다고
+- [22:32](https://youtube.com/watch?v=CVmbidt-3ro&t=1352) 여기는게 고객 관리가 어느 정도는
+- [22:34](https://youtube.com/watch?v=CVmbidt-3ro&t=1354) 명함 쪽에서 제대로 좀 되고 있고
+- [22:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1355) 프로젝트 관리도 되고 있어서 그
+- [22:38](https://youtube.com/watch?v=CVmbidt-3ro&t=1358) 통합된 데이터가 연동이 돼서 한꺼번에
+- [22:40](https://youtube.com/watch?v=CVmbidt-3ro&t=1360) 쫙쫙 불러와지고 딱 발행을 할 수
+- [22:42](https://youtube.com/watch?v=CVmbidt-3ro&t=1362) 있다는 거 자체가 굉장히 인산적이고
+- [22:44](https://youtube.com/watch?v=CVmbidt-3ro&t=1364) 너무 좋요. 그리고 회사 내부에 있는
+- [22:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1367) 소기업의 매출 관리 같은 거라든가
+- [22:49](https://youtube.com/watch?v=CVmbidt-3ro&t=1369) 지출 그런 트리킹 자체가 생각보다
+- [22:51](https://youtube.com/watch?v=CVmbidt-3ro&t=1371) 되게 어려운데 홈택스 연동을 하면
+- [22:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1373) 어느 정도 나오긴 하겠지만 그거를 또
+- [22:56](https://youtube.com/watch?v=CVmbidt-3ro&t=1376) 전체적으로 싹 관리를 해 가지고 우리
+- [22:58](https://youtube.com/watch?v=CVmbidt-3ro&t=1378) 회사의 영업 이익이 얼마고 이런
+- [23:00](https://youtube.com/watch?v=CVmbidt-3ro&t=1380) 것들을 계속 직원들도 트래킹을 할 수
+- [23:02](https://youtube.com/watch?v=CVmbidt-3ro&t=1382) 있다는 그런 오픈된 시스템을 만들어
+- [23:04](https://youtube.com/watch?v=CVmbidt-3ro&t=1384) 놨다는 거 자체가 되게 많이 배워야
+- [23:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1385) 될 부분인 거 같습니다. 네.
+- [23:07](https://youtube.com/watch?v=CVmbidt-3ro&t=1387) 요런으로 역시 언어더 레벨이십니다.
+- [23:09](https://youtube.com/watch?v=CVmbidt-3ro&t=1389) 대단하십니다. 아닙니다.
+- [23:11](https://youtube.com/watch?v=CVmbidt-3ro&t=1391) >> 네. 그러면 이제 그 외에 다른
+- [23:13](https://youtube.com/watch?v=CVmbidt-3ro&t=1393) 문서들이라든가 이런 것들도 뭐 추가
+- [23:15](https://youtube.com/watch?v=CVmbidt-3ro&t=1395) 개발할 예정이 좀 있을까요? 뭐 다른
+- [23:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1397) 기능들 같은 것들.
+- [23:18](https://youtube.com/watch?v=CVmbidt-3ro&t=1398) >> 네. 아, 여기에 이제 사내에서
+- [23:21](https://youtube.com/watch?v=CVmbidt-3ro&t=1401) 사용할 기능들이 계속 늘어날 건데
+- [23:24](https://youtube.com/watch?v=CVmbidt-3ro&t=1404) 원래 사실 회사에 재직명서 발급
+- [23:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1406) 시스템이라는게 저희 같은 작은 회사에
+- [23:27](https://youtube.com/watch?v=CVmbidt-3ro&t=1407) 있을 리가 없잖아요. 그냥 보통 워드
+- [23:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1410) 같은거나 엑셀 같은 걸로 대충 써
+- [23:32](https://youtube.com/watch?v=CVmbidt-3ro&t=1412) 가지고 날인해 가지고 주고 저희
+- [23:34](https://youtube.com/watch?v=CVmbidt-3ro&t=1414) 직원이 최근에 이제 대출을 좀
+- [23:36](https://youtube.com/watch?v=CVmbidt-3ro&t=1416) 받으려고 이사를 한다고 해서 재직
+- [23:39](https://youtube.com/watch?v=CVmbidt-3ro&t=1419) 증명서를 은행해서 달라고 해서 저한테
+- [23:41](https://youtube.com/watch?v=CVmbidt-3ro&t=1421) 발급해 달라고 하더라고요. 그래서
+- [23:43](https://youtube.com/watch?v=CVmbidt-3ro&t=1423) 처음에는 그냥 이걸 어떻게 하지
+- [23:45](https://youtube.com/watch?v=CVmbidt-3ro&t=1425) 하다가 이거 그냥 재직면서 발급
+- [23:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1427) 시스템 하나 만들면 되는 거 아니야?
+- [23:48](https://youtube.com/watch?v=CVmbidt-3ro&t=1428) 그래가지고 눌렀더니 제찍명서 이런
+- [23:51](https://youtube.com/watch?v=CVmbidt-3ro&t=1431) 식으로 쭉 나오니까 이거를
+- [23:52](https://youtube.com/watch?v=CVmbidt-3ro&t=1432) >> 쭉 딱 나오죠.
+- [23:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1433) >> 그 이거 만드는데 얼마 걸렸냐면은
+- [23:56](https://youtube.com/watch?v=CVmbidt-3ro&t=1436) 30초도 안 걸렸어요. 클로드코드
+- [23:58](https://youtube.com/watch?v=CVmbidt-3ro&t=1438) 열어 가지고 재직 증명서 밝은 메뉴
+- [24:01](https://youtube.com/watch?v=CVmbidt-3ro&t=1441) 만들어 줘. 이게 다거든요. 사실은
+- [24:04](https://youtube.com/watch?v=CVmbidt-3ro&t=1444) >> 맞아. 맞아.
+- [24:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1445) >> 어.
+- [24:06](https://youtube.com/watch?v=CVmbidt-3ro&t=1446) >> 그런 근데 이거 만드니까 그다음부터는
+- [24:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1448) 직원들이 저한테 제치진병서 발급해
+- [24:10](https://youtube.com/watch?v=CVmbidt-3ro&t=1450) 달라는 말을 안 하는 거죠.
+- [24:11](https://youtube.com/watch?v=CVmbidt-3ro&t=1451) >> 네. 아, 그렇죠. 그렇죠. 그러면은
+- [24:13](https://youtube.com/watch?v=CVmbidt-3ro&t=1453) 이런게 이제 1분짜리 업무이더라도
+- [24:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1457) 하나하나 하나가 이제 앞으로 계속
+- [24:19](https://youtube.com/watch?v=CVmbidt-3ro&t=1459) 쌓여 나갈 거고 저희 회사에는 뭐
+- [24:20](https://youtube.com/watch?v=CVmbidt-3ro&t=1460) 연차 이런 신청 개념이 없어서 그런
+- [24:23](https://youtube.com/watch?v=CVmbidt-3ro&t=1463) 매는 안 만들었지만 다른 회사에서
+- [24:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1466) 연차도 뭐 신청하고 관리하고 남은
+- [24:28](https://youtube.com/watch?v=CVmbidt-3ro&t=1468) 개수도 볼 수 있어야 되고 뭐
+- [24:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1470) 그렇다면은 그런 것도 시스템을 하나
+- [24:32](https://youtube.com/watch?v=CVmbidt-3ro&t=1472) 만들는 것이 그렇게 어렵지 않으니
+- [24:34](https://youtube.com/watch?v=CVmbidt-3ro&t=1474) 연차 관리도 만들고 뭐 급여도 여기서
+- [24:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1477) 볼 수 있게 만든다던가 뭐 등등등
+- [24:40](https://youtube.com/watch?v=CVmbidt-3ro&t=1480) 사실 할 수 있는게 굉장히 많겠죠.
+- [24:41](https://youtube.com/watch?v=CVmbidt-3ro&t=1481) 산 게시판도 만들고 공지 사항도
+- [24:43](https://youtube.com/watch?v=CVmbidt-3ro&t=1483) 만들고 등등 할 수 있고 저희 슬렉도
+- [24:46](https://youtube.com/watch?v=CVmbidt-3ro&t=1486) 연동해서 쓰고 있는 걸 한번 잠깐
+- [24:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1487) 보여 드리면은 제가 얼마 전에도 다음
+- [24:50](https://youtube.com/watch?v=CVmbidt-3ro&t=1490) 달부터 한 두 세 달 정도를 매주
+- [24:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1493) 강의를 막 하거나 이런게 좀
+- [24:54](https://youtube.com/watch?v=CVmbidt-3ro&t=1494) 있었어요.
+- [24:56](https://youtube.com/watch?v=CVmbidt-3ro&t=1496) >> 그래서 그거를 일정에다가 다 등록을
+- [24:57](https://youtube.com/watch?v=CVmbidt-3ro&t=1497) 해야 되는데 이미 일정 등록에 제가
+- [25:00](https://youtube.com/watch?v=CVmbidt-3ro&t=1500) 반복 기능을 만들어 놓긴 했어요.
+- [25:01](https://youtube.com/watch?v=CVmbidt-3ro&t=1501) 매주 뭐 해야 된다 이렇게.
+- [25:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1505) 한개월 정도 되는데 그 일정은 반복이
+- [25:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1508) 정확하게 매주 무슨요일이 아니라월수
+- [25:11](https://youtube.com/watch?v=CVmbidt-3ro&t=1511) 다음 주는 화목 그다음은 뭐 다
+- [25:13](https://youtube.com/watch?v=CVmbidt-3ro&t=1513) 비정형적으로 거기 스케줄에 맞게끔
+- [25:15](https://youtube.com/watch?v=CVmbidt-3ro&t=1515) 그냥 주 2회씩 막 섞어 가지고
+- [25:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1517) 일정을 줬더라고요. 그래서 안 되겠다
+- [25:20](https://youtube.com/watch?v=CVmbidt-3ro&t=1520) 싶어서 슬랙에서 할 수 있게 만들어
+- [25:23](https://youtube.com/watch?v=CVmbidt-3ro&t=1523) 놨거든요. 여기에 슬랙의 모든 채널에
+- [25:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1526) 저는 이제 윤비서라는 앱이 여기에
+- [25:28](https://youtube.com/watch?v=CVmbidt-3ro&t=1528) 있습니다. 윤비서를 초대할 수
+- [25:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1530) 있어요. 이렇게
+- [25:31](https://youtube.com/watch?v=CVmbidt-3ro&t=1531) >> 좋아요. 추가
+- [25:32](https://youtube.com/watch?v=CVmbidt-3ro&t=1532) >> 에이전트를 초대한 거네요. 네,
+- [25:34](https://youtube.com/watch?v=CVmbidt-3ro&t=1534) >> 맞아요. 그러면은요 에이전트가
+- [25:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1535) 자동으로 초대가 됐고요. 여기에다가
+- [25:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1537) 윤비서 호출해 가지고 내일부터 다음
+- [25:40](https://youtube.com/watch?v=CVmbidt-3ro&t=1540) 주 금요일까지 뭐 월수금만
+- [25:44](https://youtube.com/watch?v=CVmbidt-3ro&t=1544) 어 오후 3시에서 5시 테스트
+- [25:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1547) 일정이라고
+- [25:48](https://youtube.com/watch?v=CVmbidt-3ro&t=1548) 하나 잡아 줘. 장소는 뭐
+- [25:51](https://youtube.com/watch?v=CVmbidt-3ro&t=1551) 서울역이야. 뭐 이런 식으로 이야기를
+- [25:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1553) 하면은 알아서 윤비서가요 내용을
+- [25:56](https://youtube.com/watch?v=CVmbidt-3ro&t=1556) 분석해서 이렇게 완료되었습니다.
+- [25:59](https://youtube.com/watch?v=CVmbidt-3ro&t=1559) 그래서 5월 19일 23시에서
+- [26:01](https://youtube.com/watch?v=CVmbidt-3ro&t=1561) 5시라고 되어 있고 이런 것도
+- [26:03](https://youtube.com/watch?v=CVmbidt-3ro&t=1563) 가능해요. 그래 잘했어. 테스트였으니
+- [26:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1565) 이제 모두 삭제. 이러면 이제 삭제는
+- [26:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1568) 좀 민감하게 반응하게끔 제가 설정을
+- [26:10](https://youtube.com/watch?v=CVmbidt-3ro&t=1570) 해 놔서 삭제를 할 때에는 바로
+- [26:13](https://youtube.com/watch?v=CVmbidt-3ro&t=1573) 삭제를 하지 않고 얘한테 허락을 좀
+- [26:15](https://youtube.com/watch?v=CVmbidt-3ro&t=1575) 받으라고 렇게 해놨어요. 그래서
+- [26:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1577) 윤비서 해 놓고 오늘 할 일 뭐
+- [26:19](https://youtube.com/watch?v=CVmbidt-3ro&t=1579) 아니면은 다음 주 할 일 알려 줘.
+- [26:21](https://youtube.com/watch?v=CVmbidt-3ro&t=1581) 뭐 이런 것들 오늘 할 일 정리 좀
+- [26:23](https://youtube.com/watch?v=CVmbidt-3ro&t=1583) 해 줘. 알려 줘 봐. 예. 그러면
+- [26:25](https://youtube.com/watch?v=CVmbidt-3ro&t=1585) 다 이게 윤비서랑 연결되어 있다
+- [26:27](https://youtube.com/watch?v=CVmbidt-3ro&t=1587) 보니까 윤비서를 홈페이지에서만
+- [26:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1590) 썼었는데 이게 생각보다 들어가서 보는
+- [26:32](https://youtube.com/watch?v=CVmbidt-3ro&t=1592) 것조차도 좀 귀찮아지더라고요. 어떻게
+- [26:34](https://youtube.com/watch?v=CVmbidt-3ro&t=1594) 하면은 외부에서나 아니면 핸드폰으로
+- [26:36](https://youtube.com/watch?v=CVmbidt-3ro&t=1596) 볼 때나 요거 슬랙으로 채팅할 때
+- [26:39](https://youtube.com/watch?v=CVmbidt-3ro&t=1599) 사람들이랑 대화하다가 하면 좋을까?
+- [26:41](https://youtube.com/watch?v=CVmbidt-3ro&t=1601) 서 그리고 그냥 여기서 대화를 막
+- [26:43](https://youtube.com/watch?v=CVmbidt-3ro&t=1603) 하다가 내일 우리 볼링 칠래 막
+- [26:46](https://youtube.com/watch?v=CVmbidt-3ro&t=1606) 이러면은 어 그럴까 하면은 이거를
+- [26:48](https://youtube.com/watch?v=CVmbidt-3ro&t=1608) 만약에 일정으로 넣으려면은 다시 또
+- [26:50](https://youtube.com/watch?v=CVmbidt-3ro&t=1610) 윤비서가 가지고 어디에 가서 볼링
+- [26:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1613) 치기 뭐 이렇게 해야 되잖아요. 근데
+- [26:55](https://youtube.com/watch?v=CVmbidt-3ro&t=1615) 이제 이런 거를 여기에 쓰레드가
+- [26:57](https://youtube.com/watch?v=CVmbidt-3ro&t=1617) 있으니 쓰레드에서 바로 그냥 윤비서
+- [26:59](https://youtube.com/watch?v=CVmbidt-3ro&t=1619) 어 내일 저녁 8시 볼링 일정해
+- [27:03](https://youtube.com/watch?v=CVmbidt-3ro&t=1623) 하면은 그런 것들이 연동이 쉽게 쉽게
+- [27:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1625) 되니까 슬랙에서 에이전트를 하나 넣어
+- [27:07](https://youtube.com/watch?v=CVmbidt-3ro&t=1627) 두면은 윤비서랑 연결하는게 생각보다
+- [27:10](https://youtube.com/watch?v=CVmbidt-3ro&t=1630) 굉장히 좀 편리하더라고요.
+- [27:11](https://youtube.com/watch?v=CVmbidt-3ro&t=1631) >> 그 고객의 데이터베이스도 불러올 수
+- [27:13](https://youtube.com/watch?v=CVmbidt-3ro&t=1633) 있나요?
+- [27:14](https://youtube.com/watch?v=CVmbidt-3ro&t=1634) >> 어 다 불러올 수 있어요. 그러니까
+- [27:15](https://youtube.com/watch?v=CVmbidt-3ro&t=1635) 그게 결국에는 저희가 이오고를 연결할
+- [27:18](https://youtube.com/watch?v=CVmbidt-3ro&t=1638) 수 있는 기능을 다 만들기만 하면
+- [27:20](https://youtube.com/watch?v=CVmbidt-3ro&t=1640) 되는 거거든요.
+- [27:22](https://youtube.com/watch?v=CVmbidt-3ro&t=1642) >> 네. 그래서 고객이고 뭐 매출이고
+- [27:23](https://youtube.com/watch?v=CVmbidt-3ro&t=1643) 매출 분석해줘도 할 수 있는 거고
+- [27:25](https://youtube.com/watch?v=CVmbidt-3ro&t=1645) 여기에 있는 모든 메뉴에 모든
+- [27:27](https://youtube.com/watch?v=CVmbidt-3ro&t=1647) 데이터를 다 불러올 수 있어요네.
+- [27:29](https://youtube.com/watch?v=CVmbidt-3ro&t=1649) 싫어하면은 어 직원 관리에서 예를
+- [27:31](https://youtube.com/watch?v=CVmbidt-3ro&t=1651) 들어서 저희는 다 공개를 해서
+- [27:33](https://youtube.com/watch?v=CVmbidt-3ro&t=1653) 상관없지만 회사마다 저 사람 급여
+- [27:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1655) 알려줘 좀 이러면 안 되잖아요.
+- [27:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1657) >> 그런 정보라든가 뭐 혹은 뭐 회사
+- [27:39](https://youtube.com/watch?v=CVmbidt-3ro&t=1659) 내에서 비공개 데이터가 있어서 이건
+- [27:42](https://youtube.com/watch?v=CVmbidt-3ro&t=1662) 경영진만 봐야 되는 자료가 있다.
+- [27:44](https://youtube.com/watch?v=CVmbidt-3ro&t=1664) 그러면 아이디별로 그걸 분리해서
+- [27:46](https://youtube.com/watch?v=CVmbidt-3ro&t=1666) 누구는 뭘 볼 수 있고 어디는 뭘 볼
+- [27:49](https://youtube.com/watch?v=CVmbidt-3ro&t=1669) 수 없게끔 따로 분리해서 설정하는
+- [27:51](https://youtube.com/watch?v=CVmbidt-3ro&t=1671) 것도 충분히 가능하기 때문에 윤비서가
+- [27:54](https://youtube.com/watch?v=CVmbidt-3ro&t=1674) 어느 채널에서는 어떤 것까지만 되고
+- [27:57](https://youtube.com/watch?v=CVmbidt-3ro&t=1677) 어느 채널에서는 뭐가 안 되고
+- [27:59](https://youtube.com/watch?v=CVmbidt-3ro&t=1679) >> 이런 것들도 만들 수가 있죠. 아마
+- [28:00](https://youtube.com/watch?v=CVmbidt-3ro&t=1680) 아무튼 그런 여러 가지가 슬랙으로
+- [28:02](https://youtube.com/watch?v=CVmbidt-3ro&t=1682) 연동해서 좀 할 수 있다라고 볼 수가
+- [28:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1685) 있고요. 볼링 여기다 추가해 줬네요.
+- [28:07](https://youtube.com/watch?v=CVmbidt-3ro&t=1687) 얘가 볼링이라고.
+- [28:07](https://youtube.com/watch?v=CVmbidt-3ro&t=1687) >> 아, 네. 맞네요. 슬랙은 뭐 그냥
+- [28:09](https://youtube.com/watch?v=CVmbidt-3ro&t=1689) 간단하게만 얘기하면 좋을 것 같고
+- [28:11](https://youtube.com/watch?v=CVmbidt-3ro&t=1691) 클로드 코드로는 우리가 무엇을 또 할
+- [28:13](https://youtube.com/watch?v=CVmbidt-3ro&t=1693) 수가 있었을까요? 여기서
+- [28:14](https://youtube.com/watch?v=CVmbidt-3ro&t=1694) >> 클로드코드는 저희가 지금 최근에
+- [28:16](https://youtube.com/watch?v=CVmbidt-3ro&t=1696) 여기에 윤자동를 하나 만들고
+- [28:19](https://youtube.com/watch?v=CVmbidt-3ro&t=1699) 있습니다. 클로드 코드 기반에서의
+- [28:21](https://youtube.com/watch?v=CVmbidt-3ro&t=1701) 업무를 할 수 있는 환경을 아마
+- [28:22](https://youtube.com/watch?v=CVmbidt-3ro&t=1702) 조시님도 구축을 하고 계시는 걸로
+- [28:25](https://youtube.com/watch?v=CVmbidt-3ro&t=1705) 알고 있고 저도 이걸로 지금 다
+- [28:27](https://youtube.com/watch?v=CVmbidt-3ro&t=1707) 구축을 하고 있는 상태인데요.
+- [28:29](https://youtube.com/watch?v=CVmbidt-3ro&t=1709) 여기서도 윤비서랑도 연결을 하고 제
+- [28:32](https://youtube.com/watch?v=CVmbidt-3ro&t=1712) 메일도 다 연결하고 드라이브도 연결을
+- [28:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1715) 하고 그 외에 모든 것들을 다 연결을
+- [28:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1717) 해서 여기에서만 모든 일을 다 처리할
+- [28:39](https://youtube.com/watch?v=CVmbidt-3ro&t=1719) 수 있게끔 하고 있는데 아무래도이
+- [28:42](https://youtube.com/watch?v=CVmbidt-3ro&t=1722) 사이트에서 하는 거는 UI가 좀
+- [28:44](https://youtube.com/watch?v=CVmbidt-3ro&t=1724) 깔끔하고 왔다 갔다 메뉴에서 보기도
+- [28:46](https://youtube.com/watch?v=CVmbidt-3ro&t=1726) 좋고 그리고 되게 명확하게 확인할 수
+- [28:49](https://youtube.com/watch?v=CVmbidt-3ro&t=1729) 있고 뭐 이런 것들이 굉장히 좀
+- [28:50](https://youtube.com/watch?v=CVmbidt-3ro&t=1730) 편리한 반면에 예를 들어서 대한서를
+- [28:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1733) 쓴다던가 어떤 작문의 기획을 해야
+- [28:55](https://youtube.com/watch?v=CVmbidt-3ro&t=1735) 된다던가 아니면 매출을 좀
+- [28:57](https://youtube.com/watch?v=CVmbidt-3ro&t=1737) 분석한다던가 좀 더 에이전틱한 일이
+- [29:00](https://youtube.com/watch?v=CVmbidt-3ro&t=1740) 필요한 거. 이런 워크플로우 성격이
+- [29:02](https://youtube.com/watch?v=CVmbidt-3ro&t=1742) 강한 거는 어 홈페이지 같은 ERP
+- [29:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1745) 사스를 만들어서 하는 것이 정확하고
+- [29:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1748) 빠르고 좋지만 시간이 좀 걸리더라도
+- [29:11](https://youtube.com/watch?v=CVmbidt-3ro&t=1751) 에이전트를 잘 더 활용해야 되는
+- [29:13](https://youtube.com/watch?v=CVmbidt-3ro&t=1753) 경우들은요 클로드 코드 안에서 좀
+- [29:16](https://youtube.com/watch?v=CVmbidt-3ro&t=1756) 하고 있고요. 여기에서 제일 많이
+- [29:18](https://youtube.com/watch?v=CVmbidt-3ro&t=1758) 하는게 뭐 이메일 같은 것들을 답장을
+- [29:21](https://youtube.com/watch?v=CVmbidt-3ro&t=1761) 얘한테 직접 시키거나 이런 것들도
+- [29:23](https://youtube.com/watch?v=CVmbidt-3ro&t=1763) 최근에는 거의 다 클로드 코드로 하고
+- [29:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1766) 있어요. 그래서 이메일 오면은
+- [29:28](https://youtube.com/watch?v=CVmbidt-3ro&t=1768) 여기에서 자동 분류를 이렇게 쫙 해
+- [29:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1770) 주거든요. 자동 분류, 자동 분류,
+- [29:32](https://youtube.com/watch?v=CVmbidt-3ro&t=1772) 처리 처리, 답장 완료, 조치피로
+- [29:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1775) 이런 것들도 클로드 코드가 이렇게 해
+- [29:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1777) 줘요. 여기에서 뭐 오늘 온 이메일
+- [29:40](https://youtube.com/watch?v=CVmbidt-3ro&t=1780) 분류 좀 해 줘. 이것도 자동으로
+- [29:42](https://youtube.com/watch?v=CVmbidt-3ro&t=1782) 돌아가게 하는 스케줄러를 따로 만들
+- [29:45](https://youtube.com/watch?v=CVmbidt-3ro&t=1785) 수도 있고 여기에 이메일 분류 스킬
+- [29:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1787) 같은거나 에이전트를 제가 만들어 놨기
+- [29:49](https://youtube.com/watch?v=CVmbidt-3ro&t=1789) 때문에 이메일이 새로 왔으면은 답장이
+- [29:51](https://youtube.com/watch?v=CVmbidt-3ro&t=1791) 필요한 건지 필요 없는 건지 이런
+- [29:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1793) 것들을 분류해서 사람이 해야 되는
+- [29:55](https://youtube.com/watch?v=CVmbidt-3ro&t=1795) 업무를 좀 더 최소화시키려고
+- [29:58](https://youtube.com/watch?v=CVmbidt-3ro&t=1798) 요거로 만들어 놔서 쓰고 있고 그러다
+- [30:00](https://youtube.com/watch?v=CVmbidt-3ro&t=1800) 보니까 이메일이 좀 많이 와서 저도
+- [30:03](https://youtube.com/watch?v=CVmbidt-3ro&t=1803) 되게 스트레스를 많이 받았는데 이런
+- [30:04](https://youtube.com/watch?v=CVmbidt-3ro&t=1804) 것들을 어 최대한 좀 활용을 해서 안
+- [30:07](https://youtube.com/watch?v=CVmbidt-3ro&t=1807) 봐도 되는 이메일들은 좀 안 보고
+- [30:09](https://youtube.com/watch?v=CVmbidt-3ro&t=1809) 그리고 답자 장을 그냥 간단하게 해야
+- [30:12](https://youtube.com/watch?v=CVmbidt-3ro&t=1812) 되는 것들은 얘가 답장을 할 수 있게
+- [30:14](https://youtube.com/watch?v=CVmbidt-3ro&t=1814) 누군가가 물어보면은 그거에 대해서
+- [30:16](https://youtube.com/watch?v=CVmbidt-3ro&t=1816) 클로드 코드가 저한테 다시 어떻게
+- [30:19](https://youtube.com/watch?v=CVmbidt-3ro&t=1819) 할까요? 답장할까요? 사람의 결정이
+- [30:22](https://youtube.com/watch?v=CVmbidt-3ro&t=1822) 필요한 거니까 그러면 이거를 한다고
+- [30:24](https://youtube.com/watch?v=CVmbidt-3ro&t=1824) 해 아니면은 미안하다고 거절한다고
+- [30:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1826) 해라고 해주면 그걸 또 저의 토넷
+- [30:29](https://youtube.com/watch?v=CVmbidt-3ro&t=1829) 매너에 맞게끔 그런 것들하고 실제
+- [30:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1830) 답장까지도 다 하고 있습니다. 그렇게
+- [30:32](https://youtube.com/watch?v=CVmbidt-3ro&t=1832) 해서 이메일 처리하는 시간을 많이
+- [30:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1835) 줄였어요.
+- [30:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1835) >> 진짜 오퍼레이션 시스템이네요.
+- [30:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1837) 이메일이 만약에 온다고 하면은 하루에
+- [30:39](https://youtube.com/watch?v=CVmbidt-3ro&t=1839) 뭐 9시마다 뭐 서머리를 보낸다라고
+- [30:42](https://youtube.com/watch?v=CVmbidt-3ro&t=1842) 했었을 때 그럼 거기서 네가 직접
+- [30:45](https://youtube.com/watch?v=CVmbidt-3ro&t=1845) 답장할 수 있는 것들은 직접 답장해
+- [30:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1847) 이렇게 얘기해 버리면 사실 답장 다
+- [30:48](https://youtube.com/watch?v=CVmbidt-3ro&t=1848) 돼 버리는 거 아니에요. 그죠?
+- [30:49](https://youtube.com/watch?v=CVmbidt-3ro&t=1849) 맞아요.
+- [30:51](https://youtube.com/watch?v=CVmbidt-3ro&t=1851) >> 이런 것도 하고요. 그리고 뭔가
+- [30:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1853) 여기에 정보가 다 들어 있다 보니까
+- [30:56](https://youtube.com/watch?v=CVmbidt-3ro&t=1856) 저는 얘한테 많이 물어. 대화를 많이
+- [30:58](https://youtube.com/watch?v=CVmbidt-3ro&t=1858) 해요. 그래서 지난주와 이번 주의
+- [31:01](https://youtube.com/watch?v=CVmbidt-3ro&t=1861) 일정을 전체적으로 분석해서 내가 이번
+- [31:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1865) 주에 얼마나 많은 일을 했는지 어
+- [31:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1868) 컨디션 막 체크 좀 해 줘 봐. 뭐
+- [31:10](https://youtube.com/watch?v=CVmbidt-3ro&t=1870) 이렇게 체크해 주고 다음 주 일정은
+- [31:13](https://youtube.com/watch?v=CVmbidt-3ro&t=1873) 어떤지 더 줄여야 할지 뭐 이런
+- [31:15](https://youtube.com/watch?v=CVmbidt-3ro&t=1875) 것들을 좀 조언해 줘. 약간 이런
+- [31:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1877) 컨설턴트의 느낌으로 저는 많이 활용을
+- [31:19](https://youtube.com/watch?v=CVmbidt-3ro&t=1879) 하고요. 그리고 여기 매출 분석도
+- [31:22](https://youtube.com/watch?v=CVmbidt-3ro&t=1882) 저는 시켜요. 우리 회사 매출이 지금
+- [31:24](https://youtube.com/watch?v=CVmbidt-3ro&t=1884) 이번 주는 어땠어? 그리고 오늘은
+- [31:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1886) 어땠어? 혹은 다음 달에 매출을 내가
+- [31:29](https://youtube.com/watch?v=CVmbidt-3ro&t=1889) 두 배 올리고 싶어. 어떻게 하면
+- [31:30](https://youtube.com/watch?v=CVmbidt-3ro&t=1890) 좋을지 네가 전략 좀 짜 줘 봐.
+- [31:33](https://youtube.com/watch?v=CVmbidt-3ro&t=1893) 그런 정보들이 여기 윤비서에 이미 다
+- [31:35](https://youtube.com/watch?v=CVmbidt-3ro&t=1895) 들어가 있다 보니까 여기에 있는 모든
+- [31:37](https://youtube.com/watch?v=CVmbidt-3ro&t=1897) 내용을 다 분석해 주고 심지어이
+- [31:41](https://youtube.com/watch?v=CVmbidt-3ro&t=1901) 록을 또 분석해서 내가 말하는 말투의
+- [31:44](https://youtube.com/watch?v=CVmbidt-3ro&t=1904) 문제도 좀 찾아줄래? 이런 것도 저는
+- [31:46](https://youtube.com/watch?v=CVmbidt-3ro&t=1906) 많이 해요. 그래서 내가 말하는
+- [31:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1907) 말에서 자주 쓰는 습관어가 뭐가
+- [31:49](https://youtube.com/watch?v=CVmbidt-3ro&t=1909) 있다던가 혹은 미팅을 했는데 클로징이
+- [31:52](https://youtube.com/watch?v=CVmbidt-3ro&t=1912) 안 됐어요. 저는 계약이 안 됐으면은
+- [31:54](https://youtube.com/watch?v=CVmbidt-3ro&t=1914) 제가 보냈던 제한서와 그리고 미팅했던
+- [31:58](https://youtube.com/watch?v=CVmbidt-3ro&t=1918) 미팅록을 크로드 코드한테 다 던진
+- [32:00](https://youtube.com/watch?v=CVmbidt-3ro&t=1920) 다음에 계약이 안 됐는데 그 이유가
+- [32:03](https://youtube.com/watch?v=CVmbidt-3ro&t=1923) 뭔지 분석하고 다음 다른 미팅 때
+- [32:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1925) 계약이 성공적으로 되려면 어떤 전략을
+- [32:08](https://youtube.com/watch?v=CVmbidt-3ro&t=1928) 펼쳐야 하는지 도와줘. 좀 약간 전략
+- [32:11](https://youtube.com/watch?v=CVmbidt-3ro&t=1931) 기획의 영역으로 좀 저는 또 활용을
+- [32:14](https://youtube.com/watch?v=CVmbidt-3ro&t=1934) 많이 하고 있습니다.
+- [32:15](https://youtube.com/watch?v=CVmbidt-3ro&t=1935) >> 이게 진짜 중요하다고 여기는 포인트가
+- [32:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1937) 데이터를 중앙 집중화를 시켰다라는게
+- [32:19](https://youtube.com/watch?v=CVmbidt-3ro&t=1939) 정말 끼인 거 같아요. 초기에는
+- [32:22](https://youtube.com/watch?v=CVmbidt-3ro&t=1942) 프로젝트가 계속 들어오니까 그거
+- [32:24](https://youtube.com/watch?v=CVmbidt-3ro&t=1944) 자체로 먼저 시작이 됐다가 내부 산내
+- [32:26](https://youtube.com/watch?v=CVmbidt-3ro&t=1946) 회의록과 고객 관련된 정보들을 또
+- [32:29](https://youtube.com/watch?v=CVmbidt-3ro&t=1949) 하나의 모든 데이터베이스로 다 밀어
+- [32:31](https://youtube.com/watch?v=CVmbidt-3ro&t=1951) 넣고 그걸 가지고 모든 내용들을
+- [32:33](https://youtube.com/watch?v=CVmbidt-3ro&t=1953) 클로드 코드가 연결해서 꺼내서 쓸 수
+- [32:36](https://youtube.com/watch?v=CVmbidt-3ro&t=1956) 있게끔 해 놓는 형태로 진열을 시켜
+- [32:39](https://youtube.com/watch?v=CVmbidt-3ro&t=1959) 가지고 클로드 코드를 어 우리 회사의
+- [32:41](https://youtube.com/watch?v=CVmbidt-3ro&t=1961) 페어링 에이전트와 같이 해 가지고
+- [32:43](https://youtube.com/watch?v=CVmbidt-3ro&t=1963) 여러 가지 조언을 구하고 경영 관련된
+- [32:45](https://youtube.com/watch?v=CVmbidt-3ro&t=1965) 부분들을 좀 더 개선을 하는 형태로
+- [32:47](https://youtube.com/watch?v=CVmbidt-3ro&t=1967) 만들었다고 하는 거 자체가 AI
+- [32:49](https://youtube.com/watch?v=CVmbidt-3ro&t=1969) 네이티브 기업이신 거 같아요. 이미
+- [32:51](https://youtube.com/watch?v=CVmbidt-3ro&t=1971) 기본적으로 진짜로 이런 페어
+- [32:53](https://youtube.com/watch?v=CVmbidt-3ro&t=1973) 에이전트를 저렇게 활용을 했다는 거
+- [32:55](https://youtube.com/watch?v=CVmbidt-3ro&t=1975) 자체는 이미 기본 사항들이 다
+- [32:58](https://youtube.com/watch?v=CVmbidt-3ro&t=1978) 완벽하게 구현이 됐다는 거 같고 역시
+- [33:00](https://youtube.com/watch?v=CVmbidt-3ro&t=1980) 제일 핵심은 조직에서 AX를 하기
+- [33:02](https://youtube.com/watch?v=CVmbidt-3ro&t=1982) 위해선 저런 데이터 중앙 집중화를 잘
+- [33:05](https://youtube.com/watch?v=CVmbidt-3ro&t=1985) 시켜서 물론 보안 그런 부분도 상당히
+- [33:07](https://youtube.com/watch?v=CVmbidt-3ro&t=1987) 중요하긴 하겠지만 그걸 기반으로
+- [33:10](https://youtube.com/watch?v=CVmbidt-3ro&t=1990) AI를 활용하데서 출발하는 것이
+- [33:12](https://youtube.com/watch?v=CVmbidt-3ro&t=1992) 핵심이다라는 생각이 들었었습니다.
+- [33:14](https://youtube.com/watch?v=CVmbidt-3ro&t=1994) >> 아 맞 데이터가 모여 있어야 된다.
+- [33:17](https://youtube.com/watch?v=CVmbidt-3ro&t=1997) 컨텍스트가 중요하다라는게 정말 저는
+- [33:20](https://youtube.com/watch?v=CVmbidt-3ro&t=2000) 중요한 거 같아요. 데이터가 없으면은
+- [33:22](https://youtube.com/watch?v=CVmbidt-3ro&t=2002) 결국은 다 말로 매번 해 줘야 되고
+- [33:25](https://youtube.com/watch?v=CVmbidt-3ro&t=2005) 그걸 요약해서 전달하는 것은 항상
+- [33:27](https://youtube.com/watch?v=CVmbidt-3ro&t=2007) 컨텍스트가 일부 누락이 되고 그러면
+- [33:29](https://youtube.com/watch?v=CVmbidt-3ro&t=2009) 딱 맞는 어떤 에이전트에 도움을 받을
+- [33:32](https://youtube.com/watch?v=CVmbidt-3ro&t=2012) 수가 없는데 그냥 모든 대화가 여기에
+- [33:34](https://youtube.com/watch?v=CVmbidt-3ro&t=2014) 다 들어 있으면은 그게 어느 정도
+- [33:36](https://youtube.com/watch?v=CVmbidt-3ro&t=2016) 많은 도움을 받을 수 있다 보니까
+- [33:38](https://youtube.com/watch?v=CVmbidt-3ro&t=2018) 저는 굉장히 좋은 거 같습니다.
+- [33:39](https://youtube.com/watch?v=CVmbidt-3ro&t=2019) 그러니까 지금 고객 관리가 어떻게든
+- [33:41](https://youtube.com/watch?v=CVmbidt-3ro&t=2021) 저렇게 데이터베이스 화가 되어 있고
+- [33:43](https://youtube.com/watch?v=CVmbidt-3ro&t=2023) AI로 꺼내서 그 어떻게 하면 나는
+- [33:45](https://youtube.com/watch?v=CVmbidt-3ro&t=2025) 또 저걸 또 창의적으로 또 자동화를
+- [33:47](https://youtube.com/watch?v=CVmbidt-3ro&t=2027) 하지? 이런 영감 같은 것들이 많이
+- [33:49](https://youtube.com/watch?v=CVmbidt-3ro&t=2029) 떠오르는 녹화였던 거 같아요. 이번
+- [33:51](https://youtube.com/watch?v=CVmbidt-3ro&t=2031) 녹화는. 근데제가 생했을 때는 저렇게
+- [33:54](https://youtube.com/watch?v=CVmbidt-3ro&t=2034) 이제 데이터를 많이 모아놨으면 이제
+- [33:56](https://youtube.com/watch?v=CVmbidt-3ro&t=2036) 우리가 해야 될 일은 뭐 회의록을
+- [33:58](https://youtube.com/watch?v=CVmbidt-3ro&t=2038) 통해서 마케터라고 하면은 이제
+- [34:00](https://youtube.com/watch?v=CVmbidt-3ro&t=2040) 직원들이이 데이터 가지고 리드를 좀
+- [34:03](https://youtube.com/watch?v=CVmbidt-3ro&t=2043) 더 확보할 수 있는 방법이라든가 이런
+- [34:05](https://youtube.com/watch?v=CVmbidt-3ro&t=2045) 것들을 좀 더 연구를 하게 될 거
+- [34:06](https://youtube.com/watch?v=CVmbidt-3ro&t=2046) 같고 아니면 재무를 담당하는 직원들
+- [34:09](https://youtube.com/watch?v=CVmbidt-3ro&t=2049) 같은 경우에는 저 매출 관리 같은
+- [34:10](https://youtube.com/watch?v=CVmbidt-3ro&t=2050) 것들을 데이터를 연동해서 아 저희가
+- [34:12](https://youtube.com/watch?v=CVmbidt-3ro&t=2052) 다음 달에는 영업 이익이 이만큼
+- [34:14](https://youtube.com/watch?v=CVmbidt-3ro&t=2054) 나오니까 이거를 이렇게 가는데 목표를
+- [34:15](https://youtube.com/watch?v=CVmbidt-3ro&t=2055) 잡으면 더 좋겠습니다. 뭐 KPI를
+- [34:17](https://youtube.com/watch?v=CVmbidt-3ro&t=2057) 제안을 한다든가 약간 그렇게 해
+- [34:19](https://youtube.com/watch?v=CVmbidt-3ro&t=2059) 가지고 조직적으로이
+- [34:21](https://youtube.com/watch?v=CVmbidt-3ro&t=2061) 멤버분들이 이걸 가지고 쓸 수 있는
+- [34:23](https://youtube.com/watch?v=CVmbidt-3ro&t=2063) 방안 같은 것들을 뭐 가이드라인화
+- [34:25](https://youtube.com/watch?v=CVmbidt-3ro&t=2065) 한다든가 아니면 교육을 한다든가 이런
+- [34:27](https://youtube.com/watch?v=CVmbidt-3ro&t=2067) 것들도 좀 떠오르는게 참 재밌는 거
+- [34:29](https://youtube.com/watch?v=CVmbidt-3ro&t=2069) 같아요.
+- [34:30](https://youtube.com/watch?v=CVmbidt-3ro&t=2070) >> 맞아요.
+- [34:31](https://youtube.com/watch?v=CVmbidt-3ro&t=2071) >> 저도 2, 3년 전이었어도 이걸
+- [34:33](https://youtube.com/watch?v=CVmbidt-3ro&t=2073) 만드는데 리소스가 너무 많이
+- [34:34](https://youtube.com/watch?v=CVmbidt-3ro&t=2074) 들어가니까 상상이야 누구나 하잖아요.
+- [34:36](https://youtube.com/watch?v=CVmbidt-3ro&t=2076) 이런 거 있으면 좋겠다. 근데 이제
+- [34:39](https://youtube.com/watch?v=CVmbidt-3ro&t=2079) 만들 엄두가 안 나서 못 만들어
+- [34:41](https://youtube.com/watch?v=CVmbidt-3ro&t=2081) 왔는데 최근에 AI의 성능들이 워낙
+- [34:43](https://youtube.com/watch?v=CVmbidt-3ro&t=2083) 좋아지다 보니까 이런 것들이 당장
+- [34:46](https://youtube.com/watch?v=CVmbidt-3ro&t=2086) 만들면 만들 수 있는 시대가 되었으니
+- [34:49](https://youtube.com/watch?v=CVmbidt-3ro&t=2089) 여기에 필요로 한 서비스들 사스들을
+- [34:52](https://youtube.com/watch?v=CVmbidt-3ro&t=2092) 구독을 지금 최근 들어서 계속
+- [34:54](https://youtube.com/watch?v=CVmbidt-3ro&t=2094) 해지하고 있는 거 같아요.
+- [34:55](https://youtube.com/watch?v=CVmbidt-3ro&t=2095) >> 그 맞아요. 만들면 되는 시대가
+- [34:56](https://youtube.com/watch?v=CVmbidt-3ro&t=2096) 됐죠. 사실 많은 사스 회사들에서
+- [34:59](https://youtube.com/watch?v=CVmbidt-3ro&t=2099) 제공했었던 여러p 기능들이 있어요.
+- [35:02](https://youtube.com/watch?v=CVmbidt-3ro&t=2102) 일단 뭐 견적서 아니면 세금 계산서
+- [35:04](https://youtube.com/watch?v=CVmbidt-3ro&t=2104) 이런 것들은 워낙 맨날 하다 보니까
+- [35:07](https://youtube.com/watch?v=CVmbidt-3ro&t=2107) 그런 그 별도의 ERP 서비스들이 좀
+- [35:09](https://youtube.com/watch?v=CVmbidt-3ro&t=2109) 있었는데 사실 요즘 오픈된 API도
+- [35:11](https://youtube.com/watch?v=CVmbidt-3ro&t=2111) 되게 많잖아요. 그 견 견적서는
+- [35:13](https://youtube.com/watch?v=CVmbidt-3ro&t=2113) 사실은 거의 회사에서 정해진 포맷대로
+- [35:15](https://youtube.com/watch?v=CVmbidt-3ro&t=2115) 그냥 개발을 하고 싶다라고 하면은
+- [35:16](https://youtube.com/watch?v=CVmbidt-3ro&t=2116) 솔직히 말하면 1분 만에 견적서
+- [35:18](https://youtube.com/watch?v=CVmbidt-3ro&t=2118) 메뉴는 개발할 수 있고 세금 계산서
+- [35:20](https://youtube.com/watch?v=CVmbidt-3ro&t=2120) 같은 경우에는 API가 워낙 좋은게
+- [35:21](https://youtube.com/watch?v=CVmbidt-3ro&t=2121) 또 많으니까 금방 또 할 수 있고
+- [35:23](https://youtube.com/watch?v=CVmbidt-3ro&t=2123) 솔직히 말씀드리면 이제 나중에는
+- [35:24](https://youtube.com/watch?v=CVmbidt-3ro&t=2124) 윤자동 님도 자동할 수 있을 것
+- [35:26](https://youtube.com/watch?v=CVmbidt-3ro&t=2126) 같아요. 무슨 말이냐면네 왜냐면
+- [35:28](https://youtube.com/watch?v=CVmbidt-3ro&t=2128) 그거를 이제 그런 지시 사항 같은
+- [35:30](https://youtube.com/watch?v=CVmbidt-3ro&t=2130) 것들이 이제 월마다 있을 수가
+- [35:31](https://youtube.com/watch?v=CVmbidt-3ro&t=2131) 있잖아요. 월 결산이라든가 이런
+- [35:33](https://youtube.com/watch?v=CVmbidt-3ro&t=2133) 것들이 반복적으로 발생할 경우에는
+- [35:35](https://youtube.com/watch?v=CVmbidt-3ro&t=2135) 크론잡으로 월에 한 번씩 딱 그냥
+- [35:38](https://youtube.com/watch?v=CVmbidt-3ro&t=2138) 이메일을 뿌려 버리는 거죠. AI가
+- [35:39](https://youtube.com/watch?v=CVmbidt-3ro&t=2139) 딱 보고 이제 각자의 멤버들을 태깅을
+- [35:41](https://youtube.com/watch?v=CVmbidt-3ro&t=2141) 해 가지고 이런 형태로 좀 더 개선을
+- [35:43](https://youtube.com/watch?v=CVmbidt-3ro&t=2143) 하면 더 좋겠다라고 하는 형태로 좀
+- [35:45](https://youtube.com/watch?v=CVmbidt-3ro&t=2145) 할 수 있지 않나는 생각도
+- [35:47](https://youtube.com/watch?v=CVmbidt-3ro&t=2147) 들었었습니다.
+- [35:47](https://youtube.com/watch?v=CVmbidt-3ro&t=2147) >> 저희 윤비서가 아침마다 이렇게 일정을
+- [35:50](https://youtube.com/watch?v=CVmbidt-3ro&t=2150) 알려줍니다.
+- [35:51](https://youtube.com/watch?v=CVmbidt-3ro&t=2151) >> 아
+- [35:52](https://youtube.com/watch?v=CVmbidt-3ro&t=2152) >> 아침 7시에 항상 알려주고요.
+- [35:54](https://youtube.com/watch?v=CVmbidt-3ro&t=2154) >> 개발팀에 매일매일 업무를 어떤 걸
+- [35:56](https://youtube.com/watch?v=CVmbidt-3ro&t=2156) 했는지를 좀 알려 달라. 그렇게
+- [35:59](https://youtube.com/watch?v=CVmbidt-3ro&t=2159) 얘기를 했더니 원래는 사람이 했었는데
+- [36:01](https://youtube.com/watch?v=CVmbidt-3ro&t=2161) 이게 1일 진행라고 하면서 저녁
+- [36:04](https://youtube.com/watch?v=CVmbidt-3ro&t=2164) 6시가 되면은 항상 저희가 했던
+- [36:06](https://youtube.com/watch?v=CVmbidt-3ro&t=2166) 프로젝트를 기터브에 어차피 다 푸시를
+- [36:08](https://youtube.com/watch?v=CVmbidt-3ro&t=2168) 하니까
+- [36:10](https://youtube.com/watch?v=CVmbidt-3ro&t=2170) >> 기터브에 들어가 있는 내용을 기반으로
+- [36:12](https://youtube.com/watch?v=CVmbidt-3ro&t=2172) 전부 다 얘가 정리를 다 해 줘요.
+- [36:13](https://youtube.com/watch?v=CVmbidt-3ro&t=2173) 알아서.
+- [36:15](https://youtube.com/watch?v=CVmbidt-3ro&t=2175) 원래는 이것이뭔가
+- [36:17](https://youtube.com/watch?v=CVmbidt-3ro&t=2177) 보고를 했었던 것을 지금은 보고라는
+- [36:20](https://youtube.com/watch?v=CVmbidt-3ro&t=2180) 것 자체를 사람이 아예 안 하기도
+- [36:21](https://youtube.com/watch?v=CVmbidt-3ro&t=2181) 하고요. 그리고 플라우드 리팅하면은
+- [36:24](https://youtube.com/watch?v=CVmbidt-3ro&t=2184) 처음에는 미팅할 때마다 들어와서 봐야
+- [36:26](https://youtube.com/watch?v=CVmbidt-3ro&t=2186) 되는데 이것조차도 귀찮아지기도 하고
+- [36:29](https://youtube.com/watch?v=CVmbidt-3ro&t=2189) 미팅을 했는지 내가 모르는데 그런
+- [36:31](https://youtube.com/watch?v=CVmbidt-3ro&t=2191) 것도 여기에서는 뭐 저 미팅이라는
+- [36:33](https://youtube.com/watch?v=CVmbidt-3ro&t=2193) 곳에 가면은 알아서 여기 미팅도
+- [36:36](https://youtube.com/watch?v=CVmbidt-3ro&t=2196) 자동으로 다 올라옵니다. 네. 네.
+- [36:38](https://youtube.com/watch?v=CVmbidt-3ro&t=2198) 네. 그래서 그런 뭔가 사람이 개입을
+- [36:41](https://youtube.com/watch?v=CVmbidt-3ro&t=2201) 하지 않으면 아니면 사람의 시간을
+- [36:43](https://youtube.com/watch?v=CVmbidt-3ro&t=2203) 쓰거나 기억력에 의존해야 되는 일들을
+- [36:46](https://youtube.com/watch?v=CVmbidt-3ro&t=2206) 다 자동화를 최대한 해서 사람이
+- [36:49](https://youtube.com/watch?v=CVmbidt-3ro&t=2209) 까먹어도 문제가 없게끔 하는 구조를
+- [36:51](https://youtube.com/watch?v=CVmbidt-3ro&t=2211) 만드는게 중요한 것 같더라고요.
+- [36:52](https://youtube.com/watch?v=CVmbidt-3ro&t=2212) 그래서 최근에도 제가 지금요 클로드
+- [36:55](https://youtube.com/watch?v=CVmbidt-3ro&t=2215) 코드로 이메일을 답장을 보내라고 했을
+- [36:58](https://youtube.com/watch?v=CVmbidt-3ro&t=2218) 때 견적소도 AI가 만들고 견적서를
+- [37:00](https://youtube.com/watch?v=CVmbidt-3ro&t=2220) 보내고 나면은 한 3일 뒤나 일주일
+- [37:03](https://youtube.com/watch?v=CVmbidt-3ro&t=2223) 뒤까지 회신이 안 오는 경우도 꽤
+- [37:04](https://youtube.com/watch?v=CVmbidt-3ro&t=2224) 있잖아요. 그러면 한번 더 팔로업을
+- [37:06](https://youtube.com/watch?v=CVmbidt-3ro&t=2226) 해서 내가 어 혹시 뭐 바쁘셨나요
+- [37:08](https://youtube.com/watch?v=CVmbidt-3ro&t=2228) 하면서 리마인드도 할 수 있어야
+- [37:10](https://youtube.com/watch?v=CVmbidt-3ro&t=2230) 되는데 그거를 하기 위해서 할
+- [37:12](https://youtube.com/watch?v=CVmbidt-3ro&t=2232) 일에다가 리마인드해서 나중에 챙기기
+- [37:15](https://youtube.com/watch?v=CVmbidt-3ro&t=2235) 혹은 일정에다가 뭔가 확인하기 막
+- [37:17](https://youtube.com/watch?v=CVmbidt-3ro&t=2237) 넣어 놨는데 그 넣는 걸 또 까먹는단
+- [37:19](https://youtube.com/watch?v=CVmbidt-3ro&t=2239) 말이죠. 귀찮으니까. 그럼 그냥 아
+- [37:21](https://youtube.com/watch?v=CVmbidt-3ro&t=2241) 내가 다음 주에 확인해야지. 근데
+- [37:23](https://youtube.com/watch?v=CVmbidt-3ro&t=2243) 이런 구조가 결국에는 사람의 기억에
+- [37:25](https://youtube.com/watch?v=CVmbidt-3ro&t=2245) 의존하는 업무 체계이고 결국 그게
+- [37:28](https://youtube.com/watch?v=CVmbidt-3ro&t=2248) 시스템화가 안 돼서 그래서 그것도
+- [37:31](https://youtube.com/watch?v=CVmbidt-3ro&t=2251) 최대한 구조화를 하면 어떤 진짜 일
+- [37:33](https://youtube.com/watch?v=CVmbidt-3ro&t=2253) 처리만 잘하면 되게끔 까먹거나 이런
+- [37:35](https://youtube.com/watch?v=CVmbidt-3ro&t=2255) 거는 신경 안 써도 되게 그래서
+- [37:37](https://youtube.com/watch?v=CVmbidt-3ro&t=2257) 여기에서 답장을 할 때 그것이
+- [37:39](https://youtube.com/watch?v=CVmbidt-3ro&t=2259) 팔로업이 필요한 업무면은 주일 뒤에
+- [37:42](https://youtube.com/watch?v=CVmbidt-3ro&t=2262) 윤비서 할 일이 자동으로 생성이
+- [37:43](https://youtube.com/watch?v=CVmbidt-3ro&t=2263) 되게끔 그리고 할 일 30분 전이
+- [37:46](https://youtube.com/watch?v=CVmbidt-3ro&t=2266) 되면은 자동으로 알림이 오게끔 마감일
+- [37:48](https://youtube.com/watch?v=CVmbidt-3ro&t=2268) 때 마감을 안 하면 마감을 할 때까지
+- [37:51](https://youtube.com/watch?v=CVmbidt-3ro&t=2271) 계속 알림을 또 계속 쏴 주는 이런
+- [37:53](https://youtube.com/watch?v=CVmbidt-3ro&t=2273) 장치를 계속 추가하고 있어요. 그래서
+- [37:56](https://youtube.com/watch?v=CVmbidt-3ro&t=2276) 기억하지 않아도 시스템이 나를 일하게
+- [37:59](https://youtube.com/watch?v=CVmbidt-3ro&t=2279) 만드는 구조를 만드는게 저는 좀
+- [38:01](https://youtube.com/watch?v=CVmbidt-3ro&t=2281) 요즘에 중요하지 않나라는 생각이
+- [38:03](https://youtube.com/watch?v=CVmbidt-3ro&t=2283) 들더라고. 워낙에 할 일이 많은
+- [38:04](https://youtube.com/watch?v=CVmbidt-3ro&t=2284) 시대가 되다 보니까 이거를 내 기억에
+- [38:07](https://youtube.com/watch?v=CVmbidt-3ro&t=2287) 의존해서 하니까 맨날 까먹어 가지고
+- [38:09](https://youtube.com/watch?v=CVmbidt-3ro&t=2289) 아 문제가 좀 심각한 거 같아서 그걸
+- [38:12](https://youtube.com/watch?v=CVmbidt-3ro&t=2292) 좀 개선하려고 노력을 하고 있습니다.
+- [38:14](https://youtube.com/watch?v=CVmbidt-3ro&t=2294) >> 아 너무 좀 방향인 거 같습니다. 예
+- [38:16](https://youtube.com/watch?v=CVmbidt-3ro&t=2296) 그럼 윤비서의 이제 미래는 앞으로
+- [38:18](https://youtube.com/watch?v=CVmbidt-3ro&t=2298) 어떻게 되겠습니까?
+- [38:20](https://youtube.com/watch?v=CVmbidt-3ro&t=2300) 일단 윤비선은 저희가 쓰기 위해서
+- [38:22](https://youtube.com/watch?v=CVmbidt-3ro&t=2302) 만들었었는데 이거를 저희가 쓰면서
+- [38:24](https://youtube.com/watch?v=CVmbidt-3ro&t=2304) 그리고 다른 회사의 대표님들께 종종
+- [38:27](https://youtube.com/watch?v=CVmbidt-3ro&t=2307) 보여 드릴 때마다 다들 너무
+- [38:29](https://youtube.com/watch?v=CVmbidt-3ro&t=2309) 필요하다라고 말씀을 하시더라고요.
+- [38:31](https://youtube.com/watch?v=CVmbidt-3ro&t=2311) 그래서 처음에는 그래 그러면은 모든
+- [38:33](https://youtube.com/watch?v=CVmbidt-3ro&t=2313) 회사에서 잘 쓸 수 있는 사스로
+- [38:35](https://youtube.com/watch?v=CVmbidt-3ro&t=2315) 만들어서 판매를 해 볼까라고 생각을
+- [38:37](https://youtube.com/watch?v=CVmbidt-3ro&t=2317) 했는데 모르겠어요. 과연 그게 잘
+- [38:40](https://youtube.com/watch?v=CVmbidt-3ro&t=2320) 워킹 할까? 정말 회사마다 필요한
+- [38:42](https://youtube.com/watch?v=CVmbidt-3ro&t=2322) 니즈가 조금씩 다르고 필요한 기능이
+- [38:44](https://youtube.com/watch?v=CVmbidt-3ro&t=2324) 디테일하게 다를 텐데 저는 개인적으로
+- [38:46](https://youtube.com/watch?v=CVmbidt-3ro&t=2326) 딱 맞춘 걸 좋아하다 보니까 이거를
+- [38:48](https://youtube.com/watch?v=CVmbidt-3ro&t=2328) 딱 맞추는 거를 좀 해 드리고 싶긴
+- [38:50](https://youtube.com/watch?v=CVmbidt-3ro&t=2330) 해요. 회사마다. 근데 이제 그러려면
+- [38:52](https://youtube.com/watch?v=CVmbidt-3ro&t=2332) 또 저희의 리소스가 또 한계가 있기도
+- [38:54](https://youtube.com/watch?v=CVmbidt-3ro&t=2334) 해서 그래서 당장은 제 주변에 이거를
+- [38:57](https://youtube.com/watch?v=CVmbidt-3ro&t=2337) 필요로 하시는 분들께 파일럿으로 좀
+- [39:00](https://youtube.com/watch?v=CVmbidt-3ro&t=2340) 제공을 해서 볼 예정이고요. 그게
+- [39:03](https://youtube.com/watch?v=CVmbidt-3ro&t=2343) 어느 정도 충분히 워킹한다라고 판단이
+- [39:05](https://youtube.com/watch?v=CVmbidt-3ro&t=2345) 되면 뭐 사스 형태로 발전할 수도
+- [39:07](https://youtube.com/watch?v=CVmbidt-3ro&t=2347) 있을 것 같고 그게 아니라 산업마다
+- [39:09](https://youtube.com/watch?v=CVmbidt-3ro&t=2349) 다르고 그거를 딱 맞춤으로 개발을
+- [39:12](https://youtube.com/watch?v=CVmbidt-3ro&t=2352) 하는 것이 훨씬 더 효과적이다라고
+- [39:15](https://youtube.com/watch?v=CVmbidt-3ro&t=2355) 어 판단이 되면 뭐 그런 쪽으로 갈
+- [39:17](https://youtube.com/watch?v=CVmbidt-3ro&t=2357) 수도 있지 않을까라고 생각을 합니다.
+- [39:19](https://youtube.com/watch?v=CVmbidt-3ro&t=2359) 그래서 요게 좋은 결과를 갖다 줄지는
+- [39:22](https://youtube.com/watch?v=CVmbidt-3ro&t=2362) 저도 잘 모르겠는데이 정도면은 꽤나
+- [39:25](https://youtube.com/watch?v=CVmbidt-3ro&t=2365) 잘 워킹하고 있다라는 좀 요즘에는
+- [39:27](https://youtube.com/watch?v=CVmbidt-3ro&t=2367) 생각이 들어서 이제 외부의 고객을
+- [39:30](https://youtube.com/watch?v=CVmbidt-3ro&t=2370) 한번 찾아볼 생각이고 조씨 님이
+- [39:32](https://youtube.com/watch?v=CVmbidt-3ro&t=2372) 저희의 첫 번째 고객님이 되어 주시면
+- [39:34](https://youtube.com/watch?v=CVmbidt-3ro&t=2374) 좋겠습니다.
+- [39:36](https://youtube.com/watch?v=CVmbidt-3ro&t=2376) >> 그럼요. 그럼요. 방법을 알려만
+- [39:38](https://youtube.com/watch?v=CVmbidt-3ro&t=2378) 주신다면 충분히 도입할 수 있으면
+- [39:39](https://youtube.com/watch?v=CVmbidt-3ro&t=2379) 너무 좋을 것 같고요. 네. 저희
+- [39:40](https://youtube.com/watch?v=CVmbidt-3ro&t=2380) 회사는 커스텀의 니즈가 더 강할 것
+- [39:42](https://youtube.com/watch?v=CVmbidt-3ro&t=2382) 같아서 어떻게 좀 얘기하면 더 좋을지
+- [39:44](https://youtube.com/watch?v=CVmbidt-3ro&t=2384) 좀 얘기해 보면 좋겠습니다. 오늘
+- [39:46](https://youtube.com/watch?v=CVmbidt-3ro&t=2386) 이렇게 윤자동 님 모시고 윤비서라고
+- [39:49](https://youtube.com/watch?v=CVmbidt-3ro&t=2389) 하는 시스템을 함께 들여다봤는데요.
+- [39:51](https://youtube.com/watch?v=CVmbidt-3ro&t=2391) 저는 이제까지 AI 네이티브
+- [39:52](https://youtube.com/watch?v=CVmbidt-3ro&t=2392) 컴퍼니라고 하시는 국내 대표에 계시는
+- [39:55](https://youtube.com/watch?v=CVmbidt-3ro&t=2395) 여러분들을 좀 모셨었어요. 그중에서도
+- [39:57](https://youtube.com/watch?v=CVmbidt-3ro&t=2397) 상당히 뾰족하게 산내 P를이 정도까지
+- [40:01](https://youtube.com/watch?v=CVmbidt-3ro&t=2401) 하셨던 분은 저는 처음 봤습니다.
+- [40:04](https://youtube.com/watch?v=CVmbidt-3ro&t=2404) 윤자동 님 정말 뛰어난 자동화
+- [40:05](https://youtube.com/watch?v=CVmbidt-3ro&t=2405) 전문가라고도 오늘도 생각이 되었고요.
+- [40:07](https://youtube.com/watch?v=CVmbidt-3ro&t=2407) 어, 저희 회사도 많이 노력을 해야
+- [40:09](https://youtube.com/watch?v=CVmbidt-3ro&t=2409) 되겠다는 생각을 하게 됐습니다. 네.
+- [40:11](https://youtube.com/watch?v=CVmbidt-3ro&t=2411) 윤자동님 혹시 마지막으로 하실 말씀이
+- [40:13](https://youtube.com/watch?v=CVmbidt-3ro&t=2413) 있으실까요?
+- [40:13](https://youtube.com/watch?v=CVmbidt-3ro&t=2413) >> 네. 아, 처음에 작년이었나요? 저희
+- [40:16](https://youtube.com/watch?v=CVmbidt-3ro&t=2416) 채널에 나오셨었죠, 조시님께서.
+- [40:18](https://youtube.com/watch?v=CVmbidt-3ro&t=2418) >> 그렇죠.
+- [40:18](https://youtube.com/watch?v=CVmbidt-3ro&t=2418) >> 맞아요. 그래서 그때 나와서
+- [40:20](https://youtube.com/watch?v=CVmbidt-3ro&t=2420) 조시님께서 만드셨던 주식 관련된 제품
+- [40:23](https://youtube.com/watch?v=CVmbidt-3ro&t=2423) 사스를 한번 보고 했었는데 최근에는
+- [40:25](https://youtube.com/watch?v=CVmbidt-3ro&t=2425) 또 디자인 사스도 출시하시고 또
+- [40:28](https://youtube.com/watch?v=CVmbidt-3ro&t=2428) 이렇게 어, 직원 채용하실 생각
+- [40:30](https://youtube.com/watch?v=CVmbidt-3ro&t=2430) 없으시다고 하더니 직원도 채용하시면서
+- [40:32](https://youtube.com/watch?v=CVmbidt-3ro&t=2432) 예. 점점 또 커져가시는 모습을
+- [40:34](https://youtube.com/watch?v=CVmbidt-3ro&t=2434) 보니까 너무 저도 뿌듯하고 아 너무
+- [40:37](https://youtube.com/watch?v=CVmbidt-3ro&t=2437) 대단하신 거 같고 유튜브도 요즘 너무
+- [40:38](https://youtube.com/watch?v=CVmbidt-3ro&t=2438) 성장하고 계셔서 좀 있으면 나 이제
+- [40:40](https://youtube.com/watch?v=CVmbidt-3ro&t=2440) 저기 못 나갈 거 같은데 빨리 나가야
+- [40:42](https://youtube.com/watch?v=CVmbidt-3ro&t=2442) 되겠는데
+- [40:45](https://youtube.com/watch?v=CVmbidt-3ro&t=2445) >> 아 지금이 이제 막 차다
+- [40:48](https://youtube.com/watch?v=CVmbidt-3ro&t=2448) >> 그래서 이렇게 나올 수 있어서 너무
+- [40:50](https://youtube.com/watch?v=CVmbidt-3ro&t=2450) 영광이었습니다네 아예 너무 좋은 말씀
+- [40:53](https://youtube.com/watch?v=CVmbidt-3ro&t=2453) 해주셔서 감사합니다. 저희가 사실
+- [40:55](https://youtube.com/watch?v=CVmbidt-3ro&t=2455) 친구예요. 저희가 동갑이고 그래서
+- [40:57](https://youtube.com/watch?v=CVmbidt-3ro&t=2457) 제가 정말 친밀감 있게 느끼는 동료와
+- [40:59](https://youtube.com/watch?v=CVmbidt-3ro&t=2459) 같다고 보시면 되는데 저희는 함께
+- [41:01](https://youtube.com/watch?v=CVmbidt-3ro&t=2461) 동반 성장을 어떻게든 좀 해 보고
+- [41:03](https://youtube.com/watch?v=CVmbidt-3ro&t=2463) 싶다는 생각을 많이 합니다. 네.
+- [41:06](https://youtube.com/watch?v=CVmbidt-3ro&t=2466) 아, 오늘 이렇게 해서 윤비서 어,
+- [41:08](https://youtube.com/watch?v=CVmbidt-3ro&t=2468) 제품 함께 들여다봤고 윤재동 팀이
+- [41:10](https://youtube.com/watch?v=CVmbidt-3ro&t=2470) 어떻게 AX를 하고 있 계신지에 대한
+- [41:12](https://youtube.com/watch?v=CVmbidt-3ro&t=2472) 내용들을 아주 자세히 볼 수
+- [41:13](https://youtube.com/watch?v=CVmbidt-3ro&t=2473) 있었습니다. 개인적으로 저는 아주
+- [41:15](https://youtube.com/watch?v=CVmbidt-3ro&t=2475) 아주 많은 영감들을 받을 수 있었던
+- [41:18](https://youtube.com/watch?v=CVmbidt-3ro&t=2478) 그런 팟캐스트 녹화였고요. 어,
+- [41:20](https://youtube.com/watch?v=CVmbidt-3ro&t=2480) 여러분들 윤자동 많이 찾아 주시길
+- [41:21](https://youtube.com/watch?v=CVmbidt-3ro&t=2481) 바라겠고 저희는 또 다음 영상에서 더
+- [41:24](https://youtube.com/watch?v=CVmbidt-3ro&t=2484) 좋은 내용으로 찾아뵙도록 하겠습니다.
+- [41:26](https://youtube.com/watch?v=CVmbidt-3ro&t=2486) 네. 그럼 여러분 또 다음 기회에 또
+- [41:28](https://youtube.com/watch?v=CVmbidt-3ro&t=2488) 뵙겠습니다. 좋아요와 구독 꼭 눌러
+- [41:30](https://youtube.com/watch?v=CVmbidt-3ro&t=2490) 주시고요. 빌더 조씨도 많이 사랑해
+- [41:31](https://youtube.com/watch?v=CVmbidt-3ro&t=2491) 주세요. 감사합니다.
