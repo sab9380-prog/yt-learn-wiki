@@ -1,0 +1,730 @@
+---
+title: "LLM Wiki가 망하는 진짜 이유: Obsidian·Claude Code보다 중요한 AI OS 설계"
+source_url: https://youtube.com/watch?v=GQtty9JOAUU
+video_id: GQtty9JOAUU
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# LLM Wiki가 망하는 진짜 이유: Obsidian·Claude Code보다 중요한 AI OS 설계
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 브레인 트리니티의 브라이언이 LLM 위키 구축 시 장기적 관점에서 고려해야 할 사항들을 설명하는 영상입니다. 많은 사람들이 LLM 위키를 구축하다가 실패하는 이유는 방법론만 따라하고 본질적인 목적과 자신의 삶에서의 역할을 고려하지 않기 때문이라고 분석합니다. LLM 위키는 외부 지식의 얕은 컴파일 역할을 하며, 이를 개인의 깊은 경험과 통찰이 담긴 마이 노트와 결합해야 진정한 가치를 창출할 수 있다고 주장합니다. 브레인 트리니티 시스템이라는 프레임워크를 통해 개인의 철학-역할-액션으로 이어지는 목적 구조와 이를 지원하는 워크스페이스(세컨드 브레인)의 관계를 체계적으로 설명합니다.
+- **Core Message:** LLM 위키는 그 자체로 완성된 시스템이 아니라, 개인의 철학과 목적에 기반한 전체적인 지식 관리 시스템의 한 부분으로써 개인의 깊은 통찰과 결합될 때 진정한 가치를 발휘한다.
+> LLM 위키는 외부 지식의 얕은 컴파일이다
+> 목적 없이 시작하면 한두 달 안에 실패할 것이다
+> 골드인 골드 아웃 - 내 판단과 경험이 들어가야 골드가 된다
+❗ 카파시의 LLM 위키 개념은 단 하나의 X(트위터) 포스트에서 시작되어 2100만 뷰를 기록했다
+❗ 카파시는 의도적으로 LLM 위키 문서를 추상적으로 남겨두었다고 명시했다
+❗ 많은 사람들이 LLM 위키 구축을 시도하지만 장기적으로 실패하는 패턴이 반복된다
+
+## 📚 핵심 용어
+- **LLM 위키:** AI가 외부 지식을 정리하고 연결하여 질문에 답변할 수 있도록 구조화한 개인 지식베이스 / 도서관 사서와 같다. 모든 책을 읽지는 않지만, 필요할 때 어떤 책에서 답을 찾을 수 있는지 알고 즉시 찾아준다. / 구글 검색은 키워드로 문서를 찾는 것, LLM 위키는 내 맥락을 이해하고 관련 지식들을 연결해서 답변을 만드는 것.
+- **골드인 골드 아웃:** 질 좋은 입력(개인의 판단과 경험)을 넣어야 질 좋은 결과가 나온다는 원칙 / 요리와 같다. 신선한 재료(내 경험과 판단)로 요리해야 맛있는 음식이 나오듯, 내 관점이 들어간 자료여야 가치 있는 결과가 나온다. / 가비지인 가비지 아웃은 목적 없는 데이터 수집, 골드인 골드 아웃은 내 경험과 판단이 담긴 의미 있는 데이터로 가치 창출.
+- **브레인 트리니티 시스템:** 철학-역할-액션으로 이어지는 목적 구조와 이를 지원하는 워크스페이스의 통합 시스템 / 회사 조직도와 같다. CEO(철학)가 방향을 정하고, 부서장(역할)이 실행하고, 직원(액션)이 구체적 업무를 담당하는 구조. / 일반적인 노트 앱은 단순 기록, 브레인 트리니티는 내 인생 목적과 연결된 체계적인 지식 관리 운영체제.
+
+## 🚀 실행 (Execute)
+- [ ] 개인 철학과 삶의 목적 정의하기
+  - 담당: 나
+  - 이유: LLM 위키나 지식관리 시스템이 실제로 활용되려면 내 삶에서의 명확한 목적과 역할이 먼저 정의되어야 하기 때문
+- [ ] 현재 사용 중인 지식관리 도구들의 목적성 재검토
+  - 담당: 나
+  - 이유: 목적 없는 수집이 갈비지가 되지 않도록 기존 시스템의 실제 활용도와 가치를 점검해야 하기 때문
+- 자료: 카파시의 LLM 위키 GitHub Gist (원본 문서)
+- 자료: 브레인 트리니티 관련 후속 영상들
+- 자료: 개인 지식 관리 관련 서적 (세컨드 브레인, 제텔카스텐 등)
+- Timeline: 1단계(이번 주): 개인 철학과 목적 정의 → 2단계(다음 주): 기존 시스템 재정비 → 3단계(장기): 통합된 개인 운영체제 구축
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=GQtty9JOAUU&t=0) 안녕하세요. 브레인 트리니티의
+- [0:01](https://youtube.com/watch?v=GQtty9JOAUU&t=1) 브라인입니다. 여러분 혹시 lnM
+- [0:04](https://youtube.com/watch?v=GQtty9JOAUU&t=4) 위키 잘 구축을 하시고 활용을 하고
+- [0:06](https://youtube.com/watch?v=GQtty9JOAUU&t=6) 계신가요? 아니면은 이제 막 뭔가
+- [0:09](https://youtube.com/watch?v=GQtty9JOAUU&t=9) 구축을 하려고 시도를 하고 계신가요?
+- [0:11](https://youtube.com/watch?v=GQtty9JOAUU&t=11) 어떤 단계이든지간에 저는 오늘
+- [0:13](https://youtube.com/watch?v=GQtty9JOAUU&t=13) 여러분들께 그 과정에서 좀 장기적인
+- [0:17](https://youtube.com/watch?v=GQtty9JOAUU&t=17) 유지 관리 관점에서 어떤 것들을
+- [0:19](https://youtube.com/watch?v=GQtty9JOAUU&t=19) 고려해야 되는지이 LM 위키의 의미와
+- [0:23](https://youtube.com/watch?v=GQtty9JOAUU&t=23) 어느 위치와 역할에 대한 저희 생각을
+- [0:25](https://youtube.com/watch?v=GQtty9JOAUU&t=25) 좀 공유를 하려고 합니다.이 영상을
+- [0:27](https://youtube.com/watch?v=GQtty9JOAUU&t=27) 찍게 된 계기가 저도 나름 LM 위키
+- [0:30](https://youtube.com/watch?v=GQtty9JOAUU&t=30) 그리고 뭐 개인 지식 관리에 대해서
+- [0:32](https://youtube.com/watch?v=GQtty9JOAUU&t=32) 오랫동안 좀 고민을 하면서 어 저도
+- [0:34](https://youtube.com/watch?v=GQtty9JOAUU&t=34) 직접 활용을 하면서 조금 재밌는
+- [0:37](https://youtube.com/watch?v=GQtty9JOAUU&t=37) 현상을 봤어요. 많은 분들이 이거를
+- [0:39](https://youtube.com/watch?v=GQtty9JOAUU&t=39) 실패를 하는 거예요. 실패를 한다는게
+- [0:41](https://youtube.com/watch?v=GQtty9JOAUU&t=41) 갈아없는 구조를 여러 번 시도를 하는
+- [0:44](https://youtube.com/watch?v=GQtty9JOAUU&t=44) 겁니다. 그 이유가 그 설계하는
+- [0:47](https://youtube.com/watch?v=GQtty9JOAUU&t=47) 과정에서 어떤 목적을 가지고 왜 할지
+- [0:50](https://youtube.com/watch?v=GQtty9JOAUU&t=50) 이런 본질적인 측면을 고려를 조금
+- [0:52](https://youtube.com/watch?v=GQtty9JOAUU&t=52) 덜하고 이렇게 만드시는 거
+- [0:54](https://youtube.com/watch?v=GQtty9JOAUU&t=54) 같더라고요. 실제로 제 유튜브뿐만
+- [0:57](https://youtube.com/watch?v=GQtty9JOAUU&t=57) 아니라 그리고 어 다양한
+- [0:59](https://youtube.com/watch?v=GQtty9JOAUU&t=59) 커뮤니티에서도 그런 현상을 보이는 거
+- [1:01](https://youtube.com/watch?v=GQtty9JOAUU&t=61) 같아요. 그래서 이번 영상을 통해서
+- [1:03](https://youtube.com/watch?v=GQtty9JOAUU&t=63) 우리가 좀 LRM 위키의 실체를 좀
+- [1:06](https://youtube.com/watch?v=GQtty9JOAUU&t=66) 보여 드리려고 합니다. 네. 여러분,
+- [1:08](https://youtube.com/watch?v=GQtty9JOAUU&t=68) 우선 LM 미키가 왜 이렇게 난리가
+- [1:10](https://youtube.com/watch?v=GQtty9JOAUU&t=70) 났을까요? 우리는 늘 자비스를 꾼 거
+- [1:13](https://youtube.com/watch?v=GQtty9JOAUU&t=73) 같습니다. 아이언맨을 보면서 자비스
+- [1:16](https://youtube.com/watch?v=GQtty9JOAUU&t=76) 같은 경우는 그냥 기계 하나만 숫고
+- [1:18](https://youtube.com/watch?v=GQtty9JOAUU&t=78) 있으면은 어느 순간에도 내가 무엇을
+- [1:20](https://youtube.com/watch?v=GQtty9JOAUU&t=80) 좋아하는지 뭘 해야 되는지를 이해를
+- [1:22](https://youtube.com/watch?v=GQtty9JOAUU&t=82) 하고 있는 거 같아요. 우리 이렇게
+- [1:24](https://youtube.com/watch?v=GQtty9JOAUU&t=84) 자비스를 꿈꿔 왔는데요. 실제로 이제
+- [1:26](https://youtube.com/watch?v=GQtty9JOAUU&t=86) 클로드 코드뿐만 아니라 오픈 클로우
+- [1:29](https://youtube.com/watch?v=GQtty9JOAUU&t=89) 그리고 헤르메스 에이전트 이런 하네스
+- [1:31](https://youtube.com/watch?v=GQtty9JOAUU&t=91) 도구들이 많이 이제 인기가 많아지고
+- [1:34](https://youtube.com/watch?v=GQtty9JOAUU&t=94) 있고 그리고 나의 파일을 함께
+- [1:37](https://youtube.com/watch?v=GQtty9JOAUU&t=97) 연결시키는 옵시디언 그리고 LM키
+- [1:39](https://youtube.com/watch?v=GQtty9JOAUU&t=99) 같은 방법론이 나오면서 실제로 뭔가
+- [1:41](https://youtube.com/watch?v=GQtty9JOAUU&t=101) 가능성이 높아진 시대가 되었어요.
+- [1:44](https://youtube.com/watch?v=GQtty9JOAUU&t=104) 그래서 사람들이 LM뮤키에 환장을
+- [1:46](https://youtube.com/watch?v=GQtty9JOAUU&t=106) 하고 있는 것 같습니다. 저도
+- [1:48](https://youtube.com/watch?v=GQtty9JOAUU&t=108) LR미키가 공유가 되고 나서 저만의
+- [1:50](https://youtube.com/watch?v=GQtty9JOAUU&t=110) 방식으로 좀 적용을 해 보고 어떻게
+- [1:53](https://youtube.com/watch?v=GQtty9JOAUU&t=113) 하면은 이게 잘 만들 수 있는 건지
+- [1:55](https://youtube.com/watch?v=GQtty9JOAUU&t=115) 저도 영상을 하나 공개를 하였죠.
+- [1:57](https://youtube.com/watch?v=GQtty9JOAUU&t=117) 근데 그때 이후로 또 다양한
+- [1:59](https://youtube.com/watch?v=GQtty9JOAUU&t=119) 크리에이터들이 그때 이후로 수많은
+- [2:01](https://youtube.com/watch?v=GQtty9JOAUU&t=121) 사람들이 뭐엑, 유튜브 이런 것들에서
+- [2:04](https://youtube.com/watch?v=GQtty9JOAUU&t=124) 막 영상을 엄청나게 만들고 자기
+- [2:07](https://youtube.com/watch?v=GQtty9JOAUU&t=127) 생각을 공유를 하고 있습니다. 네.
+- [2:09](https://youtube.com/watch?v=GQtty9JOAUU&t=129) 근데 재밌는 것은이 모든 것들이 X에
+- [2:12](https://youtube.com/watch?v=GQtty9JOAUU&t=132) 올라온 포스트 하나로 시작이 됐다라는
+- [2:14](https://youtube.com/watch?v=GQtty9JOAUU&t=134) 겁니다. 어, 실제로 제가 이거를
+- [2:16](https://youtube.com/watch?v=GQtty9JOAUU&t=136) 가지고 왔는데요.이 포스트 하나로 좀
+- [2:18](https://youtube.com/watch?v=GQtty9JOAUU&t=138) 난리가 났고 이때 이후로 이제 뷰도
+- [2:22](https://youtube.com/watch?v=GQtty9JOAUU&t=142) 2,100만 뷰가 되었습니다. 그리고
+- [2:25](https://youtube.com/watch?v=GQtty9JOAUU&t=145) 그 포스트 하나 이후로 LLM
+- [2:27](https://youtube.com/watch?v=GQtty9JOAUU&t=147) 위키라는 것이이 카파시의 기터 지스트
+- [2:30](https://youtube.com/watch?v=GQtty9JOAUU&t=150) 안에 하나의 문서로 정리가 되었어요.
+- [2:32](https://youtube.com/watch?v=GQtty9JOAUU&t=152) 이게 다입니다. 실제로 뭔가
+- [2:35](https://youtube.com/watch?v=GQtty9JOAUU&t=155) 구체적으로 카파시가 이렇게 하는 것을
+- [2:38](https://youtube.com/watch?v=GQtty9JOAUU&t=158) 보여 주지가 않았어요. 실제로 여기
+- [2:40](https://youtube.com/watch?v=GQtty9JOAUU&t=160) 아래에 보면은 this
+- [2:41](https://youtube.com/watch?v=GQtty9JOAUU&t=161) document is
+- [2:42](https://youtube.com/watch?v=GQtty9JOAUU&t=162) intentionally
+- [2:42](https://youtube.com/watch?v=GQtty9JOAUU&t=162) abstract.이 이 문서는
+- [2:44](https://youtube.com/watch?v=GQtty9JOAUU&t=164) 의도적으로 매우 추상적으로 남겨
+- [2:45](https://youtube.com/watch?v=GQtty9JOAUU&t=165) 놨다라고 이렇게 이야기를 하였습니다.
+- [2:47](https://youtube.com/watch?v=GQtty9JOAUU&t=167) 그래서 사람들이이 트윗에 대한
+- [2:49](https://youtube.com/watch?v=GQtty9JOAUU&t=169) 그리고이 기업 지스트에 대한 댓글로
+- [2:52](https://youtube.com/watch?v=GQtty9JOAUU&t=172) 나는 이렇게 하고 있다. 이렇게
+- [2:54](https://youtube.com/watch?v=GQtty9JOAUU&t=174) 하는게 맞는 거 같다라고 하나의 좀
+- [2:57](https://youtube.com/watch?v=GQtty9JOAUU&t=177) 성지 순례를 하는 이런 어 공간이
+- [3:00](https://youtube.com/watch?v=GQtty9JOAUU&t=180) 되었습니다. 그래서 다른 사람들이
+- [3:02](https://youtube.com/watch?v=GQtty9JOAUU&t=182) 실제로 어떻게 하고 있는지는이 기업
+- [3:04](https://youtube.com/watch?v=GQtty9JOAUU&t=184) G스트 페이지 안에 오면은 좋을 거
+- [3:07](https://youtube.com/watch?v=GQtty9JOAUU&t=187) 같아요. 그래서 사람들이 이런 것들로
+- [3:10](https://youtube.com/watch?v=GQtty9JOAUU&t=190) 자기만의 방식으로 LRm키를 이제
+- [3:12](https://youtube.com/watch?v=GQtty9JOAUU&t=192) 만들어 나가고 있는 거 같아요. 저도
+- [3:14](https://youtube.com/watch?v=GQtty9JOAUU&t=194) 마찬가지고요. 그리고 그 실제적인
+- [3:16](https://youtube.com/watch?v=GQtty9JOAUU&t=196) 구현 방법을 찾는 여러분들께서도 저와
+- [3:19](https://youtube.com/watch?v=GQtty9JOAUU&t=199) 같은 이제 유튜브에 있는 콘텐츠를
+- [3:21](https://youtube.com/watch?v=GQtty9JOAUU&t=201) 만드는 사람들을 찾아가서 나도 만들고
+- [3:24](https://youtube.com/watch?v=GQtty9JOAUU&t=204) 싶다라고 하면서 뭔가 따라하긴
+- [3:26](https://youtube.com/watch?v=GQtty9JOAUU&t=206) 합니다. 그래서 만들고 활용을 해요.
+- [3:27](https://youtube.com/watch?v=GQtty9JOAUU&t=207) 그래서 막 만들었어요. 로우 폴더도
+- [3:29](https://youtube.com/watch?v=GQtty9JOAUU&t=209) 만들고 위키 폴더도 만들고 클로드점
+- [3:31](https://youtube.com/watch?v=GQtty9JOAUU&t=211) MD로 스키마도 정의를 하고 그리고
+- [3:33](https://youtube.com/watch?v=GQtty9JOAUU&t=213) 인스트 쿼리 린트 같은 스킬들도
+- [3:35](https://youtube.com/watch?v=GQtty9JOAUU&t=215) 만들었어요. 다들 어 이거다 하고
+- [3:37](https://youtube.com/watch?v=GQtty9JOAUU&t=217) 따라서 뭔가 만들어 봤어요. 저를
+- [3:39](https://youtube.com/watch?v=GQtty9JOAUU&t=219) 보시고도 만드신 분들 시도를 해 보신
+- [3:41](https://youtube.com/watch?v=GQtty9JOAUU&t=221) 분들, 입문을 해 보신 분들도 있으실
+- [3:43](https://youtube.com/watch?v=GQtty9JOAUU&t=223) 것 같은데 전 이렇게 말씀을
+- [3:45](https://youtube.com/watch?v=GQtty9JOAUU&t=225) 드립니다. 한 달, 두 달 뒤에
+- [3:47](https://youtube.com/watch?v=GQtty9JOAUU&t=227) 그거를 안 쓰고 있거나 아니면은 뭔가
+- [3:49](https://youtube.com/watch?v=GQtty9JOAUU&t=229) 지식에 그냥 무덤이 되어 있을 수도
+- [3:51](https://youtube.com/watch?v=GQtty9JOAUU&t=231) 있을 것 같아요. 그 이유는 이거는
+- [3:53](https://youtube.com/watch?v=GQtty9JOAUU&t=233) 방법론에 대한 거지 내 삶에 어떻게
+- [3:55](https://youtube.com/watch?v=GQtty9JOAUU&t=235) 적용을 시키고 나에 맞게 어떻게
+- [3:57](https://youtube.com/watch?v=GQtty9JOAUU&t=237) 만들어 나갈지 그 본질적인 것에
+- [3:59](https://youtube.com/watch?v=GQtty9JOAUU&t=239) 대해서는 고민을 안 해 본 그런
+- [4:01](https://youtube.com/watch?v=GQtty9JOAUU&t=241) 구현법에 대한 영상이기 때문입니다.
+- [4:04](https://youtube.com/watch?v=GQtty9JOAUU&t=244) 영상들을 보면은 다 똑같아요. 폴더
+- [4:06](https://youtube.com/watch?v=GQtty9JOAUU&t=246) 만들고 클로드 MD 작성을 하고
+- [4:08](https://youtube.com/watch?v=GQtty9JOAUU&t=248) 인스트를 돌리고 작동은 합니다. 근데
+- [4:11](https://youtube.com/watch?v=GQtty9JOAUU&t=251) 그 방법론 영상에 대해서 나만의 LM
+- [4:13](https://youtube.com/watch?v=GQtty9JOAUU&t=253) 위키를 구현을 하고 나서 이거를
+- [4:15](https://youtube.com/watch?v=GQtty9JOAUU&t=255) 실제로 적용을 하고 만들 때 LRM
+- [4:17](https://youtube.com/watch?v=GQtty9JOAUU&t=257) 미키가 내 삶에 어디에 끼어 들어가고
+- [4:20](https://youtube.com/watch?v=GQtty9JOAUU&t=260) 어떻게 적용을 시키고 어떤 역할을
+- [4:22](https://youtube.com/watch?v=GQtty9JOAUU&t=262) 해야 되는지에 대해서는 아무도 잘 안
+- [4:24](https://youtube.com/watch?v=GQtty9JOAUU&t=264) 다르는 거 같아요. 그래서 그런
+- [4:26](https://youtube.com/watch?v=GQtty9JOAUU&t=266) 본질적인 고민이 없으면은 결국에는
+- [4:28](https://youtube.com/watch?v=GQtty9JOAUU&t=268) LMQ도 실패를 하게 되는 거
+- [4:30](https://youtube.com/watch?v=GQtty9JOAUU&t=270) 같습니다. 제가이 영상을 한두 번만
+- [4:32](https://youtube.com/watch?v=GQtty9JOAUU&t=272) 본 것이 아니에요. 실제로 뭔가
+- [4:34](https://youtube.com/watch?v=GQtty9JOAUU&t=274) 세컨드 브레인이라는 개념이 막
+- [4:36](https://youtube.com/watch?v=GQtty9JOAUU&t=276) 떠오르기 시작하고 개인 지식 관리
+- [4:37](https://youtube.com/watch?v=GQtty9JOAUU&t=277) 그리고 제텔카스텐 한 4, 5년
+- [4:39](https://youtube.com/watch?v=GQtty9JOAUU&t=279) 전부터도 제가 항상 발견해온 그런
+- [4:42](https://youtube.com/watch?v=GQtty9JOAUU&t=282) 패턴입니다. 이게 왜 자꾸 실패를
+- [4:44](https://youtube.com/watch?v=GQtty9JOAUU&t=284) 하고 사람들이 막 갈아끼우게 될까에
+- [4:46](https://youtube.com/watch?v=GQtty9JOAUU&t=286) 대한 제 생각을 좀 말씀드리면이 개인
+- [4:49](https://youtube.com/watch?v=GQtty9JOAUU&t=289) 지식 관리라는 것은 세컨드 브레인이든
+- [4:52](https://youtube.com/watch?v=GQtty9JOAUU&t=292) LLM 위키든 아니면은 뭐든지간에
+- [4:55](https://youtube.com/watch?v=GQtty9JOAUU&t=295) 개인 지식 관리를 한다라는 것은 내
+- [4:57](https://youtube.com/watch?v=GQtty9JOAUU&t=297) 삶을 정리하고 구조화를 하는
+- [4:59](https://youtube.com/watch?v=GQtty9JOAUU&t=299) 것이에요. 그런데 내가 실제이
+- [5:02](https://youtube.com/watch?v=GQtty9JOAUU&t=302) 개인 지식 관리 시스템 밖에 있는
+- [5:03](https://youtube.com/watch?v=GQtty9JOAUU&t=303) 세상은 엄청나게 복잡한데 내가 살아온
+- [5:06](https://youtube.com/watch?v=GQtty9JOAUU&t=306) 전체 인생을 다 이렇게 구조하고
+- [5:09](https://youtube.com/watch?v=GQtty9JOAUU&t=309) 정리하려고 하는 이런 것이 매우
+- [5:12](https://youtube.com/watch?v=GQtty9JOAUU&t=312) 중요한데 쉽지 않기 때문입니다.
+- [5:14](https://youtube.com/watch?v=GQtty9JOAUU&t=314) 우리가 어떻게 평생 살아온 모든
+- [5:16](https://youtube.com/watch?v=GQtty9JOAUU&t=316) 것들을 다 한 번에 다 관리를 할 수
+- [5:17](https://youtube.com/watch?v=GQtty9JOAUU&t=317) 있겠어요? 그거에이어서 좀 완벽주의
+- [5:19](https://youtube.com/watch?v=GQtty9JOAUU&t=319) 문제도 있는 거 같아요. 사람들이
+- [5:21](https://youtube.com/watch?v=GQtty9JOAUU&t=321) 시스템이 완벽하게 작동을 해야
+- [5:23](https://youtube.com/watch?v=GQtty9JOAUU&t=323) 된다라고 생각을 해서 모든 과거의
+- [5:25](https://youtube.com/watch?v=GQtty9JOAUU&t=325) 문서들, 모든 템플릿들, 모든
+- [5:28](https://youtube.com/watch?v=GQtty9JOAUU&t=328) 시스템들이 유지 관리에 막 엄청 힘을
+- [5:31](https://youtube.com/watch?v=GQtty9JOAUU&t=331) 쓰다 보니까 지치고 힘들어 하는 거
+- [5:33](https://youtube.com/watch?v=GQtty9JOAUU&t=333) 같아요. 그래서 실패를 한 거
+- [5:34](https://youtube.com/watch?v=GQtty9JOAUU&t=334) 같습니다. 그래서 시행 착오도 당연히
+- [5:36](https://youtube.com/watch?v=GQtty9JOAUU&t=336) 있어요. 이런 것들을 제가 많이 봤기
+- [5:38](https://youtube.com/watch?v=GQtty9JOAUU&t=338) 때문에 LR미키를 뭔가 도입을 하고
+- [5:41](https://youtube.com/watch?v=GQtty9JOAUU&t=341) 내 삶의 이제 AI 시스템 안에
+- [5:43](https://youtube.com/watch?v=GQtty9JOAUU&t=343) 만들려고 해도 결국에는 목적 없이
+- [5:45](https://youtube.com/watch?v=GQtty9JOAUU&t=345) 시작하면 전 한두 달 안에 실패를 할
+- [5:47](https://youtube.com/watch?v=GQtty9JOAUU&t=347) 것이라 생각을 합니다. 많은 분들이
+- [5:50](https://youtube.com/watch?v=GQtty9JOAUU&t=350) 나중에 공감을 해 주실 거라 전
+- [5:51](https://youtube.com/watch?v=GQtty9JOAUU&t=351) 생각을 합니다. 이게 여러분들이
+- [5:53](https://youtube.com/watch?v=GQtty9JOAUU&t=353) 만들어 놓은 시스템이 나빠서가 아니라
+- [5:55](https://youtube.com/watch?v=GQtty9JOAUU&t=355) 어떻게 해서이 목적성 그러니까이
+- [5:58](https://youtube.com/watch?v=GQtty9JOAUU&t=358) LRM 위기를 내 삶에 끼울 자리가
+- [6:01](https://youtube.com/watch?v=GQtty9JOAUU&t=361) 명확하게 좀 고려를 안 했기 때문에
+- [6:03](https://youtube.com/watch?v=GQtty9JOAUU&t=363) 실패할 수도 있다라는 것을 말씀을
+- [6:05](https://youtube.com/watch?v=GQtty9JOAUU&t=365) 드리는 거예요. 그런 거 있잖아요.
+- [6:06](https://youtube.com/watch?v=GQtty9JOAUU&t=366) 우리가 마케팅 용어로 소비가 되고
+- [6:08](https://youtube.com/watch?v=GQtty9JOAUU&t=368) 빨리 죽는 것처럼. 대표적인 예시가
+- [6:10](https://youtube.com/watch?v=GQtty9JOAUU&t=370) 저는 두정쿠랑 탕우루라고 생각을
+- [6:13](https://youtube.com/watch?v=GQtty9JOAUU&t=373) 해요. 이것들이 막 엄청 이기가
+- [6:14](https://youtube.com/watch?v=GQtty9JOAUU&t=374) 많은데 저는 이해를 잘 못
+- [6:16](https://youtube.com/watch?v=GQtty9JOAUU&t=376) 하겠더라고요. 맛있긴 해. 그래서 막
+- [6:18](https://youtube.com/watch?v=GQtty9JOAUU&t=378) 퍼져. 사람들이이 유행에 따라서 뭔가
+- [6:21](https://youtube.com/watch?v=GQtty9JOAUU&t=381) 따라해요. 그리고 사요. 먹어 봐요.
+- [6:22](https://youtube.com/watch?v=GQtty9JOAUU&t=382) 지금은 어떤가요? 거의 찾아보기
+- [6:24](https://youtube.com/watch?v=GQtty9JOAUU&t=384) 힘들죠. 이거랑 똑같다고 생각을
+- [6:26](https://youtube.com/watch?v=GQtty9JOAUU&t=386) 합니다. 이렇게 두쿠랑 탕으로도 어떤
+- [6:29](https://youtube.com/watch?v=GQtty9JOAUU&t=389) 목적이 없이 시작이 된 거예요. 그냥
+- [6:31](https://youtube.com/watch?v=GQtty9JOAUU&t=391) 인기가 많아 가지고 사람들이 막
+- [6:33](https://youtube.com/watch?v=GQtty9JOAUU&t=393) 따라하고 뭔가 소비를 하다 보니까 막
+- [6:36](https://youtube.com/watch?v=GQtty9JOAUU&t=396) 다들 먹어보고 경험하고 나중에 사라진
+- [6:38](https://youtube.com/watch?v=GQtty9JOAUU&t=398) 거예요. 뭔가 사람들이 열광하는
+- [6:40](https://youtube.com/watch?v=GQtty9JOAUU&t=400) 이유와 목적 저는 잘 모르겠거든요.
+- [6:42](https://youtube.com/watch?v=GQtty9JOAUU&t=402) 맛있긴 해요. 근데 그게 끝이에요.
+- [6:44](https://youtube.com/watch?v=GQtty9JOAUU&t=404) 저는이 LRM미키라는 것도 똑같을
+- [6:46](https://youtube.com/watch?v=GQtty9JOAUU&t=406) 것이라고 생각을 합니다. 내가 AI를
+- [6:48](https://youtube.com/watch?v=GQtty9JOAUU&t=408) 활용해서 뭔가 구축을 하고 나의 삶의
+- [6:51](https://youtube.com/watch?v=GQtty9JOAUU&t=411) 시스템으로 만들고 적용을 시킨다.
+- [6:53](https://youtube.com/watch?v=GQtty9JOAUU&t=413) 그런 목적이 있어야 해요. 해서 어떤
+- [6:55](https://youtube.com/watch?v=GQtty9JOAUU&t=415) 목적을 취하는지도 한번 이야기를 나눠
+- [6:57](https://youtube.com/watch?v=GQtty9JOAUU&t=417) 볼게요. 우선 L르미키는 저는이 외부
+- [7:00](https://youtube.com/watch?v=GQtty9JOAUU&t=420) 지식의 얕은 컴파일이라고 생각을
+- [7:03](https://youtube.com/watch?v=GQtty9JOAUU&t=423) 합니다. 이게 무슨 말이냐? 외부
+- [7:04](https://youtube.com/watch?v=GQtty9JOAUU&t=424) 지식. 내 머릿속에서 알고 있는
+- [7:07](https://youtube.com/watch?v=GQtty9JOAUU&t=427) 지식이 아니라 내가 프로세싱한 지식이
+- [7:10](https://youtube.com/watch?v=GQtty9JOAUU&t=430) 아니라 외부에 있는 정보와 지식들을
+- [7:12](https://youtube.com/watch?v=GQtty9JOAUU&t=432) 좀 얕은 이해를 위해서 모아 놓은
+- [7:15](https://youtube.com/watch?v=GQtty9JOAUU&t=435) 것들이 LMK키라고 생각을 해요.
+- [7:16](https://youtube.com/watch?v=GQtty9JOAUU&t=436) 지금도 사람들이 많이 공유를 하고
+- [7:19](https://youtube.com/watch?v=GQtty9JOAUU&t=439) 정의를 내리고 있는 것들을 보면은
+- [7:21](https://youtube.com/watch?v=GQtty9JOAUU&t=441) 결국에는 세상에 있는 수많은 지식들을
+- [7:24](https://youtube.com/watch?v=GQtty9JOAUU&t=444) 우리가 로우 안에 있는 폴더로 원문
+- [7:26](https://youtube.com/watch?v=GQtty9JOAUU&t=446) 형태로 그대로 담아 놓죠. 이걸
+- [7:28](https://youtube.com/watch?v=GQtty9JOAUU&t=448) 어떻게 하나요? 우리가 인제스트라는
+- [7:30](https://youtube.com/watch?v=GQtty9JOAUU&t=450) 것을 이용을 해서 그 로우 폴더 안에
+- [7:32](https://youtube.com/watch?v=GQtty9JOAUU&t=452) 있는 지식들에서 여러 요소들을 이렇게
+- [7:34](https://youtube.com/watch?v=GQtty9JOAUU&t=454) 분해를 하고 연결을 시켜 가지고
+- [7:36](https://youtube.com/watch?v=GQtty9JOAUU&t=456) 위키에 정리를 합니다. 그리고 AI가
+- [7:38](https://youtube.com/watch?v=GQtty9JOAUU&t=458) 그 위키를 이용해서 답변을 하죠. 어
+- [7:40](https://youtube.com/watch?v=GQtty9JOAUU&t=460) 실제로 저는이 LM키가 얕은 지식을
+- [7:43](https://youtube.com/watch?v=GQtty9JOAUU&t=463) 위해서만 사용이 돼야 된다. 야튼
+- [7:46](https://youtube.com/watch?v=GQtty9JOAUU&t=466) 지식만을 담당한다라고 말씀을 드리는
+- [7:48](https://youtube.com/watch?v=GQtty9JOAUU&t=468) 건 아닙니다. 이것은 온라인에서
+- [7:50](https://youtube.com/watch?v=GQtty9JOAUU&t=470) 사람들이 어떻게 정의를 내리고 있는지
+- [7:52](https://youtube.com/watch?v=GQtty9JOAUU&t=472) 그리고 실제로 어떻게 활용을 할지에
+- [7:54](https://youtube.com/watch?v=GQtty9JOAUU&t=474) 대해서 그냥 저만의 관점을 말씀을
+- [7:56](https://youtube.com/watch?v=GQtty9JOAUU&t=476) 드린 거예요. 실제로이 LM 위키
+- [7:58](https://youtube.com/watch?v=GQtty9JOAUU&t=478) 목적 자체가 아마도 원문이 지트를
+- [8:01](https://youtube.com/watch?v=GQtty9JOAUU&t=481) 그대로 보면은 AI가 인터넷에 있는이
+- [8:04](https://youtube.com/watch?v=GQtty9JOAUU&t=484) 수많은 지식들을 잘 소화할 수 있는
+- [8:06](https://youtube.com/watch?v=GQtty9JOAUU&t=486) 형태로 만들어서 AI가 깊은 이해를
+- [8:09](https://youtube.com/watch?v=GQtty9JOAUU&t=489) 하고 깊게 이렇게 분해를 해 놓은
+- [8:11](https://youtube.com/watch?v=GQtty9JOAUU&t=491) 지식들을 정리해 놓는 곳입니다.
+- [8:14](https://youtube.com/watch?v=GQtty9JOAUU&t=494) 그래서 실제로 저희가 AI랑 지의
+- [8:16](https://youtube.com/watch?v=GQtty9JOAUU&t=496) 응답을 할 때 깊은 이해를 위해서
+- [8:18](https://youtube.com/watch?v=GQtty9JOAUU&t=498) 활용을 할 수도 있어요. 근데 활용을
+- [8:20](https://youtube.com/watch?v=GQtty9JOAUU&t=500) 할 수도 있어야지 사람들이 실제로
+- [8:22](https://youtube.com/watch?v=GQtty9JOAUU&t=502) 이런 깊은 이해를 위해서 활용을
+- [8:24](https://youtube.com/watch?v=GQtty9JOAUU&t=504) 할지가 전 의문이라는 말입니다. 요즘
+- [8:27](https://youtube.com/watch?v=GQtty9JOAUU&t=507) 다들 뭔가 자동화 딸깍 알아서 해
+- [8:29](https://youtube.com/watch?v=GQtty9JOAUU&t=509) 주는 것에 끌리고 있는데이 LRM키로
+- [8:31](https://youtube.com/watch?v=GQtty9JOAUU&t=511) 모아두었더라도 우리가 실제로 뭔가
+- [8:34](https://youtube.com/watch?v=GQtty9JOAUU&t=514) 지리를 하고 답변을 하고 뭔가 깊은
+- [8:37](https://youtube.com/watch?v=GQtty9JOAUU&t=517) 고민을 통해서 이렇게 콘텐츠를 쌓아
+- [8:39](https://youtube.com/watch?v=GQtty9JOAUU&t=519) 나가고 새로운 지식을 만드는 거 전
+- [8:40](https://youtube.com/watch?v=GQtty9JOAUU&t=520) 사람들이 생각보다 많이 안 할 거라고
+- [8:42](https://youtube.com/watch?v=GQtty9JOAUU&t=522) 생각을 합니다. 사람들은 우선 두뇌를
+- [8:44](https://youtube.com/watch?v=GQtty9JOAUU&t=524) 쓰는 것을 귀찮하기 때문에 말이죠.
+- [8:46](https://youtube.com/watch?v=GQtty9JOAUU&t=526) 그래서 이런 관점으로 생각을 해 봤을
+- [8:48](https://youtube.com/watch?v=GQtty9JOAUU&t=528) 때 저는이 L위라는게 결국에는 외부
+- [8:51](https://youtube.com/watch?v=GQtty9JOAUU&t=531) 지식의 얕은 컴파일이라고 말을 하는
+- [8:53](https://youtube.com/watch?v=GQtty9JOAUU&t=533) 겁니다. 깊은 이해를 위해서도 쓸 수
+- [8:55](https://youtube.com/watch?v=GQtty9JOAUU&t=535) 있지만 실질적으로 어떻게 활용이
+- [8:58](https://youtube.com/watch?v=GQtty9JOAUU&t=538) 될지를 생각을 해 봤을 때 내가 직접
+- [9:00](https://youtube.com/watch?v=GQtty9JOAUU&t=540) 경험을 하고 깊게 고민한 자료들이
+- [9:02](https://youtube.com/watch?v=GQtty9JOAUU&t=542) 아니기 때문에 결국에는 얕은 지식의
+- [9:06](https://youtube.com/watch?v=GQtty9JOAUU&t=546) 영역에 대해서 뭔가 활용을 할 부분이
+- [9:09](https://youtube.com/watch?v=GQtty9JOAUU&t=549) LLM 위키라고 생각을 해요. 이게
+- [9:11](https://youtube.com/watch?v=GQtty9JOAUU&t=551) 아주 강력하긴 합니다. 왜냐면 사람은
+- [9:13](https://youtube.com/watch?v=GQtty9JOAUU&t=553) 1개의 문서를 정리를 하지 못하지만
+- [9:16](https://youtube.com/watch?v=GQtty9JOAUU&t=556) AI는 지치지 않고 이것을 한 번에
+- [9:18](https://youtube.com/watch?v=GQtty9JOAUU&t=558) 어 근데이 얕은 지식이 제가 문제가
+- [9:20](https://youtube.com/watch?v=GQtty9JOAUU&t=560) 된다라는 것은 아닙니다. AI를
+- [9:22](https://youtube.com/watch?v=GQtty9JOAUU&t=562) 활용해서 이게 빠르고 대량으로 지식을
+- [9:25](https://youtube.com/watch?v=GQtty9JOAUU&t=565) 프로세싱 해 줄 수 있는 것이
+- [9:26](https://youtube.com/watch?v=GQtty9JOAUU&t=566) 필요해요. 왜냐면 사람이 1만 개를
+- [9:29](https://youtube.com/watch?v=GQtty9JOAUU&t=569) 문서를 정리하지 못하잖아요. AI는
+- [9:31](https://youtube.com/watch?v=GQtty9JOAUU&t=571) 지치지 않죠. 그런데 제가 생각하는
+- [9:33](https://youtube.com/watch?v=GQtty9JOAUU&t=573) 것은 우리가 이런 LM 위키로 막
+- [9:36](https://youtube.com/watch?v=GQtty9JOAUU&t=576) 다양한 정보들을 모았더라도 새로운
+- [9:39](https://youtube.com/watch?v=GQtty9JOAUU&t=579) 인사이트라는 것은 LM 위키에서
+- [9:42](https://youtube.com/watch?v=GQtty9JOAUU&t=582) 나오는 것이 아니에요.이 LM 위키로
+- [9:44](https://youtube.com/watch?v=GQtty9JOAUU&t=584) 내가 실제로 프로세싱을 하지 않고
+- [9:46](https://youtube.com/watch?v=GQtty9JOAUU&t=586) 이해하지 않은 것들을 담아둔 것은
+- [9:49](https://youtube.com/watch?v=GQtty9JOAUU&t=589) 저는 외부인의 시선이고 AI의
+- [9:51](https://youtube.com/watch?v=GQtty9JOAUU&t=591) 관점이라고 생각을 합니다. 레르미키가
+- [9:54](https://youtube.com/watch?v=GQtty9JOAUU&t=594) 그래서 못 하는 것은 새로운
+- [9:56](https://youtube.com/watch?v=GQtty9JOAUU&t=596) 인사이트를 생산을 하고 세상을 바꿔
+- [9:58](https://youtube.com/watch?v=GQtty9JOAUU&t=598) 놓을 완전 새로운 관점을 그
+- [10:00](https://youtube.com/watch?v=GQtty9JOAUU&t=600) 자체적으로 내놓지는 전 못할 것
+- [10:02](https://youtube.com/watch?v=GQtty9JOAUU&t=602) 같아요. 결국엔 이게 남의 글, 남의
+- [10:04](https://youtube.com/watch?v=GQtty9JOAUU&t=604) 영상, 남의 텍스트이기 때문이죠.
+- [10:06](https://youtube.com/watch?v=GQtty9JOAUU&t=606) 그래서 우리가 LLM를 이용한 이런
+- [10:09](https://youtube.com/watch?v=GQtty9JOAUU&t=609) 얕은 인사이트 이런 용도의 지식
+- [10:11](https://youtube.com/watch?v=GQtty9JOAUU&t=611) 베이스도 있으면은 여기다가 꼭 더해
+- [10:14](https://youtube.com/watch?v=GQtty9JOAUU&t=614) 줘야 되는 것이 결국에는 나의 경험,
+- [10:17](https://youtube.com/watch?v=GQtty9JOAUU&t=617) 내가 실제로 판단을 내린 것, 나의
+- [10:19](https://youtube.com/watch?v=GQtty9JOAUU&t=619) 기록, 나의 일기 이런 나의 지식,
+- [10:22](https://youtube.com/watch?v=GQtty9JOAUU&t=622) 내가 실제로 경험을 하고 들어간
+- [10:24](https://youtube.com/watch?v=GQtty9JOAUU&t=624) 부분도 필요합니다. 저는 이게 사람의
+- [10:26](https://youtube.com/watch?v=GQtty9JOAUU&t=626) 영역이고 AI가 나 대체해 줄 수
+- [10:29](https://youtube.com/watch?v=GQtty9JOAUU&t=629) 없는 부분이라고 생각을 해요. 내
+- [10:31](https://youtube.com/watch?v=GQtty9JOAUU&t=631) 일기, 판단, 결정, 기록 인사이트
+- [10:34](https://youtube.com/watch?v=GQtty9JOAUU&t=634) 깊은 이해. 고도화된 깊은 이해.
+- [10:37](https://youtube.com/watch?v=GQtty9JOAUU&t=637) 실제로 경험하고 느끼고 이것들을
+- [10:39](https://youtube.com/watch?v=GQtty9JOAUU&t=639) 기록해 놓은 것들. 나의 암흑지에
+- [10:41](https://youtube.com/watch?v=GQtty9JOAUU&t=641) 있는 것을 형식제로 직접적으로 꺼내
+- [10:44](https://youtube.com/watch?v=GQtty9JOAUU&t=644) 놓은 것들. 내 머릿속에 있는 구조와
+- [10:46](https://youtube.com/watch?v=GQtty9JOAUU&t=646) 내 머릿속에 있는 지식들을 꺼내 놓고
+- [10:48](https://youtube.com/watch?v=GQtty9JOAUU&t=648) 구조화를 해 놓은 것이 결국에는
+- [10:51](https://youtube.com/watch?v=GQtty9JOAUU&t=651) 사람의 영역.이 이 왼쪽에 마이
+- [10:52](https://youtube.com/watch?v=GQtty9JOAUU&t=652) 노트이고요. 그리고 저는이 AI의
+- [10:55](https://youtube.com/watch?v=GQtty9JOAUU&t=655) 영역 야층 컴파일 내가 생각보다 깊게
+- [10:58](https://youtube.com/watch?v=GQtty9JOAUU&t=658) 프로세싱을 하지 않은이 영역을 저는
+- [11:00](https://youtube.com/watch?v=GQtty9JOAUU&t=660) LM 위키이 얕은 컴파일이라고 이렇게
+- [11:03](https://youtube.com/watch?v=GQtty9JOAUU&t=663) 말씀을 드리고 싶습니다. 결국에는이
+- [11:05](https://youtube.com/watch?v=GQtty9JOAUU&t=665) 둘이 같이 가야 비로소 내 동료가
+- [11:08](https://youtube.com/watch?v=GQtty9JOAUU&t=668) 됩니다. 제가 늘 강조를 하는 것이
+- [11:10](https://youtube.com/watch?v=GQtty9JOAUU&t=670) 골드인 골드 아웃이라고 말을 하고
+- [11:13](https://youtube.com/watch?v=GQtty9JOAUU&t=673) 있습니다. 우리가 AI를 활용을 할
+- [11:15](https://youtube.com/watch?v=GQtty9JOAUU&t=675) 때 garbage인 가비지 아웃이라는
+- [11:17](https://youtube.com/watch?v=GQtty9JOAUU&t=677) 말을 많이 거예요.이 이 갈비지는
+- [11:19](https://youtube.com/watch?v=GQtty9JOAUU&t=679) 저는 어 나의 목적과 판단이나 나의
+- [11:22](https://youtube.com/watch?v=GQtty9JOAUU&t=682) 관점이 들어가지 않은 이런 이제
+- [11:25](https://youtube.com/watch?v=GQtty9JOAUU&t=685) 의미가 없어지는 수집들이 결국에는
+- [11:28](https://youtube.com/watch?v=GQtty9JOAUU&t=688) 골드가 아니라 갈비지라 생각이 되고이
+- [11:31](https://youtube.com/watch?v=GQtty9JOAUU&t=691) LM 미키의 목적이 없이 나의
+- [11:33](https://youtube.com/watch?v=GQtty9JOAUU&t=693) 관점이나 이해 없이 계속 데이터가
+- [11:36](https://youtube.com/watch?v=GQtty9JOAUU&t=696) 쌓이면은 이건 갈비지라고 생각이
+- [11:37](https://youtube.com/watch?v=GQtty9JOAUU&t=697) 되고요. 결국은이 골드라는 것은이
+- [11:40](https://youtube.com/watch?v=GQtty9JOAUU&t=700) 왼쪽에 있는 영역입니다. 나의 판단.
+- [11:42](https://youtube.com/watch?v=GQtty9JOAUU&t=702) 내가 실제로 뭔가 경험을 하고 느끼고
+- [11:46](https://youtube.com/watch?v=GQtty9JOAUU&t=706) 인사이트가 느껴진 것들을 여기다가
+- [11:48](https://youtube.com/watch?v=GQtty9JOAUU&t=708) 넣어야 그게 골드입니다. 그래서이
+- [11:50](https://youtube.com/watch?v=GQtty9JOAUU&t=710) 골드인 골드 아웃이 되어야 하고이
+- [11:54](https://youtube.com/watch?v=GQtty9JOAUU&t=714) 골드가 결국에는 나의 이해 나 내가
+- [11:57](https://youtube.com/watch?v=GQtty9JOAUU&t=717) 체감한 거 내가 내재외한 것들을
+- [11:59](https://youtube.com/watch?v=GQtty9JOAUU&t=719) 넣어야 해요. 그래서이 금덩이
+- [12:01](https://youtube.com/watch?v=GQtty9JOAUU&t=721) 데이터가 결국에는 나의 어 원래
+- [12:04](https://youtube.com/watch?v=GQtty9JOAUU&t=724) 관점도 들어가야 되고 나의 생각도
+- [12:06](https://youtube.com/watch?v=GQtty9JOAUU&t=726) 들어가야 되고 여기다가 이제 AI의
+- [12:09](https://youtube.com/watch?v=GQtty9JOAUU&t=729) 얕은 이해 AI가 프로세싱한 것도
+- [12:11](https://youtube.com/watch?v=GQtty9JOAUU&t=731) 같이 들어가서 활용을 하자이
+- [12:13](https://youtube.com/watch?v=GQtty9JOAUU&t=733) 말입니다. 그래서 이번 영상은 우리가
+- [12:15](https://youtube.com/watch?v=GQtty9JOAUU&t=735) LLM 위키를 만드는 또 다른
+- [12:17](https://youtube.com/watch?v=GQtty9JOAUU&t=737) 구현법에 대한 영상이 아니고요. 내가
+- [12:19](https://youtube.com/watch?v=GQtty9JOAUU&t=739) 머릿속에서 만들고자 하는 어떤 AI를
+- [12:22](https://youtube.com/watch?v=GQtty9JOAUU&t=742) 활용한 운영 체제 전체 그림에서 기가
+- [12:25](https://youtube.com/watch?v=GQtty9JOAUU&t=745) 어떻게 들어가야 하는지 좀 줌 아웃된
+- [12:27](https://youtube.com/watch?v=GQtty9JOAUU&t=747) 시점에 대해서 알려 드리려고 합니다.
+- [12:28](https://youtube.com/watch?v=GQtty9JOAUU&t=748) 우리 삶에는 줌 아웃이 필요합니다.
+- [12:30](https://youtube.com/watch?v=GQtty9JOAUU&t=750) 왜냐면은 어떤 것을 만들고 나서 이게
+- [12:33](https://youtube.com/watch?v=GQtty9JOAUU&t=753) 삶의 어떤 부분에 끼어드는지 어떤
+- [12:35](https://youtube.com/watch?v=GQtty9JOAUU&t=755) 목적을 띄는지에 대해서 알아야 해요.
+- [12:37](https://youtube.com/watch?v=GQtty9JOAUU&t=757) 내 삶에 어디에 들어가는지 알면 매일
+- [12:40](https://youtube.com/watch?v=GQtty9JOAUU&t=760) 쓰게 됩니다. 제가 크게 보여 드릴
+- [12:42](https://youtube.com/watch?v=GQtty9JOAUU&t=762) 그 시스템과 중화 관점은 단
+- [12:44](https://youtube.com/watch?v=GQtty9JOAUU&t=764) 같습니다. 내 삶에 끼어디는 시스템을
+- [12:47](https://youtube.com/watch?v=GQtty9JOAUU&t=767) 만드는 겁니다. LM 미키는이 흐름의
+- [12:49](https://youtube.com/watch?v=GQtty9JOAUU&t=769) 한 단계 뿐입니다. 네. 그러면은
+- [12:51](https://youtube.com/watch?v=GQtty9JOAUU&t=771) 저희가 옵시디언으로 와서 한번
+- [12:54](https://youtube.com/watch?v=GQtty9JOAUU&t=774) 살펴볼게요. 네. 그러면은 우리가
+- [12:56](https://youtube.com/watch?v=GQtty9JOAUU&t=776) 이제 어떻게 이것을 준해서 봐야
+- [12:59](https://youtube.com/watch?v=GQtty9JOAUU&t=779) 되느냐라고 한다면 저는 이렇게 브레인
+- [13:01](https://youtube.com/watch?v=GQtty9JOAUU&t=781) 트리니티 시스템이라고 이름을 짓고
+- [13:04](https://youtube.com/watch?v=GQtty9JOAUU&t=784) 이렇게 그림으로 표현을 했습니다.
+- [13:06](https://youtube.com/watch?v=GQtty9JOAUU&t=786) 저희 다른 영상들로 보시면 알겠지만
+- [13:08](https://youtube.com/watch?v=GQtty9JOAUU&t=788) 저는 되게 시각화하고 프레임워크화
+- [13:10](https://youtube.com/watch?v=GQtty9JOAUU&t=790) 하는 것을 좋아해요. 네. 이것을 다
+- [13:13](https://youtube.com/watch?v=GQtty9JOAUU&t=793) 주민해 가지고 하나씩 설명을 드릴 어
+- [13:15](https://youtube.com/watch?v=GQtty9JOAUU&t=795) 예정인데요. 제가 생각했을 때
+- [13:18](https://youtube.com/watch?v=GQtty9JOAUU&t=798) L르미키는 여기서이 작은 부분밖에
+- [13:21](https://youtube.com/watch?v=GQtty9JOAUU&t=801) 없고요. 그리고 AI가 들어가는
+- [13:23](https://youtube.com/watch?v=GQtty9JOAUU&t=803) 부분은 여기밖에 없습니다. 예. 뭐
+- [13:26](https://youtube.com/watch?v=GQtty9JOAUU&t=806) 일단 제가 그리면서 그렇게 그냥
+- [13:27](https://youtube.com/watch?v=GQtty9JOAUU&t=807) 표현을 한 걸 수도 있어요. 어
+- [13:29](https://youtube.com/watch?v=GQtty9JOAUU&t=809) 그러면 우리가 하나씩 좀 더 줌인해
+- [13:31](https://youtube.com/watch?v=GQtty9JOAUU&t=811) 가지고 설명을 한번 드려 볼게요.
+- [13:33](https://youtube.com/watch?v=GQtty9JOAUU&t=813) 제일 위에 있는 부분은 어 나만의
+- [13:36](https://youtube.com/watch?v=GQtty9JOAUU&t=816) 철학이에요. 제가 먼저 좀 말씀드리고
+- [13:38](https://youtube.com/watch?v=GQtty9JOAUU&t=818) 싶은 부분은 제가 아까서 말씀드린 그
+- [13:41](https://youtube.com/watch?v=GQtty9JOAUU&t=821) 목적에 대한 부분입니다. 우리가 지식
+- [13:43](https://youtube.com/watch?v=GQtty9JOAUU&t=823) 관리를 하고 이것을 활용을 하기
+- [13:44](https://youtube.com/watch?v=GQtty9JOAUU&t=824) 위해서는 결국에는 목적이 있는 수집이
+- [13:47](https://youtube.com/watch?v=GQtty9JOAUU&t=827) 되어야 한다. 이런 말인데 그 목적이
+- [13:49](https://youtube.com/watch?v=GQtty9JOAUU&t=829) 무엇이냐? 어, 조금 차근차근 설명을
+- [13:51](https://youtube.com/watch?v=GQtty9JOAUU&t=831) 해 보겠습니다. 어, 저는 우선이
+- [13:53](https://youtube.com/watch?v=GQtty9JOAUU&t=833) 목적에 대해서 제일 상단에는 우리의
+- [13:57](https://youtube.com/watch?v=GQtty9JOAUU&t=837) 철학이 있다라고 생각을 합니다.
+- [13:59](https://youtube.com/watch?v=GQtty9JOAUU&t=839) 필소피 저는 이것을 북극성
+- [14:01](https://youtube.com/watch?v=GQtty9JOAUU&t=841) 폴라리스라고도 표현을 하는데요.
+- [14:03](https://youtube.com/watch?v=GQtty9JOAUU&t=843) 우리는 잘 모르지만 우리가 나로서,
+- [14:06](https://youtube.com/watch?v=GQtty9JOAUU&t=846) 내가 사람으로서 살아가는 이유와
+- [14:08](https://youtube.com/watch?v=GQtty9JOAUU&t=848) 방향이 있을 거예요. 이것을 한마디로
+- [14:11](https://youtube.com/watch?v=GQtty9JOAUU&t=851) 표현하는 것은 엄청 쉽지 않습니다.
+- [14:13](https://youtube.com/watch?v=GQtty9JOAUU&t=853) 근데 결국에는 나는 누구인가, 나는
+- [14:16](https://youtube.com/watch?v=GQtty9JOAUU&t=856) 왜 사는가? 무엇을 사랑하고 중요시
+- [14:18](https://youtube.com/watch?v=GQtty9JOAUU&t=858) 여겨는가? 어디로 나가는가, 어떻게
+- [14:21](https://youtube.com/watch?v=GQtty9JOAUU&t=861) 살 것인, 어떻게 살 것인가 이런
+- [14:22](https://youtube.com/watch?v=GQtty9JOAUU&t=862) 것들이 있을 겁니다. 근데 이거를
+- [14:25](https://youtube.com/watch?v=GQtty9JOAUU&t=865) 어떻게 발견을 하겠라고 한다면
+- [14:27](https://youtube.com/watch?v=GQtty9JOAUU&t=867) 결국에는 기존의 경험들로부터 시작이
+- [14:30](https://youtube.com/watch?v=GQtty9JOAUU&t=870) 되는 거 같아요. 저는 늘 인생을
+- [14:32](https://youtube.com/watch?v=GQtty9JOAUU&t=872) 다음과 같은 그림으로 표현을 하고
+- [14:34](https://youtube.com/watch?v=GQtty9JOAUU&t=874) 있는데요. 우리가 현재를 기쯤으로
+- [14:36](https://youtube.com/watch?v=GQtty9JOAUU&t=876) 미래로 나아가고 있는이 상황에서
+- [14:39](https://youtube.com/watch?v=GQtty9JOAUU&t=879) 수많은 새로운 정보와 지식들 그리고
+- [14:41](https://youtube.com/watch?v=GQtty9JOAUU&t=881) 기회들 그리고 수소 많은 만 그리고
+- [14:44](https://youtube.com/watch?v=GQtty9JOAUU&t=884) 수많은 만남들을 합니다. 지금
+- [14:46](https://youtube.com/watch?v=GQtty9JOAUU&t=886) 여러분들도 지금이 시점에서 영상을
+- [14:48](https://youtube.com/watch?v=GQtty9JOAUU&t=888) 보시고 계신다면 이것도 하나의
+- [14:50](https://youtube.com/watch?v=GQtty9JOAUU&t=890) 만남이라고 볼 수가 있을 거예요.
+- [14:52](https://youtube.com/watch?v=GQtty9JOAUU&t=892) 저희가 온라인에 이런 동영상
+- [14:53](https://youtube.com/watch?v=GQtty9JOAUU&t=893) 유튜브라는 플랫폼에서 만났지만 이것도
+- [14:56](https://youtube.com/watch?v=GQtty9JOAUU&t=896) 하나의 만남이고요. 근데 이런 만남의
+- [14:58](https://youtube.com/watch?v=GQtty9JOAUU&t=898) 순간들에서 우리가 머릿속에서
+- [15:00](https://youtube.com/watch?v=GQtty9JOAUU&t=900) 무의식적으로 어떤 생각을 하게 되고
+- [15:03](https://youtube.com/watch?v=GQtty9JOAUU&t=903) 감정을 느끼게 되죠. 그 감정으로
+- [15:05](https://youtube.com/watch?v=GQtty9JOAUU&t=905) 인해서 내 삶에 또 다른 영향을 주고
+- [15:07](https://youtube.com/watch?v=GQtty9JOAUU&t=907) 또 다른 선택을 하게 되고 그랬을
+- [15:08](https://youtube.com/watch?v=GQtty9JOAUU&t=908) 거예요. 여러분들께서 지금 무엇을
+- [15:11](https://youtube.com/watch?v=GQtty9JOAUU&t=911) 하고 계신지 모르겠지만 대학생 분들
+- [15:13](https://youtube.com/watch?v=GQtty9JOAUU&t=913) 같은 경우에는 내가 왜 어떤 학과를
+- [15:15](https://youtube.com/watch?v=GQtty9JOAUU&t=915) 선택하고 되었는지에 대한 어떤 선택의
+- [15:17](https://youtube.com/watch?v=GQtty9JOAUU&t=917) 기준 그 이율도 있을 것이고요. 저
+- [15:19](https://youtube.com/watch?v=GQtty9JOAUU&t=919) 같은 경우는 현재 지금 이런
+- [15:21](https://youtube.com/watch?v=GQtty9JOAUU&t=921) 크리에이터로서 그리고 이제 본업으로는
+- [15:23](https://youtube.com/watch?v=GQtty9JOAUU&t=923) AI 컨설턴트로서 내가 이것을 왜
+- [15:25](https://youtube.com/watch?v=GQtty9JOAUU&t=925) 하고 있는지에 대한 그런 이유가
+- [15:27](https://youtube.com/watch?v=GQtty9JOAUU&t=927) 있습니다. 내 삶에 영향을 끼친
+- [15:29](https://youtube.com/watch?v=GQtty9JOAUU&t=929) 그리고 중요한 그 선택들을 다 있다
+- [15:32](https://youtube.com/watch?v=GQtty9JOAUU&t=932) 보면은 결국에는 내가 뭔가 추구하고자
+- [15:34](https://youtube.com/watch?v=GQtty9JOAUU&t=934) 하는 삶의 방향성이 있고요. 저는
+- [15:36](https://youtube.com/watch?v=GQtty9JOAUU&t=936) 그거를 이제 북극성이자 나의 철학,
+- [15:39](https://youtube.com/watch?v=GQtty9JOAUU&t=939) 삶의 철학이라고 통치러 표현을 하고
+- [15:41](https://youtube.com/watch?v=GQtty9JOAUU&t=941) 있습니다. 나의 삶의 북극성을 찾는
+- [15:43](https://youtube.com/watch?v=GQtty9JOAUU&t=943) 거죠. 이것을 그 두루몽한 뭔가 삶의
+- [15:46](https://youtube.com/watch?v=GQtty9JOAUU&t=946) 이유를 풀어 보다 보면은 결국에는
+- [15:48](https://youtube.com/watch?v=GQtty9JOAUU&t=948) 나는 누구인가, 왜 사는가, 무엇을
+- [15:50](https://youtube.com/watch?v=GQtty9JOAUU&t=950) 중요시하는가, 어디로 가고 있는가
+- [15:52](https://youtube.com/watch?v=GQtty9JOAUU&t=952) 이런 형태로 정리가 될 수가 있어요.
+- [15:54](https://youtube.com/watch?v=GQtty9JOAUU&t=954) 그 철학으로 나아가는 길에서 우리가
+- [15:56](https://youtube.com/watch?v=GQtty9JOAUU&t=956) 뭐 커리어, 재정, 성장, 가족,
+- [15:59](https://youtube.com/watch?v=GQtty9JOAUU&t=959) 관계, 환경 등 내가 삶에 또 책임을
+- [16:02](https://youtube.com/watch?v=GQtty9JOAUU&t=962) 져야 되는 관리를 해야 된 영역들이
+- [16:04](https://youtube.com/watch?v=GQtty9JOAUU&t=964) 있습니다. 자, 이거는 저는 이제
+- [16:06](https://youtube.com/watch?v=GQtty9JOAUU&t=966) 삶의 이제 에리어, 영역들이라고
+- [16:08](https://youtube.com/watch?v=GQtty9JOAUU&t=968) 표현을 하였어요. 근데 재밌는 것은이
+- [16:10](https://youtube.com/watch?v=GQtty9JOAUU&t=970) 살아가는 이유, 방향,이 그 나의
+- [16:13](https://youtube.com/watch?v=GQtty9JOAUU&t=973) 삶의 철학, 방향성은
+- [16:16](https://youtube.com/watch?v=GQtty9JOAUU&t=976) 그 자체만으로 아무런 효과가
+- [16:18](https://youtube.com/watch?v=GQtty9JOAUU&t=978) 없어요.이 자아라는 것 얘를 실현을
+- [16:20](https://youtube.com/watch?v=GQtty9JOAUU&t=980) 하기 위해서 우리가 24시간 365일
+- [16:24](https://youtube.com/watch?v=GQtty9JOAUU&t=984) 한정된 시간은 시간을 열심히 쪼개
+- [16:27](https://youtube.com/watch?v=GQtty9JOAUU&t=987) 가지고 그 시간대별로 우리가 다양한
+- [16:29](https://youtube.com/watch?v=GQtty9JOAUU&t=989) 역할을 수행을 합니다.이 역할이라는
+- [16:32](https://youtube.com/watch?v=GQtty9JOAUU&t=992) 것은 저는 나의 다양한 버전들이라고
+- [16:35](https://youtube.com/watch?v=GQtty9JOAUU&t=995) 생각을 하는데요.이 이 버전이 어떻게
+- [16:37](https://youtube.com/watch?v=GQtty9JOAUU&t=997) 보면은 결국에는이 똑같은 자하예요.
+- [16:39](https://youtube.com/watch?v=GQtty9JOAUU&t=999) 그런데 다른 버전들입니다. 이런 다른
+- [16:42](https://youtube.com/watch?v=GQtty9JOAUU&t=1002) 버전들로 내가 낮에는 제 회사에서의
+- [16:45](https://youtube.com/watch?v=GQtty9JOAUU&t=1005) AI 컨설턴트로서 그리고 밤과
+- [16:47](https://youtube.com/watch?v=GQtty9JOAUU&t=1007) 주말에는 제가 이렇게 제 생각을
+- [16:50](https://youtube.com/watch?v=GQtty9JOAUU&t=1010) 공유하는 이런 크리에이터로서 그리고
+- [16:52](https://youtube.com/watch?v=GQtty9JOAUU&t=1012) 나머지 시간에는 이제 가장으로서
+- [16:54](https://youtube.com/watch?v=GQtty9JOAUU&t=1014) 그리고 이제 박사를 지금 지원을
+- [16:56](https://youtube.com/watch?v=GQtty9JOAUU&t=1016) 앞두고 있는데 거기는 연구자로서
+- [16:58](https://youtube.com/watch?v=GQtty9JOAUU&t=1018) 역할을 바꿔 가면서이 자를 실현을
+- [17:00](https://youtube.com/watch?v=GQtty9JOAUU&t=1020) 하려고 해요.이 각각의 역할들에서
+- [17:02](https://youtube.com/watch?v=GQtty9JOAUU&t=1022) 제가 이룬 것들이 결국에는 제 자를
+- [17:05](https://youtube.com/watch?v=GQtty9JOAUU&t=1025) 실현하는 그런 매개체라고 보면 될 거
+- [17:08](https://youtube.com/watch?v=GQtty9JOAUU&t=1028) 같습니다. 근데 재밌는 것은이
+- [17:10](https://youtube.com/watch?v=GQtty9JOAUU&t=1030) 역할들에는
+- [17:11](https://youtube.com/watch?v=GQtty9JOAUU&t=1031) 궁극적으로 어떤 계산과 목표가
+- [17:14](https://youtube.com/watch?v=GQtty9JOAUU&t=1034) 있어요. 예를 들어서 제가
+- [17:15](https://youtube.com/watch?v=GQtty9JOAUU&t=1035) 가장으로서는 저는 이제 제 아내도
+- [17:18](https://youtube.com/watch?v=GQtty9JOAUU&t=1038) 있고 이제 나중에 이제 미래의
+- [17:20](https://youtube.com/watch?v=GQtty9JOAUU&t=1040) 아이들이 있겠죠. 그 대상들 저의
+- [17:22](https://youtube.com/watch?v=GQtty9JOAUU&t=1042) 가정에 어떤 목표가 있습니다. 행복과
+- [17:24](https://youtube.com/watch?v=GQtty9JOAUU&t=1044) 안정. 제 제 아내와 미래에 있을
+- [17:27](https://youtube.com/watch?v=GQtty9JOAUU&t=1047) 저의 아이들의 행복과 평화의 안정을
+- [17:30](https://youtube.com/watch?v=GQtty9JOAUU&t=1050) 책임지는 것이 저의 목표입니다.
+- [17:32](https://youtube.com/watch?v=GQtty9JOAUU&t=1052) 가장으로서의 역할로 말 말이죠. 이제
+- [17:34](https://youtube.com/watch?v=GQtty9JOAUU&t=1054) AI 컨설턴트로서는 저 같은 경우는
+- [17:37](https://youtube.com/watch?v=GQtty9JOAUU&t=1057) 수많은 조직들의 AI
+- [17:39](https://youtube.com/watch?v=GQtty9JOAUU&t=1059) 트랜스포메이션뿐만 아니라 AI를 잘
+- [17:41](https://youtube.com/watch?v=GQtty9JOAUU&t=1061) 도입하고 활용을 하는 그 전반적인
+- [17:44](https://youtube.com/watch?v=GQtty9JOAUU&t=1064) 프로세스를 도와드리고 그리고 그
+- [17:45](https://youtube.com/watch?v=GQtty9JOAUU&t=1065) 조직에서 뭔가 만들고 싶은 어떤 AI
+- [17:48](https://youtube.com/watch?v=GQtty9JOAUU&t=1068) 시스템이 있으면은 이것을 어떻게
+- [17:50](https://youtube.com/watch?v=GQtty9JOAUU&t=1070) 설계하는 것이 좋은가 요구 사항을
+- [17:52](https://youtube.com/watch?v=GQtty9JOAUU&t=1072) 들어보고 실제로 뭔가 기술적으로
+- [17:54](https://youtube.com/watch?v=GQtty9JOAUU&t=1074) 풀어내는 그 중간다리 역할을 하는
+- [17:56](https://youtube.com/watch?v=GQtty9JOAUU&t=1076) 것이 AI 컨설턴트의 역할입니다.
+- [17:58](https://youtube.com/watch?v=GQtty9JOAUU&t=1078) 그리고 크리에이터 제 유튜브 채널을
+- [18:00](https://youtube.com/watch?v=GQtty9JOAUU&t=1080) 통해서 개인들 그니까 여러분들이죠.
+- [18:02](https://youtube.com/watch?v=GQtty9JOAUU&t=1082) 지금 여러분들의 지식 관리의 생산성을
+- [18:05](https://youtube.com/watch?v=GQtty9JOAUU&t=1085) 개선시켜 드리는 역할로이
+- [18:06](https://youtube.com/watch?v=GQtty9JOAUU&t=1086) 크리에이터로서로 있고요. 그럼
+- [18:08](https://youtube.com/watch?v=GQtty9JOAUU&t=1088) 연구자로서의 역할이 있겠죠. 결국에는
+- [18:10](https://youtube.com/watch?v=GQtty9JOAUU&t=1090) 이런 역할들로 어떤 대상과 나 말고
+- [18:13](https://youtube.com/watch?v=GQtty9JOAUU&t=1093) 그 타인에 대한 대상과 그리고 어떤
+- [18:15](https://youtube.com/watch?v=GQtty9JOAUU&t=1095) 목표가 있습니다. 그리고 그 타인을
+- [18:17](https://youtube.com/watch?v=GQtty9JOAUU&t=1097) 대상으로 어떤 목표를 실천을 하기
+- [18:20](https://youtube.com/watch?v=GQtty9JOAUU&t=1100) 위한 것이 역할이라고 한다면은 그
+- [18:22](https://youtube.com/watch?v=GQtty9JOAUU&t=1102) 방법은 저는 이제 프로젝트와 테스크가
+- [18:24](https://youtube.com/watch?v=GQtty9JOAUU&t=1104) 있다고 생각을 해요. 저 같은
+- [18:26](https://youtube.com/watch?v=GQtty9JOAUU&t=1106) 경우도이 영상이 하나의 프로젝트일
+- [18:28](https://youtube.com/watch?v=GQtty9JOAUU&t=1108) 수도 있고요. 그리고 제가
+- [18:30](https://youtube.com/watch?v=GQtty9JOAUU&t=1110) 온오프라인으로 진행하는 다양한
+- [18:31](https://youtube.com/watch?v=GQtty9JOAUU&t=1111) 프로그램들도 그런 프로젝트일 수도
+- [18:34](https://youtube.com/watch?v=GQtty9JOAUU&t=1114) 있습니다. 그 프로젝트를 만들기
+- [18:35](https://youtube.com/watch?v=GQtty9JOAUU&t=1115) 위해서 다양한 테스크들도 있고요.
+- [18:37](https://youtube.com/watch?v=GQtty9JOAUU&t=1117) 이것들을 통틀어서 저는 액션이라고
+- [18:39](https://youtube.com/watch?v=GQtty9JOAUU&t=1119) 표현을 하였어요. 저희가 결국에는이
+- [18:41](https://youtube.com/watch?v=GQtty9JOAUU&t=1121) 역할들을 통해서 다양한 행동을함으로써
+- [18:45](https://youtube.com/watch?v=GQtty9JOAUU&t=1125) 어떤 가치를 만들어 내고이 대상들에
+- [18:48](https://youtube.com/watch?v=GQtty9JOAUU&t=1128) 대해서이 목표를 실행을 하는 건데
+- [18:49](https://youtube.com/watch?v=GQtty9JOAUU&t=1129) 결국에는 이게 액션을 통해서
+- [18:52](https://youtube.com/watch?v=GQtty9JOAUU&t=1132) 이루어지고요. 그리고이 프로젝트와
+- [18:54](https://youtube.com/watch?v=GQtty9JOAUU&t=1134) 테스크 같은 액션을 수행하기 위해서
+- [18:56](https://youtube.com/watch?v=GQtty9JOAUU&t=1136) 그냥 할 수 있는게 아니고 거기에
+- [18:58](https://youtube.com/watch?v=GQtty9JOAUU&t=1138) 재료가 되는 다양한 지식들과 정보들이
+- [19:01](https://youtube.com/watch?v=GQtty9JOAUU&t=1141) 필요합니다. 교과서가 될 수도 있고
+- [19:03](https://youtube.com/watch?v=GQtty9JOAUU&t=1143) 기억이 될 수도 있고 유튜브 프로세스
+- [19:05](https://youtube.com/watch?v=GQtty9JOAUU&t=1145) 또는 어떤 산출물 어떤 액션 기존에
+- [19:09](https://youtube.com/watch?v=GQtty9JOAUU&t=1149) 실행하는 것들 그리고 AI 뭐 이런
+- [19:11](https://youtube.com/watch?v=GQtty9JOAUU&t=1151) 다양한 지식들이 필요할 수가 있어요.
+- [19:13](https://youtube.com/watch?v=GQtty9JOAUU&t=1153) 네. 결국에는이 두 부분이 저는
+- [19:15](https://youtube.com/watch?v=GQtty9JOAUU&t=1155) 목적이라고 생각을 하는데요. 다시
+- [19:17](https://youtube.com/watch?v=GQtty9JOAUU&t=1157) 한번 정리를 하자면 우리가 인간으로서
+- [19:19](https://youtube.com/watch?v=GQtty9JOAUU&t=1159) 어떤 철학 방향성 우리가 살아가고자
+- [19:22](https://youtube.com/watch?v=GQtty9JOAUU&t=1162) 하는 자하가 있는데 이건 있는 그
+- [19:24](https://youtube.com/watch?v=GQtty9JOAUU&t=1164) 자아 자체만으로 실현이 될 수 있는게
+- [19:26](https://youtube.com/watch?v=GQtty9JOAUU&t=1166) 아니라 우리가 한정된 우리 인생의
+- [19:28](https://youtube.com/watch?v=GQtty9JOAUU&t=1168) 시간들을 이용을 해서 그 시간
+- [19:30](https://youtube.com/watch?v=GQtty9JOAUU&t=1170) 시간마다 다양한 역할들을 통해서
+- [19:33](https://youtube.com/watch?v=GQtty9JOAUU&t=1173) 액션을 취하고 그 액션을 취함으로써
+- [19:36](https://youtube.com/watch?v=GQtty9JOAUU&t=1176) 그 역할들로 어떤 대상에게 타인이라는
+- [19:39](https://youtube.com/watch?v=GQtty9JOAUU&t=1179) 대상에게이 목표를 이룰으로써 결국엔
+- [19:43](https://youtube.com/watch?v=GQtty9JOAUU&t=1183) 자를 실현하는 거다. 저는 결국은이
+- [19:45](https://youtube.com/watch?v=GQtty9JOAUU&t=1185) 철학과 역할을 통틀어서 그 본질이라고
+- [19:48](https://youtube.com/watch?v=GQtty9JOAUU&t=1188) 표현을 합니다. Y가 되는 거죠.
+- [19:50](https://youtube.com/watch?v=GQtty9JOAUU&t=1190) 여기까지가 그 본질, 그 목표, 그
+- [19:52](https://youtube.com/watch?v=GQtty9JOAUU&t=1192) 기준에 대한 어떤 목적에 대한
+- [19:54](https://youtube.com/watch?v=GQtty9JOAUU&t=1194) 이야기이고요. 결국에는 이게 실행이
+- [19:56](https://youtube.com/watch?v=GQtty9JOAUU&t=1196) 되고 뭔가 쌓이는 공간이 있잖아요.
+- [20:00](https://youtube.com/watch?v=GQtty9JOAUU&t=1200) 저는 이게 우리가 모두 만들어 가고자
+- [20:03](https://youtube.com/watch?v=GQtty9JOAUU&t=1203) 하는이 AIOS 내 삶을 운영하는이
+- [20:06](https://youtube.com/watch?v=GQtty9JOAUU&t=1206) 위에서 말한 그 목적을 운영하는 책이
+- [20:08](https://youtube.com/watch?v=GQtty9JOAUU&t=1208) 체제 AIOS인 거 같아요.
+- [20:10](https://youtube.com/watch?v=GQtty9JOAUU&t=1210) 그러니까이 OS라는게 이제 AI가 꼭
+- [20:12](https://youtube.com/watch?v=GQtty9JOAUU&t=1212) 들어갈 필요가 없는데이 목적을 뭔가
+- [20:15](https://youtube.com/watch?v=GQtty9JOAUU&t=1215) 실현을 하는데 AI가 필요가 없는데
+- [20:17](https://youtube.com/watch?v=GQtty9JOAUU&t=1217) 우리가 결국엔 추구하고자 하는게
+- [20:19](https://youtube.com/watch?v=GQtty9JOAUU&t=1219) 그거이잖아요. 그래서 저는
+- [20:20](https://youtube.com/watch?v=GQtty9JOAUU&t=1220) AIOS라고 표현을 했습니다. 여기
+- [20:23](https://youtube.com/watch?v=GQtty9JOAUU&t=1223) 안에 이제 LLM 미키가 들어가는
+- [20:25](https://youtube.com/watch?v=GQtty9JOAUU&t=1225) 거예요. 어 우리의 이런 AIOS
+- [20:27](https://youtube.com/watch?v=GQtty9JOAUU&t=1227) 안에서는 우리만의 워크 스페이스랑
+- [20:30](https://youtube.com/watch?v=GQtty9JOAUU&t=1230) 워크 플로우가 이루어진다라고 합니다.
+- [20:32](https://youtube.com/watch?v=GQtty9JOAUU&t=1232) 저는 여기 안에서 워크스페이스랑
+- [20:34](https://youtube.com/watch?v=GQtty9JOAUU&t=1234) 워크 플로우가 있어야 된다고 생각을
+- [20:36](https://youtube.com/watch?v=GQtty9JOAUU&t=1236) 합니다.이 이 워크스페이스라는 것은이
+- [20:38](https://youtube.com/watch?v=GQtty9JOAUU&t=1238) 지식이 심어지고 자라나고 뭔가가 계속
+- [20:42](https://youtube.com/watch?v=GQtty9JOAUU&t=1242) 키워 주는 자라나는 성장하는 영토라고
+- [20:45](https://youtube.com/watch?v=GQtty9JOAUU&t=1245) 생각을 해요. 나만의 이제 공간인
+- [20:47](https://youtube.com/watch?v=GQtty9JOAUU&t=1247) 거죠. 어, 결국에는 저희가 이런
+- [20:49](https://youtube.com/watch?v=GQtty9JOAUU&t=1249) 역할들을 수행을 하는데 있어서이
+- [20:51](https://youtube.com/watch?v=GQtty9JOAUU&t=1251) 관련된 경험들이 지식들이 결국에는
+- [20:54](https://youtube.com/watch?v=GQtty9JOAUU&t=1254) 계속 쌓이게 되는데 이것들이 서로
+- [20:57](https://youtube.com/watch?v=GQtty9JOAUU&t=1257) 연결이 되고 구조화가 되고 저장되는
+- [21:00](https://youtube.com/watch?v=GQtty9JOAUU&t=1260) 공간이 이제 워크 스페이스이고요.
+- [21:03](https://youtube.com/watch?v=GQtty9JOAUU&t=1263) 그리고이 지식들,이 정보들을 토대로
+- [21:06](https://youtube.com/watch?v=GQtty9JOAUU&t=1266) 계속 연결이 되고 뭔가 작업이
+- [21:08](https://youtube.com/watch?v=GQtty9JOAUU&t=1268) 일어나서 새로운 가치가 실현이 되는
+- [21:11](https://youtube.com/watch?v=GQtty9JOAUU&t=1271) 공간. 저는 이거를 워크 플로우라고
+- [21:13](https://youtube.com/watch?v=GQtty9JOAUU&t=1273) 표현을 하고 있습니다. 근데이
+- [21:14](https://youtube.com/watch?v=GQtty9JOAUU&t=1274) 오퍼레이팅 시스템 안에는 결국에는 두
+- [21:17](https://youtube.com/watch?v=GQtty9JOAUU&t=1277) 가지 요소가 포함이 되어 있어요.
+- [21:18](https://youtube.com/watch?v=GQtty9JOAUU&t=1278) 사람이 통과하는 것, 사람이 작업하는
+- [21:21](https://youtube.com/watch?v=GQtty9JOAUU&t=1281) 영역과 AI가 작업하는 영역. 저는
+- [21:23](https://youtube.com/watch?v=GQtty9JOAUU&t=1283) 그것을 퍼스트 브레인하고 థ드
+- [21:25](https://youtube.com/watch?v=GQtty9JOAUU&t=1285) 브레인이라고 표현을 하였습니다.이
+- [21:26](https://youtube.com/watch?v=GQtty9JOAUU&t=1286) 워크 스페이스랑 워크 플로우가
+- [21:28](https://youtube.com/watch?v=GQtty9JOAUU&t=1288) 결국에는 제 2의 두뇌이고요. 내
+- [21:31](https://youtube.com/watch?v=GQtty9JOAUU&t=1291) 머리의 복사본, 내 자신의이 자의
+- [21:33](https://youtube.com/watch?v=GQtty9JOAUU&t=1293) 복재본이이 세컨드 브레인이고요.
+- [21:36](https://youtube.com/watch?v=GQtty9JOAUU&t=1296) 이것을 운영하는 주체가 두 가지가
+- [21:37](https://youtube.com/watch?v=GQtty9JOAUU&t=1297) 있습니다. First 브레인 사람과
+- [21:39](https://youtube.com/watch?v=GQtty9JOAUU&t=1299) 브레인 AI가 있습니다. 결국에는이
+- [21:42](https://youtube.com/watch?v=GQtty9JOAUU&t=1302) first 브레인 사람이 세상에 있는
+- [21:43](https://youtube.com/watch?v=GQtty9JOAUU&t=1303) 수많은 바깥 지식들을 수집을 해서
+- [21:47](https://youtube.com/watch?v=GQtty9JOAUU&t=1307) 뭔가 기록을 하고 프로세싱을 하는
+- [21:49](https://youtube.com/watch?v=GQtty9JOAUU&t=1309) 이런 단계도 필요하고요. 그리고
+- [21:52](https://youtube.com/watch?v=GQtty9JOAUU&t=1312) AI가 수집을 하고 이것들을 관리하는
+- [21:55](https://youtube.com/watch?v=GQtty9JOAUU&t=1315) 그리고 프로세싱하는 이런 단계도 같이
+- [21:58](https://youtube.com/watch?v=GQtty9JOAUU&t=1318) 들어가 있습니다. 이 아이가 한이
+- [22:00](https://youtube.com/watch?v=GQtty9JOAUU&t=1320) 얕은 이해와 내가 한이 깊은 이해를
+- [22:02](https://youtube.com/watch?v=GQtty9JOAUU&t=1322) 통합을 해 가지고 우리가 좀 통합된
+- [22:05](https://youtube.com/watch?v=GQtty9JOAUU&t=1325) 이해로 증강된 이해로 발전을 시키고
+- [22:07](https://youtube.com/watch?v=GQtty9JOAUU&t=1327) 얘를 다시 우리의 노트 안에 넣어서
+- [22:10](https://youtube.com/watch?v=GQtty9JOAUU&t=1330) 활용을 하거나 아니면이 통합된 증강된
+- [22:12](https://youtube.com/watch?v=GQtty9JOAUU&t=1332) 이해를 토대로 결국에는 우리가 뭐
+- [22:15](https://youtube.com/watch?v=GQtty9JOAUU&t=1335) 영상이라든지 논문이라든지
+- [22:17](https://youtube.com/watch?v=GQtty9JOAUU&t=1337) 프레젠테이션이라든지 이런 다양한
+- [22:19](https://youtube.com/watch?v=GQtty9JOAUU&t=1339) 형태의 지식으로 나와서이 새로운
+- [22:21](https://youtube.com/watch?v=GQtty9JOAUU&t=1341) 가치가 결국에는 내가 각 역할별로
+- [22:24](https://youtube.com/watch?v=GQtty9JOAUU&t=1344) 갖고 있는 그 타인의 대상에게 전달을
+- [22:27](https://youtube.com/watch?v=GQtty9JOAUU&t=1347) 하는 겁니다. 그래서 이제 어떤
+- [22:28](https://youtube.com/watch?v=GQtty9JOAUU&t=1348) 영향을 주는 거죠. 저 같은 경우에도
+- [22:30](https://youtube.com/watch?v=GQtty9JOAUU&t=1350) 현재는이 크리에이터로서이 영상을
+- [22:33](https://youtube.com/watch?v=GQtty9JOAUU&t=1353) 통해서 여러분들께 지식을 전달을
+- [22:36](https://youtube.com/watch?v=GQtty9JOAUU&t=1356) 하려고 하고 있는데요.이 영상이
+- [22:37](https://youtube.com/watch?v=GQtty9JOAUU&t=1357) 만들어지기 전까지도 결국에는 제가이랑
+- [22:40](https://youtube.com/watch?v=GQtty9JOAUU&t=1360) 개인 지식 관리랑 노트랑 생산성에
+- [22:42](https://youtube.com/watch?v=GQtty9JOAUU&t=1362) 대한 그런 다양한 저의 인사이트들을
+- [22:45](https://youtube.com/watch?v=GQtty9JOAUU&t=1365) 이게 쌓아 온 것이 있고요. 그리고
+- [22:48](https://youtube.com/watch?v=GQtty9JOAUU&t=1368) AI랑 함께 수집한 이런 부분들도
+- [22:50](https://youtube.com/watch?v=GQtty9JOAUU&t=1370) 있어서 이것들이 통합된 어떤 형태로
+- [22:52](https://youtube.com/watch?v=GQtty9JOAUU&t=1372) 저는 지식이 창출이 되는 이런 통합된
+- [22:55](https://youtube.com/watch?v=GQtty9JOAUU&t=1375) 이해로 영상을 만들고 여러분들께
+- [22:57](https://youtube.com/watch?v=GQtty9JOAUU&t=1377) 공유를 드린이 사례. 그니까이 영상도
+- [22:59](https://youtube.com/watch?v=GQtty9JOAUU&t=1379) 어떻게 보면은이 껍데기만 보시는
+- [23:01](https://youtube.com/watch?v=GQtty9JOAUU&t=1381) 거라고 보시면 될 거 같고요.
+- [23:02](https://youtube.com/watch?v=GQtty9JOAUU&t=1382) 여러분들께서도 이렇게 제 유튜브
+- [23:04](https://youtube.com/watch?v=GQtty9JOAUU&t=1384) 영상을 보시면서 제 유튜브 채널에
+- [23:06](https://youtube.com/watch?v=GQtty9JOAUU&t=1386) 있는 콘텐츠들로 큰 영향이 여러분들의
+- [23:09](https://youtube.com/watch?v=GQtty9JOAUU&t=1389) 인생에 조금이라도 가치가 되는
+- [23:11](https://youtube.com/watch?v=GQtty9JOAUU&t=1391) 인사이트를 하나로도 드렸다면 저는 그
+- [23:14](https://youtube.com/watch?v=GQtty9JOAUU&t=1394) 영향을 행사한거나 마찬가지입니다.
+- [23:16](https://youtube.com/watch?v=GQtty9JOAUU&t=1396) 네. 그래서 이것을 좀 줌마 아웃해서
+- [23:19](https://youtube.com/watch?v=GQtty9JOAUU&t=1399) 보면은 예, 결국엔이 LM 위키라는게
+- [23:21](https://youtube.com/watch?v=GQtty9JOAUU&t=1401) 제가 생각했을 때는이 AI가이 전체
+- [23:25](https://youtube.com/watch?v=GQtty9JOAUU&t=1405) 오퍼레이팅 시스템에서 하는이 작은
+- [23:27](https://youtube.com/watch?v=GQtty9JOAUU&t=1407) 부분밖에 없는 거 같아요. 여기
+- [23:29](https://youtube.com/watch?v=GQtty9JOAUU&t=1409) 안에서도 보면은 결국에는 스키마 그
+- [23:32](https://youtube.com/watch?v=GQtty9JOAUU&t=1412) 클로드d로 스키마를 만들고 그리고
+- [23:35](https://youtube.com/watch?v=GQtty9JOAUU&t=1415) 저는 생각하는 게미.md md에 대한
+- [23:37](https://youtube.com/watch?v=GQtty9JOAUU&t=1417) 그니까이 마이 노츠가 좀 함축된
+- [23:39](https://youtube.com/watch?v=GQtty9JOAUU&t=1419) 형태로 업데이트되는 그런 부분들 이제
+- [23:42](https://youtube.com/watch?v=GQtty9JOAUU&t=1422) 나에 대해서 알고 있는 그런 자료들로
+- [23:45](https://youtube.com/watch?v=GQtty9JOAUU&t=1425) 필요할 것이고 이런 부분들도 결국은
+- [23:47](https://youtube.com/watch?v=GQtty9JOAUU&t=1427) L르미키 안에 들어가 있어야 되긴
+- [23:49](https://youtube.com/watch?v=GQtty9JOAUU&t=1429) 합니다. 근데 전체이
+- [23:52](https://youtube.com/watch?v=GQtty9JOAUU&t=1432) 목적을 따졌을 때 저는이 전체
+- [23:54](https://youtube.com/watch?v=GQtty9JOAUU&t=1434) 시스템에서이 LRM 키가이 작은
+- [23:57](https://youtube.com/watch?v=GQtty9JOAUU&t=1437) 부분을 차지하고 있다라고 생각을 하고
+- [23:59](https://youtube.com/watch?v=GQtty9JOAUU&t=1439) 있어요.이 이 LM 키를 어떻게 나의
+- [24:02](https://youtube.com/watch?v=GQtty9JOAUU&t=1442) 워크플로에 잘 녹여내서 더욱더 가치
+- [24:05](https://youtube.com/watch?v=GQtty9JOAUU&t=1445) 있게 쓸지 어떤 자동 프로세스 어떤
+- [24:07](https://youtube.com/watch?v=GQtty9JOAUU&t=1447) 크론잡을 돌리는지에 대해서는 내가
+- [24:09](https://youtube.com/watch?v=GQtty9JOAUU&t=1449) 개인적으로 하는 것이지만
+- [24:13](https://youtube.com/watch?v=GQtty9JOAUU&t=1453) 어 결국은이 LM 미키가 내가 지금
+- [24:16](https://youtube.com/watch?v=GQtty9JOAUU&t=1456) 머릿속으로 구성하고자 하는 꿈꾸는
+- [24:17](https://youtube.com/watch?v=GQtty9JOAUU&t=1457) 자비스를 만들기 위해서이 자체가
+- [24:20](https://youtube.com/watch?v=GQtty9JOAUU&t=1460) 시스템 전체가 되는게 아니라 이것이
+- [24:22](https://youtube.com/watch?v=GQtty9JOAUU&t=1462) 전체이 AIOS이 워크스페이스 안에이
+- [24:26](https://youtube.com/watch?v=GQtty9JOAUU&t=1466) 전체 시스템 안에 일부만 되어야
+- [24:28](https://youtube.com/watch?v=GQtty9JOAUU&t=1468) 한다라는 것을 다시 한번 강조를 를
+- [24:30](https://youtube.com/watch?v=GQtty9JOAUU&t=1470) 드리고 싶어요.이 시스템 안에서
+- [24:33](https://youtube.com/watch?v=GQtty9JOAUU&t=1473) 저희가 이제 현실 세계이든 인터넷
+- [24:35](https://youtube.com/watch?v=GQtty9JOAUU&t=1475) 세계이든 발견하는 세상에 있는 모든
+- [24:38](https://youtube.com/watch?v=GQtty9JOAUU&t=1478) 지식들을 수집을 해서 AI와 그리고
+- [24:41](https://youtube.com/watch?v=GQtty9JOAUU&t=1481) 이제 내 두뇌 first프레인과
+- [24:43](https://youtube.com/watch?v=GQtty9JOAUU&t=1483) 브레인 AI랑 함께 왔다 갔다 상호
+- [24:46](https://youtube.com/watch?v=GQtty9JOAUU&t=1486) 작용을 하고 각자 역할 하면서 함께
+- [24:49](https://youtube.com/watch?v=GQtty9JOAUU&t=1489) 이런 정보들과 지식들과 가치들을
+- [24:51](https://youtube.com/watch?v=GQtty9JOAUU&t=1491) 만들어내는 것이라고 생각을 하시면
+- [24:53](https://youtube.com/watch?v=GQtty9JOAUU&t=1493) 좋을 것 같습니다. 네. 지금까지
+- [24:55](https://youtube.com/watch?v=GQtty9JOAUU&t=1495) 제가이 목적과 그리고이 워크스페이스에
+- [24:57](https://youtube.com/watch?v=GQtty9JOAUU&t=1497) 대한 좀 전체적인 설명을 해
+- [24:59](https://youtube.com/watch?v=GQtty9JOAUU&t=1499) 드렸는데요. 제가 그냥 여기서
+- [25:01](https://youtube.com/watch?v=GQtty9JOAUU&t=1501) 말씀드리고 싶은 것은 우리가 결국에는
+- [25:03](https://youtube.com/watch?v=GQtty9JOAUU&t=1503) lm 위키라는 것이
+- [25:10](https://youtube.com/watch?v=GQtty9JOAUU&t=1510) 제가 여기서 말씀드리고 싶은 것은
+- [25:12](https://youtube.com/watch?v=GQtty9JOAUU&t=1512) 우리 LRM 위키라는게 결국에는 그냥
+- [25:15](https://youtube.com/watch?v=GQtty9JOAUU&t=1515) 그 자체만으로 뭔가 시스템으로도 만들
+- [25:17](https://youtube.com/watch?v=GQtty9JOAUU&t=1517) 수도 있지만 제가 생각했을 때는 LR
+- [25:19](https://youtube.com/watch?v=GQtty9JOAUU&t=1519) 위키가 결국에는 우리의 전체적인
+- [25:22](https://youtube.com/watch?v=GQtty9JOAUU&t=1522) 시스템에서 이런 얕은 이해 부분을 좀
+- [25:25](https://youtube.com/watch?v=GQtty9JOAUU&t=1525) 담당을 해야 된다고 생각을 한다라는
+- [25:27](https://youtube.com/watch?v=GQtty9JOAUU&t=1527) 것을 전달을 드리고 싶고요. 그리고이
+- [25:29](https://youtube.com/watch?v=GQtty9JOAUU&t=1529) LM 미키를 내 전체 시스템 안에
+- [25:31](https://youtube.com/watch?v=GQtty9JOAUU&t=1531) 이제 녹여 낼 때는 결국에는 내 나의
+- [25:35](https://youtube.com/watch?v=GQtty9JOAUU&t=1535) 취향과 나의 생각, 나의 경험들을
+- [25:37](https://youtube.com/watch?v=GQtty9JOAUU&t=1537) 적어 놓는 마이 노트뿐만 아니라
+- [25:39](https://youtube.com/watch?v=GQtty9JOAUU&t=1539) 이것들이 나의 목적과도 이렇게 연결이
+- [25:42](https://youtube.com/watch?v=GQtty9JOAUU&t=1542) 되어야라는 것을 말씀을 드리고
+- [25:43](https://youtube.com/watch?v=GQtty9JOAUU&t=1543) 싶었습니다. 여기까지 오면은 이런
+- [25:45](https://youtube.com/watch?v=GQtty9JOAUU&t=1545) 생각이 드실 수 있을 거예요. 야,
+- [25:47](https://youtube.com/watch?v=GQtty9JOAUU&t=1547) 브라이언 네가 말하는이 목적과
+- [25:49](https://youtube.com/watch?v=GQtty9JOAUU&t=1549) 그리고이 역할들이 결국에는 여기
+- [25:51](https://youtube.com/watch?v=GQtty9JOAUU&t=1551) 안에서 어떻게 드러났어? 에게
+- [25:52](https://youtube.com/watch?v=GQtty9JOAUU&t=1552) 필요하다며 그것은 제가 다른 영상으로
+- [25:55](https://youtube.com/watch?v=GQtty9JOAUU&t=1555) 찾아뵙도록 하겠습니다. 일단
+- [25:56](https://youtube.com/watch?v=GQtty9JOAUU&t=1556) 여러분들께서는 LRM를 만드실 때이
+- [25:59](https://youtube.com/watch?v=GQtty9JOAUU&t=1559) 전체적인 내 삶에 어떤 부분에
+- [26:01](https://youtube.com/watch?v=GQtty9JOAUU&t=1561) 들어갈지에 대한 고민을 함께 해
+- [26:04](https://youtube.com/watch?v=GQtty9JOAUU&t=1564) 줬으면 좋겠다라는이 한 가지 메시지를
+- [26:06](https://youtube.com/watch?v=GQtty9JOAUU&t=1566) 전달하기 위해서 예, 이런 영상을
+- [26:08](https://youtube.com/watch?v=GQtty9JOAUU&t=1568) 촬영을 하였습니다. 혹시 저희가 차례
+- [26:10](https://youtube.com/watch?v=GQtty9JOAUU&t=1570) 차례대로 이런 브레이딩 트리니티를
+- [26:12](https://youtube.com/watch?v=GQtty9JOAUU&t=1572) 같이 만들어 나가는 것에 관심이
+- [26:14](https://youtube.com/watch?v=GQtty9JOAUU&t=1574) 많으신가요? 그러면 제가 좀 수요
+- [26:16](https://youtube.com/watch?v=GQtty9JOAUU&t=1576) 조사를 여러분들하고 함께 하고
+- [26:17](https://youtube.com/watch?v=GQtty9JOAUU&t=1577) 싶은데요. 관심이 있으실 경우에는 제
+- [26:19](https://youtube.com/watch?v=GQtty9JOAUU&t=1579) 고정 댓글에 설문에 꼭 함께 참여해
+- [26:22](https://youtube.com/watch?v=GQtty9JOAUU&t=1582) 주시면은 감사하겠습니다. 그럼 행복한
+- [26:24](https://youtube.com/watch?v=GQtty9JOAUU&t=1584) 하루 되시고요. 다음 영상에서
+- [26:25](https://youtube.com/watch?v=GQtty9JOAUU&t=1585) 찾아뵙겠습니다. 안녕.
