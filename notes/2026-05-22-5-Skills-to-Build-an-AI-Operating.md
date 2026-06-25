@@ -1,0 +1,1053 @@
+---
+title: "5 Skills to Build an AI Operating System Like The 1% (Full Guide)"
+source_url: https://youtube.com/watch?v=zElKhlFkqU4
+video_id: zElKhlFkqU4
+source_type: youtube
+lang: en
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# 5 Skills to Build an AI Operating System Like The 1% (Full Guide)
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** AI 에이전트와 도구의 성능을 극대화하려면 '세컨드 브레인'(AI 운영 체제)을 구축해야 한다. 이는 개인과 비즈니스의 모든 맥락을 실시간으로 AI에 제공하는 메모리 시스템이다. 영상에서는 Claude Skills 5개(OS Setup, OS Operator, OS Optimizer, Team OS, OS MCP)를 제공하여 Obsidian 기반 세컨드 브레인을 쉽게 구축할 수 있도록 안내한다. 초기 설정부터 실시간 업데이트, 토큰 최적화, 팀 공유, 자율적 운영까지 전체 워크플로를 자동화할 수 있다. 이 시스템은 사용할수록 맥락이 축적되어 AI가 점점 더 강력해지는 복리 효과를 만든다.
+- **Core Message:** AI 도구의 진정한 잠재력을 발휘하려면 개인과 비즈니스의 모든 맥락이 담긴 세컨드 브레인을 구축하여 AI가 항상 관련성 높은 정보에 접근할 수 있도록 해야 한다.
+> This is not about having the perfect setup or thousands of files in there on day one. The point is about getting started simple and fast.
+> The more context and the more me and my team have been using Claude Code and co-work, the less I'm in other softwares.
+> This context compounds because the more you and your team use AI and the earlier you start with this, the more context it's going to build.
+❗ 발표자의 세컨드 브레인은 시작할 때 30-40개 문서에서 6주 후 수백 개, 현재는 수천 개 문서로 성장했다
+❗ 적절히 설정된 세컨드 브레인의 건강도 점수는 46에서 94로 향상될 수 있다
+❗ Obsidian은 실제로는 컴퓨터 폴더의 시각적 오버레이일 뿐이다
+
+## 📚 핵심 용어
+- **세컨드 브레인(Second Brain):** AI가 사용자의 모든 비즈니스 맥락과 기억을 저장하고 접근할 수 있는 메모리 시스템 / 개인 비서가 모든 업무 기록을 완벽히 정리한 파일캐비넷 같다. AI가 언제든 필요한 자료를 즉시 찾아 활용한다. / 일반 AI는 매번 새로 설명해야 하지만, 세컨드 브레인이 있으면 AI가 이미 당신을 '아는 상태'에서 대화를 시작한다.
+- **MCP (Model Context Protocol):** AI가 외부 시스템과 데이터에 접근할 수 있게 해주는 연결 프로토콜 / AI에게 다른 소프트웨어의 '문을 여는 열쇠'를 주는 것과 같다. 슬랙, 구글 드라이브 등에 직접 접근 가능하다. / 로컬 폴더 접근은 즉시 가능하지만, MCP는 한 단계 더 거쳐야 해서 속도와 정확도가 약간 떨어진다.
+- **토큰 최적화:** AI가 처리하는 텍스트량을 줄여 비용과 속도를 개선하는 기법 / 요리할 때 필요한 재료만 꺼내는 것과 같다. 냉장고 전체를 뒤지지 않고 딱 필요한 것만 찾아낸다. / 일반 AI는 매번 모든 자료를 읽지만, 최적화된 시스템은 관련 있는 것만 골라서 읽어 비용이 절약된다.
+- **Claude Skills:** Claude AI에서 특정 작업을 자동화하는 미리 만들어진 스크립트 / 스마트폰 앱처럼 설치하면 바로 쓸 수 있는 기능이다. 복잡한 설정 과정을 한 번에 처리해준다. / 직접 프롬프트를 작성하는 것은 요리 레시피를 매번 창작하는 것, Skills는 검증된 레시피를 그대로 따라하는 것이다.
+
+## 🚀 실행 (Execute)
+- [ ] Obsidian 다운로드하고 계정 생성하기
+  - 담당: 나
+  - 이유: 세컨드 브레인 시각화 도구 준비를 위한 첫 단계
+- [ ] Claude Skills 다운로드하고 OS Setup 스킬로 초기 세컨드 브레인 구축하기
+  - 담당: 나
+  - 이유: AI 도구 활용도를 즉시 높이고 맥락 축적을 시작하기 위해
+- 자료: Claude Skills 다운로드 링크 (영상 설명란)
+- 자료: Obsidian 공식 웹사이트
+- 자료: WhisperFlow (음성 전사 도구)
+- 자료: Relay Plugin (팀 동기화용)
+- 자료: Fireflies (회의 전사 도구)
+- Timeline: 1단계: Obsidian 설치 (오늘) → 2단계: OS Setup으로 초기 브레인 구축 (이번 주) → 3단계: 일주일 사용 후 OS Operator로 자동화 설정 → 4단계: 2주 후 OS Optimizer로 최적화
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=zElKhlFkqU4&t=0) I believe setting up a second brain or
+- [0:01](https://youtube.com/watch?v=zElKhlFkqU4&t=1) an AI operating system is the single
+- [0:03](https://youtube.com/watch?v=zElKhlFkqU4&t=3) most valuable thing you can do in AI
+- [0:05](https://youtube.com/watch?v=zElKhlFkqU4&t=5) right now. Because once it's set up,
+- [0:07](https://youtube.com/watch?v=zElKhlFkqU4&t=7) every AI tool, every chat skill or agent
+- [0:10](https://youtube.com/watch?v=zElKhlFkqU4&t=10) you use, instantly becomes far more
+- [0:12](https://youtube.com/watch?v=zElKhlFkqU4&t=12) powerful by tapping into real-time
+- [0:14](https://youtube.com/watch?v=zElKhlFkqU4&t=14) context around you and your business.
+- [0:16](https://youtube.com/watch?v=zElKhlFkqU4&t=16) But setting it up can be overwhelming
+- [0:18](https://youtube.com/watch?v=zElKhlFkqU4&t=18) and not managing it well can lead to an
+- [0:19](https://youtube.com/watch?v=zElKhlFkqU4&t=19) unstructured mess that burns through
+- [0:21](https://youtube.com/watch?v=zElKhlFkqU4&t=21) tokens. So in this video, I'll show you
+- [0:23](https://youtube.com/watch?v=zElKhlFkqU4&t=23) five cloud skills you can copy and paste
+- [0:25](https://youtube.com/watch?v=zElKhlFkqU4&t=25) for free to help you set up your second
+- [0:27](https://youtube.com/watch?v=zElKhlFkqU4&t=27) brain or AI operating system fast and
+- [0:30](https://youtube.com/watch?v=zElKhlFkqU4&t=30) according to best practices that help
+- [0:32](https://youtube.com/watch?v=zElKhlFkqU4&t=32) you automatically update it with
+- [0:33](https://youtube.com/watch?v=zElKhlFkqU4&t=33) real-time context and skills to optimize
+- [0:36](https://youtube.com/watch?v=zElKhlFkqU4&t=36) it for token usage and performance
+- [0:38](https://youtube.com/watch?v=zElKhlFkqU4&t=38) autonomously when context grows. And
+- [0:40](https://youtube.com/watch?v=zElKhlFkqU4&t=40) lastly, I'll show you how to share this
+- [0:42](https://youtube.com/watch?v=zElKhlFkqU4&t=42) across a team while still having
+- [0:44](https://youtube.com/watch?v=zElKhlFkqU4&t=44) permission settings. Now, if you don't
+- [0:45](https://youtube.com/watch?v=zElKhlFkqU4&t=45) know me yet, I'm Ben. I run an AI agency
+- [0:47](https://youtube.com/watch?v=zElKhlFkqU4&t=47) where we implement AI operating systems
+- [0:49](https://youtube.com/watch?v=zElKhlFkqU4&t=49) for businesses and run an AI community.
+- [0:51](https://youtube.com/watch?v=zElKhlFkqU4&t=51) And these skills are direct result of
+- [0:53](https://youtube.com/watch?v=zElKhlFkqU4&t=53) helping dozens of businesses and people
+- [0:55](https://youtube.com/watch?v=zElKhlFkqU4&t=55) set this up efficiently themselves. Now,
+- [0:57](https://youtube.com/watch?v=zElKhlFkqU4&t=57) before showing you the four skills, let
+- [0:58](https://youtube.com/watch?v=zElKhlFkqU4&t=58) me quickly go over why having a second
+- [1:00](https://youtube.com/watch?v=zElKhlFkqU4&t=60) brain or a memory system like this is so
+- [1:03](https://youtube.com/watch?v=zElKhlFkqU4&t=63) important if you're still unfamiliar
+- [1:04](https://youtube.com/watch?v=zElKhlFkqU4&t=64) with it. Now, with a memory system like
+- [1:06](https://youtube.com/watch?v=zElKhlFkqU4&t=66) this, I can first of all give any AI
+- [1:08](https://youtube.com/watch?v=zElKhlFkqU4&t=68) agent or any AI provider like Codex,
+- [1:10](https://youtube.com/watch?v=zElKhlFkqU4&t=70) Co-work, or Cloud Code persistent
+- [1:12](https://youtube.com/watch?v=zElKhlFkqU4&t=72) context and memory across any chat. And
+- [1:15](https://youtube.com/watch?v=zElKhlFkqU4&t=75) this means that instead of your AI tool
+- [1:17](https://youtube.com/watch?v=zElKhlFkqU4&t=77) giving you generic outputs or you having
+- [1:19](https://youtube.com/watch?v=zElKhlFkqU4&t=79) to copy and paste relevant context in
+- [1:21](https://youtube.com/watch?v=zElKhlFkqU4&t=81) each new chat, your AI agent can always
+- [1:23](https://youtube.com/watch?v=zElKhlFkqU4&t=83) pull relevant context and memory in
+- [1:26](https://youtube.com/watch?v=zElKhlFkqU4&t=86) every new chat chat you start. For
+- [1:28](https://youtube.com/watch?v=zElKhlFkqU4&t=88) example, when I'm ideating on new
+- [1:29](https://youtube.com/watch?v=zElKhlFkqU4&t=89) YouTube videos, Cloud can instantly pull
+- [1:31](https://youtube.com/watch?v=zElKhlFkqU4&t=91) data on my strategy, my past video
+- [1:34](https://youtube.com/watch?v=zElKhlFkqU4&t=94) performance, all my transcript, my
+- [1:36](https://youtube.com/watch?v=zElKhlFkqU4&t=96) competitors, all to give me far more
+- [1:38](https://youtube.com/watch?v=zElKhlFkqU4&t=98) relevant outputs. And this memory layer
+- [1:40](https://youtube.com/watch?v=zElKhlFkqU4&t=100) can include everything about you and
+- [1:42](https://youtube.com/watch?v=zElKhlFkqU4&t=102) your business. For example, you see I
+- [1:44](https://youtube.com/watch?v=zElKhlFkqU4&t=104) have literally thousands of documents
+- [1:45](https://youtube.com/watch?v=zElKhlFkqU4&t=105) around my business, my strategy, my
+- [1:48](https://youtube.com/watch?v=zElKhlFkqU4&t=108) transcript, my daily to-do's, my
+- [1:50](https://youtube.com/watch?v=zElKhlFkqU4&t=110) departments, every YouTube transcript
+- [1:52](https://youtube.com/watch?v=zElKhlFkqU4&t=112) I've ever done, my team members and
+- [1:55](https://youtube.com/watch?v=zElKhlFkqU4&t=115) their roles, my agency's client context,
+- [1:57](https://youtube.com/watch?v=zElKhlFkqU4&t=117) etc. And this context in my second brain
+- [2:00](https://youtube.com/watch?v=zElKhlFkqU4&t=120) is also updated in real time with
+- [2:02](https://youtube.com/watch?v=zElKhlFkqU4&t=122) everything that's changing and happening
+- [2:03](https://youtube.com/watch?v=zElKhlFkqU4&t=123) in my business, for example, with
+- [2:04](https://youtube.com/watch?v=zElKhlFkqU4&t=124) meeting transcripts, Slack chats, email
+- [2:07](https://youtube.com/watch?v=zElKhlFkqU4&t=127) comms, etc. Obsidian, by the way, which
+- [2:09](https://youtube.com/watch?v=zElKhlFkqU4&t=129) is the tool that I'm showcasing here, is
+- [2:11](https://youtube.com/watch?v=zElKhlFkqU4&t=131) just a visual overlay of a file or a
+- [2:13](https://youtube.com/watch?v=zElKhlFkqU4&t=133) folder on your computer. As you can see,
+- [2:15](https://youtube.com/watch?v=zElKhlFkqU4&t=135) everything you're seeing in Obsidian is
+- [2:17](https://youtube.com/watch?v=zElKhlFkqU4&t=137) actually just stored here in a folder.
+- [2:19](https://youtube.com/watch?v=zElKhlFkqU4&t=139) Obsidian just becomes very useful
+- [2:21](https://youtube.com/watch?v=zElKhlFkqU4&t=141) because it helps you organize and
+- [2:23](https://youtube.com/watch?v=zElKhlFkqU4&t=143) visualize a very complex folder, like
+- [2:25](https://youtube.com/watch?v=zElKhlFkqU4&t=145) the one I have here, in a better way.
+- [2:27](https://youtube.com/watch?v=zElKhlFkqU4&t=147) Now, this memory layer can also be
+- [2:28](https://youtube.com/watch?v=zElKhlFkqU4&t=148) shared and used across teams in
+- [2:30](https://youtube.com/watch?v=zElKhlFkqU4&t=150) businesses. So, my entire team's AI
+- [2:33](https://youtube.com/watch?v=zElKhlFkqU4&t=153) agents and AI tools instantly become far
+- [2:35](https://youtube.com/watch?v=zElKhlFkqU4&t=155) more aligned and more powerful for my
+- [2:37](https://youtube.com/watch?v=zElKhlFkqU4&t=157) business because my entire team's AI
+- [2:39](https://youtube.com/watch?v=zElKhlFkqU4&t=159) agents now pull from the same business
+- [2:41](https://youtube.com/watch?v=zElKhlFkqU4&t=161) context, the same strategy docs, etc.
+- [2:44](https://youtube.com/watch?v=zElKhlFkqU4&t=164) And all of their specific context and
+- [2:45](https://youtube.com/watch?v=zElKhlFkqU4&t=165) expertise will also be fed into the
+- [2:47](https://youtube.com/watch?v=zElKhlFkqU4&t=167) second brain and usable across the
+- [2:49](https://youtube.com/watch?v=zElKhlFkqU4&t=169) entire team. And the reason you want to
+- [2:50](https://youtube.com/watch?v=zElKhlFkqU4&t=170) start with this as soon as possible is
+- [2:52](https://youtube.com/watch?v=zElKhlFkqU4&t=172) that this context compounds because the
+- [2:54](https://youtube.com/watch?v=zElKhlFkqU4&t=174) more you and your team use AI and the
+- [2:56](https://youtube.com/watch?v=zElKhlFkqU4&t=176) earlier you start with this, the more
+- [2:58](https://youtube.com/watch?v=zElKhlFkqU4&t=178) context it's going to build. And this
+- [2:59](https://youtube.com/watch?v=zElKhlFkqU4&t=179) means the AI agent you and your entire
+- [3:01](https://youtube.com/watch?v=zElKhlFkqU4&t=181) team have after 6 months of using this
+- [3:04](https://youtube.com/watch?v=zElKhlFkqU4&t=184) is far more powerful than the one you
+- [3:06](https://youtube.com/watch?v=zElKhlFkqU4&t=186) started with today. For example, this is
+- [3:08](https://youtube.com/watch?v=zElKhlFkqU4&t=188) what my second brain looked like 3
+- [3:09](https://youtube.com/watch?v=zElKhlFkqU4&t=189) months ago and this is what it looks
+- [3:11](https://youtube.com/watch?v=zElKhlFkqU4&t=191) like right now. And this memory layer is
+- [3:13](https://youtube.com/watch?v=zElKhlFkqU4&t=193) also the foundation for allowing AI
+- [3:15](https://youtube.com/watch?v=zElKhlFkqU4&t=195) agents like co-work or Cloud Code Code
+- [3:17](https://youtube.com/watch?v=zElKhlFkqU4&t=197) to become the main operating system for
+- [3:19](https://youtube.com/watch?v=zElKhlFkqU4&t=199) doing work. Because if we have this
+- [3:21](https://youtube.com/watch?v=zElKhlFkqU4&t=201) foundational context layer combined with
+- [3:23](https://youtube.com/watch?v=zElKhlFkqU4&t=203) connectors and MCP that can access your
+- [3:25](https://youtube.com/watch?v=zElKhlFkqU4&t=205) software, the internet, and your
+- [3:26](https://youtube.com/watch?v=zElKhlFkqU4&t=206) computer and capabilities and features
+- [3:29](https://youtube.com/watch?v=zElKhlFkqU4&t=209) like skills, routines, and loops that
+- [3:31](https://youtube.com/watch?v=zElKhlFkqU4&t=211) can automate and execute on your work
+- [3:33](https://youtube.com/watch?v=zElKhlFkqU4&t=213) and tasks, AI really starts becoming
+- [3:36](https://youtube.com/watch?v=zElKhlFkqU4&t=216) more and more your main interface for
+- [3:37](https://youtube.com/watch?v=zElKhlFkqU4&t=217) doing work. I can tell you that the more
+- [3:40](https://youtube.com/watch?v=zElKhlFkqU4&t=220) context and the more me and my team have
+- [3:41](https://youtube.com/watch?v=zElKhlFkqU4&t=221) been using Cloud Code and co-work, the
+- [3:43](https://youtube.com/watch?v=zElKhlFkqU4&t=223) less I'm in other softwares and the more
+- [3:45](https://youtube.com/watch?v=zElKhlFkqU4&t=225) of our tasks across all our business
+- [3:47](https://youtube.com/watch?v=zElKhlFkqU4&t=227) departments are being done by these AI
+- [3:49](https://youtube.com/watch?v=zElKhlFkqU4&t=229) agents or at least assisted by these
+- [3:51](https://youtube.com/watch?v=zElKhlFkqU4&t=231) agents. This is where the world is
+- [3:53](https://youtube.com/watch?v=zElKhlFkqU4&t=233) heading and because this memory layer is
+- [3:55](https://youtube.com/watch?v=zElKhlFkqU4&t=235) the foundation, I highly encourage you
+- [3:57](https://youtube.com/watch?v=zElKhlFkqU4&t=237) to get started with this today because I
+- [3:59](https://youtube.com/watch?v=zElKhlFkqU4&t=239) think you'll be surprised how much more
+- [4:00](https://youtube.com/watch?v=zElKhlFkqU4&t=240) productive working with AI gets with
+- [4:02](https://youtube.com/watch?v=zElKhlFkqU4&t=242) this setup. So, let me walk you through
+- [4:04](https://youtube.com/watch?v=zElKhlFkqU4&t=244) the first one, which is the OS setup
+- [4:06](https://youtube.com/watch?v=zElKhlFkqU4&t=246) skill. After using this skill, you
+- [4:08](https://youtube.com/watch?v=zElKhlFkqU4&t=248) should have your initial second brain
+- [4:09](https://youtube.com/watch?v=zElKhlFkqU4&t=249) set up, something that sort of looks
+- [4:11](https://youtube.com/watch?v=zElKhlFkqU4&t=251) like this and has enough context to
+- [4:13](https://youtube.com/watch?v=zElKhlFkqU4&t=253) really make your AI and your AI agents
+- [4:15](https://youtube.com/watch?v=zElKhlFkqU4&t=255) become more powerful and productive. It
+- [4:18](https://youtube.com/watch?v=zElKhlFkqU4&t=258) can also be used to help other people
+- [4:19](https://youtube.com/watch?v=zElKhlFkqU4&t=259) set it up or even if you potentially
+- [4:21](https://youtube.com/watch?v=zElKhlFkqU4&t=261) want to do this for clients. Now, you
+- [4:23](https://youtube.com/watch?v=zElKhlFkqU4&t=263) can download all of the skills by just
+- [4:24](https://youtube.com/watch?v=zElKhlFkqU4&t=264) going in the first link in the
+- [4:25](https://youtube.com/watch?v=zElKhlFkqU4&t=265) description. Now, in there, you'll find
+- [4:27](https://youtube.com/watch?v=zElKhlFkqU4&t=267) the plugin zip file here, which you can
+- [4:28](https://youtube.com/watch?v=zElKhlFkqU4&t=268) just download. And then, if you're
+- [4:30](https://youtube.com/watch?v=zElKhlFkqU4&t=270) setting this up in the cloud desktop,
+- [4:31](https://youtube.com/watch?v=zElKhlFkqU4&t=271) you can just go to customize here, then
+- [4:33](https://youtube.com/watch?v=zElKhlFkqU4&t=273) you go to plugins here, you click on
+- [4:35](https://youtube.com/watch?v=zElKhlFkqU4&t=275) plus, you click on create plugin, and
+- [4:37](https://youtube.com/watch?v=zElKhlFkqU4&t=277) then upload plugin. Here, you can just
+- [4:40](https://youtube.com/watch?v=zElKhlFkqU4&t=280) drop in the zip file,
+- [4:41](https://youtube.com/watch?v=zElKhlFkqU4&t=281) and they should now appear here under a
+- [4:43](https://youtube.com/watch?v=zElKhlFkqU4&t=283) tab called Obsidian. Maybe the name
+- [4:45](https://youtube.com/watch?v=zElKhlFkqU4&t=285) might have changed, but you'll have a
+- [4:46](https://youtube.com/watch?v=zElKhlFkqU4&t=286) new plugin here with all of the skills
+- [4:48](https://youtube.com/watch?v=zElKhlFkqU4&t=288) listed out. In the resource, you will
+- [4:49](https://youtube.com/watch?v=zElKhlFkqU4&t=289) also find a full setup guide that walks
+- [4:52](https://youtube.com/watch?v=zElKhlFkqU4&t=292) you through the entire process
+- [4:53](https://youtube.com/watch?v=zElKhlFkqU4&t=293) step-by-step if this video might go a
+- [4:55](https://youtube.com/watch?v=zElKhlFkqU4&t=295) little bit too fast for you. And if you
+- [4:56](https://youtube.com/watch?v=zElKhlFkqU4&t=296) need more help, you can also check out
+- [4:58](https://youtube.com/watch?v=zElKhlFkqU4&t=298) my AI accelerator in the second link in
+- [4:59](https://youtube.com/watch?v=zElKhlFkqU4&t=299) the description below, where you get
+- [5:01](https://youtube.com/watch?v=zElKhlFkqU4&t=301) access to unlimited one-on-one live tech
+- [5:03](https://youtube.com/watch?v=zElKhlFkqU4&t=303) help with my team to help you with any
+- [5:05](https://youtube.com/watch?v=zElKhlFkqU4&t=305) issues or questions you might have. We
+- [5:07](https://youtube.com/watch?v=zElKhlFkqU4&t=307) also have a full in-depth course on
+- [5:08](https://youtube.com/watch?v=zElKhlFkqU4&t=308) setting up this OS together with all our
+- [5:11](https://youtube.com/watch?v=zElKhlFkqU4&t=311) skills and plugins that we're building
+- [5:12](https://youtube.com/watch?v=zElKhlFkqU4&t=312) out for ourselves and multiple weekly
+- [5:14](https://youtube.com/watch?v=zElKhlFkqU4&t=314) Q&As with me and my team. So, if that's
+- [5:16](https://youtube.com/watch?v=zElKhlFkqU4&t=316) interesting to you, definitely check it
+- [5:17](https://youtube.com/watch?v=zElKhlFkqU4&t=317) out. And if you're a business and you
+- [5:19](https://youtube.com/watch?v=zElKhlFkqU4&t=319) want me and my team to actually help set
+- [5:20](https://youtube.com/watch?v=zElKhlFkqU4&t=320) this up for you together with
+- [5:22](https://youtube.com/watch?v=zElKhlFkqU4&t=322) personalized consulting and training,
+- [5:24](https://youtube.com/watch?v=zElKhlFkqU4&t=324) you can uh check the third link in the
+- [5:25](https://youtube.com/watch?v=zElKhlFkqU4&t=325) description below to book in a free call
+- [5:27](https://youtube.com/watch?v=zElKhlFkqU4&t=327) with us. Now, this first skill will help
+- [5:29](https://youtube.com/watch?v=zElKhlFkqU4&t=329) you set up your initial second brain by
+- [5:30](https://youtube.com/watch?v=zElKhlFkqU4&t=330) helping you with the three important
+- [5:32](https://youtube.com/watch?v=zElKhlFkqU4&t=332) things to get right when setting this
+- [5:34](https://youtube.com/watch?v=zElKhlFkqU4&t=334) up. Firstly, it will help you with the
+- [5:35](https://youtube.com/watch?v=zElKhlFkqU4&t=335) initial population of context in your
+- [5:38](https://youtube.com/watch?v=zElKhlFkqU4&t=338) second brain by asking you some
+- [5:39](https://youtube.com/watch?v=zElKhlFkqU4&t=339) questions. Second, it will help set up
+- [5:42](https://youtube.com/watch?v=zElKhlFkqU4&t=342) your folder structure, which is
+- [5:43](https://youtube.com/watch?v=zElKhlFkqU4&t=343) important to make sure your second brain
+- [5:45](https://youtube.com/watch?v=zElKhlFkqU4&t=345) is organized and structured efficiently
+- [5:48](https://youtube.com/watch?v=zElKhlFkqU4&t=348) for it to be able to scale well. And
+- [5:50](https://youtube.com/watch?v=zElKhlFkqU4&t=350) thirdly, it helps you set up good
+- [5:51](https://youtube.com/watch?v=zElKhlFkqU4&t=351) Claude.md files, which are extremely
+- [5:53](https://youtube.com/watch?v=zElKhlFkqU4&t=353) important because they tell Claude how
+- [5:55](https://youtube.com/watch?v=zElKhlFkqU4&t=355) to efficiently navigate the second
+- [5:57](https://youtube.com/watch?v=zElKhlFkqU4&t=357) brain. This Claude.md file is basically
+- [5:59](https://youtube.com/watch?v=zElKhlFkqU4&t=359) the instruction layer or the map for
+- [6:01](https://youtube.com/watch?v=zElKhlFkqU4&t=361) your AI agent on Claude code or co-work
+- [6:04](https://youtube.com/watch?v=zElKhlFkqU4&t=364) on how to navigate the second brain
+- [6:06](https://youtube.com/watch?v=zElKhlFkqU4&t=366) folder. So, it tells Claude basically
+- [6:08](https://youtube.com/watch?v=zElKhlFkqU4&t=368) where to find and store information in
+- [6:10](https://youtube.com/watch?v=zElKhlFkqU4&t=370) this complex folder.
+- [6:12](https://youtube.com/watch?v=zElKhlFkqU4&t=372) And then lastly, I'll show you quickly
+- [6:13](https://youtube.com/watch?v=zElKhlFkqU4&t=373) how to set up Obsidian, which is the
+- [6:15](https://youtube.com/watch?v=zElKhlFkqU4&t=375) tool that I show here, of course, which
+- [6:16](https://youtube.com/watch?v=zElKhlFkqU4&t=376) is what you want to do after using the
+- [6:18](https://youtube.com/watch?v=zElKhlFkqU4&t=378) skill. Which again, Obsidian is a free
+- [6:20](https://youtube.com/watch?v=zElKhlFkqU4&t=380) tool to download and again is nothing
+- [6:22](https://youtube.com/watch?v=zElKhlFkqU4&t=382) more than just a visual overlay of the
+- [6:24](https://youtube.com/watch?v=zElKhlFkqU4&t=384) folder we're creating on our computer.
+- [6:26](https://youtube.com/watch?v=zElKhlFkqU4&t=386) Now, before diving into this setup
+- [6:28](https://youtube.com/watch?v=zElKhlFkqU4&t=388) skill, it's important to have the right
+- [6:29](https://youtube.com/watch?v=zElKhlFkqU4&t=389) mindset when setting this up because
+- [6:31](https://youtube.com/watch?v=zElKhlFkqU4&t=391) this second brain setup can become
+- [6:33](https://youtube.com/watch?v=zElKhlFkqU4&t=393) pretty overwhelming pretty quickly. And
+- [6:35](https://youtube.com/watch?v=zElKhlFkqU4&t=395) usually, lots of questions will pop up
+- [6:37](https://youtube.com/watch?v=zElKhlFkqU4&t=397) like, what context do I actually need?
+- [6:39](https://youtube.com/watch?v=zElKhlFkqU4&t=399) Do I have enough context? Is my file
+- [6:41](https://youtube.com/watch?v=zElKhlFkqU4&t=401) structure well? Is it all structured
+- [6:44](https://youtube.com/watch?v=zElKhlFkqU4&t=404) well enough? etc. But the important
+- [6:45](https://youtube.com/watch?v=zElKhlFkqU4&t=405) thing to keep in mind is that you want
+- [6:47](https://youtube.com/watch?v=zElKhlFkqU4&t=407) to start simple. This is not about
+- [6:49](https://youtube.com/watch?v=zElKhlFkqU4&t=409) having the perfect setup or thousands of
+- [6:51](https://youtube.com/watch?v=zElKhlFkqU4&t=411) files in there on day one. The point is
+- [6:53](https://youtube.com/watch?v=zElKhlFkqU4&t=413) about getting started simple and fast.
+- [6:55](https://youtube.com/watch?v=zElKhlFkqU4&t=415) Because once you've set this up and
+- [6:56](https://youtube.com/watch?v=zElKhlFkqU4&t=416) start using it, the second brain will
+- [6:58](https://youtube.com/watch?v=zElKhlFkqU4&t=418) grow naturally over time. I can tell you
+- [7:00](https://youtube.com/watch?v=zElKhlFkqU4&t=420) that the day I started this, I probably
+- [7:02](https://youtube.com/watch?v=zElKhlFkqU4&t=422) had around 30 or 40 documents in there.
+- [7:04](https://youtube.com/watch?v=zElKhlFkqU4&t=424) And then 6 weeks later, this grew into
+- [7:05](https://youtube.com/watch?v=zElKhlFkqU4&t=425) hundreds of documents. And now I
+- [7:07](https://youtube.com/watch?v=zElKhlFkqU4&t=427) literally have thousands. So, after
+- [7:09](https://youtube.com/watch?v=zElKhlFkqU4&t=429) you've imported the skill, you can just
+- [7:10](https://youtube.com/watch?v=zElKhlFkqU4&t=430) use the skill by going typing a slash
+- [7:12](https://youtube.com/watch?v=zElKhlFkqU4&t=432) and going OS setup.
+- [7:15](https://youtube.com/watch?v=zElKhlFkqU4&t=435) You'll see the the setup skill appear.
+- [7:17](https://youtube.com/watch?v=zElKhlFkqU4&t=437) And now one more thing we want to do is
+- [7:18](https://youtube.com/watch?v=zElKhlFkqU4&t=438) we want to create a new folder, which
+- [7:20](https://youtube.com/watch?v=zElKhlFkqU4&t=440) we'll probably call the second brain
+- [7:22](https://youtube.com/watch?v=zElKhlFkqU4&t=442) folder because this is what Claude will
+- [7:24](https://youtube.com/watch?v=zElKhlFkqU4&t=444) populate to create your initial second
+- [7:26](https://youtube.com/watch?v=zElKhlFkqU4&t=446) brain. So, you can just create a new
+- [7:28](https://youtube.com/watch?v=zElKhlFkqU4&t=448) folder and I'll call it second brain
+- [7:30](https://youtube.com/watch?v=zElKhlFkqU4&t=450) test.
+- [7:31](https://youtube.com/watch?v=zElKhlFkqU4&t=451) I open it.
+- [7:33](https://youtube.com/watch?v=zElKhlFkqU4&t=453) Click always allow. And now Claude will
+- [7:35](https://youtube.com/watch?v=zElKhlFkqU4&t=455) set up the second brain inside of this
+- [7:37](https://youtube.com/watch?v=zElKhlFkqU4&t=457) folder, which we're later going to
+- [7:38](https://youtube.com/watch?v=zElKhlFkqU4&t=458) connect to Obsidian. Now, when you run
+- [7:39](https://youtube.com/watch?v=zElKhlFkqU4&t=459) this, So, first question it asks you is
+- [7:41](https://youtube.com/watch?v=zElKhlFkqU4&t=461) what type of folder structure do you
+- [7:43](https://youtube.com/watch?v=zElKhlFkqU4&t=463) want? What type of vault do you want? Is
+- [7:44](https://youtube.com/watch?v=zElKhlFkqU4&t=464) it for solopreneurs or professional or
+- [7:46](https://youtube.com/watch?v=zElKhlFkqU4&t=466) are you a business with a team? Now,
+- [7:48](https://youtube.com/watch?v=zElKhlFkqU4&t=468) it's important to select the right one
+- [7:50](https://youtube.com/watch?v=zElKhlFkqU4&t=470) here because based on this, it's going
+- [7:51](https://youtube.com/watch?v=zElKhlFkqU4&t=471) to decide your initial folder structure.
+- [7:54](https://youtube.com/watch?v=zElKhlFkqU4&t=474) Now, I know there have been many people
+- [7:55](https://youtube.com/watch?v=zElKhlFkqU4&t=475) who've been trying to set up a second
+- [7:56](https://youtube.com/watch?v=zElKhlFkqU4&t=476) brain and it can be sort of hard to wrap
+- [7:57](https://youtube.com/watch?v=zElKhlFkqU4&t=477) your head around a good folder structure
+- [7:59](https://youtube.com/watch?v=zElKhlFkqU4&t=479) for yourself. And honestly, there is no
+- [8:01](https://youtube.com/watch?v=zElKhlFkqU4&t=481) right or wrong answer here because the
+- [8:02](https://youtube.com/watch?v=zElKhlFkqU4&t=482) perfect folder structure for me will not
+- [8:04](https://youtube.com/watch?v=zElKhlFkqU4&t=484) be the same for you because it is
+- [8:06](https://youtube.com/watch?v=zElKhlFkqU4&t=486) context dependent, business dependent,
+- [8:08](https://youtube.com/watch?v=zElKhlFkqU4&t=488) and depending on what's important to
+- [8:10](https://youtube.com/watch?v=zElKhlFkqU4&t=490) you. And just like the context, this
+- [8:11](https://youtube.com/watch?v=zElKhlFkqU4&t=491) will evolve sort of naturally too the
+- [8:14](https://youtube.com/watch?v=zElKhlFkqU4&t=494) more you use this. That being said,
+- [8:16](https://youtube.com/watch?v=zElKhlFkqU4&t=496) while helping other people setting this
+- [8:18](https://youtube.com/watch?v=zElKhlFkqU4&t=498) up and other businesses, we've seen two
+- [8:19](https://youtube.com/watch?v=zElKhlFkqU4&t=499) initial folder structures work best as
+- [8:21](https://youtube.com/watch?v=zElKhlFkqU4&t=501) initial folder structures for most
+- [8:23](https://youtube.com/watch?v=zElKhlFkqU4&t=503) people and businesses. So, one is for
+- [8:26](https://youtube.com/watch?v=zElKhlFkqU4&t=506) solopreneurs or professionals that don't
+- [8:27](https://youtube.com/watch?v=zElKhlFkqU4&t=507) have a team or don't need a team set up
+- [8:29](https://youtube.com/watch?v=zElKhlFkqU4&t=509) and one for business owners or people
+- [8:31](https://youtube.com/watch?v=zElKhlFkqU4&t=511) who want to roll this out across teams.
+- [8:33](https://youtube.com/watch?v=zElKhlFkqU4&t=513) So, in my case, I can select business
+- [8:35](https://youtube.com/watch?v=zElKhlFkqU4&t=515) and what Claude will do now is create
+- [8:37](https://youtube.com/watch?v=zElKhlFkqU4&t=517) your initial folder structure with all
+- [8:39](https://youtube.com/watch?v=zElKhlFkqU4&t=519) the sub folders inside of the folder we
+- [8:42](https://youtube.com/watch?v=zElKhlFkqU4&t=522) first selected and created the Claude MD
+- [8:44](https://youtube.com/watch?v=zElKhlFkqU4&t=524) and the index files. So, after you've
+- [8:46](https://youtube.com/watch?v=zElKhlFkqU4&t=526) done that, you'll see in the folder you
+- [8:47](https://youtube.com/watch?v=zElKhlFkqU4&t=527) selected, you now have all these sub
+- [8:49](https://youtube.com/watch?v=zElKhlFkqU4&t=529) folders. Now again, don't worry about
+- [8:51](https://youtube.com/watch?v=zElKhlFkqU4&t=531) understanding this entirely yet because
+- [8:53](https://youtube.com/watch?v=zElKhlFkqU4&t=533) this folder structure in the end is more
+- [8:55](https://youtube.com/watch?v=zElKhlFkqU4&t=535) for Claude than for you, but I'll walk
+- [8:56](https://youtube.com/watch?v=zElKhlFkqU4&t=536) you through very quickly what's going to
+- [8:58](https://youtube.com/watch?v=zElKhlFkqU4&t=538) be underneath each one. So, in the
+- [8:59](https://youtube.com/watch?v=zElKhlFkqU4&t=539) context folder, it will populate
+- [9:01](https://youtube.com/watch?v=zElKhlFkqU4&t=541) information with general information
+- [9:02](https://youtube.com/watch?v=zElKhlFkqU4&t=542) about you and your business. The daily
+- [9:04](https://youtube.com/watch?v=zElKhlFkqU4&t=544) folder will log every day's work so
+- [9:06](https://youtube.com/watch?v=zElKhlFkqU4&t=546) Claude can look back and see what
+- [9:08](https://youtube.com/watch?v=zElKhlFkqU4&t=548) happened each day across the business.
+- [9:10](https://youtube.com/watch?v=zElKhlFkqU4&t=550) The project folder will be for all the
+- [9:13](https://youtube.com/watch?v=zElKhlFkqU4&t=553) active projects. For example, with me
+- [9:14](https://youtube.com/watch?v=zElKhlFkqU4&t=554) that could be a project for each YouTube
+- [9:17](https://youtube.com/watch?v=zElKhlFkqU4&t=557) video I'm doing. Then we have an
+- [9:18](https://youtube.com/watch?v=zElKhlFkqU4&t=558) intelligence folder where meeting
+- [9:20](https://youtube.com/watch?v=zElKhlFkqU4&t=560) transcripts calls decisions and
+- [9:22](https://youtube.com/watch?v=zElKhlFkqU4&t=562) competitor research for example can
+- [9:24](https://youtube.com/watch?v=zElKhlFkqU4&t=564) live. We have a resource folder where
+- [9:26](https://youtube.com/watch?v=zElKhlFkqU4&t=566) reusable stuff like prompts, frameworks,
+- [9:28](https://youtube.com/watch?v=zElKhlFkqU4&t=568) and templates can live. We can have a
+- [9:30](https://youtube.com/watch?v=zElKhlFkqU4&t=570) skills folder for every Claude skill
+- [9:32](https://youtube.com/watch?v=zElKhlFkqU4&t=572) that you build or install. And if you've
+- [9:34](https://youtube.com/watch?v=zElKhlFkqU4&t=574) picked the business setup, it's
+- [9:35](https://youtube.com/watch?v=zElKhlFkqU4&t=575) department folder for SOPs by
+- [9:37](https://youtube.com/watch?v=zElKhlFkqU4&t=577) departments, team folder where every
+- [9:40](https://youtube.com/watch?v=zElKhlFkqU4&t=580) person in the team gets their own
+- [9:41](https://youtube.com/watch?v=zElKhlFkqU4&t=581) profile with role, daily notes, and
+- [9:43](https://youtube.com/watch?v=zElKhlFkqU4&t=583) tasks, and an onboarding folder for new
+- [9:45](https://youtube.com/watch?v=zElKhlFkqU4&t=585) hires. Again, don't stress about
+- [9:47](https://youtube.com/watch?v=zElKhlFkqU4&t=587) understanding all of this on day one.
+- [9:49](https://youtube.com/watch?v=zElKhlFkqU4&t=589) It'll make a lot more sense when you
+- [9:50](https://youtube.com/watch?v=zElKhlFkqU4&t=590) have some context in here. As you can
+- [9:52](https://youtube.com/watch?v=zElKhlFkqU4&t=592) see, this is of course still empty. And
+- [9:54](https://youtube.com/watch?v=zElKhlFkqU4&t=594) besides these folders that it has set
+- [9:55](https://youtube.com/watch?v=zElKhlFkqU4&t=595) up, it has also set up the Claude.md, as
+- [9:58](https://youtube.com/watch?v=zElKhlFkqU4&t=598) you can see here. In a Claude desktop,
+- [10:00](https://youtube.com/watch?v=zElKhlFkqU4&t=600) you can also see the Claude.md here. And
+- [10:02](https://youtube.com/watch?v=zElKhlFkqU4&t=602) basically, this is that layer that
+- [10:04](https://youtube.com/watch?v=zElKhlFkqU4&t=604) instructs to Claude exactly where it can
+- [10:07](https://youtube.com/watch?v=zElKhlFkqU4&t=607) find which information based on this
+- [10:08](https://youtube.com/watch?v=zElKhlFkqU4&t=608) folder structure. So, it's already made
+- [10:10](https://youtube.com/watch?v=zElKhlFkqU4&t=610) and optimized according to what we've
+- [10:12](https://youtube.com/watch?v=zElKhlFkqU4&t=612) seen work best for these types of folder
+- [10:14](https://youtube.com/watch?v=zElKhlFkqU4&t=614) structures. And then with every new chat
+- [10:16](https://youtube.com/watch?v=zElKhlFkqU4&t=616) Claude opens, it will first read this
+- [10:18](https://youtube.com/watch?v=zElKhlFkqU4&t=618) Claude.md to know where to pull data
+- [10:20](https://youtube.com/watch?v=zElKhlFkqU4&t=620) from if it needs to. It has also set up
+- [10:23](https://youtube.com/watch?v=zElKhlFkqU4&t=623) separate Claude.md um
+- [10:25](https://youtube.com/watch?v=zElKhlFkqU4&t=625) documents for each of the subfolders to
+- [10:27](https://youtube.com/watch?v=zElKhlFkqU4&t=627) basically instruct Claude also how these
+- [10:29](https://youtube.com/watch?v=zElKhlFkqU4&t=629) subfolders are structured, which is a
+- [10:31](https://youtube.com/watch?v=zElKhlFkqU4&t=631) technique and best practice Andrej
+- [10:32](https://youtube.com/watch?v=zElKhlFkqU4&t=632) Karpathy, one of the leading AI
+- [10:34](https://youtube.com/watch?v=zElKhlFkqU4&t=634) researchers came up with. But again,
+- [10:36](https://youtube.com/watch?v=zElKhlFkqU4&t=636) this is already done for you. Now, the
+- [10:37](https://youtube.com/watch?v=zElKhlFkqU4&t=637) next thing we need to do, of course, is
+- [10:39](https://youtube.com/watch?v=zElKhlFkqU4&t=639) to populate it with the actual context
+- [10:40](https://youtube.com/watch?v=zElKhlFkqU4&t=640) about you and your business. So, the
+- [10:42](https://youtube.com/watch?v=zElKhlFkqU4&t=642) next thing the skill will do is to start
+- [10:44](https://youtube.com/watch?v=zElKhlFkqU4&t=644) asking you a series of questions to help
+- [10:47](https://youtube.com/watch?v=zElKhlFkqU4&t=647) you populate this initial sort of key
+- [10:49](https://youtube.com/watch?v=zElKhlFkqU4&t=649) information that you need to get started
+- [10:51](https://youtube.com/watch?v=zElKhlFkqU4&t=651) with your second brain. So, we'll go
+- [10:53](https://youtube.com/watch?v=zElKhlFkqU4&t=653) through a set of 12 sections to get a
+- [10:55](https://youtube.com/watch?v=zElKhlFkqU4&t=655) good initial context data set around you
+- [10:58](https://youtube.com/watch?v=zElKhlFkqU4&t=658) and your business. So, for example, the
+- [10:59](https://youtube.com/watch?v=zElKhlFkqU4&t=659) first one here is about you, uh then
+- [11:02](https://youtube.com/watch?v=zElKhlFkqU4&t=662) about the company, then about the market
+- [11:04](https://youtube.com/watch?v=zElKhlFkqU4&t=664) you're in, etc. And it will cover 12 of
+- [11:07](https://youtube.com/watch?v=zElKhlFkqU4&t=667) the most important sort of sections that
+- [11:08](https://youtube.com/watch?v=zElKhlFkqU4&t=668) you need to cover. Now, in each of
+- [11:10](https://youtube.com/watch?v=zElKhlFkqU4&t=670) these, you'll see a brain dump box, and
+- [11:13](https://youtube.com/watch?v=zElKhlFkqU4&t=673) link and file box, and you can upload
+- [11:16](https://youtube.com/watch?v=zElKhlFkqU4&t=676) any documents you might have. And this
+- [11:18](https://youtube.com/watch?v=zElKhlFkqU4&t=678) is really where you want to take your
+- [11:20](https://youtube.com/watch?v=zElKhlFkqU4&t=680) time with. My co-founder likes to say to
+- [11:22](https://youtube.com/watch?v=zElKhlFkqU4&t=682) people, uh just order a six-pack and a
+- [11:24](https://youtube.com/watch?v=zElKhlFkqU4&t=684) pizza, and just sit down for a couple of
+- [11:26](https://youtube.com/watch?v=zElKhlFkqU4&t=686) hours together with Claude, and in each
+- [11:28](https://youtube.com/watch?v=zElKhlFkqU4&t=688) of these questions, just do a a long
+- [11:30](https://youtube.com/watch?v=zElKhlFkqU4&t=690) brain dump. We we put some bullet points
+- [11:32](https://youtube.com/watch?v=zElKhlFkqU4&t=692) here too on each of the sections, so to
+- [11:34](https://youtube.com/watch?v=zElKhlFkqU4&t=694) give you some inspiration on what you
+- [11:35](https://youtube.com/watch?v=zElKhlFkqU4&t=695) can talk about. But, I highly recommend
+- [11:37](https://youtube.com/watch?v=zElKhlFkqU4&t=697) just getting a voice transcription tool
+- [11:39](https://youtube.com/watch?v=zElKhlFkqU4&t=699) like WhisperFlow and just doing a really
+- [11:41](https://youtube.com/watch?v=zElKhlFkqU4&t=701) long brain dump. Doesn't have to be
+- [11:43](https://youtube.com/watch?v=zElKhlFkqU4&t=703) structured and talk about anything
+- [11:45](https://youtube.com/watch?v=zElKhlFkqU4&t=705) around, in this case, you, your
+- [11:47](https://youtube.com/watch?v=zElKhlFkqU4&t=707) background, what's important to you,
+- [11:49](https://youtube.com/watch?v=zElKhlFkqU4&t=709) where you live, etc. Anything you can
+- [11:51](https://youtube.com/watch?v=zElKhlFkqU4&t=711) imagine, just dump it in here. Any files
+- [11:53](https://youtube.com/watch?v=zElKhlFkqU4&t=713) you might have that can relate to this.
+- [11:55](https://youtube.com/watch?v=zElKhlFkqU4&t=715) And you can also here instruct any
+- [11:57](https://youtube.com/watch?v=zElKhlFkqU4&t=717) documents that might already live in
+- [11:59](https://youtube.com/watch?v=zElKhlFkqU4&t=719) Notion, for example, or Google Drive
+- [12:01](https://youtube.com/watch?v=zElKhlFkqU4&t=721) that you can use. Because if you have
+- [12:02](https://youtube.com/watch?v=zElKhlFkqU4&t=722) the connector set up, you can pull those
+- [12:04](https://youtube.com/watch?v=zElKhlFkqU4&t=724) documents in right away. Again, this
+- [12:05](https://youtube.com/watch?v=zElKhlFkqU4&t=725) doesn't have to be structured because
+- [12:07](https://youtube.com/watch?v=zElKhlFkqU4&t=727) what will happen after you've done and
+- [12:09](https://youtube.com/watch?v=zElKhlFkqU4&t=729) gone through all of the 12 questions, it
+- [12:11](https://youtube.com/watch?v=zElKhlFkqU4&t=731) Cloud will actually structure this for
+- [12:13](https://youtube.com/watch?v=zElKhlFkqU4&t=733) you and put it in the folder structure
+- [12:15](https://youtube.com/watch?v=zElKhlFkqU4&t=735) that we just seen. So, after you've gone
+- [12:17](https://youtube.com/watch?v=zElKhlFkqU4&t=737) through those 12 questions, what you'll
+- [12:18](https://youtube.com/watch?v=zElKhlFkqU4&t=738) see is that inside of that folder, it is
+- [12:20](https://youtube.com/watch?v=zElKhlFkqU4&t=740) now actually populated it with some
+- [12:23](https://youtube.com/watch?v=zElKhlFkqU4&t=743) data. For example, right your brand,
+- [12:25](https://youtube.com/watch?v=zElKhlFkqU4&t=745) your team, your market, your
+- [12:26](https://youtube.com/watch?v=zElKhlFkqU4&t=746) infrastructure, ICP, etc. And you'll see
+- [12:29](https://youtube.com/watch?v=zElKhlFkqU4&t=749) that you already have lots of very
+- [12:30](https://youtube.com/watch?v=zElKhlFkqU4&t=750) relevant that will make outputs inside
+- [12:33](https://youtube.com/watch?v=zElKhlFkqU4&t=753) of your next chats already a lot more
+- [12:35](https://youtube.com/watch?v=zElKhlFkqU4&t=755) productive and efficient. Now, and then
+- [12:37](https://youtube.com/watch?v=zElKhlFkqU4&t=757) of course, there's one more important
+- [12:38](https://youtube.com/watch?v=zElKhlFkqU4&t=758) thing once we have this is to actually
+- [12:40](https://youtube.com/watch?v=zElKhlFkqU4&t=760) connect it with Obsidian. So, you can
+- [12:42](https://youtube.com/watch?v=zElKhlFkqU4&t=762) just download Obsidian for free from for
+- [12:44](https://youtube.com/watch?v=zElKhlFkqU4&t=764) Mac or for Windows. So, you can just
+- [12:46](https://youtube.com/watch?v=zElKhlFkqU4&t=766) download it from their website. You just
+- [12:48](https://youtube.com/watch?v=zElKhlFkqU4&t=768) have to create an account, which takes
+- [12:49](https://youtube.com/watch?v=zElKhlFkqU4&t=769) you 1 minute, and then you'll land on a
+- [12:50](https://youtube.com/watch?v=zElKhlFkqU4&t=770) screen like this. Then you select open
+- [12:53](https://youtube.com/watch?v=zElKhlFkqU4&t=773) folder as vault. We'll then select that
+- [12:55](https://youtube.com/watch?v=zElKhlFkqU4&t=775) second brain folder that you earlier
+- [12:56](https://youtube.com/watch?v=zElKhlFkqU4&t=776) created. And then you have that exact
+- [12:58](https://youtube.com/watch?v=zElKhlFkqU4&t=778) folder in a nicer visual layout. We also
+- [13:01](https://youtube.com/watch?v=zElKhlFkqU4&t=781) have that graph view, of course, where
+- [13:02](https://youtube.com/watch?v=zElKhlFkqU4&t=782) we can see the connections between all
+- [13:04](https://youtube.com/watch?v=zElKhlFkqU4&t=784) of these files. That's basically what
+- [13:06](https://youtube.com/watch?v=zElKhlFkqU4&t=786) this is. But, this is just going to
+- [13:07](https://youtube.com/watch?v=zElKhlFkqU4&t=787) become really helpful when your context
+- [13:09](https://youtube.com/watch?v=zElKhlFkqU4&t=789) start growing to actually start managing
+- [13:11](https://youtube.com/watch?v=zElKhlFkqU4&t=791) it in a better way because it becomes
+- [13:13](https://youtube.com/watch?v=zElKhlFkqU4&t=793) very complex in a in a normal folder.
+- [13:16](https://youtube.com/watch?v=zElKhlFkqU4&t=796) Now, your Obsidian might not look as
+- [13:17](https://youtube.com/watch?v=zElKhlFkqU4&t=797) fancy or colorful as mine.
+- [13:20](https://youtube.com/watch?v=zElKhlFkqU4&t=800) But, we've just applied a template to
+- [13:22](https://youtube.com/watch?v=zElKhlFkqU4&t=802) the the visual layout, which you can do
+- [13:23](https://youtube.com/watch?v=zElKhlFkqU4&t=803) here in the settings. Then you go to
+- [13:25](https://youtube.com/watch?v=zElKhlFkqU4&t=805) appearances. And here you have an option
+- [13:27](https://youtube.com/watch?v=zElKhlFkqU4&t=807) called themes. Then you can go to
+- [13:29](https://youtube.com/watch?v=zElKhlFkqU4&t=809) manage. Here you have you have lots of
+- [13:31](https://youtube.com/watch?v=zElKhlFkqU4&t=811) different ways you can visualize um
+- [13:34](https://youtube.com/watch?v=zElKhlFkqU4&t=814) Obsidian. Now, we specifically used PLN,
+- [13:37](https://youtube.com/watch?v=zElKhlFkqU4&t=817) which you can just click here. Then in
+- [13:39](https://youtube.com/watch?v=zElKhlFkqU4&t=819) the themes, you just select the PLN, and
+- [13:41](https://youtube.com/watch?v=zElKhlFkqU4&t=821) then uh you get an upgrade basically in
+- [13:44](https://youtube.com/watch?v=zElKhlFkqU4&t=824) the visualization inside of Obsidian.
+- [13:46](https://youtube.com/watch?v=zElKhlFkqU4&t=826) Once you've set this up, there are three
+- [13:47](https://youtube.com/watch?v=zElKhlFkqU4&t=827) important things to keep in mind.
+- [13:48](https://youtube.com/watch?v=zElKhlFkqU4&t=828) Firstly, every new chart we start across
+- [13:51](https://youtube.com/watch?v=zElKhlFkqU4&t=831) any AI provider, it could be Cohere,
+- [13:53](https://youtube.com/watch?v=zElKhlFkqU4&t=833) Claude Code, etc. We always want to make
+- [13:55](https://youtube.com/watch?v=zElKhlFkqU4&t=835) sure the second brain folder is
+- [13:57](https://youtube.com/watch?v=zElKhlFkqU4&t=837) selected. Second, the Claude MD does
+- [13:59](https://youtube.com/watch?v=zElKhlFkqU4&t=839) have instructions to save information
+- [14:01](https://youtube.com/watch?v=zElKhlFkqU4&t=841) when you're chatting with Claude to uh
+- [14:04](https://youtube.com/watch?v=zElKhlFkqU4&t=844) make sure to remember stuff you've done
+- [14:05](https://youtube.com/watch?v=zElKhlFkqU4&t=845) in chats. But if there's something
+- [14:07](https://youtube.com/watch?v=zElKhlFkqU4&t=847) specific that you think Claude should
+- [14:09](https://youtube.com/watch?v=zElKhlFkqU4&t=849) remember, always just make sure to tell
+- [14:11](https://youtube.com/watch?v=zElKhlFkqU4&t=851) Claude to save it as a file in your
+- [14:13](https://youtube.com/watch?v=zElKhlFkqU4&t=853) second brain. And thirdly, Claude should
+- [14:15](https://youtube.com/watch?v=zElKhlFkqU4&t=855) start pulling context automatically
+- [14:18](https://youtube.com/watch?v=zElKhlFkqU4&t=858) based on what kind of prompt you give
+- [14:19](https://youtube.com/watch?v=zElKhlFkqU4&t=859) it. But if it doesn't, you can always
+- [14:21](https://youtube.com/watch?v=zElKhlFkqU4&t=861) specify to go through your vault to uh
+- [14:24](https://youtube.com/watch?v=zElKhlFkqU4&t=864) get some extra context before answering.
+- [14:26](https://youtube.com/watch?v=zElKhlFkqU4&t=866) Now, what's missing in this initial
+- [14:27](https://youtube.com/watch?v=zElKhlFkqU4&t=867) setup, of course, is to actually
+- [14:29](https://youtube.com/watch?v=zElKhlFkqU4&t=869) populate and update the brain with
+- [14:31](https://youtube.com/watch?v=zElKhlFkqU4&t=871) real-time information on what's
+- [14:33](https://youtube.com/watch?v=zElKhlFkqU4&t=873) happening and changing in your business
+- [14:34](https://youtube.com/watch?v=zElKhlFkqU4&t=874) day-to-day. And this is exactly what the
+- [14:36](https://youtube.com/watch?v=zElKhlFkqU4&t=876) next skill will help you to do, the OS
+- [14:39](https://youtube.com/watch?v=zElKhlFkqU4&t=879) operator skill. And this skill will
+- [14:41](https://youtube.com/watch?v=zElKhlFkqU4&t=881) basically help you set up a scheduled
+- [14:42](https://youtube.com/watch?v=zElKhlFkqU4&t=882) task. And this scheduled task it will
+- [14:44](https://youtube.com/watch?v=zElKhlFkqU4&t=884) set up will pull real-time context from
+- [14:46](https://youtube.com/watch?v=zElKhlFkqU4&t=886) your business and update your second
+- [14:48](https://youtube.com/watch?v=zElKhlFkqU4&t=888) brain with it. You can see here that my
+- [14:50](https://youtube.com/watch?v=zElKhlFkqU4&t=890) vault operator scheduled task runs every
+- [14:53](https://youtube.com/watch?v=zElKhlFkqU4&t=893) day here in the back end. And it
+- [14:54](https://youtube.com/watch?v=zElKhlFkqU4&t=894) basically uses the Fireflies connector,
+- [14:57](https://youtube.com/watch?v=zElKhlFkqU4&t=897) my Circle Community connector, and the
+- [14:58](https://youtube.com/watch?v=zElKhlFkqU4&t=898) Slack connector to pull my latest
+- [15:00](https://youtube.com/watch?v=zElKhlFkqU4&t=900) meetings, my latest chat and thread
+- [15:03](https://youtube.com/watch?v=zElKhlFkqU4&t=903) discussions from Slack, and the latest
+- [15:05](https://youtube.com/watch?v=zElKhlFkqU4&t=905) threads and questions from my Circle
+- [15:06](https://youtube.com/watch?v=zElKhlFkqU4&t=906) Community. But this, of course, can be
+- [15:08](https://youtube.com/watch?v=zElKhlFkqU4&t=908) wired up to any software or platform
+- [15:11](https://youtube.com/watch?v=zElKhlFkqU4&t=911) that you want to pull real-time data
+- [15:12](https://youtube.com/watch?v=zElKhlFkqU4&t=912) from. You can imagine uh connecting your
+- [15:14](https://youtube.com/watch?v=zElKhlFkqU4&t=914) inbox or even an analytics platform, but
+- [15:17](https://youtube.com/watch?v=zElKhlFkqU4&t=917) any information that's important for
+- [15:18](https://youtube.com/watch?v=zElKhlFkqU4&t=918) your second brain to have up-to-date
+- [15:20](https://youtube.com/watch?v=zElKhlFkqU4&t=920) information or context on. You will then
+- [15:22](https://youtube.com/watch?v=zElKhlFkqU4&t=922) use this context to create daily context
+- [15:25](https://youtube.com/watch?v=zElKhlFkqU4&t=925) briefs in the daily folder. For example,
+- [15:27](https://youtube.com/watch?v=zElKhlFkqU4&t=927) you can see here in Tuesday, May 12th,
+- [15:30](https://youtube.com/watch?v=zElKhlFkqU4&t=930) because of all of this information it
+- [15:31](https://youtube.com/watch?v=zElKhlFkqU4&t=931) has, it knows exactly what critical
+- [15:33](https://youtube.com/watch?v=zElKhlFkqU4&t=933) escalations are, uh what today's
+- [15:35](https://youtube.com/watch?v=zElKhlFkqU4&t=935) calendar is, for example. You can see OS
+- [15:37](https://youtube.com/watch?v=zElKhlFkqU4&t=937) skills video filming continuation. So,
+- [15:40](https://youtube.com/watch?v=zElKhlFkqU4&t=940) it has up-to-date context around
+- [15:42](https://youtube.com/watch?v=zElKhlFkqU4&t=942) everything me and my team are working on
+- [15:44](https://youtube.com/watch?v=zElKhlFkqU4&t=944) and what our priorities right now. It
+- [15:45](https://youtube.com/watch?v=zElKhlFkqU4&t=945) also creates daily task list across all
+- [15:48](https://youtube.com/watch?v=zElKhlFkqU4&t=948) the different team members, all the
+- [15:49](https://youtube.com/watch?v=zElKhlFkqU4&t=949) meeting transcripts are saved, and it
+- [15:51](https://youtube.com/watch?v=zElKhlFkqU4&t=951) will also use this context to update
+- [15:53](https://youtube.com/watch?v=zElKhlFkqU4&t=953) your second brain or an existing file
+- [15:55](https://youtube.com/watch?v=zElKhlFkqU4&t=955) with things that might have changed. It
+- [15:57](https://youtube.com/watch?v=zElKhlFkqU4&t=957) might delete even files that became
+- [15:59](https://youtube.com/watch?v=zElKhlFkqU4&t=959) irrelevant because of the updates. You
+- [16:01](https://youtube.com/watch?v=zElKhlFkqU4&t=961) can imagine if we discussed a strategic
+- [16:03](https://youtube.com/watch?v=zElKhlFkqU4&t=963) change in our business, that it can
+- [16:04](https://youtube.com/watch?v=zElKhlFkqU4&t=964) actually start uh adapting uh the
+- [16:07](https://youtube.com/watch?v=zElKhlFkqU4&t=967) strategy document and things like this.
+- [16:09](https://youtube.com/watch?v=zElKhlFkqU4&t=969) Besides this, it even does some basic
+- [16:11](https://youtube.com/watch?v=zElKhlFkqU4&t=971) cleaning and hygiene of your second
+- [16:12](https://youtube.com/watch?v=zElKhlFkqU4&t=972) brain, like uh spotting duplications in
+- [16:15](https://youtube.com/watch?v=zElKhlFkqU4&t=975) your second brain, uh and cleaning them
+- [16:17](https://youtube.com/watch?v=zElKhlFkqU4&t=977) up or merging them. It might summarize
+- [16:19](https://youtube.com/watch?v=zElKhlFkqU4&t=979) large files. Uh it cleans up the
+- [16:21](https://youtube.com/watch?v=zElKhlFkqU4&t=981) formatting. Uh make sure wiki links are
+- [16:24](https://youtube.com/watch?v=zElKhlFkqU4&t=984) added efficiently and some other things.
+- [16:25](https://youtube.com/watch?v=zElKhlFkqU4&t=985) You can see here, I get a You get a
+- [16:27](https://youtube.com/watch?v=zElKhlFkqU4&t=987) report, too, with what kind of
+- [16:28](https://youtube.com/watch?v=zElKhlFkqU4&t=988) housekeeping it has done. And this, of
+- [16:30](https://youtube.com/watch?v=zElKhlFkqU4&t=990) course, becomes important when the
+- [16:32](https://youtube.com/watch?v=zElKhlFkqU4&t=992) context is growing. We want to keep our
+- [16:33](https://youtube.com/watch?v=zElKhlFkqU4&t=993) second brain clean and function well.
+- [16:36](https://youtube.com/watch?v=zElKhlFkqU4&t=996) But this is something that the next
+- [16:37](https://youtube.com/watch?v=zElKhlFkqU4&t=997) skill will help you out with even more.
+- [16:39](https://youtube.com/watch?v=zElKhlFkqU4&t=999) And this is really the next step to make
+- [16:41](https://youtube.com/watch?v=zElKhlFkqU4&t=1001) these AI tools and AI agents become far
+- [16:43](https://youtube.com/watch?v=zElKhlFkqU4&t=1003) more powerful, because now it can help
+- [16:44](https://youtube.com/watch?v=zElKhlFkqU4&t=1004) you prioritize your day, become much
+- [16:46](https://youtube.com/watch?v=zElKhlFkqU4&t=1006) more of a strategic sparring partner. It
+- [16:48](https://youtube.com/watch?v=zElKhlFkqU4&t=1008) can help you, of course, execute on some
+- [16:50](https://youtube.com/watch?v=zElKhlFkqU4&t=1010) of these day-to-day tasks, etc. And of
+- [16:52](https://youtube.com/watch?v=zElKhlFkqU4&t=1012) course, you can also start building your
+- [16:54](https://youtube.com/watch?v=zElKhlFkqU4&t=1014) own scheduled tasks based on this
+- [16:56](https://youtube.com/watch?v=zElKhlFkqU4&t=1016) real-time data that are useful for
+- [16:57](https://youtube.com/watch?v=zElKhlFkqU4&t=1017) yourself. For example, daily briefing uh
+- [17:00](https://youtube.com/watch?v=zElKhlFkqU4&t=1020) scheduled tasks become interesting to
+- [17:01](https://youtube.com/watch?v=zElKhlFkqU4&t=1021) set up to know, for example, what my
+- [17:03](https://youtube.com/watch?v=zElKhlFkqU4&t=1023) team has been working on uh yesterday,
+- [17:06](https://youtube.com/watch?v=zElKhlFkqU4&t=1026) what our priorities, etc. How do you use
+- [17:08](https://youtube.com/watch?v=zElKhlFkqU4&t=1028) the skill? Again, you can just run it by
+- [17:09](https://youtube.com/watch?v=zElKhlFkqU4&t=1029) using the slash command, and in this
+- [17:11](https://youtube.com/watch?v=zElKhlFkqU4&t=1031) case, OS operator, after you've
+- [17:13](https://youtube.com/watch?v=zElKhlFkqU4&t=1033) downloaded the skill, of course. It will
+- [17:14](https://youtube.com/watch?v=zElKhlFkqU4&t=1034) then first look at your existing folder
+- [17:17](https://youtube.com/watch?v=zElKhlFkqU4&t=1037) uh to understand the folder structure
+- [17:18](https://youtube.com/watch?v=zElKhlFkqU4&t=1038) and then ask you how often you want to
+- [17:20](https://youtube.com/watch?v=zElKhlFkqU4&t=1040) run this schedule task. Now, what I
+- [17:22](https://youtube.com/watch?v=zElKhlFkqU4&t=1042) recommend is to do this at least once a
+- [17:24](https://youtube.com/watch?v=zElKhlFkqU4&t=1044) day, but you can also run this multiple
+- [17:26](https://youtube.com/watch?v=zElKhlFkqU4&t=1046) times a day. Of course, it's going to
+- [17:27](https://youtube.com/watch?v=zElKhlFkqU4&t=1047) cost you a bit more tokens, but uh it
+- [17:29](https://youtube.com/watch?v=zElKhlFkqU4&t=1049) makes sure your second brain is always
+- [17:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1051) up to date with the latest information.
+- [17:33](https://youtube.com/watch?v=zElKhlFkqU4&t=1053) It'll then look at the connectors you've
+- [17:34](https://youtube.com/watch?v=zElKhlFkqU4&t=1054) already set up in your account and spot
+- [17:36](https://youtube.com/watch?v=zElKhlFkqU4&t=1056) any relevant connectors to use in this
+- [17:38](https://youtube.com/watch?v=zElKhlFkqU4&t=1058) daily schedule task to pull data from in
+- [17:40](https://youtube.com/watch?v=zElKhlFkqU4&t=1060) order to update your second brain. Now,
+- [17:42](https://youtube.com/watch?v=zElKhlFkqU4&t=1062) if you haven't set these up, you want to
+- [17:43](https://youtube.com/watch?v=zElKhlFkqU4&t=1063) think about what data uh you want to
+- [17:45](https://youtube.com/watch?v=zElKhlFkqU4&t=1065) populate and make sure Claude has
+- [17:47](https://youtube.com/watch?v=zElKhlFkqU4&t=1067) up-to-date context on uh and then you
+- [17:50](https://youtube.com/watch?v=zElKhlFkqU4&t=1070) want to uh make sure that those are
+- [17:51](https://youtube.com/watch?v=zElKhlFkqU4&t=1071) already connected connected in the
+- [17:53](https://youtube.com/watch?v=zElKhlFkqU4&t=1073) customized tab. If you then approve the
+- [17:55](https://youtube.com/watch?v=zElKhlFkqU4&t=1075) connectors, you can also define uh when
+- [17:58](https://youtube.com/watch?v=zElKhlFkqU4&t=1078) the schedule task finds something urgent
+- [18:00](https://youtube.com/watch?v=zElKhlFkqU4&t=1080) that requires human action to directly
+- [18:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1082) escalate it through, for example, in my
+- [18:04](https://youtube.com/watch?v=zElKhlFkqU4&t=1084) case, a DM on Slack to a specific person
+- [18:07](https://youtube.com/watch?v=zElKhlFkqU4&t=1087) on your team, which, in my case, I did
+- [18:08](https://youtube.com/watch?v=zElKhlFkqU4&t=1088) to my co-founder. It'll then give you a
+- [18:10](https://youtube.com/watch?v=zElKhlFkqU4&t=1090) summary of the schedule task it's going
+- [18:12](https://youtube.com/watch?v=zElKhlFkqU4&t=1092) to create, and if you then approve, it's
+- [18:14](https://youtube.com/watch?v=zElKhlFkqU4&t=1094) going to directly set up the schedule
+- [18:16](https://youtube.com/watch?v=zElKhlFkqU4&t=1096) task for you, as you can see it did
+- [18:17](https://youtube.com/watch?v=zElKhlFkqU4&t=1097) here. You'll then find it here in your
+- [18:19](https://youtube.com/watch?v=zElKhlFkqU4&t=1099) schedule task, and it's going to call be
+- [18:21](https://youtube.com/watch?v=zElKhlFkqU4&t=1101) called something like Vault Operator,
+- [18:24](https://youtube.com/watch?v=zElKhlFkqU4&t=1104) and you'll see that your prompt and the
+- [18:25](https://youtube.com/watch?v=zElKhlFkqU4&t=1105) instruction here is customized to your
+- [18:27](https://youtube.com/watch?v=zElKhlFkqU4&t=1107) specific use case and your specific
+- [18:29](https://youtube.com/watch?v=zElKhlFkqU4&t=1109) scenario and connectors. And once you
+- [18:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1111) switch this on, it will run on a time
+- [18:33](https://youtube.com/watch?v=zElKhlFkqU4&t=1113) interval you've defined. Now, one thing
+- [18:34](https://youtube.com/watch?v=zElKhlFkqU4&t=1114) to keep in mind is that these schedule
+- [18:36](https://youtube.com/watch?v=zElKhlFkqU4&t=1116) tasks only run when your laptop is open
+- [18:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1119) and the Claude desktop is open. In order
+- [18:41](https://youtube.com/watch?v=zElKhlFkqU4&t=1121) to do this autonomously, even if our
+- [18:42](https://youtube.com/watch?v=zElKhlFkqU4&t=1122) computers are not open, we need to
+- [18:44](https://youtube.com/watch?v=zElKhlFkqU4&t=1124) actually do it through Claude routines
+- [18:46](https://youtube.com/watch?v=zElKhlFkqU4&t=1126) in Claude code. As you can see here, I
+- [18:48](https://youtube.com/watch?v=zElKhlFkqU4&t=1128) have a routine set up, too, and this one
+- [18:50](https://youtube.com/watch?v=zElKhlFkqU4&t=1130) runs actually autonomously, even if my
+- [18:52](https://youtube.com/watch?v=zElKhlFkqU4&t=1132) computer's not open. But in order to do
+- [18:54](https://youtube.com/watch?v=zElKhlFkqU4&t=1134) this, we need to set up an MCP out of
+- [18:55](https://youtube.com/watch?v=zElKhlFkqU4&t=1135) our second brain, which is exactly what
+- [18:57](https://youtube.com/watch?v=zElKhlFkqU4&t=1137) the last, the fifth skill I'm going to
+- [18:59](https://youtube.com/watch?v=zElKhlFkqU4&t=1139) show in this video, helps you to do. But
+- [19:01](https://youtube.com/watch?v=zElKhlFkqU4&t=1141) these schedule tasks that I showed are
+- [19:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1142) definitely enough when you just get
+- [19:04](https://youtube.com/watch?v=zElKhlFkqU4&t=1144) started, but if you're interested in
+- [19:05](https://youtube.com/watch?v=zElKhlFkqU4&t=1145) setting this up and to run autonomously,
+- [19:07](https://youtube.com/watch?v=zElKhlFkqU4&t=1147) even if your computer is not open, uh
+- [19:09](https://youtube.com/watch?v=zElKhlFkqU4&t=1149) make sure to check out the last skill of
+- [19:10](https://youtube.com/watch?v=zElKhlFkqU4&t=1150) this video. Now, when we start using the
+- [19:12](https://youtube.com/watch?v=zElKhlFkqU4&t=1152) second brain more and context grows,
+- [19:14](https://youtube.com/watch?v=zElKhlFkqU4&t=1154) what will happen is that the context
+- [19:16](https://youtube.com/watch?v=zElKhlFkqU4&t=1156) bloats. And when the context bloats,
+- [19:18](https://youtube.com/watch?v=zElKhlFkqU4&t=1158) it's going to lead to inefficiencies in
+- [19:20](https://youtube.com/watch?v=zElKhlFkqU4&t=1160) the second brain, which can lead to
+- [19:21](https://youtube.com/watch?v=zElKhlFkqU4&t=1161) higher token spend, your AI might become
+- [19:24](https://youtube.com/watch?v=zElKhlFkqU4&t=1164) slower, your AI agent might be pulling
+- [19:26](https://youtube.com/watch?v=zElKhlFkqU4&t=1166) in irrelevant context in chats,
+- [19:29](https://youtube.com/watch?v=zElKhlFkqU4&t=1169) maybe we have duplicate or conflicting
+- [19:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1171) information in the second brain along
+- [19:33](https://youtube.com/watch?v=zElKhlFkqU4&t=1173) with a host of other issues. So, what we
+- [19:35](https://youtube.com/watch?v=zElKhlFkqU4&t=1175) need to do in order to have your second
+- [19:36](https://youtube.com/watch?v=zElKhlFkqU4&t=1176) brain function well with growing context
+- [19:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1179) is to do regular audits, hygiene checks,
+- [19:42](https://youtube.com/watch?v=zElKhlFkqU4&t=1182) and optimizations. Now, this is exactly
+- [19:44](https://youtube.com/watch?v=zElKhlFkqU4&t=1184) what the next skill, the OS optimizer
+- [19:46](https://youtube.com/watch?v=zElKhlFkqU4&t=1186) skill, helps you do. Cloud actually very
+- [19:48](https://youtube.com/watch?v=zElKhlFkqU4&t=1188) recently announced that they're
+- [19:49](https://youtube.com/watch?v=zElKhlFkqU4&t=1189) launching a dream feature, which is
+- [19:51](https://youtube.com/watch?v=zElKhlFkqU4&t=1191) aimed at doing something very similar,
+- [19:53](https://youtube.com/watch?v=zElKhlFkqU4&t=1193) but at the moment it's only available in
+- [19:54](https://youtube.com/watch?v=zElKhlFkqU4&t=1194) managed agents. As you can see here, I
+- [19:56](https://youtube.com/watch?v=zElKhlFkqU4&t=1196) ran the skill, it then audited my torque
+- [19:59](https://youtube.com/watch?v=zElKhlFkqU4&t=1199) tire folder and lots of different
+- [20:01](https://youtube.com/watch?v=zElKhlFkqU4&t=1201) things, spotted potential problems or
+- [20:03](https://youtube.com/watch?v=zElKhlFkqU4&t=1203) inefficiencies, and fixed anything that
+- [20:05](https://youtube.com/watch?v=zElKhlFkqU4&t=1205) could harm the second brain from working
+- [20:07](https://youtube.com/watch?v=zElKhlFkqU4&t=1207) well. At the end, it gives me a full
+- [20:09](https://youtube.com/watch?v=zElKhlFkqU4&t=1209) dashboard that basically shows
+- [20:11](https://youtube.com/watch?v=zElKhlFkqU4&t=1211) everything that it has optimized in my
+- [20:12](https://youtube.com/watch?v=zElKhlFkqU4&t=1212) second brain infrastructure. So, we can
+- [20:14](https://youtube.com/watch?v=zElKhlFkqU4&t=1214) see that there were 1,700 files audited,
+- [20:16](https://youtube.com/watch?v=zElKhlFkqU4&t=1216) it found 34 potential problems, it fixed
+- [20:20](https://youtube.com/watch?v=zElKhlFkqU4&t=1220) 32, and improved the health score from
+- [20:22](https://youtube.com/watch?v=zElKhlFkqU4&t=1222) 46 to 94. Now, how does this skill do
+- [20:25](https://youtube.com/watch?v=zElKhlFkqU4&t=1225) that? Now, there are a lot of smart
+- [20:26](https://youtube.com/watch?v=zElKhlFkqU4&t=1226) people like Andrej Karpathy and others
+- [20:29](https://youtube.com/watch?v=zElKhlFkqU4&t=1229) who've come up with great frameworks and
+- [20:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1231) best practices on how to maintain,
+- [20:33](https://youtube.com/watch?v=zElKhlFkqU4&t=1233) optimize, and manage large amounts of
+- [20:35](https://youtube.com/watch?v=zElKhlFkqU4&t=1235) context and memory. And we've basically
+- [20:37](https://youtube.com/watch?v=zElKhlFkqU4&t=1237) taken multiple of these frameworks and
+- [20:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1239) put them together into one skill. As you
+- [20:41](https://youtube.com/watch?v=zElKhlFkqU4&t=1241) can see, we have Anthropic's best
+- [20:42](https://youtube.com/watch?v=zElKhlFkqU4&t=1242) practices on architecture, the Cloud MD,
+- [20:45](https://youtube.com/watch?v=zElKhlFkqU4&t=1245) the dream framework, and manage memory.
+- [20:48](https://youtube.com/watch?v=zElKhlFkqU4&t=1248) We have the Caveman compression method,
+- [20:50](https://youtube.com/watch?v=zElKhlFkqU4&t=1250) we have the Chroma context rot method,
+- [20:52](https://youtube.com/watch?v=zElKhlFkqU4&t=1252) and Karpathy's N & M wiki, along with
+- [20:55](https://youtube.com/watch?v=zElKhlFkqU4&t=1255) some others. Now, I'll not bore you with
+- [20:57](https://youtube.com/watch?v=zElKhlFkqU4&t=1257) all of these frameworks, but what this
+- [20:58](https://youtube.com/watch?v=zElKhlFkqU4&t=1258) skill basically does is it first audits
+- [21:01](https://youtube.com/watch?v=zElKhlFkqU4&t=1261) your second brain and detects anything
+- [21:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1262) that could potentially interfere with
+- [21:04](https://youtube.com/watch?v=zElKhlFkqU4&t=1264) that. And then, based on these
+- [21:05](https://youtube.com/watch?v=zElKhlFkqU4&t=1265) frameworks, it optimizes everything to
+- [21:07](https://youtube.com/watch?v=zElKhlFkqU4&t=1267) make sure your second brain is clean,
+- [21:09](https://youtube.com/watch?v=zElKhlFkqU4&t=1269) optimized for token spend, and
+- [21:10](https://youtube.com/watch?v=zElKhlFkqU4&t=1270) efficiently pulls data and saves data
+- [21:13](https://youtube.com/watch?v=zElKhlFkqU4&t=1273) from the right sources. And it does that
+- [21:15](https://youtube.com/watch?v=zElKhlFkqU4&t=1275) by optimizing, for example, the Claude
+- [21:17](https://youtube.com/watch?v=zElKhlFkqU4&t=1277) MD, the Claude MD index files for token
+- [21:19](https://youtube.com/watch?v=zElKhlFkqU4&t=1279) usage and routing efficiency. The Claude
+- [21:22](https://youtube.com/watch?v=zElKhlFkqU4&t=1282) MD, of course, is uh the text file that
+- [21:24](https://youtube.com/watch?v=zElKhlFkqU4&t=1284) Claude always pulls in in every chat.
+- [21:25](https://youtube.com/watch?v=zElKhlFkqU4&t=1285) So, having that optimized is going to
+- [21:27](https://youtube.com/watch?v=zElKhlFkqU4&t=1287) make a big difference in your token
+- [21:29](https://youtube.com/watch?v=zElKhlFkqU4&t=1289) spend over the long run, and also make
+- [21:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1291) sure that they're actually pulling
+- [21:32](https://youtube.com/watch?v=zElKhlFkqU4&t=1292) relevant data. It also spots uh
+- [21:34](https://youtube.com/watch?v=zElKhlFkqU4&t=1294) duplicates, for example, in your uh
+- [21:36](https://youtube.com/watch?v=zElKhlFkqU4&t=1296) second brain and merges them. It also
+- [21:38](https://youtube.com/watch?v=zElKhlFkqU4&t=1298) detects stale context, flags files that
+- [21:41](https://youtube.com/watch?v=zElKhlFkqU4&t=1301) are unreachable, and resolves
+- [21:42](https://youtube.com/watch?v=zElKhlFkqU4&t=1302) conflicting information in the brain. It
+- [21:45](https://youtube.com/watch?v=zElKhlFkqU4&t=1305) helps also with uh folder structure
+- [21:46](https://youtube.com/watch?v=zElKhlFkqU4&t=1306) organization and might even propose
+- [21:48](https://youtube.com/watch?v=zElKhlFkqU4&t=1308) structural reorganizations, depending on
+- [21:50](https://youtube.com/watch?v=zElKhlFkqU4&t=1310) your setup. It also does a full hygiene
+- [21:53](https://youtube.com/watch?v=zElKhlFkqU4&t=1313) check, where it checks for broken wiki
+- [21:55](https://youtube.com/watch?v=zElKhlFkqU4&t=1315) links, bad formatting, removes
+- [21:57](https://youtube.com/watch?v=zElKhlFkqU4&t=1317) irrelevant data, and adds tags and front
+- [22:00](https://youtube.com/watch?v=zElKhlFkqU4&t=1320) matter fields. Now, this OS Optimizer
+- [22:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1322) skill is a skill you want to run
+- [22:03](https://youtube.com/watch?v=zElKhlFkqU4&t=1323) routinely, probably on a weekly or
+- [22:05](https://youtube.com/watch?v=zElKhlFkqU4&t=1325) bi-weekly at least, to make sure it's
+- [22:08](https://youtube.com/watch?v=zElKhlFkqU4&t=1328) optimized as it grows and expands. You
+- [22:10](https://youtube.com/watch?v=zElKhlFkqU4&t=1330) could also, again, put this in a
+- [22:12](https://youtube.com/watch?v=zElKhlFkqU4&t=1332) scheduled task or in a routine in order
+- [22:14](https://youtube.com/watch?v=zElKhlFkqU4&t=1334) to make this run autonomously. Now,
+- [22:16](https://youtube.com/watch?v=zElKhlFkqU4&t=1336) again, in order to run this through a
+- [22:17](https://youtube.com/watch?v=zElKhlFkqU4&t=1337) routine autonomously, you'll need to set
+- [22:19](https://youtube.com/watch?v=zElKhlFkqU4&t=1339) up an MCP out of your second brain,
+- [22:21](https://youtube.com/watch?v=zElKhlFkqU4&t=1341) which is what the last skill of this
+- [22:22](https://youtube.com/watch?v=zElKhlFkqU4&t=1342) video helps you to do.
+- [22:24](https://youtube.com/watch?v=zElKhlFkqU4&t=1344) Now, the next skill, the team OS skill,
+- [22:26](https://youtube.com/watch?v=zElKhlFkqU4&t=1346) will be very useful if you have a
+- [22:28](https://youtube.com/watch?v=zElKhlFkqU4&t=1348) business and want to start rolling this
+- [22:30](https://youtube.com/watch?v=zElKhlFkqU4&t=1350) out across the company and different
+- [22:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1351) team members. Now, as I said, if your
+- [22:33](https://youtube.com/watch?v=zElKhlFkqU4&t=1353) business and you have a shared second
+- [22:35](https://youtube.com/watch?v=zElKhlFkqU4&t=1355) brain or memory layer, everyone's AI
+- [22:38](https://youtube.com/watch?v=zElKhlFkqU4&t=1358) agents instantly become far more
+- [22:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1359) powerful and more aligned with the
+- [22:41](https://youtube.com/watch?v=zElKhlFkqU4&t=1361) business. And this solves a big problem
+- [22:43](https://youtube.com/watch?v=zElKhlFkqU4&t=1363) that AI still has to, which is that AI
+- [22:45](https://youtube.com/watch?v=zElKhlFkqU4&t=1365) always tends to agree with everything.
+- [22:47](https://youtube.com/watch?v=zElKhlFkqU4&t=1367) And because each team member in a
+- [22:49](https://youtube.com/watch?v=zElKhlFkqU4&t=1369) business does have a different
+- [22:50](https://youtube.com/watch?v=zElKhlFkqU4&t=1370) perspective, uh always has differences
+- [22:53](https://youtube.com/watch?v=zElKhlFkqU4&t=1373) in views, they're not always necessarily
+- [22:55](https://youtube.com/watch?v=zElKhlFkqU4&t=1375) aligned with the business strategy.
+- [22:56](https://youtube.com/watch?v=zElKhlFkqU4&t=1376) There's a really interesting article
+- [22:58](https://youtube.com/watch?v=zElKhlFkqU4&t=1378) that talks about exactly this, uh about
+- [23:00](https://youtube.com/watch?v=zElKhlFkqU4&t=1380) institutional AI versus individual AI,
+- [23:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1382) that talks about exactly this alignment
+- [23:04](https://youtube.com/watch?v=zElKhlFkqU4&t=1384) issue, which I highly recommend you
+- [23:06](https://youtube.com/watch?v=zElKhlFkqU4&t=1386) check out if you want to learn more
+- [23:07](https://youtube.com/watch?v=zElKhlFkqU4&t=1387) about this. I'll make sure to put it in
+- [23:09](https://youtube.com/watch?v=zElKhlFkqU4&t=1389) a free resource link, too. Now, the two
+- [23:11](https://youtube.com/watch?v=zElKhlFkqU4&t=1391) challenges with this shared OS setup
+- [23:13](https://youtube.com/watch?v=zElKhlFkqU4&t=1393) that this skill solves is that firstly,
+- [23:15](https://youtube.com/watch?v=zElKhlFkqU4&t=1395) of course, these are local folders
+- [23:17](https://youtube.com/watch?v=zElKhlFkqU4&t=1397) stored on your computer, and this quick
+- [23:19](https://youtube.com/watch?v=zElKhlFkqU4&t=1399) skill allows for these local files to be
+- [23:21](https://youtube.com/watch?v=zElKhlFkqU4&t=1401) synced and updated in real time
+- [23:23](https://youtube.com/watch?v=zElKhlFkqU4&t=1403) throughout all of the team members. But
+- [23:25](https://youtube.com/watch?v=zElKhlFkqU4&t=1405) second, when rolling this out across a
+- [23:27](https://youtube.com/watch?v=zElKhlFkqU4&t=1407) team, you want to likely have edit and
+- [23:29](https://youtube.com/watch?v=zElKhlFkqU4&t=1409) permission settings set up um because
+- [23:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1411) some of these docs are private, uh some
+- [23:34](https://youtube.com/watch?v=zElKhlFkqU4&t=1414) of these docs I don't want my team
+- [23:35](https://youtube.com/watch?v=zElKhlFkqU4&t=1415) members to actually be able to update,
+- [23:37](https://youtube.com/watch?v=zElKhlFkqU4&t=1417) like the strategy doc, for example. So,
+- [23:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1419) we do want to have those permission and
+- [23:40](https://youtube.com/watch?v=zElKhlFkqU4&t=1420) control settings. Now, we've tried a lot
+- [23:42](https://youtube.com/watch?v=zElKhlFkqU4&t=1422) of different methods to do this across
+- [23:43](https://youtube.com/watch?v=zElKhlFkqU4&t=1423) our business, but most of these methods
+- [23:45](https://youtube.com/watch?v=zElKhlFkqU4&t=1425) had limitation. Now, you can use GitHub,
+- [23:47](https://youtube.com/watch?v=zElKhlFkqU4&t=1427) for example, where you add and update
+- [23:49](https://youtube.com/watch?v=zElKhlFkqU4&t=1429) the entire second brain into a GitHub
+- [23:51](https://youtube.com/watch?v=zElKhlFkqU4&t=1431) repository and then distribute it across
+- [23:53](https://youtube.com/watch?v=zElKhlFkqU4&t=1433) the team. The problem is that this is
+- [23:54](https://youtube.com/watch?v=zElKhlFkqU4&t=1434) not in real time. So, we need to
+- [23:56](https://youtube.com/watch?v=zElKhlFkqU4&t=1436) actually manually update each time we
+- [23:58](https://youtube.com/watch?v=zElKhlFkqU4&t=1438) make a change in the second brain for it
+- [24:00](https://youtube.com/watch?v=zElKhlFkqU4&t=1440) to be shared across the team. Now,
+- [24:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1442) another thing I see many businesses do
+- [24:04](https://youtube.com/watch?v=zElKhlFkqU4&t=1444) is they try to set this up this second
+- [24:06](https://youtube.com/watch?v=zElKhlFkqU4&t=1446) brain through a cloud-based software,
+- [24:07](https://youtube.com/watch?v=zElKhlFkqU4&t=1447) for example, in Google Drive or Notion.
+- [24:10](https://youtube.com/watch?v=zElKhlFkqU4&t=1450) And this is an option, of course, too,
+- [24:12](https://youtube.com/watch?v=zElKhlFkqU4&t=1452) where instead of the second brain living
+- [24:13](https://youtube.com/watch?v=zElKhlFkqU4&t=1453) in a folder on your computer, we just
+- [24:15](https://youtube.com/watch?v=zElKhlFkqU4&t=1455) store all of the documents in one of
+- [24:16](https://youtube.com/watch?v=zElKhlFkqU4&t=1456) these softwares. The big downside of
+- [24:18](https://youtube.com/watch?v=zElKhlFkqU4&t=1458) this setup and why I wouldn't
+- [24:20](https://youtube.com/watch?v=zElKhlFkqU4&t=1460) necessarily recommend you to do this is
+- [24:21](https://youtube.com/watch?v=zElKhlFkqU4&t=1461) that the only way to pull or update
+- [24:23](https://youtube.com/watch?v=zElKhlFkqU4&t=1463) context from a cloud-based software is
+- [24:26](https://youtube.com/watch?v=zElKhlFkqU4&t=1466) through MCPs. And MCPs basically add a
+- [24:28](https://youtube.com/watch?v=zElKhlFkqU4&t=1468) complexity layer on top of all of this
+- [24:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1471) for your AI agents. Because besides
+- [24:33](https://youtube.com/watch?v=zElKhlFkqU4&t=1473) figuring out how to navigate the context
+- [24:35](https://youtube.com/watch?v=zElKhlFkqU4&t=1475) in second brain, it also has to go
+- [24:36](https://youtube.com/watch?v=zElKhlFkqU4&t=1476) through the layer of the MCP. And that
+- [24:38](https://youtube.com/watch?v=zElKhlFkqU4&t=1478) extra layer comes at a cost. It comes at
+- [24:40](https://youtube.com/watch?v=zElKhlFkqU4&t=1480) a cost of accuracy of context retrieval.
+- [24:43](https://youtube.com/watch?v=zElKhlFkqU4&t=1483) It comes at a cost of speed. MCPs uh
+- [24:46](https://youtube.com/watch?v=zElKhlFkqU4&t=1486) take longer than folder access. It will
+- [24:48](https://youtube.com/watch?v=zElKhlFkqU4&t=1488) also mean more tokens spent because MCPs
+- [24:50](https://youtube.com/watch?v=zElKhlFkqU4&t=1490) will use more tokens. So, this might be
+- [24:52](https://youtube.com/watch?v=zElKhlFkqU4&t=1492) fine for smaller setups, but if you're
+- [24:54](https://youtube.com/watch?v=zElKhlFkqU4&t=1494) planning to grow this second brain, I
+- [24:55](https://youtube.com/watch?v=zElKhlFkqU4&t=1495) wouldn't necessarily recommend it. Now,
+- [24:57](https://youtube.com/watch?v=zElKhlFkqU4&t=1497) another option is the Obsidian Sync,
+- [24:59](https://youtube.com/watch?v=zElKhlFkqU4&t=1499) which is a native feature in Obsidian
+- [25:01](https://youtube.com/watch?v=zElKhlFkqU4&t=1501) that allows you to do this. But again,
+- [25:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1502) the downside here is that it's not
+- [25:04](https://youtube.com/watch?v=zElKhlFkqU4&t=1504) real-time. You have to click every time
+- [25:05](https://youtube.com/watch?v=zElKhlFkqU4&t=1505) you want to update and share this across
+- [25:07](https://youtube.com/watch?v=zElKhlFkqU4&t=1507) the business. And there are also no
+- [25:08](https://youtube.com/watch?v=zElKhlFkqU4&t=1508) permission settings. So, what we found
+- [25:10](https://youtube.com/watch?v=zElKhlFkqU4&t=1510) is the best option is to use an Obsidian
+- [25:12](https://youtube.com/watch?v=zElKhlFkqU4&t=1512) plugin called Relay. Now, Relay allows
+- [25:14](https://youtube.com/watch?v=zElKhlFkqU4&t=1514) you to real-time sync contacts in
+- [25:16](https://youtube.com/watch?v=zElKhlFkqU4&t=1516) multiple folders automatically. And you
+- [25:18](https://youtube.com/watch?v=zElKhlFkqU4&t=1518) can download it by just going to the
+- [25:19](https://youtube.com/watch?v=zElKhlFkqU4&t=1519) community plugins, then click browse
+- [25:21](https://youtube.com/watch?v=zElKhlFkqU4&t=1521) here, and look for the Relay plugin.
+- [25:24](https://youtube.com/watch?v=zElKhlFkqU4&t=1524) You can just download it by clicking on
+- [25:26](https://youtube.com/watch?v=zElKhlFkqU4&t=1526) it.
+- [25:27](https://youtube.com/watch?v=zElKhlFkqU4&t=1527) Once you've done that, you can then
+- [25:28](https://youtube.com/watch?v=zElKhlFkqU4&t=1528) share your entire second brain folder
+- [25:30](https://youtube.com/watch?v=zElKhlFkqU4&t=1530) with a team member. He will then also
+- [25:32](https://youtube.com/watch?v=zElKhlFkqU4&t=1532) have to install the Relay plugin on
+- [25:34](https://youtube.com/watch?v=zElKhlFkqU4&t=1534) Obsidian. And you can then sync the data
+- [25:36](https://youtube.com/watch?v=zElKhlFkqU4&t=1536) between both of your folders through the
+- [25:38](https://youtube.com/watch?v=zElKhlFkqU4&t=1538) settings here. So, you can go through
+- [25:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1539) each of the folders and decide which one
+- [25:41](https://youtube.com/watch?v=zElKhlFkqU4&t=1541) you want to sync. You do this by setting
+- [25:42](https://youtube.com/watch?v=zElKhlFkqU4&t=1542) up a Relay server, which you can do
+- [25:45](https://youtube.com/watch?v=zElKhlFkqU4&t=1545) here. You'll then get a key, and as soon
+- [25:47](https://youtube.com/watch?v=zElKhlFkqU4&t=1547) as the other person, the team member,
+- [25:48](https://youtube.com/watch?v=zElKhlFkqU4&t=1548) puts in the key, you it will appear
+- [25:51](https://youtube.com/watch?v=zElKhlFkqU4&t=1551) here, and you can decide what will be
+- [25:52](https://youtube.com/watch?v=zElKhlFkqU4&t=1552) synced. So, this is a pretty fast and
+- [25:54](https://youtube.com/watch?v=zElKhlFkqU4&t=1554) easy way to have that shared OS. Now,
+- [25:56](https://youtube.com/watch?v=zElKhlFkqU4&t=1556) one big limitation with this Relay
+- [25:58](https://youtube.com/watch?v=zElKhlFkqU4&t=1558) plugin is that we don't actually have
+- [26:00](https://youtube.com/watch?v=zElKhlFkqU4&t=1560) read or write permissions. So, that's
+- [26:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1562) why we built our own plugin on top of
+- [26:04](https://youtube.com/watch?v=zElKhlFkqU4&t=1564) this Relay plugin, which gives you those
+- [26:06](https://youtube.com/watch?v=zElKhlFkqU4&t=1566) permission settings, which is what this
+- [26:08](https://youtube.com/watch?v=zElKhlFkqU4&t=1568) last skill will help you set up really
+- [26:10](https://youtube.com/watch?v=zElKhlFkqU4&t=1570) easily. So, you want to run this skill
+- [26:12](https://youtube.com/watch?v=zElKhlFkqU4&t=1572) after you've already set up the Relay
+- [26:13](https://youtube.com/watch?v=zElKhlFkqU4&t=1573) plugin. And once you've done that, you
+- [26:15](https://youtube.com/watch?v=zElKhlFkqU4&t=1575) can run the skill. So, once you've set
+- [26:17](https://youtube.com/watch?v=zElKhlFkqU4&t=1577) that up, you can run the skill. And once
+- [26:19](https://youtube.com/watch?v=zElKhlFkqU4&t=1579) you run the skill, it will first tell
+- [26:20](https://youtube.com/watch?v=zElKhlFkqU4&t=1580) you what it's going to do. It's going to
+- [26:21](https://youtube.com/watch?v=zElKhlFkqU4&t=1581) delete the old Relay plugin, and then it
+- [26:24](https://youtube.com/watch?v=zElKhlFkqU4&t=1584) will install our custom-built plugin,
+- [26:26](https://youtube.com/watch?v=zElKhlFkqU4&t=1586) the Ben AI Relay plugin, on top of it
+- [26:28](https://youtube.com/watch?v=zElKhlFkqU4&t=1588) automatically inside of your Obsidian
+- [26:30](https://youtube.com/watch?v=zElKhlFkqU4&t=1590) account. So, you actually have these
+- [26:32](https://youtube.com/watch?v=zElKhlFkqU4&t=1592) permission and edit settings. It will
+- [26:34](https://youtube.com/watch?v=zElKhlFkqU4&t=1594) then ask you to close the Obsidian app
+- [26:36](https://youtube.com/watch?v=zElKhlFkqU4&t=1596) before it proceeds.
+- [26:38](https://youtube.com/watch?v=zElKhlFkqU4&t=1598) And it will then swap the Relay plugin
+- [26:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1599) for our plugin. And once it's done,
+- [26:41](https://youtube.com/watch?v=zElKhlFkqU4&t=1601) you'll now have an updated plugin, which
+- [26:43](https://youtube.com/watch?v=zElKhlFkqU4&t=1603) you can find directly in Obsidian.
+- [26:44](https://youtube.com/watch?v=zElKhlFkqU4&t=1604) Which, if you now just reopen Obsidian,
+- [26:46](https://youtube.com/watch?v=zElKhlFkqU4&t=1606) you'll find in your plugins section in
+- [26:49](https://youtube.com/watch?v=zElKhlFkqU4&t=1609) the settings, you'll see Ben AI Relay.
+- [26:51](https://youtube.com/watch?v=zElKhlFkqU4&t=1611) And if you go in your settings now, I
+- [26:53](https://youtube.com/watch?v=zElKhlFkqU4&t=1613) can define specific team members for
+- [26:55](https://youtube.com/watch?v=zElKhlFkqU4&t=1615) specific folders, and I can also have
+- [26:57](https://youtube.com/watch?v=zElKhlFkqU4&t=1617) role-based access, for example, member
+- [26:59](https://youtube.com/watch?v=zElKhlFkqU4&t=1619) versus owner. So, I can read the files,
+- [27:01](https://youtube.com/watch?v=zElKhlFkqU4&t=1621) but can't actually edit them, while an
+- [27:03](https://youtube.com/watch?v=zElKhlFkqU4&t=1623) owner can actually edit them. For
+- [27:05](https://youtube.com/watch?v=zElKhlFkqU4&t=1625) example, my strategy doc is now
+- [27:07](https://youtube.com/watch?v=zElKhlFkqU4&t=1627) accessible by my team members, but can't
+- [27:09](https://youtube.com/watch?v=zElKhlFkqU4&t=1629) be updated by my team members' AI
+- [27:11](https://youtube.com/watch?v=zElKhlFkqU4&t=1631) agents. Now, again, I highly recommend
+- [27:12](https://youtube.com/watch?v=zElKhlFkqU4&t=1632) doing this once you've actually worked
+- [27:14](https://youtube.com/watch?v=zElKhlFkqU4&t=1634) with your own second brain a little bit
+- [27:15](https://youtube.com/watch?v=zElKhlFkqU4&t=1635) for yourself, and probably a couple
+- [27:17](https://youtube.com/watch?v=zElKhlFkqU4&t=1637) weeks before really trying to roll this
+- [27:19](https://youtube.com/watch?v=zElKhlFkqU4&t=1639) out across entire team, because it's
+- [27:21](https://youtube.com/watch?v=zElKhlFkqU4&t=1641) going to add complexity. But, of course,
+- [27:22](https://youtube.com/watch?v=zElKhlFkqU4&t=1642) if everyone taps into and feeds into the
+- [27:25](https://youtube.com/watch?v=zElKhlFkqU4&t=1645) same foundational business context
+- [27:27](https://youtube.com/watch?v=zElKhlFkqU4&t=1647) layer, maybe has shared skills set up
+- [27:29](https://youtube.com/watch?v=zElKhlFkqU4&t=1649) even where these skills can be used
+- [27:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1651) across the team, and AI just becoming
+- [27:33](https://youtube.com/watch?v=zElKhlFkqU4&t=1653) far more aligned across the business,
+- [27:35](https://youtube.com/watch?v=zElKhlFkqU4&t=1655) this can become a very powerful setup.
+- [27:37](https://youtube.com/watch?v=zElKhlFkqU4&t=1657) Which brings me to the last skill, the
+- [27:38](https://youtube.com/watch?v=zElKhlFkqU4&t=1658) OS MCP skill, which will allow you to
+- [27:41](https://youtube.com/watch?v=zElKhlFkqU4&t=1661) build an MCP out of your second brain,
+- [27:43](https://youtube.com/watch?v=zElKhlFkqU4&t=1663) and that will allow you to let your OS
+- [27:45](https://youtube.com/watch?v=zElKhlFkqU4&t=1665) operator skill and your optimizer skill,
+- [27:48](https://youtube.com/watch?v=zElKhlFkqU4&t=1668) these two, to run completely
+- [27:49](https://youtube.com/watch?v=zElKhlFkqU4&t=1669) autonomously through a routine or a
+- [27:51](https://youtube.com/watch?v=zElKhlFkqU4&t=1671) managed agent. And through that, it
+- [27:53](https://youtube.com/watch?v=zElKhlFkqU4&t=1673) means that these recurring workflows to
+- [27:55](https://youtube.com/watch?v=zElKhlFkqU4&t=1675) update your second brain and maintain
+- [27:56](https://youtube.com/watch?v=zElKhlFkqU4&t=1676) your second brain are not only running
+- [27:58](https://youtube.com/watch?v=zElKhlFkqU4&t=1678) when you have your cloud desktop open or
+- [28:00](https://youtube.com/watch?v=zElKhlFkqU4&t=1680) your laptop open, but can also run with
+- [28:03](https://youtube.com/watch?v=zElKhlFkqU4&t=1683) your laptop closed autonomously. Now, if
+- [28:04](https://youtube.com/watch?v=zElKhlFkqU4&t=1684) you don't know what a routine or a
+- [28:06](https://youtube.com/watch?v=zElKhlFkqU4&t=1686) managed agents is yet, it's basically a
+- [28:08](https://youtube.com/watch?v=zElKhlFkqU4&t=1688) cloud feature here that you can find in
+- [28:09](https://youtube.com/watch?v=zElKhlFkqU4&t=1689) the cloud code tab, and here you have
+- [28:11](https://youtube.com/watch?v=zElKhlFkqU4&t=1691) routines. And these are basically ways
+- [28:13](https://youtube.com/watch?v=zElKhlFkqU4&t=1693) we can let agents run not locally, like
+- [28:16](https://youtube.com/watch?v=zElKhlFkqU4&t=1696) we do in co-work, cloud code, or through
+- [28:18](https://youtube.com/watch?v=zElKhlFkqU4&t=1698) these scheduled tasks, but we actually
+- [28:20](https://youtube.com/watch?v=zElKhlFkqU4&t=1700) run them in the cloud, so they can
+- [28:21](https://youtube.com/watch?v=zElKhlFkqU4&t=1701) always run no matter if your computer is
+- [28:23](https://youtube.com/watch?v=zElKhlFkqU4&t=1703) open or not. And second, these routines
+- [28:26](https://youtube.com/watch?v=zElKhlFkqU4&t=1706) can also be event-triggered, not just
+- [28:28](https://youtube.com/watch?v=zElKhlFkqU4&t=1708) time-triggered. So, for example, we can
+- [28:30](https://youtube.com/watch?v=zElKhlFkqU4&t=1710) run this every time a Fireflies meeting
+- [28:33](https://youtube.com/watch?v=zElKhlFkqU4&t=1713) finishes to process the transcript. So,
+- [28:35](https://youtube.com/watch?v=zElKhlFkqU4&t=1715) you can see I have my second brain
+- [28:36](https://youtube.com/watch?v=zElKhlFkqU4&t=1716) operator routine set up here that will
+- [28:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1719) run every day. So, here you can see it
+- [28:41](https://youtube.com/watch?v=zElKhlFkqU4&t=1721) ran 1 hour ago without my involvement,
+- [28:43](https://youtube.com/watch?v=zElKhlFkqU4&t=1723) but will also run if if my laptop's
+- [28:45](https://youtube.com/watch?v=zElKhlFkqU4&t=1725) closed. And because these routines are
+- [28:47](https://youtube.com/watch?v=zElKhlFkqU4&t=1727) run on the cloud, we can't actually give
+- [28:49](https://youtube.com/watch?v=zElKhlFkqU4&t=1729) them access to local folders on a
+- [28:50](https://youtube.com/watch?v=zElKhlFkqU4&t=1730) computer, which is of course where our
+- [28:52](https://youtube.com/watch?v=zElKhlFkqU4&t=1732) second brain is stored. So, you can see
+- [28:54](https://youtube.com/watch?v=zElKhlFkqU4&t=1734) in the setup of this routine, it
+- [28:56](https://youtube.com/watch?v=zElKhlFkqU4&t=1736) actually has access to an MCP or a
+- [28:58](https://youtube.com/watch?v=zElKhlFkqU4&t=1738) connector of my second brain. And this
+- [28:59](https://youtube.com/watch?v=zElKhlFkqU4&t=1739) is exactly what this scale helps you set
+- [29:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1742) up, build an MCP out of that second
+- [29:03](https://youtube.com/watch?v=zElKhlFkqU4&t=1743) brain. I also have a full routines video
+- [29:05](https://youtube.com/watch?v=zElKhlFkqU4&t=1745) if you want to dive a little bit deeper
+- [29:06](https://youtube.com/watch?v=zElKhlFkqU4&t=1746) into this specific feature, but for the
+- [29:08](https://youtube.com/watch?v=zElKhlFkqU4&t=1748) purpose of this video, I'll focus it
+- [29:09](https://youtube.com/watch?v=zElKhlFkqU4&t=1749) more on setting up an MCP out of your
+- [29:11](https://youtube.com/watch?v=zElKhlFkqU4&t=1751) second brain. So, how do we do this?
+- [29:13](https://youtube.com/watch?v=zElKhlFkqU4&t=1753) First, we want to make sure that we
+- [29:14](https://youtube.com/watch?v=zElKhlFkqU4&t=1754) already have the relay plugin from the
+- [29:16](https://youtube.com/watch?v=zElKhlFkqU4&t=1756) previous scale already installed because
+- [29:18](https://youtube.com/watch?v=zElKhlFkqU4&t=1758) it's going to be built on top of that.
+- [29:19](https://youtube.com/watch?v=zElKhlFkqU4&t=1759) So, you can just run the scale, and the
+- [29:21](https://youtube.com/watch?v=zElKhlFkqU4&t=1761) first thing it will do is it's going to
+- [29:22](https://youtube.com/watch?v=zElKhlFkqU4&t=1762) install relay, which is what basically
+- [29:24](https://youtube.com/watch?v=zElKhlFkqU4&t=1764) the server where our second brain is
+- [29:26](https://youtube.com/watch?v=zElKhlFkqU4&t=1766) going to live. That should work in Cloud
+- [29:28](https://youtube.com/watch?v=zElKhlFkqU4&t=1768) Code Work, but if it doesn't, you can
+- [29:29](https://youtube.com/watch?v=zElKhlFkqU4&t=1769) just switch to the code tab, run the
+- [29:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1771) scale again from there, and then it
+- [29:33](https://youtube.com/watch?v=zElKhlFkqU4&t=1773) should be able to install relay. Now,
+- [29:35](https://youtube.com/watch?v=zElKhlFkqU4&t=1775) once it's done that, it will give you a
+- [29:36](https://youtube.com/watch?v=zElKhlFkqU4&t=1776) link. You can then just create an
+- [29:38](https://youtube.com/watch?v=zElKhlFkqU4&t=1778) account, and then you have to get an
+- [29:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1779) access token, an API token. So, you can
+- [29:42](https://youtube.com/watch?v=zElKhlFkqU4&t=1782) just create a token here. You can give
+- [29:43](https://youtube.com/watch?v=zElKhlFkqU4&t=1783) it any random name. I've created it in a
+- [29:45](https://youtube.com/watch?v=zElKhlFkqU4&t=1785) new workspace. Once you've created a
+- [29:47](https://youtube.com/watch?v=zElKhlFkqU4&t=1787) token, all you do is copy that, and you
+- [29:49](https://youtube.com/watch?v=zElKhlFkqU4&t=1789) paste it into the chat, and that's all
+- [29:50](https://youtube.com/watch?v=zElKhlFkqU4&t=1790) you really need to do. Now, it's created
+- [29:52](https://youtube.com/watch?v=zElKhlFkqU4&t=1792) your server and will give you a Vault
+- [29:54](https://youtube.com/watch?v=zElKhlFkqU4&t=1794) MCP link. So, here's a public URL. You
+- [29:57](https://youtube.com/watch?v=zElKhlFkqU4&t=1797) want to copy this one.
+- [29:59](https://youtube.com/watch?v=zElKhlFkqU4&t=1799) And if you're using Cloud Code, you will
+- [30:00](https://youtube.com/watch?v=zElKhlFkqU4&t=1800) have the command line here. Just copy
+- [30:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1802) this link. You go to customize. You go
+- [30:06](https://youtube.com/watch?v=zElKhlFkqU4&t=1806) to the connectors tab, and you click on
+- [30:08](https://youtube.com/watch?v=zElKhlFkqU4&t=1808) plus.
+- [30:09](https://youtube.com/watch?v=zElKhlFkqU4&t=1809) There you can click on add custom.
+- [30:11](https://youtube.com/watch?v=zElKhlFkqU4&t=1811) And here's where you want to add in in
+- [30:12](https://youtube.com/watch?v=zElKhlFkqU4&t=1812) the remote MCP server URL that link that
+- [30:15](https://youtube.com/watch?v=zElKhlFkqU4&t=1815) you just copied. You can give it again
+- [30:16](https://youtube.com/watch?v=zElKhlFkqU4&t=1816) any name you want.
+- [30:18](https://youtube.com/watch?v=zElKhlFkqU4&t=1818) Then you click add. And then lastly, we
+- [30:20](https://youtube.com/watch?v=zElKhlFkqU4&t=1820) have to connect it to relay in order to
+- [30:23](https://youtube.com/watch?v=zElKhlFkqU4&t=1823) access our actual second brain. So, we
+- [30:25](https://youtube.com/watch?v=zElKhlFkqU4&t=1825) can just click here. And now you want to
+- [30:26](https://youtube.com/watch?v=zElKhlFkqU4&t=1826) fill out the email that you've used to
+- [30:28](https://youtube.com/watch?v=zElKhlFkqU4&t=1828) set up relay in the previous step. If
+- [30:31](https://youtube.com/watch?v=zElKhlFkqU4&t=1831) you don't have a password yet, you can
+- [30:32](https://youtube.com/watch?v=zElKhlFkqU4&t=1832) just go on forget password. You'll get a
+- [30:34](https://youtube.com/watch?v=zElKhlFkqU4&t=1834) password through your email. Then you
+- [30:35](https://youtube.com/watch?v=zElKhlFkqU4&t=1835) sign in, and then you have your relay
+- [30:37](https://youtube.com/watch?v=zElKhlFkqU4&t=1837) connected, and then it will be listed
+- [30:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1839) here in your connectors tab, and you'll
+- [30:40](https://youtube.com/watch?v=zElKhlFkqU4&t=1840) have your second brain as an MCP. And
+- [30:42](https://youtube.com/watch?v=zElKhlFkqU4&t=1842) then if you want to run your Vault
+- [30:43](https://youtube.com/watch?v=zElKhlFkqU4&t=1843) Operator schedule task into a routine,
+- [30:46](https://youtube.com/watch?v=zElKhlFkqU4&t=1846) so it can run autonomously, you can just
+- [30:48](https://youtube.com/watch?v=zElKhlFkqU4&t=1848) use that exact same prompt and use it in
+- [30:50](https://youtube.com/watch?v=zElKhlFkqU4&t=1850) a cloud routine. So, you switch to the
+- [30:52](https://youtube.com/watch?v=zElKhlFkqU4&t=1852) code tab, you set up a new routine, you
+- [30:54](https://youtube.com/watch?v=zElKhlFkqU4&t=1854) select remote, so that's how it's run in
+- [30:56](https://youtube.com/watch?v=zElKhlFkqU4&t=1856) the cloud.
+- [30:57](https://youtube.com/watch?v=zElKhlFkqU4&t=1857) You can give it a name. You just paste
+- [30:59](https://youtube.com/watch?v=zElKhlFkqU4&t=1859) in the prompt. You define the schedule,
+- [31:02](https://youtube.com/watch?v=zElKhlFkqU4&t=1862) how often you want to run this, and then
+- [31:04](https://youtube.com/watch?v=zElKhlFkqU4&t=1864) the connectors. So, you want to delete
+- [31:05](https://youtube.com/watch?v=zElKhlFkqU4&t=1865) everything except for the uh the
+- [31:07](https://youtube.com/watch?v=zElKhlFkqU4&t=1867) connectors it needs and the second
+- [31:09](https://youtube.com/watch?v=zElKhlFkqU4&t=1869) brain. So, in this case, that would be
+- [31:11](https://youtube.com/watch?v=zElKhlFkqU4&t=1871) uh Fireflies and brain,
+- [31:14](https://youtube.com/watch?v=zElKhlFkqU4&t=1874) maybe Google Calendar, my email.
+- [31:18](https://youtube.com/watch?v=zElKhlFkqU4&t=1878) Once you've pasted in the prompt, this
+- [31:19](https://youtube.com/watch?v=zElKhlFkqU4&t=1879) will basically work like a scheduled
+- [31:20](https://youtube.com/watch?v=zElKhlFkqU4&t=1880) task, but will run autonomously. Now
+- [31:22](https://youtube.com/watch?v=zElKhlFkqU4&t=1882) again, if you want more help with
+- [31:23](https://youtube.com/watch?v=zElKhlFkqU4&t=1883) setting up your OS, we have a full more
+- [31:25](https://youtube.com/watch?v=zElKhlFkqU4&t=1885) in-depth course in my AI Accelerator. We
+- [31:27](https://youtube.com/watch?v=zElKhlFkqU4&t=1887) also have unlimited one-on-one live tech
+- [31:29](https://youtube.com/watch?v=zElKhlFkqU4&t=1889) help to help you with any issues or
+- [31:30](https://youtube.com/watch?v=zElKhlFkqU4&t=1890) problems you might have. We also list
+- [31:32](https://youtube.com/watch?v=zElKhlFkqU4&t=1892) all our internal skills and plugins that
+- [31:34](https://youtube.com/watch?v=zElKhlFkqU4&t=1894) we build out to automate our marketing,
+- [31:35](https://youtube.com/watch?v=zElKhlFkqU4&t=1895) sales, and operational workflows that
+- [31:37](https://youtube.com/watch?v=zElKhlFkqU4&t=1897) you can use and customize for yourself.
+- [31:39](https://youtube.com/watch?v=zElKhlFkqU4&t=1899) We also have courses on all of the major
+- [31:41](https://youtube.com/watch?v=zElKhlFkqU4&t=1901) platforms and a community with serious
+- [31:42](https://youtube.com/watch?v=zElKhlFkqU4&t=1902) professionals and business owners. So,
+- [31:44](https://youtube.com/watch?v=zElKhlFkqU4&t=1904) if you want to dive a little bit deeper
+- [31:46](https://youtube.com/watch?v=zElKhlFkqU4&t=1906) into this, I love to see you there. And
+- [31:48](https://youtube.com/watch?v=zElKhlFkqU4&t=1908) if you're a business and you want us to
+- [31:49](https://youtube.com/watch?v=zElKhlFkqU4&t=1909) set this up for you, besides some
+- [31:51](https://youtube.com/watch?v=zElKhlFkqU4&t=1911) consulting and training on how to
+- [31:53](https://youtube.com/watch?v=zElKhlFkqU4&t=1913) actually manage this over the long term,
+- [31:55](https://youtube.com/watch?v=zElKhlFkqU4&t=1915) you can book in a free call with us in
+- [31:56](https://youtube.com/watch?v=zElKhlFkqU4&t=1916) the third link in the description. Now,
+- [31:58](https://youtube.com/watch?v=zElKhlFkqU4&t=1918) thank you so much for watching. I hope
+- [31:59](https://youtube.com/watch?v=zElKhlFkqU4&t=1919) this was helpful, and if you want to
+- [32:01](https://youtube.com/watch?v=zElKhlFkqU4&t=1921) learn more about the AI OS or the second
+- [32:03](https://youtube.com/watch?v=zElKhlFkqU4&t=1923) brain setup, you can also check out the
+- [32:04](https://youtube.com/watch?v=zElKhlFkqU4&t=1924) video here above.
