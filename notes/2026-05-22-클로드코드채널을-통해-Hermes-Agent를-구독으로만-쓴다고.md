@@ -1,0 +1,308 @@
+---
+title: "클로드코드채널을 통해 Hermes Agent를 구독으로만 쓴다고???"
+source_url: https://youtube.com/watch?v=X6lXs8IcoHw
+video_id: X6lXs8IcoHw
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# 클로드코드채널을 통해 Hermes Agent를 구독으로만 쓴다고???
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 앤트로픽이 클로드의 서드파티 OAuth 로그인을 금지하면서 오픈클로, 헤르메스 에이전트 등의 도구 사용이 불가능해졌습니다. 이에 대한 대안으로 클로드 코드 채널을 디스코드에서 활용하는 방법을 소개합니다. 디스코드 봇을 생성하고 클로드 코드 채널 플러그인을 설치하여 합법적으로 클로드를 사용할 수 있으며, 코덱스 플러그인과 연동하여 토큰 사용량을 절약할 수 있습니다. 또한 CC 채널 메모리 봇으로 대화 기록을 관리하고, 헤르메스 에이전트의 기능을 클로드 코드 채널에 이식한 헤르메스 CCC도 개발했다고 합니다.
+- **Core Message:** 앤트로픽의 OAuth 금지 정책에 대한 대안으로 디스코드 기반 클로드 코드 채널을 활용하여 합법적이고 효율적인 AI 워크플로우를 구축할 수 있다.
+> 앤트로픽이 클로드를 서드 파티에서 구독 인증으로 사용하는 것을 공식적으로 금지했습니다
+> 제 핸드폰에서 제 컴퓨터에 깔려 있는 모든 MCP를 모든 스킬을 모든 플러그인을 같이 쓸 수가 있다는 거죠
+❗ 토큰 사용량을 68%까지 절감할 수 있다
+❗ 공무원이 만든 MCP가 국회와 정부에서 큰 호응을 받았다
+
+## 📚 핵심 용어
+- **OAuth 인증:** 사용자가 비밀번호를 공유하지 않고 다른 앱에서 서비스를 이용할 수 있게 해주는 인증 방식 / 호텔 키카드와 같다. 마스터키(비밀번호)를 주지 않고도 특정 방(서비스)만 이용할 수 있게 해준다. / API와 OAuth의 차이는 - API는 사용량만큼 요금을 내고, OAuth는 구독료만 내면 무제한 이용 가능하다.
+- **MCP (Model Context Protocol):** AI 모델이 외부 도구나 데이터에 접근할 수 있게 해주는 표준화된 연결 방식 / 스마트폰 앱스토어와 같다. 기본 기능에 다양한 앱(플러그인)을 설치해서 기능을 확장한다. / 플러그인과 MCP의 차이는 - 플러그인은 개별 기능 확장이고, MCP는 여러 도구를 표준화된 방식으로 연결한다.
+- **토큰 위임:** 한 AI가 작업을 다른 AI에게 넘겨서 자신의 사용량을 절약하는 방식 / 업무 외주와 같다. 비싼 전문가(클로드)가 단순 작업을 저렴한 직원(코덱스)에게 맡긴다. / 직접 처리와 위임의 차이는 - 직접 처리는 한 모델이 모든 작업을 하고, 위임은 적합한 모델에게 작업을 분산한다.
+
+## 🚀 실행 (Execute)
+- [ ] 디스코드 개발자 포털에서 봇 생성하고 클로드 코드 채널 설정하기
+  - 담당: 나
+  - 이유: 앤트로픽 정책 변경으로 기존 서드파티 도구 사용이 불가능해졌으므로 합법적인 대안이 필요
+- [ ] CC 채널 메모리 봇과 코덱스 플러그인 설치 및 테스트
+  - 담당: 나
+  - 이유: 메모리 관리와 토큰 절약을 위해 기존 오픈클로 기능을 대체할 수 있는 환경 구축
+- 자료: 디스코드 개발자 포털 (discord.com/developers)
+- 자료: 클로드 코드 채널 공식 문서 (확인 필요)
+- 자료: CC 채널 메모리 봇 GitHub 레포지토리 (영상 설명란에서 확인)
+- 자료: 코리안 로우 MCP와 코닥 MCP (류임님 개발, GitHub에서 확인 필요)
+- Timeline: 1단계: 디스코드 봇 설정 → 2단계: 기본 플러그인 설치 → 3단계: 메모리 봇과 코덱스 연동 → 4단계: 실제 워크플로우에 적용 테스트
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=X6lXs8IcoHw&t=0) 앤트로픽이 클로드를 서드 파티에서
+- [0:03](https://youtube.com/watch?v=X6lXs8IcoHw&t=3) 구독 인증으로 사용하는 것을
+- [0:05](https://youtube.com/watch?v=X6lXs8IcoHw&t=5) 공식적으로 금지하 있습니다.
+- [0:07](https://youtube.com/watch?v=X6lXs8IcoHw&t=7) 오픈클로나 헤르메스 에이전트 같은
+- [0:10](https://youtube.com/watch?v=X6lXs8IcoHw&t=10) 서드파티 프레임워크 혹은 플러그인에서
+- [0:14](https://youtube.com/watch?v=X6lXs8IcoHw&t=14) 클로드를 어 API가 아니라 오스
+- [0:17](https://youtube.com/watch?v=X6lXs8IcoHw&t=17) 그러니까 로그인으로 인증해서 사용하는
+- [0:20](https://youtube.com/watch?v=X6lXs8IcoHw&t=20) 것을 막았다는 뜻이죠. 그로 인해서
+- [0:23](https://youtube.com/watch?v=X6lXs8IcoHw&t=23) 반발이 생기기 때문에 어 자기가
+- [0:27](https://youtube.com/watch?v=X6lXs8IcoHw&t=27) 구독한 사용량만큼
+- [0:30](https://youtube.com/watch?v=X6lXs8IcoHw&t=30) 이렇게 어 토큰을 추가로 더 주는
+- [0:32](https://youtube.com/watch?v=X6lXs8IcoHw&t=32) 행사를 하고 있습니다.
+- [0:35](https://youtube.com/watch?v=X6lXs8IcoHw&t=35) 어 이런 이유는 뭐 여러 가지 이유를
+- [0:38](https://youtube.com/watch?v=X6lXs8IcoHw&t=38) 어 볼 수가 있겠죠. 지금 여기
+- [0:39](https://youtube.com/watch?v=X6lXs8IcoHw&t=39) 보시면은 토큰 기본 어 세션당 사용량
+- [0:44](https://youtube.com/watch?v=X6lXs8IcoHw&t=44) 그리고 주관 사용량 밑에 아래쪽에
+- [0:47](https://youtube.com/watch?v=X6lXs8IcoHw&t=47) 보시면은 추가 사용량이 나옵니다.
+- [0:49](https://youtube.com/watch?v=X6lXs8IcoHw&t=49) 추가 사용량은 원래는 돈을 내야지만
+- [0:52](https://youtube.com/watch?v=X6lXs8IcoHw&t=52) 추가로 쓸 수 있는 그런
+- [0:53](https://youtube.com/watch?v=X6lXs8IcoHw&t=53) 부분이었는데이 부분을 내가
+- [0:55](https://youtube.com/watch?v=X6lXs8IcoHw&t=55) 20불짜리를 구독을 했으면 20불 뭐
+- [0:58](https://youtube.com/watch?v=X6lXs8IcoHw&t=58) 200불짜리를 구독했으면 200불
+- [1:00](https://youtube.com/watch?v=X6lXs8IcoHw&t=60) 이런 식으로 추가 토큰을 어 제공을
+- [1:03](https://youtube.com/watch?v=X6lXs8IcoHw&t=63) 하였습니다. 물론 되게 아쉬운
+- [1:06](https://youtube.com/watch?v=X6lXs8IcoHw&t=66) 부분들이 많죠. 오픈 클로가 엄청난
+- [1:08](https://youtube.com/watch?v=X6lXs8IcoHw&t=68) 인기였잖아요. 엄청난 인기였기 때문에
+- [1:11](https://youtube.com/watch?v=X6lXs8IcoHw&t=71) 오픈 클로를 통해서 클로드를 쓰시는
+- [1:13](https://youtube.com/watch?v=X6lXs8IcoHw&t=73) 분들이 꽤 많았을 거예요. 왜냐면 뭐
+- [1:16](https://youtube.com/watch?v=X6lXs8IcoHw&t=76) 소넷이든 오퍼스든
+- [1:19](https://youtube.com/watch?v=X6lXs8IcoHw&t=79) 코딩을 하기에는 굉장히 똑똑한
+- [1:21](https://youtube.com/watch?v=X6lXs8IcoHw&t=81) 도구였고 그다음에 오픈 클로에 붙였을
+- [1:23](https://youtube.com/watch?v=X6lXs8IcoHw&t=83) 때 굉장히 잘 이게 작동을 하는
+- [1:26](https://youtube.com/watch?v=X6lXs8IcoHw&t=86) 것들을 사람들이 볼 수가 있었는데
+- [1:28](https://youtube.com/watch?v=X6lXs8IcoHw&t=88) 이제는 그게 불가능해진 상황입니다.
+- [1:32](https://youtube.com/watch?v=X6lXs8IcoHw&t=92) 그래서 저는 최근에 이제 이렇게
+- [1:34](https://youtube.com/watch?v=X6lXs8IcoHw&t=94) 바뀌고 나서 클로드 코드 채널로 어
+- [1:36](https://youtube.com/watch?v=X6lXs8IcoHw&t=96) 활용을 하고 있습니다. 클로드 코드
+- [1:38](https://youtube.com/watch?v=X6lXs8IcoHw&t=98) 채널도 오픈클로나 헤르메스 에이전트와
+- [1:40](https://youtube.com/watch?v=X6lXs8IcoHw&t=100) 같이 디스코드나 텔레그램에서 작동을
+- [1:43](https://youtube.com/watch?v=X6lXs8IcoHw&t=103) 시킬 수가 있고 이거는 클로에서
+- [1:45](https://youtube.com/watch?v=X6lXs8IcoHw&t=105) 공식적으로 내놓은 플러그이기 때문에
+- [1:48](https://youtube.com/watch?v=X6lXs8IcoHw&t=108) 오스로 활용을 하더라도 문제가
+- [1:50](https://youtube.com/watch?v=X6lXs8IcoHw&t=110) 없습니다. 이거를 활용하는 방법을 좀
+- [1:53](https://youtube.com/watch?v=X6lXs8IcoHw&t=113) 알려 드릴게요. 일단 디스코드 디벨롭
+- [1:56](https://youtube.com/watch?v=X6lXs8IcoHw&t=116) 포탈에 가셔야 됩니다. 거기서
+- [1:58](https://youtube.com/watch?v=X6lXs8IcoHw&t=118) 어플리케이션에서
+- [1:59](https://youtube.com/watch?v=X6lXs8IcoHw&t=119) 새로운 봇 만들기, 새로운 어플
+- [2:02](https://youtube.com/watch?v=X6lXs8IcoHw&t=122) 만들기를 하시고요. 여기에 이제
+- [2:04](https://youtube.com/watch?v=X6lXs8IcoHw&t=124) 그림이라든지 이름을 자기가 원하는
+- [2:06](https://youtube.com/watch?v=X6lXs8IcoHw&t=126) 대로 바꿔 주시면 됩니다. 그리고
+- [2:08](https://youtube.com/watch?v=X6lXs8IcoHw&t=128) 이제 보 토큰을 받아야
+- [2:10](https://youtube.com/watch?v=X6lXs8IcoHw&t=130) [목을 가다듬음] 돼요.이
+- [2:11](https://youtube.com/watch?v=X6lXs8IcoHw&t=131) 어플리케이션 보에 토큰을 발행을 하고
+- [2:15](https://youtube.com/watch?v=X6lXs8IcoHw&t=135) 아랫 부분에이 이쪽 부분 어 컨텐트인
+- [2:19](https://youtube.com/watch?v=X6lXs8IcoHw&t=139) 컨텐드 인텐드 쪽을 활성화를 시켜
+- [2:22](https://youtube.com/watch?v=X6lXs8IcoHw&t=142) 주셔야 됩니다. 그리고 법 권한을 뭐
+- [2:24](https://youtube.com/watch?v=X6lXs8IcoHw&t=144) 관리자로 설정을 해 주시고요.
+- [2:27](https://youtube.com/watch?v=X6lXs8IcoHw&t=147) 네. 이렇게 해주면은 이제 독포
+- [2:29](https://youtube.com/watch?v=X6lXs8IcoHw&t=149) 토큰이 생성이 됩니다. 다음으로는
+- [2:32](https://youtube.com/watch?v=X6lXs8IcoHw&t=152) 내가 만들
+- [2:34](https://youtube.com/watch?v=X6lXs8IcoHw&t=154) 클로드 보이 대화를 할 공간을 만들어
+- [2:37](https://youtube.com/watch?v=X6lXs8IcoHw&t=157) 주셔야 되는데 뭐 서버를 하나 만들고
+- [2:39](https://youtube.com/watch?v=X6lXs8IcoHw&t=159) 거기에 채널을 이렇게 디스코드에서
+- [2:42](https://youtube.com/watch?v=X6lXs8IcoHw&t=162) 만들어 주시면 됩니다. DM으로 직접
+- [2:44](https://youtube.com/watch?v=X6lXs8IcoHw&t=164) 대화를 하셔도 되고요. 또 다른 봇을
+- [2:46](https://youtube.com/watch?v=X6lXs8IcoHw&t=166) 등록을 하려면 서버에서 채널을 하나
+- [2:48](https://youtube.com/watch?v=X6lXs8IcoHw&t=168) 만들어 주시면 좋습니다. 이렇게
+- [2:50](https://youtube.com/watch?v=X6lXs8IcoHw&t=170) 여기에는 여러 가지 보트들을 넣을
+- [2:52](https://youtube.com/watch?v=X6lXs8IcoHw&t=172) 수가 있는데 여기 밑에 보시면 CC
+- [2:55](https://youtube.com/watch?v=X6lXs8IcoHw&t=175) 채널 어 CC 메모리 보이라는 것도
+- [2:58](https://youtube.com/watch?v=X6lXs8IcoHw&t=178) 있죠. CC 메모리봇은 제가 만든
+- [3:01](https://youtube.com/watch?v=X6lXs8IcoHw&t=181) 것인데 이거는 어 기존에 대화했던
+- [3:04](https://youtube.com/watch?v=X6lXs8IcoHw&t=184) 것들을 기록을 하는 거예요. 기존에
+- [3:06](https://youtube.com/watch?v=X6lXs8IcoHw&t=186) 오픈클로가
+- [3:08](https://youtube.com/watch?v=X6lXs8IcoHw&t=188) 메모리 기능이 굉장히 좋았는데이 제가
+- [3:11](https://youtube.com/watch?v=X6lXs8IcoHw&t=191) CC 채널 메모리 봇이라는 것을
+- [3:13](https://youtube.com/watch?v=X6lXs8IcoHw&t=193) 만들어서 어 디스코드에서 클로드 봇과
+- [3:16](https://youtube.com/watch?v=X6lXs8IcoHw&t=196) 제가 대화하는 것들을 모조리
+- [3:19](https://youtube.com/watch?v=X6lXs8IcoHw&t=199) 기록합니다. 모조리 기록을 해서 어
+- [3:22](https://youtube.com/watch?v=X6lXs8IcoHw&t=202) 이것을 이제 기억을 해서 나중에 쓸
+- [3:24](https://youtube.com/watch?v=X6lXs8IcoHw&t=204) 수가 있게 해 놓고요. 여기 깃터브에
+- [3:27](https://youtube.com/watch?v=X6lXs8IcoHw&t=207) 제가 오픈 소스를 올려 놨는데 제가
+- [3:29](https://youtube.com/watch?v=X6lXs8IcoHw&t=209) 설명란 에다가 그 부분은 어 적어
+- [3:32](https://youtube.com/watch?v=X6lXs8IcoHw&t=212) 놓도록 하겠습니다. 그리고 이제
+- [3:34](https://youtube.com/watch?v=X6lXs8IcoHw&t=214) 디스코드 플러그인을 설치를 해야
+- [3:36](https://youtube.com/watch?v=X6lXs8IcoHw&t=216) 됩니다. 디스코드 플러그인 여기
+- [3:37](https://youtube.com/watch?v=X6lXs8IcoHw&t=217) 보이시죠? 어 이거 CC 채널
+- [3:40](https://youtube.com/watch?v=X6lXs8IcoHw&t=220) 메모리도 이렇게 설치를 해 주시고 어
+- [3:44](https://youtube.com/watch?v=X6lXs8IcoHw&t=224) 디스코드
+- [3:45](https://youtube.com/watch?v=X6lXs8IcoHw&t=225) 클로드 코드 채널 디스코드 플러그인도
+- [3:47](https://youtube.com/watch?v=X6lXs8IcoHw&t=227) 이렇게 설치를 해 주시고 또 저는
+- [3:49](https://youtube.com/watch?v=X6lXs8IcoHw&t=229) 이제 코덱스 플러그인도 같이 쓰고
+- [3:51](https://youtube.com/watch?v=X6lXs8IcoHw&t=231) 있거든요. 코덱스 플러그인을 쓰게
+- [3:53](https://youtube.com/watch?v=X6lXs8IcoHw&t=233) 되면 뭐가 좋냐면 어 코디 이제 저는
+- [3:57](https://youtube.com/watch?v=X6lXs8IcoHw&t=237) 클로드도 사실 맥스 안 쓰고 프로
+- [3:59](https://youtube.com/watch?v=X6lXs8IcoHw&t=239) 플랜을 쓰고 있습니다. 프로 플랜
+- [4:01](https://youtube.com/watch?v=X6lXs8IcoHw&t=241) 20불짜리 제일 싼 걸 쓰고 있는데
+- [4:03](https://youtube.com/watch?v=X6lXs8IcoHw&t=243) 그러다 보니까 토큰이 항상 부족해요.
+- [4:06](https://youtube.com/watch?v=X6lXs8IcoHw&t=246) 그래서 비교적 토큰이 굉장히 많은이
+- [4:09](https://youtube.com/watch?v=X6lXs8IcoHw&t=249) 여기 오픈 A에서 배포한 클로드
+- [4:12](https://youtube.com/watch?v=X6lXs8IcoHw&t=252) 코덱스 플러그인을 쓰게 되면 클로드가
+- [4:14](https://youtube.com/watch?v=X6lXs8IcoHw&t=254) 코덱스에게 일을 위임할 수가
+- [4:16](https://youtube.com/watch?v=X6lXs8IcoHw&t=256) 있습니다. 그래서 그렇게 토큰을
+- [4:19](https://youtube.com/watch?v=X6lXs8IcoHw&t=259) 나눠서 쓰게 되죠.
+- [4:23](https://youtube.com/watch?v=X6lXs8IcoHw&t=263) 한번
+- [4:24](https://youtube.com/watch?v=X6lXs8IcoHw&t=264) 안녕하고 불러 볼까요? 안녕 했더니
+- [4:27](https://youtube.com/watch?v=X6lXs8IcoHw&t=267) 이제 클로드봇이 안녕하고 대답을
+- [4:30](https://youtube.com/watch?v=X6lXs8IcoHw&t=270) 했습니다. 그리고 코덱스한테도 인사를
+- [4:32](https://youtube.com/watch?v=X6lXs8IcoHw&t=272) 한번 걸어 보겠습니다. 코덱스한테도
+- [4:35](https://youtube.com/watch?v=X6lXs8IcoHw&t=275) 안녕이라고 전달해 줘라고
+- [4:37](https://youtube.com/watch?v=X6lXs8IcoHw&t=277) 해보겠습니다. 클로드한테 야
+- [4:39](https://youtube.com/watch?v=X6lXs8IcoHw&t=279) 코덱스한테 안녕이라고 말을 걸어
+- [4:41](https://youtube.com/watch?v=X6lXs8IcoHw&t=281) 줘라고 얘기를 한 겁니다.
+- [4:45](https://youtube.com/watch?v=X6lXs8IcoHw&t=285) 그랬더니 지금 코덱스도 안녕이라고
+- [4:49](https://youtube.com/watch?v=X6lXs8IcoHw&t=289) 어 말을 하게 됐습니다. 그러니까
+- [4:50](https://youtube.com/watch?v=X6lXs8IcoHw&t=290) 이게 오픈클로가 없더라도 오픈클로가
+- [4:53](https://youtube.com/watch?v=X6lXs8IcoHw&t=293) 없더라도이 클로드 코드 채널을 통해서
+- [4:56](https://youtube.com/watch?v=X6lXs8IcoHw&t=296) 디스코드 안에서 코덱스 그리고
+- [4:58](https://youtube.com/watch?v=X6lXs8IcoHw&t=298) 클로드와 같이 대화를 할 수 있는
+- [5:00](https://youtube.com/watch?v=X6lXs8IcoHw&t=300) 조건이 되는 거죠. 그리고 제가
+- [5:02](https://youtube.com/watch?v=X6lXs8IcoHw&t=302) 만들어 놓은 어 클로드 코드 채널
+- [5:05](https://youtube.com/watch?v=X6lXs8IcoHw&t=305) 메모리봇을 설정을 하게 되면 이제
+- [5:07](https://youtube.com/watch?v=X6lXs8IcoHw&t=307) 오픈 클로의 원래 강점이었던 메모리도
+- [5:10](https://youtube.com/watch?v=X6lXs8IcoHw&t=310) 여기서 강력하게 쓸 수가 있습니다.
+- [5:14](https://youtube.com/watch?v=X6lXs8IcoHw&t=314) 자, 지금 보시면은 제가 안녕이라고
+- [5:16](https://youtube.com/watch?v=X6lXs8IcoHw&t=316) 했고 클로드가 안녕 뭐 도와줄까?
+- [5:19](https://youtube.com/watch?v=X6lXs8IcoHw&t=319) 그리고 코덱스에게도 안녕이라 전달해
+- [5:21](https://youtube.com/watch?v=X6lXs8IcoHw&t=321) 줘. 했더니 코덱스가 답했어.
+- [5:22](https://youtube.com/watch?v=X6lXs8IcoHw&t=322) 안녕하세요. 무엇을 도와드릴까요?
+- [5:24](https://youtube.com/watch?v=X6lXs8IcoHw&t=324) 코덱스가 좀 좀 더 얘의가 바르네요.
+- [5:27](https://youtube.com/watch?v=X6lXs8IcoHw&t=327) 네.
+- [5:28](https://youtube.com/watch?v=X6lXs8IcoHw&t=328) 자, 이번에는 코덱스에게 위임해서
+- [5:30](https://youtube.com/watch?v=X6lXs8IcoHw&t=330) 클로드 코드 채널과 디스코드 그리고
+- [5:33](https://youtube.com/watch?v=X6lXs8IcoHw&t=333) 코덱스와 위임해서
+- [5:36](https://youtube.com/watch?v=X6lXs8IcoHw&t=336) 클로드 코드 토큰을
+- [5:39](https://youtube.com/watch?v=X6lXs8IcoHw&t=339) 어 아끼는 그런 방식에 대해 그리고
+- [5:44](https://youtube.com/watch?v=X6lXs8IcoHw&t=344) 어 CC 채널 메모리 제가 만든 CC
+- [5:49](https://youtube.com/watch?v=X6lXs8IcoHw&t=349) 채널 메모리
+- [5:53](https://youtube.com/watch?v=X6lXs8IcoHw&t=353) 어 이걸 통해서 활용해서
+- [5:57](https://youtube.com/watch?v=X6lXs8IcoHw&t=357) 음 메모리를 관리하는 방식. 그니까
+- [6:01](https://youtube.com/watch?v=X6lXs8IcoHw&t=361) 제가 지금 디스코드를 통해서 클로드
+- [6:04](https://youtube.com/watch?v=X6lXs8IcoHw&t=364) 코드와 코덱스와이 클로드코드 채널을
+- [6:07](https://youtube.com/watch?v=X6lXs8IcoHw&t=367) 활용하는이 방식에 대해서 어 이거를
+- [6:11](https://youtube.com/watch?v=X6lXs8IcoHw&t=371) 표현하는 UI 원페이지짜리 UI를
+- [6:14](https://youtube.com/watch?v=X6lXs8IcoHw&t=374) 하나 만들어 달라. 그걸 네가 하지
+- [6:16](https://youtube.com/watch?v=X6lXs8IcoHw&t=376) 말고 코덱스한테 위임해서 만들어
+- [6:18](https://youtube.com/watch?v=X6lXs8IcoHw&t=378) 달라라고 요청을 했습니다.
+- [6:21](https://youtube.com/watch?v=X6lXs8IcoHw&t=381) 네. 간단하죠? 그니까 이게 지금
+- [6:24](https://youtube.com/watch?v=X6lXs8IcoHw&t=384) 오른쪽에 있는 디스코드 화면이 사실은
+- [6:27](https://youtube.com/watch?v=X6lXs8IcoHw&t=387) 이렇게 컴퓨터에서 쓰는게 아니라 제가
+- [6:29](https://youtube.com/watch?v=X6lXs8IcoHw&t=389) 보여 드려야 되기 때문에 이제
+- [6:30](https://youtube.com/watch?v=X6lXs8IcoHw&t=390) 컴퓨터에 이걸 켜 놓고 짓고 있지만
+- [6:33](https://youtube.com/watch?v=X6lXs8IcoHw&t=393) 실제로는 핸드폰으로 하는 과정이죠.
+- [6:36](https://youtube.com/watch?v=X6lXs8IcoHw&t=396) 그 사이에이 디스코드에
+- [6:39](https://youtube.com/watch?v=X6lXs8IcoHw&t=399) 어 클로드 코드 채널 설정하는 방법을
+- [6:42](https://youtube.com/watch?v=X6lXs8IcoHw&t=402) 다시 한번 복습을 해 볼게요. 여기이
+- [6:45](https://youtube.com/watch?v=X6lXs8IcoHw&t=405) 새로운 어플리케이션을
+- [6:47](https://youtube.com/watch?v=X6lXs8IcoHw&t=407) 만들고 여기 이름과 아이콘을 설정하고
+- [6:51](https://youtube.com/watch?v=X6lXs8IcoHw&t=411) 보 토큰을 어 받아오고 그 밑에요
+- [6:56](https://youtube.com/watch?v=X6lXs8IcoHw&t=416) 부분요 부분을 활성화해 주고 어 봇
+- [6:59](https://youtube.com/watch?v=X6lXs8IcoHw&t=419) 권하는 관리자 그리고 어 여기에
+- [7:05](https://youtube.com/watch?v=X6lXs8IcoHw&t=425) 이제 봇 그리고 관리자 이렇게 해서
+- [7:08](https://youtube.com/watch?v=X6lXs8IcoHw&t=428) URL까지 복사를 해서 어 크롬이나이
+- [7:12](https://youtube.com/watch?v=X6lXs8IcoHw&t=432) 브라우저에 집어넣게 되면은 는 제가
+- [7:15](https://youtube.com/watch?v=X6lXs8IcoHw&t=435) 만들어 놓은이 디스코드 서버와 채널
+- [7:18](https://youtube.com/watch?v=X6lXs8IcoHw&t=438) 안에 봇이 들어오게 되는 거죠.
+- [7:20](https://youtube.com/watch?v=X6lXs8IcoHw&t=440) 그리고 이제 처음 연결하고 나서는
+- [7:23](https://youtube.com/watch?v=X6lXs8IcoHw&t=443) 이제 디스코드 플러그인을 설치를 하게
+- [7:25](https://youtube.com/watch?v=X6lXs8IcoHw&t=445) 되면은 디 클로드 코드한테 디스코드
+- [7:27](https://youtube.com/watch?v=X6lXs8IcoHw&t=447) 플러그인 설치해 줘라고 하면 그걸
+- [7:29](https://youtube.com/watch?v=X6lXs8IcoHw&t=449) 설치를 해 줍니다. 클로드 코드에
+- [7:31](https://youtube.com/watch?v=X6lXs8IcoHw&t=451) CLI에 가셔서 디스코드 플러그인을
+- [7:33](https://youtube.com/watch?v=X6lXs8IcoHw&t=453) 설치해 줘라고 디스코드 채널 플러그인
+- [7:36](https://youtube.com/watch?v=X6lXs8IcoHw&t=456) 디스코드 채널 플러그인을 어 그러니까
+- [7:39](https://youtube.com/watch?v=X6lXs8IcoHw&t=459) 클로드코드 채널에 디스코드 플러그인을
+- [7:41](https://youtube.com/watch?v=X6lXs8IcoHw&t=461) 설치해 줘라고 하면은 그 플러그인과
+- [7:43](https://youtube.com/watch?v=X6lXs8IcoHw&t=463) MCP가 설정이 되고 어 이렇게
+- [7:47](https://youtube.com/watch?v=X6lXs8IcoHw&t=467) 설치가 됩니다. 그리고 코덱스
+- [7:48](https://youtube.com/watch?v=X6lXs8IcoHw&t=468) 플러그인도 설치를 해 달라고 하시면은
+- [7:51](https://youtube.com/watch?v=X6lXs8IcoHw&t=471) 이제 GPT랑 클로드 둘 다 구독은
+- [7:53](https://youtube.com/watch?v=X6lXs8IcoHw&t=473) 하고 계셔야겠죠. 그래서 이렇게
+- [7:55](https://youtube.com/watch?v=X6lXs8IcoHw&t=475) 설치를 해 줍니다. 이게 좋은 점이
+- [7:57](https://youtube.com/watch?v=X6lXs8IcoHw&t=477) 뭐냐면 제 핸드폰에서 제 컴퓨터에
+- [7:59](https://youtube.com/watch?v=X6lXs8IcoHw&t=479) 깔려 있는 모든 MCP를 모든 스킬을
+- [8:03](https://youtube.com/watch?v=X6lXs8IcoHw&t=483) 모든 플러그인을 같이 쓸 수가 있다는
+- [8:05](https://youtube.com/watch?v=X6lXs8IcoHw&t=485) 거죠.
+- [8:06](https://youtube.com/watch?v=X6lXs8IcoHw&t=486) 여기 지금 보시면은
+- [8:08](https://youtube.com/watch?v=X6lXs8IcoHw&t=488) 어 코리안 로우 MCP랑 코닥
+- [8:10](https://youtube.com/watch?v=X6lXs8IcoHw&t=490) MCP고 혹시 아시는 분들은 아실 수
+- [8:13](https://youtube.com/watch?v=X6lXs8IcoHw&t=493) 있는데 요새 제일 핫한 공무원 분이
+- [8:17](https://youtube.com/watch?v=X6lXs8IcoHw&t=497) 만들어 주신 거예요. 류임 님이라는
+- [8:19](https://youtube.com/watch?v=X6lXs8IcoHw&t=499) 공무원 분이 만들어 주셨는데 어
+- [8:21](https://youtube.com/watch?v=X6lXs8IcoHw&t=501) 거기에 대해서도 간단하게 잠깐 설명을
+- [8:23](https://youtube.com/watch?v=X6lXs8IcoHw&t=503) 드릴게요. 그분이 저희 에이전트
+- [8:25](https://youtube.com/watch?v=X6lXs8IcoHw&t=505) 코리아이 커뮤니티 카카오톡방에 계시는
+- [8:28](https://youtube.com/watch?v=X6lXs8IcoHw&t=508) 분이거든요. 한번 보여 드릴게요.
+- [8:30](https://youtube.com/watch?v=X6lXs8IcoHw&t=510) 이렇게 난리가 났습니다. 그분이
+- [8:33](https://youtube.com/watch?v=X6lXs8IcoHw&t=513) 어 코닥이라는 MCP와 코리안 로우
+- [8:36](https://youtube.com/watch?v=X6lXs8IcoHw&t=516) MCP라는 두 개의 MCP 하나 더
+- [8:39](https://youtube.com/watch?v=X6lXs8IcoHw&t=519) 있었는데 아무튼 세 개 정도 MCP를
+- [8:42](https://youtube.com/watch?v=X6lXs8IcoHw&t=522) 기터에 무료로 이렇게 공개를 했어요.
+- [8:45](https://youtube.com/watch?v=X6lXs8IcoHw&t=525) 이분이 이제 저 공무원이신데
+- [8:49](https://youtube.com/watch?v=X6lXs8IcoHw&t=529) 어 이런 국회라든지 아니면 정부에서
+- [8:53](https://youtube.com/watch?v=X6lXs8IcoHw&t=533) 굉장히 호응이 컸던 거예요. 와,
+- [8:55](https://youtube.com/watch?v=X6lXs8IcoHw&t=535) 우리 공무원들 중에서도 이렇게 AIR
+- [8:58](https://youtube.com/watch?v=X6lXs8IcoHw&t=538) 잘 쓰는 분이 있다라고 하면서 난리가
+- [9:01](https://youtube.com/watch?v=X6lXs8IcoHw&t=541) 났어요. 그래서 저희 방에도 굉장히
+- [9:03](https://youtube.com/watch?v=X6lXs8IcoHw&t=543) 많은 분들이 들어와 주셨고 어,이
+- [9:05](https://youtube.com/watch?v=X6lXs8IcoHw&t=545) 코덱스가 만들어 왔네요.
+- [9:09](https://youtube.com/watch?v=X6lXs8IcoHw&t=549) 보이시죠? 메모리를 관리하고 그다음에
+- [9:12](https://youtube.com/watch?v=X6lXs8IcoHw&t=552) 토큰도 관리하고 그거를 핸드폰에서
+- [9:15](https://youtube.com/watch?v=X6lXs8IcoHw&t=555) 쓰는 이런 AI 워크플로 허브를
+- [9:18](https://youtube.com/watch?v=X6lXs8IcoHw&t=558) 만들었다 해서 클로드와 디스코드로
+- [9:21](https://youtube.com/watch?v=X6lXs8IcoHw&t=561) 핸드폰을 쓰고 CC 채널 메모리
+- [9:23](https://youtube.com/watch?v=X6lXs8IcoHw&t=563) 보으로 메모리를 관리하고 코덱스까지
+- [9:27](https://youtube.com/watch?v=X6lXs8IcoHw&t=567) 연결해서 어 이제 클로드와 코덱스가
+- [9:30](https://youtube.com/watch?v=X6lXs8IcoHw&t=570) 협업을 할 수 있는 오케스트레이션
+- [9:33](https://youtube.com/watch?v=X6lXs8IcoHw&t=573) 환경도 만들었다 요런 내용이죠. 네.
+- [9:37](https://youtube.com/watch?v=X6lXs8IcoHw&t=577) 이 오픈 AI 그리고 엔트로픽 그리고
+- [9:40](https://youtube.com/watch?v=X6lXs8IcoHw&t=580) 디스코드 뭐 이런 부분 그래서 토큰도
+- [9:43](https://youtube.com/watch?v=X6lXs8IcoHw&t=583) 한 68%까지 절감이 된다. 저는
+- [9:45](https://youtube.com/watch?v=X6lXs8IcoHw&t=585) 진짜 프로플랜을 쓰더라도 그렇게
+- [9:49](https://youtube.com/watch?v=X6lXs8IcoHw&t=589) 부족함을 못 느끼거든요. 이게
+- [9:51](https://youtube.com/watch?v=X6lXs8IcoHw&t=591) 웬만큼 포토콜 많이 쓰는 작업들은
+- [9:54](https://youtube.com/watch?v=X6lXs8IcoHw&t=594) 코덱스한테 다 위임해 버려요. 그래서
+- [9:57](https://youtube.com/watch?v=X6lXs8IcoHw&t=597) 굉장히 똑똑하고 언제든 또 핸드폰에서
+- [10:00](https://youtube.com/watch?v=X6lXs8IcoHw&t=600) 쓸 수가 있고요. 그리고 최근에 이제
+- [10:03](https://youtube.com/watch?v=X6lXs8IcoHw&t=603) 우리가 헤르메스가 이제 하네스의 어떤
+- [10:07](https://youtube.com/watch?v=X6lXs8IcoHw&t=607) 형태를 뛴 에이전트로 굉장히 많은
+- [10:10](https://youtube.com/watch?v=X6lXs8IcoHw&t=610) 사람들이 막 사랑을 받고 있다가
+- [10:12](https://youtube.com/watch?v=X6lXs8IcoHw&t=612) 엔트로픽이 클로드를 오스에서 빼
+- [10:14](https://youtube.com/watch?v=X6lXs8IcoHw&t=614) 버리니까 조금 [콧방귀] 아쉬운
+- [10:17](https://youtube.com/watch?v=X6lXs8IcoHw&t=617) 분들이 있을 것 같아서 제가 헤르메스
+- [10:19](https://youtube.com/watch?v=X6lXs8IcoHw&t=619) CCC라는 걸 좀 만들어 봤습니다.
+- [10:20](https://youtube.com/watch?v=X6lXs8IcoHw&t=620) 이것도 공개를 같이 해 드리도록
+- [10:23](https://youtube.com/watch?v=X6lXs8IcoHw&t=623) 할게요. 제가 설명란에 기업 설명란에
+- [10:26](https://youtube.com/watch?v=X6lXs8IcoHw&t=626) 이제요 내용들을 넣어 드릴 건데 이건
+- [10:29](https://youtube.com/watch?v=X6lXs8IcoHw&t=629) 간단하게 말씀드리면 뭐냐면은 원래
+- [10:33](https://youtube.com/watch?v=X6lXs8IcoHw&t=633) 에르메스 에이전트는 헤르메스 에이전트
+- [10:36](https://youtube.com/watch?v=X6lXs8IcoHw&t=636) 어 워크
+- [10:38](https://youtube.com/watch?v=X6lXs8IcoHw&t=638) 어 워크플로 그 뭐죠? 프레임워크
+- [10:41](https://youtube.com/watch?v=X6lXs8IcoHw&t=641) 안에다가 오스 인증이든 API든 다른
+- [10:44](https://youtube.com/watch?v=X6lXs8IcoHw&t=644) LLM을 이렇게 붙여 가지고 쓰는
+- [10:46](https://youtube.com/watch?v=X6lXs8IcoHw&t=646) 방식으로 썼었죠.
+- [10:49](https://youtube.com/watch?v=X6lXs8IcoHw&t=649) 어 여기는 클로드 코드 채널에다가
+- [10:53](https://youtube.com/watch?v=X6lXs8IcoHw&t=653) 헤르메스 에이전트의 기능들을 제가
+- [10:55](https://youtube.com/watch?v=X6lXs8IcoHw&t=655) 그냥 뜯어 가지고 다시 붙여 놓은
+- [10:57](https://youtube.com/watch?v=X6lXs8IcoHw&t=657) 겁니다. 그러니까
+- [10:59](https://youtube.com/watch?v=X6lXs8IcoHw&t=659) 합법적으로 어 클로드 앤트로픽이
+- [11:02](https://youtube.com/watch?v=X6lXs8IcoHw&t=662) 원하는 방식대로 어 오스 인증이
+- [11:05](https://youtube.com/watch?v=X6lXs8IcoHw&t=665) 아니고 또 API를 쓰게 되면 비용이
+- [11:07](https://youtube.com/watch?v=X6lXs8IcoHw&t=667) 굉장히 많이 나오잖아요. 그니까
+- [11:09](https://youtube.com/watch?v=X6lXs8IcoHw&t=669) API 비용도 필요 없이 내가
+- [11:10](https://youtube.com/watch?v=X6lXs8IcoHw&t=670) 구독하고 있는 클로드에다가 헤르메스
+- [11:13](https://youtube.com/watch?v=X6lXs8IcoHw&t=673) 에이전트의 기능들을 제가 거꾸로 뜯어
+- [11:16](https://youtube.com/watch?v=X6lXs8IcoHw&t=676) 가지고 와서 여기다 붙여 놓은 거니까
+- [11:18](https://youtube.com/watch?v=X6lXs8IcoHw&t=678) 어 약간 엘메스 에이전트를 클로드를
+- [11:20](https://youtube.com/watch?v=X6lXs8IcoHw&t=680) 붙여서 쓰고 싶었는데 아쉽다 하시는
+- [11:22](https://youtube.com/watch?v=X6lXs8IcoHw&t=682) 분들은 제 클로드 코드 채널에다가
+- [11:25](https://youtube.com/watch?v=X6lXs8IcoHw&t=685) 에이전트의 기능들을 붙여서 쓰시는
+- [11:27](https://youtube.com/watch?v=X6lXs8IcoHw&t=687) 이르cc
+- [11:29](https://youtube.com/watch?v=X6lXs8IcoHw&t=689) 제가 오늘 만들었거든요.이 만든 것을
+- [11:32](https://youtube.com/watch?v=X6lXs8IcoHw&t=692) 어 같이 공유를 해 드릴게요.
+- [11:34](https://youtube.com/watch?v=X6lXs8IcoHw&t=694) 요 부분들을 한번 보시고 같이 활용해
+- [11:36](https://youtube.com/watch?v=X6lXs8IcoHw&t=696) 보시면은 굉장히 편리하게 어 클로드
+- [11:39](https://youtube.com/watch?v=X6lXs8IcoHw&t=699) 코드를 쓰실 수 있을 것 같습니다.
+- [11:42](https://youtube.com/watch?v=X6lXs8IcoHw&t=702) 오늘은 여기까지 하도록 하겠습니다.

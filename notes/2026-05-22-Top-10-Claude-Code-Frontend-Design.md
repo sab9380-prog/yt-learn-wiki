@@ -1,0 +1,635 @@
+---
+title: "Top 10 Claude Code Frontend Design Skills, Plugins, & CLIs"
+source_url: https://youtube.com/watch?v=Q9ty3eopOPs
+video_id: Q9ty3eopOPs
+source_type: youtube
+lang: en
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# Top 10 Claude Code Frontend Design Skills, Plugins, & CLIs
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 이 영상은 Claude Code로 웹사이트를 만들 때 나타나는 AI slop(획일적인 디자인 - 보라색 그라데이션, Inter 폰트, 동일한 카드 레이아웃)을 피하기 위한 10가지 도구를 소개한다. Impeccable(AI slop 패턴을 방지하는 18개 명령어 스킬), Skill UI(기존 웹사이트 디자인을 분석해 스킬로 변환), WebGPU(GPU 기반 애니메이션), Awesome Design(유명 사이트 디자인 시스템을 마크다운으로 제공), Stitch(구글의 시각적 디자인 도구), UI UX Pro Max(산업별 특화 디자인 규칙), 21st.dev(컴포넌트 라이브러리), Taste skill(AI에 디자인 취향 부여), Google Fonts, Playwright CLI(테스팅) 등을 다룬다. 이 도구들은 모두 Claude Code의 약점인 프론트엔드 디자인을 보완하여 차별화된 웹사이트를 만들 수 있게 도와준다.
+- **Core Message:** Claude Code의 획일적인 디자인 문제를 해결하기 위해 특화된 도구와 스킬을 활용하여 차별화된 웹사이트를 만들 수 있다.
+> AI has no taste
+> Purple gradients, interfont for everything and the same card setup on every single website
+> That is a space now where you can differentiate yourself from the pack
+❗ Skill UI는 24시간도 안 된 새로운 도구로 7개 스타만 받았다
+❗ Awesome Design은 한 달 만에 5만 개 이상의 스타를 받았다
+❗ UI UX Pro Max 스킬은 161개의 산업별 특화 규칙을 가지고 있다
+
+## 📚 핵심 용어
+- **AI slop:** AI가 생성하는 획일적이고 뻔한 디자인 패턴들 / 패스트푸드처럼 빠르지만 똑같은 맛. 어디서나 보는 보라색 그라데이션과 같은 카드가 AI slop이다. / 맞춤 디자인은 요리사가 만든 특별 요리, AI slop은 공장에서 찍어낸 즉석식품. 효율성은 있지만 개성이 없다.
+- **Claude Code:** Anthropic의 AI 코딩 도구로 웹사이트 개발이 가능하다 / 만능 요리사 같지만 디저트만 못 만든다. 코딩은 잘하지만 디자인 센스는 부족한 AI 개발자다. / ChatGPT Code Interpreter는 데이터 분석 특화, Claude Code는 웹 개발 특화. 둘 다 디자인은 약점이다.
+- **디자인 시스템:** 웹사이트의 색상, 폰트, 버튼 등을 통일성 있게 관리하는 규칙 / 브랜드 가이드라인 같은 것. 스타벅스가 어디서나 같은 로고와 색을 쓰듯, 웹사이트도 일관된 룩앤필이 필요하다. / 컴포넌트 라이브러리는 부품창고, 디자인 시스템은 설계도. 시스템이 있어야 부품을 일관되게 조립할 수 있다.
+
+## 🚀 실행 (Execute)
+- [ ] Impeccable 스킬을 Claude Code에 설치하고 기존 프로젝트에 적용해보기
+  - 담당: 나
+  - 이유: AI slop 패턴을 자동으로 감지하고 개선하여 디자인 품질을 즉시 향상시킬 수 있음
+- [ ] 21st.dev에서 버튼과 카드 컴포넌트 3개씩 선택해 테스트 프로젝트에 적용
+  - 담당: 나
+  - 이유: 작은 디자인 디테일이 전체 웹사이트의 프리미엄함을 크게 좌우하기 때문
+- [ ] Google Stitch로 다음 웹 프로젝트의 목업을 먼저 만들어보기
+  - 담당: 나
+  - 이유: 코드 작성 전에 시각적으로 여러 옵션을 비교할 수 있어 개발 시간을 단축시킴
+- 자료: Impeccable 스킬 GitHub 레포지토리
+- 자료: Skill UI GitHub (확인 필요 - 매우 최신)
+- 자료: 21st.dev 컴포넌트 라이브러리
+- 자료: Google Stitch (stitch.google.com)
+- 자료: Awesome Design GitHub (50k+ 스타)
+- 자료: Google Fonts 라이브러리
+- Timeline: 1주차: Impeccable 설치 및 적용, 2주차: 컴포넌트 라이브러리 탐색 및 테스트, 이후: 새 프로젝트마다 Stitch 활용한 사전 목업 작업
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=Q9ty3eopOPs&t=0) There is a monster inside of Claude Code
+- [0:02](https://youtube.com/watch?v=Q9ty3eopOPs&t=2) and it's called AI slop. Purple
+- [0:04](https://youtube.com/watch?v=Q9ty3eopOPs&t=4) gradients, interfont for everything and
+- [0:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=6) the same card setup on every single
+- [0:09](https://youtube.com/watch?v=Q9ty3eopOPs&t=9) website. You know the kind of AI slop
+- [0:12](https://youtube.com/watch?v=Q9ty3eopOPs&t=12) I'm talking about. But today I'm going
+- [0:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=13) to give you 10 different tools to help
+- [0:15](https://youtube.com/watch?v=Q9ty3eopOPs&t=15) you slay this beast. And no, none of
+- [0:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=17) them are the front-end design skill. In
+- [0:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=20) fact, a lot of these tools are
+- [0:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=21) relatively new. So even if you've been
+- [0:24](https://youtube.com/watch?v=Q9ty3eopOPs&t=24) in the cloud code design space for some
+- [0:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=25) time, I promise you're going to learn
+- [0:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=27) something today. Now, all these tools
+- [0:29](https://youtube.com/watch?v=Q9ty3eopOPs&t=29) we're going to go over today serve
+- [0:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=30) essentially the same purpose, and that's
+- [0:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=32) to give you a fighting chance to create
+- [0:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=34) highquality front-end web design with
+- [0:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=36) Claude Code because as good as Claude
+- [0:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=38) Code is, that is one area. It is
+- [0:41](https://youtube.com/watch?v=Q9ty3eopOPs&t=41) extremely deficient. And the first tool
+- [0:43](https://youtube.com/watch?v=Q9ty3eopOPs&t=43) on the list is Impeccable. This is a
+- [0:45](https://youtube.com/watch?v=Q9ty3eopOPs&t=45) single skill that includes 18 commands,
+- [0:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=46) and I will link this in the description
+- [0:49](https://youtube.com/watch?v=Q9ty3eopOPs&t=49) as well as every other tool we will
+- [0:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=50) cover today. Now, I really like
+- [0:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=52) Impeccable because what it's able to do
+- [0:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=54) is extremely wide ranging. It's one
+- [0:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=56) skill, but it's 18 commands. And if we
+- [0:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=58) follow the link on the GitHub to
+- [1:00](https://youtube.com/watch?v=Q9ty3eopOPs&t=60) impeccable.style, we can see all of
+- [1:02](https://youtube.com/watch?v=Q9ty3eopOPs&t=62) their commands in action. And better
+- [1:04](https://youtube.com/watch?v=Q9ty3eopOPs&t=64) yet, we can see generic AI output. Hey,
+- [1:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=68) interfont purple gradients
+- [1:10](https://youtube.com/watch?v=Q9ty3eopOPs&t=70) and sort of the after image using the
+- [1:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=73) different commands. So, for example, we
+- [1:15](https://youtube.com/watch?v=Q9ty3eopOPs&t=75) have something like clarify, which is
+- [1:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=77) all about UX errors and error messages.
+- [1:19](https://youtube.com/watch?v=Q9ty3eopOPs&t=79) And you can see the difference between
+- [1:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=81) the two here. It also has a Chrome
+- [1:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=83) extension which will highlight the sort
+- [1:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=85) of AI slop aesthetics directly on your
+- [1:28](https://youtube.com/watch?v=Q9ty3eopOPs&t=88) web page like in this example. And I
+- [1:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=90) really like how this skill uses
+- [1:31](https://youtube.com/watch?v=Q9ty3eopOPs&t=91) anti-atterns. So it essentially teaches
+- [1:33](https://youtube.com/watch?v=Q9ty3eopOPs&t=93) large language models what AI slop
+- [1:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=96) actually looks like. These border
+- [1:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=98) accents, these side tab accent borders
+- [1:40](https://youtube.com/watch?v=Q9ty3eopOPs&t=100) that you see everywhere. You know, spark
+- [1:43](https://youtube.com/watch?v=Q9ty3eopOPs&t=103) lines, glass morphism, right? We just
+- [1:45](https://youtube.com/watch?v=Q9ty3eopOPs&t=105) see these things again and again and
+- [1:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=106) again and again. So why don't we use a
+- [1:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=108) skill that tells LLMs this is AI slop
+- [1:51](https://youtube.com/watch?v=Q9ty3eopOPs&t=111) verbatim instead of using something like
+- [1:53](https://youtube.com/watch?v=Q9ty3eopOPs&t=113) the front end design skill which is like
+- [1:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=114) just don't do AI slop please. Like that
+- [1:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=116) doesn't work. And as you can imagine
+- [1:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=118) this skill is pretty dense as we see
+- [2:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=121) here. And I continue to scroll. That's
+- [2:03](https://youtube.com/watch?v=Q9ty3eopOPs&t=123) because it has several references for
+- [2:05](https://youtube.com/watch?v=Q9ty3eopOPs&t=125) each specific sort of design domain. You
+- [2:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=128) can almost think of those as subsklls
+- [2:10](https://youtube.com/watch?v=Q9ty3eopOPs&t=130) and the affformentioned 18 different
+- [2:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=133) commands. Now, the easiest way to see
+- [2:15](https://youtube.com/watch?v=Q9ty3eopOPs&t=135) all these commands in action is actually
+- [2:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=137) just to go to the impeccable docs. And
+- [2:19](https://youtube.com/watch?v=Q9ty3eopOPs&t=139) just like you saw on the hero page, you
+- [2:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=141) can see the examples of the before
+- [2:24](https://youtube.com/watch?v=Q9ty3eopOPs&t=144) versus the after. And so visually seeing
+- [2:26](https://youtube.com/watch?v=Q9ty3eopOPs&t=146) what all these things can do is way
+- [2:28](https://youtube.com/watch?v=Q9ty3eopOPs&t=148) better than kind of just looking at the
+- [2:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=150) description and hoping Cloud Code uses
+- [2:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=152) what you expect it to use. And it isn't
+- [2:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=154) even just a purely visual thing. when
+- [2:35](https://youtube.com/watch?v=Q9ty3eopOPs&t=155) you look at skills like adapt and make
+- [2:37](https://youtube.com/watch?v=Q9ty3eopOPs&t=157) sure it actually works across different
+- [2:40](https://youtube.com/watch?v=Q9ty3eopOPs&t=160) platforms like mobile and tablet versus
+- [2:42](https://youtube.com/watch?v=Q9ty3eopOPs&t=162) just desktop only. So highly suggest you
+- [2:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=164) check this one out. It's only been out
+- [2:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=166) for about a month now. Before we go into
+- [2:47](https://youtube.com/watch?v=Q9ty3eopOPs&t=167) tool number two, just a quick plug for
+- [2:49](https://youtube.com/watch?v=Q9ty3eopOPs&t=169) my cloud code masterass which I just
+- [2:51](https://youtube.com/watch?v=Q9ty3eopOPs&t=171) released last month and I've already put
+- [2:53](https://youtube.com/watch?v=Q9ty3eopOPs&t=173) out a ton of updates. It is the number
+- [2:55](https://youtube.com/watch?v=Q9ty3eopOPs&t=175) one place to go from zero to AI dev and
+- [2:57](https://youtube.com/watch?v=Q9ty3eopOPs&t=177) the price of this is increasing in just
+- [3:00](https://youtube.com/watch?v=Q9ty3eopOPs&t=180) a few days. So if you want to get your
+- [3:02](https://youtube.com/watch?v=Q9ty3eopOPs&t=182) hands on this, make sure to check it
+- [3:03](https://youtube.com/watch?v=Q9ty3eopOPs&t=183) out. There's a link in the pin comment.
+- [3:05](https://youtube.com/watch?v=Q9ty3eopOPs&t=185) Now, let's talk about tool number two,
+- [3:07](https://youtube.com/watch?v=Q9ty3eopOPs&t=187) which is Skill UI. Now, this is a tool I
+- [3:09](https://youtube.com/watch?v=Q9ty3eopOPs&t=189) just found out about this morning. It's
+- [3:12](https://youtube.com/watch?v=Q9ty3eopOPs&t=192) hasn't even been up for 24 hours. It's
+- [3:14](https://youtube.com/watch?v=Q9ty3eopOPs&t=194) got seven stars. We are on the ground
+- [3:16](https://youtube.com/watch?v=Q9ty3eopOPs&t=196) floor. I didn't make this. I don't know
+- [3:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=197) this guy. I just happened to see him
+- [3:19](https://youtube.com/watch?v=Q9ty3eopOPs&t=199) post about it on Twitter. I was just
+- [3:22](https://youtube.com/watch?v=Q9ty3eopOPs&t=202) like doom scrolling. I saw, oh, this
+- [3:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=203) looks like a cool skill. And it allows
+- [3:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=205) us to reverse engineer any design system
+- [3:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=207) into a claw ready skill. What does that
+- [3:29](https://youtube.com/watch?v=Q9ty3eopOPs&t=209) mean? That means we take this skill, we
+- [3:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=212) point it at some sort of website that
+- [3:33](https://youtube.com/watch?v=Q9ty3eopOPs&t=213) already exists and it essentially
+- [3:35](https://youtube.com/watch?v=Q9ty3eopOPs&t=215) analyzes how that website was built and
+- [3:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=218) turns that into a template into a skill
+- [3:42](https://youtube.com/watch?v=Q9ty3eopOPs&t=222) essentially. Let me show it in action.
+- [3:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=224) So right here we have the Stripe
+- [3:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=226) website. Pretty cool website. A lot
+- [3:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=228) going on. Obviously it has a lot of
+- [3:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=230) custom graphics and things like that. It
+- [3:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=232) is impossible for Claude Code without a
+- [3:55](https://youtube.com/watch?v=Q9ty3eopOPs&t=235) lot of these graphics and visuals to
+- [3:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=236) necessarily recreate it. Yet, let's say
+- [3:59](https://youtube.com/watch?v=Q9ty3eopOPs&t=239) I like the general design, just kind of
+- [4:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=241) how it's set up in terms of cards and
+- [4:03](https://youtube.com/watch?v=Q9ty3eopOPs&t=243) layouts, and I wanted to use this as a
+- [4:05](https://youtube.com/watch?v=Q9ty3eopOPs&t=245) foundation for my own website. Well,
+- [4:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=246) we've talked about in past videos ways
+- [4:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=248) we can do that, like we look at the
+- [4:09](https://youtube.com/watch?v=Q9ty3eopOPs&t=249) HTML, all these things, but you know, it
+- [4:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=251) ends up being like a 60 70% solution.
+- [4:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=253) So, I took that skill UI skill, I
+- [4:15](https://youtube.com/watch?v=Q9ty3eopOPs&t=255) pointed it at Stripe, and then I said,
+- [4:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=257) "Hey, make me a fake Stripe website in
+- [4:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=260) that sort of style." And this is what it
+- [4:22](https://youtube.com/watch?v=Q9ty3eopOPs&t=262) came up with as a oneshot. That's all I
+- [4:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=265) told it. I didn't give it any more
+- [4:26](https://youtube.com/watch?v=Q9ty3eopOPs&t=266) information. and it created this. And so
+- [4:28](https://youtube.com/watch?v=Q9ty3eopOPs&t=268) it kind of has like definitely a Stripe
+- [4:31](https://youtube.com/watch?v=Q9ty3eopOPs&t=271) vibe to it. Again, like these are custom
+- [4:33](https://youtube.com/watch?v=Q9ty3eopOPs&t=273) graphics on Stripe. It's not going to be
+- [4:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=274) able to recreate that just off a prompt,
+- [4:37](https://youtube.com/watch?v=Q9ty3eopOPs&t=277) but you know, pretty good actually if
+- [4:41](https://youtube.com/watch?v=Q9ty3eopOPs&t=281) you ask me. Like, you know, it still has
+- [4:45](https://youtube.com/watch?v=Q9ty3eopOPs&t=285) some, you know, standard AI stuff there.
+- [4:47](https://youtube.com/watch?v=Q9ty3eopOPs&t=287) Kind of like how stuff is set up and the
+- [4:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=290) icons, but it didn't just do like a 2 by
+- [4:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=292) 2 bento, you know, box with the cards. I
+- [4:55](https://youtube.com/watch?v=Q9ty3eopOPs&t=295) do like the colors it used. I like sort
+- [4:57](https://youtube.com/watch?v=Q9ty3eopOPs&t=297) of the graphic it put here. Like this is
+- [4:59](https://youtube.com/watch?v=Q9ty3eopOPs&t=299) honestly really good for me just saying,
+- [5:02](https://youtube.com/watch?v=Q9ty3eopOPs&t=302) "Hey, look at Stripe's website. Build me
+- [5:04](https://youtube.com/watch?v=Q9ty3eopOPs&t=304) a foundation." And since it turned it
+- [5:05](https://youtube.com/watch?v=Q9ty3eopOPs&t=305) into a skill, I now have a Stripe design
+- [5:09](https://youtube.com/watch?v=Q9ty3eopOPs&t=309) skill, which is just on the project
+- [5:10](https://youtube.com/watch?v=Q9ty3eopOPs&t=310) level, but I could bring that up at any
+- [5:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=311) time. So, let's say I wanted to make
+- [5:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=313) another website that also used the
+- [5:15](https://youtube.com/watch?v=Q9ty3eopOPs&t=315) Stripe style. I can do that, but I can
+- [5:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=317) point Skill UI at anything. And you can
+- [5:19](https://youtube.com/watch?v=Q9ty3eopOPs&t=319) see it in action in the example video he
+- [5:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=321) has here on the GitHub where he pointed
+- [5:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=323) this tool at notion and then he told
+- [5:24](https://youtube.com/watch?v=Q9ty3eopOPs&t=324) Cloud Code, make me essentially a notion
+- [5:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=327) clone. And that's what you see right
+- [5:28](https://youtube.com/watch?v=Q9ty3eopOPs&t=328) there. So to use this skill, you just
+- [5:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=330) follow the install commands here on the
+- [5:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=332) GitHub page. And it has two different
+- [5:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=334) modes. So if you want something that
+- [5:37](https://youtube.com/watch?v=Q9ty3eopOPs&t=337) essentially takes everything like scroll
+- [5:39](https://youtube.com/watch?v=Q9ty3eopOPs&t=339) screenshots and different interactions
+- [5:41](https://youtube.com/watch?v=Q9ty3eopOPs&t=341) when your mouse goes over stuff, it uses
+- [5:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=344) Playright to figure all that out. So it
+- [5:47](https://youtube.com/watch?v=Q9ty3eopOPs&t=347) isn't just looking at the HTML like
+- [5:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=348) normal stuff does like something like my
+- [5:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=350) custom site breakdown skill has done in
+- [5:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=352) the past. So if you use ultra mode, it
+- [5:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=354) actually brings in playright. So there
+- [5:55](https://youtube.com/watch?v=Q9ty3eopOPs&t=355) is a certain level of sophistication
+- [5:57](https://youtube.com/watch?v=Q9ty3eopOPs&t=357) here. So all in all, really clever
+- [5:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=358) skill. You're on the ground floor. If
+- [5:59](https://youtube.com/watch?v=Q9ty3eopOPs&t=359) you start using this, you're now like a
+- [6:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=361) hipster GitHub repo skill user. And I
+- [6:03](https://youtube.com/watch?v=Q9ty3eopOPs&t=363) would highly suggest you do this if
+- [6:05](https://youtube.com/watch?v=Q9ty3eopOPs&t=365) you're starting a new website and you
+- [6:07](https://youtube.com/watch?v=Q9ty3eopOPs&t=367) have no idea how you should kind of like
+- [6:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=368) start it to the ground floor because
+- [6:10](https://youtube.com/watch?v=Q9ty3eopOPs&t=370) again, this is a great starting point. I
+- [6:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=371) can edit anything I want from here. Now,
+- [6:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=373) tool number three is one that I will be
+- [6:15](https://youtube.com/watch?v=Q9ty3eopOPs&t=375) honest is a little outside of my
+- [6:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=377) wheelhouse, but I find it super
+- [6:18](https://youtube.com/watch?v=Q9ty3eopOPs&t=378) interesting. I'm trying to learn more
+- [6:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=380) about it and use it myself, and that is
+- [6:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=381) a web GPU skill. So, web GPUs are
+- [6:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=385) essentially like web design components
+- [6:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=387) where the web page is interacting with
+- [6:29](https://youtube.com/watch?v=Q9ty3eopOPs&t=389) your graphics card. And this allows us
+- [6:31](https://youtube.com/watch?v=Q9ty3eopOPs&t=391) to create super cool animations like you
+- [6:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=394) see here. I like this stuff as well.
+- [6:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=396) when we talk about if you watch my seven
+- [6:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=398) levels of claude code web design and we
+- [6:41](https://youtube.com/watch?v=Q9ty3eopOPs&t=401) looked at stuff like the igloo website
+- [6:43](https://youtube.com/watch?v=Q9ty3eopOPs&t=403) on level seven they were using things
+- [6:45](https://youtube.com/watch?v=Q9ty3eopOPs&t=405) like webgl and custom shaders like this
+- [6:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=408) is the sort of realm I'm talking about
+- [6:49](https://youtube.com/watch?v=Q9ty3eopOPs&t=409) and so this skill teaches claude code
+- [6:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=412) how to essentially write code that does
+- [6:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=414) that so it tells it how to set up the
+- [6:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=416) renderer how to do shaders how to create
+- [6:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=418) the nodebased material and by using the
+- [7:00](https://youtube.com/watch?v=Q9ty3eopOPs&t=420) skill I just gave it a couple text
+- [7:02](https://youtube.com/watch?v=Q9ty3eopOPs&t=422) prompts and it was able to create this
+- [7:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=426) Now, is this as cool as, you know, this
+- [7:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=428) one? No. But I I did it in two minutes
+- [7:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=431) after, well, I actually took it like 10
+- [7:12](https://youtube.com/watch?v=Q9ty3eopOPs&t=432) minutes with the GPU, but a couple text
+- [7:14](https://youtube.com/watch?v=Q9ty3eopOPs&t=434) problems and I had no idea what I was
+- [7:16](https://youtube.com/watch?v=Q9ty3eopOPs&t=436) doing. So, if this sort of stuff
+- [7:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=437) interests you, and out of all the tools
+- [7:19](https://youtube.com/watch?v=Q9ty3eopOPs&t=439) I talk about here, this is the one
+- [7:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=440) that's the most, you know, probably out
+- [7:22](https://youtube.com/watch?v=Q9ty3eopOPs&t=442) there, but I I liked it. Uh, if this
+- [7:24](https://youtube.com/watch?v=Q9ty3eopOPs&t=444) stuff interests you, this is a skill you
+- [7:26](https://youtube.com/watch?v=Q9ty3eopOPs&t=446) should check out because it kind of
+- [7:28](https://youtube.com/watch?v=Q9ty3eopOPs&t=448) moves you in that direction. But
+- [7:29](https://youtube.com/watch?v=Q9ty3eopOPs&t=449) obviously this is something that is much
+- [7:31](https://youtube.com/watch?v=Q9ty3eopOPs&t=451) more advanced than just changing what
+- [7:33](https://youtube.com/watch?v=Q9ty3eopOPs&t=453) our cards look like or changing the
+- [7:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=454) typography of a website. But something
+- [7:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=456) to keep in mind. Now tool number four is
+- [7:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=458) one of the hottest AI repos over the
+- [7:41](https://youtube.com/watch?v=Q9ty3eopOPs&t=461) last month and that is awesomedesign.md.
+- [7:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=464) This is at over 50,000 stars at this
+- [7:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=466) point. So it's been absolutely ripping.
+- [7:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=468) And this is similar in some respect to
+- [7:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=470) the skill UI tool we talked about
+- [7:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=472) because it's a skill that allows us to
+- [7:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=474) look at other websites that already
+- [7:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=476) exist and use them as somewhat of a
+- [7:59](https://youtube.com/watch?v=Q9ty3eopOPs&t=479) template for a website we're going to
+- [8:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=481) build. Now, awesome design is heavily
+- [8:03](https://youtube.com/watch?v=Q9ty3eopOPs&t=483) influenced by Stitch. And we will talk
+- [8:05](https://youtube.com/watch?v=Q9ty3eopOPs&t=485) about Stitch a little bit later. And
+- [8:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=486) Stitch has this concept of design,
+- [8:09](https://youtube.com/watch?v=Q9ty3eopOPs&t=489) design markdown files. And they're just
+- [8:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=491) prompts describing how you should build
+- [8:14](https://youtube.com/watch?v=Q9ty3eopOPs&t=494) your website. The difference is Google
+- [8:15](https://youtube.com/watch?v=Q9ty3eopOPs&t=495) did a very good job of creating these
+- [8:18](https://youtube.com/watch?v=Q9ty3eopOPs&t=498) prompts like you see here and it gets
+- [8:19](https://youtube.com/watch?v=Q9ty3eopOPs&t=499) very very specific about what the
+- [8:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=501) overview is, what's the north star, how
+- [8:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=503) we're doing colors. It just adds great
+- [8:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=505) structure instead of again something
+- [8:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=507) like the front-end design skill from
+- [8:28](https://youtube.com/watch?v=Q9ty3eopOPs&t=508) cloud code which is kind of like uh
+- [8:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=510) let's kind of just do stuff in this this
+- [8:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=512) way. This is much more concrete about
+- [8:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=514) what it needs to do. And so it has taken
+- [8:35](https://youtube.com/watch?v=Q9ty3eopOPs&t=515) that idea of these very specific design
+- [8:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=518) system prompts and essentially created
+- [8:41](https://youtube.com/watch?v=Q9ty3eopOPs&t=521) them for a bunch of different websites
+- [8:43](https://youtube.com/watch?v=Q9ty3eopOPs&t=523) across a bunch of different domains. So
+- [8:45](https://youtube.com/watch?v=Q9ty3eopOPs&t=525) something like 11 Labs. If I click on
+- [8:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=528) that here, I can see essentially the
+- [8:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=532) entire 11 Labs design idea ripped apart.
+- [8:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=536) Form elements, card examples, buttons,
+- [8:59](https://youtube.com/watch?v=Q9ty3eopOPs&t=539) headings, typography, colors, all that.
+- [9:02](https://youtube.com/watch?v=Q9ty3eopOPs&t=542) And it's not just that live preview we
+- [9:04](https://youtube.com/watch?v=Q9ty3eopOPs&t=544) see, it's the actual prompt that we can
+- [9:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=546) then feed to cloud code. And again, they
+- [9:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=548) have a ton of websites here, including
+- [9:10](https://youtube.com/watch?v=Q9ty3eopOPs&t=550) like non- tech stuff, things like
+- [9:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=551) Bugatti, right? Like, you know, it's
+- [9:14](https://youtube.com/watch?v=Q9ty3eopOPs&t=554) essentially this is giving you the
+- [9:16](https://youtube.com/watch?v=Q9ty3eopOPs&t=556) building blocks of some website you
+- [9:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=557) like, so you can build your own using
+- [9:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=560) those same building blocks. So, while
+- [9:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=561) the skill UI tool we saw earlier kind of
+- [9:24](https://youtube.com/watch?v=Q9ty3eopOPs&t=564) just looks at any website you want and
+- [9:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=565) builds it for you, this is just kind of
+- [9:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=567) breaking out the component parts and
+- [9:29](https://youtube.com/watch?v=Q9ty3eopOPs&t=569) then it's up to us to build it
+- [9:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=570) ourselves. Now, after hyping up awesome
+- [9:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=572) design, it's only fair that for tool
+- [9:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=574) number five, we talk about the
+- [9:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=576) application that actually inspired it,
+- [9:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=578) and that is Stitch itself from Google.
+- [9:40](https://youtube.com/watch?v=Q9ty3eopOPs&t=580) So, Stitch is awesome if you want to
+- [9:42](https://youtube.com/watch?v=Q9ty3eopOPs&t=582) start from a visual approach before you
+- [9:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=584) actually go out there and begin building
+- [9:47](https://youtube.com/watch?v=Q9ty3eopOPs&t=587) your web page. So, what you do is you go
+- [9:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=588) into Stitch and you just give it a
+- [9:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=590) prompt for what you're trying to build.
+- [9:51](https://youtube.com/watch?v=Q9ty3eopOPs&t=591) This can include screenshots of
+- [9:53](https://youtube.com/watch?v=Q9ty3eopOPs&t=593) inspiration. What it's going to do is
+- [9:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=594) it's going to create that same sort of
+- [9:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=596) design MD file you saw earlier, but in
+- [9:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=598) its natural habitat. So it gives us a
+- [10:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=601) breakdown of the colors, the sort of
+- [10:03](https://youtube.com/watch?v=Q9ty3eopOPs&t=603) typography, the labels, the buttons, and
+- [10:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=606) then we can see over here the entire
+- [10:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=608) design system. The same sort of design
+- [10:10](https://youtube.com/watch?v=Q9ty3eopOPs&t=610) MD you saw before, but now it's
+- [10:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=611) customized for whatever you prompted it.
+- [10:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=613) And once it does that, it then gives you
+- [10:15](https://youtube.com/watch?v=Q9ty3eopOPs&t=615) a bunch of variations of the type of
+- [10:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=617) website you're going to create. It's not
+- [10:19](https://youtube.com/watch?v=Q9ty3eopOPs&t=619) just the hero section. It does it all.
+- [10:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=621) And once it creates that mockup, I can
+- [10:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=623) edit it however I wish. I can click on
+- [10:24](https://youtube.com/watch?v=Q9ty3eopOPs&t=624) it. I can go to rightclick. I can get
+- [10:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=627) specific variants. I can customize the
+- [10:29](https://youtube.com/watch?v=Q9ty3eopOPs&t=629) different variants. I can change it from
+- [10:31](https://youtube.com/watch?v=Q9ty3eopOPs&t=631) I want three variants, five variants. I
+- [10:33](https://youtube.com/watch?v=Q9ty3eopOPs&t=633) can give it a creative range,
+- [10:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=634) instructions, etc., etc. I basically
+- [10:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=636) have a ton of different ways to spin up
+- [10:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=638) a bunch of visuals of my potential
+- [10:41](https://youtube.com/watch?v=Q9ty3eopOPs&t=641) website. And this is great because it is
+- [10:43](https://youtube.com/watch?v=Q9ty3eopOPs&t=643) tough when you're inside of cloud code
+- [10:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=644) and every time you want to do a visual
+- [10:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=646) change, right? It needs to write the
+- [10:47](https://youtube.com/watch?v=Q9ty3eopOPs&t=647) code, you need to spin up the dev
+- [10:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=648) server, you need to check it on the web
+- [10:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=650) page. And oftent times when we're doing
+- [10:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=652) these things, especially from a
+- [10:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=654) front-end design, you know, angle, I
+- [10:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=656) want to see the options in front of me,
+- [10:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=658) right? It's a lot easier for me to see
+- [11:00](https://youtube.com/watch?v=Q9ty3eopOPs&t=660) all three of these and say, "All right,
+- [11:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=661) I hate this. I hate this. Maybe I like
+- [11:03](https://youtube.com/watch?v=Q9ty3eopOPs&t=663) this." Versus like, "All right, nope.
+- [11:05](https://youtube.com/watch?v=Q9ty3eopOPs&t=665) Claude Code, try again. Nope, try again.
+- [11:07](https://youtube.com/watch?v=Q9ty3eopOPs&t=667) Nope, try again." So, this is also free,
+- [11:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=671) which is great. And whatever I build
+- [11:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=673) here, it's really easy to transfer to
+- [11:14](https://youtube.com/watch?v=Q9ty3eopOPs&t=674) cloud code because if I just click on
+- [11:16](https://youtube.com/watch?v=Q9ty3eopOPs&t=676) the one I like. I go to more. I can view
+- [11:19](https://youtube.com/watch?v=Q9ty3eopOPs&t=679) the code. I can then copy the code and
+- [11:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=681) then bring it into cloud code. And you
+- [11:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=683) can even do stuff like copy it to Figma.
+- [11:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=685) You can bring it into AI studio as well.
+- [11:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=687) But the easiest path to cloud code is
+- [11:29](https://youtube.com/watch?v=Q9ty3eopOPs&t=689) just to export and then copy to
+- [11:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=690) clipboard. There is an MCP. So you can
+- [11:33](https://youtube.com/watch?v=Q9ty3eopOPs&t=693) do all of this through the cloud code
+- [11:35](https://youtube.com/watch?v=Q9ty3eopOPs&t=695) terminal. But to be honest, I don't
+- [11:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=696) really understand what it really buys
+- [11:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=698) you. I I feel like being hands-on in
+- [11:41](https://youtube.com/watch?v=Q9ty3eopOPs&t=701) this visual sense is is kind of worth
+- [11:43](https://youtube.com/watch?v=Q9ty3eopOPs&t=703) it. Now, I actually have a full deep
+- [11:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=704) dive on Stitch and Clawed Code, and I'll
+- [11:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=706) link that above if you want to see more
+- [11:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=708) of this in action. Now, I debated
+- [11:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=710) putting skill number six in this video
+- [11:51](https://youtube.com/watch?v=Q9ty3eopOPs&t=711) because I feel like it's getting so
+- [11:53](https://youtube.com/watch?v=Q9ty3eopOPs&t=713) ubiquitous. Pretty much everyone knows
+- [11:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=714) it exists, but you never know. It might
+- [11:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=716) be someone's first time seeing it. And
+- [11:57](https://youtube.com/watch?v=Q9ty3eopOPs&t=717) that is the UI UX Pro Max skill. This
+- [12:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=721) is, I think, the spiritual successor or
+- [12:04](https://youtube.com/watch?v=Q9ty3eopOPs&t=724) what the anthropic front-end design
+- [12:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=726) skill should be. So imagine a an
+- [12:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=728) enthropic front-end design skill that is
+- [12:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=731) actually trained on different sorts of,
+- [12:14](https://youtube.com/watch?v=Q9ty3eopOPs&t=734) you know, conventions for different
+- [12:16](https://youtube.com/watch?v=Q9ty3eopOPs&t=736) sorts of websites in different sorts of
+- [12:18](https://youtube.com/watch?v=Q9ty3eopOPs&t=738) domains because not every website needs
+- [12:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=740) to look like some SAS, like some Btier
+- [12:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=743) SAS. And that's what this skill is all
+- [12:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=745) about. It's an intelligent design system
+- [12:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=747) generator. So it's actually going to ask
+- [12:28](https://youtube.com/watch?v=Q9ty3eopOPs&t=748) you questions. It's going to figure out
+- [12:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=750) what your website is about, what your
+- [12:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=752) service is about, and then design it
+- [12:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=754) based on its function. So it has 161
+- [12:37](https://youtube.com/watch?v=Q9ty3eopOPs&t=757) industry specific reasoning rules. So
+- [12:40](https://youtube.com/watch?v=Q9ty3eopOPs&t=760) they've really built this thing out. You
+- [12:43](https://youtube.com/watch?v=Q9ty3eopOPs&t=763) are not going to get the sort of generic
+- [12:45](https://youtube.com/watch?v=Q9ty3eopOPs&t=765) AI slop with no skill and you're not
+- [12:47](https://youtube.com/watch?v=Q9ty3eopOPs&t=767) going to get what is slowly becoming the
+- [12:49](https://youtube.com/watch?v=Q9ty3eopOPs&t=769) clawed code version of AI slop with the
+- [12:51](https://youtube.com/watch?v=Q9ty3eopOPs&t=771) running design skill. It's also built
+- [12:53](https://youtube.com/watch?v=Q9ty3eopOPs&t=773) out with a bunch of stack specific
+- [12:55](https://youtube.com/watch?v=Q9ty3eopOPs&t=775) guidance so you aren't pushed into just
+- [12:57](https://youtube.com/watch?v=Q9ty3eopOPs&t=777) something like React. And ultimately
+- [12:59](https://youtube.com/watch?v=Q9ty3eopOPs&t=779) it's a great skill if you kind of just
+- [13:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=781) have no idea where you want to go. A lot
+- [13:04](https://youtube.com/watch?v=Q9ty3eopOPs&t=784) of the stuff we've talked about already
+- [13:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=786) requires you to have some sense of what
+- [13:09](https://youtube.com/watch?v=Q9ty3eopOPs&t=789) you want either well especially if you
+- [13:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=791) have an example website right when we
+- [13:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=793) saw skill UI if I have an example I can
+- [13:16](https://youtube.com/watch?v=Q9ty3eopOPs&t=796) pretty much copy it and same thing with
+- [13:18](https://youtube.com/watch?v=Q9ty3eopOPs&t=798) awesome design like I'm choosing from
+- [13:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=800) these websites that exist. If you don't
+- [13:22](https://youtube.com/watch?v=Q9ty3eopOPs&t=802) want to go that route but you still are
+- [13:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=803) kind of confused about where you should
+- [13:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=805) be use this skill. Great starting point.
+- [13:28](https://youtube.com/watch?v=Q9ty3eopOPs&t=808) Now, tool number seven is all about
+- [13:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=810) components and really nailing the
+- [13:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=812) details of our web page. And that is
+- [13:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=814) where we bring in 21st.dev, which is a
+- [13:37](https://youtube.com/watch?v=Q9ty3eopOPs&t=817) website with a million different
+- [13:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=818) components for us to choose from and
+- [13:40](https://youtube.com/watch?v=Q9ty3eopOPs&t=820) directly integrate into our website. So,
+- [13:42](https://youtube.com/watch?v=Q9ty3eopOPs&t=822) for example, let's say I was trying to
+- [13:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=824) figure out something for our hero page.
+- [13:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=826) Well, I just go to the heroes section on
+- [13:49](https://youtube.com/watch?v=Q9ty3eopOPs&t=829) 21st. And I search for one I like. Let's
+- [13:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=832) say I like this one. This hero page that
+- [13:55](https://youtube.com/watch?v=Q9ty3eopOPs&t=835) uses spline. So, it has this robot that
+- [13:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=838) actually follows my mouse. Well, instead
+- [14:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=841) of figuring out how to use spline and
+- [14:03](https://youtube.com/watch?v=Q9ty3eopOPs&t=843) write up that code, I just go into
+- [14:05](https://youtube.com/watch?v=Q9ty3eopOPs&t=845) 21st.dev. I copy the prompt by clicking
+- [14:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=848) the copy prompt button up there. I go to
+- [14:10](https://youtube.com/watch?v=Q9ty3eopOPs&t=850) cloud code and I paste it in. Boom. I
+- [14:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=853) will have this as my hero section. Now,
+- [14:15](https://youtube.com/watch?v=Q9ty3eopOPs&t=855) obviously, hero sections are probably
+- [14:16](https://youtube.com/watch?v=Q9ty3eopOPs&t=856) the heaviest thing we could possibly
+- [14:18](https://youtube.com/watch?v=Q9ty3eopOPs&t=858) import into our web page because if we
+- [14:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=860) have a hero page with a robot looking
+- [14:22](https://youtube.com/watch?v=Q9ty3eopOPs&t=862) all over the place, our whole website
+- [14:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=863) kind of has to fit that aesthetic. So
+- [14:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=865) luckily, I think you get the most value
+- [14:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=867) out of something like 21st.dev when it
+- [14:29](https://youtube.com/watch?v=Q9ty3eopOPs&t=869) comes to the smaller components and
+- [14:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=870) these small little flourishes like
+- [14:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=872) buttons, right? Just the fact that this
+- [14:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=874) button has this little light on it when
+- [14:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=876) I move it around versus your standard
+- [14:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=878) button is something that will make your
+- [14:40](https://youtube.com/watch?v=Q9ty3eopOPs&t=880) website look better or cards that have
+- [14:42](https://youtube.com/watch?v=Q9ty3eopOPs&t=882) this, you know, sort of lighting
+- [14:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=884) animation that follows my mouse or
+- [14:45](https://youtube.com/watch?v=Q9ty3eopOPs&t=885) anything like that. Again, it's these
+- [14:47](https://youtube.com/watch?v=Q9ty3eopOPs&t=887) little minor details, these glowing
+- [14:49](https://youtube.com/watch?v=Q9ty3eopOPs&t=889) shadows. These are the sort of thing
+- [14:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=890) that elevates your web page, makes it
+- [14:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=892) look more premium, and just makes it
+- [14:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=894) look like you cared and you actually
+- [14:57](https://youtube.com/watch?v=Q9ty3eopOPs&t=897) tried. And if nothing else, what this
+- [14:59](https://youtube.com/watch?v=Q9ty3eopOPs&t=899) should do is it should just give you
+- [15:02](https://youtube.com/watch?v=Q9ty3eopOPs&t=902) inspiration. Because there's nothing
+- [15:04](https://youtube.com/watch?v=Q9ty3eopOPs&t=904) that says you can't copy a prompt for
+- [15:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=906) any of these components, whether it's
+- [15:07](https://youtube.com/watch?v=Q9ty3eopOPs&t=907) borders or heroes or whatever, and then
+- [15:10](https://youtube.com/watch?v=Q9ty3eopOPs&t=910) tweak it to your heart's desire with
+- [15:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=911) clawed code. It's not an all or nothing
+- [15:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=913) thing. And I think especially for those
+- [15:16](https://youtube.com/watch?v=Q9ty3eopOPs&t=916) of us who don't come from a web design
+- [15:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=917) background, I certainly don't. You know,
+- [15:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=920) you just don't know what you don't know.
+- [15:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=921) And being exposed to all these different
+- [15:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=923) ways that we can create a button kind of
+- [15:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=925) gets your mind moving in different
+- [15:26](https://youtube.com/watch?v=Q9ty3eopOPs&t=926) directions. And it helps you over time
+- [15:29](https://youtube.com/watch?v=Q9ty3eopOPs&t=929) the more you're exposed to it to kind of
+- [15:31](https://youtube.com/watch?v=Q9ty3eopOPs&t=931) develop your own taste and figure out
+- [15:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=932) what you like. But until you see these
+- [15:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=934) things, you just don't even know what
+- [15:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=936) you like. All you've seen is is what
+- [15:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=938) Claude Code gives you. So, highly
+- [15:39](https://youtube.com/watch?v=Q9ty3eopOPs&t=939) suggest you check this out. Virtually
+- [15:41](https://youtube.com/watch?v=Q9ty3eopOPs&t=941) all these things are free and you should
+- [15:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=944) be integrating at least some of the
+- [15:45](https://youtube.com/watch?v=Q9ty3eopOPs&t=945) smaller things like some of the ways
+- [15:47](https://youtube.com/watch?v=Q9ty3eopOPs&t=947) they do with buttons and cards into your
+- [15:49](https://youtube.com/watch?v=Q9ty3eopOPs&t=949) next web page. Now, the phrase you keep
+- [15:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=950) hearing over and over and over these
+- [15:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=952) days is AI has no taste. Well, what if
+- [15:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=954) we gave it taste as a skill? Well,
+- [15:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=956) that's what we attempt to do with tool
+- [15:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=958) number eight, and that is the taste
+- [16:00](https://youtube.com/watch?v=Q9ty3eopOPs&t=960) skill repo. And this is a collection of
+- [16:02](https://youtube.com/watch?v=Q9ty3eopOPs&t=962) skills that tries or attempts to give
+- [16:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=966) Claude code some measure of taste aka
+- [16:09](https://youtube.com/watch?v=Q9ty3eopOPs&t=969) moving away from the AI soft stuff which
+- [16:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=971) is the theme you see over and over and
+- [16:12](https://youtube.com/watch?v=Q9ty3eopOPs&t=972) over again. Now this taste skill
+- [16:14](https://youtube.com/watch?v=Q9ty3eopOPs&t=974) includes a number of different subsklls
+- [16:16](https://youtube.com/watch?v=Q9ty3eopOPs&t=976) like you see here and it has different
+- [16:18](https://youtube.com/watch?v=Q9ty3eopOPs&t=978) settings so you can kind of adjust how
+- [16:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=980) you know abstract it gets versus a
+- [16:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=983) normal AI generation. And what you see
+- [16:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=985) here is an example of some of the
+- [16:27](https://youtube.com/watch?v=Q9ty3eopOPs&t=987) websites that have been created using
+- [16:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=990) this skill. And right away you notice
+- [16:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=992) it's a little bit different, right? I
+- [16:35](https://youtube.com/watch?v=Q9ty3eopOPs&t=995) mean, it's not mind-blowing, but right
+- [16:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=996) away different. And different is good.
+- [16:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=998) The the less it looks like every single
+- [16:40](https://youtube.com/watch?v=Q9ty3eopOPs&t=1000) SAS template, the better. And a lot of
+- [16:42](https://youtube.com/watch?v=Q9ty3eopOPs&t=1002) these include things like scroll
+- [16:43](https://youtube.com/watch?v=Q9ty3eopOPs&t=1003) animations and, you know, we're not
+- [16:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=1006) seeing bento boxes over and over. So,
+- [16:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=1008) this is a cool sort of skill like on the
+- [16:51](https://youtube.com/watch?v=Q9ty3eopOPs&t=1011) margins that you might want to at least
+- [16:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=1012) try out and see how it does in
+- [16:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=1014) comparison to your normal cloud code
+- [16:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=1016) generations. Now, tool number nine will
+- [16:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=1018) seem very simple to a lot of you, but
+- [16:59](https://youtube.com/watch?v=Q9ty3eopOPs&t=1019) you would be blown away by the amount of
+- [17:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=1021) people who do not know that Google Fonts
+- [17:04](https://youtube.com/watch?v=Q9ty3eopOPs&t=1024) exists. Google Fonts is a giant free
+- [17:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=1028) repository of a trillion different fonts
+- [17:11](https://youtube.com/watch?v=Q9ty3eopOPs&t=1031) that you can use in literally all of
+- [17:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=1033) your coding projects. You do not need to
+- [17:14](https://youtube.com/watch?v=Q9ty3eopOPs&t=1034) be a slave to enter or whatever five
+- [17:18](https://youtube.com/watch?v=Q9ty3eopOPs&t=1038) fonts that Cloud Code uses for
+- [17:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=1040) everything. You can just go on Google
+- [17:22](https://youtube.com/watch?v=Q9ty3eopOPs&t=1042) fonts and it is broken down by
+- [17:24](https://youtube.com/watch?v=Q9ty3eopOPs&t=1044) appearance, by feeling,
+- [17:26](https://youtube.com/watch?v=Q9ty3eopOPs&t=1046) you know, by family and tell cloud code,
+- [17:28](https://youtube.com/watch?v=Q9ty3eopOPs&t=1048) use this, use that. Cloud code has
+- [17:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=1050) access to all these as well because
+- [17:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=1052) typography is a huge, huge part of how
+- [17:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=1056) your design looks and feels.
+- [17:38](https://youtube.com/watch?v=Q9ty3eopOPs&t=1058) Furthermore, you can use cloud code to
+- [17:40](https://youtube.com/watch?v=Q9ty3eopOPs&t=1060) help you search through Google fonts. So
+- [17:42](https://youtube.com/watch?v=Q9ty3eopOPs&t=1062) simply tell Cloud Code the type of
+- [17:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=1064) website you're building, the type of
+- [17:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=1066) feeling you're going for, and it should
+- [17:47](https://youtube.com/watch?v=Q9ty3eopOPs&t=1067) give you an example or five sort of
+- [17:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=1070) fonts to look at. You can actually see
+- [17:51](https://youtube.com/watch?v=Q9ty3eopOPs&t=1071) it in real time here. Again, you don't
+- [17:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=1074) want to just leave everything up to
+- [17:55](https://youtube.com/watch?v=Q9ty3eopOPs&t=1075) chance and just depends on how Claude
+- [17:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=1078) code feels that day as to what font it's
+- [18:00](https://youtube.com/watch?v=Q9ty3eopOPs&t=1080) going to give you because it's going to
+- [18:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=1081) feel like enter. It's always inter.
+- [18:03](https://youtube.com/watch?v=Q9ty3eopOPs&t=1083) Always. And last but not least, tool
+- [18:05](https://youtube.com/watch?v=Q9ty3eopOPs&t=1085) number 10, Playright CLI. Now, Playright
+- [18:07](https://youtube.com/watch?v=Q9ty3eopOPs&t=1087) CLI is not a design tool per se,
+- [18:10](https://youtube.com/watch?v=Q9ty3eopOPs&t=1090) although it's something we've already
+- [18:12](https://youtube.com/watch?v=Q9ty3eopOPs&t=1092) talked about in the past with skill UI
+- [18:13](https://youtube.com/watch?v=Q9ty3eopOPs&t=1093) and its ability to go out there and take
+- [18:14](https://youtube.com/watch?v=Q9ty3eopOPs&t=1094) screenshots of web pages. So, you can
+- [18:16](https://youtube.com/watch?v=Q9ty3eopOPs&t=1096) use it as sort of a research ideation
+- [18:19](https://youtube.com/watch?v=Q9ty3eopOPs&t=1099) tool. What I really want to focus on
+- [18:21](https://youtube.com/watch?v=Q9ty3eopOPs&t=1101) though is the idea of form and function
+- [18:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=1103) and that when we build things on the
+- [18:25](https://youtube.com/watch?v=Q9ty3eopOPs&t=1105) front end, think of something as simple
+- [18:26](https://youtube.com/watch?v=Q9ty3eopOPs&t=1106) as a form submission page, we are going
+- [18:28](https://youtube.com/watch?v=Q9ty3eopOPs&t=1108) to have to test it. We're going to have
+- [18:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=1110) to make sure these things actually work.
+- [18:32](https://youtube.com/watch?v=Q9ty3eopOPs&t=1112) And the easiest way to do that at scale
+- [18:34](https://youtube.com/watch?v=Q9ty3eopOPs&t=1114) is playright CLI, not playright MCP. CLI
+- [18:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=1116) is way more effective. And the way we do
+- [18:39](https://youtube.com/watch?v=Q9ty3eopOPs&t=1119) that is once you create your front of
+- [18:40](https://youtube.com/watch?v=Q9ty3eopOPs&t=1120) design stuff, all you have to do once
+- [18:42](https://youtube.com/watch?v=Q9ty3eopOPs&t=1122) you install the CLI tool is tell cloud
+- [18:44](https://youtube.com/watch?v=Q9ty3eopOPs&t=1124) code, I want you to test every single
+- [18:46](https://youtube.com/watch?v=Q9ty3eopOPs&t=1126) interaction on this web page using
+- [18:48](https://youtube.com/watch?v=Q9ty3eopOPs&t=1128) Playright CLI. It will create a bunch of
+- [18:50](https://youtube.com/watch?v=Q9ty3eopOPs&t=1130) different Chrome instances. You can have
+- [18:53](https://youtube.com/watch?v=Q9ty3eopOPs&t=1133) it be headed if you actually want to see
+- [18:54](https://youtube.com/watch?v=Q9ty3eopOPs&t=1134) them or headless so it's invisible. And
+- [18:56](https://youtube.com/watch?v=Q9ty3eopOPs&t=1136) it will test it all on its own. So, this
+- [18:58](https://youtube.com/watch?v=Q9ty3eopOPs&t=1138) makes the whole front end design process
+- [19:00](https://youtube.com/watch?v=Q9ty3eopOPs&t=1140) go way quicker because I think we've all
+- [19:02](https://youtube.com/watch?v=Q9ty3eopOPs&t=1142) been there where we added something and
+- [19:04](https://youtube.com/watch?v=Q9ty3eopOPs&t=1144) then we wanted to see it and then we
+- [19:05](https://youtube.com/watch?v=Q9ty3eopOPs&t=1145) want to test it and it just takes
+- [19:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=1146) forever. Especially things like form
+- [19:08](https://youtube.com/watch?v=Q9ty3eopOPs&t=1148) submissions where there's tons of edge
+- [19:09](https://youtube.com/watch?v=Q9ty3eopOPs&t=1149) cases with how some weirdo users is is
+- [19:12](https://youtube.com/watch?v=Q9ty3eopOPs&t=1152) going to go in there and actually put in
+- [19:14](https://youtube.com/watch?v=Q9ty3eopOPs&t=1154) their information. So, those are my 10
+- [19:17](https://youtube.com/watch?v=Q9ty3eopOPs&t=1157) favorite Claude code design related
+- [19:20](https://youtube.com/watch?v=Q9ty3eopOPs&t=1160) skills plugins and CLIs. I hope at least
+- [19:23](https://youtube.com/watch?v=Q9ty3eopOPs&t=1163) a few of those were new to you. I mean,
+- [19:24](https://youtube.com/watch?v=Q9ty3eopOPs&t=1164) skill UI better be like three people
+- [19:26](https://youtube.com/watch?v=Q9ty3eopOPs&t=1166) know about this thing. So, uh, but yeah,
+- [19:30](https://youtube.com/watch?v=Q9ty3eopOPs&t=1170) the the front end design space I just
+- [19:31](https://youtube.com/watch?v=Q9ty3eopOPs&t=1171) find super interesting with claude code
+- [19:33](https://youtube.com/watch?v=Q9ty3eopOPs&t=1173) because it's so bad at it from like a
+- [19:36](https://youtube.com/watch?v=Q9ty3eopOPs&t=1176) taste point of view. Although I hate
+- [19:37](https://youtube.com/watch?v=Q9ty3eopOPs&t=1177) saying even the word taste these days
+- [19:39](https://youtube.com/watch?v=Q9ty3eopOPs&t=1179) because it's all anyone talks about. But
+- [19:41](https://youtube.com/watch?v=Q9ty3eopOPs&t=1181) because Claude Code is bad at that, that
+- [19:43](https://youtube.com/watch?v=Q9ty3eopOPs&t=1183) should be kind of a good thing for you,
+- [19:45](https://youtube.com/watch?v=Q9ty3eopOPs&t=1185) the individual, right? Because that is a
+- [19:47](https://youtube.com/watch?v=Q9ty3eopOPs&t=1187) space now where you can differentiate
+- [19:49](https://youtube.com/watch?v=Q9ty3eopOPs&t=1189) yourself from the pack. And anytime you
+- [19:52](https://youtube.com/watch?v=Q9ty3eopOPs&t=1192) can differentiate yourself from
+- [19:53](https://youtube.com/watch?v=Q9ty3eopOPs&t=1193) everybody else who's hopping onto cloud
+- [19:55](https://youtube.com/watch?v=Q9ty3eopOPs&t=1195) code these days, that's a good thing.
+- [19:57](https://youtube.com/watch?v=Q9ty3eopOPs&t=1197) And these skills and tools can help you
+- [19:59](https://youtube.com/watch?v=Q9ty3eopOPs&t=1199) do that. So, as always, let me know what
+- [20:01](https://youtube.com/watch?v=Q9ty3eopOPs&t=1201) you thought. Make sure to check out
+- [20:02](https://youtube.com/watch?v=Q9ty3eopOPs&t=1202) Chase AI Plus if you want to get your
+- [20:04](https://youtube.com/watch?v=Q9ty3eopOPs&t=1204) hands on the master class. and I'll see
+- [20:06](https://youtube.com/watch?v=Q9ty3eopOPs&t=1206) you around.

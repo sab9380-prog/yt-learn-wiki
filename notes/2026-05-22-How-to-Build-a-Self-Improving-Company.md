@@ -1,0 +1,434 @@
+---
+title: "How to Build a Self-Improving Company with AI"
+source_url: https://youtube.com/watch?v=t-G67yKAHBQ
+video_id: t-G67yKAHBQ
+source_type: youtube
+lang: en
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# How to Build a Self-Improving Company with AI
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 이 영상은 AI 시대에 회사 조직을 근본적으로 재설계해야 한다고 주장합니다. 전통적인 로마 군단식 계층 구조(중간 관리층을 통한 정보 전달)에서 벗어나, AI가 중심이 되는 자기개선 루프 시스템으로 전환해야 한다고 설명합니다. 핵심은 회사의 모든 도메인 지식을 AI가 이해할 수 있도록 기록하고 정리하는 것입니다. YC에서는 모든 파트너 이메일, 슬랙 메시지, 오피스 아워를 기록하여 AI가 활용할 수 있게 했고, 이를 통해 사용자 매뉴얼을 자동으로 재생성하는 등의 성과를 얻었습니다. 미래 조직에서 인간은 AI 시스템 주변에서 현실 세계와 인터페이스하는 역할(고위험 상황, 윤리적 판단, 영업 등)을 담당하게 될 것이라고 전망합니다.
+- **Core Message:** AI 시대의 회사는 계층적 조직에서 자기개선하는 AI 중심 시스템으로 전환해야 하며, 모든 지식을 AI가 이해할 수 있도록 기록하고 구조화해야 한다.
+> 토큰을 소비하되 인력은 채용하지 마라 (burn tokens, not headcount)
+> 기록되지 않으면 AI에게는 일어나지 않은 일이다 (if it did not get recorded, it did not happen to your intelligence)
+> 당신이 잠든 사이에 회사가 스스로 개선되기 시작한다
+❗ YC는 최근 18개월 동안 직원당 매출이 5배 증가한 회사들을 보고 있다
+❗ YC는 3-4개월간 모든 파트너 이메일, 슬랙 메시지, 오피스 아워를 기록해 2,000시간 분량의 데이터를 축적했다
+❗ 주말에 AI를 활용해 기존 5-10년 된 사용자 매뉴얼을 150페이지 분량의 새로운 매뉴얼로 재생성했다
+
+## 📚 핵심 용어
+- **자기개선 AI 루프:** 센서-정책-도구-품질관리-학습의 5단계를 거쳐 인간 개입 없이 스스로 성능을 향상시키는 AI 시스템 / 운동선수가 경기 영상을 보고 실수를 분석해 다음 경기에서 자동으로 더 잘하는 것처럼, AI가 자신의 결과를 분석해 밤새 스스로 개선한다. / 기존 AI 도구는 인간이 더 잘하도록 돕는 조수 역할이지만, 자기개선 루프는 인간 없이도 스스로 문제를 찾아 해결하고 발전한다.
+- **조직 가독성(legibility):** 회사의 모든 지식과 활동을 AI가 이해하고 활용할 수 있는 형태로 기록하고 구조화하는 것 / 요리사의 비법을 머리속에만 두지 않고 레시피북에 상세히 적어서 누구든 따라할 수 있게 만드는 것처럼, 회사 노하우를 AI가 읽을 수 있게 정리한다. / 기존 지식관리는 사람이 찾아보기 위한 문서화였지만, 조직 가독성은 AI가 자동으로 처리하고 활용할 수 있는 구조화를 의미한다.
+- **회사 브레인:** 모든 이메일, 대화, 업무 지식이 통합되어 AI가 활용할 수 있는 중앙 집중식 지식 저장소 / 개인의 모든 경험과 지식이 뇌에 저장되듯이, 회사의 모든 정보와 노하우가 하나의 거대한 AI 뇌에 축적되어 언제든 활용할 수 있다. / 기존 데이터베이스는 정보를 저장만 했지만, 회사 브레인은 저장된 정보를 AI가 이해하고 추론하여 새로운 가치를 창출할 수 있다.
+
+## 🚀 실행 (Execute)
+- [ ] 회사의 모든 소통 채널(이메일, 슬랙, 회의록, 고객 문의)을 체계적으로 기록하고 저장하는 시스템 구축
+  - 담당: 나
+  - 이유: AI가 활용할 수 있는 조직 가독성 확보가 자기개선 루프 구축의 첫 단계이기 때문
+- [ ] 현재 업무 프로세스 중 자기개선 AI 루프로 전환 가능한 영역 3개 식별 및 파일럿 설계
+  - 담당: 나
+  - 이유: 고객 서비스, 제품 분석, 운영 최적화 등에서 실제 적용 가능한 자동화 지점을 찾아야 함
+- 자료: Claude 3.5 Sonnet (코드 생성 및 내부 도구 개발)
+- 자료: 음성 기록 도구 (회의 및 대화 자동 전사)
+- 자료: RAG 시스템 구축을 위한 벡터 데이터베이스
+- 자료: YC의 사용자 매뉴얼 재생성 사례 상세 분석
+- Timeline: 1주차: 데이터 수집 시스템 구축, 2주차: 파일럿 영역 선정 및 설계, 3-4주차: 첫 자기개선 루프 구현 및 테스트
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=t-G67yKAHBQ&t=0) This is based a little bit off a talk
+- [0:01](https://youtube.com/watch?v=t-G67yKAHBQ&t=1) Diana gave. There's a video up over the
+- [0:03](https://youtube.com/watch?v=t-G67yKAHBQ&t=3) weekend which is super cool. Um Jack
+- [0:04](https://youtube.com/watch?v=t-G67yKAHBQ&t=4) Dorsey was tweeting some stuff like two
+- [0:06](https://youtube.com/watch?v=t-G67yKAHBQ&t=6) or three weeks ago that I thought was
+- [0:08](https://youtube.com/watch?v=t-G67yKAHBQ&t=8) super cool and I've kind of um stolen a
+- [0:10](https://youtube.com/watch?v=t-G67yKAHBQ&t=10) bunch of those ideas and shove them into
+- [0:13](https://youtube.com/watch?v=t-G67yKAHBQ&t=13) here. This talk is like pretty
+- [0:14](https://youtube.com/watch?v=t-G67yKAHBQ&t=14) conceptual and high level about thinking
+- [0:17](https://youtube.com/watch?v=t-G67yKAHBQ&t=17) about how to build companies. So the
+- [0:19](https://youtube.com/watch?v=t-G67yKAHBQ&t=19) Roman legions were designed to
+- [0:23](https://youtube.com/watch?v=t-G67yKAHBQ&t=23) project power over two continents or
+- [0:27](https://youtube.com/watch?v=t-G67yKAHBQ&t=27) something from Rome at the center to
+- [0:30](https://youtube.com/watch?v=t-G67yKAHBQ&t=30) like these people on Hadron's wall up in
+- [0:31](https://youtube.com/watch?v=t-G67yKAHBQ&t=31) Scotland. And the idea was um this
+- [0:35](https://youtube.com/watch?v=t-G67yKAHBQ&t=35) nested hierarchies with consistent spans
+- [0:37](https://youtube.com/watch?v=t-G67yKAHBQ&t=37) of control and you had like named
+- [0:39](https://youtube.com/watch?v=t-G67yKAHBQ&t=39) individual with spans of control to pass
+- [0:42](https://youtube.com/watch?v=t-G67yKAHBQ&t=42) orders down and send information back up
+- [0:44](https://youtube.com/watch?v=t-G67yKAHBQ&t=44) the hierarchy. And if you think about
+- [0:46](https://youtube.com/watch?v=t-G67yKAHBQ&t=46) most companies today, they are organized
+- [0:48](https://youtube.com/watch?v=t-G67yKAHBQ&t=48) like a Roman legion where human beings
+- [0:51](https://youtube.com/watch?v=t-G67yKAHBQ&t=51) are the conduit for information flowing
+- [0:53](https://youtube.com/watch?v=t-G67yKAHBQ&t=53) up and down. And so Jack Dorsey's tweet
+- [0:55](https://youtube.com/watch?v=t-G67yKAHBQ&t=55) which I thought was great was it's like
+- [0:56](https://youtube.com/watch?v=t-G67yKAHBQ&t=56) this underlying assumption that
+- [0:58](https://youtube.com/watch?v=t-G67yKAHBQ&t=58) hierarchically organized companies are
+- [1:00](https://youtube.com/watch?v=t-G67yKAHBQ&t=60) the are the way that we should be
+- [1:02](https://youtube.com/watch?v=t-G67yKAHBQ&t=62) organizing like our economic units of
+- [1:04](https://youtube.com/watch?v=t-G67yKAHBQ&t=64) value. And I think AI basically breaks
+- [1:07](https://youtube.com/watch?v=t-G67yKAHBQ&t=67) that. If you talk to people a year ago
+- [1:09](https://youtube.com/watch?v=t-G67yKAHBQ&t=69) about how AI was useful, they talked
+- [1:13](https://youtube.com/watch?v=t-G67yKAHBQ&t=73) about productivity, like co-pilots,
+- [1:16](https://youtube.com/watch?v=t-G67yKAHBQ&t=76) making engineers 20% more productive,
+- [1:18](https://youtube.com/watch?v=t-G67yKAHBQ&t=78) adding co-pilots to workflows, shipping
+- [1:19](https://youtube.com/watch?v=t-G67yKAHBQ&t=79) more software. But I think that is
+- [1:22](https://youtube.com/watch?v=t-G67yKAHBQ&t=82) actually a broken way of thinking about
+- [1:25](https://youtube.com/watch?v=t-G67yKAHBQ&t=85) AI. That's like Pete had a great blog
+- [1:26](https://youtube.com/watch?v=t-G67yKAHBQ&t=86) post. We're basically just like taking
+- [1:28](https://youtube.com/watch?v=t-G67yKAHBQ&t=88) the old way of working and adding like a
+- [1:30](https://youtube.com/watch?v=t-G67yKAHBQ&t=90) more powerful engine onto it. And
+- [1:31](https://youtube.com/watch?v=t-G67yKAHBQ&t=91) instead of that, I think you can
+- [1:33](https://youtube.com/watch?v=t-G67yKAHBQ&t=93) reimagine like what a company is and how
+- [1:36](https://youtube.com/watch?v=t-G67yKAHBQ&t=96) it acts. And so as Gary's talking like
+- [1:38](https://youtube.com/watch?v=t-G67yKAHBQ&t=98) he I genuinely believe can produce more
+- [1:41](https://youtube.com/watch?v=t-G67yKAHBQ&t=101) code than an entire engineering team.
+- [1:44](https://youtube.com/watch?v=t-G67yKAHBQ&t=104) The thing that's really stuck with me is
+- [1:45](https://youtube.com/watch?v=t-G67yKAHBQ&t=105) this idea of like extracting the domain
+- [1:48](https://youtube.com/watch?v=t-G67yKAHBQ&t=108) knowledge from your company and defining
+- [1:50](https://youtube.com/watch?v=t-G67yKAHBQ&t=110) it as a as like context or a set of
+- [1:53](https://youtube.com/watch?v=t-G67yKAHBQ&t=113) skills or whatever you want to call it.
+- [1:55](https://youtube.com/watch?v=t-G67yKAHBQ&t=115) But like this idea that there's domain
+- [1:56](https://youtube.com/watch?v=t-G67yKAHBQ&t=116) knowledge or business knowledge or like
+- [1:58](https://youtube.com/watch?v=t-G67yKAHBQ&t=118) some knowhow that's inside the heads of
+- [2:01](https://youtube.com/watch?v=t-G67yKAHBQ&t=121) people and in Slack messages and in
+- [2:04](https://youtube.com/watch?v=t-G67yKAHBQ&t=124) emails and in notion. All of this like
+- [2:07](https://youtube.com/watch?v=t-G67yKAHBQ&t=127) information together defines how your
+- [2:09](https://youtube.com/watch?v=t-G67yKAHBQ&t=129) company works. And if you can make that
+- [2:12](https://youtube.com/watch?v=t-G67yKAHBQ&t=132) legible, you suddenly can can move from
+- [2:16](https://youtube.com/watch?v=t-G67yKAHBQ&t=136) this hierarchal organization to a sort
+- [2:18](https://youtube.com/watch?v=t-G67yKAHBQ&t=138) of intelligent AI powered organization
+- [2:21](https://youtube.com/watch?v=t-G67yKAHBQ&t=141) with AI native software. AI isn't the
+- [2:24](https://youtube.com/watch?v=t-G67yKAHBQ&t=144) some it's not something you bolt onto
+- [2:25](https://youtube.com/watch?v=t-G67yKAHBQ&t=145) the side of a company. It's not like a
+- [2:27](https://youtube.com/watch?v=t-G67yKAHBQ&t=147) tool you give to your engineers to make
+- [2:28](https://youtube.com/watch?v=t-G67yKAHBQ&t=148) them more productive. But I think you
+- [2:30](https://youtube.com/watch?v=t-G67yKAHBQ&t=150) can reimagine what a company is as a set
+- [2:33](https://youtube.com/watch?v=t-G67yKAHBQ&t=153) of recursive self-improving AI loops. I
+- [2:37](https://youtube.com/watch?v=t-G67yKAHBQ&t=157) think this is really, really, really
+- [2:38](https://youtube.com/watch?v=t-G67yKAHBQ&t=158) important because when it gets there, I
+- [2:40](https://youtube.com/watch?v=t-G67yKAHBQ&t=160) think the company starts to self-improve
+- [2:43](https://youtube.com/watch?v=t-G67yKAHBQ&t=163) even when you're sleeping. So, let me
+- [2:45](https://youtube.com/watch?v=t-G67yKAHBQ&t=165) give you an example. Diana's talks about
+- [2:47](https://youtube.com/watch?v=t-G67yKAHBQ&t=167) this as well. this AI loop. You start
+- [2:49](https://youtube.com/watch?v=t-G67yKAHBQ&t=169) with like a sensor layer, which is like
+- [2:51](https://youtube.com/watch?v=t-G67yKAHBQ&t=171) that's a fancy word, but really it might
+- [2:53](https://youtube.com/watch?v=t-G67yKAHBQ&t=173) be like emails from your customers.
+- [2:56](https://youtube.com/watch?v=t-G67yKAHBQ&t=176) Might be support tickets, code changes,
+- [2:59](https://youtube.com/watch?v=t-G67yKAHBQ&t=179) people canceling their subscription,
+- [3:02](https://youtube.com/watch?v=t-G67yKAHBQ&t=182) product telemetry. It's like sensor data
+- [3:05](https://youtube.com/watch?v=t-G67yKAHBQ&t=185) to get information from the outside
+- [3:06](https://youtube.com/watch?v=t-G67yKAHBQ&t=186) world. And then a a policy layer,
+- [3:08](https://youtube.com/watch?v=t-G67yKAHBQ&t=188) decision layer, like rules about what
+- [3:10](https://youtube.com/watch?v=t-G67yKAHBQ&t=190) you can do, what it has to ask a human
+- [3:12](https://youtube.com/watch?v=t-G67yKAHBQ&t=192) permission for, what it must log. A tool
+- [3:15](https://youtube.com/watch?v=t-G67yKAHBQ&t=195) layer, that's kind of Gary's skills and
+- [3:17](https://youtube.com/watch?v=t-G67yKAHBQ&t=197) code. Like the tool layer is Gary's
+- [3:19](https://youtube.com/watch?v=t-G67yKAHBQ&t=199) code. It's basically deterministic APIs,
+- [3:21](https://youtube.com/watch?v=t-G67yKAHBQ&t=201) things like query my database or look at
+- [3:24](https://youtube.com/watch?v=t-G67yKAHBQ&t=204) my calendar. Um, a set of tools that the
+- [3:28](https://youtube.com/watch?v=t-G67yKAHBQ&t=208) the AI can call a quality gate like that
+- [3:31](https://youtube.com/watch?v=t-G67yKAHBQ&t=211) might be evalistic checks, safety
+- [3:33](https://youtube.com/watch?v=t-G67yKAHBQ&t=213) filters, human review for high-risk
+- [3:35](https://youtube.com/watch?v=t-G67yKAHBQ&t=215) stuff. and then a learning mechanism.
+- [3:38](https://youtube.com/watch?v=t-G67yKAHBQ&t=218) It's like your system interacts with the
+- [3:40](https://youtube.com/watch?v=t-G67yKAHBQ&t=220) real world, picks up where it doesn't
+- [3:42](https://youtube.com/watch?v=t-G67yKAHBQ&t=222) work, and loops back into the top again.
+- [3:43](https://youtube.com/watch?v=t-G67yKAHBQ&t=223) And if you can run every single step of
+- [3:45](https://youtube.com/watch?v=t-G67yKAHBQ&t=225) that without human intervention, without
+- [3:47](https://youtube.com/watch?v=t-G67yKAHBQ&t=227) with minimal human intervention, your
+- [3:49](https://youtube.com/watch?v=t-G67yKAHBQ&t=229) system gets better and better and better
+- [3:51](https://youtube.com/watch?v=t-G67yKAHBQ&t=231) while you're sleeping. And I can give
+- [3:53](https://youtube.com/watch?v=t-G67yKAHBQ&t=233) you actual examples of this that are
+- [3:55](https://youtube.com/watch?v=t-G67yKAHBQ&t=235) live right now. We started with an agent
+- [3:57](https://youtube.com/watch?v=t-G67yKAHBQ&t=237) that you can ask and it it has
+- [3:58](https://youtube.com/watch?v=t-G67yKAHBQ&t=238) deterministic tools to query our
+- [4:00](https://youtube.com/watch?v=t-G67yKAHBQ&t=240) database. Pretty simple, like when did I
+- [4:02](https://youtube.com/watch?v=t-G67yKAHBQ&t=242) last have office hours with this
+- [4:04](https://youtube.com/watch?v=t-G67yKAHBQ&t=244) company? Then it got a little bit
+- [4:05](https://youtube.com/watch?v=t-G67yKAHBQ&t=245) smarter which was like for this company
+- [4:07](https://youtube.com/watch?v=t-G67yKAHBQ&t=247) I'm doing offices hours with right now
+- [4:09](https://youtube.com/watch?v=t-G67yKAHBQ&t=249) they need introductions for anyone in
+- [4:11](https://youtube.com/watch?v=t-G67yKAHBQ&t=251) petrochemicals or something and it could
+- [4:12](https://youtube.com/watch?v=t-G67yKAHBQ&t=252) query the database in different ways and
+- [4:14](https://youtube.com/watch?v=t-G67yKAHBQ&t=254) use rag and all sorts of stuff to like
+- [4:16](https://youtube.com/watch?v=t-G67yKAHBQ&t=256) come up with five relevant founders for
+- [4:18](https://youtube.com/watch?v=t-G67yKAHBQ&t=258) you to meet. But again this is like this
+- [4:19](https://youtube.com/watch?v=t-G67yKAHBQ&t=259) is a sidekick right this is an agent
+- [4:21](https://youtube.com/watch?v=t-G67yKAHBQ&t=261) this is like the old this is last year's
+- [4:23](https://youtube.com/watch?v=t-G67yKAHBQ&t=263) version of how AI is making me better as
+- [4:26](https://youtube.com/watch?v=t-G67yKAHBQ&t=266) a group partner. It's making me 20 or
+- [4:27](https://youtube.com/watch?v=t-G67yKAHBQ&t=267) 30% more effective. The aha moment for
+- [4:30](https://youtube.com/watch?v=t-G67yKAHBQ&t=270) me came when we put a monitoring agent
+- [4:33](https://youtube.com/watch?v=t-G67yKAHBQ&t=273) on top of that which looked at every
+- [4:35](https://youtube.com/watch?v=t-G67yKAHBQ&t=275) single query every single YC employee
+- [4:38](https://youtube.com/watch?v=t-G67yKAHBQ&t=278) was doing and saw when it worked and
+- [4:41](https://youtube.com/watch?v=t-G67yKAHBQ&t=281) when it did not work and when it did not
+- [4:43](https://youtube.com/watch?v=t-G67yKAHBQ&t=283) work it's like oh why not what would
+- [4:46](https://youtube.com/watch?v=t-G67yKAHBQ&t=286) have made this query work do we need
+- [4:48](https://youtube.com/watch?v=t-G67yKAHBQ&t=288) different deterministic tools do we need
+- [4:49](https://youtube.com/watch?v=t-G67yKAHBQ&t=289) to update the skills file do we need a
+- [4:51](https://youtube.com/watch?v=t-G67yKAHBQ&t=291) different database view do we need a new
+- [4:52](https://youtube.com/watch?v=t-G67yKAHBQ&t=292) index and this happen this literally
+- [4:54](https://youtube.com/watch?v=t-G67yKAHBQ&t=294) happens overnight now let's write the
+- [4:56](https://youtube.com/watch?v=t-G67yKAHBQ&t=296) code put in a merge request to the YC
+- [4:58](https://youtube.com/watch?v=t-G67yKAHBQ&t=298) codebase have an agent review it and
+- [5:00](https://youtube.com/watch?v=t-G67yKAHBQ&t=300) merge it and deploy it. So when a human
+- [5:02](https://youtube.com/watch?v=t-G67yKAHBQ&t=302) comes the next day to ask the same
+- [5:04](https://youtube.com/watch?v=t-G67yKAHBQ&t=304) query, it will now succeed. For me, that
+- [5:07](https://youtube.com/watch?v=t-G67yKAHBQ&t=307) was like the holy [ __ ] [ __ ] right?
+- [5:09](https://youtube.com/watch?v=t-G67yKAHBQ&t=309) That's not just AI making you 20 or 30%
+- [5:11](https://youtube.com/watch?v=t-G67yKAHBQ&t=311) more valuable. It is the AI going
+- [5:13](https://youtube.com/watch?v=t-G67yKAHBQ&t=313) through this loop to figure out how to
+- [5:16](https://youtube.com/watch?v=t-G67yKAHBQ&t=316) self-improve. And I think basically if
+- [5:18](https://youtube.com/watch?v=t-G67yKAHBQ&t=318) you can identify parts of your company
+- [5:20](https://youtube.com/watch?v=t-G67yKAHBQ&t=320) that work like this and eliminate as
+- [5:24](https://youtube.com/watch?v=t-G67yKAHBQ&t=324) have the human and kind of a monitoring
+- [5:26](https://youtube.com/watch?v=t-G67yKAHBQ&t=326) of supervisory capacity,
+- [5:28](https://youtube.com/watch?v=t-G67yKAHBQ&t=328) you can just throw tokens at this
+- [5:30](https://youtube.com/watch?v=t-G67yKAHBQ&t=330) problem and your company will get
+- [5:31](https://youtube.com/watch?v=t-G67yKAHBQ&t=331) better. And so other examples might be
+- [5:34](https://youtube.com/watch?v=t-G67yKAHBQ&t=334) if you have product analytics, having an
+- [5:36](https://youtube.com/watch?v=t-G67yKAHBQ&t=336) agent go through your product analytics
+- [5:37](https://youtube.com/watch?v=t-G67yKAHBQ&t=337) to to figure out what part of your sales
+- [5:40](https://youtube.com/watch?v=t-G67yKAHBQ&t=340) funnel is presenting the highest amount
+- [5:42](https://youtube.com/watch?v=t-G67yKAHBQ&t=342) of friction, researching best practices,
+- [5:44](https://youtube.com/watch?v=t-G67yKAHBQ&t=344) putting in place an AB test, running it
+- [5:46](https://youtube.com/watch?v=t-G67yKAHBQ&t=346) for a week, picking the best version,
+- [5:47](https://youtube.com/watch?v=t-G67yKAHBQ&t=347) and deploying it. Then doing that again
+- [5:49](https://youtube.com/watch?v=t-G67yKAHBQ&t=349) and again and again for your product.
+- [5:50](https://youtube.com/watch?v=t-G67yKAHBQ&t=350) Just have a self-optimizing like product
+- [5:52](https://youtube.com/watch?v=t-G67yKAHBQ&t=352) loop. Or you do it with customer service
+- [5:54](https://youtube.com/watch?v=t-G67yKAHBQ&t=354) queries. You have customer suggestions
+- [5:56](https://youtube.com/watch?v=t-G67yKAHBQ&t=356) coming in and in and in. you triage it
+- [5:59](https://youtube.com/watch?v=t-G67yKAHBQ&t=359) with a kind of you have to have an agent
+- [6:01](https://youtube.com/watch?v=t-G67yKAHBQ&t=361) which is like your chief product officer
+- [6:02](https://youtube.com/watch?v=t-G67yKAHBQ&t=362) and your chief technology officer who
+- [6:03](https://youtube.com/watch?v=t-G67yKAHBQ&t=363) make kind of judgment calls about okay
+- [6:05](https://youtube.com/watch?v=t-G67yKAHBQ&t=365) this is a suggestion we just don't want
+- [6:07](https://youtube.com/watch?v=t-G67yKAHBQ&t=367) to do we'll discard it but no this is a
+- [6:08](https://youtube.com/watch?v=t-G67yKAHBQ&t=368) suggestion which is now in line with our
+- [6:10](https://youtube.com/watch?v=t-G67yKAHBQ&t=370) road map um we can do it overnight let's
+- [6:13](https://youtube.com/watch?v=t-G67yKAHBQ&t=373) write the code let's deploy it let's
+- [6:14](https://youtube.com/watch?v=t-G67yKAHBQ&t=374) ship it to the customer without a human
+- [6:16](https://youtube.com/watch?v=t-G67yKAHBQ&t=376) being involved so I think if you can
+- [6:18](https://youtube.com/watch?v=t-G67yKAHBQ&t=378) think about each part of your company as
+- [6:21](https://youtube.com/watch?v=t-G67yKAHBQ&t=381) a self-improving like recursive AI loop
+- [6:23](https://youtube.com/watch?v=t-G67yKAHBQ&t=383) it becomes very very different to this
+- [6:24](https://youtube.com/watch?v=t-G67yKAHBQ&t=384) like hierarchically organized Roman
+- [6:26](https://youtube.com/watch?v=t-G67yKAHBQ&t=386) legion from a company so what So like if
+- [6:28](https://youtube.com/watch?v=t-G67yKAHBQ&t=388) you want to do this, what are the
+- [6:29](https://youtube.com/watch?v=t-G67yKAHBQ&t=389) implications? One is like burn tokens,
+- [6:31](https://youtube.com/watch?v=t-G67yKAHBQ&t=391) not headcount. We are seeing companies
+- [6:33](https://youtube.com/watch?v=t-G67yKAHBQ&t=393) get to demo day with about 5x more
+- [6:36](https://youtube.com/watch?v=t-G67yKAHBQ&t=396) revenue per employee than they did 18
+- [6:39](https://youtube.com/watch?v=t-G67yKAHBQ&t=399) months ago. And I think that's going to
+- [6:40](https://youtube.com/watch?v=t-G67yKAHBQ&t=400) continue to series A and series B. And
+- [6:43](https://youtube.com/watch?v=t-G67yKAHBQ&t=403) so I think you're going to be
+- [6:45](https://youtube.com/watch?v=t-G67yKAHBQ&t=405) constrained on token usage, not on
+- [6:47](https://youtube.com/watch?v=t-G67yKAHBQ&t=407) headcount really, really soon. The blunt
+- [6:49](https://youtube.com/watch?v=t-G67yKAHBQ&t=409) measure now is just like measuring
+- [6:50](https://youtube.com/watch?v=t-G67yKAHBQ&t=410) everyone's token usage, which is
+- [6:52](https://youtube.com/watch?v=t-G67yKAHBQ&t=412) obviously like dumb and gameable at the
+- [6:55](https://youtube.com/watch?v=t-G67yKAHBQ&t=415) extreme, but directionally I think is
+- [6:58](https://youtube.com/watch?v=t-G67yKAHBQ&t=418) correct. We're in the phase of like what
+- [7:01](https://youtube.com/watch?v=t-G67yKAHBQ&t=421) is possible right now and so everyone
+- [7:03](https://youtube.com/watch?v=t-G67yKAHBQ&t=423) should be experimenting to the max to
+- [7:05](https://youtube.com/watch?v=t-G67yKAHBQ&t=425) figure out what we can even do with this
+- [7:07](https://youtube.com/watch?v=t-G67yKAHBQ&t=427) crazy new intelligence we have. As soon
+- [7:09](https://youtube.com/watch?v=t-G67yKAHBQ&t=429) as you turn it into a leaderboard and
+- [7:10](https://youtube.com/watch?v=t-G67yKAHBQ&t=430) people get promoted or fired based on
+- [7:12](https://youtube.com/watch?v=t-G67yKAHBQ&t=432) it, obviously it gets gamed, obviously
+- [7:13](https://youtube.com/watch?v=t-G67yKAHBQ&t=433) that's dumb. But I think directionally
+- [7:16](https://youtube.com/watch?v=t-G67yKAHBQ&t=436) figuring out who in your organization is
+- [7:17](https://youtube.com/watch?v=t-G67yKAHBQ&t=437) token maxing, who is not is like a good
+- [7:20](https://youtube.com/watch?v=t-G67yKAHBQ&t=440) way to think about which employees you
+- [7:22](https://youtube.com/watch?v=t-G67yKAHBQ&t=442) should be spending your time with. I
+- [7:23](https://youtube.com/watch?v=t-G67yKAHBQ&t=443) think middle management is done. I just
+- [7:25](https://youtube.com/watch?v=t-G67yKAHBQ&t=445) don't think you need middle management
+- [7:26](https://youtube.com/watch?v=t-G67yKAHBQ&t=446) for this coordination problem. I think
+- [7:28](https://youtube.com/watch?v=t-G67yKAHBQ&t=448) AI should be doing it. And for me, there
+- [7:29](https://youtube.com/watch?v=t-G67yKAHBQ&t=449) are two roles. Jack Dorsey has three. I
+- [7:32](https://youtube.com/watch?v=t-G67yKAHBQ&t=452) actually don't like the third one, so I
+- [7:33](https://youtube.com/watch?v=t-G67yKAHBQ&t=453) deleted it. But there are two roles that
+- [7:35](https://youtube.com/watch?v=t-G67yKAHBQ&t=455) really, really matter for me. I think
+- [7:36](https://youtube.com/watch?v=t-G67yKAHBQ&t=456) everyone just has to be an IC now, a
+- [7:38](https://youtube.com/watch?v=t-G67yKAHBQ&t=458) builder, an operator. And I think
+- [7:40](https://youtube.com/watch?v=t-G67yKAHBQ&t=460) crucially having directly responsible
+- [7:42](https://youtube.com/watch?v=t-G67yKAHBQ&t=462) individuals to get anything done I think
+- [7:45](https://youtube.com/watch?v=t-G67yKAHBQ&t=465) you need a named human not a committee
+- [7:46](https://youtube.com/watch?v=t-G67yKAHBQ&t=466) not a group of people just a single
+- [7:48](https://youtube.com/watch?v=t-G67yKAHBQ&t=468) person and I think you can build
+- [7:50](https://youtube.com/watch?v=t-G67yKAHBQ&t=470) companies based on IC's effectively I
+- [7:52](https://youtube.com/watch?v=t-G67yKAHBQ&t=472) think just middle management is is over
+- [7:54](https://youtube.com/watch?v=t-G67yKAHBQ&t=474) so building this self-improving company
+- [7:56](https://youtube.com/watch?v=t-G67yKAHBQ&t=476) that's a dream and by the way I think
+- [7:58](https://youtube.com/watch?v=t-G67yKAHBQ&t=478) like people are at the bleeding edge of
+- [8:00](https://youtube.com/watch?v=t-G67yKAHBQ&t=480) this right now I'd be interested to see
+- [8:02](https://youtube.com/watch?v=t-G67yKAHBQ&t=482) where you all are but it feels like
+- [8:03](https://youtube.com/watch?v=t-G67yKAHBQ&t=483) people are like exploring the boundaries
+- [8:05](https://youtube.com/watch?v=t-G67yKAHBQ&t=485) here I'm not sure anyone has a truly
+- [8:08](https://youtube.com/watch?v=t-G67yKAHBQ&t=488) self-improving company in every
+- [8:09](https://youtube.com/watch?v=t-G67yKAHBQ&t=489) function. I might be wrong. You might
+- [8:11](https://youtube.com/watch?v=t-G67yKAHBQ&t=491) prove me wrong. What would I do? First
+- [8:13](https://youtube.com/watch?v=t-G67yKAHBQ&t=493) of all, this is really, really
+- [8:14](https://youtube.com/watch?v=t-G67yKAHBQ&t=494) important. I would make the entire
+- [8:16](https://youtube.com/watch?v=t-G67yKAHBQ&t=496) organization legible to AI. What does
+- [8:18](https://youtube.com/watch?v=t-G67yKAHBQ&t=498) that mean? It means you've got to record
+- [8:20](https://youtube.com/watch?v=t-G67yKAHBQ&t=500) everything.
+- [8:22](https://youtube.com/watch?v=t-G67yKAHBQ&t=502) Simplistically, all of our um partner
+- [8:25](https://youtube.com/watch?v=t-G67yKAHBQ&t=505) emails. Now, if you email a YC partner,
+- [8:27](https://youtube.com/watch?v=t-G67yKAHBQ&t=507) that email is in the YC database. Every
+- [8:30](https://youtube.com/watch?v=t-G67yKAHBQ&t=510) Slack message, every DM, every office
+- [8:32](https://youtube.com/watch?v=t-G67yKAHBQ&t=512) hour we've started recording for the
+- [8:33](https://youtube.com/watch?v=t-G67yKAHBQ&t=513) last three or four months. every single
+- [8:35](https://youtube.com/watch?v=t-G67yKAHBQ&t=515) thing that happens, if it is recorded,
+- [8:38](https://youtube.com/watch?v=t-G67yKAHBQ&t=518) it happened to the AI. If it did not get
+- [8:40](https://youtube.com/watch?v=t-G67yKAHBQ&t=520) recorded, it is it did not happen to
+- [8:42](https://youtube.com/watch?v=t-G67yKAHBQ&t=522) your intelligence. You know what I mean?
+- [8:44](https://youtube.com/watch?v=t-G67yKAHBQ&t=524) And so, I was talking with some founders
+- [8:46](https://youtube.com/watch?v=t-G67yKAHBQ&t=526) over here um just now and we're having
+- [8:48](https://youtube.com/watch?v=t-G67yKAHBQ&t=528) like really good conversations about
+- [8:49](https://youtube.com/watch?v=t-G67yKAHBQ&t=529) their company, but every conversation I
+- [8:52](https://youtube.com/watch?v=t-G67yKAHBQ&t=532) had, I was like, "Fuck, I need to be
+- [8:53](https://youtube.com/watch?v=t-G67yKAHBQ&t=533) recording this conversation." Because
+- [8:55](https://youtube.com/watch?v=t-G67yKAHBQ&t=535) some guy wanted an introduction to I
+- [8:57](https://youtube.com/watch?v=t-G67yKAHBQ&t=537) can't even remember who the introduction
+- [8:58](https://youtube.com/watch?v=t-G67yKAHBQ&t=538) was now. Who was that? I was talking to
+- [9:02](https://youtube.com/watch?v=t-G67yKAHBQ&t=542) someone about and I promise you an
+- [9:03](https://youtube.com/watch?v=t-G67yKAHBQ&t=543) introduction. said yes. And I said,
+- [9:04](https://youtube.com/watch?v=t-G67yKAHBQ&t=544) "Email me afterwards cuz I would I'm
+- [9:06](https://youtube.com/watch?v=t-G67yKAHBQ&t=546) going to forget this. I'm going to talk
+- [9:07](https://youtube.com/watch?v=t-G67yKAHBQ&t=547) to 20 people." Yeah. So, it needs to be
+- [9:09](https://youtube.com/watch?v=t-G67yKAHBQ&t=549) on my phone or a clip or or smart
+- [9:11](https://youtube.com/watch?v=t-G67yKAHBQ&t=551) glasses or we deck out every room with
+- [9:13](https://youtube.com/watch?v=t-G67yKAHBQ&t=553) like microphones. But basically,
+- [9:15](https://youtube.com/watch?v=t-G67yKAHBQ&t=555) everything needs to be recorded so that
+- [9:16](https://youtube.com/watch?v=t-G67yKAHBQ&t=556) it can be legible to the AI. And then,
+- [9:17](https://youtube.com/watch?v=t-G67yKAHBQ&t=557) as Gary talked about like diorization,
+- [9:20](https://youtube.com/watch?v=t-G67yKAHBQ&t=560) you cannot pump in 100,000 hours worth
+- [9:23](https://youtube.com/watch?v=t-G67yKAHBQ&t=563) of recordings into a context window. So,
+- [9:25](https://youtube.com/watch?v=t-G67yKAHBQ&t=565) you have to diorize it. You have to
+- [9:27](https://youtube.com/watch?v=t-G67yKAHBQ&t=567) basically aggregate it down, synthesize
+- [9:28](https://youtube.com/watch?v=t-G67yKAHBQ&t=568) it into the important parts, and then
+- [9:30](https://youtube.com/watch?v=t-G67yKAHBQ&t=570) give the AI breadcrumbs. It's like,
+- [9:32](https://youtube.com/watch?v=t-G67yKAHBQ&t=572) okay, so here's an example. Who's read
+- [9:34](https://youtube.com/watch?v=t-G67yKAHBQ&t=574) the user manual? The YC user manual.
+- [9:36](https://youtube.com/watch?v=t-G67yKAHBQ&t=576) Hopefully, everyone in this room has at
+- [9:37](https://youtube.com/watch?v=t-G67yKAHBQ&t=577) least opened the user manual at one
+- [9:38](https://youtube.com/watch?v=t-G67yKAHBQ&t=578) point in time, right? Like, it's fine.
+- [9:41](https://youtube.com/watch?v=t-G67yKAHBQ&t=581) It was written 5 to 10 years ago, most
+- [9:42](https://youtube.com/watch?v=t-G67yKAHBQ&t=582) of it. It's kind of out of date. So, Haj
+- [9:45](https://youtube.com/watch?v=t-G67yKAHBQ&t=585) thought uh last weekend, since now we've
+- [9:48](https://youtube.com/watch?v=t-G67yKAHBQ&t=588) got about 2,000 hours of recorded office
+- [9:50](https://youtube.com/watch?v=t-G67yKAHBQ&t=590) hours in the last 3 months, why don't we
+- [9:51](https://youtube.com/watch?v=t-G67yKAHBQ&t=591) regenerate the user manual? And so you
+- [9:54](https://youtube.com/watch?v=t-G67yKAHBQ&t=594) can click like you give it a set of
+- [9:55](https://youtube.com/watch?v=t-G67yKAHBQ&t=595) instructions. You basically diorize it
+- [9:57](https://youtube.com/watch?v=t-G67yKAHBQ&t=597) down, synthes like categorize it into
+- [10:00](https://youtube.com/watch?v=t-G67yKAHBQ&t=600) certain areas like fundraising, hiring,
+- [10:02](https://youtube.com/watch?v=t-G67yKAHBQ&t=602) co-founder disputes, whatever. And then
+- [10:04](https://youtube.com/watch?v=t-G67yKAHBQ&t=604) write me a new user manual. And by the
+- [10:06](https://youtube.com/watch?v=t-G67yKAHBQ&t=606) end of the weekend, he had 150 page user
+- [10:08](https://youtube.com/watch?v=t-G67yKAHBQ&t=608) manual, which is dramatically better
+- [10:10](https://youtube.com/watch?v=t-G67yKAHBQ&t=610) than the existing user manual. And now
+- [10:12](https://youtube.com/watch?v=t-G67yKAHBQ&t=612) we can also update it every single
+- [10:14](https://youtube.com/watch?v=t-G67yKAHBQ&t=614) month. So our user manual becomes
+- [10:16](https://youtube.com/watch?v=t-G67yKAHBQ&t=616) self-improving. Every new piece of
+- [10:18](https://youtube.com/watch?v=t-G67yKAHBQ&t=618) advice we give, it's compared with the
+- [10:20](https://youtube.com/watch?v=t-G67yKAHBQ&t=620) existing user manual and either
+- [10:21](https://youtube.com/watch?v=t-G67yKAHBQ&t=621) incorporated or thrown away. So the user
+- [10:23](https://youtube.com/watch?v=t-G67yKAHBQ&t=623) manual becomes this up-to-date living
+- [10:25](https://youtube.com/watch?v=t-G67yKAHBQ&t=625) brain of the advice we give to founders.
+- [10:28](https://youtube.com/watch?v=t-G67yKAHBQ&t=628) And obviously it doesn't stop as a user
+- [10:29](https://youtube.com/watch?v=t-G67yKAHBQ&t=629) manual. You then pump it in as context
+- [10:31](https://youtube.com/watch?v=t-G67yKAHBQ&t=631) to an AI agent and suddenly you can ask
+- [10:33](https://youtube.com/watch?v=t-G67yKAHBQ&t=633) a super intelligent AI and get the
+- [10:35](https://youtube.com/watch?v=t-G67yKAHBQ&t=635) combined wisdom of 16 YC partners in
+- [10:37](https://youtube.com/watch?v=t-G67yKAHBQ&t=637) one,
+- [10:39](https://youtube.com/watch?v=t-G67yKAHBQ&t=639) but only if it's legible. So you have to
+- [10:42](https://youtube.com/watch?v=t-G67yKAHBQ&t=642) record everything. The second point is
+- [10:43](https://youtube.com/watch?v=t-G67yKAHBQ&t=643) kind of the same, right? Like if it
+- [10:44](https://youtube.com/watch?v=t-G67yKAHBQ&t=644) creates an artifact that can
+- [10:45](https://youtube.com/watch?v=t-G67yKAHBQ&t=645) self-improve, it's legible. If it
+- [10:47](https://youtube.com/watch?v=t-G67yKAHBQ&t=647) doesn't, you throw it away. The third
+- [10:49](https://youtube.com/watch?v=t-G67yKAHBQ&t=649) point then is that every function can
+- [10:52](https://youtube.com/watch?v=t-G67yKAHBQ&t=652) generate this used to say dashboards.
+- [10:54](https://youtube.com/watch?v=t-G67yKAHBQ&t=654) It's not just dashboards. It's on demand
+- [10:55](https://youtube.com/watch?v=t-G67yKAHBQ&t=655) software. Codeex 55 is now good enough.
+- [10:57](https://youtube.com/watch?v=t-G67yKAHBQ&t=657) You can oneshot most simple inter like
+- [11:00](https://youtube.com/watch?v=t-G67yKAHBQ&t=660) most internal software dashboards you
+- [11:03](https://youtube.com/watch?v=t-G67yKAHBQ&t=663) can oneshot to a pretty high level of
+- [11:04](https://youtube.com/watch?v=t-G67yKAHBQ&t=664) quality. I tried it over the weekend on
+- [11:06](https://youtube.com/watch?v=t-G67yKAHBQ&t=666) a bunch of our stuff. It's just unreal.
+- [11:09](https://youtube.com/watch?v=t-G67yKAHBQ&t=669) So all of your internal operations teams
+- [11:11](https://youtube.com/watch?v=t-G67yKAHBQ&t=671) should be sitting on this layer of like
+- [11:14](https://youtube.com/watch?v=t-G67yKAHBQ&t=674) kind of intelligence understanding and
+- [11:16](https://youtube.com/watch?v=t-G67yKAHBQ&t=676) then creating their own dashboards and
+- [11:18](https://youtube.com/watch?v=t-G67yKAHBQ&t=678) their own workflows. And I would see
+- [11:20](https://youtube.com/watch?v=t-G67yKAHBQ&t=680) that those as entirely disposable. I
+- [11:23](https://youtube.com/watch?v=t-G67yKAHBQ&t=683) would very preciously store all the
+- [11:25](https://youtube.com/watch?v=t-G67yKAHBQ&t=685) data. So as Gary said, he puts it all
+- [11:28](https://youtube.com/watch?v=t-G67yKAHBQ&t=688) all of his emails in markdown. Never
+- [11:29](https://youtube.com/watch?v=t-G67yKAHBQ&t=689) throw anything away, but then treat the
+- [11:32](https://youtube.com/watch?v=t-G67yKAHBQ&t=692) the software as ephemeral. You can you
+- [11:34](https://youtube.com/watch?v=t-G67yKAHBQ&t=694) can generate it, you can regenerate it.
+- [11:36](https://youtube.com/watch?v=t-G67yKAHBQ&t=696) The valuable part is like the
+- [11:38](https://youtube.com/watch?v=t-G67yKAHBQ&t=698) comprehension inside people's heads of
+- [11:39](https://youtube.com/watch?v=t-G67yKAHBQ&t=699) like this is how the function works.
+- [11:42](https://youtube.com/watch?v=t-G67yKAHBQ&t=702) This is how we run a YC event. Whatever
+- [11:44](https://youtube.com/watch?v=t-G67yKAHBQ&t=704) the software to actually run the event,
+- [11:45](https://youtube.com/watch?v=t-G67yKAHBQ&t=705) you can generate for the event. You can
+- [11:47](https://youtube.com/watch?v=t-G67yKAHBQ&t=707) throw it away. The mo the models get
+- [11:48](https://youtube.com/watch?v=t-G67yKAHBQ&t=708) smarter in a month or two. Throw the
+- [11:50](https://youtube.com/watch?v=t-G67yKAHBQ&t=710) software away. Give it your original set
+- [11:52](https://youtube.com/watch?v=t-G67yKAHBQ&t=712) of instructions and regenerate the
+- [11:54](https://youtube.com/watch?v=t-G67yKAHBQ&t=714) software. So I think the business
+- [11:55](https://youtube.com/watch?v=t-G67yKAHBQ&t=715) context and and skills are the valuable
+- [11:58](https://youtube.com/watch?v=t-G67yKAHBQ&t=718) part. I think the software on top of it
+- [12:00](https://youtube.com/watch?v=t-G67yKAHBQ&t=720) is ephemeral. So what what are humans
+- [12:03](https://youtube.com/watch?v=t-G67yKAHBQ&t=723) for in this world? I think basically
+- [12:05](https://youtube.com/watch?v=t-G67yKAHBQ&t=725) we're talking about a company brain and
+- [12:07](https://youtube.com/watch?v=t-G67yKAHBQ&t=727) I know a bunch of people in this room
+- [12:08](https://youtube.com/watch?v=t-G67yKAHBQ&t=728) are building this but the bit in the
+- [12:10](https://youtube.com/watch?v=t-G67yKAHBQ&t=730) middle like all of your data, all of
+- [12:12](https://youtube.com/watch?v=t-G67yKAHBQ&t=732) your emails, your DMs, the skills, the
+- [12:15](https://youtube.com/watch?v=t-G67yKAHBQ&t=735) knowhow that is like the company brain
+- [12:18](https://youtube.com/watch?v=t-G67yKAHBQ&t=738) and I think the humans sit around the
+- [12:19](https://youtube.com/watch?v=t-G67yKAHBQ&t=739) edge of this interfacing with the real
+- [12:21](https://youtube.com/watch?v=t-G67yKAHBQ&t=741) world. So it's where this intelligence
+- [12:24](https://youtube.com/watch?v=t-G67yKAHBQ&t=744) makes contact with reality. Human beings
+- [12:26](https://youtube.com/watch?v=t-G67yKAHBQ&t=746) reach into places the models can't go
+- [12:28](https://youtube.com/watch?v=t-G67yKAHBQ&t=748) yet. That might be like a conference. It
+- [12:32](https://youtube.com/watch?v=t-G67yKAHBQ&t=752) might be a I'm trying to think of
+- [12:33](https://youtube.com/watch?v=t-G67yKAHBQ&t=753) examples. I would say a phone call, but
+- [12:34](https://youtube.com/watch?v=t-G67yKAHBQ&t=754) I think the AI can reach into phone
+- [12:36](https://youtube.com/watch?v=t-G67yKAHBQ&t=756) calls pretty easily now. Um I think it's
+- [12:38](https://youtube.com/watch?v=t-G67yKAHBQ&t=758) like novel situations, ethical
+- [12:40](https://youtube.com/watch?v=t-G67yKAHBQ&t=760) considerations, high stakes moments, you
+- [12:42](https://youtube.com/watch?v=t-G67yKAHBQ&t=762) know, it's like it's where the founder
+- [12:43](https://youtube.com/watch?v=t-G67yKAHBQ&t=763) comes to us and is like thinking about
+- [12:47](https://youtube.com/watch?v=t-G67yKAHBQ&t=767) breaking up with their co-founder,
+- [12:48](https://youtube.com/watch?v=t-G67yKAHBQ&t=768) right? It's like those real high stakes,
+- [12:50](https://youtube.com/watch?v=t-G67yKAHBQ&t=770) high emotion moments where you really
+- [12:52](https://youtube.com/watch?v=t-G67yKAHBQ&t=772) want a human being. I think that's where
+- [12:54](https://youtube.com/watch?v=t-G67yKAHBQ&t=774) the human fits for all of you like sales
+- [12:57](https://youtube.com/watch?v=t-G67yKAHBQ&t=777) conversations. I think that's a human
+- [12:59](https://youtube.com/watch?v=t-G67yKAHBQ&t=779) being in the room for the next 20 years.
+- [13:01](https://youtube.com/watch?v=t-G67yKAHBQ&t=781) So the humans live I think around the
+- [13:02](https://youtube.com/watch?v=t-G67yKAHBQ&t=782) edge and I'm over time and cool vision
+- [13:05](https://youtube.com/watch?v=t-G67yKAHBQ&t=785) should bullhorn me. I will leave you
+- [13:07](https://youtube.com/watch?v=t-G67yKAHBQ&t=787) this one question. If you were building
+- [13:09](https://youtube.com/watch?v=t-G67yKAHBQ&t=789) your company today would you start it in
+- [13:12](https://youtube.com/watch?v=t-G67yKAHBQ&t=792) this shape for most of you you're small
+- [13:15](https://youtube.com/watch?v=t-G67yKAHBQ&t=795) enough to build it right and so I don't
+- [13:17](https://youtube.com/watch?v=t-G67yKAHBQ&t=797) think you have any excuse and I know
+- [13:19](https://youtube.com/watch?v=t-G67yKAHBQ&t=799) there are a few of you who are in the
+- [13:21](https://youtube.com/watch?v=t-G67yKAHBQ&t=801) process of ripping up and rebuilding
+- [13:23](https://youtube.com/watch?v=t-G67yKAHBQ&t=803) your company. So with that I will stop
+- [13:25](https://youtube.com/watch?v=t-G67yKAHBQ&t=805) um and we'll hand over to Pete. Thank
+- [13:26](https://youtube.com/watch?v=t-G67yKAHBQ&t=806) you for listening.
