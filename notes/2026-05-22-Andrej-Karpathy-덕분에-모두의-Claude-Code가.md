@@ -10,8 +10,6 @@ status: active
 ---
 # Andrej Karpathy 덕분에 모두의 Claude Code가 10배 강해졌습니다
 
-[[_category-일반학습]]
-
 ## 🧠 이해 (Understand)
 - **Summary:** 안드레이 카파티가 제안한 RAM 지식 위키 시스템을 5분만에 구축하는 방법을 설명합니다. 복잡한 벡터 데이터베이스나 RAG 없이 마크다운 파일과 Claude로 개인 지식 베이스를 만들어 YouTube 영상, 문서, 연구 자료들을 자동으로 정리하고 연결합니다. Obsidian으로 시각화하면 지식 간 관계와 패턴을 그래프로 볼 수 있고, 기존 대화형 AI와 달리 지식이 누적되어 '이자'처럼 쌓입니다. 토큰 비용도 95% 절약되며, 개인~중소 규모 프로젝트에 매우 효과적입니다.
 - **Core Message:** 복잡한 인프라 없이 마크다운과 Claude만으로 지식이 누적되는 개인 위키 시스템을 구축할 수 있다.
@@ -38,6 +36,9 @@ status: active
 - 자료: 안드레이 카파티의 원본 RAM 지식 아이디어 트위터 글
 - 자료: Claude Pro 또는 API 접근권한
 - Timeline: 1) Obsidian 설치 → 2) 관심 주제 자료 5-10개 수집 → 3) Claude로 위키 생성 → 4) 관계 그래프 확인 → 5) 추가 자료로 확장 테스트
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=nldkPgp3aIA&t=0) 지금 보시는 건 제 유튜브 영상
