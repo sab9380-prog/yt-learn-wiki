@@ -5,12 +5,10 @@ video_id: zElKhlFkqU4
 source_type: youtube
 lang: en
 analyzed: 2026-05-22
-category: 일반학습
+category: Picks전략
 status: active
 ---
 # 5 Skills to Build an AI Operating System Like The 1% (Full Guide)
-
-[[_category-일반학습]]
 
 ## 🧠 이해 (Understand)
 - **Summary:** AI 에이전트와 도구의 성능을 극대화하려면 '세컨드 브레인'(AI 운영 체제)을 구축해야 한다. 이는 개인과 비즈니스의 모든 맥락을 실시간으로 AI에 제공하는 메모리 시스템이다. 영상에서는 Claude Skills 5개(OS Setup, OS Operator, OS Optimizer, Team OS, OS MCP)를 제공하여 Obsidian 기반 세컨드 브레인을 쉽게 구축할 수 있도록 안내한다. 초기 설정부터 실시간 업데이트, 토큰 최적화, 팀 공유, 자율적 운영까지 전체 워크플로를 자동화할 수 있다. 이 시스템은 사용할수록 맥락이 축적되어 AI가 점점 더 강력해지는 복리 효과를 만든다.
@@ -41,6 +39,9 @@ status: active
 - 자료: Relay Plugin (팀 동기화용)
 - 자료: Fireflies (회의 전사 도구)
 - Timeline: 1단계: Obsidian 설치 (오늘) → 2단계: OS Setup으로 초기 브레인 구축 (이번 주) → 3단계: 일주일 사용 후 OS Operator로 자동화 설정 → 4단계: 2주 후 OS Optimizer로 최적화
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=zElKhlFkqU4&t=0) I believe setting up a second brain or
