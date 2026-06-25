@@ -20,6 +20,12 @@ status: active
 ❗ The system creates a shared brain where all tools (Hermes, Claude code, dashboard) read from one registry
 ❗ You can work on your laptop with Claude code and seamlessly continue on mobile with the same mapped understanding
 
+## 📚 핵심 용어
+- **Graphify:** 코드베이스를 분석하여 컴포넌트 간의 관계를 시각화한 지식 그래프를 생성하는 도구 / 외국 여행에서 번역기와 같다 - 코드라는 '외국어'를 Claude가 이해할 수 있는 '지도'로 변환해준다 / 기존 방식은 매번 전체 코드를 읽어야 했다면, Graphify는 요약된 맵을 제공해 필요한 부분만 빠르게 찾을 수 있게 해준다
+- **God nodes:** 프로젝트에서 가장 중요하고 다른 많은 파일들이 의존하는 핵심 파일들 / 건물의 기둥과 같다 - 이것들이 변경되면 전체 구조에 영향을 미친다 / 일반 파일은 잎사귀라면, God nodes는 나무의 뿌리나 줄기 같은 존재
+- **Agentic Operating System:** 여러 AI 도구들을 하나로 통합하여 자동으로 작업을 수행할 수 있는 운영 시스템 / 스마트홈 허브처럼 모든 기기를 하나의 앱에서 제어할 수 있게 해주는 것 / 개별 도구를 따로 사용하는 것 vs 모든 것이 연결된 하나의 생태계에서 작업하는 것
+- **Token optimization:** AI가 처리해야 하는 텍스트 양을 줄여서 비용과 시간을 절약하는 것 / 책 전체를 읽는 대신 목차와 요약본을 보고 필요한 부분만 찾아 읽는 것 / Raw 코드 직접 읽기 vs 구조화된 요약 정보 활용하기
+
 ## 🚀 실행 (Execute)
 
 ## 🔗 연결
