@@ -10,8 +10,6 @@ status: active
 ---
 # The 7 Levels of Claude Code & RAG
 
-[[_category-일반학습]]
-
 ## 🧠 이해 (Understand)
 - **Summary:** 이 영상은 Claude Code에서 메모리 문제를 해결하는 7단계 RAG 시스템 로드맵을 제시합니다. 레벨 1(자동메모리)부터 레벨 7(Agent RAG)까지 각 단계별로 특징, 필요한 기술, 함정, 그리고 다음 단계로 넘어가는 조건을 설명합니다. 중요한 점은 대부분의 사용자에게는 Obsidian(레벨 4)으로 충분하며, 무조건 최고 레벨을 목표로 할 필요가 없다는 것입니다. 각 단계는 문서 규모와 복잡성에 따라 선택해야 하며, 간단한 것부터 시작해서 필요에 따라 점진적으로 업그레이드하는 것이 현명합니다.
 - **Core Message:** Claude Code의 메모리 문제는 단계적 RAG 시스템으로 해결할 수 있으며, 대부분의 사용자에게는 Obsidian 수준이면 충분하다.
@@ -41,15 +39,8 @@ status: active
 - 자료: Chase AI Plus Claude Code Masterclass
 - Timeline: 1단계: Context 관리 습관 개선 → 2단계: Obsidian 실험 → 3단계: 필요시 Graph RAG 검토 순으로 진행. 각 단계에서 충분한지 확인 후 다음 단계로 이동.
 
-## ⏰ 타임스탬프
-- [0:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=0) — RAG 7단계 로드맵 소개 및 Context Rot 문제 정의
-- [5:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=300) — 레벨 1-2: 자동메모리와 claude.md 파일 활용법
-- [15:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=900) — 레벨 4: Obsidian을 활용한 지식베이스 구축 방법
-- [30:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=1800) — 레벨 5-6: Naive RAG vs Graph RAG 비교 및 성능 차이
-- [40:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=2400) — 레벨 7: 멀티모달 Agent RAG 시스템과 실무 적용 고려사항
-- [0:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=0) — Impact/Cover는 AI의 평범한 디자인을 체계적인 워크플로와 안티 패턴 회피로 브랜드 아이덴티티가 있는 고품질 UI로 변화시키는 진화된 디자인 스킬 시스템입니다.
-- [0:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=0) — 앤트로픽의 OAuth 금지 정책에 대한 대안으로 디스코드 기반 클로드 코드 채널을 활용하여 합법적이고 효율적인 AI 워크플로우를 구축할 수 있다.
-- [0:00](https://www.youtube.com/watch?v=kQu5pWKS8GA&t=0) — 클로드의 컨텍스트를 깔끔하게 관리하면 AI가 바보처럼 행동하는 문제의 80%를 해결할 수 있다.
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=0) Let's solve the problem of clawed code
