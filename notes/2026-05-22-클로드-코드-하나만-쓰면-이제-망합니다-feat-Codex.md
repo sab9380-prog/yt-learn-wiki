@@ -1,0 +1,263 @@
+---
+title: "클로드 코드 하나만 쓰면 이제 망합니다(feat. Codex)"
+source_url: https://youtube.com/watch?v=f0hcByvsyjU
+video_id: f0hcByvsyjU
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# 클로드 코드 하나만 쓰면 이제 망합니다(feat. Codex)
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** 클로드 코드의 불안정성과 성능 저하 문제로 인해 코덱스를 함께 사용하는 개발자들이 늘고 있다. 오픈AI에서 출시한 코덱스 플러그인 CC를 통해 클로드 코드 내에서 바로 코덱스를 호출할 수 있게 되면서 이런 흐름이 가속화되었다. 서로 다른 회사의 모델은 다른 부분에서 실수하므로 상호 보완이 가능하다. 코덱스 레스큐 기능으로 막힌 상황에서 구조 요청을 할 수 있고, 오프스로 플래닝하고 소넷으로 구현하는 비용 효율적 조합도 인기다. 오프스가 플랜을 짜고 코덱스가 adversarial review를 하며 최종 구현 후 다시 코덱스 리뷰를 하는 워크플로우가 효과적이다.
+- **Core Message:** AI 개발에서 단일 모델보다는 서로 다른 AI 모델을 조합하여 각각의 약점을 보완하는 워크플로우가 더 안정적이고 효과적이다.
+> 서로 다른 회사가 만든 모델은 서로 다른 곳에서 실수해요
+> 같은 학원에서 같은 강사한테 배운 두 학생이 시험 보면 틀리는 문제도 비슷하잖아요
+> 플랜 단계에서 잡으면 코드 짜기 전니까 수정 비용이 거의 안 들거든요
+❗ 2024년 2월-3월 사이 클로드 코드 성능이 일시적으로 떨어진 시기가 있었고, 앤트로픽이 사후 보고서를 발표했음
+❗ 코딩 작업에서 진짜 머리 써야 되는 설계 부분은 전체 토큰의 10-20%에 불과함
+❗ 오프스 플랜 모드를 사용하면 비용이 1.50달러에서 0.48달러로 1/3 수준으로 줄어듦
+
+## 📚 핵심 용어
+- **코덱스 레스큐:** 막힌 개발 상황에서 코덱스에게 문제 해결을 요청하는 기능. / 의사가 막힌 수술에서 다른 전문의에게 응급 컨설팅을 요청하는 것과 같다. 현장을 떠나지 않고도 즉시 도움을 받는다. / 새 세션 시작은 처음부터 다시 하는 것, 레스큐는 막힌 지점에서 바로 도움받는 것. 컨텍스트 유지가 핵심 차이다.
+- **adversarial review:** 설계나 플랜을 의심하고 비판적으로 검토하는 방식의 리뷰. / 변호사가 상대방 논리의 허점을 찾아 반박하듯이, AI가 플랜의 문제점을 적극적으로 찾아내는 것이다. / 일반 코드 리뷰는 문법 검사, adversarial review는 설계 자체를 의심. 발견 시점이 구현 전이라 수정 비용이 낮다.
+- **모델별 오프스 플랜:** 오프스로 설계하고 소넷으로 구현하는 비용 효율적 역할 분담 모드. / 베테랑 건축가가 설계도를 그리고 숙련공이 시공하는 것과 같다. 각자 잘하는 영역에 집중한다. / 전체 오프스 사용은 모든 걸 베테랑이 하는 것, 오프스 플랜은 설계만 베테랑이 하는 것. 비용이 1/3로 줄어든다.
+
+## 🚀 실행 (Execute)
+- [ ] 클로드 코드에 코덱스 플러그인 CC 설치하고 기본 설정 완료하기
+  - 담당: 나
+  - 이유: 단일 AI 모델의 한계를 보완하고 더 안정적인 개발 워크플로우를 구축하기 위해
+- [ ] 다음 개발 프로젝트에서 오프스→코덱스 adversarial review→구현→코덱스 리뷰 워크플로우 테스트해보기
+  - 담당: 나
+  - 이유: 플랜 단계에서 문제를 미리 잡아 구현 후 수정 비용을 절약하고 품질을 높이기 위해
+- 자료: 오픈AI 코덱스 플러그인 CC (클로드 코드 플러그인 마켓플레이스)
+- 자료: ChatGPT Plus 구독 (월 20달러)
+- 자료: 클로드 코드 모델별 오프스 플랜 모드 문서
+- Timeline: 1주차: 플러그인 설치 및 설정, 2주차: 실제 프로젝트에 워크플로우 적용 테스트, 이후: 효과 분석 후 정규 워크플로우로 채택 여부 결정
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=f0hcByvsyjU&t=0) 요즘 클러드 코드 쓰시는 분들
+- [0:01](https://youtube.com/watch?v=f0hcByvsyjU&t=1) 보면요. 클러드 코드 단독으로 쓰시는
+- [0:03](https://youtube.com/watch?v=f0hcByvsyjU&t=3) 분들이 굉장히 줄어들었어요. 요즘은
+- [0:05](https://youtube.com/watch?v=f0hcByvsyjU&t=5) 클러드 코드의 어떤 불확식성
+- [0:06](https://youtube.com/watch?v=f0hcByvsyjU&t=6) 때문이라든지 혹은 가이드를 안
+- [0:08](https://youtube.com/watch?v=f0hcByvsyjU&t=8) 지킨다는 문제 때문에 코덱스를 같이
+- [0:10](https://youtube.com/watch?v=f0hcByvsyjU&t=10) 뛰어두거나 아예 코덱스로 리뷰를
+- [0:12](https://youtube.com/watch?v=f0hcByvsyjU&t=12) 돌리는 케이스가 굉장히 많아졌거든요.
+- [0:14](https://youtube.com/watch?v=f0hcByvsyjU&t=14) 심지어 클로드 코드의 그런 성능 저화
+- [0:17](https://youtube.com/watch?v=f0hcByvsyjU&t=17) 때문에 코덱스로 올 옮겨 가는 분들도
+- [0:19](https://youtube.com/watch?v=f0hcByvsyjU&t=19) 굉장히 많아졌어요. 오늘은 그 흐름이
+- [0:22](https://youtube.com/watch?v=f0hcByvsyjU&t=22) 왜 생겼는지 어떻게 이런 흐름이
+- [0:24](https://youtube.com/watch?v=f0hcByvsyjU&t=24) 생겼는지에 대해 가지고 한번
+- [0:25](https://youtube.com/watch?v=f0hcByvsyjU&t=25) 알아볼게요. 생각해 보면요. 한동안
+- [0:27](https://youtube.com/watch?v=f0hcByvsyjU&t=27) 클러드 코드만 띄어 놓고 작업하시던
+- [0:29](https://youtube.com/watch?v=f0hcByvsyjU&t=29) 분들 많으셨을 거예요. 저도
+- [0:30](https://youtube.com/watch?v=f0hcByvsyjU&t=30) 그랬어요. 처음엔 결과물이 좋으니까
+- [0:32](https://youtube.com/watch?v=f0hcByvsyjU&t=32) 이거 하나로 다 되겠다 싶었거든요.
+- [0:34](https://youtube.com/watch?v=f0hcByvsyjU&t=34) 근데 쓰다 보면 좀 불안한 순간들이
+- [0:36](https://youtube.com/watch?v=f0hcByvsyjU&t=36) 굉장히 많아요. 같은 버그를 두 세
+- [0:37](https://youtube.com/watch?v=f0hcByvsyjU&t=37) 번 고쳤다고 하는데 또 깨지고 어떤
+- [0:39](https://youtube.com/watch?v=f0hcByvsyjU&t=39) 날은 멀쩡하다가 어떤 날은 답이
+- [0:41](https://youtube.com/watch?v=f0hcByvsyjU&t=41) 이상하게 짧아지고 실제로 올해
+- [0:43](https://youtube.com/watch?v=f0hcByvsyjU&t=43) 2월에서 3월 사이에 크로드코드
+- [0:45](https://youtube.com/watch?v=f0hcByvsyjU&t=45) 성능이 일시적으로 떨어졌던 시기가
+- [0:47](https://youtube.com/watch?v=f0hcByvsyjU&t=47) 있었어요. 나중에 애스트로픽이 직접
+- [0:48](https://youtube.com/watch?v=f0hcByvsyjU&t=48) 사후 보고서를 냈는데 출론
+- [0:50](https://youtube.com/watch?v=f0hcByvsyjU&t=50) 누러이라든지 메모리 초기화 같은 버그
+- [0:52](https://youtube.com/watch?v=f0hcByvsyjU&t=52) 세 개가 걸쳐 있다고 하더라고요.
+- [0:54](https://youtube.com/watch?v=f0hcByvsyjU&t=54) 이런 일을 한 번씩 겪으니까 분위기가
+- [0:56](https://youtube.com/watch?v=f0hcByvsyjU&t=56) 좀 바뀐 거 같습니다. 한 모델만
+- [0:58](https://youtube.com/watch?v=f0hcByvsyjU&t=58) 믿고 가는게 좀 위험하다는 감각이
+- [1:00](https://youtube.com/watch?v=f0hcByvsyjU&t=60) 생긴 거예요. 그래서 코덱스를 보조로
+- [1:01](https://youtube.com/watch?v=f0hcByvsyjU&t=61) 같이 뛰어두거나 결과물을 코덱스한테
+- [1:04](https://youtube.com/watch?v=f0hcByvsyjU&t=64) 한 번 더 검토시키는 방식으로
+- [1:05](https://youtube.com/watch?v=f0hcByvsyjU&t=65) 워크플로우가 옮겨가고 있는 거
+- [1:07](https://youtube.com/watch?v=f0hcByvsyjU&t=67) 같아요. 마침 26년 3월 말에 오픈
+- [1:09](https://youtube.com/watch?v=f0hcByvsyjU&t=69) AI 공식 플러그인을 하나 풀었어요.
+- [1:12](https://youtube.com/watch?v=f0hcByvsyjU&t=72) 이름이 코덱스 플러그인 CC인데요.
+- [1:15](https://youtube.com/watch?v=f0hcByvsyjU&t=75) 클로드 코드 안에서 코덱스를 그대로
+- [1:16](https://youtube.com/watch?v=f0hcByvsyjU&t=76) 호출할 수 있게 해주는
+- [1:17](https://youtube.com/watch?v=f0hcByvsyjU&t=77) 플러그인이에요. 이게 풀린 뒤로 더
+- [1:19](https://youtube.com/watch?v=f0hcByvsyjU&t=79) 자연스러워졌습니다. 이제는 클로드
+- [1:20](https://youtube.com/watch?v=f0hcByvsyjU&t=80) 코드 안에서 슬래시 커맨드 하나로
+- [1:22](https://youtube.com/watch?v=f0hcByvsyjU&t=82) 코덱스를 부를 수 있거든요. 같은
+- [1:23](https://youtube.com/watch?v=f0hcByvsyjU&t=83) 프로젝트, 같은 컨텍스트 안에서세요.
+- [1:26](https://youtube.com/watch?v=f0hcByvsyjU&t=86) 자, 그럼 첫 번째 질문이에요.
+- [1:27](https://youtube.com/watch?v=f0hcByvsyjU&t=87) 클루드 코드도 잘하는데 굳이 클코
+- [1:29](https://youtube.com/watch?v=f0hcByvsyjU&t=89) 코덱스를 또 쓸 이유가 뭐냐? 핵심은
+- [1:31](https://youtube.com/watch?v=f0hcByvsyjU&t=91) 한마디로 정리돼요. 서로 다른 회사가
+- [1:33](https://youtube.com/watch?v=f0hcByvsyjU&t=93) 만든 모델은 서로 다른 곳에서
+- [1:35](https://youtube.com/watch?v=f0hcByvsyjU&t=95) 실수해요. 비유하자면요. 같은
+- [1:36](https://youtube.com/watch?v=f0hcByvsyjU&t=96) 학원에서 같은 강사한테 배운 두
+- [1:38](https://youtube.com/watch?v=f0hcByvsyjU&t=98) 학생이 시험 보면 틀리는 문제도
+- [1:40](https://youtube.com/watch?v=f0hcByvsyjU&t=100) 비슷하잖아요. 근데 다른 학원 다른
+- [1:42](https://youtube.com/watch?v=f0hcByvsyjU&t=102) 강사한테 배운 학생을 데려오면 서로
+- [1:43](https://youtube.com/watch?v=f0hcByvsyjU&t=103) 놓친 부분을 잡아 줄 수 있거든요.
+- [1:45](https://youtube.com/watch?v=f0hcByvsyjU&t=105) 클로드랑 코덱스가 딱 그런 관계예요.
+- [1:47](https://youtube.com/watch?v=f0hcByvsyjU&t=107) 실제 사례 하나 보여 드릴게요. 어떤
+- [1:48](https://youtube.com/watch?v=f0hcByvsyjU&t=108) 분이 클러드 코드로 MCB 브릿지
+- [1:50](https://youtube.com/watch?v=f0hcByvsyjU&t=110) 코드를 만들었어요. 다 됐다 싶었는데
+- [1:52](https://youtube.com/watch?v=f0hcByvsyjU&t=112) 한번 코덱스한테 리뷰를 시켜
+- [1:53](https://youtube.com/watch?v=f0hcByvsyjU&t=113) 봤거든요. 그랬더니 클로드가 못 본게
+- [1:55](https://youtube.com/watch?v=f0hcByvsyjU&t=115) 세 개가 나왔어요. 첫 번째 종료
+- [1:57](https://youtube.com/watch?v=f0hcByvsyjU&t=117) 코드 처리 로직의 구멍이 있었어요.
+- [1:59](https://youtube.com/watch?v=f0hcByvsyjU&t=119) 두 번째 터미널 출력의 ANSI케이프
+- [2:03](https://youtube.com/watch?v=f0hcByvsyjU&t=123) 문자 필터가 빠져 있어서 인젝션
+- [2:05](https://youtube.com/watch?v=f0hcByvsyjU&t=125) 위험이 있었고요. 세 번째 경로를 두
+- [2:07](https://youtube.com/watch?v=f0hcByvsyjU&t=127) 번 적용하는 버그가 있었어요. 클로드
+- [2:09](https://youtube.com/watch?v=f0hcByvsyjU&t=129) 입장에서는 자기가 짠 코드니까 자기
+- [2:10](https://youtube.com/watch?v=f0hcByvsyjU&t=130) 시각으로 검토를 해요. 근데 코덱스는
+- [2:12](https://youtube.com/watch?v=f0hcByvsyjU&t=132) 처음 보는 코드랑 다른 시각으로 본
+- [2:14](https://youtube.com/watch?v=f0hcByvsyjU&t=134) 거죠. 그래서 보이는 거예요. 이게
+- [2:15](https://youtube.com/watch?v=f0hcByvsyjU&t=135) 사람이 자기글 교정하는 거랑 비슷한
+- [2:17](https://youtube.com/watch?v=f0hcByvsyjU&t=137) 거 같습니다. 오탑 못 잡잖아요.
+- [2:19](https://youtube.com/watch?v=f0hcByvsyjU&t=139) 다른 사람이 봐줘야 이거를 볼 수가
+- [2:21](https://youtube.com/watch?v=f0hcByvsyjU&t=141) 있거든요. 두 번째 포인트로
+- [2:23](https://youtube.com/watch?v=f0hcByvsyjU&t=143) 넘어갈게요.이 플러그인에서 제일
+- [2:25](https://youtube.com/watch?v=f0hcByvsyjU&t=145) 인상적인게 코덱스 레스큐라는
+- [2:27](https://youtube.com/watch?v=f0hcByvsyjU&t=147) 기능이에요. 이름 그대로예요.
+- [2:28](https://youtube.com/watch?v=f0hcByvsyjU&t=148) 구조하러 와 달라는 뜻이거든요.
+- [2:31](https://youtube.com/watch?v=f0hcByvsyjU&t=151) 상황을 한번 그려 볼게요. 클러드
+- [2:32](https://youtube.com/watch?v=f0hcByvsyjU&t=152) 코드로 작업하다 보면 가끔 막힐 때가
+- [2:34](https://youtube.com/watch?v=f0hcByvsyjU&t=154) 있잖아요. 같은 버그를 두 세 번
+- [2:35](https://youtube.com/watch?v=f0hcByvsyjU&t=155) 고쳤다고 하는데 또 실패하고 점점
+- [2:37](https://youtube.com/watch?v=f0hcByvsyjU&t=157) 코드가 복잡해지기만 하고 이럴 때
+- [2:39](https://youtube.com/watch?v=f0hcByvsyjU&t=159) 보통 어떻게 하셨어요? 저는 그냥 셋
+- [2:41](https://youtube.com/watch?v=f0hcByvsyjU&t=161) 세션 열고 처음부터 다 시작했거든요.
+- [2:43](https://youtube.com/watch?v=f0hcByvsyjU&t=163) 근데 코덱스 레스큐를 쓰면 그럴
+- [2:44](https://youtube.com/watch?v=f0hcByvsyjU&t=164) 필요가 없어요. 지금 막힌 그
+- [2:45](https://youtube.com/watch?v=f0hcByvsyjU&t=165) 자리에서 슬래시 커맨드 하나만 치면
+- [2:47](https://youtube.com/watch?v=f0hcByvsyjU&t=167) 돼요.이 테스트가 왜 깨지는 조사해
+- [2:49](https://youtube.com/watch?v=f0hcByvsyjU&t=169) 줘. 이런 식으로요. 그러면 코덱스가
+- [2:50](https://youtube.com/watch?v=f0hcByvsyjU&t=170) 백그라운드에서 그 작업을 받아서 따로
+- [2:52](https://youtube.com/watch?v=f0hcByvsyjU&t=172) 파 봅니다. 그동안 클로드 코드
+- [2:53](https://youtube.com/watch?v=f0hcByvsyjU&t=173) 창에서는 다른 작업 계속 하실 수
+- [2:55](https://youtube.com/watch?v=f0hcByvsyjU&t=175) 있어요. 코덱스가 끝나면 결과를
+- [2:57](https://youtube.com/watch?v=f0hcByvsyjU&t=177) 가져와서 보여 줘요. 실제 예시 하나
+- [2:58](https://youtube.com/watch?v=f0hcByvsyjU&t=178) 더 보여 드릴게요. 한 분이 사이드바
+- [3:00](https://youtube.com/watch?v=f0hcByvsyjU&t=180) 큰 리팩터링을 했어요. 새 위저드
+- [3:03](https://youtube.com/watch?v=f0hcByvsyjU&t=183) 흐름 상태 관리 새로 세로 짜고 화면
+- [3:05](https://youtube.com/watch?v=f0hcByvsyjU&t=185) 여러 개 동시에 수정한 거죠. 다
+- [3:07](https://youtube.com/watch?v=f0hcByvsyjU&t=187) 됐다 싶었는데 코덱스 레스큐로 한번
+- [3:08](https://youtube.com/watch?v=f0hcByvsyjU&t=188) 점검을 시켰거든요. 6분 35초 만에
+- [3:11](https://youtube.com/watch?v=f0hcByvsyjU&t=191) 결과가 왔는데 HK 버그가네 개
+- [3:13](https://youtube.com/watch?v=f0hcByvsyjU&t=193) 나왔어요. 설정 안 됐을 때 제출
+- [3:14](https://youtube.com/watch?v=f0hcByvsyjU&t=194) 버튼이 조용히 실패하는 거. 지심은
+- [3:16](https://youtube.com/watch?v=f0hcByvsyjU&t=196) 안 쓰고 리뷰 단계로 점프할 수 있는
+- [3:18](https://youtube.com/watch?v=f0hcByvsyjU&t=198) 거. 실행 중인 요청을 뒤로 가기로
+- [3:20](https://youtube.com/watch?v=f0hcByvsyjU&t=200) 끊어 버리면 복구가 안 되는 거.
+- [3:21](https://youtube.com/watch?v=f0hcByvsyjU&t=201) 동시 요청에 서로 상태를 덮어쓰는
+- [3:23](https://youtube.com/watch?v=f0hcByvsyjU&t=203) 거. 이분이 그러시더라고요. 큰
+- [3:24](https://youtube.com/watch?v=f0hcByvsyjU&t=204) 변화가 한꺼번에 일어나면 H케이스는
+- [3:26](https://youtube.com/watch?v=f0hcByvsyjU&t=206) 잘 안 보인다고. 상태 변화 사이에
+- [3:29](https://youtube.com/watch?v=f0hcByvsyjU&t=209) 틈에 숨어 있다가 나중에 사용자가
+- [3:30](https://youtube.com/watch?v=f0hcByvsyjU&t=210) 걸러서야 드러난다고. 그래서 다른
+- [3:33](https://youtube.com/watch?v=f0hcByvsyjU&t=213) 시각이 필요했던 거예요. 자, 그럼
+- [3:34](https://youtube.com/watch?v=f0hcByvsyjU&t=214) 세 번째 포인트요. 요즘 많이 쓰는
+- [3:36](https://youtube.com/watch?v=f0hcByvsyjU&t=216) 모델 조합 이야기를 좀 해 볼게요.
+- [3:38](https://youtube.com/watch?v=f0hcByvsyjU&t=218) 클로드 코드에 보면 모델 오프스
+- [3:39](https://youtube.com/watch?v=f0hcByvsyjU&t=219) 플랜이라는 모드가 있어요. 이게
+- [3:41](https://youtube.com/watch?v=f0hcByvsyjU&t=221) 뭐냐면 플래닝 오프스가 하고 실제
+- [3:43](https://youtube.com/watch?v=f0hcByvsyjU&t=223) 코드 짜는 거 소네이 하는 모드예요.
+- [3:44](https://youtube.com/watch?v=f0hcByvsyjU&t=224) 한 모드 안에 자동으로 역할이
+- [3:45](https://youtube.com/watch?v=f0hcByvsyjU&t=225) 나눠집니다. 왜 이렇게 쓰냐면요.
+- [3:47](https://youtube.com/watch?v=f0hcByvsyjU&t=227) 오프스는 똑똑한데 비싸요. 소넷은
+- [3:49](https://youtube.com/watch?v=f0hcByvsyjU&t=229) 적당히 똑똑하면서 훨씬 싸요. 근데
+- [3:51](https://youtube.com/watch?v=f0hcByvsyjU&t=231) 코딩 작업을 잘 보면 진짜 머리 써야
+- [3:52](https://youtube.com/watch?v=f0hcByvsyjU&t=232) 되는 부분은 처음에 설계할 때거든요.
+- [3:54](https://youtube.com/watch?v=f0hcByvsyjU&t=234) 구조 어떻게 잡을지, 데이터 흐름
+- [3:56](https://youtube.com/watch?v=f0hcByvsyjU&t=236) 어떻게 가져갈지, 무슨 문제가 생길
+- [3:58](https://youtube.com/watch?v=f0hcByvsyjU&t=238) 수 있는지 이런 건 전체 토큰에 한
+- [3:59](https://youtube.com/watch?v=f0hcByvsyjU&t=239) 10에서 20% 정도밖에 안
+- [4:01](https://youtube.com/watch?v=f0hcByvsyjU&t=241) 차지해요. 나머지 80%는 실제 코드
+- [4:03](https://youtube.com/watch?v=f0hcByvsyjU&t=243) 타이핑이거든요. 함수 만들고 테스트
+- [4:05](https://youtube.com/watch?v=f0hcByvsyjU&t=245) 짜고 임포트 정리하고 이건 소으로도
+- [4:07](https://youtube.com/watch?v=f0hcByvsyjU&t=247) 충분히 잘해요. 그래서 비용을 비교해
+- [4:09](https://youtube.com/watch?v=f0hcByvsyjU&t=249) 보면요. 전부 오프스로 돌리면 신머
+- [4:11](https://youtube.com/watch?v=f0hcByvsyjU&t=251) 토큰당 1달러 50c가 들러요. 근데
+- [4:14](https://youtube.com/watch?v=f0hcByvsyjU&t=254) 플랫마 오프스 구여는 손해으로만 가면
+- [4:16](https://youtube.com/watch?v=f0hcByvsyjU&t=256) 48c로 떨어져요. 거의 1/3토막이
+- [4:19](https://youtube.com/watch?v=f0hcByvsyjU&t=259) 나거든요. 쉽게 말해서요. 처음에
+- [4:20](https://youtube.com/watch?v=f0hcByvsyjU&t=260) 설계도만 베테랑한테 부탁하고 시공은
+- [4:22](https://youtube.com/watch?v=f0hcByvsyjU&t=262) 일반 작업장한테 맡기는 거랑
+- [4:24](https://youtube.com/watch?v=f0hcByvsyjU&t=264) 비슷해요. 설계도를 잘 그려 놓으면
+- [4:26](https://youtube.com/watch?v=f0hcByvsyjU&t=266) 시공은 누가 해도 비슷하게
+- [4:27](https://youtube.com/watch?v=f0hcByvsyjU&t=267) 나오니까요.네 번째 포인트요. 이게
+- [4:29](https://youtube.com/watch?v=f0hcByvsyjU&t=269) 사실 제일 말씀드리고 싶었던
+- [4:31](https://youtube.com/watch?v=f0hcByvsyjU&t=271) 내용이에요. 요즘 많이 쓰는
+- [4:32](https://youtube.com/watch?v=f0hcByvsyjU&t=272) 패턴이래요. 먼저 오프스한테 플랜을
+- [4:34](https://youtube.com/watch?v=f0hcByvsyjU&t=274) 시켜요.이 기능 만들 건데 어떻게
+- [4:36](https://youtube.com/watch?v=f0hcByvsyjU&t=276) 접근할까 하면 오프스가 단계별로
+- [4:37](https://youtube.com/watch?v=f0hcByvsyjU&t=277) 계획을 짜 줘요.이 플랜을 마크다운
+- [4:39](https://youtube.com/watch?v=f0hcByvsyjU&t=279) 파일 하나로 정리해 둡니다. 그다음에
+- [4:41](https://youtube.com/watch?v=f0hcByvsyjU&t=281) 바로 구현으로 안 넘어가고요. 코덱스
+- [4:43](https://youtube.com/watch?v=f0hcByvsyjU&t=283) ad드바리얼 리뷰를 한번 돌려요.
+- [4:46](https://youtube.com/watch?v=f0hcByvsyjU&t=286) 이게 뭐냐면 코덱스한테 그 플랜을
+- [4:48](https://youtube.com/watch?v=f0hcByvsyjU&t=288) 비판적으로 검토해 달라고 시키는
+- [4:49](https://youtube.com/watch?v=f0hcByvsyjU&t=289) 거예요. 단순히 문법 보는게 아니라
+- [4:51](https://youtube.com/watch?v=f0hcByvsyjU&t=291) 설계 자체를 의심해 보는 거죠.이
+- [4:53](https://youtube.com/watch?v=f0hcByvsyjU&t=293) 구조가 진짜 많나? 캐싱 로직 이거
+- [4:55](https://youtube.com/watch?v=f0hcByvsyjU&t=295) 괜찮나? 동시성 문제 없나? 데이터
+- [4:56](https://youtube.com/watch?v=f0hcByvsyjU&t=296) 날아갈 위험은 없나? 실제로 어떤 분
+- [4:58](https://youtube.com/watch?v=f0hcByvsyjU&t=298) 사례를 보면요. 이걸 세 라운드
+- [4:59](https://youtube.com/watch?v=f0hcByvsyjU&t=299) 돌렸더니 14개 문제가 나왔어요.
+- [5:01](https://youtube.com/watch?v=f0hcByvsyjU&t=301) 인증 모델 빠진 거, 쉘스크립트,
+- [5:03](https://youtube.com/watch?v=f0hcByvsyjU&t=303) 다운패, 처리 버그 이런게 플랜
+- [5:04](https://youtube.com/watch?v=f0hcByvsyjU&t=304) 단계에서 다 잡힌 거예요. 플랜
+- [5:06](https://youtube.com/watch?v=f0hcByvsyjU&t=306) 단계에서 잡으면 코드 짜기 전니까
+- [5:08](https://youtube.com/watch?v=f0hcByvsyjU&t=308) 수정 비용이 거의 안 들거든요. 근데
+- [5:09](https://youtube.com/watch?v=f0hcByvsyjU&t=309) 구현 다 하고 나서 발견되면 다시
+- [5:11](https://youtube.com/watch?v=f0hcByvsyjU&t=311) 짜야 되잖아요. 그래서이 순서가
+- [5:13](https://youtube.com/watch?v=f0hcByvsyjU&t=313) 중요합니다. 자, 그럼 이론을 다
+- [5:15](https://youtube.com/watch?v=f0hcByvsyjU&t=315) 봤으니까 실제로 어떻게 설치하고
+- [5:16](https://youtube.com/watch?v=f0hcByvsyjU&t=316) 쓰는지 간단하게 보여 드릴게요.
+- [5:18](https://youtube.com/watch?v=f0hcByvsyjU&t=318) 준비물부터요. 클로드 코드가 깔려
+- [5:19](https://youtube.com/watch?v=f0hcByvsyjU&t=319) 있어야 되고요. 코덱스 CR도 따로
+- [5:21](https://youtube.com/watch?v=f0hcByvsyjU&t=321) 설치되어 있어야 합니다. GPT
+- [5:23](https://youtube.com/watch?v=f0hcByvsyjU&t=323) 무료로는 조금 부족하고요. 플러스 한
+- [5:26](https://youtube.com/watch?v=f0hcByvsyjU&t=326) 달 20달러짜리 정도가 저는 괜찮은
+- [5:28](https://youtube.com/watch?v=f0hcByvsyjU&t=328) 거 같아요. 설치는 세 줄이에요.
+- [5:30](https://youtube.com/watch?v=f0hcByvsyjU&t=330) 먼저 클루드 코드 안에 슬래시
+- [5:31](https://youtube.com/watch?v=f0hcByvsyjU&t=331) 플러그인 마켓플레이스 에드하고 오픈에
+- [5:33](https://youtube.com/watch?v=f0hcByvsyjU&t=333) A 코덱스 저장소 주소를 넣어요.
+- [5:35](https://youtube.com/watch?v=f0hcByvsyjU&t=335) 그다음 플러그인 인스톨 명령으로
+- [5:36](https://youtube.com/watch?v=f0hcByvsyjU&t=336) 코덱스 플러그인 설치하고요.
+- [5:38](https://youtube.com/watch?v=f0hcByvsyjU&t=338) 마지막으로 코덱스 셋업 한 번 돌리면
+- [5:39](https://youtube.com/watch?v=f0hcByvsyjU&t=339) 끝이에요. 이러면 슬래시커맨드 여섯
+- [5:41](https://youtube.com/watch?v=f0hcByvsyjU&t=341) 개가 새로 생겨요. 가장 많이 쓰는
+- [5:43](https://youtube.com/watch?v=f0hcByvsyjU&t=343) 건 두 가지예요. 코덱스 리뷰와
+- [5:44](https://youtube.com/watch?v=f0hcByvsyjU&t=344) 코덱스 레스큐. 워크플로 한 사이클로
+- [5:47](https://youtube.com/watch?v=f0hcByvsyjU&t=347) 정리해 드리면 이래요. 먼저 어
+- [5:49](https://youtube.com/watch?v=f0hcByvsyjU&t=349) 오프스가 플랜을 짜 줄 거예요.
+- [5:51](https://youtube.com/watch?v=f0hcByvsyjU&t=351) 플랜을 마크다운 파일로 저장해
+- [5:52](https://youtube.com/watch?v=f0hcByvsyjU&t=352) 두세요. 이게 나중에 단일 기준점이
+- [5:53](https://youtube.com/watch?v=f0hcByvsyjU&t=353) 됩니다. 다음으로 코덱스 adv리얼
+- [5:56](https://youtube.com/watch?v=f0hcByvsyjU&t=356) 리뷰 돌려 가지고 그 플랜을 한번
+- [5:57](https://youtube.com/watch?v=f0hcByvsyjU&t=357) 두드려 보세요. 지적된 부분이 있으면
+- [5:59](https://youtube.com/watch?v=f0hcByvsyjU&t=359) 플랜에 반영하시고요. 다음에는 코드를
+- [6:01](https://youtube.com/watch?v=f0hcByvsyjU&t=361) 짭니다. 구현이 끝나면 마지막으로
+- [6:03](https://youtube.com/watch?v=f0hcByvsyjU&t=363) 코덱스 리뷰로 한 번 더 돌려
+- [6:04](https://youtube.com/watch?v=f0hcByvsyjU&t=364) 봅니다. 여기서 한 가지 주의하실게
+- [6:06](https://youtube.com/watch?v=f0hcByvsyjU&t=366) 코덱스 레 SQ가 가끔 무 가끔 무한
+- [6:08](https://youtube.com/watch?v=f0hcByvsyjU&t=368) 루프에 빠지는 버그가 좀
+- [6:09](https://youtube.com/watch?v=f0hcByvsyjU&t=369) 존재하거든요. 같은 파일을 계속 다시
+- [6:11](https://youtube.com/watch?v=f0hcByvsyjU&t=371) 읽기만 하고 결과를 안 내 놓는
+- [6:13](https://youtube.com/watch?v=f0hcByvsyjU&t=373) 경우가 있어요. 맥에서 가끔 멈춰
+- [6:14](https://youtube.com/watch?v=f0hcByvsyjU&t=374) 버리기도 하고요. 만약 5분 넘게
+- [6:16](https://youtube.com/watch?v=f0hcByvsyjU&t=376) 응답이 없다 싶으시면 코덱스 캔슬로
+- [6:18](https://youtube.com/watch?v=f0hcByvsyjU&t=378) 끊고 다시 시도하세요. 아직 완성등은
+- [6:21](https://youtube.com/watch?v=f0hcByvsyjU&t=381) 아니니까 너무 맹신하시면 안 됩니다.
+- [6:22](https://youtube.com/watch?v=f0hcByvsyjU&t=382) 오늘은 코덱스와 클로드 코드의 조합에
+- [6:24](https://youtube.com/watch?v=f0hcByvsyjU&t=384) 대해서 알아봤어요. 이런 워크플로우
+- [6:26](https://youtube.com/watch?v=f0hcByvsyjU&t=386) 도움이 되셨다면 구독 한 번만 눌러
+- [6:27](https://youtube.com/watch?v=f0hcByvsyjU&t=387) 주시면 저한테 큰 힘이 됩니다.
+- [6:29](https://youtube.com/watch?v=f0hcByvsyjU&t=389) 그리고 여러분은 어떤 조합으로 쓰고
+- [6:30](https://youtube.com/watch?v=f0hcByvsyjU&t=390) 계세요? 오늘 영상은 여기까지입니다.
+- [6:32](https://youtube.com/watch?v=f0hcByvsyjU&t=392) 다음 영상에서는 한번 코덱스와 이런
+- [6:35](https://youtube.com/watch?v=f0hcByvsyjU&t=395) 것들을 이용을 해 가지고 어떻게 해서
+- [6:37](https://youtube.com/watch?v=f0hcByvsyjU&t=397) 어떻게 하면 워크플로를 잘 돌릴 수
+- [6:39](https://youtube.com/watch?v=f0hcByvsyjU&t=399) 있는지에 대해서 한번 알아볼게요.
