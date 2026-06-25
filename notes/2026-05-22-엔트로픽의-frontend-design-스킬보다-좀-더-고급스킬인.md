@@ -1,0 +1,567 @@
+---
+title: "엔트로픽의 frontend-design 스킬보다 좀 더 고급스킬인 impeccable 알아보기 | 클로드 코드"
+source_url: https://youtube.com/watch?v=ShQXDxUW-WQ
+video_id: ShQXDxUW-WQ
+source_type: youtube
+lang: ko
+analyzed: 2026-05-22
+category: 일반학습
+status: active
+---
+# 엔트로픽의 frontend-design 스킬보다 좀 더 고급스킬인 impeccable 알아보기 | 클로드 코드
+
+[[_category-일반학습]]
+
+## 🧠 이해 (Understand)
+- **Summary:** Impact/Cover는 AI가 생성하는 평범한 디자인(AI 슬롭)을 개선하기 위한 11개의 프론트엔드 디자인 스킬 모음입니다. 기존의 프론트엔드 디자인 스킬보다 진화된 형태로, Shape→Craft→Critic→Polish 등의 워크플로를 통해 체계적으로 UI를 개선합니다. 핵심은 impact/cover.md 파일에 프로젝트 컨텍스트(타겟 사용자, 브랜드 정체성 등)를 저장하고, 모든 스킬이 이를 참조하여 일관성 있는 디자인을 만드는 것입니다. 특히 안티 패턴(둥근 카드, 유리판 효과, 그라데이션 텍스트 등)을 자동으로 피하며, Critic 스킬로 40점 만점 점수를 받아 개선 방향을 파악할 수 있습니다. 실제 테스트에서는 러닝 대회 앱을 3시간 30분 작업으로 일반적인 어드민 화면에서 스포티한 브랜드 아이덴티티가 느껴지는 UI로 변화시켰습니다.
+- **Core Message:** Impact/Cover는 AI의 평범한 디자인을 체계적인 워크플로와 안티 패턴 회피로 브랜드 아이덴티티가 있는 고품질 UI로 변화시키는 진화된 디자인 스킬 시스템입니다.
+> 기존에 좀 아이덴티티 같은게 좀 느껴지지 않았다라고 하면 지금은 이제 약간 브랜드 아이덴티티로 바뀌었다
+> AI 슬롭 같은 거를 다 없애기 위한 겁니다. 어디에서나 본듯한 디자인
+> 크리틱을 돌리면 점수가 나와요. 40점 만점에 20점 뭐 30점 이렇게 나옵니다
+❗ Impact/Cover 적용으로 3시간 30분 만에 일반 어드민 화면을 스포티한 브랜드 아이덴티티를 가진 UI로 변화
+❗ Critic 스킬 4회 중 3회가 개선 필요한 전환점으로 판단될 정도로 정확한 분석 제공
+❗ 모든 스킬이 impact/cover.md 파일을 공통 참조하여 일관성 있는 디자인 유지
+
+## 📚 핵심 용어
+- **AI 슬롭:** AI가 자동 생성하는 어디서나 본 듯한 평균적이고 특색 없는 UI 디자인. / 패스트푸드처럼 빠르고 무난하지만 개성 없는 맛. 어디서나 비슷한 느낌의 둥근 카드와 보라-파랑 그라데이션. / 수제 디자인은 개성과 브랜드 정체성이 있지만, AI 슬롭은 기계적 패턴의 반복으로 특색이 없다.
+- **안티 패턴:** 피해야 할 디자인 요소들로, AI가 자주 사용하는 클리셰적 스타일. / 패션에서 '촌스럽다'고 여겨지는 조합처럼, 글라스모피즘이나 그라데이션 텍스트 등 식상한 디자인 요소. / 디자인 패턴은 좋은 관례를 따르는 것이고, 안티 패턴은 나쁜 관례를 피하는 것이다.
+- **Critic 스킬:** 현재 디자인을 40점 만점으로 평가하고 개선점을 제시하는 분석 도구. / 학교 시험 채점처럼 점수를 매기고 틀린 부분을 알려주는 디자인 선생님. 어디가 부족한지 구체적으로 피드백. / 일반 디자인 리뷰는 주관적 의견이지만, Critic은 객관적 점수와 근거를 제시한다.
+- **프로젝트 컨텍스트:** 타겟 사용자, 브랜드 정체성 등 디자인 방향성을 담은 공통 참조 문서. / 요리할 때 레시피북처럼, 모든 스킬이 참조하는 디자인 가이드라인. 일관된 맛(스타일)을 위한 기준서. / 일반 스타일 가이드는 정적 규칙이지만, 프로젝트 컨텍스트는 AI가 실시간 참조하는 동적 지침이다.
+
+## 🚀 실행 (Execute)
+- [ ] Impact/Cover 오픈소스 저장소를 찾아 설치하고 기본 11개 스킬 구성 파악
+  - 담당: 나
+  - 이유: 영상에서 언급된 도구의 실제 사용법과 최신 버전 확인이 필요
+- [ ] 현재 진행 중인 프로젝트에 Critic 스킬 적용하여 디자인 점수 측정 및 개선점 파악
+  - 담당: 나
+  - 이유: 객관적 디자인 평가로 현재 UI의 문제점을 구체적으로 파악할 수 있음
+- 자료: Impact/Cover GitHub 저장소 (확인 필요)
+- 자료: 창작자의 웹사이트 및 다른 프로젝트 참고자료
+- 자료: Anthropic 프론트엔드 디자인 스킬 문서 비교 분석
+- Timeline: 1단계: Impact/Cover 설치 및 학습(1주) → 2단계: 기존 프로젝트에 Critic 적용(2주) → 3단계: Shape-Craft-Polish 워크플로 실험(3-4주)
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=ShQXDxUW-WQ&t=0) 네. 최근에 그 댓글에서 이제
+- [0:03](https://youtube.com/watch?v=ShQXDxUW-WQ&t=3) 임팩커버이라는 거를 리뷰를 좀 해
+- [0:06](https://youtube.com/watch?v=ShQXDxUW-WQ&t=6) 달라고 하셔 가지고 그래서 이제
+- [0:07](https://youtube.com/watch?v=ShQXDxUW-WQ&t=7) 림팩커버를 좀 찾아봤습니다. 이게
+- [0:10](https://youtube.com/watch?v=ShQXDxUW-WQ&t=10) 뭐냐면 이제 스킬 모음이라고 보면
+- [0:13](https://youtube.com/watch?v=ShQXDxUW-WQ&t=13) 되는데 어 프런트엔드 디자인 스킬에서
+- [0:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=18) 이제 좀 더 발전된 형태라고 좀 보면
+- [0:20](https://youtube.com/watch?v=ShQXDxUW-WQ&t=20) 될 거 같습니다. 하나씩 이제 보면
+- [0:23](https://youtube.com/watch?v=ShQXDxUW-WQ&t=23) 일단은 뭐 결과를 먼저 보면 이제
+- [0:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=25) 여기 왼쪽에 있는게 제가 이제 예전에
+- [0:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=27) 만들어 놨었던 이제 러닝 대회지도
+- [0:31](https://youtube.com/watch?v=ShQXDxUW-WQ&t=31) 앱이고 오른쪽이 이제 임팩커블로 이제
+- [0:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=33) 어 수정을 한 개선을 한 버전입니다.
+- [0:36](https://youtube.com/watch?v=ShQXDxUW-WQ&t=36) 네. 지금 차이가 많이 나는게
+- [0:38](https://youtube.com/watch?v=ShQXDxUW-WQ&t=38) 보이죠?
+- [0:39](https://youtube.com/watch?v=ShQXDxUW-WQ&t=39) 일단 좀 설명을 한 번씩 해
+- [0:41](https://youtube.com/watch?v=ShQXDxUW-WQ&t=41) 보겠습니다. 일단 임팩컵을 여기 이제
+- [0:43](https://youtube.com/watch?v=ShQXDxUW-WQ&t=43) 웹사이트에 들어오면 요런 식으로 이제
+- [0:46](https://youtube.com/watch?v=ShQXDxUW-WQ&t=46) 어 문서가 있고 여기에 스킬들이 쭉
+- [0:48](https://youtube.com/watch?v=ShQXDxUW-WQ&t=48) 정리가 돼 있습니다. 그래서 여기서
+- [0:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=51) 하나씩 보면 어 스킬이 좀 많아
+- [0:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=53) 가지고 저도 처음에 좀 헤맸는데 어
+- [0:56](https://youtube.com/watch?v=ShQXDxUW-WQ&t=56) 뭐 예를 들면 이런 식입니다. 이제
+- [0:57](https://youtube.com/watch?v=ShQXDxUW-WQ&t=57) 여기 스킬들 보면 이런 스킬 쓰면
+- [0:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=59) 여기 화면이 요렇게 바뀐다.네 그리고
+- [1:02](https://youtube.com/watch?v=ShQXDxUW-WQ&t=62) 이제 뭐 요런 스킬 쓰면요 화면이
+- [1:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=64) 요렇게 바뀐다. 요런 거고 요거 한
+- [1:07](https://youtube.com/watch?v=ShQXDxUW-WQ&t=67) 번씩 하나씩 볼게요. 일단은 어
+- [1:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=69) 디자인 관련된 용어를 이제 모르시는
+- [1:12](https://youtube.com/watch?v=ShQXDxUW-WQ&t=72) 분들을 위해서 이제 용어를 먼저 한번
+- [1:14](https://youtube.com/watch?v=ShQXDxUW-WQ&t=74) 간단하게 정리를 하고 이제 시작을
+- [1:17](https://youtube.com/watch?v=ShQXDxUW-WQ&t=77) 하면 될 것 같습니다. 일단 어 AI
+- [1:20](https://youtube.com/watch?v=ShQXDxUW-WQ&t=80) 슬롭이라는 거는 이제 AI가 이제
+- [1:23](https://youtube.com/watch?v=ShQXDxUW-WQ&t=83) 디자인을 하다 보면 어 AI가 만든
+- [1:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=85) 티가 나는 어떤 평균체 UI가
+- [1:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=87) 있습니다. 네. 그래서 어디서나
+- [1:29](https://youtube.com/watch?v=ShQXDxUW-WQ&t=89) 본듯한 패턴이 있는데 여기 이제
+- [1:31](https://youtube.com/watch?v=ShQXDxUW-WQ&t=91) 임팩커벌 웹사이트 들어와 보면 여기
+- [1:34](https://youtube.com/watch?v=ShQXDxUW-WQ&t=94) 이제 안티 패턴이라는게 있습니다.
+- [1:36](https://youtube.com/watch?v=ShQXDxUW-WQ&t=96) 안티 패턴 보면 어 여기에서 뭐 이런
+- [1:39](https://youtube.com/watch?v=ShQXDxUW-WQ&t=99) 식으로 라운드 들어가 있는데 이제
+- [1:41](https://youtube.com/watch?v=ShQXDxUW-WQ&t=101) 보더가 있는 거 그리고 이렇게 약간
+- [1:43](https://youtube.com/watch?v=ShQXDxUW-WQ&t=103) 그 투명 효과네 유리판 효과 같은 거
+- [1:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=107) 이런 것들이 쭉 있는데 이런 것들이
+- [1:48](https://youtube.com/watch?v=ShQXDxUW-WQ&t=108) 다 안티 패턴으로 잡혀 있습니다. 어
+- [1:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=111) lm이 이제 많이 찍어내는 스타일을
+- [1:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=113) 안티페이턴으로 넣은 거예요. 예를
+- [1:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=115) 들면 요런 식으로 이제 그레디언트
+- [1:57](https://youtube.com/watch?v=ShQXDxUW-WQ&t=117) 텍스트. 텍스트 안에 이제 이런
+- [1:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=119) 그레디언트가 들어가 있는 거. 어,
+- [2:01](https://youtube.com/watch?v=ShQXDxUW-WQ&t=121) 요거는 이제 가독성 문제죠. 이런
+- [2:03](https://youtube.com/watch?v=ShQXDxUW-WQ&t=123) 색대이 잘못된 거. 뭐 이런 것들도
+- [2:05](https://youtube.com/watch?v=ShQXDxUW-WQ&t=125) 다 있습니다. 요건 한번 뭐 시간 날
+- [2:07](https://youtube.com/watch?v=ShQXDxUW-WQ&t=127) 때 보시면 좋을 것 같고요. 그리고
+- [2:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=129) 이제 여기 블러브라는게 있는데 이게
+- [2:11](https://youtube.com/watch?v=ShQXDxUW-WQ&t=131) 이제 어 카드 안에 두 줄에서네 줄
+- [2:14](https://youtube.com/watch?v=ShQXDxUW-WQ&t=134) 정도에 되는 이제 짧은 속개 문구를
+- [2:16](https://youtube.com/watch?v=ShQXDxUW-WQ&t=136) 넣는 겁니다. 이게 우리가 카드 UI
+- [2:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=138) 같은 거 어 만들다 보면 요런 식으로
+- [2:21](https://youtube.com/watch?v=ShQXDxUW-WQ&t=141) 이제 되게 약간 짧지만 좀 쓸데 없는
+- [2:24](https://youtube.com/watch?v=ShQXDxUW-WQ&t=144) 어떤 설명을 넣는 경우가 있거든요.
+- [2:26](https://youtube.com/watch?v=ShQXDxUW-WQ&t=146) 요건는 아닌 거 같은데 이제 그런
+- [2:28](https://youtube.com/watch?v=ShQXDxUW-WQ&t=148) 거를 좀 방지를 하는 거고 글래스
+- [2:30](https://youtube.com/watch?v=ShQXDxUW-WQ&t=150) 모피즘 같은 경우에는 이제 아까 전에
+- [2:32](https://youtube.com/watch?v=ShQXDxUW-WQ&t=152) 얘기했던 이제 유리판 스타일네 요리한
+- [2:35](https://youtube.com/watch?v=ShQXDxUW-WQ&t=155) 스타일이 되겠습니다. 그리고 이제
+- [2:36](https://youtube.com/watch?v=ShQXDxUW-WQ&t=156) 그레디언트 텍스트 아까 전에
+- [2:37](https://youtube.com/watch?v=ShQXDxUW-WQ&t=157) 얘기했죠. 그리고
+- [2:40](https://youtube.com/watch?v=ShQXDxUW-WQ&t=160) 요거는 발음 어떻게 될지 모르겠는데
+- [2:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=162) 요거는 이제 어 컬러 표기하는
+- [2:44](https://youtube.com/watch?v=ShQXDxUW-WQ&t=164) 방법입니다. 네. 요렇게 라이트
+- [2:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=167) 그리고 채도 그리고 뭐 색상 예 핵
+- [2:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=171) 핵값보다 더 밝기 조절이 더 잘되는
+- [2:54](https://youtube.com/watch?v=ShQXDxUW-WQ&t=174) 방식이고 그리고 이제 디자인 토큰
+- [2:56](https://youtube.com/watch?v=ShQXDxUW-WQ&t=176) 이게 이제 어 색깔 뭐 간격 폰트
+- [2:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=179) 크기 이런 것들 있잖아요. 색상이랑
+- [3:01](https://youtube.com/watch?v=ShQXDxUW-WQ&t=181) 이제 폰트 크기 이런 것들을 변수로
+- [3:03](https://youtube.com/watch?v=ShQXDxUW-WQ&t=183) 관리를 하는 겁니다. 왜냐면 이제
+- [3:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=184) 반복되는 이제 사이즈들을 어
+- [3:07](https://youtube.com/watch?v=ShQXDxUW-WQ&t=187) 토큰이라는 걸로 이제 취환을 한
+- [3:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=189) 다음에 이제 여기저기서 다 이제
+- [3:11](https://youtube.com/watch?v=ShQXDxUW-WQ&t=191) 재생용하기 위해서 토큰으로 취환을
+- [3:13](https://youtube.com/watch?v=ShQXDxUW-WQ&t=193) 하는 거고요. 그리고 이제 디자인
+- [3:15](https://youtube.com/watch?v=ShQXDxUW-WQ&t=195) 브리프라는게 있는데 이게 이제 어
+- [3:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=198) 셰이프라는 명령어 치면 어 어떤
+- [3:21](https://youtube.com/watch?v=ShQXDxUW-WQ&t=201) 디스커버리 질문 이게 뭐냐면 이제
+- [3:22](https://youtube.com/watch?v=ShQXDxUW-WQ&t=202) 발견을 하는 거예요. 이제 어 어떤
+- [3:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=205) 수정 사항에 대해서 발견을 하고
+- [3:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=207) 스스로 발견을 하고 제안을 해 주는
+- [3:28](https://youtube.com/watch?v=ShQXDxUW-WQ&t=208) 뭐 그런 겁니다. 네. 그리고 팝오버
+- [3:31](https://youtube.com/watch?v=ShQXDxUW-WQ&t=211) 같은 경우에는 저희가 이제 뭐 어떤
+- [3:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=213) 여기이 화면에서 보면 여기 올렸을 때
+- [3:36](https://youtube.com/watch?v=ShQXDxUW-WQ&t=216) 여기 옆에 뜯던 거 보이죠? 검은색
+- [3:39](https://youtube.com/watch?v=ShQXDxUW-WQ&t=219) 그 팝업창처럼 뜨는 거. 요런게 이제
+- [3:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=222) 파보인데. 네. 그걸 얘기하는 거고
+- [3:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=225) 비주얼 앵커는 이제 어 시선이 가장
+- [3:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=227) 먼지 먼저 꽂히는 어 그런 어떤
+- [3:50](https://youtube.com/watch?v=ShQXDxUW-WQ&t=230) 요소를 얘기를 하는 겁니다. 임팩
+- [3:52](https://youtube.com/watch?v=ShQXDxUW-WQ&t=232) 커블은 이제 이거 오픈소스인데 어
+- [3:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=235) 요거 만든 사람이 이제 제가 좀
+- [3:57](https://youtube.com/watch?v=ShQXDxUW-WQ&t=237) 확인을 해 보니까네이 사람인데이
+- [4:00](https://youtube.com/watch?v=ShQXDxUW-WQ&t=240) 사람이 좀 보니까 그 웹 UI 관련된
+- [4:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=244) 어 그런 거 관련해서 좀 많이 이제
+- [4:06](https://youtube.com/watch?v=ShQXDxUW-WQ&t=246) 작업을 하셨던 분이더라고요. 보니까.
+- [4:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=249) 네. 이분의 이제 그 홈페이지 예,
+- [4:12](https://youtube.com/watch?v=ShQXDxUW-WQ&t=252) 자기 웹페이지에 들어가 보면 여러
+- [4:14](https://youtube.com/watch?v=ShQXDxUW-WQ&t=254) 가지가 있습니다. 여기 프로필에
+- [4:16](https://youtube.com/watch?v=ShQXDxUW-WQ&t=256) 들어와서 여기 이제 홈페이지 한번
+- [4:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=258) 들어가 보면 네, 여기 보시면 뭐
+- [4:20](https://youtube.com/watch?v=ShQXDxUW-WQ&t=260) 구글에서도 일하신 거 같고 네,
+- [4:23](https://youtube.com/watch?v=ShQXDxUW-WQ&t=263) 그리고 뭐 제이커리 UI라는 것도
+- [4:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=265) 프로젝트도 했었고
+- [4:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=267) 그리고 이제 프로젝트 보면 어, 요런
+- [4:30](https://youtube.com/watch?v=ShQXDxUW-WQ&t=270) 것도 있습니다. 약간 이렇게 그
+- [4:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=273) 시각적으로 이제 3D로 만드는 요런
+- [4:35](https://youtube.com/watch?v=ShQXDxUW-WQ&t=275) 것들도 있고 요런 거 좀 많이
+- [4:37](https://youtube.com/watch?v=ShQXDxUW-WQ&t=277) 실험하신 분인 거 같아요. 그래서 어
+- [4:40](https://youtube.com/watch?v=ShQXDxUW-WQ&t=280) 되게 약간 스킬을 잘 만든 거
+- [4:41](https://youtube.com/watch?v=ShQXDxUW-WQ&t=281) 같더라고요. 요거를 보고 좀 신뢰를
+- [4:43](https://youtube.com/watch?v=ShQXDxUW-WQ&t=283) 하게 됐습니다. 네. 보면 수치 같은
+- [4:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=285) 거 수정해서 테스트 할 수 있거든요.
+- [4:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=287) 그래서 요분 이분 프로필에 들어와서
+- [4:49](https://youtube.com/watch?v=ShQXDxUW-WQ&t=289) 한번 보시면 좋을 거 같고
+- [4:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=293) 여튼 제작자는 그렇고 임팩블은 이제
+- [4:56](https://youtube.com/watch?v=ShQXDxUW-WQ&t=296) 프론트엔드 어 디자인 스킬
+- [4:57](https://youtube.com/watch?v=ShQXDxUW-WQ&t=297) 엔트로픽에서 만난 프론트엔드 디자인
+- [4:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=299) 스킬에 약간 더 개선된 버전이라고
+- [5:01](https://youtube.com/watch?v=ShQXDxUW-WQ&t=301) 보면 될 것 같습니다. 네. 그리고
+- [5:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=304) 이제 이거의 이제 목적은 이제 AI
+- [5:05](https://youtube.com/watch?v=ShQXDxUW-WQ&t=305) 슬롭 같은 거를 다 없애기 위한
+- [5:07](https://youtube.com/watch?v=ShQXDxUW-WQ&t=307) 겁니다. 이제 어디에서나 본듯한
+- [5:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=309) 디자인 이런 거 많죠. 둥근 카드에
+- [5:12](https://youtube.com/watch?v=ShQXDxUW-WQ&t=312) 뭐 아이콘 되게 많이 박혀 있고 어
+- [5:15](https://youtube.com/watch?v=ShQXDxUW-WQ&t=315) 유리판 효과에다가 뭐 색상은 이제
+- [5:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=318) 보라색 어에서 뭐 파란색으로
+- [5:20](https://youtube.com/watch?v=ShQXDxUW-WQ&t=320) 그레디언트 어 바뀌는 그런 느낌.
+- [5:23](https://youtube.com/watch?v=ShQXDxUW-WQ&t=323) 거기다가 이제 카드 같은 경우에는 어
+- [5:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=325) 3열 카드 이런 스타일이 되게
+- [5:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=327) 많잖아요. 예.
+- [5:29](https://youtube.com/watch?v=ShQXDxUW-WQ&t=329) 그래서 임팩커블에 이제에서 어 찾는
+- [5:32](https://youtube.com/watch?v=ShQXDxUW-WQ&t=332) 해답은 뭐냐면 이제이 화면을 개발할
+- [5:35](https://youtube.com/watch?v=ShQXDxUW-WQ&t=335) 때 이제 워크플로를 통해서 개발을
+- [5:37](https://youtube.com/watch?v=ShQXDxUW-WQ&t=337) 하는 겁니다. 그래서 셰이프,
+- [5:39](https://youtube.com/watch?v=ShQXDxUW-WQ&t=339) 크래프트, 크리틱, 폴리시 뭐 이런
+- [5:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=342) 스킬들을 순차적으로 이제 실행을 해서
+- [5:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=345) 어 이제 화면을 개선을 하는 그런
+- [5:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=347) 방식입니다. 네. 그래서 제가 요거
+- [5:49](https://youtube.com/watch?v=ShQXDxUW-WQ&t=349) 테스트를 해 보니까 뭐 확실히 뭐
+- [5:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=351) 이것도 이거를 실행을 했을 때 어
+- [5:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=355) 계속 반복적으로 나오는 패턴이 있을
+- [5:56](https://youtube.com/watch?v=ShQXDxUW-WQ&t=356) 수 있습니다. 근데 이제 우리가
+- [5:58](https://youtube.com/watch?v=ShQXDxUW-WQ&t=358) 일반적으로 봤을 때 어 확인되는 그
+- [6:00](https://youtube.com/watch?v=ShQXDxUW-WQ&t=360) UI 어 AI가 딱 만든듯한 UI의
+- [6:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=364) 패턴은 이제 어느 정도 회피가 잘
+- [6:06](https://youtube.com/watch?v=ShQXDxUW-WQ&t=366) 되는 거 같습니다. 네. 그래서 이제
+- [6:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=369) 이건 임팩커블 같은 경우는 11개의
+- [6:10](https://youtube.com/watch?v=ShQXDxUW-WQ&t=370) 세부 스킬이랑 어 프로젝트 컨텍스트
+- [6:13](https://youtube.com/watch?v=ShQXDxUW-WQ&t=373) 파일 요렇게 돼 있다라고 보면
+- [6:14](https://youtube.com/watch?v=ShQXDxUW-WQ&t=374) 됩니다. 그리고 이제 구성 같은
+- [6:17](https://youtube.com/watch?v=ShQXDxUW-WQ&t=377) 경우에는 여기 이제 문서에도 잘
+- [6:19](https://youtube.com/watch?v=ShQXDxUW-WQ&t=379) 설명이 돼 있는데 이게 이제 어
+- [6:22](https://youtube.com/watch?v=ShQXDxUW-WQ&t=382) 분류가 돼 있어요. 생성을 할 때는
+- [6:24](https://youtube.com/watch?v=ShQXDxUW-WQ&t=384) 임팩커블 크래프트 티치 익스트랙트
+- [6:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=387) 셰이프 요런 걸 사용하는 거고 어
+- [6:30](https://youtube.com/watch?v=ShQXDxUW-WQ&t=390) 지금 현재 상태를 이제 어 평가를
+- [6:31](https://youtube.com/watch?v=ShQXDxUW-WQ&t=391) 하기 위해서는 뭐 어디 그리고 크리틱
+- [6:34](https://youtube.com/watch?v=ShQXDxUW-WQ&t=394) 요런 걸 사용을 합니다. 네. 그리고
+- [6:37](https://youtube.com/watch?v=ShQXDxUW-WQ&t=397) 이제 어 어떤 세부적인 어떤 디테일을
+- [6:39](https://youtube.com/watch?v=ShQXDxUW-WQ&t=399) 수정할 때는 이제 리파인에 관련된
+- [6:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=402) 것들을 사용을 합니다. 네. 그래서
+- [6:43](https://youtube.com/watch?v=ShQXDxUW-WQ&t=403) 뭐 리파인에 보면 애니메이트 볼더
+- [6:46](https://youtube.com/watch?v=ShQXDxUW-WQ&t=406) 컬러라이즈 뭐 이런 것들이 쭉
+- [6:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=407) 있습니다. 보시면 좋을 거 같고.
+- [6:49](https://youtube.com/watch?v=ShQXDxUW-WQ&t=409) 그리고 심플리파이라고 해서 이제
+- [6:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=411) 마지막에 약간 좀 더 이제 어 어떤
+- [6:54](https://youtube.com/watch?v=ShQXDxUW-WQ&t=414) 요소들을 좀 빼는 뭐 요런 것들을
+- [6:56](https://youtube.com/watch?v=ShQXDxUW-WQ&t=416) 하는 거고 하드는 이제 좀 더 강조를
+- [6:58](https://youtube.com/watch?v=ShQXDxUW-WQ&t=418) 시키는 강화시키는네 강화시키는 어떤
+- [7:02](https://youtube.com/watch?v=ShQXDxUW-WQ&t=422) 겁니다. 그래서 이제 하든 옵티마이즈
+- [7:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=424) 뭐 폴리시 이런 것들이 이제 단
+- [7:06](https://youtube.com/watch?v=ShQXDxUW-WQ&t=426) 의미만 봐도 이제 어 그런게
+- [7:07](https://youtube.com/watch?v=ShQXDxUW-WQ&t=427) 느껴집니다. 하든는 뭐 단단하게
+- [7:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=429) 한다. 옵티마이즈는 이제 성능 같은
+- [7:11](https://youtube.com/watch?v=ShQXDxUW-WQ&t=431) 거를 어 최적화시키는 거고 폴리시는
+- [7:13](https://youtube.com/watch?v=ShQXDxUW-WQ&t=433) 이제 마무리하는 그런 명령어입니다.
+- [7:15](https://youtube.com/watch?v=ShQXDxUW-WQ&t=435) 그래서 어 요런 식으로 이제
+- [7:17](https://youtube.com/watch?v=ShQXDxUW-WQ&t=437) 명령어들이 다 있고 제가 요걸
+- [7:19](https://youtube.com/watch?v=ShQXDxUW-WQ&t=439) 테스트를 해 보니까 이거를 뭐 제가
+- [7:21](https://youtube.com/watch?v=ShQXDxUW-WQ&t=441) UI를 수정하는데 이걸 다 쓸 필요는
+- [7:23](https://youtube.com/watch?v=ShQXDxUW-WQ&t=443) 없어요. 그때그때 쓰는게 조금씩
+- [7:24](https://youtube.com/watch?v=ShQXDxUW-WQ&t=444) 달라집니다. 네. 근데 이제 좀 많이
+- [7:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=447) 쓰는 거라고 하면 이제이 크리틱이라는
+- [7:29](https://youtube.com/watch?v=ShQXDxUW-WQ&t=449) 걸 많이 쓰고 그리고 폴리시 요것도
+- [7:31](https://youtube.com/watch?v=ShQXDxUW-WQ&t=451) 많이 씁니다.
+- [7:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=453) 네. 그래서 스킬을 좀 알아보면
+- [7:36](https://youtube.com/watch?v=ShQXDxUW-WQ&t=456) 보면 이제 임팩커블 셰이프 티치
+- [7:38](https://youtube.com/watch?v=ShQXDxUW-WQ&t=458) 설명을 드렸죠. 이거를 네. 가장
+- [7:40](https://youtube.com/watch?v=ShQXDxUW-WQ&t=460) 먼저 호출하는 스킬 그룹입니다. 맨
+- [7:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=462) 처음에 요거 세 개를 요거 세 개 중
+- [7:44](https://youtube.com/watch?v=ShQXDxUW-WQ&t=464) 하나를 선택을 하시면 됩니다. 만약에
+- [7:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=467) 처음에 어 내가 임팩커블을 내
+- [7:50](https://youtube.com/watch?v=ShQXDxUW-WQ&t=470) 프랙터에서 한 번 안 써 봤다라고
+- [7:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=471) 하면이 티를 어 호출을 해 보시면
+- [7:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=473) 돼요. 네. 그리고 이제 어 티치를
+- [7:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=475) 해 봤고 그다음에 조금조금씩 다른
+- [7:57](https://youtube.com/watch?v=ShQXDxUW-WQ&t=477) 거를 좀 수정을 해 보고 싶다. 예를
+- [7:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=479) 들면 뭐 헤더를 좀 수정을 해 보고
+- [8:00](https://youtube.com/watch?v=ShQXDxUW-WQ&t=480) 싶다. 카드를 수정해 보고 싶다.
+- [8:02](https://youtube.com/watch?v=ShQXDxUW-WQ&t=482) 이러면 이제 셰이프를 쓰시면 됩니다.
+- [8:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=484) 네. 그리고 이제 시각 조정. 여기에
+- [8:07](https://youtube.com/watch?v=ShQXDxUW-WQ&t=487) 볼더 어콰이어터 컬러라이즈
+- [8:10](https://youtube.com/watch?v=ShQXDxUW-WQ&t=490) 그리고 디스틸 요런 것들이 있는데
+- [8:12](https://youtube.com/watch?v=ShQXDxUW-WQ&t=492) 보더 같은 경우에는 어, 어떤 밋밋한
+- [8:15](https://youtube.com/watch?v=ShQXDxUW-WQ&t=495) 디자인을 이제 더 강화를 시키는
+- [8:17](https://youtube.com/watch?v=ShQXDxUW-WQ&t=497) 겁니다. 예를 들면 내가 어, 여기에
+- [8:19](https://youtube.com/watch?v=ShQXDxUW-WQ&t=499) 있는이 타이틀이 타이틀이 어, 너무
+- [8:21](https://youtube.com/watch?v=ShQXDxUW-WQ&t=501) 좀 밋밋해요. 근데 여기 되게 중요한
+- [8:24](https://youtube.com/watch?v=ShQXDxUW-WQ&t=504) 요소라서 이걸 좀 더 강화를 시키고
+- [8:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=505) 싶어. 그런 경우에 이제 보드를 어,
+- [8:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=507) 트리그를 하는 겁니다. 네. 그리고
+- [8:30](https://youtube.com/watch?v=ShQXDxUW-WQ&t=510) 화이어트 같은 경우에는 이제 강화를
+- [8:32](https://youtube.com/watch?v=ShQXDxUW-WQ&t=512) 시켰는데 이제 이거 너무 강화할 수
+- [8:34](https://youtube.com/watch?v=ShQXDxUW-WQ&t=514) 있잖아요. 그럴 그럴 때는 이제 조금
+- [8:36](https://youtube.com/watch?v=ShQXDxUW-WQ&t=516) 더 어 톤다운을 시키는 그런
+- [8:38](https://youtube.com/watch?v=ShQXDxUW-WQ&t=518) 스킬이라고 보면 됩니다. 그리고
+- [8:39](https://youtube.com/watch?v=ShQXDxUW-WQ&t=519) 컬러라이즈. 네. 이거는 이제 뭐
+- [8:41](https://youtube.com/watch?v=ShQXDxUW-WQ&t=521) 색상을 색상을 뭐 더 추가하는 뭐
+- [8:44](https://youtube.com/watch?v=ShQXDxUW-WQ&t=524) 그런 거였던 거 같아요. 그리고
+- [8:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=525) 디스틸은 이거 이제 중요하다라는 이제
+- [8:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=527) 뜻이죠. 그래서 이제 불필요한
+- [8:49](https://youtube.com/watch?v=ShQXDxUW-WQ&t=529) 요소들을 제거하고 이제 본질이
+- [8:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=531) 화면에서 나타내고자 하는 본질만
+- [8:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=533) 남긴다. 그래서 이게 시각적으로 특히
+- [8:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=535) 강하게 약하게 그리고 이제 어 일관된
+- [8:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=539) 색상이나 뭐 어 불필요한 요소를
+- [9:01](https://youtube.com/watch?v=ShQXDxUW-WQ&t=541) 빼거나 요런 것들을 이제 조정하는
+- [9:03](https://youtube.com/watch?v=ShQXDxUW-WQ&t=543) 스킬들이라고 보면 됩니다. 네.
+- [9:05](https://youtube.com/watch?v=ShQXDxUW-WQ&t=545) 그리고 레이아웃 같은 경우에는 제가
+- [9:07](https://youtube.com/watch?v=ShQXDxUW-WQ&t=547) 레이아웃이랑 타입세는 사실 안 써
+- [9:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=549) 봤고 클레파이는 써 봤는데 어떤 에러
+- [9:11](https://youtube.com/watch?v=ShQXDxUW-WQ&t=551) 메시지 같은 것들이 표시가 돼야 될
+- [9:13](https://youtube.com/watch?v=ShQXDxUW-WQ&t=553) 수도 있잖아요. 예를 들면 어 뭐이
+- [9:15](https://youtube.com/watch?v=ShQXDxUW-WQ&t=555) 화면이 제대로 표시가 안 됐을 때
+- [9:17](https://youtube.com/watch?v=ShQXDxUW-WQ&t=557) 나와야 되는 에러 메시지 뭐 이런
+- [9:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=558) 것들이 있을 수 있는데 그런 것들을
+- [9:20](https://youtube.com/watch?v=ShQXDxUW-WQ&t=560) 놓친 거를 다 체크를 해 줍니다.
+- [9:23](https://youtube.com/watch?v=ShQXDxUW-WQ&t=563) 네. 그리고 이제 모션 마감. 요거
+- [9:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=565) 같은 경우에는 이제 뭐 애니메이트.
+- [9:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=567) 어, 이거는 뭐 애니메이션을 좀 의미
+- [9:29](https://youtube.com/watch?v=ShQXDxUW-WQ&t=569) 있게 넣어 주는 거고요. 딜라이트
+- [9:31](https://youtube.com/watch?v=ShQXDxUW-WQ&t=571) 이거는 조금 재미서 이거 화면에서 좀
+- [9:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=573) 재미 요소를 좀 찾아서 넣어 주는
+- [9:35](https://youtube.com/watch?v=ShQXDxUW-WQ&t=575) 거고 오버드라이브 같은 경우에는 좀
+- [9:38](https://youtube.com/watch?v=ShQXDxUW-WQ&t=578) 더 튀는 거예요. 좀 너무 약간
+- [9:40](https://youtube.com/watch?v=ShQXDxUW-WQ&t=580) 밋밋할 때 튀는 모션을 놓고 싶을 때
+- [9:43](https://youtube.com/watch?v=ShQXDxUW-WQ&t=583) 쓰는 거고. 네. 펄리시 같은
+- [9:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=585) 경우에는 마지막에 쓰는 거라고 보시면
+- [9:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=587) 됩니다. 그리고 이제 제일 많이 쓰는
+- [9:49](https://youtube.com/watch?v=ShQXDxUW-WQ&t=589) 거 크리틱을 제일 많이 씁니다. 이게
+- [9:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=591) 뭐냐면 어 크리틱을 돌리면 점수가
+- [9:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=593) 나와요. 40점 만점에 20점 뭐
+- [9:56](https://youtube.com/watch?v=ShQXDxUW-WQ&t=596) 30점 이렇게 나옵니다. 그래서 이제
+- [9:58](https://youtube.com/watch?v=ShQXDxUW-WQ&t=598) 크리티컬 기준으로 해서 크리티컬 한번
+- [10:00](https://youtube.com/watch?v=ShQXDxUW-WQ&t=600) 돌려보고 전체적으로 디자인의 어떤 어
+- [10:03](https://youtube.com/watch?v=ShQXDxUW-WQ&t=603) 점수를 판단한 다음에 시작을 하면
+- [10:05](https://youtube.com/watch?v=ShQXDxUW-WQ&t=605) 된다라고 보면 됩니다. 그래서 어
+- [10:08](https://youtube.com/watch?v=ShQXDxUW-WQ&t=608) 가장 많이 돌리는 스킬이 크리틱이라고
+- [10:10](https://youtube.com/watch?v=ShQXDxUW-WQ&t=610) 보면 될 거 같아요.
+- [10:12](https://youtube.com/watch?v=ShQXDxUW-WQ&t=612) 네. 그리고 어디 하든 그리고 어댑
+- [10:14](https://youtube.com/watch?v=ShQXDxUW-WQ&t=614) 옵티마이즈 뭐 이런 것들이 있습니다.
+- [10:16](https://youtube.com/watch?v=ShQXDxUW-WQ&t=616) 이제 보면 이렇게 설명을 보시면 알
+- [10:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=618) 거 같아요.
+- [10:20](https://youtube.com/watch?v=ShQXDxUW-WQ&t=620) 네. 그래서 이제 중요한게 제가
+- [10:22](https://youtube.com/watch?v=ShQXDxUW-WQ&t=622) 이거를 어 뭐 이거 하나하나 의미는
+- [10:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=625) 이제 알 거 같고 그리고 이렇게 읽어
+- [10:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=627) 보면 대충 먼저 압니다. 여기 특히
+- [10:29](https://youtube.com/watch?v=ShQXDxUW-WQ&t=629) 여기서 이렇게 비보 레프트를 잘 해
+- [10:31](https://youtube.com/watch?v=ShQXDxUW-WQ&t=631) 놨기 때문에 어떤 느낌인지 잘 알
+- [10:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=633) 수가 있어요. 여기 보면 색깔 빠져
+- [10:35](https://youtube.com/watch?v=ShQXDxUW-WQ&t=635) 있는데 색깔 넣어줬죠. 이렇게. 네.
+- [10:38](https://youtube.com/watch?v=ShQXDxUW-WQ&t=638) 그리고 여기서 밋밋한데 여기서
+- [10:40](https://youtube.com/watch?v=ShQXDxUW-WQ&t=640) 즐거움의 요소를 넣어 줬죠. 근데
+- [10:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=642) 이제 문제는 그거죠. 어떤 순서로
+- [10:44](https://youtube.com/watch?v=ShQXDxUW-WQ&t=644) 사용을 해야 되느냐. 요게 이제
+- [10:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=645) 중요합니다.
+- [10:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=647) 일단은 임팩커블을 실행을 하면 어이
+- [10:50](https://youtube.com/watch?v=ShQXDxUW-WQ&t=650) 점 임팩커블 좀 MD라는 파일이
+- [10:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=651) 생성이 됩니다. 이게 이제 뭐냐면이
+- [10:54](https://youtube.com/watch?v=ShQXDxUW-WQ&t=654) 프로젝트 전체에서 임팩커블 스킬들이
+- [10:56](https://youtube.com/watch?v=ShQXDxUW-WQ&t=656) 사용하는 공통 어 문서라고 보면
+- [11:00](https://youtube.com/watch?v=ShQXDxUW-WQ&t=660) 됩니다. 그래서 이거가 이제 제가
+- [11:02](https://youtube.com/watch?v=ShQXDxUW-WQ&t=662) 이제 돌렸던 건데 여기 임팩커블
+- [11:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=664) MD를 보면 디자인 컨텍스트 이제
+- [11:06](https://youtube.com/watch?v=ShQXDxUW-WQ&t=666) 여기 뭐 주요 사용자가 누구냐 보조
+- [11:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=669) 사용자 누구냐 이제이 디자인을 만들
+- [11:11](https://youtube.com/watch?v=ShQXDxUW-WQ&t=671) 때 결국에는 이제 사람을 위해서
+- [11:13](https://youtube.com/watch?v=ShQXDxUW-WQ&t=673) 만드는 거잖아요. 그러니까 타겟이
+- [11:15](https://youtube.com/watch?v=ShQXDxUW-WQ&t=675) 누구냐에 따라서 또 달라집니다.
+- [11:16](https://youtube.com/watch?v=ShQXDxUW-WQ&t=676) 그래서 유저에 대한게 나오고요.
+- [11:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=678) 그리고 이제 브랜드 퍼스널티 그리고
+- [11:20](https://youtube.com/watch?v=ShQXDxUW-WQ&t=680) 이제 에스테틱 디렉션 뭐 이런 것들이
+- [11:22](https://youtube.com/watch?v=ShQXDxUW-WQ&t=682) 쭉 나옵니다. 그리고 테마 같은
+- [11:24](https://youtube.com/watch?v=ShQXDxUW-WQ&t=684) 경우에 팀 같은 경우에 어떻게 어
+- [11:26](https://youtube.com/watch?v=ShQXDxUW-WQ&t=686) 하느냐. 네. 이런 것들이 쭉
+- [11:28](https://youtube.com/watch?v=ShQXDxUW-WQ&t=688) 나오고네이
+- [11:29](https://youtube.com/watch?v=ShQXDxUW-WQ&t=689) 파일을 매번 로드를 한다고 보시면
+- [11:31](https://youtube.com/watch?v=ShQXDxUW-WQ&t=691) 됩니다. 네. 그래서 사용자 정의
+- [11:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=693) 브랜드 3단어 세 단어 그리고 이제
+- [11:36](https://youtube.com/watch?v=ShQXDxUW-WQ&t=696) 어 미약 기조네 피아야 되는 거 핵심
+- [11:39](https://youtube.com/watch?v=ShQXDxUW-WQ&t=699) 원칙 요런 것들이 담겨 있고 요게
+- [11:41](https://youtube.com/watch?v=ShQXDxUW-WQ&t=701) 이제 담겨 있는 상태에서 다른
+- [11:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=702) 스킬들이 다 돌아간다고 보면 됩니다.
+- [11:44](https://youtube.com/watch?v=ShQXDxUW-WQ&t=704) 그래서 스킬을 트리거를 하면 얘를
+- [11:46](https://youtube.com/watch?v=ShQXDxUW-WQ&t=706) 항상 읽게 되어 있습니다.네 그래서
+- [11:48](https://youtube.com/watch?v=ShQXDxUW-WQ&t=708) 예시를 제가 아까 어 보여 드렸던
+- [11:50](https://youtube.com/watch?v=ShQXDxUW-WQ&t=710) 것처럼 이제 요런 식으로 어 임팩컵
+- [11:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=713) MD나 이렇게 작성이 됩니다.
+- [11:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=715) 그래서 이제 어 제가 생각하는 이제
+- [11:57](https://youtube.com/watch?v=ShQXDxUW-WQ&t=717) 오크플로 같은 경우에는 처음 기획
+- [11:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=719) 단계에서는 쉐이프랑 크리틱만 이제
+- [12:02](https://youtube.com/watch?v=ShQXDxUW-WQ&t=722) 실행을 하면 됩니다. 네. 쉐이 같은
+- [12:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=724) 경우에는 어 비처가 시작할 때 어
+- [12:06](https://youtube.com/watch?v=ShQXDxUW-WQ&t=726) 트리거를 하는 거라고 보면 됩니다.
+- [12:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=729) 네. 그래서 이제 뭐이 디자인이 어
+- [12:12](https://youtube.com/watch?v=ShQXDxUW-WQ&t=732) 좋은 쉐을 가지고 있는지 아닌지 어
+- [12:14](https://youtube.com/watch?v=ShQXDxUW-WQ&t=734) 어떤 식의 뭐 어 개선이 있을 수
+- [12:16](https://youtube.com/watch?v=ShQXDxUW-WQ&t=736) 있는지 이런 것들에 대해서 어
+- [12:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=738) 질문하는 UI가 나와요.
+- [12:22](https://youtube.com/watch?v=ShQXDxUW-WQ&t=742) 네. 자, 그래서 여기 보면 이제
+- [12:24](https://youtube.com/watch?v=ShQXDxUW-WQ&t=744) 어, 제가 이제 쉐입을 트리거를
+- [12:26](https://youtube.com/watch?v=ShQXDxUW-WQ&t=746) 시켰고
+- [12:28](https://youtube.com/watch?v=ShQXDxUW-WQ&t=748) 어, 지금 보면 원래 뒤에 어떤 걸
+- [12:30](https://youtube.com/watch?v=ShQXDxUW-WQ&t=750) 계산하고 싶은지 써 줘야 되는데 그냥
+- [12:32](https://youtube.com/watch?v=ShQXDxUW-WQ&t=752) 한번 트리거 시켜 봤습니다. 그러니까
+- [12:34](https://youtube.com/watch?v=ShQXDxUW-WQ&t=754) 이제 어떤 피처를 어, 좀 더 다듬고
+- [12:37](https://youtube.com/watch?v=ShQXDxUW-WQ&t=757) 싶은지 이제 물어보는 거죠. 여기서
+- [12:38](https://youtube.com/watch?v=ShQXDxUW-WQ&t=758) 선택한 거에 따라서 이제 진행이
+- [12:40](https://youtube.com/watch?v=ShQXDxUW-WQ&t=760) 된다고 보면 됩니다. 그러면 선택한
+- [12:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=762) 거에 이제 디자인을 보고 어, 셰이프
+- [12:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=765) 같은 걸 추천을 해 줍니다. 여기
+- [12:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=767) 보면 현재 구형과 스크린샷을 먼저
+- [12:48](https://youtube.com/watch?v=ShQXDxUW-WQ&t=768) 확인한다라고 뜨 떠 있고요. 네.
+- [12:50](https://youtube.com/watch?v=ShQXDxUW-WQ&t=770) 보면 이제 이제 쉐이을 한 다음에
+- [12:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=773) 제가 정보를 안 주다 보니까 이제
+- [12:54](https://youtube.com/watch?v=ShQXDxUW-WQ&t=774) 자꾸 물어보게 되는데 이제 재설계,
+- [12:57](https://youtube.com/watch?v=ShQXDxUW-WQ&t=777) 주요 동기 요런 것들이 나오게
+- [12:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=779) 됩니다.
+- [13:01](https://youtube.com/watch?v=ShQXDxUW-WQ&t=781) 네. 그리고 이제 크리틱 같은
+- [13:02](https://youtube.com/watch?v=ShQXDxUW-WQ&t=782) 경우에는 이제 점수가 나온다고 했죠.
+- [13:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=784) 뭐 40점 만점에 몇 점인지
+- [13:05](https://youtube.com/watch?v=ShQXDxUW-WQ&t=785) 나옵니다.
+- [13:10](https://youtube.com/watch?v=ShQXDxUW-WQ&t=790) 네. 제가 크리틱을 실행을 했고 지금
+- [13:11](https://youtube.com/watch?v=ShQXDxUW-WQ&t=791) 보면 이제 결과가 나오고 있는 거를
+- [13:13](https://youtube.com/watch?v=ShQXDxUW-WQ&t=793) 볼 수 있죠. 이 보면 지금 어 토탈
+- [13:16](https://youtube.com/watch?v=ShQXDxUW-WQ&t=796) 스코어가 40점 만점에 31점을
+- [13:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=798) 받았습니다. 그래서 여기서 점수가
+- [13:20](https://youtube.com/watch?v=ShQXDxUW-WQ&t=800) 낮은 거를 이제 수정을 하면 될 거
+- [13:22](https://youtube.com/watch?v=ShQXDxUW-WQ&t=802) 같고네 그래서 이제 항상 이제
+- [13:24](https://youtube.com/watch?v=ShQXDxUW-WQ&t=804) 인피커버를 쓸 때 맨 처음에 이제
+- [13:26](https://youtube.com/watch?v=ShQXDxUW-WQ&t=806) 크리틱을 통해서 점수를 보고네 개선을
+- [13:29](https://youtube.com/watch?v=ShQXDxUW-WQ&t=809) 시작하면 좋을 것 같다라는 이제
+- [13:30](https://youtube.com/watch?v=ShQXDxUW-WQ&t=810) 생각이 들었습니다. 반복 계산할 때는
+- [13:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=813) 이제 어어 볼더 컬러라이즈 디스틸요
+- [13:36](https://youtube.com/watch?v=ShQXDxUW-WQ&t=816) 세 가지 중에서 사용을 하고 마지막에
+- [13:39](https://youtube.com/watch?v=ShQXDxUW-WQ&t=819) 폴리시로 이제 다듬어 주고 다시 이제
+- [13:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=822) 보더 사용해서 뭐 수정하고 폴리시 해
+- [13:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=825) 주고 뭐 컬러이지 해 주고 폴리시해
+- [13:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=827) 주고 이런 식으로 사용하면 됩니다.
+- [13:49](https://youtube.com/watch?v=ShQXDxUW-WQ&t=829) 네. 그리고 이제 밸런스 같은
+- [13:50](https://youtube.com/watch?v=ShQXDxUW-WQ&t=830) 경우에는 이제이 밸런스라는게 결국에는
+- [13:52](https://youtube.com/watch?v=ShQXDxUW-WQ&t=832) 이제 톤 다운을 시키고 싶은 거 너무
+- [13:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=835) 강한 어떤 느낌이 드는 부분에 대해서
+- [13:58](https://youtube.com/watch?v=ShQXDxUW-WQ&t=838) 이제 어 적용을 시켜 주면 된다라고
+- [14:00](https://youtube.com/watch?v=ShQXDxUW-WQ&t=840) 보시면 되고 요것도 마찬가지로
+- [14:02](https://youtube.com/watch?v=ShQXDxUW-WQ&t=842) 마지막에 이제 폴리시로 어 다듬어
+- [14:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=844) 주는 작업을 해 주고 있죠. 근데
+- [14:05](https://youtube.com/watch?v=ShQXDxUW-WQ&t=845) 이게 뭐 반드시 필수는 아니긴
+- [14:07](https://youtube.com/watch?v=ShQXDxUW-WQ&t=847) 합니다. 폴리시를 안 해도 상관은
+- [14:08](https://youtube.com/watch?v=ShQXDxUW-WQ&t=848) 없어요. 그리고 이제 검증만 돌릴
+- [14:11](https://youtube.com/watch?v=ShQXDxUW-WQ&t=851) 거면 크리틱. 네. 요렇게 이제
+- [14:12](https://youtube.com/watch?v=ShQXDxUW-WQ&t=852) 진행을 하게 되겠습니다. 네. 그래서
+- [14:15](https://youtube.com/watch?v=ShQXDxUW-WQ&t=855) 이제 크리틱을 돌리면 이제 판단
+- [14:17](https://youtube.com/watch?v=ShQXDxUW-WQ&t=857) 기준이 되는데 여기 4회 중 3회가
+- [14:19](https://youtube.com/watch?v=ShQXDxUW-WQ&t=859) 전환점 타이밍이었다. 요게 무슨
+- [14:21](https://youtube.com/watch?v=ShQXDxUW-WQ&t=861) 말이냐면 제가 이제 뭐 크리틱을네 번
+- [14:23](https://youtube.com/watch?v=ShQXDxUW-WQ&t=863) 돌려봤으면 그중에서 이제 세 번
+- [14:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=865) 정도가 점수가 낮게 나와서 이제 어
+- [14:28](https://youtube.com/watch?v=ShQXDxUW-WQ&t=868) 어떤 개선할 만한 어떤 근거가
+- [14:30](https://youtube.com/watch?v=ShQXDxUW-WQ&t=870) 되었다. 요렇게 어 판단할 수
+- [14:32](https://youtube.com/watch?v=ShQXDxUW-WQ&t=872) 있었습니다.
+- [14:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=873) 네. 그리고 이제 패턴 같은 경우에는
+- [14:35](https://youtube.com/watch?v=ShQXDxUW-WQ&t=875) 이제 어 스펙 어 셰이프 버스트 코드
+- [14:38](https://youtube.com/watch?v=ShQXDxUW-WQ&t=878) 나중 임팩커블 좀 MD를 어 수정을
+- [14:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=882) 하고 그리고이 수정된 내용을 기반으로
+- [14:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=885) 해서 이제 어 수정을 하는 어 코드를
+- [14:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=887) 수정하는 이런 식으로 이제 흘러가게
+- [14:49](https://youtube.com/watch?v=ShQXDxUW-WQ&t=889) 되 있고요. 예 임팩커블 파일 같은
+- [14:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=891) 경우에는 이제 종류가 좀 여러 가지가
+- [14:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=893) 있더라고요. 보면 그냥 임팩커블 좀
+- [14:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=895) MD가 있고 어 브리프로 시작하는
+- [14:57](https://youtube.com/watch?v=ShQXDxUW-WQ&t=897) 것들이 있습니다. 이거는 특정 이제
+- [14:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=899) 기능에 대해서만 어 수정을 할 때
+- [15:02](https://youtube.com/watch?v=ShQXDxUW-WQ&t=902) 생성이 되는 파일이고 그 쉐입을 쉐입
+- [15:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=904) 스킬을 어 트리거를 하면 요게 생성이
+- [15:06](https://youtube.com/watch?v=ShQXDxUW-WQ&t=906) 되는 거 같았어요. 네. 그래서 지금
+- [15:08](https://youtube.com/watch?v=ShQXDxUW-WQ&t=908) 약간 단점이라고 하면 지금 임팩
+- [15:11](https://youtube.com/watch?v=ShQXDxUW-WQ&t=911) 커버를 어 트리거를 하면 여기 보면
+- [15:13](https://youtube.com/watch?v=ShQXDxUW-WQ&t=913) 파일들이 다 루트 경로에 나오게
+- [15:15](https://youtube.com/watch?v=ShQXDxUW-WQ&t=915) 됩니다. 그러다 보니까 정리가 안
+- [15:16](https://youtube.com/watch?v=ShQXDxUW-WQ&t=916) 되는데 요거는 이제 임팩커블 어
+- [15:19](https://youtube.com/watch?v=ShQXDxUW-WQ&t=919) 스킬을 어 좀 개선을 하든지 아니면
+- [15:22](https://youtube.com/watch?v=ShQXDxUW-WQ&t=922) 마지막으로 이제 파일 정리를 하는
+- [15:23](https://youtube.com/watch?v=ShQXDxUW-WQ&t=923) 스킬을 만들어서 이제 정리를 시키든지
+- [15:26](https://youtube.com/watch?v=ShQXDxUW-WQ&t=926) 아니면 경로를 지정해 주든지 뭐 이런
+- [15:28](https://youtube.com/watch?v=ShQXDxUW-WQ&t=928) 식으로 처리를 하면 될 거 같습니다.
+- [15:30](https://youtube.com/watch?v=ShQXDxUW-WQ&t=930) 네. 그래서 이제 크래프트라는 이제
+- [15:32](https://youtube.com/watch?v=ShQXDxUW-WQ&t=932) 명령어가 이제이 스킬이 이제 어
+- [15:35](https://youtube.com/watch?v=ShQXDxUW-WQ&t=935) 코드를 구현을 하는 어 스킬이라고
+- [15:37](https://youtube.com/watch?v=ShQXDxUW-WQ&t=937) 보면 될 것 같습니다. 쉐이라는 거는
+- [15:39](https://youtube.com/watch?v=ShQXDxUW-WQ&t=939) 이제 코드 수정은 안 해요.
+- [15:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=942) 네. 아까 전에 얘기했던 패턴이죠.
+- [15:43](https://youtube.com/watch?v=ShQXDxUW-WQ&t=943) 원본 있고 볼더로 강조하고 과도하면
+- [15:46](https://youtube.com/watch?v=ShQXDxUW-WQ&t=946) 과어트로 내리고 그리고 적정 수준까지
+- [15:48](https://youtube.com/watch?v=ShQXDxUW-WQ&t=948) 내려주고. 네. 그래서 이제 여기에서
+- [15:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=951) 이제 볼 수 있는게 뭐냐면 볼드로
+- [15:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=953) 일단은 계속 올려 봅니다. 계속
+- [15:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=955) 여기저기 다 이제 강하게 어 어필을
+- [15:58](https://youtube.com/watch?v=ShQXDxUW-WQ&t=958) 해 보고 강조를 해 보고 과한 부분이
+- [16:01](https://youtube.com/watch?v=ShQXDxUW-WQ&t=961) 이제 발생이 되면 이제 줄여 주는
+- [16:02](https://youtube.com/watch?v=ShQXDxUW-WQ&t=962) 요런 식으로 하면 아 내가 지금
+- [16:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=964) 어디까지가 이제이 디자인에 이제 어
+- [16:08](https://youtube.com/watch?v=ShQXDxUW-WQ&t=968) 강조할 수 있는 상한선인가 이런 걸를
+- [16:10](https://youtube.com/watch?v=ShQXDxUW-WQ&t=970) 체크를 할 수 있다고 합니다.네
+- [16:12](https://youtube.com/watch?v=ShQXDxUW-WQ&t=972) 그리고 안티어 레퍼런스가 효과적이다.
+- [16:15](https://youtube.com/watch?v=ShQXDxUW-WQ&t=975) 네, 이거는 이제 아까 전에 봤던
+- [16:16](https://youtube.com/watch?v=ShQXDxUW-WQ&t=976) 안티 패턴 요게 이제 어, 임팩커블에
+- [16:19](https://youtube.com/watch?v=ShQXDxUW-WQ&t=979) 등록이 돼 있기 때문에요 안티 패턴은
+- [16:22](https://youtube.com/watch?v=ShQXDxUW-WQ&t=982) 제가 얘기를 해 주지 않더라도 어,
+- [16:24](https://youtube.com/watch?v=ShQXDxUW-WQ&t=984) 자연스럽게 이제 비켜 나갈 수 있는
+- [16:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=985) 그런 상황이 되는 거죠. 네. 그리고
+- [16:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=987) 이제이 임팩블 같은 경우에는 어,
+- [16:30](https://youtube.com/watch?v=ShQXDxUW-WQ&t=990) 스냅샷을 계속 찍습니다. 이게 뭐냐면
+- [16:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=993) 이렇게 이미지가 있거든요. 이미지를
+- [16:35](https://youtube.com/watch?v=ShQXDxUW-WQ&t=995) 계속 찍어요. 찍어서 확인을 합니다.
+- [16:37](https://youtube.com/watch?v=ShQXDxUW-WQ&t=997) 잘 되는지 안 됐는지.
+- [16:39](https://youtube.com/watch?v=ShQXDxUW-WQ&t=999) 네. 그리고 이제 그 내용이 이제이
+- [16:41](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1001) 야매 파일에 저장이 된다고 합니다.
+- [16:43](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1003) 제 야매 파일을 자세하게 보진
+- [16:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1005) 않았어요. 근데 이런 식으로 야매
+- [16:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1007) 파일 생성을 하고 이제 이미지를 어
+- [16:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1011) 찍고 이렇게 하는 거 같더라고요.
+- [16:52](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1012) 네. 그래서 이제 아까 얘기했던
+- [16:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1013) 테스트 결과
+- [16:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1015) 테스트 환경의 경우에는 제가 이제 어
+- [16:58](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1018) 조금씩 개발하고 있는요 지금 러닝
+- [17:00](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1020) 관련된 어 플랫폼에 이제 어 러닝
+- [17:03](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1023) 대회 어 화면에 대한 어떤 어 대제
+- [17:07](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1027) 디자인을 해 봤고 어 기존에 이제
+- [17:09](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1029) 어드민 대시보드 느낌이었다고 하면
+- [17:11](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1031) 약간 스포티하게 어 저희가 일반적으로
+- [17:13](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1033) 이제 스포츠 관련된 어떤 앱이나 이제
+- [17:16](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1036) 서비스 같은 거를 써 보면 그런 나
+- [17:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1038) 느낌 있잖아요. 네. 그런 느낌으로
+- [17:19](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1039) 이제 가도록 이제 개선을 해
+- [17:21](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1041) 봤습니다. 그래서 총 이제 3시간
+- [17:23](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1043) 30분 정도 어 개선 작업을 진행을
+- [17:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1045) 했고 세션은 다섯 개를 사용을
+- [17:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1047) 했습니다. 그리고 명령 호출 같은
+- [17:29](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1049) 경우에는 요건 이제 스킬의 어 횟수인
+- [17:31](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1051) 거 같습니다. 네. 그래서 요런
+- [17:33](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1053) 식으로 이제 호출를 해 봤고 어
+- [17:35](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1055) 비보가 이렇게 돼 있고 이제 에포터가
+- [17:38](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1058) 이렇게 돼 있습니다. 네. 비보
+- [17:40](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1060) 에포트를 한번 테스트를 해 보면 지금
+- [17:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1062) 기존에 있던 거는 [콧방귀] 어
+- [17:43](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1063) 기존에 있던 것도 뭐 크게 문제는
+- [17:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1065) 없었어요. 근데 이제 보면 요런 이제
+- [17:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1067) 줄 보면 이제 지역이 지금 줄바음이
+- [17:50](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1070) 돼 있잖아요. 요런 문제도 좀 있었고
+- [17:52](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1072) 사소한 문제들이 좀 많이 있었습니다.
+- [17:54](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1074) 네. 그래서 여기 보면 지금 이렇게
+- [17:56](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1076) 들어갔을 때 요런식이 약간 평범한
+- [17:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1079) 디자인이었다고 하면 지금 이제
+- [18:02](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1082) 이렇게 클릭했을 때 이제 약간 스포츠
+- [18:05](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1085) 어 스포츠 어떤 서비스하는 어떤
+- [18:08](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1088) 느낌에 나는 이제 UR을 이제 갖추게
+- [18:10](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1090) 됐습니다. 네. 그리고 여기에서 이제
+- [18:12](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1092) 지역 같은 거 선택할 때 서울
+- [18:14](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1094) 선택했다 하면 이제 서울로 이렇게
+- [18:16](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1096) 이동을 하는 요런 이제 모션 같은
+- [18:18](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1098) 것도 추가가 됐고요. 대구 네. 대전
+- [18:22](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1102) 울산 이렇게 한 다음에 여기서 만약에
+- [18:23](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1103) 뭐 울산을 뺀다 하면 두 개만 딱
+- [18:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1105) 보이는 네. 요런 이제 포커싱이 되고
+- [18:28](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1108) 기존에는 이제 그런게 없었어요. 기존
+- [18:29](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1109) 거에는이 보면 지역에서 선택을 하면
+- [18:32](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1112) 그냥 선택만 됐습니다. 네. 그래서
+- [18:34](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1114) 이제 약간 이제 기존에 좀 아이덴티티
+- [18:36](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1116) 같은게 좀 느껴지지 않았다라고 하면
+- [18:38](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1118) 지금은 이제 약간 어떻게 보면 브랜드
+- [18:40](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1120) 아이덴티티 이런 느낌을 브랜드
+- [18:42](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1122) 아이덴티티로 정한 건 아니지만 이제
+- [18:45](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1125) 그런 느낌을 주는 이제 화면으로
+- [18:47](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1127) 바뀌었다라고 볼 수 있겠습니다. 네.
+- [18:49](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1129) 그래서 이제 마지막 요약을 해 보면
+- [18:51](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1131) 어 결국에는 이제 11개 스킬 중에서
+- [18:53](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1133) 다 써야 되는게 아니고 필요한 것만
+- [18:55](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1135) 조합해서 사용을 하면 됩니다. 그리고
+- [18:57](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1137) 이제 임팩커블 MD 요게 이제 핵심
+- [18:59](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1139) 파일이고 안티 패턴을 이제 줄여
+- [19:01](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1141) 주는네 그래서 이제 AI의 어떤 이제
+- [19:04](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1144) 반복되는 디자인을 좀 회피하고
+- [19:06](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1146) 싶다라고 하면 저는 이제 기본적으로
+- [19:08](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1148) 이제 그 프런트엔드 디자인 스킬을
+- [19:10](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1150) 많이 썼는데 여기 프런트 핸드 디자인
+- [19:13](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1153) 이게 엔트로팩에서 나오는 스킬이죠.
+- [19:15](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1155) 요거를 진짜 많이 쓰거든요. 그래서
+- [19:17](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1157) 디자인을 하면 항상이 스킬을 사용해서
+- [19:19](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1159) 해 달라고 했었어요. 근데 이제
+- [19:21](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1161) 여기에서 이거 이걸 넘어서서 조금 더
+- [19:25](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1165) 어 브랜드에 대한 어떤 아이덴티티까지
+- [19:27](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1167) 주고 싶다라고 하면 이제 임팩을
+- [19:29](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1169) 써보면 좋을 것 같다라는 생각이
+- [19:31](https://youtube.com/watch?v=ShQXDxUW-WQ&t=1171) 들었습니다. 입니다.
