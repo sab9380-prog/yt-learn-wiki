@@ -1,0 +1,873 @@
+---
+title: "신박한 AI 서비스들이 한가득! 조코딩 AI 해커톤 with Google 출품작 리뷰"
+source_url: https://youtube.com/watch?v=9d5y3yVBvIw
+video_id: 9d5y3yVBvIw
+source_type: youtube
+lang: ko
+analyzed: 2026-06-27
+category: PICKS, 웹소설, 일반
+tags: ["Gemini API 활용 서비스 개발", "해커톤/개발자 대회 출품작", "TTS(텍스트 음성 변환) 접근성 가산점", "장애인 접근성 고려 설계", "RAG(검색 증강 생성) 활용", "브라우저 확장 프로그램(Extension)"]
+status: active
+---
+# 신박한 AI 서비스들이 한가득! 조코딩 AI 해커톤 with Google 출품작 리뷰
+
+## 🧠 이해 (Understand)
+- **Summary:** 조코딩 AI 해커톤(구글 Gemini 개발자 대회)에 제출된 작품들을 소개하는 영상이다. 본선 진출 12개 작품(타로 운세, 브라우저 확장 요약 도구, 영어 문제 출제기, AI SNS, 워치 활동 기록, 요리 추천, 청각장애인 알람, 여행 리뷰 분석 등)을 시연하며 구현 방식을 설명한다. 본선 외 작품들도 다수 소개되며, 가짜 데이터 생성기, 스프레드시트 수식 변환기, AI 찬반 토론, 생활기록부 작성 도우미, 소설 생성기 등 실용적·창의적 아이디어가 다양하게 등장한다. TTS 삽입과 장애인 접근성 고려가 대회 채점에서 가산점 요소임을 강조한다. 전체적으로 Gemini API를 활용해 일상 문제를 해결하는 AI 서비스 제작 사례들을 보여준다.
+- **Core Message:** Gemini API 하나로 타로·SNS·교육·장애인 보조 등 다양한 일상 문제를 해결하는 AI 서비스를 누구나 만들 수 있다.
+> TTS를 한번 넣게 되면 장애인을 위한 서비스인가 여기서 가산점을 받을 수가 있거든요. 소리를 넣는게 굉장히 중요하다.
+> AI가 댓글을 달아주면서 내가 쓴 글에 대한 위로를 받을 수 있는, 좀 감동이었습니다.
+> SNS의 미래는 이런 모습이지 않을까?
+❗ Gemini 개발자 대회에서 '장애인 접근성' 항목이 무려 5점이나 반영되어, 이를 고려하지 않으면 5점을 그냥 날리게 된다.
+❗ 애플 워치의 모션 데이터만으로 카페에서 커피 마시는 것과 책 읽는 것을 구분할 수 있다고 한다.
+❗ AI SNS 서비스에서 박찬호 AI가 LA 시절 피곤했냐는 질문에 실제 말투와 맥락이 반영된 답글을 즉시 생성했다.
+
+## 📚 핵심 용어
+- **RAG (검색 증강 생성):** AI가 답변 생성 시 외부 문서나 데이터를 실시간으로 검색해 참조하는 기술. / 오픈북 시험처럼, AI가 모든 걸 외우지 않고 필요할 때 외부 자료를 펴서 답을 찾는다. / 일반 AI는 학습된 지식만 사용(암기), RAG는 최신 외부 자료를 추가 참조(오픈북). 정보 갱신이 쉽다는 게 핵심 차이.
+- **TTS (텍스트 음성 변환):** 텍스트를 자동으로 음성으로 읽어주는 기능. / 내비게이션이 지도 글자를 소리로 읽어주듯, AI 서비스가 텍스트 결과를 말로 들려준다. / TTS는 텍스트→소리 변환, STT는 소리→텍스트 변환. 이 대회에서는 TTS 삽입이 장애인 접근성 가산점과 직결된다.
+- **브라우저 확장(Extension):** 크롬 등 웹브라우저에 추가 설치해 기능을 확장하는 소프트웨어 플러그인. / 스마트폰 앱처럼, 브라우저에 설치해 기존 사이트에 새 기능(예: AI 요약)을 얹는다. / 웹사이트는 접속해야 쓰지만, 확장 프로그램은 어떤 사이트에서도 항상 작동한다는 점이 다르다.
+- **멀티모달 AI:** 텍스트뿐 아니라 이미지·음성·동작 등 여러 형태의 입력을 동시에 처리하는 AI. / 텍스트만 읽던 AI가 사진도 보고 소리도 들을 수 있게 된 것. 마치 눈·귀·손을 동시에 쓰는 것과 같다. / 기존 텍스트 AI는 글만 처리하지만, 멀티모달 AI는 그림·영상·센서 데이터까지 함께 이해한다.
+
+## 🚀 실행 (Execute)
+- [ ] Gemini API 키 발급 후, 본인 도메인(PICKS 이커머스 / 웹소설 플랫폼)에 적용할 수 있는 미니 서비스 1개를 직접 프로토타입으로 제작해본다. (예: 상품 리뷰 요약기, 웹소설 시놉시스 생성기) — ⏰ 2주 내 · ⚡ 하루~이틀
+  - 담당: 나 (개발 가능 시) 또는 개발팀
+  - 이유: 영상 속 작품 대부분이 Gemini API 호출 + 간단한 UI 조합으로 만들어졌으며, 직접 만들어봐야 API 활용 감각이 생긴다.
+- [ ] 서비스 기획 시 TTS 음성 출력 및 시각적 알림 기능을 기본 체크리스트에 포함시킨다. (장애인 접근성 항목이 대회·공공조달·앱스토어 심사 모두에서 중요도 증가 추세) — ⏰ 다음 기획 시점부터 즉시 적용 · ⚡ 30분 (체크리스트 문서화)
+  - 담당: 나 / 기획 담당자
+  - 이유: 대회 가산점 5점뿐 아니라, 접근성 기능은 실제 서비스 품질과 사용자층 확대에도 직결된다.
+- [ ] 웹소설 영역에서 '아무글' 스타일(사진→소설, 키워드→소설)의 AI 글쓰기 보조 도구 레퍼런스를 수집하고, 플랫폼 내 작가 지원 도구로 활용 가능성을 검토한다. — ⏰ 이번 주 · ⚡ 2시간
+  - 담당: 나
+  - 이유: 영상에서 사진 한 장으로 감성 소설을 즉시 생성하는 서비스가 시연됐으며, 웹소설 작가의 초고 생성·아이디어 발굴에 실질적으로 적용 가능하다.
+- 자료: Google AI Studio (Gemini API 발급 및 테스트): aistudio.google.com
+- 자료: Google Gemini API 공식 문서: ai.google.dev (확인 필요: 최신 URL 변경 가능)
+- 자료: 조코딩 유튜브 채널 — 해당 해커톤 관련 이전 영상 및 Gemini API 튜토리얼
+- 자료: Faker.js (영상 내 '구라베이스' 페이크 데이터 라이브러리 유사 도구, 실제 존재 확인됨): fakerjs.dev
+- Timeline: 1일차: Gemini API 키 발급 및 Hello World 수준 테스트 → 1주차: 본인 도메인 적용 아이디어 1개 선정 및 프로토타입 착수 → 2주차: 프로토타입 완성 및 TTS 접근성 기능 추가 → 이후: 웹소설 작가 지원 도구 기획 검토
+
+## 🔗 연결
+- 카테고리: [[_category-PICKS, 웹소설, 일반]]
+- 핵심 개념: [[Gemini API 활용 서비스 개발]] · [[해커톤/개발자 대회 출품작]] · [[TTS]] · [[장애인 접근성 고려 설계]] · [[RAG]] · [[브라우저 확장 프로그램]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=0) 박찬호 님한테 LA에 내셨을 때
+- [0:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=2) 피곤하셨나요?
+- [0:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=2) 네. 이렇게 답글을 달면
+- [0:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=4) 에이 있을 때는 매일 경기준비와 경기
+- [0:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=5) 자체로 체력적으로 힘들었지만 약사
+- [0:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=6) 열정으로 힘든 것을 입고 뛰었던 거
+- [0:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=7) 같아요.
+- [0:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=8) 와, 이런 식으로 하면은 너무 재밌을
+- [0:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=9) 것 같아요. 프로그래밍 했다. 와,
+- [0:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=11) 이런 것도 인식할 수 있다고 합니다.
+- [0:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=13) 키보드 움직임을 얘가 감지를 할 수
+- [0:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=14) 있어 가지고 프로그래밍이다라는게
+- [0:16](https://youtube.com/watch?v=9d5y3yVBvIw&t=16) 인식이 된다고 합니다. 죄미나이
+- [0:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=17) 개발자 대회에 딱 맞는 컨셉이 아닌
+- [0:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=20) 조코딩 AI 해코톤 위드 구글에
+- [0:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=23) 제출해 주신 작품들이 굉장히
+- [0:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=24) 많은데요. 본선에 올라간 딱 12개만
+- [0:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=27) 보기 조금 아쉬워서 어떤 것들이
+- [0:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=29) 제출됐는지를 한번 좀 소개해 드리면
+- [0:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=31) 좋지 않을까라고 해서 시작하게
+- [0:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=32) 됐습니다. 네. 이런 식으로 AI
+- [0:34](https://youtube.com/watch?v=9d5y3yVBvIw&t=34) 서비스를 만들 수 있구나라는 거를
+- [0:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=36) 배울 수 있지 않을까? 네. 이런
+- [0:38](https://youtube.com/watch?v=9d5y3yVBvIw&t=38) 생각이 듭니다. 본선에 오은 것부터
+- [0:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=40) 12개 한번 빠르게 보고 다른
+- [0:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=42) 작품들도 하나씩 보도록 하겠습니다.
+- [0:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=44) 일단 첫 번째 타로 하시는 현직
+- [0:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=46) 무속인 분이 만드신 타로 운세
+- [0:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=48) 서비스를 플레이해 보도록 하겠습니다.
+- [0:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=50) 타로 운세를 제미나이 AI를 통해서
+- [0:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=53) 볼 수 있는 서비스입니다. 어
+- [0:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=54) 재물운을 볼까요? 재물은 재물
+- [0:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=55) 재물을 얻기 위한 중요한 단서가 있을
+- [0:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=58) 수 있습니다. 경제적인 안정이나
+- [1:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=60) 생각지 못한 손해가 당신을 기다리고
+- [1:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=63) 있을지도 모릅니다. 첫 번째 세 장의
+- [1:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=65) 카드를 선택해 당신의 재물의 운세를
+- [1:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=67) 확인해 보세요.
+- [1:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=68) 네. 이렇게 소리도 나오게 되고요.
+- [1:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=70) 이런게 되게 중요한게 사실 별거 아닌
+- [1:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=72) 거 같지만 TTS를 한번 넣게 되면
+- [1:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=74) 구글 본선에 참여하실 생각이 있다면
+- [1:16](https://youtube.com/watch?v=9d5y3yVBvIw&t=76) 장애인을 위한 서비스인가 여기서
+- [1:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=78) 가산점을 받을 수가 있거든요. 그래서
+- [1:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=79) 소리를 넣는게 굉장히 중요하다라고
+- [1:21](https://youtube.com/watch?v=9d5y3yVBvIw&t=81) 말씀을 드릴 수 있겠습니다. 카드를
+- [1:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=84) 뽑아 보자면 네. 하나를
+- [1:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=85) 뽑아봤습니다. 대여 사제가 나왔고요.
+- [1:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=87) 그리고 하나 뽑자면 운명의 수레각히
+- [1:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=90) 역방향이 나왔고요. 끌리는 걸 뽑자면
+- [1:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=92) 달의 역방향이 나왔습니다.
+- [1:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=93) 그럼 두 번째 카드로 당신의 미래를
+- [1:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=96) 좀 더 상세하게 알
+- [1:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=97) 미래를 좀 더 상세히 알아본다고
+- [1:38](https://youtube.com/watch?v=9d5y3yVBvIw&t=98) 합니다. 그래서 뽑으면서 싹 뽑고
+- [1:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=100) 뽑고 뽑으면 마지막으로 또 세 펼쳐질
+- [1:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=107) 꿈과 그리고 잠 위험을 알려줄
+- [1:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=110) 것입니다. 네. 그리고 또 뽑고 뽑고
+- [1:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=113) UI 이런 것도 좀 잘 만드셨죠.
+- [1:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=115) 이렇게 이런 것까지 구현해
+- [1:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=116) 놓으셨어요. 뽑고 어
+- [1:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=118) 수고하셨습니다.
+- [1:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=119) 여기서 이제 재미나이가 화려되겠죠?
+- [2:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=120) 기다리고 있는지
+- [2:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=121) 네분석을 하고 있습니다. 여기서
+- [2:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=123) 이렇게 타로 카드 해석이 나오게
+- [2:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=125) 됩니다. 요러면 이제 재미나이를
+- [2:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=126) 활용해서 이제 실제로 뽑은 카드들의
+- [2:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=129) 의미 이런 것들을 조합해서 재미나이가
+- [2:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=131) 역술 데이터 같은게 기본적으로 프롬트
+- [2:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=134) 안에 들어 있다면 혹은 뭐 래그나
+- [2:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=135) 이런 걸로 좀 더 심화해서 진짜 타로
+- [2:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=138) 카드 책 같은 거랑 연결해 놓으면
+- [2:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=139) 거기에 데이터를 기반으로 알려 줄
+- [2:21](https://youtube.com/watch?v=9d5y3yVBvIw&t=141) 수가 있겠죠. 그래서 뽑은 카드들
+- [2:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=143) 기반으로 요렇게 보여주고 있는 걸 볼
+- [2:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=145) 수가 있습니다. 어 일시적인 불안정이
+- [2:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=147) 혼란스러울 수 있다고 합니다. 지혜와
+- [2:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=149) 직관을 따른 것을 조언한다. 이런
+- [2:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=151) 식으로 타로 카드 운세를 재미나이를
+- [2:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=153) 활용하면 간편하게 볼 수가 있겠죠.
+- [2:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=155) AI가 해석을 해 주니까. 두 번째
+- [2:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=156) 발표한 이제 슬래시 노트라는 익스텐션
+- [2:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=160) 만드신 팀을 소개해 드리도록
+- [2:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=161) 하겠습니다. 네. 웹서핑 자료 조사
+- [2:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=163) 이걸 슬래시노스트라는 익스텐션을
+- [2:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=165) 이용해서 브라우저 확장 도그죠? 그걸
+- [2:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=167) 이용해서 자료 조사를 하면서 AI를
+- [2:49](https://youtube.com/watch?v=9d5y3yVBvIw&t=169) 통해서 뭘 하냐? 요약을 할 수
+- [2:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=171) 있다고 합니다. 자료 조사를 하면서
+- [2:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=172) 이렇게 데이터가 쭉쭉 쌓이게 되고요.
+- [2:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=174) 이거를 재미나이를 활용해서 요약을 할
+- [2:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=176) 수 있다라고 이렇게 제출을 해
+- [2:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=177) 주셨습니다. 이걸 누르고 이제 웹
+- [2:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=179) 클리핑이 켜져 있으니까 자료 조사를
+- [3:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=181) 할 때 그냥 인터넷 사이트만
+- [3:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=183) 돌아다녀도 요게 수집이 된다고
+- [3:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=184) 합니다. 네. 요렇게 수집이 되고
+- [3:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=186) 있죠. 그래서 요거를 렇게 해서
+- [3:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=188) 애드투 하이라이트를 하면은네 이렇게
+- [3:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=190) 하이라이트에 추가가 되고요. 바로
+- [3:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=192) 그리 서머라이즈 웹페이지 이걸 누르면
+- [3:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=194) 이제 여기서 AI가 활용이 됩니다.
+- [3:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=195) 네. 그래서 요렇게 AI가 요약본을
+- [3:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=198) 만들어 줍니다. 아무튼 이렇게
+- [3:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=199) 익스텐션 이용해서 자료 조사하고
+- [3:21](https://youtube.com/watch?v=9d5y3yVBvIw&t=201) AI로 요약하고 하는 거를 그냥
+- [3:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=203) 하나의 서비스로 만들어 놓으신 그런
+- [3:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=205) 사례였습니다. 네. 애듀 퀴즈라는
+- [3:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=207) 서비스 이거 되게 인상깊게 봤는데
+- [3:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=209) 이게 선생님을 도와주는 서비스입니다.
+- [3:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=212) 네. 영어 테스트 같은 걸 할 때
+- [3:34](https://youtube.com/watch?v=9d5y3yVBvIw&t=214) 지문이 있고 그거에 대한 문제를
+- [3:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=215) 만들어야 되잖아요. 지문을 넣고 뭐
+- [3:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=217) 신경 변화 주장 이런게 문제
+- [3:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=219) 유형이잖아요. 많이 쓰이는 난이도도
+- [3:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=221) 설정하고 문제를 바로 출세할 수가
+- [3:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=223) 있습니다. 한번 뽑아 볼게요.
+- [3:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=226) 네. 여기에 붙여 넣습니다. 네.
+- [3:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=228) 이렇게 영어 지문이 있습니다. 그래서
+- [3:49](https://youtube.com/watch?v=9d5y3yVBvIw&t=229) 이런 거 영어 교과서에서 문제를
+- [3:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=231) 뽑아내야 될 때 요렇게 활용하면
+- [3:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=232) 좋겠죠? 목적 이런 거 누를게요.
+- [3:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=234) 그다음에 난이도 보통 이렇게 목적의
+- [3:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=236) 유형의 보통 난이도로 문제 출제하기를
+- [3:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=239) 하면은 아까 그 지문을 기반으로
+- [4:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=241) 출제를 해 줍니다. 보면 1번 목적.
+- [4:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=243) 자, 다음 글의 목적으로 적절한 것은
+- [4:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=245) 하고 지문이 쫙 나오고 보기까지도
+- [4:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=248) 만들어 줍니다. 네. 보기 만들어
+- [4:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=249) 주고 정답 2번. 아, 이런 식으로
+- [4:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=252) 하면 이제 선생님들 문제 만들기가
+- [4:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=254) 엄청 편해지지 않을까? 그래서 실제
+- [4:16](https://youtube.com/watch?v=9d5y3yVBvIw&t=256) 지금 사이트 열려 있으니까 혹시
+- [4:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=257) 선생님들 계시다면은 좀 활용해 봐도
+- [4:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=260) 좋을 것 같습니다. 와, 그다음
+- [4:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=262) 서비스 진짜 놀라워요. 저 이거 좀
+- [4:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=263) 깜짝 놀랐습니다. 배틀 포스트 그
+- [4:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=266) AI와 인간이 공존하는 SNS입니다.
+- [4:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=269) 여기서 이분이 발표를 하실 때 강조를
+- [4:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=271) 하신게 인플루언서 위주로 너무 지금
+- [4:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=273) SNS가 돼 있다. 그래서 일반인
+- [4:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=275) 분들이 어떤 글을 남기면 반응을 많이
+- [4:38](https://youtube.com/watch?v=9d5y3yVBvIw&t=278) 못 얻으니까 좀 아쉽다. 그래서
+- [4:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=280) AI가 대신 반응을 해 주는 네.
+- [4:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=282) 그런 서비스를 만드셨는데 자,
+- [4:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=284) 여러분의 글에 AI가 직접 댓글을
+- [4:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=286) 달면서 소통을 해 줍니다. 직접 글을
+- [4:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=288) 한번 써 보겠습니다. 심지어 이게
+- [4:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=290) 놀라운게 글을 작성할 때도 AI를 쓸
+- [4:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=292) 수 있게 해 주시더라고요.
+- [4:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=293) 어, 나 오늘 라이브 방송하느라 너무
+- [4:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=295) 피곤해.
+- [4:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=296) 이렇게 쓰고 개시를 하면 어떻게
+- [4:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=298) 되냐? 지금 글 써졌잖아요. 1초
+- [4:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=299) 전에 방금 글을 썼어요. 여기 그러면
+- [5:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=301) 어떻게 되냐? 이제 댓글 이게 돈다고
+- [5:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=303) 합니다. 이제이 글의 댓글 지금
+- [5:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=304) 보이시죠? 여기 보면은 댓글 세 개가
+- [5:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=306) 달렸어요. 그래서 박찬호 AI 어
+- [5:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=309) 말이 많아요.
+- [5:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=310) 라이브 방송은 많은 에너지 필요한
+- [5:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=311) 활동입니다. 특히 시청자들과
+- [5:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=312) 조정하면서 충분한 휴식을 시하기
+- [5:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=313) 바랍니다. 피곤하다는 말씀에 공감하며
+- [5:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=314) 충분한 휴식을시기 바랍니다.
+- [5:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=315) 제 말에 공감해 준 댓글을 달아주죠.
+- [5:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=318) 아 너무 힘이 돼요.
+- [5:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=319) 다시 방송에서 노력과 박수 보냅니다.
+- [5:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=320) 아 너무 힘이 되죠. 이제 AI한테
+- [5:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=322) 이렇게 위로를 받을 수 있습니다.
+- [5:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=324) 네. 어 그다음에 가파니도 댓글
+- [5:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=325) 달았습니다.이 가파니는 친구예요. 야
+- [5:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=327) 오늘 라이브 방송 하나 피곤했다며 와
+- [5:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=329) 이거 공감해 주고 있어요 이거를.
+- [5:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=331) 그래도 내일 수업은 빠지면 안 돼.
+- [5:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=332) 알았지? 와, 이런 것까지 백태표
+- [5:34](https://youtube.com/watch?v=9d5y3yVBvIw&t=334) AI는 아, 오늘 라이브 방송하느라
+- [5:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=337) 피곤했죠. 힘들었어요. 푹 쉬어요.
+- [5:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=340) 어때요? 와, 백대표님의 그 말투가
+- [5:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=342) 반영이 돼 있죠. 새로고침 해 보니까
+- [5:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=344) AI들이 또 활발하게 활동을 합니다.
+- [5:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=346) 아우, 좋다. 박지성 R이 되게 많이
+- [5:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=348) 달았어요. 채도지도 달았습니다. 네.
+- [5:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=350) 이렇게 SNS가 완전히 AI가 댓글을
+- [5:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=354) 달아주면서 내가 쓴 글에 대한 위로를
+- [5:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=356) 받을 수 있는 좀 감동이었습니다.
+- [5:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=357) 마음의 위로를 이런 식으로 얻을 수
+- [5:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=359) 있지 않을까? AI들과 소통하면서.
+- [6:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=361) 그래서 이제 이런게 좀 더 상용화돼서
+- [6:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=364) 실제 SNS에 좀 들어갈 수 있지
+- [6:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=365) 않을까? 답글을 달아도 거기에 대한
+- [6:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=367) 답글도 해 준다고 해요. 박찬호
+- [6:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=369) 님한테 LA에 계셨을 때는
+- [6:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=372) 피곤하셨나요? 네. 이렇게 답글을
+- [6:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=373) 달면 대끌도 또 달아 준다고
+- [6:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=375) 합니다.에
+- [6:16](https://youtube.com/watch?v=9d5y3yVBvIw&t=376) 있을 때는 매일 경기 준비와 경기
+- [6:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=377) 자체로 체력적으로 힘들었지만 약회사
+- [6:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=379) 열정으로 힘든 것을 입고 뛰었던 거
+- [6:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=380) 같아요.
+- [6:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=380) 와 이런 식으로 하면은 너무 재밌을
+- [6:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=382) 것 같아요. SNS 그 뭐 답글
+- [6:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=384) 기다리느라 막 지치고 이러는데 어
+- [6:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=386) 바로 달아줍니다. 와 미쳤어요.
+- [6:28](https://youtube.com/watch?v=9d5y3yVBvIw&t=388) 그다음에가 발표가 라이플링크 AI.
+- [6:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=391) 와 이분은 이제 대상 타신 분이시죠.
+- [6:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=393) 아, 이분은 진짜 인상적이었어요.
+- [6:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=395) 데모가 놀랍습니다. 동작을 인식해
+- [6:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=397) 가지고 애플 워치를 이용해서 어떻게
+- [6:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=400) 움직이는지 패턴을 파악해 가지고
+- [6:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=402) 자동으로 오늘의 활동들을 기록을 해
+- [6:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=404) 준다고 합니다. 이게 그
+- [6:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=405) 여쭤봤거든요. 카페에서 커피 마시는
+- [6:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=407) 거랑 책 읽는 거랑 이런 거 구분 못
+- [6:49](https://youtube.com/watch?v=9d5y3yVBvIw&t=409) 하지 않냐라고 했는데 충분히 구분이
+- [6:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=411) 가능하다고 합니다.이 동작이 확 달라
+- [6:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=413) 가지고 그 영상을 볼까요? 네.
+- [6:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=415) 이렇게 그 재미나이 리스폰드
+- [6:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=417) 재미나이랑 대화하면서이 활동이 있으면
+- [7:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=420) 이제 모션을 인식해 가지고 워치가
+- [7:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=422) 걷고 있습니까? 네. 걷고
+- [7:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=424) 있습니다라고 하니까 일과에 딱 기록이
+- [7:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=426) 됩니다. 오늘 이만큼 걸었다라는게
+- [7:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=428) 기록이 되고요. 네. 프로그래밍
+- [7:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=429) 했다. 와, 이런 것도 인식할 수
+- [7:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=431) 있다고 합니다. 키보드 움직임을 얘가
+- [7:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=432) 감지를 할 수 있어 가지고 이게 이제
+- [7:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=434) 프로그래밍이다라는게 인식이 된다고
+- [7:16](https://youtube.com/watch?v=9d5y3yVBvIw&t=436) 합니다. 그리고 운동할 때도 are
+- [7:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=438) you stress칭? What
+- [7:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=438) are you do잉? 물어보고
+- [7:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=439) 있죠. 재미나가. 이게 뭔지
+- [7:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=440) 모르겠으니까. 그리고 doing
+- [7:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=442) workout이라고 하니까 딱 기록이
+- [7:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=443) 되고요. 뭐 하고 있냐? 계속 얘가
+- [7:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=445) 물어봐 줍니다. 재미아이가. 그리고
+- [7:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=446) 어떤 걸 프로그래밍 했는지도 좀
+- [7:28](https://youtube.com/watch?v=9d5y3yVBvIw&t=448) 디테일을 기록할 수가 있어요. 네.
+- [7:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=449) 이렇게 오 일정도 막 등록이 되고 그
+- [7:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=452) 대상 타신 분이 이분이셨고요.
+- [7:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=453) 그다음에는 체팟 요리 서비스는 굉장히
+- [7:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=456) 많았어요. 사실 이제 응모된 386개
+- [7:38](https://youtube.com/watch?v=9d5y3yVBvIw&t=458) 중에 한 열 개는 있지 않았을까?
+- [7:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=461) 요리 서비스가. 그중에서는 디자인이나
+- [7:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=464) 디테일이나 이런 걸 좀 잘 만드셨지
+- [7:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=465) 않았나라는 생각에 뽑아 왔습니다.
+- [7:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=467) 네. 오늘 식사 메뉴는 하고 추천해
+- [7:49](https://youtube.com/watch?v=9d5y3yVBvIw&t=469) 주는 건데. 자, 식재료를
+- [7:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=470) 선택하세요. 식재료가 굉장히
+- [7:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=472) 많습니다. 원하는 식재료 직접 추가할
+- [7:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=474) 수도 있고요. 여기에 뭐 집에 남은
+- [7:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=475) 거 땅콩, 버터 추가하고 그다음에
+- [7:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=478) 옵션 한식, 중식, 일식 이런 거
+- [7:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=479) 선택할 수 있고요. 파티 음식 한식
+- [8:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=481) 이게 매칭이 되나? 아무튼 요렇게
+- [8:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=483) 하고 옵션도 직접 추가할 수
+- [8:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=484) 있습니다. 영화 볼 때 먹을 거 이런
+- [8:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=487) 식으로 추가를 할 수도 있습니다.
+- [8:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=488) 네. 제작을 하면 이것들을 다 반영해
+- [8:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=490) 가지고 재미나이가 이제 생성을 해
+- [8:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=492) 줍니다. 네. 치즈콩 샐러드 컵.
+- [8:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=494) 오케이. 아까 담은 요리들을 좀
+- [8:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=497) 담았고 어떻게 요리하는지 식재료와
+- [8:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=499) 함께 레시피도 추천을 해 줍니다.
+- [8:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=500) 레시피 다운로드 되고요. 그리고
+- [8:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=502) 애니메이션까지도 추가하셔 가지고 어
+- [8:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=504) 좋은 거 같습니다. 다음 서비스는
+- [8:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=506) 타로 마스터캣. 타로 서비스가 두
+- [8:28](https://youtube.com/watch?v=9d5y3yVBvIw&t=508) 팀이 뽑혔는데 이분은 안 뽑을 수가
+- [8:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=510) 없었습니다. 완성도가 엄청납니다.
+- [8:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=512) 네. 오랜만이냥. 아 로그인한 거
+- [8:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=513) 이거 이전 기록들을 다 갖고
+- [8:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=515) 있습니다. 와 되게 UI가 굉장히 잘
+- [8:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=517) 돼 있어요. 조 코딩 어떤 일을 하는
+- [8:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=519) 사람이냐? 코딩 유튜버. 네. 일을
+- [8:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=521) 알았으니 하고 카드를 뽑는데 와 이런
+- [8:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=523) 거 진짜 디테일이 엄청나시죠? 네.
+- [8:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=526) 이렇게 섞어서 나의 상황을 의미하는
+- [8:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=528) 카드 딱 생각하면서 싹 뽑고 와 이런
+- [8:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=531) 애니메이션이 엄청나신 거 같아요. 오
+- [8:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=534) 펜타클 부와 번영 오 좋은 거
+- [8:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=536) 뽑았습니다. 엄청나게 잘하고 있다고
+- [8:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=538) 합니다.
+- [8:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=538) 실력도 당장하고 돈도 잘 걸고 땅
+- [9:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=540) 기원
+- [9:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=540) 어유 감사합니다.네 너에 대한 아버스
+- [9:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=542) 이제 본격적인 타로 상담을 해 볼까
+- [9:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=543) 궁금한 것단 무엇인데 물어보냐냥 와
+- [9:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=546) 이거 예시도 있어요. 왜냐면 무엇인
+- [9:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=547) 물어봐 하고 그냥 주면은 사실 뭐
+- [9:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=550) 물어보지하고 고민이 있잖아요. 근데
+- [9:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=552) 예시도 있습니다. 곧 다가올 사건
+- [9:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=554) 이런 거 볼까요? 곧 뭐가 다가올까?
+- [9:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=557) 와, 이펙트 이런 거 쨍하고 이렇게
+- [9:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=559) 들어오는 것도 다 만드셨죠? 너의
+- [9:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=560) 궁금증을 타로 카드로 풀어 볼까냥?
+- [9:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=562) 미래의 놀라운 사건은 의미하는 카드
+- [9:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=564) 한 장을 뽑아 봐라. 와, 이거 진짜
+- [9:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=566) 잘 만드셨어요. 싹 뽑고 놀라운
+- [9:28](https://youtube.com/watch?v=9d5y3yVBvIw&t=568) 사건이 흥미롭구나. 어, 검이
+- [9:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=570) 나왔습니다. 논리와 이성. 야,
+- [9:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=572) 이렇게 해석을 해주죠. 이게 다
+- [9:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=573) 죄미나이를 쓰지 않았을까요? 그죠?
+- [9:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=575) 네. 코딩 유튜버 아까 직업을
+- [9:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=577) 말했으니까 그거와 이제 재미나이의
+- [9:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=579) 해석이 붙여 가지고 AI가 답변을 해
+- [9:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=580) 주겠죠. 새로운 프로젝트 기회가
+- [9:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=581) 찾아온다고 합니다. 갑자기 엄청난
+- [9:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=582) 영감이 떠오른다. 뜻밖에 2년을 만나
+- [9:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=583) 새로운 도약을 할 수 있다.
+- [9:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=584) 아 이거 좋은데요.
+- [9:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=585) 예를 들어 갑자기 유명 코딩 유튜버와
+- [9:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=587) 콜라보지을 밟을 수 있다. 급하게
+- [9:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=588) 생각하지 말고 기회를 잘 포착해라.
+- [9:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=590) 이런 것도 다 재미나이 AI가 싹
+- [9:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=592) 뱉어주는 답변들이겠죠. 그래서 아
+- [9:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=594) 완성도가 너무 좋아요. 애니메이션이랑
+- [9:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=596) 전반적으로 UI랑 이런 걸 너무 잘
+- [9:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=598) 짜 주셨습니다. 그다음에는 주지수
+- [10:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=600) 다루시는 분이 계십니다. 요거는 진짜
+- [10:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=602) 신선하다 이런 느낌이었습니다. 확실히
+- [10:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=604) 이게 분야가 AI라고 하면은 뭐 요리
+- [10:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=607) 이런 거, 여행 이런 카테고리는
+- [10:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=609) 굉장히 많긴 한데 주지수에 딱 특정
+- [10:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=611) 카테고리로 적용되는게 나오니까 굉장히
+- [10:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=613) 인상적이었습니다. 심지어이 AI가
+- [10:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=615) 쓰인 방식이 되게 인상적이었습니다.
+- [10:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=617) AI를 이용하면 어떤 상황에서 어떤
+- [10:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=620) 기술을 써야 할지에 대해서 AI가
+- [10:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=622) 설명해 주고 그거를 플로우 차트로
+- [10:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=624) 만들어 주는 것까지 해 줍니다.
+- [10:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=627) 네. 요런 식으로. 예. 어떻게
+- [10:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=629) 행동해야 될지 플로우 차트를 AI가
+- [10:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=632) 생성을 해 줍니다. 좀 플랫폼 형태로
+- [10:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=633) 만들어 주신게 되게 좋은 거 같아요.
+- [10:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=635) 이거를 저장하고 공유하고 뭐 이렇게
+- [10:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=637) 할 수도 있으니까. 오, 그다음에
+- [10:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=639) 이제 최후수상 타신 분입니다. 글로우
+- [10:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=641) 알람 팀이 만드신 서비스. 네.
+- [10:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=643) 글로우 알람이라는 서비스를
+- [10:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=645) 만드셨고요. 그 취지에 정말 잘 맞는
+- [10:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=647) 거 같아요. 재미나의 개발자 대회가
+- [10:49](https://youtube.com/watch?v=9d5y3yVBvIw&t=649) 항목 중에 장애인도 이용할 수
+- [10:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=651) 있냐?이 이 항목이 무려 5점이나
+- [10:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=653) 작용하기 때문에 이거를 고려 안 했다
+- [10:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=655) 하면 5점을 날리고 가는 거라 이거를
+- [10:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=657) 받으려면 이런 서비스를 만들어야 되긴
+- [10:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=658) 합니다. 이제 귀가 안 들리시는
+- [11:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=660) 분들을 위해서네 이런 응급 상황일 때
+- [11:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=662) 알 수가 없잖아요. 귀가 안 들리면
+- [11:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=664) 쉽지 않잖아요. 그래서 이거를
+- [11:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=665) 재미나이를 이용해서 요런 걸
+- [11:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=666) 만드셨다고 합니다. 불빛을 이렇게
+- [11:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=668) 설정해 가지고 틀어 줄 수 있는데
+- [11:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=670) 뭔가 긴급 재난 문자가 온다 하면은
+- [11:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=672) 그 재난 문자의 형식에 맞춰서 이렇게
+- [11:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=674) 시각적으로 보여 줄 수가 있습니다.
+- [11:16](https://youtube.com/watch?v=9d5y3yVBvIw&t=676) 그러면은 이제 뭐 청각 장애가 있으신
+- [11:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=678) 분도 시각적인 그런 걸 통해서 알
+- [11:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=680) 수가 있겠죠. 재미나이가 재난 문자의
+- [11:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=682) 내용이나 이런 걸 기반으로 맞춤형으로
+- [11:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=684) 카테고리를 나누어 가지고 어떤
+- [11:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=686) 불빛이라든가 진동이라든가 이런 걸 해
+- [11:28](https://youtube.com/watch?v=9d5y3yVBvIw&t=688) 줄 수가 있겠죠. 재미나이 API
+- [11:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=690) 개발자 대회의 취지에 좀 맞지
+- [11:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=692) 않나라는 생각이 들었습니다. 그다음에
+- [11:34](https://youtube.com/watch?v=9d5y3yVBvIw&t=694) 여행 로컬 인사이트 팀의 발표가
+- [11:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=696) 있었습니다. 아, 이거 되게 잘 짠
+- [11:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=697) 거 같아요. 한국인의 솔직한 평가로
+- [11:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=699) 여행의 실패 확률 제로 한국인 리뷰들
+- [11:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=702) 싹 모아 가지고 그걸 정리를 해서
+- [11:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=704) AI로 보여 주는 겁니다. 여행 관련
+- [11:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=707) 그 재미나에 활용한 서비스들 굉장히
+- [11:49](https://youtube.com/watch?v=9d5y3yVBvIw&t=709) 많았는데 어, 이거 좀
+- [11:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=710) 인상적이었어요. 한국인 리뷰를 찾아
+- [11:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=712) 가지고 그걸 중점적으로 본다. 예를
+- [11:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=713) 들어 뭐 지금 떠 있는 것 중에
+- [11:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=714) 마리나베이 샌즈 이거 유명하죠?
+- [11:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=716) 요거를 눌러서 여기 호텔에 대한
+- [11:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=718) 한국인 후기들 이런 걸 받을 수가
+- [12:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=720) 있겠죠. 여기서는 이제 리뷰 가져오는
+- [12:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=722) 구글 API 이용해서 리뷰 가져와서
+- [12:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=724) 이걸 재미나이로 분석했다고 합니다.
+- [12:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=726) 어 긍정 리뷰, 부정 리뷰 이렇게
+- [12:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=727) 나눠서 보여 주기도 하고요. 점수를네
+- [12:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=729) 세 줄 요약해 주고네 이런 거를 이제
+- [12:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=731) 일일이 리뷰를 하나씩 보면서
+- [12:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=733) 분석하려면 좀 걸리는데 한 번에
+- [12:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=735) 받아와서 AI 이용해서 싹 정리를 해
+- [12:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=738) 주면 이게 깔끔하게 숙소 정할 때
+- [12:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=739) 굉장히 유용할 수가 있겠죠. 단점 아
+- [12:21](https://youtube.com/watch?v=9d5y3yVBvIw&t=741) 단점도 딱 이렇게 모아서 정리를 해
+- [12:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=743) 주네요. 예. 비싸다. 노후됐다.
+- [12:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=745) 심지어 유용한 정보도 줍니다. 룸
+- [12:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=746) 업그레이드 가능성이 있다. 어, 이런
+- [12:28](https://youtube.com/watch?v=9d5y3yVBvIw&t=748) 거 알아두면 좋겠죠. 굉장히 잘
+- [12:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=749) 정리를 해주고 옆에 재미나이를
+- [12:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=751) 이용해서이 리뷰들 기반으로 채팅도 해
+- [12:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=753) 줍니다. 마리나 베이스 엔즈 어디에
+- [12:34](https://youtube.com/watch?v=9d5y3yVBvIw&t=754) 위치하고 있나요? 뭐 이런 거 하면
+- [12:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=756) 여기에 정보가 있을 테니 알려 주고
+- [12:38](https://youtube.com/watch?v=9d5y3yVBvIw&t=758) 있고요. 네. 그다음에 당신은 눈으로
+- [12:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=760) 보나요? 전 귀로 보아요. 아,
+- [12:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=762) 이분도 이제 그 영상으로 준비를 해
+- [12:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=764) 주셨습니다. 네. 그 뭐 무슨 색을
+- [12:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=766) 찾고 싶다라고 하면 이제 재미나이를
+- [12:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=768) 이용해서 여기에 사이트들의 이미지를
+- [12:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=771) 읽어서 이제 음성으로 얘기만 해도이
+- [12:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=773) 사이트에서 그 특정 예를 보라색 옷을
+- [12:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=775) 찾고 싶어라고 하니까이 사이트를 싹
+- [12:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=777) 그 재미나이가 이미지들을 가져가면서
+- [13:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=780) 뒤져 가지고네 요렇게 7번에 있다라고
+- [13:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=782) 알려주는네 그런 서비스입니다. 그래서
+- [13:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=784) 요렇게 시각 장애인 분들을 위한
+- [13:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=786) 서비스 왜냐면 실제로 이런 웹사이트
+- [13:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=788) 같은 경우에 그 시각 장애인을
+- [13:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=790) 고려해서 만들지 않은 경우가 더
+- [13:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=792) 많습니다.네 그래서 시각 장애인더라도
+- [13:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=795) 재미나이를 이용해서 웹서을 좀 더
+- [13:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=797) 쉽게 할 수 있도록 도와준다라는 그
+- [13:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=799) 컨셉 어 너무 좋죠. 그래서 재미나이
+- [13:21](https://youtube.com/watch?v=9d5y3yVBvIw&t=801) 개발자 대회에 좀 딱 맞는 컨셉이
+- [13:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=803) 아닐까? 그다음에는 내 편이라는 앱을
+- [13:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=805) 만드셔 주셨습니다. 어떤 글을 남기면
+- [13:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=807) 내 일기를 남깁니다. 좀 일기
+- [13:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=809) 중심으로 되어 있습니다. 내가 오늘
+- [13:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=811) 있었던 일에 대해서 남기면 고양이
+- [13:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=813) AI들이 쭈르륵 댓글을 남겨 줍니다.
+- [13:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=815) 그래서 바로 남겨 주더라고요. 저도
+- [13:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=817) 테스트해 보니까. 그리고 다른 것도
+- [13:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=819) 지정해서 남길 수 있습니다. 마치
+- [13:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=820) 캐릭터 AI를 비슷하게 만들지
+- [13:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=822) 않았나? 내가 등록한 애들이 내
+- [13:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=824) 일기를 보고 댓글을 달아 주겠죠.
+- [13:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=827) 그러면은 또 위로가 많이 될 거
+- [13:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=828) 같아요. AI들이 활동하면서 뭔가
+- [13:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=831) SNS를 한다 이런 컨셉. 너무
+- [13:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=833) 좋았어요. 그냥 SNS의 미래는 이런
+- [13:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=835) 모습이지 않을까? 네. 이렇게 해서
+- [13:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=836) 이제 본선에 오른 12개의 서비스 쭉
+- [13:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=839) 다 살펴봤습니다. 네. 그리고 이제
+- [14:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=841) 본선 외의 작품들도 한번 간단간단한
+- [14:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=843) 것들도 한번 보도록 하겠습니다. 좀
+- [14:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=845) 재밌게 봤던게 요런게 있었습니다.
+- [14:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=847) 이거는 진짜 프로그래밍 할 때 유익할
+- [14:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=849) 수 있을 것 같은데요. 구라
+- [14:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=851) 베이스라고 이런 거 많거든요. 페이크
+- [14:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=854) 데이터 제어 뭐 라이브러리로 설치해
+- [14:16](https://youtube.com/watch?v=9d5y3yVBvIw&t=856) 가지고 페이크 DB 만들어 주고 뭐
+- [14:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=858) 이런 거 있는데 이거를 이제 AI를
+- [14:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=860) 통해서 만들어 주겠다라는 걸로 만들어
+- [14:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=862) 주신 분이 계십니다. 재미나요와 함께
+- [14:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=864) 창의적인 가짜 데이터를 만든다입니다.
+- [14:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=866) 아 너무 잘 지었어요. 예시가 있는데
+- [14:28](https://youtube.com/watch?v=9d5y3yVBvIw&t=868) 유저 유저 데이터 가장 많이 쓰이죠.
+- [14:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=870) 그래서 유저스를 넣으면은 네.
+- [14:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=871) 재미나이가 이렇게 유저 데이터 아
+- [14:34](https://youtube.com/watch?v=9d5y3yVBvIw&t=874) 이런 거 많죠. 아이디, 네임,
+- [14:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=875) 이메일 이런 거 가짜로 쭉 만들어야
+- [14:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=877) 될 때 이렇게 싹 만들어 주고요.
+- [14:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=880) 이거를 API로 받아올 수 있게도
+- [14:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=882) 만들어 놨습니다. 네. 그다음에
+- [14:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=883) 요거는 스프레드시트 AI입니다.
+- [14:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=886) 이것도 되게 실용적인 거 같아요.
+- [14:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=887) 왜냐면 스프레드시트 그 함수를 작성할
+- [14:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=890) 때 보통 뭐 제미나이나 아니면 뭐
+- [14:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=892) 최치 이런데 물어봐서 바로 얻을 수도
+- [14:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=895) 있는데 이거를 좀 더 직관적으로
+- [14:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=896) 만들어 주셨습니다. 그래서 엑셀 같은
+- [14:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=898) 거 이용하실 때 함수 생각이 안 난다
+- [15:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=900) 하면은 바로 공식을 만들 수가
+- [15:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=901) 있습니다.
+- [15:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=902) a 컬럼 중에 마케팅이라는 것이
+- [15:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=904) 포함된 데이터의 합계.
+- [15:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=906) 오 서미프 AB 마케팅. 어 이렇게
+- [15:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=909) 짜졌죠. 아무튼 네, 요런 한글로
+- [15:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=911) 쓰면 이거를 그 엑셀 수식으로 바꿔
+- [15:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=913) 주는 거. 어, 그 외도 뭐 딴 것도
+- [15:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=915) 맞나 보네요. 스크립츠 이런 것도
+- [15:16](https://youtube.com/watch?v=9d5y3yVBvIw&t=916) 있고 VVA 앱스크립트 이런 것도
+- [15:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=919) 됩니다. 굉장히 잘 만들어 주셨죠?
+- [15:21](https://youtube.com/watch?v=9d5y3yVBvIw&t=921) 그다음에 캐치 마인드인데 와, 이거
+- [15:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=924) 제미나이 로고까지 싹 넣으셔 가지고
+- [15:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=926) 이제 재미나이와 함께 즐기는 캐치
+- [15:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=929) 마인드. 어, 너무 좋아요. 그래서
+- [15:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=930) 어떻게 하는 거냐? 제미나이한테 내가
+- [15:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=932) 그림을 그려서 문제를 내주는 겁니다.
+- [15:34](https://youtube.com/watch?v=9d5y3yVBvIw&t=934) AI가 맞추는 겁니다. 그래서
+- [15:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=936) 라자냐. 라자냐가 어떻게 생겼지?
+- [15:38](https://youtube.com/watch?v=9d5y3yVBvIw&t=938) 네. 이걸 그리는 겁니다. 라자냐가.
+- [15:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=940) 아, 요게 라자냐군요. 아무것도 안
+- [15:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=942) 보이는데 힌트를 주시겠어? 이렇게
+- [15:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=943) 채팅으로 재미나이가 얘기를 하죠.
+- [15:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=945) 이제 이게 뭔지를 재미나이가 대답을
+- [15:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=947) 할 겁니다.
+- [15:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=950) 그림 어렵대요. 아, 이건 이건 좀
+- [15:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=952) 어렵다. 다시 딴 거, 딴 거. 네.
+- [15:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=954) 제시요. 딴 거. 어,이 이런 거
+- [15:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=955) 좋죠? 이런 거는 그리기 쉽죠. 자,
+- [15:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=957) 구멍 끌려 있고. 이렇게. 아,
+- [16:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=960) 죽다.
+- [16:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=962) 어, 뭐 맞췄네. 오, 제 그림
+- [16:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=963) 맞췄어요. 이게 아마 재미나의 이미지
+- [16:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=965) 인식을 이용해서 맞추는 거겠죠? 네.
+- [16:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=967) 그다음에 우리들의 시상식이라는
+- [16:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=969) 서비스를 만들어 주신 분도 계십니다.
+- [16:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=971) 시상식을 개최할 수가 있습니다.
+- [16:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=973) 칭찬해 주고 싶은 사람의 이름을 적어
+- [16:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=975) 주세요. 조코딩 칭찬을 해
+- [16:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=977) 주겠습니다. 조코딩 님을 칭찬하고
+- [16:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=979) 싶은 내용을 자유롭게 적어 주세요.
+- [16:21](https://youtube.com/watch?v=9d5y3yVBvIw&t=981) 코딩을 열심히 잘 알려줍니다.
+- [16:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=982) 나는 조코딩 님에게 어떤 사람인가요?
+- [16:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=985) 시청자 이렇게 해 볼게요. 설정을.
+- [16:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=986) 오 상 이름을 이제 여기서 재미나이가
+- [16:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=989) 뽑아 준 거 같아요.
+- [16:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=990) 버그 장면 마우스타 코드계 인간
+- [16:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=991) 채치피티 핵인사 개발사 대부갓
+- [16:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=993) 드로포상
+- [16:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=993) 코드계 인간 채치피티 어유가 괜찮죠?
+- [16:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=995) 그리고 상장 만들기를 누르면 자
+- [16:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=997) AI가이 내용을 써 줘서네 상장을
+- [16:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=1000) 만들어 줍니다.이
+- [16:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=1001) 마치 살 있는인가 채처럼 복잡한 코드
+- [16:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=1003) 누구나 이게 프는 토을 보여 막없이
+- [16:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=1004) 술 흘려 나오는 설명은 가이 코드에
+- [16:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=1005) 언어 마사가 칭할 만함 이에 당신의
+- [16:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=1007) 걸 높이사 코드에 인간 채치 비상을
+- [16:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=1008) 사용합니다.
+- [16:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=1008) 와 이런 내용 이거를 재미나이로
+- [16:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=1010) 생성을 해 준 거겠죠. 아 너무
+- [16:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=1012) 좋습니다. 그래서 시청자 어 이거
+- [16:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=1013) 반영해 줬고 공유하게 하면은 어 이걸
+- [16:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=1016) 공유할 수가 있습니다. SNS
+- [16:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=1017) 공유하고 할 수가 있겠죠.네 그다음에
+- [16:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=1019) 아 이거 굉장히 잘 만드셨어요.
+- [17:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=1021) 원형적 사고 변향기라는게 있습니다.
+- [17:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=1023) 다 짤 아시죠? 그 갑자기 비가 온
+- [17:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=1025) 상황 이럴 때 비가 왔지만 괜찮아
+- [17:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=1027) 이게 아니라 갑자기 비가 쳐져.
+- [17:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=1029) 그런데 운치 있는 빗소리를들을 수
+- [17:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=1031) 있으니까 완전 럭키비키나 이거
+- [17:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=1033) 있잖아요. 요거를 다 바꿔 준다고
+- [17:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=1035) 합니다. 여기에 이제 럭키비키하게
+- [17:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=1037) 바꾸고 싶은 상황 코딩하느라 밤을
+- [17:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=1040) 세웠어. 그래서 너무 피곤해. 이거를
+- [17:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=1043) 한번 바꿔 보겠습니다. 보겠습니다.
+- [17:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=1044) 오, 바로 바뀌었어요. 여기 플래시
+- [17:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=1046) 쓰시나 봐요. 굉장히 빨라요.
+- [17:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=1047) 아, 코딩 아니라 밤을 세웠구나.
+- [17:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=1049) 피곤할 만도 하지. 그래도 밤샘 작업
+- [17:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=1050) 후에 완성된 코드를 보면 뿌듯할 것
+- [17:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=1051) 같아. 밤샘 작업 덕분에 잠깐 쉬면서
+- [17:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=1053) 꼴잠 수 있겠네. 완전 럭키잖아.
+- [17:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=1055) 어, 이렇게 굉장히 잘 만드셨죠?
+- [17:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=1057) 네. 티처라이즈 생기부 초한 생성기
+- [17:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=1060) 잘생긴 프로쌤 님께서 만들어
+- [17:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=1062) 주셨습니다. 아,이 생활 기록부가 참
+- [17:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=1064) 이게 작성하기가 쉽지 않을 것
+- [17:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=1066) 같아요. 그래서 그런 것들을 좀
+- [17:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=1068) 대신해서 써 주는 그런 거 같습니다.
+- [17:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=1070) 학생 활동, 샘플 관짝 기록, 수업에
+- [17:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=1072) 적극 참여, 학생 활동 기록,
+- [17:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=1074) 합폭함.
+- [17:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=1075) 빵셔틀 지키고 학폭을 눌렀음.
+- [17:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=1077) 네. 이런 것도 어떻게 잘 표현해
+- [17:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=1079) 줄지 모르겠네요. 결과 생성. 아,
+- [18:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=1081) 그부 관계를 개선하고자 노력하고
+- [18:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=1083) 있음. 어, 왜 이렇게 됐지? 친구
+- [18:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=1085) 관계에 협력하는 모습을 보여주고
+- [18:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=1086) 있습니다. 생활 기록부 쓰는 거를
+- [18:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=1088) 도와주는 것도 만들어 주셨습니다.
+- [18:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=1090) 어, AI 찬반 토론. 어, 이거 좀
+- [18:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=1092) 괜찮은 거 같아요. AI가 펼치는
+- [18:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=1094) 찬성과 반대. 예, 물러섬없는 논리
+- [18:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=1097) 대결을 관전하세요. AI끼리 이렇게
+- [18:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=1100) 찬반 토론을 하는데 그거를 지켜보고
+- [18:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=1102) 의견을 좀 생각해 볼 수가 있겠죠.
+- [18:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=1104) 찬성측, 반대측에 대한 주장을 볼
+- [18:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=1106) 수가 있으니까.
+- [18:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=1107) 딱딱한 복숭아가 물렁한 복숭아보다
+- [18:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=1109) 맛있다.
+- [18:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=1110) 이거 논쟁이 많죠. 어떤게 더
+- [18:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=1111) 맛있다. 이걸 참반 토론을 시작하도록
+- [18:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=1113) 하겠습니다. 자, AI의 토론.
+- [18:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=1115) AI는 과연 어, 뭐야? 부적절한
+- [18:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=1117) 언어 사용. 와, 이거 필터도
+- [18:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=1119) 넣으셨네요. 아니, 딱딱한 복숭아가
+- [18:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=1120) 뭐가 맛있어?
+- [18:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=1121) 물렁한 복숭가 훨씬 듀스하고 달콤한데
+- [18:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=1122) 딱딱한 거 씹는 것도 별로고 오히려
+- [18:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=1123) 폭해서 싫어.
+- [18:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=1124) 찬성은 아니 딱딱한 복숭 훨씬
+- [18:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=1126) 맛있어.
+- [18:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=1126) 물렁한 복숭 너무 흐르해서 먹는 대이
+- [18:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=1127) 없잖아. 아,
+- [18:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=1128) 찬성은 욕을 좀 많이 하시는 거
+- [18:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=1130) 같아요. 주장할 때. 근데 이걸 또
+- [18:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=1131) 막아 주신 것도 신기하네요.이 필터를
+- [18:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=1133) 어떻게 만드셨나 봐요. 아, 이렇게
+- [18:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=1135) 주장들을 들어볼 수가 있고요. 그래서
+- [18:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=1137) 이제 어떤 쪽에 더 공감하는지 투표를
+- [18:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=1139) 해 볼 수가 있습니다. 저는
+- [19:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=1141) 개인적으로 사실 저는 둘 다 맛있긴
+- [19:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=1143) 한데 좀 물렁한게 그래도 아무래도 좀
+- [19:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=1144) 더 달지 않나라고 생각이 들어서
+- [19:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=1146) 반대쪽에 체크를 해 보겠습니다.
+- [19:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=1148) AI를 보면서 투표를 할 수 있는 거
+- [19:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=1150) 같아요. 토론 같은 거 할 때 준비해
+- [19:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=1152) 보기 좋은 거 같아요. 미리 상대방의
+- [19:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=1153) 반박 이런 것들 쫙 받아보고 그걸
+- [19:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=1155) 기반으로 반박을 준비하고 이럴 수가
+- [19:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=1157) 있겠죠. 아, 결정장에 있을 때
+- [19:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=1160) 그러네요. AI들이 의견을 주고받은
+- [19:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=1162) 것을 기반으로 객관적인 시각에서
+- [19:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=1164) 결정할 수도 있겠죠. 네. 아무튼
+- [19:26](https://youtube.com/watch?v=9d5y3yVBvIw&t=1166) 어, 이거 재밌습니다. 어,
+- [19:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=1167) 재밌네요. 네. 그다음에 AI 셀렉터
+- [19:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=1169) 이걸 볼게요. 아, AI 서비스들의
+- [19:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=1171) 모음집 이런 거죠. 그리고 뭐 디벨,
+- [19:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=1173) 미드, 퍼플렉시티 이런 서비스들이 쭉
+- [19:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=1176) 등록이 돼 있고요.로 어캣 하면은
+- [19:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=1179) 제미나에 이용해서 아, 어떤 AI
+- [19:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=1182) 서비스를 써야 되나?이 이 테스크에
+- [19:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=1183) 맞는 걸 추천해 준다. 문법 체크.
+- [19:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=1186) 그램멀리를 쓰면 된다. 아, 그러면
+- [19:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=1188) 이런 AI 서비스들 중에 어떤 AI
+- [19:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=1191) 서비스를이 일에 쓰는게 좋겠다라는
+- [19:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=1194) 거를 볼 수 있는 검색 서비스를
+- [19:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=1196) 만들어 주신 거 같습니다. 아, 내가
+- [19:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=1197) 지금이 일이 있는데 어떤 도구를 써야
+- [19:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=1199) 되지라는 거를 좀 추천받을 수가
+- [20:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=1201) 있겠죠? 어, 너무 잘 만들었습니다.
+- [20:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=1203) 네. 그다음에 16피플. 아,
+- [20:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=1205) MBTI 분석.이 16피플 MBTI
+- [20:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=1208) 테스트는 뭐냐? MBTI 분석을
+- [20:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=1210) 재미나이에 이용해서 해 주는 거
+- [20:11](https://youtube.com/watch?v=9d5y3yVBvIw&t=1211) 같아요. 그러면 재미나이가 채팅을
+- [20:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=1213) 나누면서 그냥 대화를 기반으로
+- [20:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=1215) MBTI를 추천해 주는 그런 걸까요?
+- [20:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=1217) 어떨 때 스트레스를 받아라고 물어봤을
+- [20:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=1219) 때 아 난 요럴 때 받아 하면은 아이
+- [20:21](https://youtube.com/watch?v=9d5y3yVBvIw&t=1221) 사람은 이런 사람이구나를 재미나이가
+- [20:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=1223) 파악하고 재미나이가 MBTI를 정해
+- [20:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=1225) 주는네 그런 서비스인 거 같네요. 어
+- [20:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=1227) 굉장히 잘 만드셨습니다. MBTI
+- [20:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=1229) 요즘에 워낙 핫하고 테스트도 유행을
+- [20:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=1231) 많이 했었는데 이거를 이제 보통
+- [20:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=1232) 설문지로 하잖아요. 자기가 외항적이다
+- [20:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=1235) 뭐 뭐나 이런 거를 체크 체크하면서
+- [20:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=1237) 넘어가면서 결국 알려 주는데 얘는
+- [20:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=1239) 그냥 자연스러운 채팅을 통해서 나누는
+- [20:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=1241) 그런 컨셉인 거 같네요. 그다음에
+- [20:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=1243) 인스타 헬퍼입니다. 일상을 예술로
+- [20:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=1245) 만드는 스토리텔러.이
+- [20:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=1247) 서비스는 사진속 풍경, 음식 등
+- [20:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=1248) 일상적인 분위기와 인력한 키워드를
+- [20:49](https://youtube.com/watch?v=9d5y3yVBvIw&t=1249) 제미나 AI가 분석해 유명
+- [20:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=1250) 인플루언서가 쓴듯한 감성적인 문구를
+- [20:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=1251) 생각해 드립니다.
+- [20:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=1252) 이제 인스타에 사진을 올리고 싶을 때
+- [20:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=1254) 아 이때 내가 뭘 써야 될지
+- [20:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=1255) 모르겠다. 어 이럴 때 좋겠죠.네
+- [20:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=1257) 강아지 아 어떤 거를 쓰면 좋을까?
+- [20:59](https://youtube.com/watch?v=9d5y3yVBvIw&t=1259) 잠 침대 이불로 분석을 해
+- [21:01](https://youtube.com/watch?v=9d5y3yVBvIw&t=1261) 보겠습니다. 오 스토리 오늘은 침대
+- [21:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=1264) 밖으로 나가기 싫은 날 이불 속이
+- [21:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=1267) 세상 제일 폭근해. 굉장히 인스타의
+- [21:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=1269) 감성적인 그 느낌. 개시하기 하면은
+- [21:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=1272) 아, 인스타그램이랑 뭐 연동이 되나
+- [21:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=1274) 보네요. 사진 변경 딴 거 해
+- [21:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=1275) 볼까요? 오늘따라 웃음이 끊이질
+- [21:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=1278) 않네. 행복한 하루. 아, 약간 요런
+- [21:21](https://youtube.com/watch?v=9d5y3yVBvIw&t=1281) 느낌의 뭔가 인스타 문구 같은게 있을
+- [21:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=1283) 수 있겠죠? 어, 좋은데요. 이렇게
+- [21:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=1285) 인스타에 올릴 문구가 고민될 때 네.
+- [21:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=1287) 인스타 헬퍼를 써 보시면 좋을 것
+- [21:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=1289) 같습니다. 아, 아무글이라는
+- [21:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=1291) 서비스고요.이 세상에 없는 AI가 써
+- [21:33](https://youtube.com/watch?v=9d5y3yVBvIw&t=1293) 주는 소설. 네. 소설의 옵션을
+- [21:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=1296) 선택하세요. 자, 상상으로 만드는
+- [21:38](https://youtube.com/watch?v=9d5y3yVBvIw&t=1298) 이야기. 사진으로 만드는 이야기.
+- [21:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=1300) 어, 사진으로 소설 만드세요.
+- [21:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=1302) 사진으로 한번 만들어 볼까요? 요걸로
+- [21:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=1304) 한번 해 보겠습니다. 계속하기.
+- [21:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=1305) 주인공을 알려 주세요. 도지. 어,
+- [21:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=1308) 포근한 잠자리. 사진은 춤대에 누워
+- [21:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=1311) 있는 강아지의 모습을 보여줍니다.
+- [21:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=1313) 도지는 따뜻한 해달에 눈을 떴다.
+- [21:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=1315) 눈구심에 눈을 다리게 뜨자. 익숙한
+- [21:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=1316) 침대가 눈에 들어왔다.
+- [21:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=1317) 오, 이걸 기반으로 이렇게 소설을 써
+- [21:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=1318) 주고 있죠. 어, 되게 감성적이에요.
+- [22:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=1320) 글이. 어, 너무 좋죠. 또 상상으로
+- [22:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=1322) 만드는 이야기. 아, 이렇게 주제를
+- [22:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=1324) 정해 가지고 또 소설을 쓴다 이런
+- [22:06](https://youtube.com/watch?v=9d5y3yVBvIw&t=1326) 것도 좋겠죠. 요렇게 소설을 써 주는
+- [22:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=1328) 거 한번 살펴봤습니다. 어, AI
+- [22:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=1330) 이미지 인사이트 how do I
+- [22:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=1332) look. 이게 이제 기본적인 조코딩
+- [22:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=1334) 그 라이브 때 만들었던 AI 외모
+- [22:16](https://youtube.com/watch?v=9d5y3yVBvIw&t=1336) 분석기죠. 근데 요거를 조금 더
+- [22:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=1338) 응용을 해 주셨더라고요. 그래서
+- [22:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=1340) 여기에 싹 얼굴을 넣으면은 어, 네.
+- [22:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=1343) 이렇게 얼굴이 85점이라고 하고
+- [22:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=1345) 설명도 될 수 있는데 얼굴이
+- [22:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=1347) 인상적이고 균형 잡힌 모습. 어,
+- [22:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=1349) 감사합니다. 깔끔한 스타일은 매력을
+- [22:31](https://youtube.com/watch?v=9d5y3yVBvIw&t=1351) 더 합니다. 자, 약점도 있어요.
+- [22:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=1352) 약점. 눈썹이 조금 더 선명하면 더
+- [22:34](https://youtube.com/watch?v=9d5y3yVBvIw&t=1354) 세련된 모습이 될 수 있을 것
+- [22:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=1356) 같습니다. 그리고 결과 저장할 수
+- [22:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=1357) 있고 이렇게 좀 더 응용해 가지고
+- [22:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=1359) 만들어 주신 분도 계십니다. 아,
+- [22:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=1361) 이런 거 관상 이런 것도 있었어요.
+- [22:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=1363) 페이스 리딩 AI 얼굴을 읽고 운명을
+- [22:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=1366) 얻으십시오. 오, 굉장히 아주
+- [22:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=1368) 돌아가고 있어요. 이야, 얼굴 읽기.
+- [22:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=1371) 오, 이만은 넓고 높은 편이며 눈에
+- [22:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=1373) 띄는 특징은 없고 어, 차분한 성격,
+- [22:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=1376) 눈썹. 뭐 다 분석을 해 주고 있죠.
+- [22:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=1378) 쇼모 아 얼굴 미래 직업도
+- [23:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=1380) 알려줍니다.어야 이거 어떻게 알았지?
+- [23:03](https://youtube.com/watch?v=9d5y3yVBvIw&t=1383) 어, 인공지능 개발자라고 합니다.이
+- [23:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=1385) 미래 직업이 딱 인공지능 개발자
+- [23:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=1387) 상인가 봐요. 아무튼 이렇게 얼굴
+- [23:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=1389) 읽기를 할 수 있다. 스마트라는 거에
+- [23:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=1392) 맞추어 가지고 계획을 세워 주는군요.
+- [23:14](https://youtube.com/watch?v=9d5y3yVBvIw&t=1394) 아, 스마트 골스라는게 아, 그래서
+- [23:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=1397) 뭘 해야 될지 모르겠을 때 AI한테
+- [23:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=1399) 상담을 받아서 스마트 계획을 싹 세워
+- [23:22](https://youtube.com/watch?v=9d5y3yVBvIw&t=1402) 주는 어, 그런 서비스를 만들어 주신
+- [23:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=1403) 거 같습니다. 어, 좋습니다. 어,
+- [23:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=1405) 채팅도 나눌 수 있고요. AI 공부
+- [23:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=1407) 뭐부터 해야 해? 어, 멋진
+- [23:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=1409) 목표네요. 분야별로 이렇게 물어보고
+- [23:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=1412) 있고요. 어. 어, 문제 해결하고
+- [23:34](https://youtube.com/watch?v=9d5y3yVBvIw&t=1414) 싶어. 어, 이렇게 계속 세부
+- [23:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=1416) 질문들을 통해서 뭔가 좀 자세히
+- [23:38](https://youtube.com/watch?v=9d5y3yVBvIw&t=1418) 설명해 주는 거 같죠? 이렇게 계획을
+- [23:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=1420) 세울 때 도움을 주는 AI 보여
+- [23:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=1422) 드렸습니다. 그다음에 네, 스트림
+- [23:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=1424) 서비스도 제출을 많이 해 주셨습니다.
+- [23:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=1426) 네 옴니버스
+- [23:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=1427) 재미나 모델과 SDXL를 활용하여
+- [23:48](https://youtube.com/watch?v=9d5y3yVBvIw&t=1428) 패션, 추천 생성, 외모, 점수,
+- [23:50](https://youtube.com/watch?v=9d5y3yVBvIw&t=1430) 예측, 음악 생성. 와, 음악 생성도
+- [23:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=1431) 되네요. 이미지 웹툰화 그리고 이미지
+- [23:52](https://youtube.com/watch?v=9d5y3yVBvIw&t=1432) 분석기능 통합한 시스템.
+- [23:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=1433) 자, 그러면 한번 해 볼게요. 제
+- [23:55](https://youtube.com/watch?v=9d5y3yVBvIw&t=1435) 사진을 넣었고요. 웹툰화해 줘. 한번
+- [23:57](https://youtube.com/watch?v=9d5y3yVBvIw&t=1437) 해 볼게요. 오, 좋은데요. 빠르게
+- [24:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=1440) 만들어 주는데요. 패션 추천해 줘.
+- [24:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=1442) 해보겠습니다. 야, 뽑아주고 있어요.
+- [24:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=1444) 오, 패션을 입어라는 거 같죠?
+- [24:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=1447) 요렇게 사용자에게 얼리든 패션 추천
+- [24:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=1449) 이미지를 생성했습니다. 남성 20대
+- [24:12](https://youtube.com/watch?v=9d5y3yVBvIw&t=1452) 후반, 30대 초반. 어, 이런 거
+- [24:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=1453) 다 있죠? 정상 스타일. 아, 렇게
+- [24:16](https://youtube.com/watch?v=9d5y3yVBvIw&t=1456) 현재 옷. 아, 현재 옷 분석을 해
+- [24:18](https://youtube.com/watch?v=9d5y3yVBvIw&t=1458) 주고요. 잘 어울릴 만한 옷 스타일.
+- [24:20](https://youtube.com/watch?v=9d5y3yVBvIw&t=1460) 비즈니스 캐주얼, 스마트 캐주얼.
+- [24:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=1463) 네. 요렇게 패션 추천까지 굉장히
+- [24:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=1465) 다양한 기능들을 제공하고 있는 네.
+- [24:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=1467) 그런 모습입니다. 또 재밌었던게 아,
+- [24:29](https://youtube.com/watch?v=9d5y3yVBvIw&t=1469) 이렇게 게임 만들어 주신 분도 좀
+- [24:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=1470) 계셨습니다. 아까 재미나의 그림
+- [24:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=1472) 맞추기 그런 거 되게 재밌었는데 이제
+- [24:34](https://youtube.com/watch?v=9d5y3yVBvIw&t=1474) 텍스트 게임도 만들어 주신 분이
+- [24:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=1475) 계십니다. 단어 생성. 그래서 맞추는
+- [24:37](https://youtube.com/watch?v=9d5y3yVBvIw&t=1477) 거예요. 근데 힌트를 한번
+- [24:39](https://youtube.com/watch?v=9d5y3yVBvIw&t=1479) 얻어야겠죠? 힌트. 고기 에호가들이
+- [24:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=1481) 가장 좋아하는 뜨거운 불판 위에서
+- [24:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=1483) 익어 가는 음식 삼겹살 틀렸습니다.
+- [24:46](https://youtube.com/watch?v=9d5y3yVBvIw&t=1486) 어, 힌트 하나 더 볼까요?
+- [24:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=1487) 레스토랑에서 웰던이나 미디엄 레어
+- [24:49](https://youtube.com/watch?v=9d5y3yVBvIw&t=1489) 같은 선택지를 볼 수 있는 음식.
+- [24:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=1491) 아, 요거는 스테이크겠죠?
+- [24:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=1494) 정답입니다. 아 이런 식으로 어떤
+- [24:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=1496) 단어를 내고 거기에 대한 힌트를
+- [24:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=1498) 만들어 주고 맞추는 것까지 이렇게
+- [25:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=1500) 구성을 해 주셨습니다. AI가 틀릴
+- [25:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=1502) 때마다이 썩소를 또 만들어 주고
+- [25:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=1504) 있어요. 그래서 이런 게임 만들어
+- [25:05](https://youtube.com/watch?v=9d5y3yVBvIw&t=1505) 주신 분도 계셨습니다. 아 되게
+- [25:07](https://youtube.com/watch?v=9d5y3yVBvIw&t=1507) 간단한 건데 재밌게도 만들어 주신 분
+- [25:09](https://youtube.com/watch?v=9d5y3yVBvIw&t=1509) 계시더라고요. 포춘 쿠키 되게
+- [25:10](https://youtube.com/watch?v=9d5y3yVBvIw&t=1510) 간단하잖아요. 근데 이거를 AI를
+- [25:13](https://youtube.com/watch?v=9d5y3yVBvIw&t=1513) 이용했다라고 하면 진짜 포춘 쿠키가
+- [25:15](https://youtube.com/watch?v=9d5y3yVBvIw&t=1515) 랜덤하게 AI가 쏟아주는 거라서
+- [25:17](https://youtube.com/watch?v=9d5y3yVBvIw&t=1517) 의미가 있을 수 있을 것 같습니다.
+- [25:19](https://youtube.com/watch?v=9d5y3yVBvIw&t=1519) 오픈하면 진짜 그 포춘 쿠키의
+- [25:21](https://youtube.com/watch?v=9d5y3yVBvIw&t=1521) 메시지가 나옵니다. 이렇게 time
+- [25:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=1523) to embrace the
+- [25:23](https://youtube.com/watch?v=9d5y3yVBvIw&t=1523) unknown time to
+- [25:24](https://youtube.com/watch?v=9d5y3yVBvIw&t=1524) shine believe in
+- [25:25](https://youtube.com/watch?v=9d5y3yVBvIw&t=1525) yourself 어 이런 거 포춘
+- [25:27](https://youtube.com/watch?v=9d5y3yVBvIw&t=1527) 쿠키에 열면은 요런 메시지가 나오는
+- [25:28](https://youtube.com/watch?v=9d5y3yVBvIw&t=1528) 거 재미나이를 이용해서 잘 만들어
+- [25:30](https://youtube.com/watch?v=9d5y3yVBvIw&t=1530) 주셨습니다. 아 요것도 좀 신기하던데
+- [25:32](https://youtube.com/watch?v=9d5y3yVBvIw&t=1532) 요거 나이스 샷 사진을 업로드하면
+- [25:35](https://youtube.com/watch?v=9d5y3yVBvIw&t=1535) 나이스 샷을 찍을 수 있는 팁을 알려
+- [25:36](https://youtube.com/watch?v=9d5y3yVBvIw&t=1536) 준다고 합니다. 한번 올려
+- [25:38](https://youtube.com/watch?v=9d5y3yVBvIw&t=1538) 보겠습니다.네 나이스 샷을 위한 팁을
+- [25:40](https://youtube.com/watch?v=9d5y3yVBvIw&t=1540) 알려줍니다.
+- [25:41](https://youtube.com/watch?v=9d5y3yVBvIw&t=1541) 어 셔터 속도를 빨리 설정해 보세요.
+- [25:42](https://youtube.com/watch?v=9d5y3yVBvIw&t=1542) 춤동작을 선명하게 포착할 수 있다.
+- [25:43](https://youtube.com/watch?v=9d5y3yVBvIw&t=1543) 춤동작을 더 보이게 하기 위해서
+- [25:44](https://youtube.com/watch?v=9d5y3yVBvIw&t=1544) 배경을 최대한 단순하게 정리해
+- [25:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=1545) 보세요.
+- [25:45](https://youtube.com/watch?v=9d5y3yVBvIw&t=1545) 어 춤추는 사진을 올리니까 이걸
+- [25:47](https://youtube.com/watch?v=9d5y3yVBvIw&t=1547) 인식하고 이렇게 추천을 해 줍니다.
+- [25:49](https://youtube.com/watch?v=9d5y3yVBvIw&t=1549) 내가 찍은 사진이 잘 나왔나? 구도가
+- [25:51](https://youtube.com/watch?v=9d5y3yVBvIw&t=1551) 괜찮나? 이런 거를 체크를 해 볼 수
+- [25:53](https://youtube.com/watch?v=9d5y3yVBvIw&t=1553) 있을 것 같습니다. 네. 오늘 되게
+- [25:54](https://youtube.com/watch?v=9d5y3yVBvIw&t=1554) 재밌는 서비스들이 많았죠. 네. 좋은
+- [25:56](https://youtube.com/watch?v=9d5y3yVBvIw&t=1556) 밤 드시고요. 방종하겠습니다.
+- [25:58](https://youtube.com/watch?v=9d5y3yVBvIw&t=1558) 감사합니다.
+- [26:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=1560) 디지털
+- [26:02](https://youtube.com/watch?v=9d5y3yVBvIw&t=1562) 디지털러.
+- [26:04](https://youtube.com/watch?v=9d5y3yVBvIw&t=1564) 너 나의 사랑은 디지털러.
+- [26:08](https://youtube.com/watch?v=9d5y3yVBvIw&t=1568) T

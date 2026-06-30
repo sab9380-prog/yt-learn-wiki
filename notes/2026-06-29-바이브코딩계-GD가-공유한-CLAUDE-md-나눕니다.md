@@ -1,0 +1,383 @@
+---
+title: "바이브코딩계 GD가 공유한 CLAUDE.md 나눕니다"
+source_url: https://youtube.com/watch?v=xnNFexW9Wrk
+video_id: xnNFexW9Wrk
+source_type: youtube
+lang: ko
+analyzed: 2026-06-29
+category: 일반학습
+tags: ["Claude.md", "AI 코딩 고질병 3가지", "카파시 4대 원칙", "잘못된 가정 방지", "최소 코드 원칙", "외과적 수정"]
+status: active
+---
+# 바이브코딩계 GD가 공유한 CLAUDE.md 나눕니다
+
+## 🧠 이해 (Understand)
+- **Summary:** 안드레이 카파시(오픈AI 공동창업자)가 트위터에 올린 AI 코딩 문제점을 누군가가 65줄짜리 Claude.md 파일로 정리해 깃헙 스타 10만 개를 받았다. AI 코딩의 3대 고질병은 '잘못된 가정', '코드 부풀리기', '멋대로 고치기'이며, 이를 막는 4가지 원칙(사전 질문, 최소 코드, 외과적 수정, 성공 기준 설정)이 핵심이다. 영상 제작자는 여기에 한국어 특화 규칙 5개를 추가한 커스텀 Claude.md를 공유한다. Claude.md를 홈 디렉토리 글로벌 위치에 두면 모든 프로젝트에 자동 적용된다.
+- **Core Message:** AI는 코드를 못 짜는 게 아니라 너무 빠르고 자신있게 짜는 게 문제이며, Claude.md 4가지 원칙으로 그 브레이크를 걸 수 있다.
+> AI는 코드를 못 짜는 게 아니다. 너무 잘 짜는 게 문제다.
+> 명령하지 말고. 성공 기준을 주고 지켜보라.
+> 모든 변경된 줄은 사용자의 요청으로 곧장 거슬러 올라갈 수 있어야 해.
+❗ 카파시의 트위터 글이 올라간 지 단 7시간 만에 누군가가 65줄짜리 Claude.md로 정리해 깃헙에 올렸다.
+❗ 그 Claude.md가 만들어진 지 석 달 만에 깃헙 스타 10만 개를 받았다.
+❗ AI가 추가하는 '나중에 필요할 수도 있는 코드'의 99%는 실제로 쓰이지 않는다고 카파시는 지적한다.
+
+## 📚 핵심 용어
+- **Claude.md:** Claude AI에게 프로젝트 규칙과 행동 지침을 사전에 전달하는 마크다운 설정 파일. / 새 직원에게 주는 업무 매뉴얼과 같다. 매번 말하지 않아도 이 파일 하나로 AI가 규칙을 지키며 일한다. / 일반 프롬프트는 그때그때 대화창에 입력하지만, Claude.md는 항상 자동 적용되는 '기본 설정'이다.
+- **바이브 코딩(Vibe Coding):** AI와 대화하듯 자연어로 지시하며 코드를 만들어가는 개발 방식. / 설계도 없이 인테리어 업자에게 '느낌 있게 해줘'라고 맡기는 것과 같다. 빠르지만 방향이 틀리면 다 뜯어야 한다. / 전통 코딩은 개발자가 직접 작성하지만, 바이브 코딩은 AI에게 지시하고 결과를 검토·수정하는 역할로 바뀐다.
+- **하네스 엔지니어링:** AI가 스스로 잘 돌아가도록 환경과 제약 조건을 설계하는 작업. / 말(馬)에 마구(harness)를 채워 방향을 잡아주듯, AI의 능력을 올바른 방향으로 묶어두는 환경 설계다. / Claude.md가 하네스의 부품 하나라면, 하네스 엔지니어링은 그 전체 시스템(규칙·검증·워크플로우)을 설계하는 것이다.
+- **성공 기준(Success Criteria):** AI에게 작업을 줄 때 '완료 조건'을 명확히 정의해 검증 가능하게 만드는 것. / 요리사에게 '맛있게 해줘' 대신 '간이 짜지 않고 5분 안에 나와야 해'라고 말하는 것과 같다. / 일반 명령('버그 고쳐줘')은 결과를 판단할 기준이 없지만, 성공 기준('버그 재현 테스트 통과')은 AI가 스스로 완료 여부를 확인할 수 있다.
+
+## 🚀 실행 (Execute)
+- [ ] 영상 고정댓글에서 커스텀 Claude.md 파일을 받아 홈 디렉토리 ~/.claude/CLAUDE.md 위치에 저장하고, 기존 Claude 프로젝트에서 동작 변화 확인 — ⏰ 오늘 · ⚡ 10분
+  - 담당: 나
+  - 이유: 1분 설치로 모든 프로젝트에 카파시 4원칙이 자동 적용되어, 반복적인 AI 코딩 실수(잘못된 가정·코드 부풀리기·멋대로 수정)를 즉시 줄일 수 있다.
+- [ ] 다음 AI 코딩 작업 시 '성공 기준' 방식으로 지시문을 바꿔 테스트: 모호한 명령 대신 '이 조건이 통과되면 완료'로 재작성해 요청 — ⏰ 이번 주 · ⚡ 30분 (지시문 재작성 연습 포함)
+  - 담당: 나
+  - 이유: 성공 기준 기반 지시는 AI가 스스로 완료 여부를 검증하게 해 수정 반복 횟수를 줄이고, 실제 업무 적용 가능성을 체감할 수 있다.
+- 자료: 카파시 65줄 Claude.md 원본: https://github.com/anthropy/claude-code-best-practices (확인 필요 — 영상 고정댓글 링크로 직접 확인할 것)
+- 자료: 안드레이 카파시 트위터/X: @karpathy
+- 자료: Claude 공식 문서 — CLAUDE.md 설정 방법 (claude.ai 공식 docs에서 'memory' 또는 'project instructions' 검색)
+- Timeline: 1순위(오늘): Claude.md 파일 다운로드 및 글로벌 설치 → 2순위(이번 주): 실제 작업 1건에 성공 기준 방식 적용 → 3순위(2주 내): 본인 프로젝트에 맞는 규칙 1~2개 추가 커스텀
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
+- 핵심 개념: [[Claude.md]] · [[AI 코딩 고질병 3가지]] · [[카파시 4대 원칙]] · [[잘못된 가정 방지]] · [[최소 코드 원칙]] · [[외과적 수정]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=xnNFexW9Wrk&t=0) 지금 쓰시는 클로드 점 엠디 한 번 바꿔보세요.
+- [0:02](https://youtube.com/watch?v=xnNFexW9Wrk&t=2) 카파시 노하우에 제 노하우까지 더한 파일로요.
+- [0:05](https://youtube.com/watch?v=xnNFexW9Wrk&t=5) 안드레이 카파시.
+- [0:06](https://youtube.com/watch?v=xnNFexW9Wrk&t=6) AI 계의 지드래곤 같은 분이에요. 오픈 에이아이 공동 창업자. 전 테슬라 AI 디렉터.
+- [0:10](https://youtube.com/watch?v=xnNFexW9Wrk&t=10) 이 분의 바이브 코딩 노하우가 담긴 65줄짜리 클로드 점 엠디가 깃헙에 올라와 있어요.
+- [0:18](https://youtube.com/watch?v=xnNFexW9Wrk&t=18) 깃헙 스타 10만 개.
+- [0:19](https://youtube.com/watch?v=xnNFexW9Wrk&t=19) 만들어진 지 석 달 만에요.
+- [0:22](https://youtube.com/watch?v=xnNFexW9Wrk&t=22) 카파시가 트위터에 짧은 글 하나를 올렸거든요.
+- [0:24](https://youtube.com/watch?v=xnNFexW9Wrk&t=24) 일곱 시간 만에 그걸 보고 어떤 분이 65줄로 정리해서 깃헙에 올렸어요.
+- [0:28](https://youtube.com/watch?v=xnNFexW9Wrk&t=28) 카파시가 강조한 건 간단하게 하나로 요약할 수 있어요.
+- [0:32](https://youtube.com/watch?v=xnNFexW9Wrk&t=32) AI는 코드를 못 짜는 게 아니다.
+- [0:34](https://youtube.com/watch?v=xnNFexW9Wrk&t=34) 너무 잘 짜는 게 문제다.
+- [0:35](https://youtube.com/watch?v=xnNFexW9Wrk&t=35) 너무 빨리.
+- [0:36](https://youtube.com/watch?v=xnNFexW9Wrk&t=36) 너무 자신있게 짜요.
+- [0:37](https://youtube.com/watch?v=xnNFexW9Wrk&t=37) 그래서 브레이크가 필요해요.
+- [0:39](https://youtube.com/watch?v=xnNFexW9Wrk&t=39) 그 브레이크가 65줄에 들어 있어요.
+- [0:41](https://youtube.com/watch?v=xnNFexW9Wrk&t=41) 오늘 영상에서는 그 65줄에 뭐가 들어 있는지.
+- [0:44](https://youtube.com/watch?v=xnNFexW9Wrk&t=44) 그리고 1분 안에 여러분 클로드 점 엠디에 적용하는 방법까지 보여드릴게요.
+- [0:49](https://youtube.com/watch?v=xnNFexW9Wrk&t=49) 영상 끝까지 보시고.
+- [0:50](https://youtube.com/watch?v=xnNFexW9Wrk&t=50) 오늘 안에 꼭 한 번 적용해보세요.
+- [0:52](https://youtube.com/watch?v=xnNFexW9Wrk&t=52) 카파시라는 분, 다시 한 번 정리할게요.
+- [0:55](https://youtube.com/watch?v=xnNFexW9Wrk&t=55) 오픈 에이아이 공동 창업자예요.
+- [0:57](https://youtube.com/watch?v=xnNFexW9Wrk&t=57) 챗지피티를 만든 그 회사 만든 사람 중 한 명이에요.
+- [1:01](https://youtube.com/watch?v=xnNFexW9Wrk&t=61) 전 테슬라에서는 자율주행 AI 디렉터였고요.
+- [1:04](https://youtube.com/watch?v=xnNFexW9Wrk&t=64) 지금은 AI 교육 회사 유레카 랩스를 운영해요.
+- [1:05](https://youtube.com/watch?v=xnNFexW9Wrk&t=65) 이 분 머신러닝 강의 본 분들도 많을 거예요.
+- [1:08](https://youtube.com/watch?v=xnNFexW9Wrk&t=68) 이 분이 얼마 전 트위터에 짧은 글 하나를 올렸어요.
+- [1:13](https://youtube.com/watch?v=xnNFexW9Wrk&t=73) 글이 길지 않아요.
+- [1:13](https://youtube.com/watch?v=xnNFexW9Wrk&t=73) 짧아요.
+- [1:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=74) 근데 핵심을 정확하게 짚었어요.
+- [1:16](https://youtube.com/watch?v=xnNFexW9Wrk&t=76) 요즘 AI한테 코딩 시켜보면.
+- [1:18](https://youtube.com/watch?v=xnNFexW9Wrk&t=78) 똑같은 실수를 계속 반복한다.
+- [1:20](https://youtube.com/watch?v=xnNFexW9Wrk&t=80) 그러면서 AI가 반복하는 세 가지 고질병을 짚었어요.
+- [1:24](https://youtube.com/watch?v=xnNFexW9Wrk&t=84) 그리고 글 마지막에 한 줄을 덧붙였어요.
+- [1:26](https://youtube.com/watch?v=xnNFexW9Wrk&t=86) 명령하지 말고.
+- [1:27](https://youtube.com/watch?v=xnNFexW9Wrk&t=87) 성공 기준을 주고 지켜보라.
+- [1:30](https://youtube.com/watch?v=xnNFexW9Wrk&t=90) 이 한 줄이에요.
+- [1:30](https://youtube.com/watch?v=xnNFexW9Wrk&t=90) 근데 트위터 글 한 줄로만 끝났으면, 깃헙 스타 10만 개는 못 받았겠죠.
+- [1:35](https://youtube.com/watch?v=xnNFexW9Wrk&t=95) 그 글이 올라간 지 일곱 시간 만에.
+- [1:37](https://youtube.com/watch?v=xnNFexW9Wrk&t=97) 포레스트창이라는 분이 그 메시지를 깔끔하게 65줄짜리 마크다운 파일로 정리해서 깃헙에 올렸어요.
+- [1:43](https://youtube.com/watch?v=xnNFexW9Wrk&t=103) 그만큼 사람들이 이거다 싶었던 거예요.
+- [1:45](https://youtube.com/watch?v=xnNFexW9Wrk&t=105) 다들 똑같은 문제로 고생하고 있었던 거죠.
+- [1:48](https://youtube.com/watch?v=xnNFexW9Wrk&t=108) 그래서 그 65줄짜리 클로드 점 엠디가 지금 깃헙 스타 10만 개를 받고 있어요.
+- [1:53](https://youtube.com/watch?v=xnNFexW9Wrk&t=113) 자, 그럼 카파시가 짚은 세 가지 고질병부터 보러 가볼게요.
+- [1:57](https://youtube.com/watch?v=xnNFexW9Wrk&t=117) 카파시가 짚은 AI의 고질병은 세 가지예요.
+- [2:00](https://youtube.com/watch?v=xnNFexW9Wrk&t=120) 첫 번째.
+- [2:01](https://youtube.com/watch?v=xnNFexW9Wrk&t=121) 잘못된 가정.
+- [2:04](https://youtube.com/watch?v=xnNFexW9Wrk&t=124) 이건 가장 흔한 거예요.
+- [2:04](https://youtube.com/watch?v=xnNFexW9Wrk&t=124) 여러분이 AI한테 로그인 기능 좀 추가해줘 시켰다고 생각해보세요.
+- [2:08](https://youtube.com/watch?v=xnNFexW9Wrk&t=128) 좋은 AI라면 이렇게 물어봐야 해요.
+- [2:10](https://youtube.com/watch?v=xnNFexW9Wrk&t=130) 이메일 로그인이에요?
+- [2:12](https://youtube.com/watch?v=xnNFexW9Wrk&t=132) 아니면 소셜 로그인이에요?
+- [2:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=134) JWT로 하실 거예요?
+- [2:15](https://youtube.com/watch?v=xnNFexW9Wrk&t=135) 세션 쿠키로 하실 거예요?
+- [2:17](https://youtube.com/watch?v=xnNFexW9Wrk&t=137) 근데 그렇게 안 해요.
+- [2:18](https://youtube.com/watch?v=xnNFexW9Wrk&t=138) 자기 멋대로 해석해요.
+- [2:20](https://youtube.com/watch?v=xnNFexW9Wrk&t=140) 아, 로그인? 알겠어요.
+- [2:21](https://youtube.com/watch?v=xnNFexW9Wrk&t=141) 하고는 JWT 인증 시스템 200줄을 우르르 짜요.
+- [2:25](https://youtube.com/watch?v=xnNFexW9Wrk&t=145) 여러분이 원한 건 그냥 간단한 세션 쿠키 로그인일 수 있는데요.
+- [2:30](https://youtube.com/watch?v=xnNFexW9Wrk&t=150) 묻지를 안 해요.
+- [2:31](https://youtube.com/watch?v=xnNFexW9Wrk&t=151) 자기 머릿속에서 결정해버려요.
+- [2:33](https://youtube.com/watch?v=xnNFexW9Wrk&t=153) 이게 첫 번째 고질병이에요.
+- [2:34](https://youtube.com/watch?v=xnNFexW9Wrk&t=154) 두 번째.
+- [2:35](https://youtube.com/watch?v=xnNFexW9Wrk&t=155) 코드 부풀리기.
+- [2:36](https://youtube.com/watch?v=xnNFexW9Wrk&t=156) 세 줄로 끝날 일을 200줄로 만들어요.
+- [2:39](https://youtube.com/watch?v=xnNFexW9Wrk&t=159) 진짜 자주 보는 패턴이 있어요.
+- [2:41](https://youtube.com/watch?v=xnNFexW9Wrk&t=161) 여러분이 이메일 형식 맞는지 확인해줘 시켰는데요.
+- [2:44](https://youtube.com/watch?v=xnNFexW9Wrk&t=164) AI가 거대한 이메일 검증 클래스를 만들어요.
+- [2:47](https://youtube.com/watch?v=xnNFexW9Wrk&t=167) 옵션이 여덟 개 있고요.
+- [2:49](https://youtube.com/watch?v=xnNFexW9Wrk&t=169) 설정 파일도 따로 있고요.
+- [2:50](https://youtube.com/watch?v=xnNFexW9Wrk&t=170) 추상 인터페이스도 만들어요.
+- [2:52](https://youtube.com/watch?v=xnNFexW9Wrk&t=172) 여러분이 한 번 쓸 코드인데 그래요.
+- [2:54](https://youtube.com/watch?v=xnNFexW9Wrk&t=174) 나중에 필요할 수도 있으니까 넣었어요.
+- [2:56](https://youtube.com/watch?v=xnNFexW9Wrk&t=176) 이러면서요.
+- [2:57](https://youtube.com/watch?v=xnNFexW9Wrk&t=177) 근데 그 나중은 안 와요.
+- [2:59](https://youtube.com/watch?v=xnNFexW9Wrk&t=179) 99%는 안 와요.
+- [3:00](https://youtube.com/watch?v=xnNFexW9Wrk&t=180) 코드만 200줄 늘어나고.
+- [3:01](https://youtube.com/watch?v=xnNFexW9Wrk&t=181) 읽기는 더 어려워져요.
+- [3:03](https://youtube.com/watch?v=xnNFexW9Wrk&t=183) 이게 두 번째 고질병이에요.
+- [3:04](https://youtube.com/watch?v=xnNFexW9Wrk&t=184) 세 번째.
+- [3:05](https://youtube.com/watch?v=xnNFexW9Wrk&t=185) 멋대로 고치기.
+- [3:06](https://youtube.com/watch?v=xnNFexW9Wrk&t=186) 이게 사실 가장 흔한 케이스예요.
+- [3:08](https://youtube.com/watch?v=xnNFexW9Wrk&t=188) 여러분이 한 함수만 고쳐달라고 했는데.
+- [3:11](https://youtube.com/watch?v=xnNFexW9Wrk&t=191) AI가 옆에 있는 다른 함수까지 같이 손대요.
+- [3:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=194) 포맷팅이 안 맞길래 정리했어요.
+- [3:16](https://youtube.com/watch?v=xnNFexW9Wrk&t=196) 여기 변수명이 좀 이상해서 바꿨어요.
+- [3:18](https://youtube.com/watch?v=xnNFexW9Wrk&t=198) 이 주석 오래된 거 같아서 지웠어요.
+- [3:21](https://youtube.com/watch?v=xnNFexW9Wrk&t=201) 여러분은 한 함수만 살짝 고치고 싶었을 뿐인데요.
+- [3:24](https://youtube.com/watch?v=xnNFexW9Wrk&t=204) 리뷰해야 할 변경사항이 오십 개로 늘어나 있어요.
+- [3:27](https://youtube.com/watch?v=xnNFexW9Wrk&t=207) 뭐가 진짜 변경이고.
+- [3:29](https://youtube.com/watch?v=xnNFexW9Wrk&t=209) 뭐가 곁다리인지 분간이 안 가요.
+- [3:32](https://youtube.com/watch?v=xnNFexW9Wrk&t=212) 이게 마지막 세 번째 고질병이에요.
+- [3:34](https://youtube.com/watch?v=xnNFexW9Wrk&t=214) 자, 카파시는 이 세 가지를 정확하게 짚었어요.
+- [3:37](https://youtube.com/watch?v=xnNFexW9Wrk&t=217) 그리고 65줄짜리 클로드 점 엠디 파일이 이 세 가지를 막는 네 가지 원칙으로 정리됐어요.
+- [3:43](https://youtube.com/watch?v=xnNFexW9Wrk&t=223) 지금부터가 핵심이에요.
+- [3:45](https://youtube.com/watch?v=xnNFexW9Wrk&t=225) 원칙 1.
+- [3:45](https://youtube.com/watch?v=xnNFexW9Wrk&t=225) 코딩하기 전에 먼저 생각하라 (약 2분)
+- [3:49](https://youtube.com/watch?v=xnNFexW9Wrk&t=229) 이 원칙의 한 줄 요약은 이거예요.
+- [3:51](https://youtube.com/watch?v=xnNFexW9Wrk&t=231) 가정하지 마.
+- [3:52](https://youtube.com/watch?v=xnNFexW9Wrk&t=232) 헷갈리면 숨기지 말고.
+- [3:54](https://youtube.com/watch?v=xnNFexW9Wrk&t=234) 트레이드오프를 알려줘.
+- [3:55](https://youtube.com/watch?v=xnNFexW9Wrk&t=235) 무슨 말이냐면요.
+- [3:56](https://youtube.com/watch?v=xnNFexW9Wrk&t=236) AI가 코딩 시작하기 전에 네 가지를 해야 해요.
+- [3:59](https://youtube.com/watch?v=xnNFexW9Wrk&t=239) 첫째.
+- [4:00](https://youtube.com/watch?v=xnNFexW9Wrk&t=240) 자기가 지금 어떻게 이해했는지 명확히 말하기.
+- [4:03](https://youtube.com/watch?v=xnNFexW9Wrk&t=243) 헷갈리면 그냥 묻기.
+- [4:06](https://youtube.com/watch?v=xnNFexW9Wrk&t=246) 둘째.
+- [4:06](https://youtube.com/watch?v=xnNFexW9Wrk&t=246) 해석이 여러 개 가능하면 다 보여주기.
+- [4:08](https://youtube.com/watch?v=xnNFexW9Wrk&t=248) 혼자 고르지 말고.
+- [4:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=254) 셋째. 더 단순한 방법이 있으면 말해주기. 필요하면 사용자한테 반박도 하기.
+- [4:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=254) 넷째.
+- [4:15](https://youtube.com/watch?v=xnNFexW9Wrk&t=255) 모르는 게 있으면 멈추기.
+- [4:17](https://youtube.com/watch?v=xnNFexW9Wrk&t=257) 뭐가 헷갈리는지 묻기.
+- [4:18](https://youtube.com/watch?v=xnNFexW9Wrk&t=258) 이게 왜 효과적이냐면요.
+- [4:20](https://youtube.com/watch?v=xnNFexW9Wrk&t=260) 첫 번째 고질병 — 잘못된 가정 — 을 정확히 막아요.
+- [4:26](https://youtube.com/watch?v=xnNFexW9Wrk&t=266) AI가 묻기만 해도.
+- [4:27](https://youtube.com/watch?v=xnNFexW9Wrk&t=267) 여러분 머릿속에서 아 그래 이런 것도 있었지 하고 튀어나와요.
+- [4:30](https://youtube.com/watch?v=xnNFexW9Wrk&t=270) 코드 짜고 나서 아 이거 다시 짜야 하는데 하는 일이 줄어들어요.
+- [4:34](https://youtube.com/watch?v=xnNFexW9Wrk&t=274) 진짜 답답한 시나리오 있잖아요.
+- [4:36](https://youtube.com/watch?v=xnNFexW9Wrk&t=276) AI가 10분 동안 코드 짜고 있는데.
+- [4:38](https://youtube.com/watch?v=xnNFexW9Wrk&t=278) 다 끝나고 보니까 처음부터 가정이 틀렸던 거.
+- [4:41](https://youtube.com/watch?v=xnNFexW9Wrk&t=281) 다시 시작.
+- [4:42](https://youtube.com/watch?v=xnNFexW9Wrk&t=282) 이걸 막는 거예요.
+- [4:43](https://youtube.com/watch?v=xnNFexW9Wrk&t=283) 코딩 전에 묻고 시작하기.
+- [4:45](https://youtube.com/watch?v=xnNFexW9Wrk&t=285) 이게 첫 번째 원칙이에요.
+- [4:47](https://youtube.com/watch?v=xnNFexW9Wrk&t=287) 원칙 2.
+- [4:48](https://youtube.com/watch?v=xnNFexW9Wrk&t=288) 단순하게 먼저 (약 2분)
+- [4:50](https://youtube.com/watch?v=xnNFexW9Wrk&t=290) 한 줄 요약은.
+- [4:51](https://youtube.com/watch?v=xnNFexW9Wrk&t=291) 문제를 해결하는 최소 코드.
+- [4:53](https://youtube.com/watch?v=xnNFexW9Wrk&t=293) 추측은 없이.
+- [4:54](https://youtube.com/watch?v=xnNFexW9Wrk&t=294) 이 원칙은 다섯 개 규칙으로 풀어요.
+- [4:56](https://youtube.com/watch?v=xnNFexW9Wrk&t=296) 다들 이런 적 있죠.
+- [4:58](https://youtube.com/watch?v=xnNFexW9Wrk&t=298) 간단한 거 시켰는데 코드가 한 화면을 채우는 거.
+- [5:01](https://youtube.com/watch?v=xnNFexW9Wrk&t=301) 첫째.
+- [5:01](https://youtube.com/watch?v=xnNFexW9Wrk&t=301) 시키지 않은 기능 추가하지 말기.
+- [5:03](https://youtube.com/watch?v=xnNFexW9Wrk&t=303) 둘째.
+- [5:04](https://youtube.com/watch?v=xnNFexW9Wrk&t=304) 한 번만 쓸 코드를 추상화하지 말기.
+- [5:06](https://youtube.com/watch?v=xnNFexW9Wrk&t=306) 셋째.
+- [5:07](https://youtube.com/watch?v=xnNFexW9Wrk&t=307) 시키지 않은 유연성이나 설정 가능성 넣지 말기.
+- [5:10](https://youtube.com/watch?v=xnNFexW9Wrk&t=310) 넷째.
+- [5:10](https://youtube.com/watch?v=xnNFexW9Wrk&t=310) 일어날 수 없는 상황에 에러 처리 넣지 말기.
+- [5:13](https://youtube.com/watch?v=xnNFexW9Wrk&t=313) 다섯째 — 이게 진짜 핵심이에요.
+- [5:15](https://youtube.com/watch?v=xnNFexW9Wrk&t=315) 200줄 짠 게 50줄로 가능하다면, 다시 짜기.
+- [5:19](https://youtube.com/watch?v=xnNFexW9Wrk&t=319) 그리고 카파시가 한 가지 더 추가했어요.
+- [5:22](https://youtube.com/watch?v=xnNFexW9Wrk&t=322) 시니어 엔지니어가 보면 이게 너무 복잡하다고 할 거 같으면.
+- [5:24](https://youtube.com/watch?v=xnNFexW9Wrk&t=324) 그러면 단순화해라.
+- [5:26](https://youtube.com/watch?v=xnNFexW9Wrk&t=326) 이게 두 번째 고질병 — 코드 부풀리기 — 를 정확히 막아요.
+- [5:30](https://youtube.com/watch?v=xnNFexW9Wrk&t=330) 근데 진짜 흥미로운 게 있어요.
+- [5:32](https://youtube.com/watch?v=xnNFexW9Wrk&t=332) AI는 원래 더 많을수록 좋다고 생각해요.
+- [5:34](https://youtube.com/watch?v=xnNFexW9Wrk&t=334) 더 많은 옵션.
+- [5:35](https://youtube.com/watch?v=xnNFexW9Wrk&t=335) 더 많은 추상화.
+- [5:36](https://youtube.com/watch?v=xnNFexW9Wrk&t=336) 더 많은 안전장치.
+- [5:38](https://youtube.com/watch?v=xnNFexW9Wrk&t=338) 근데 그게 다 빚이에요.
+- [5:39](https://youtube.com/watch?v=xnNFexW9Wrk&t=339) 나중에 다 읽어야 하고.
+- [5:40](https://youtube.com/watch?v=xnNFexW9Wrk&t=340) 유지해야 하고.
+- [5:41](https://youtube.com/watch?v=xnNFexW9Wrk&t=341) 버그 났을 때 다 뒤져봐야 해요.
+- [5:44](https://youtube.com/watch?v=xnNFexW9Wrk&t=344) 이 원칙은 그 본능에 브레이크를 거는 거예요.
+- [5:49](https://youtube.com/watch?v=xnNFexW9Wrk&t=349) 200줄 짜놓고 만족하지 말고.
+- [5:50](https://youtube.com/watch?v=xnNFexW9Wrk&t=350) 50줄로 줄일 수 있는지 한 번만 다시 보자는 거예요.
+- [5:52](https://youtube.com/watch?v=xnNFexW9Wrk&t=352) 원칙 3.
+- [5:54](https://youtube.com/watch?v=xnNFexW9Wrk&t=354) 외과수술처럼 정확하게 (약 2분)
+- [5:56](https://youtube.com/watch?v=xnNFexW9Wrk&t=356) 한 줄 요약은.
+- [5:57](https://youtube.com/watch?v=xnNFexW9Wrk&t=357) 꼭 수정해야되는 것만 고쳐라.
+- [5:59](https://youtube.com/watch?v=xnNFexW9Wrk&t=359) 이 원칙이 진짜 흥미로워요.
+- [6:01](https://youtube.com/watch?v=xnNFexW9Wrk&t=361) AI가 시킨 거 옆에 본인이 봤을때 고치고 싶은 코드가 있으면.
+- [6:05](https://youtube.com/watch?v=xnNFexW9Wrk&t=365) 자꾸 같이 고치려고 해요.
+- [6:07](https://youtube.com/watch?v=xnNFexW9Wrk&t=367) 근데 이게 바이브코딩에서 왜 중요한지 한 가지만 말씀드릴게요.
+- [6:11](https://youtube.com/watch?v=xnNFexW9Wrk&t=371) AI가 시키지도 않은 곳을 건드리면.
+- [6:13](https://youtube.com/watch?v=xnNFexW9Wrk&t=373) 멀쩡하게 돌아가던 게 갑자기 망가져요.
+- [6:15](https://youtube.com/watch?v=xnNFexW9Wrk&t=375) 이런 적 있을 거예요.
+- [6:17](https://youtube.com/watch?v=xnNFexW9Wrk&t=377) 로그인 페이지 색깔 하나만 바꿔달라고 했는데.
+- [6:19](https://youtube.com/watch?v=xnNFexW9Wrk&t=379) 다음 날 회원가입 페이지가 안 열려요.
+- [6:22](https://youtube.com/watch?v=xnNFexW9Wrk&t=382) AI가 그 둘이 공통으로 쓰는 부분을 멋대로 고쳤거든요.
+- [6:25](https://youtube.com/watch?v=xnNFexW9Wrk&t=385) 이거 진짜 자주 일어나요.
+- [6:27](https://youtube.com/watch?v=xnNFexW9Wrk&t=387) 바이브코딩 하다 보면 가장 답답한 순간이에요.
+- [6:30](https://youtube.com/watch?v=xnNFexW9Wrk&t=390) 어제까지 잘 됐는데 오늘 갑자기 안 돼.
+- [6:33](https://youtube.com/watch?v=xnNFexW9Wrk&t=393) 근데 내가 시킨 건 다른 거.
+- [6:34](https://youtube.com/watch?v=xnNFexW9Wrk&t=394) 이걸 막으려고 카파시가 네 가지 규칙을 짚었어요.
+- [6:38](https://youtube.com/watch?v=xnNFexW9Wrk&t=398) 첫째.
+- [6:39](https://youtube.com/watch?v=xnNFexW9Wrk&t=399) 인접 코드나 주석이나 포맷팅을 개선하지 마.
+- [6:42](https://youtube.com/watch?v=xnNFexW9Wrk&t=402) 둘째.
+- [6:43](https://youtube.com/watch?v=xnNFexW9Wrk&t=403) 안 망가진 거 리팩토링하지 마.
+- [6:45](https://youtube.com/watch?v=xnNFexW9Wrk&t=405) 셋째.
+- [6:45](https://youtube.com/watch?v=xnNFexW9Wrk&t=405) 기존 스타일에 맞춰.
+- [6:47](https://youtube.com/watch?v=xnNFexW9Wrk&t=407) 너라면 다르게 짤 거라도.
+- [6:49](https://youtube.com/watch?v=xnNFexW9Wrk&t=409) 넷째.
+- [6:49](https://youtube.com/watch?v=xnNFexW9Wrk&t=409) 관련 없는 죽은 코드 보면.
+- [6:51](https://youtube.com/watch?v=xnNFexW9Wrk&t=411) 말만 해.
+- [6:52](https://youtube.com/watch?v=xnNFexW9Wrk&t=412) 지우지는 마.
+- [6:53](https://youtube.com/watch?v=xnNFexW9Wrk&t=413) 쉽게 말하면.
+- [6:54](https://youtube.com/watch?v=xnNFexW9Wrk&t=414) 시킨 것만 해.
+- [6:55](https://youtube.com/watch?v=xnNFexW9Wrk&t=415) 그 외에는 손대지 마.
+- [6:56](https://youtube.com/watch?v=xnNFexW9Wrk&t=416) 그리고 마지막에 한 줄을 덧붙였어요.
+- [6:59](https://youtube.com/watch?v=xnNFexW9Wrk&t=419) 모든 변경된 줄은.
+- [7:00](https://youtube.com/watch?v=xnNFexW9Wrk&t=420) 사용자의 요청으로 곧장 거슬러 올라갈 수 있어야 해.
+- [7:03](https://youtube.com/watch?v=xnNFexW9Wrk&t=423) 풀어보면요.
+- [7:04](https://youtube.com/watch?v=xnNFexW9Wrk&t=424) 뭔가가 바뀌었으면.
+- [7:05](https://youtube.com/watch?v=xnNFexW9Wrk&t=425) 사용자가 시킨 거 때문이어야 한다는 뜻이에요.
+- [7:08](https://youtube.com/watch?v=xnNFexW9Wrk&t=428) AI가 보기에 더 깔끔해서 바꾼 거.
+- [7:11](https://youtube.com/watch?v=xnNFexW9Wrk&t=431) 이건 잘못된 거예요.
+- [7:12](https://youtube.com/watch?v=xnNFexW9Wrk&t=432) 이 원칙 하나만 적용해도.
+- [7:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=434) 그런 일이 진짜 줄어들어요.
+- [7:16](https://youtube.com/watch?v=xnNFexW9Wrk&t=436) 어제까지 잘 됐던 게 오늘 갑자기 안 되는 거.
+- [7:18](https://youtube.com/watch?v=xnNFexW9Wrk&t=438) 그게 사라져요.
+- [7:20](https://youtube.com/watch?v=xnNFexW9Wrk&t=440) 원칙 4.
+- [7:20](https://youtube.com/watch?v=xnNFexW9Wrk&t=440) 목표 중심으로 실행 (약 2분)
+- [7:22](https://youtube.com/watch?v=xnNFexW9Wrk&t=442) 한 줄 요약은.
+- [7:23](https://youtube.com/watch?v=xnNFexW9Wrk&t=443) 성공 기준을 정해.
+- [7:24](https://youtube.com/watch?v=xnNFexW9Wrk&t=444) 검증될 때까지 반복해.
+- [7:26](https://youtube.com/watch?v=xnNFexW9Wrk&t=446) 카파시가 가장 중요하게 본 게 이거 같아요.
+- [7:28](https://youtube.com/watch?v=xnNFexW9Wrk&t=448) 이 원칙은 일을 어떻게 줘야 하는지에 대한 거예요.
+- [7:32](https://youtube.com/watch?v=xnNFexW9Wrk&t=452) 작업을 검증 가능한 목표로 바꿔.
+- [7:34](https://youtube.com/watch?v=xnNFexW9Wrk&t=454) 예를 들어 검증 추가해줘 같은 모호한 지시 대신.
+- [7:38](https://youtube.com/watch?v=xnNFexW9Wrk&t=458) 예상하지 못한 입력에 대한 테스트 작성.
+- [7:40](https://youtube.com/watch?v=xnNFexW9Wrk&t=460) 그 다음 통과시키기.
+- [7:42](https://youtube.com/watch?v=xnNFexW9Wrk&t=462) 이렇게 줘.
+- [7:43](https://youtube.com/watch?v=xnNFexW9Wrk&t=463) 버그 수정해줘 대신.
+- [7:44](https://youtube.com/watch?v=xnNFexW9Wrk&t=464) 버그 재현하는 테스트 먼저.
+- [7:45](https://youtube.com/watch?v=xnNFexW9Wrk&t=465) 그 다음 그게 통과되게.
+- [7:47](https://youtube.com/watch?v=xnNFexW9Wrk&t=467) X 리팩토링 대신.
+- [7:48](https://youtube.com/watch?v=xnNFexW9Wrk&t=468) 리팩토링 전후로 테스트가 다 통과하는지 확인.
+- [7:51](https://youtube.com/watch?v=xnNFexW9Wrk&t=471) 여러 단계 작업이라면.
+- [7:52](https://youtube.com/watch?v=xnNFexW9Wrk&t=472) 짧은 계획을 먼저 적게 해.
+- [7:57](https://youtube.com/watch?v=xnNFexW9Wrk&t=477) 첫 번째 — 어떤 단계 — 검증은 뭐.
+- [7:58](https://youtube.com/watch?v=xnNFexW9Wrk&t=478) 두 번째 — 어떤 단계 — 검증은 뭐.
+- [8:00](https://youtube.com/watch?v=xnNFexW9Wrk&t=480) 이런 식으로요.
+- [8:00](https://youtube.com/watch?v=xnNFexW9Wrk&t=480) 마지막에 카파시가 한 줄을 덧붙였어요.
+- [8:03](https://youtube.com/watch?v=xnNFexW9Wrk&t=483) 강한 성공 기준이 있으면.
+- [8:05](https://youtube.com/watch?v=xnNFexW9Wrk&t=485) AI가 혼자 돌아갈 수 있어.
+- [8:07](https://youtube.com/watch?v=xnNFexW9Wrk&t=487) 약하면 — 이거 작동하는 거 맞나 매번 물어봐야 돼.
+- [8:10](https://youtube.com/watch?v=xnNFexW9Wrk&t=490) 이게 65줄짜리 클로드 점 엠디의 진짜 핵심이에요.
+- [8:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=494) 명령하지 말고.
+- [8:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=494) 성공 기준을 주고 지켜보라.
+- [8:17](https://youtube.com/watch?v=xnNFexW9Wrk&t=497) 이게 카파시가 트위터 마지막에 던진 그 한 줄과 정확히 같은 말이에요.
+- [8:22](https://youtube.com/watch?v=xnNFexW9Wrk&t=502) 자, 카파시 네 가지 원칙은 여기까지예요.
+- [8:24](https://youtube.com/watch?v=xnNFexW9Wrk&t=504) 근데 제가 직접 개발하면서 보니까.
+- [8:26](https://youtube.com/watch?v=xnNFexW9Wrk&t=506) 카파시 네 가지로는 한국어에서 못 잡는 게 있더라고요.
+- [8:29](https://youtube.com/watch?v=xnNFexW9Wrk&t=509) 그 다섯 개를 바로 보여드릴 건데요.
+- [8:32](https://youtube.com/watch?v=xnNFexW9Wrk&t=512) 이런 진짜 쓰는 법 계속 올리고 있으니까.
+- [8:34](https://youtube.com/watch?v=xnNFexW9Wrk&t=514) 놓치기 싫으시면 구독 한 번 눌러주세요.
+- [8:37](https://youtube.com/watch?v=xnNFexW9Wrk&t=517) 자, 그럼 거기로 가볼게요.
+- [8:39](https://youtube.com/watch?v=xnNFexW9Wrk&t=519) 저도 카파시 65줄을 그대로 썼어요.
+- [8:41](https://youtube.com/watch?v=xnNFexW9Wrk&t=521) 처음에는요.
+- [8:42](https://youtube.com/watch?v=xnNFexW9Wrk&t=522) 근데 직접 개발하면서 보니까.
+- [8:44](https://youtube.com/watch?v=xnNFexW9Wrk&t=524) 카파시 65줄로는 못 잡는 게 있더라고요.
+- [8:47](https://youtube.com/watch?v=xnNFexW9Wrk&t=527) 그래서 제 글로벌 클로드 점 엠디에 다섯 가지를 추가했어요.
+- [8:51](https://youtube.com/watch?v=xnNFexW9Wrk&t=531) 짧게 소개할게요.
+- [8:52](https://youtube.com/watch?v=xnNFexW9Wrk&t=532) 룰 1.
+- [8:53](https://youtube.com/watch?v=xnNFexW9Wrk&t=533) 콜론으로 문장 끝내지 말기
+- [8:55](https://youtube.com/watch?v=xnNFexW9Wrk&t=535) 한국어 문장을 콜론으로 끝내면 어색해요.
+- [8:58](https://youtube.com/watch?v=xnNFexW9Wrk&t=538) 이렇게 끝내면 영어식 리스트 느낌이 나요.
+- [9:01](https://youtube.com/watch?v=xnNFexW9Wrk&t=541) 근데 한국어는 마침표로 끝내야 자연스러워요.
+- [9:04](https://youtube.com/watch?v=xnNFexW9Wrk&t=544) AI가 영어 문서 학습하다 보니까.
+- [9:06](https://youtube.com/watch?v=xnNFexW9Wrk&t=546) 자꾸 콜론으로 끝내요.
+- [9:08](https://youtube.com/watch?v=xnNFexW9Wrk&t=548) 이거 한 줄만 추가해도 한국어 출력이 훨씬 자연스러워져요.
+- [9:11](https://youtube.com/watch?v=xnNFexW9Wrk&t=551) 콜론으로 문장 끝내지 마.
+- [9:13](https://youtube.com/watch?v=xnNFexW9Wrk&t=553) 마침표로 끝내.
+- [9:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=554) 이거 한 줄. 룰 2. 새 파일 만들 때 한국어 헤더 주석 한 줄 새 소스 파일 만들 때.
+- [9:19](https://youtube.com/watch?v=xnNFexW9Wrk&t=559) 맨 위에 그 파일이 뭐 하는 파일인지 한 줄 주석을 넣게 했어요.
+- [9:23](https://youtube.com/watch?v=xnNFexW9Wrk&t=563) 예를 들어 사용자 인증 컨텍스트 파일이면.
+- [9:26](https://youtube.com/watch?v=xnNFexW9Wrk&t=566) 그냥 샵 사용자 인증 상태를 관리하는 컨텍스트 프로바이더.
+- [9:30](https://youtube.com/watch?v=xnNFexW9Wrk&t=570) 한 줄.
+- [9:31](https://youtube.com/watch?v=xnNFexW9Wrk&t=571) 이게 왜 중요하냐면요.
+- [9:32](https://youtube.com/watch?v=xnNFexW9Wrk&t=572) AI가 코드베이스 전체를 다 읽고 작업하는 게 아니거든요.
+- [9:36](https://youtube.com/watch?v=xnNFexW9Wrk&t=576) 필요한 파일만 골라서 봐요.
+- [9:38](https://youtube.com/watch?v=xnNFexW9Wrk&t=578) 근데 파일 첫줄에 주석이 있으면 모든 내용을 다 읽지 않아도, 어떤 파일인지 AI가 쉽게 파악할 수 있어요.
+- [9:45](https://youtube.com/watch?v=xnNFexW9Wrk&t=585) 이걸로 코드베이스가 복잡해도 정확하게 개발할 수 있어요.
+- [9:50](https://youtube.com/watch?v=xnNFexW9Wrk&t=590) 룰 3.
+- [9:50](https://youtube.com/watch?v=xnNFexW9Wrk&t=590) 큰 작업은 계획 다음에 체크리스트 그리고 컨텍스트 노트
+- [9:52](https://youtube.com/watch?v=xnNFexW9Wrk&t=592) 이게 카파시 첫 번째 원칙 — 코딩하기 전에 먼저 생각하라 — 를 제가 적용한 거예요.
+- [9:58](https://youtube.com/watch?v=xnNFexW9Wrk&t=598) 큰 기능 만들기 전에 계획서 하나 만들어요.
+- [10:01](https://youtube.com/watch?v=xnNFexW9Wrk&t=601) 계획서 끝나면 두 가지를 더 만들어요.
+- [10:03](https://youtube.com/watch?v=xnNFexW9Wrk&t=603) 체크리스트.
+- [10:04](https://youtube.com/watch?v=xnNFexW9Wrk&t=604) 해야 할 작업을 체크박스로 정리.
+- [10:06](https://youtube.com/watch?v=xnNFexW9Wrk&t=606) 컨텍스트 노트.
+- [10:07](https://youtube.com/watch?v=xnNFexW9Wrk&t=607) 개발하면서 의사결정했던 것과 그 근거들을 적어둔 거예요.
+- [10:12](https://youtube.com/watch?v=xnNFexW9Wrk&t=612) 그래서 저는 작업할 때 계획서.
+- [10:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=614) 체크리스트.
+- [10:15](https://youtube.com/watch?v=xnNFexW9Wrk&t=615) 컨텍스트 노트.
+- [10:16](https://youtube.com/watch?v=xnNFexW9Wrk&t=616) 이 세 가지로 관리해요.
+- [10:18](https://youtube.com/watch?v=xnNFexW9Wrk&t=618) 그러면 다음날 작업해도 물 흐르듯이 작업할 수 있어요. 룰 4. 작업 마무리 전 테스트 실행
+- [10:23](https://youtube.com/watch?v=xnNFexW9Wrk&t=623) 너무 당연한 거 같지만.
+- [10:25](https://youtube.com/watch?v=xnNFexW9Wrk&t=625) AI가 자꾸 이걸 까먹어요.
+- [10:26](https://youtube.com/watch?v=xnNFexW9Wrk&t=626) 코드 수정해놓고 끝났습니다 라고 말해버려요.
+- [10:29](https://youtube.com/watch?v=xnNFexW9Wrk&t=629) 근데 진짜로 끝났는지 확인 안 한 거예요.
+- [10:32](https://youtube.com/watch?v=xnNFexW9Wrk&t=632) 그래서 명시적으로 적었어요.
+- [10:34](https://youtube.com/watch?v=xnNFexW9Wrk&t=634) 코드 수정한 세션에서는 다 됐어 말하기 전에 무조건 테스트 한 번 돌려.
+- [10:37](https://youtube.com/watch?v=xnNFexW9Wrk&t=637) 이게 카파시 네 번째 원칙 — 목표 중심 실행 — 을 제가 추가로 적용한 거예요.
+- [10:44](https://youtube.com/watch?v=xnNFexW9Wrk&t=644) 룰 5.
+- [10:44](https://youtube.com/watch?v=xnNFexW9Wrk&t=644) 의미 단위 커밋
+- [10:46](https://youtube.com/watch?v=xnNFexW9Wrk&t=646) 마지막.
+- [10:47](https://youtube.com/watch?v=xnNFexW9Wrk&t=647) 의미 있는 작업이 끝나면 그 즉시 커밋.
+- [10:49](https://youtube.com/watch?v=xnNFexW9Wrk&t=649) 스무 개 파일 수정해놓고 한 번에 커밋하지 말기.
+- [10:51](https://youtube.com/watch?v=xnNFexW9Wrk&t=651) 이 커밋 메시지를 한 문장으로 설명할 수 있는가.
+- [10:55](https://youtube.com/watch?v=xnNFexW9Wrk&t=655) 이게 기준이에요.
+- [10:56](https://youtube.com/watch?v=xnNFexW9Wrk&t=656) 설명 가능하면 커밋.
+- [10:57](https://youtube.com/watch?v=xnNFexW9Wrk&t=657) 안 되면 아직 섞여 있는 거니까 분리하기.
+- [11:00](https://youtube.com/watch?v=xnNFexW9Wrk&t=660) 자, 이렇게 카파시 네 가지 원칙에다가 제가 추가한 다섯 개.
+- [11:04](https://youtube.com/watch?v=xnNFexW9Wrk&t=664) 이게 제가 지금 쓰고 있는 클로드 점 엠디예요.
+- [11:07](https://youtube.com/watch?v=xnNFexW9Wrk&t=667) 직접 받아서 써보세요.
+- [11:08](https://youtube.com/watch?v=xnNFexW9Wrk&t=668) 제가 커스텀해서 쓰고 있는 클로드 점 엠디 파일 경로를 고정댓글에 달아두겠습니다.
+- [11:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=674) 다운받은 파일을 어디에 두냐면요.
+- [11:16](https://youtube.com/watch?v=xnNFexW9Wrk&t=676) 클로드 점 엠디는 두 가지 위치가 있어요.
+- [11:18](https://youtube.com/watch?v=xnNFexW9Wrk&t=678) 첫째.
+- [11:19](https://youtube.com/watch?v=xnNFexW9Wrk&t=679) 프로젝트 폴더 안에 클로드 점 엠디.
+- [11:21](https://youtube.com/watch?v=xnNFexW9Wrk&t=681) 그 프로젝트만 적용돼요.
+- [11:23](https://youtube.com/watch?v=xnNFexW9Wrk&t=683) 둘째.
+- [11:24](https://youtube.com/watch?v=xnNFexW9Wrk&t=684) 홈 디렉토리 안에 점 클로드 폴더.
+- [11:26](https://youtube.com/watch?v=xnNFexW9Wrk&t=686) 그 안에 클로드 점 엠디.
+- [11:27](https://youtube.com/watch?v=xnNFexW9Wrk&t=687) 모든 프로젝트에 글로벌로 적용돼요.
+- [11:30](https://youtube.com/watch?v=xnNFexW9Wrk&t=690) 저는 글로벌에 둬요.
+- [11:31](https://youtube.com/watch?v=xnNFexW9Wrk&t=691) 그래야 어떤 프로젝트를 하든 네 가지 원칙이 항상 살아있어요.
+- [11:35](https://youtube.com/watch?v=xnNFexW9Wrk&t=695) 복사 붙여넣기하면 1분이면 끝납니다.
+- [11:38](https://youtube.com/watch?v=xnNFexW9Wrk&t=698) 오늘 영상 핵심 한 줄 다시 정리할게요.
+- [11:43](https://youtube.com/watch?v=xnNFexW9Wrk&t=703) AI는 코드를 못 짜는 게 아니에요.
+- [11:43](https://youtube.com/watch?v=xnNFexW9Wrk&t=703) 너무 잘 짜는 게 문제예요.
+- [11:45](https://youtube.com/watch?v=xnNFexW9Wrk&t=705) 너무 빨리.
+- [11:46](https://youtube.com/watch?v=xnNFexW9Wrk&t=706) 너무 자신있게.
+- [11:47](https://youtube.com/watch?v=xnNFexW9Wrk&t=707) 묻지 않고.
+- [11:48](https://youtube.com/watch?v=xnNFexW9Wrk&t=708) 부풀리고.
+- [11:49](https://youtube.com/watch?v=xnNFexW9Wrk&t=709) 부탁 안 한 거까지 손대고.
+- [11:50](https://youtube.com/watch?v=xnNFexW9Wrk&t=710) 카파시가 65줄로 만든 게 그 브레이크예요.
+- [11:58](https://youtube.com/watch?v=xnNFexW9Wrk&t=718) 가정하지 마. 단순하게 먼저. 외과수술처럼 정확하게. 성공 기준을 정해.
+- [11:58](https://youtube.com/watch?v=xnNFexW9Wrk&t=718) 이 네 가지 원칙이 깃헙 스타 10만 개의 이유예요.
+- [12:03](https://youtube.com/watch?v=xnNFexW9Wrk&t=723) 오늘 영상에서 받아간 거 한 줄이라도 적용해보세요.
+- [12:06](https://youtube.com/watch?v=xnNFexW9Wrk&t=726) 근데 이 65줄짜리 클로드 점 엠디 파일이.
+- [12:08](https://youtube.com/watch?v=xnNFexW9Wrk&t=728) 사실 더 큰 그림의 한 조각이에요.
+- [12:11](https://youtube.com/watch?v=xnNFexW9Wrk&t=731) AI가 혼자 잘 돌아가는 환경을 만드는 작업.
+- [12:14](https://youtube.com/watch?v=xnNFexW9Wrk&t=734) 이걸 요즘 하네스 엔지니어링이라고 불러요.
+- [12:16](https://youtube.com/watch?v=xnNFexW9Wrk&t=736) 클로드 점 엠디는 그 하네스에서 가장 중요한 한 조각이고요.
+- [12:20](https://youtube.com/watch?v=xnNFexW9Wrk&t=740) 다음 영상에서 그 큰 그림 전체를 풀어드릴게요.
+- [12:24](https://youtube.com/watch?v=xnNFexW9Wrk&t=744) 영상 도움 되셨다면 좋아요랑 구독 한 번 부탁드릴게요.
+- [12:27](https://youtube.com/watch?v=xnNFexW9Wrk&t=747) 댓글로는 — 여러분만의 좋은 클로드 점 엠디 팁이 있다면 알려주세요.
+- [12:32](https://youtube.com/watch?v=xnNFexW9Wrk&t=752) 다음 영상 만들 때 참고할게요.
+- [12:34](https://youtube.com/watch?v=xnNFexW9Wrk&t=754) 미드나잇로그 유튜브에서.
+- [12:36](https://youtube.com/watch?v=xnNFexW9Wrk&t=756) 만들면서 배운 것들을 계속 나눠갈게요.
+- [12:39](https://youtube.com/watch?v=xnNFexW9Wrk&t=759) 다음 영상에서 봬요.
