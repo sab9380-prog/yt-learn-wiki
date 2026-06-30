@@ -6,7 +6,7 @@ source_type: youtube
 lang: ko
 analyzed: 2026-06-29
 category: 일반학습
-tags: ["개념/지식-그래프", "개념/갓노드", "개념/라이덴-커뮤니티-탐지-알고리즘", "개념/트리시터", "개념/신뢰도-태그", "개념/MCP-서버-연동"]
+tags: ["주제/RAG검색", "개념/RAG검색/graph-rag", "개념/라이덴-커뮤니티-탐지-알고리즘", "개념/트리시터", "개념/신뢰도-태그", "개념/MCP-서버-연동"]
 key_concepts: ["지식 그래프(Knowledge Graph)", "갓노드(God Node)", "라이덴 커뮤니티 탐지 알고리즘", "트리시터(Tree-sitter) 로컬 파싱", "신뢰도 태그(추출됨/추론됨/모호함)", "MCP 서버 연동"]
 status: active
 ---
@@ -43,7 +43,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
-- 핵심 개념: [[_concept-지식-그래프|지식 그래프]] · [[_concept-갓노드|갓노드]] · [[_concept-라이덴-커뮤니티-탐지-알고리즘|라이덴 커뮤니티 탐지 알고리즘]] · [[_concept-트리시터|트리시터]] · [[_concept-신뢰도-태그|신뢰도 태그]] · [[_concept-MCP-서버-연동|MCP 서버 연동]]
+- 주제: [[_topic-RAG검색]]
+- 핵심 개념: [[_concept-graph-rag|그래프 RAG]] · [[_concept-라이덴-커뮤니티-탐지-알고리즘|라이덴 커뮤니티 탐지 알고리즘]] · [[_concept-트리시터|트리시터]] · [[_concept-신뢰도-태그|신뢰도 태그]] · [[_concept-MCP-서버-연동|MCP 서버 연동]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=uVEA1SKmymg&t=0) 당신의 AI 코딩 어시스턴트는 질문할

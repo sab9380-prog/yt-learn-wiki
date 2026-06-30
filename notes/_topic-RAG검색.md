@@ -5,7 +5,7 @@ topic: RAG검색
 
 # 🗂️ RAG검색
 
-> 주제 집약 · 자동 생성 (수정 금지) · 노트 7개
+> 주제 집약 · 자동 생성 (수정 금지) · 노트 8개
 
 ## 세부 개념
 - [[_concept-rag|RAG]]
@@ -13,6 +13,7 @@ topic: RAG검색
 - [[_concept-vector-search|벡터 검색]]
 
 ## 관련 노트
+- [[2026-06-29-youtube-com-watch-v-uVEA1SKmymg]] — https://youtube.com/watch?v=uVEA1SKmymg — 코드베이스를 질문마다 다시 읽히지 말고, 한 번 지식 그래프로 만들어 두고 팀 전체가 질의하라.
 - [[2026-06-27-신박한-AI-서비스들이-한가득-조코딩-AI-해커톤-with-Google]] — 신박한 AI 서비스들이 한가득! 조코딩 AI 해커톤 with Google 출품작 리뷰 — Gemini API 하나로 타로·SNS·교육·장애인 보조 등 다양한 일상 문제를 해결하는 AI 서비스를 누구나 만들 수 있다.
 - [[2026-06-24-상위-1-가-쓰는-컨텍스트-엔지니어링의-진실]] — 프롬프트 엔지니어링은 끝났다｜상위 1%가 쓰는 컨텍스트 엔지니어링의 진실 — 프롬프트 한 줄을 다듬는 시대는 끝났고, 이제는 AI가 제대로 작동할 수 있도록 데이터·도구·흐름을 시스템으로 설계하는 '컨텍스트 엔지니어링'이 진짜 경쟁력이다.
 - [[2026-06-15-Build-a-second-brain-with-Gbrain-memory]] — Build a second brain with Gbrain - memory for AI agents — AI 시대에 정보 과부하를 해결하려면 단순한 채팅 기록이 아닌 구조화된 외부 메모리 시스템이 필요하다.

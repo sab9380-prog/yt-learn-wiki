@@ -1151,7 +1151,9 @@
     "category": "Picks전략",
     "date": "2026-05-22",
     "core_message": "GPT 이미지 2.0은 네이티브 추론과 99% 텍스트 정확도로 디자인 워크플로우의 상향평준화를 실현하는 게임체인저다.",
-    "topics": [],
+    "topics": [
+      "디자인"
+    ],
     "concepts": [
       {
         "id": "네이티브-추론-기능",
@@ -1164,24 +1166,9 @@
         "topic": null
       },
       {
-        "id": "일관된-스타일-멀티-이미지-생성",
-        "label": "일관된 스타일 멀티 이미지 생성",
-        "topic": null
-      },
-      {
-        "id": "JSON-형식-디자인-요소-추출",
-        "label": "JSON 형식 디자인 요소 추출",
-        "topic": null
-      },
-      {
-        "id": "브랜드-키트-자동-생성",
-        "label": "브랜드 키트 자동 생성",
-        "topic": null
-      },
-      {
-        "id": "UI-디자인-워크플로우",
-        "label": "UI 디자인 워크플로우",
-        "topic": null
+        "id": "ai-image-design",
+        "label": "AI 이미지 디자인",
+        "topic": "디자인"
       }
     ]
   },
@@ -2309,26 +2296,23 @@
     "category": "Picks전략",
     "date": "2026-06-25",
     "core_message": "공개된 웹페이지라면 AI 에이전트도 볼 수 있어야 한다는 철학으로 만든 클로드 코드 플러그인 '인세인 서치'로, 봇 탐지에 막혔던 쇼핑·유튜브 등 주요 사이트 데이터를 합법적으로 자동 수집할 수 있다.",
-    "topics": [],
+    "topics": [
+      "크롤링"
+    ],
     "concepts": [
       {
-        "id": "봇-탐지",
-        "label": "봇 탐지",
-        "topic": null
+        "id": "anti-bot",
+        "label": "크롤링 우회",
+        "topic": "크롤링"
       },
       {
-        "id": "내부-API-호출",
-        "label": "내부 API 호출",
-        "topic": null
+        "id": "web-crawling",
+        "label": "웹 크롤링",
+        "topic": "크롤링"
       },
       {
         "id": "클로드-코드-플러그인",
         "label": "클로드 코드 플러그인",
-        "topic": null
-      },
-      {
-        "id": "플레이라이트",
-        "label": "플레이라이트",
         "topic": null
       }
     ]
@@ -2424,7 +2408,9 @@
     "category": "Picks전략",
     "date": "2026-06-25",
     "core_message": "AI 자동화는 '무엇을 시킬까'가 아니라 '업무를 잘게 쪼개는 것'에서 시작한다.",
-    "topics": [],
+    "topics": [
+      "자동화"
+    ],
     "concepts": [
       {
         "id": "Claude-스킬",
@@ -2437,14 +2423,9 @@
         "topic": null
       },
       {
-        "id": "업무-쪼개기",
-        "label": "업무 쪼개기",
-        "topic": null
-      },
-      {
-        "id": "워크플로우",
-        "label": "워크플로우",
-        "topic": null
+        "id": "workflow-automation",
+        "label": "워크플로우 자동화",
+        "topic": "자동화"
       }
     ]
   },
@@ -2587,12 +2568,14 @@
     "category": "Picks전략",
     "date": "2026-06-28",
     "core_message": "AI 콘텐츠는 레퍼런스의 겉모습을 베끼는 게 아니라 그 뒤에 숨은 원리를 훔쳐 내 브랜드 이야기로 조립해야 차별화된다.",
-    "topics": [],
+    "topics": [
+      "디자인"
+    ],
     "concepts": [
       {
-        "id": "베끼기-vs-훔치기",
-        "label": "베끼기 vs 훔치기",
-        "topic": null
+        "id": "ai-image-design",
+        "label": "AI 이미지 디자인",
+        "topic": "디자인"
       },
       {
         "id": "브랜드-메시지-우선",
@@ -2600,23 +2583,8 @@
         "topic": null
       },
       {
-        "id": "시각-키워드-변환",
-        "label": "시각 키워드 변환",
-        "topic": null
-      },
-      {
         "id": "비주류-레퍼런스-플랫폼",
         "label": "비주류 레퍼런스 플랫폼",
-        "topic": null
-      },
-      {
-        "id": "AI를-활용한-이미지-원리-분석",
-        "label": "AI를 활용한 이미지 원리 분석",
-        "topic": null
-      },
-      {
-        "id": "프롬프트-조각-추출-및-조합",
-        "label": "프롬프트 조각 추출 및 조합",
         "topic": null
       }
     ]
@@ -2627,17 +2595,14 @@
     "category": "일반학습",
     "date": "2026-06-29",
     "core_message": "코드베이스를 질문마다 다시 읽히지 말고, 한 번 지식 그래프로 만들어 두고 팀 전체가 질의하라.",
-    "topics": [],
+    "topics": [
+      "RAG검색"
+    ],
     "concepts": [
       {
-        "id": "지식-그래프",
-        "label": "지식 그래프",
-        "topic": null
-      },
-      {
-        "id": "갓노드",
-        "label": "갓노드",
-        "topic": null
+        "id": "graph-rag",
+        "label": "그래프 RAG",
+        "topic": "RAG검색"
       },
       {
         "id": "라이덴-커뮤니티-탐지-알고리즘",
@@ -2709,7 +2674,9 @@
     "category": "일반학습",
     "date": "2026-06-29",
     "core_message": "AI가 업무를 단위별로 자동화해 가는 속도는 '검증 가능성'에 달려 있으며, 이제 코드 생성보다 검증 프로세스와 도메인 특화 하네스 설계가 진짜 역량이다.",
-    "topics": [],
+    "topics": [
+      "클로드코드"
+    ],
     "concepts": [
       {
         "id": "작업-표면의-확장",
@@ -2737,9 +2704,9 @@
         "topic": null
       },
       {
-        "id": "코덱스-vs-클로드-코드-비교",
-        "label": "코덱스 vs 클로드 코드 비교",
-        "topic": null
+        "id": "codex",
+        "label": "코덱스",
+        "topic": "클로드코드"
       }
     ]
   }
