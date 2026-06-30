@@ -2709,5 +2709,47 @@
         "topic": "클로드코드"
       }
     ]
+  },
+  {
+    "filename": "2026-06-30-MD-완벽-개념-설명-claude-claudeskills.md",
+    "title": "클로드 초보를 위한 스킬 | MD 완벽 개념 설명 #claude #claudeskills #claudecode",
+    "category": "Picks전략",
+    "date": "2026-06-30",
+    "core_message": "스킬을 많이 아는 것보다, 내 반복 업무에 실제로 붙는 스킬 하나를 골라 쓰는 것이 진짜 시간을 줄이는 방법이다.",
+    "topics": [
+      "스킬"
+    ],
+    "concepts": [
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "비개발자-필터링",
+        "label": "비개발자 필터링",
+        "topic": null
+      },
+      {
+        "id": "스킬-크리에이터",
+        "label": "스킬 크리에이터",
+        "topic": null
+      },
+      {
+        "id": "I'm-Not-AI",
+        "label": "I'm Not AI",
+        "topic": null
+      },
+      {
+        "id": "클로드-비디오",
+        "label": "클로드 비디오",
+        "topic": null
+      },
+      {
+        "id": "UIux-프로맥스",
+        "label": "UIux 프로맥스",
+        "topic": null
+      }
+    ]
   }
 ]
