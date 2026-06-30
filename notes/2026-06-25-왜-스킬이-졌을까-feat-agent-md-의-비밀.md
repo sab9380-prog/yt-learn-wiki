@@ -6,7 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-06-25
 category: 일반학습
-tags: ["Agent.md", "Skills(AI 도구)", "컨텍스트 항상 노출 전략", "AI의 선택 실수", "문서 압축(목차화)", "Vercel 실험 결과"]
+tags: ["주제/스킬", "개념/스킬/agent-md", "개념/Skills", "개념/컨텍스트-항상-노출-전략", "개념/AI의-선택-실수", "개념/문서-압축", "개념/Vercel-실험-결과"]
+key_concepts: ["Agent.md", "Skills(AI 도구)", "컨텍스트 항상 노출 전략", "AI의 선택 실수", "문서 압축(목차화)", "Vercel 실험 결과"]
 status: active
 ---
 # 왜 스킬이 졌을까?(feat. agent.md 의 비밀)
@@ -40,7 +41,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
-- 핵심 개념: [[Agent.md]] · [[Skills]] · [[컨텍스트 항상 노출 전략]] · [[AI의 선택 실수]] · [[문서 압축]] · [[Vercel 실험 결과]]
+- 주제: [[_topic-스킬]]
+- 핵심 개념: [[_concept-agent-md|agent.md]] · [[_concept-Skills|Skills]] · [[_concept-컨텍스트-항상-노출-전략|컨텍스트 항상 노출 전략]] · [[_concept-AI의-선택-실수|AI의 선택 실수]] · [[_concept-문서-압축|문서 압축]] · [[_concept-Vercel-실험-결과|Vercel 실험 결과]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=q-HacOazKsA&t=0) 버셀이 재밌는 실험 결과를 하나

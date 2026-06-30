@@ -6,7 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-06-27
 category: PICKS, 웹소설, 일반
-tags: ["Gemini API 활용 서비스 개발", "해커톤/개발자 대회 출품작", "TTS(텍스트 음성 변환) 접근성 가산점", "장애인 접근성 고려 설계", "RAG(검색 증강 생성) 활용", "브라우저 확장 프로그램(Extension)"]
+tags: ["개념/Gemini-API-활용-서비스-개발", "개념/해커톤-개발자-대회-출품작", "개념/TTS", "개념/장애인-접근성-고려-설계", "주제/RAG검색", "개념/RAG검색/rag", "개념/브라우저-확장-프로그램"]
+key_concepts: ["Gemini API 활용 서비스 개발", "해커톤/개발자 대회 출품작", "TTS(텍스트 음성 변환) 접근성 가산점", "장애인 접근성 고려 설계", "RAG(검색 증강 생성) 활용", "브라우저 확장 프로그램(Extension)"]
 status: active
 ---
 # 신박한 AI 서비스들이 한가득! 조코딩 AI 해커톤 with Google 출품작 리뷰
@@ -45,7 +46,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-PICKS, 웹소설, 일반]]
-- 핵심 개념: [[Gemini API 활용 서비스 개발]] · [[해커톤/개발자 대회 출품작]] · [[TTS]] · [[장애인 접근성 고려 설계]] · [[RAG]] · [[브라우저 확장 프로그램]]
+- 주제: [[_topic-RAG검색]]
+- 핵심 개념: [[_concept-Gemini-API-활용-서비스-개발|Gemini API 활용 서비스 개발]] · [[_concept-해커톤-개발자-대회-출품작|해커톤/개발자 대회 출품작]] · [[_concept-TTS|TTS]] · [[_concept-장애인-접근성-고려-설계|장애인 접근성 고려 설계]] · [[_concept-rag|RAG]] · [[_concept-브라우저-확장-프로그램|브라우저 확장 프로그램]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=9d5y3yVBvIw&t=0) 박찬호 님한테 LA에 내셨을 때
