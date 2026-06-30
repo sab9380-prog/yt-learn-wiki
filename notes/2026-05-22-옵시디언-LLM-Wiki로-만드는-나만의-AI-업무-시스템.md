@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/위키", "개념/위키/llm-wiki", "개념/위키/obsidian", "개념/마크다운"]
+key_concepts: ["LM 위키", "옵시디언", "마크다운"]
 status: active
 ---
 # 옵시디언 + LLM 이 조합 미쳤습니다 | 옵시디언 + LLM Wiki로 만드는 나만의 AI 업무 시스템
@@ -39,6 +41,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-위키]]
+- 핵심 개념: [[_concept-llm-wiki|LLM 위키]] · [[_concept-obsidian|옵시디언]] · [[_concept-마크다운|마크다운]]
 
 ## 📝 자막 전문
 - [0:01](https://youtube.com/watch?v=UbxFpDuWt8Q&t=1) 업무에 AI를 사용하려고 자신의

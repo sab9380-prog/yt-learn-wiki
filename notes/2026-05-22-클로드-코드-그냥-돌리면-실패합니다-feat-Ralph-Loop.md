@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/하네스", "개념/하네스/ralph-loop", "개념/파일-구조-분리", "주제/검증", "개념/검증/validation-contract"]
+key_concepts: ["Ralph Loop", "파일 구조 분리", "완료 조건"]
 status: active
 ---
 # 클로드 코드, 그냥 돌리면 실패합니다 (feat. Ralph Loop)
@@ -39,6 +41,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-하네스]] · [[_topic-검증]]
+- 핵심 개념: [[_concept-ralph-loop|Ralph Loop]] · [[_concept-파일-구조-분리|파일 구조 분리]] · [[_concept-validation-contract|검증 계약]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=mgPTpP-62rw&t=0) AI한테 일 시키고

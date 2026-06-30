@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/위키", "개념/위키/llm-wiki", "주제/컨텍스트관리", "개념/컨텍스트관리/context-rot", "개념/위키/second-brain"]
+key_concepts: ["LLM 위키", "골드인 골드 아웃", "브레인 트리니티 시스템"]
 status: active
 ---
 # LLM Wiki가 망하는 진짜 이유: Obsidian·Claude Code보다 중요한 AI OS 설계
@@ -39,6 +41,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-위키]] · [[_topic-컨텍스트관리]]
+- 핵심 개념: [[_concept-llm-wiki|LLM 위키]] · [[_concept-context-rot|컨텍스트 부패]] · [[_concept-second-brain|세컨드 브레인]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=GQtty9JOAUU&t=0) 안녕하세요. 브레인 트리니티의

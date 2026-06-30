@@ -6,6 +6,8 @@ source_type: youtube
 lang: en
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/검증", "개념/검증/ai-slop", "주제/클로드코드", "개념/클로드코드/claude-code", "주제/디자인", "개념/디자인/design-system"]
+key_concepts: ["AI slop", "Claude Code", "디자인 시스템"]
 status: active
 ---
 # Top 10 Claude Code Frontend Design Skills, Plugins, & CLIs
@@ -45,6 +47,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-검증]] · [[_topic-클로드코드]] · [[_topic-디자인]]
+- 핵심 개념: [[_concept-ai-slop|AI 슬롭]] · [[_concept-claude-code|클로드 코드]] · [[_concept-design-system|디자인 시스템]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=Q9ty3eopOPs&t=0) There is a monster inside of Claude Code

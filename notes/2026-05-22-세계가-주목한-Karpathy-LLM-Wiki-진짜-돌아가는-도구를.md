@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/위키", "개념/위키/llm-wiki", "주제/디자인", "개념/디자인/design-system", "주제/클로드코드", "개념/클로드코드/hooks", "개념/백그라운드-데몬"]
+key_concepts: ["LLM 위키 패턴", "3레이어 아키텍처", "오토 컨텍스트 훅", "백그라운드 데몬"]
 status: active
 ---
 # 세계가 주목한 Karpathy LLM Wiki, 진짜 돌아가는 도구를 만들었습니다 | MindVault
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-위키]] · [[_topic-디자인]] · [[_topic-클로드코드]]
+- 핵심 개념: [[_concept-llm-wiki|LLM 위키]] · [[_concept-design-system|디자인 시스템]] · [[_concept-hooks|훅스]] · [[_concept-백그라운드-데몬|백그라운드 데몬]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=LxMhb8HIL7A&t=0) 안드레이 카파시가 제한 LM 위키

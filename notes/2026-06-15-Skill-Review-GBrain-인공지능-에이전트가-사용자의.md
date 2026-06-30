@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-06-15
 category: 일반학습
+tags: ["주제/위키", "개념/위키/llm-wiki", "개념/타임라인", "주제/RAG검색", "개념/RAG검색/vector-search", "주제/스킬", "개념/스킬/claude-skill"]
+key_concepts: ["정리된 진실(Distilled Truth)", "타임라인(Timeline)", "하이브리드 검색", "스킬팩(Skillpack)"]
 status: active
 ---
 # \[Skill Review\] GBrain, 인공지능 에이전트가 사용자의 개인적인 삶과 지식을 깊이 있게 학습할 수 있도록 돕는 Skill
@@ -30,6 +32,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-위키]] · [[_topic-RAG검색]] · [[_topic-스킬]]
+- 핵심 개념: [[_concept-llm-wiki|LLM 위키]] · [[_concept-타임라인|타임라인]] · [[_concept-vector-search|벡터 검색]] · [[_concept-claude-skill|클로드 스킬]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=fwW2Fp7NJU8&t=0) 자, 오늘은 좀 특별한 걸 들고

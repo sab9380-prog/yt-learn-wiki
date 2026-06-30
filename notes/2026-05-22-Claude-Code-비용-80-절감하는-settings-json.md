@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/컨텍스트관리", "개념/컨텍스트관리/context-rot", "개념/인스팅트", "개념/컨텍스트관리/compaction", "주제/AI에이전트", "개념/AI에이전트/sub-agent"]
+key_concepts: ["컨텍스트 로트", "인스팅트", "슬래시 컴팩트", "서브 에이전트"]
 status: active
 ---
 # Claude Code 비용 80% 절감하는 settings.json 3줄과 14만명이 쓰는 everything-claude-code 설정법
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-컨텍스트관리]] · [[_topic-AI에이전트]]
+- 핵심 개념: [[_concept-context-rot|컨텍스트 부패]] · [[_concept-인스팅트|인스팅트]] · [[_concept-compaction|컴팩션]] · [[_concept-sub-agent|서브 에이전트]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=4rN-UWKSmp0&t=0) 클로드 코드를 한참 쓰다 보면 갑자기

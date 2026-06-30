@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/클로드코드", "개념/클로드코드/codex", "주제/검증", "개념/검증/creator-verifier", "개념/모델별-오프스-플랜"]
+key_concepts: ["코덱스 레스큐", "adversarial review", "모델별 오프스 플랜"]
 status: active
 ---
 # 클로드 코드 하나만 쓰면 이제 망합니다(feat. Codex)
@@ -39,6 +41,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-클로드코드]] · [[_topic-검증]]
+- 핵심 개념: [[_concept-codex|코덱스]] · [[_concept-creator-verifier|Creator-Verifier 패턴]] · [[_concept-모델별-오프스-플랜|모델별 오프스 플랜]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=f0hcByvsyjU&t=0) 요즘 클러드 코드 쓰시는 분들

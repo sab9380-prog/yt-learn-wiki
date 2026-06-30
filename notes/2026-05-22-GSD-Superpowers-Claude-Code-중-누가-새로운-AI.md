@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/AI에이전트", "개념/AI에이전트/multi-agent", "개념/AI에이전트/sub-agent", "주제/컨텍스트관리", "개념/컨텍스트관리/context-rot", "개념/비주얼-컴패니언"]
+key_concepts: ["오케스트레이션 레이어", "서브 에이전트 기반 개발", "컨텍스트 붕괴", "비주얼 컴패니언"]
 status: active
 ---
 # GSD, Superpowers, Claude Code 중 누가 새로운 AI 최강자일까요?
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-AI에이전트]] · [[_topic-컨텍스트관리]]
+- 핵심 개념: [[_concept-multi-agent|멀티 에이전트]] · [[_concept-sub-agent|서브 에이전트]] · [[_concept-context-rot|컨텍스트 부패]] · [[_concept-비주얼-컴패니언|비주얼 컴패니언]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=wWuSWRKUuj4&t=0) GSD를 써야 할까요? 슈퍼파우스를

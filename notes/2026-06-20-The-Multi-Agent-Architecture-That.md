@@ -6,6 +6,8 @@ source_type: youtube
 lang: en
 analyzed: 2026-06-20
 category: 일반학습
+tags: ["개념/멀티에이전트-패턴-5가지", "주제/AI거버넌스", "개념/AI거버넌스/orchestration-system", "주제/검증", "개념/검증/validation-contract", "개념/직렬-실행-+-내부-선택적-병렬화", "주제/컨텍스트관리", "개념/컨텍스트관리/compaction", "개념/Droid-Whispering", "개념/User-Testing-Validator", "개념/인간-주의력"]
+key_concepts: ["멀티에이전트 패턴 5가지 (위임·창작자-검증자·직접소통·협상·브로드캐스트)", "Missions 시스템 (Orchestrator·Worker·Validator 3역할 구조)", "Validation Contract (구현 전 완료 기준 선정의)", "직렬 실행 + 내부 선택적 병렬화", "구조화된 핸드오프 (Structured Handoff)", "Droid Whispering (역할별 최적 모델 선택 기술)", "User Testing Validator (컴퓨터 사용 기반 E2E 테스트)", "인간 주의력(attention)이 병목"]
 status: active
 ---
 # The Multi-Agent Architecture That Actually Ships — Luke Alvoeiro, Factory
@@ -44,6 +46,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-AI거버넌스]] · [[_topic-검증]] · [[_topic-컨텍스트관리]]
+- 핵심 개념: [[_concept-멀티에이전트-패턴-5가지|멀티에이전트 패턴 5가지]] · [[_concept-orchestration-system|오케스트레이션 시스템]] · [[_concept-validation-contract|검증 계약]] · [[_concept-직렬-실행-+-내부-선택적-병렬화|직렬 실행 + 내부 선택적 병렬화]] · [[_concept-compaction|컴팩션]] · [[_concept-Droid-Whispering|Droid Whispering]] · [[_concept-User-Testing-Validator|User Testing Validator]] · [[_concept-인간-주의력|인간 주의력]]
 
 ## 📝 자막 전문
 - [0:07](https://www.youtube.com/watch?v=ow1we5PzK-o&t=7) [music]

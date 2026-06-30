@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-23
 category: Picks전략
+tags: ["개념/윤비서-ERP-시스템", "주제/자동화", "개념/자동화/workflow-automation", "개념/데이터-중앙집중화", "개념/AI-네이티브-기업", "개념/커스텀-개발", "개념/API-연동", "개념/Claude-Desktop-활용", "개념/실시간-업무-관리"]
+key_concepts: ["윤비서 ERP 시스템", "업무 자동화", "데이터 중앙집중화", "AI 네이티브 기업", "커스텀 개발", "API 연동", "Claude Desktop 활용", "실시간 업무 관리"]
 status: active
 ---
 # 토스 PO 출신 대표가 사내 ERP와 AI 에이전트를 직접 만들고 AI 네이티브 컴퍼니로 거듭난 방법 (윤용승 대표, 윤자동)
@@ -41,6 +43,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-Picks전략]]
+- 주제: [[_topic-자동화]]
+- 핵심 개념: [[_concept-윤비서-ERP-시스템|윤비서 ERP 시스템]] · [[_concept-workflow-automation|워크플로우 자동화]] · [[_concept-데이터-중앙집중화|데이터 중앙집중화]] · [[_concept-AI-네이티브-기업|AI 네이티브 기업]] · [[_concept-커스텀-개발|커스텀 개발]] · [[_concept-API-연동|API 연동]] · [[_concept-Claude-Desktop-활용|Claude Desktop 활용]] · [[_concept-실시간-업무-관리|실시간 업무 관리]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=CVmbidt-3ro&t=0) 700개가 넘는 녹음을 하고 있고

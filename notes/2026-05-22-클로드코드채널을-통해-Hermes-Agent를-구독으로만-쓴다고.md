@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["개념/OAuth-인증", "주제/MCP", "개념/MCP/mcp", "주제/컨텍스트관리", "개념/컨텍스트관리/token-optimization"]
+key_concepts: ["OAuth 인증", "MCP (Model Context Protocol)", "토큰 위임"]
 status: active
 ---
 # 클로드코드채널을 통해 Hermes Agent를 구독으로만 쓴다고???
@@ -38,6 +40,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-MCP]] · [[_topic-컨텍스트관리]]
+- 핵심 개념: [[_concept-OAuth-인증|OAuth 인증]] · [[_concept-mcp|MCP]] · [[_concept-token-optimization|토큰 최적화]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=X6lXs8IcoHw&t=0) 앤트로픽이 클로드를 서드 파티에서

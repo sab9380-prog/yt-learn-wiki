@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-06-24
 category: 일반학습
+tags: ["주제/컨텍스트관리", "개념/컨텍스트관리/context-engineering", "개념/컨텍스트관리/context-rot", "주제/하네스", "개념/하네스/harness", "주제/ANTHROPIC", "개념/ANTHROPIC/anthropic"]
+key_concepts: ["컨텍스트 엔지니어링", "컨텍스트 러트 (Context Rot)", "저스트 인 타임 컨텍스트", "하네스 패턴"]
 status: active
 ---
 # AI가 까먹는 진짜 이유 | Anthropic 컨텍스트 엔지니어링 완벽 가이드
@@ -39,6 +41,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-컨텍스트관리]] · [[_topic-하네스]] · [[_topic-ANTHROPIC]]
+- 핵심 개념: [[_concept-context-engineering|컨텍스트 엔지니어링]] · [[_concept-context-rot|컨텍스트 부패]] · [[_concept-harness|하네스]] · [[_concept-anthropic|Anthropic]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=aa-zYgWV00g&t=0) 은 AI한테 한시간 넘게 작업을

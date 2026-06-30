@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["개념/Office-Hours", "주제/AI에이전트", "개념/AI에이전트/sub-agent", "주제/클로드코드", "개념/클로드코드/git-worktree", "주제/검증", "개념/검증/ai-slop"]
+key_concepts: ["Office Hours", "Sub-agent Driven Development", "Git Worktrees", "AI 슬롭"]
 status: active
 ---
 # GStack + Superpowers로 클로드코드 완전히 달라진 사람의 후기
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-AI에이전트]] · [[_topic-클로드코드]] · [[_topic-검증]]
+- 핵심 개념: [[_concept-Office-Hours|Office Hours]] · [[_concept-sub-agent|서브 에이전트]] · [[_concept-git-worktree|깃 워크트리]] · [[_concept-ai-slop|AI 슬롭]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=af3OJ0L1jEU&t=0) 저 요즘 클로드코드 플러그인 거의 다

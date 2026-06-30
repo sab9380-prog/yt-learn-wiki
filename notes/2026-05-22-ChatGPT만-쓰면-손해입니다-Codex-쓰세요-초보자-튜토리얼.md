@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: Picks전략
+tags: ["주제/클로드코드", "개념/클로드코드/codex", "주제/스킬", "개념/스킬/agent-md", "개념/컴퓨터-유즈"]
+key_concepts: ["코덱스(Codex)", "agent.md", "컴퓨터 유즈"]
 status: active
 ---
 # ChatGPT만 쓰면 손해입니다. Codex 쓰세요! (초보자 튜토리얼)
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-Picks전략]]
+- 주제: [[_topic-클로드코드]] · [[_topic-스킬]]
+- 핵심 개념: [[_concept-codex|코덱스]] · [[_concept-agent-md|agent.md]] · [[_concept-컴퓨터-유즈|컴퓨터 유즈]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=ir8Lax4Q38o&t=0) 여러분 혹시 아직 채비티나 재미나면

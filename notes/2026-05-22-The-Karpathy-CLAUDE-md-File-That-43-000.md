@@ -6,6 +6,8 @@ source_type: youtube
 lang: en
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/스킬", "개념/스킬/agent-md", "개념/Think-Before-Coding", "개념/Surgical-Changes", "개념/Goal-driven-Execution"]
+key_concepts: ["claw.md", "Think Before Coding", "Surgical Changes", "Goal-driven Execution"]
 status: active
 ---
 # The Karpathy CLAUDE.md File That 43,000 Developers Installed in 1 Week (Full Breakdown)
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-스킬]]
+- 핵심 개념: [[_concept-agent-md|agent.md]] · [[_concept-Think-Before-Coding|Think Before Coding]] · [[_concept-Surgical-Changes|Surgical Changes]] · [[_concept-Goal-driven-Execution|Goal-driven Execution]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=d8BGxfW3Vj4&t=0) What if one file can fix the biggest

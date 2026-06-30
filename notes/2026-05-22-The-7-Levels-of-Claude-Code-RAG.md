@@ -6,6 +6,8 @@ source_type: youtube
 lang: en
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/RAG검색", "개념/RAG검색/rag", "주제/컨텍스트관리", "개념/컨텍스트관리/context-rot", "개념/RAG검색/graph-rag", "개념/RAG검색/vector-search"]
+key_concepts: ["RAG (Retrieval Augmented Generation)", "Context Rot", "Graph RAG", "Vector Database"]
 status: active
 ---
 # The 7 Levels of Claude Code & RAG
@@ -41,6 +43,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-RAG검색]] · [[_topic-컨텍스트관리]]
+- 핵심 개념: [[_concept-rag|RAG]] · [[_concept-context-rot|컨텍스트 부패]] · [[_concept-graph-rag|그래프 RAG]] · [[_concept-vector-search|벡터 검색]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=kQu5pWKS8GA&t=0) Let's solve the problem of clawed code

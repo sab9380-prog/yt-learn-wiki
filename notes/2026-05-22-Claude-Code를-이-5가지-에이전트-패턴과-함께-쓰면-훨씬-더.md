@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["개념/헤드리스", "개념/스플릿-머지", "주제/AI에이전트", "개념/AI에이전트/multi-agent", "개념/오퍼레이터"]
+key_concepts: ["헤드리스", "스플릿 머지", "에이전트 팀", "오퍼레이터"]
 status: active
 ---
 # Claude Code를 이 5가지 에이전트 패턴과 함께 쓰면 훨씬 더 잘 작동합니다
@@ -41,6 +43,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-AI에이전트]]
+- 핵심 개념: [[_concept-헤드리스|헤드리스]] · [[_concept-스플릿-머지|스플릿 머지]] · [[_concept-multi-agent|멀티 에이전트]] · [[_concept-오퍼레이터|오퍼레이터]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=ufr6er69kLs&t=0) 아직도 클로드 코드를 한 번에 대화

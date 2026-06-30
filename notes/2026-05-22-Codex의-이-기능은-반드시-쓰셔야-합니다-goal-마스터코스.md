@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/하네스", "개념/하네스/ralph-loop", "개념/Goal-기능", "주제/검증", "개념/검증/validation-contract", "주제/컨텍스트관리", "개념/컨텍스트관리/token-optimization"]
+key_concepts: ["RALF Loop", "Goal 기능", "완료 검증 7단계", "토큰 예산 관리"]
 status: active
 ---
 # Codex의 이 기능은 반드시 쓰셔야 합니다 (/goal 마스터코스)
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-하네스]] · [[_topic-검증]] · [[_topic-컨텍스트관리]]
+- 핵심 개념: [[_concept-ralph-loop|Ralph Loop]] · [[_concept-Goal-기능|Goal 기능]] · [[_concept-validation-contract|검증 계약]] · [[_concept-token-optimization|토큰 최적화]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=vq37BMhoesQ&t=0) 자, 며칠 전에 코덱스에서이 꼬이라는

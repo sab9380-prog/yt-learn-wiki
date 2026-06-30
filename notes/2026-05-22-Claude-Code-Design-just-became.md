@@ -6,6 +6,8 @@ source_type: youtube
 lang: en
 analyzed: 2026-05-22
 category: Picks전략
+tags: ["주제/검증", "개념/검증/ai-slop", "주제/디자인", "개념/디자인/design-system", "주제/크롤링", "개념/크롤링/firecrawl"]
+key_concepts: ["AI slop", "디자인 코드화", "Firecrawl"]
 status: active
 ---
 # Claude Code Design just became UNSTOPPABLE
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-Picks전략]]
+- 주제: [[_topic-검증]] · [[_topic-디자인]] · [[_topic-크롤링]]
+- 핵심 개념: [[_concept-ai-slop|AI 슬롭]] · [[_concept-design-system|디자인 시스템]] · [[_concept-firecrawl|Firecrawl]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=z9CwM-DAe5Q&t=0) Cloud Code just became the world's

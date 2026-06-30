@@ -1,0 +1,17 @@
+---
+type: concept-moc
+concept: validation-contract
+---
+
+# 🧩 검증 계약
+
+> 개념 집약 · 자동 생성 (수정 금지) · 노트 3개
+
+- 상위 주제: [[_topic-검증]]
+
+## 관련 노트
+- [[2026-06-20-The-Multi-Agent-Architecture-That]] — The Multi-Agent Architecture That Actually Ships — Luke Alvoeiro, Factory — AI 에이전트의 병목은 지능이 아닌 인간의 주의력이므로, 검증 계약·직렬 실행·구조화된 핸드오프로 며칠간 자율 실행하는 에이전트 생태계를 설계해야 한다.
+- [[2026-05-22-Codex의-이-기능은-반드시-쓰셔야-합니다-goal-마스터코스]] — Codex의 이 기능은 반드시 쓰셔야 합니다 (/goal 마스터코스) — AI가 목표만 주면 스스로 반복하며 완성할 때까지 코딩하는 혁신적 패러다임이 코덱스 Goal 기능으로 구현되었다.
+- [[2026-05-22-클로드-코드-그냥-돌리면-실패합니다-feat-Ralph-Loop]] — 클로드 코드, 그냥 돌리면 실패합니다 (feat. Ralph Loop) — Ralph Loop을 성공시키는 핵심은 AI가 필요할 때만 참조할 수 있도록 파일을 분리하고, 명확한 완료 조건이 담긴 프롬프트를 작성하는 것이다.
+
+[[INDEX]]

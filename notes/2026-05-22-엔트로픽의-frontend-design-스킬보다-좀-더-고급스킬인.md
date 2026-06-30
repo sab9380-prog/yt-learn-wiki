@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/검증", "개념/검증/ai-slop", "개념/안티-패턴", "주제/스킬", "개념/스킬/claude-skill", "주제/컨텍스트관리", "개념/컨텍스트관리/context-engineering", "주제/ANTHROPIC", "개념/ANTHROPIC/anthropic"]
+key_concepts: ["AI 슬롭", "안티 패턴", "Critic 스킬", "프로젝트 컨텍스트"]
 status: active
 ---
 # 엔트로픽의 frontend-design 스킬보다 좀 더 고급스킬인 impeccable 알아보기 | 클로드 코드
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-검증]] · [[_topic-스킬]] · [[_topic-컨텍스트관리]] · [[_topic-ANTHROPIC]]
+- 핵심 개념: [[_concept-ai-slop|AI 슬롭]] · [[_concept-안티-패턴|안티 패턴]] · [[_concept-claude-skill|클로드 스킬]] · [[_concept-context-engineering|컨텍스트 엔지니어링]] · [[_concept-anthropic|Anthropic]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=ShQXDxUW-WQ&t=0) 네. 최근에 그 댓글에서 이제

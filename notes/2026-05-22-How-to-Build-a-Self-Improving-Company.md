@@ -6,6 +6,8 @@ source_type: youtube
 lang: en
 analyzed: 2026-05-22
 category: Picks전략
+tags: ["주제/자기개선", "개념/자기개선/self-improving", "개념/조직-가독성", "주제/위키", "개념/위키/second-brain"]
+key_concepts: ["자기개선 AI 루프", "조직 가독성(legibility)", "회사 브레인"]
 status: active
 ---
 # How to Build a Self-Improving Company with AI
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-Picks전략]]
+- 주제: [[_topic-자기개선]] · [[_topic-위키]]
+- 핵심 개념: [[_concept-self-improving|자기개선 AI]] · [[_concept-조직-가독성|조직 가독성]] · [[_concept-second-brain|세컨드 브레인]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=t-G67yKAHBQ&t=0) This is based a little bit off a talk

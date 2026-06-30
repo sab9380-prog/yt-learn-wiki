@@ -6,6 +6,8 @@ source_type: youtube
 lang: en
 analyzed: 2026-06-15
 category: Picks전략
+tags: ["주제/위키", "개념/위키/second-brain", "주제/RAG검색", "개념/RAG검색/vector-search", "개념/자동-연결", "개념/위키/obsidian"]
+key_concepts: ["G brain", "하이브리드 검색", "자동 연결 (Self-wiring)", "백링크 부스팅"]
 status: active
 ---
 # Build a second brain with Gbrain - memory for AI agents
@@ -30,6 +32,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-Picks전략]]
+- 주제: [[_topic-위키]] · [[_topic-RAG검색]]
+- 핵심 개념: [[_concept-second-brain|세컨드 브레인]] · [[_concept-vector-search|벡터 검색]] · [[_concept-자동-연결|자동 연결]] · [[_concept-obsidian|옵시디언]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=j55r_higKIo&t=0) I built myself a second brain. Why?

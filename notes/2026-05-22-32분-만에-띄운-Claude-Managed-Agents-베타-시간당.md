@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
+tags: ["주제/AI에이전트", "개념/AI에이전트/managed-agent", "개념/세션", "개념/AI에이전트/agent-view"]
+key_concepts: ["매니지드 에이전트", "세션", "액티브 런타임", "비동기 워크플로우"]
 status: active
 ---
 # 32분 만에 띄운 Claude Managed Agents 베타, 시간당 0.08달러 가격 분석
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-AI에이전트]]
+- 핵심 개념: [[_concept-managed-agent|매니지드 에이전트]] · [[_concept-세션|세션]] · [[_concept-agent-view|에이전트 뷰]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=TGSV1CGAGfw&t=0) 에이전트 한번 만들어 보겠다고

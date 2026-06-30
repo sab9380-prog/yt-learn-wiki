@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: Picks전략
+tags: ["주제/디자인", "개념/디자인/claude-design", "개념/Opus-4.7", "주제/MCP", "개념/MCP/mcp"]
+key_concepts: ["클로드 디자인", "Opus 4.7", "MCP 서버"]
 status: active
 ---
 # \[한국어더빙\] Claude Design보다 더 나은 도구는 이미 있습니다
@@ -40,6 +42,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-Picks전략]]
+- 주제: [[_topic-디자인]] · [[_topic-MCP]]
+- 핵심 개념: [[_concept-claude-design|클로드 디자인]] · [[_concept-Opus-4.7|Opus 4.7]] · [[_concept-mcp|MCP]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=8Zb_HSIDzRQ&t=0) 클로드 디자인이 나오면서 디자인 판이

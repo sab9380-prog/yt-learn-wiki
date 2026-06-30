@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-06-04
 category: 일반학습
+tags: ["주제/자동화", "개념/자동화/workflow-automation", "개념/딥리서치", "주제/클로드코드", "개념/클로드코드/codex", "주제/AI에이전트", "개념/AI에이전트/sub-agent"]
+key_concepts: ["다이나믹 워크플로우", "딥리서치(Deep Research)", "울트라코드(Ultra Code)", "서브에이전트(Sub-Agent)"]
 status: active
 ---
 # 클로드 코드 Dynamic Workflow 기능 비교 총정리!
@@ -30,6 +32,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-자동화]] · [[_topic-클로드코드]] · [[_topic-AI에이전트]]
+- 핵심 개념: [[_concept-workflow-automation|워크플로우 자동화]] · [[_concept-딥리서치|딥리서치]] · [[_concept-codex|코덱스]] · [[_concept-sub-agent|서브 에이전트]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=9fx2_1aTzq8&t=0) 클로드 코드에 다이나믹

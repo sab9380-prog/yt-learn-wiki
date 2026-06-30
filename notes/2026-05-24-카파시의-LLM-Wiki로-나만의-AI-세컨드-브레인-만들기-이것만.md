@@ -6,6 +6,8 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-24
 category: Picks전략
+tags: ["주제/위키", "개념/위키/llm-wiki", "개념/목적성-있는-수집", "주제/컨텍스트관리", "개념/컨텍스트관리/context-rot", "개념/인젝스트-프로세스"]
+key_concepts: ["LLM 위키", "목적성 있는 수집", "골드 인 골드 아웃", "인젝스트 프로세스"]
 status: active
 ---
 # 카파시의 LLM Wiki로 나만의 AI 세컨드 브레인 만들기, 이것만 보세요— 클로드 코드 × 옵시디언 × Graphify
@@ -30,6 +32,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-Picks전략]]
+- 주제: [[_topic-위키]] · [[_topic-컨텍스트관리]]
+- 핵심 개념: [[_concept-llm-wiki|LLM 위키]] · [[_concept-목적성-있는-수집|목적성 있는 수집]] · [[_concept-context-rot|컨텍스트 부패]] · [[_concept-인젝스트-프로세스|인젝스트 프로세스]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=cNlvrU-KcRg&t=0) 안녕하세요. 브레인 트리니티의
