@@ -164,7 +164,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,6 +181,8 @@
   },
   "active": "58f664466835d825",
   "lastOpenFiles": [
+    "notes/2026-06-25-왜-스킬이-졌을까-feat-agent-md-의-비밀.md",
+    "INDEX.md",
     "notes/_category-PICKS, 일반.md",
     "notes/_category-PICKS, 웹소설, 일반.md",
     "notes/2026-06-29-클로드-코드와-코덱스-업데이트-빠르게-살펴보기.md",
@@ -190,8 +193,6 @@
     "notes/2026-06-27-AI-세팅-1등-비법-뉴욕-해커톤-8시간-우승자의-비밀.md",
     "notes/2026-06-26-100만-토큰시대-앤트로픽이-알려준-클로드코드-컨텍스트-관리법.md",
     "notes/2026-06-25-진짜는-에이전트가-아니라-스킬-이었다.md",
-    "notes/2026-06-25-왜-스킬이-졌을까-feat-agent-md-의-비밀.md",
-    "INDEX.md",
     "notes/_category-웹 개발.md",
     "notes/_category-META.md",
     "notes/_category-Picks전략.md",
