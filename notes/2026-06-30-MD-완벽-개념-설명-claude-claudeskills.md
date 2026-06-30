@@ -1,0 +1,347 @@
+---
+title: "클로드 초보를 위한 스킬 | MD 완벽 개념 설명 #claude #claudeskills #claudecode"
+source_url: https://youtube.com/watch?v=Nl9ADfRF7Gs
+video_id: Nl9ADfRF7Gs
+source_type: youtube
+lang: ko
+analyzed: 2026-06-30
+category: Picks전략
+tags: ["주제/스킬", "개념/스킬/claude-skill", "개념/비개발자-필터링", "개념/스킬-크리에이터", "개념/I'm-Not-AI", "개념/클로드-비디오", "개념/UIux-프로맥스"]
+key_concepts: ["클로드 스킬", "비개발자 필터링", "스킬 크리에이터", "I'm Not AI (AI 문체 제거)", "클로드 비디오", "UIux 프로맥스"]
+status: active
+---
+# 클로드 초보를 위한 스킬 | MD 완벽 개념 설명 \#claude \#claudeskills \#claudecode
+
+## 🧠 이해 (Understand)
+- **Summary:** 코드를 모르는 1인 크리에이터/사업가 관점에서 Claude Code 클로드 스킬 6+1개를 실용성 기준으로 선별·판정한다. 스킬 크리에이터, I'm Not AI, 클로드 비디오, UIux 프로맥스, 슈퍼파워스, 마케팅 스킬스, PPTX/PDF 순으로 소개하며 각 스킬마다 '써야 한다 vs 굳이 불필요' 판정을 제공한다. 핵심 철학은 스킬을 많이 깔수록 좋은 게 아니라, 내 반복 업무에 딱 하나만 골라 써야 한다는 것이다. 개발자용(카파시, 코덱스, 리팩토링 등)은 비개발자에게 불필요하다고 명시한다.
+- **Core Message:** 스킬을 많이 아는 것보다, 내 반복 업무에 실제로 붙는 스킬 하나를 골라 쓰는 것이 진짜 시간을 줄이는 방법이다.
+> 중요한 건 도구 개수가 아니라 내 일이 줄어드느냐입니다.
+> 별이 15만, 20만이라고 좋은 것도 아니더라고요.
+> 지금 내가 제일 손 많이 가는 반복 업무 하나를 떠올리고, 거기에 붙는 스킬 딱 하나만 까세요.
+❗ 일부 스킬 저장소는 GitHub 별을 늘리려고 설치 스크립트에 자동으로 별을 누르는 코드를 몰래 심어둔 경우가 있다.
+❗ I'm Not AI 스킬도 AI 문체를 100% 제거하지 못하고 약 80% 수준이며, 나머지는 사람이 직접 검토해야 한다.
+❗ 마케팅 스킬스의 139개 패턴은 영어권 기준이라 한국 시장에는 맞지 않는 부분이 있어 별도 현지화가 필요하다.
+
+## 📚 핵심 용어
+- **클로드 스킬:** Claude Code에 추가 설치해 특정 기능을 확장하는 MD 기반 플러그인. / 스마트폰 앱처럼, 기본 Claude에 기능을 추가로 설치해 특정 일을 맡기는 도구 모음이다. / 일반 프롬프트는 매번 지시를 새로 써야 하지만, 스킬은 한 번 설치하면 반복 설정 없이 자동 적용된다.
+- **스킬 크리에이터:** Claude에게 맞춤 스킬 MD 파일을 자동으로 만들게 하는 메타 스킬. / 요리 레시피를 직접 쓰는 대신, 셰프에게 '내 입맛대로 레시피 만들어 줘'라고 시키는 것과 같다. / 기성 스킬은 남이 만든 레시피, 스킬 크리에이터는 내 입맛에 맞는 레시피를 AI가 직접 써주는 도구다.
+- **I'm Not AI:** AI가 생성한 글의 어색한 번역체 문체를 자연스러운 한국어 리듬으로 교체하는 스킬. / 번역기 돌린 글을 원어민이 자연스럽게 다듬어 주는 교정 편집자 역할과 같다. / 내용 수정 없이 문체만 바꾼다는 점에서, 전체를 다시 쓰는 재생성과 다르다.
+- **슈퍼파워스:** Claude가 즉시 실행하지 않고 목적·계획을 먼저 확인한 뒤 단계적으로 작업하도록 유도하는 스킬 묶음. / 일을 바로 시작하지 않고 '왜 하는지, 성공 기준이 뭔지' 먼저 묻는 시니어 직원 같다. / 일반 프롬프트는 지시하면 바로 실행하지만, 슈퍼파워스는 계획 단계를 강제로 거치게 한다.
+
+## 🚀 실행 (Execute)
+- [ ] 현재 가장 반복 중인 업무(고객 답장, 대본 초안, 랜딩 카피 등) 하나를 정하고, 해당 업무에 맞는 스킬 1개만 설치해 실제 업무에 적용해 보기 — ⏰ 이번 주 · ⚡ 30분~1시간
+  - 담당: 나
+  - 이유: 영상의 핵심 메시지 그대로 — 스킬을 여러 개 깔면 컨텍스트만 무거워지고, 하나를 제대로 쓰는 것이 실질적인 시간 절감으로 이어진다.
+- [ ] 맞춤 반복 업무가 있다면 스킬 크리에이터로 전용 스킬 직접 제작 (예: 내 말투로 고객 답장 쓰는 스킬) — ⏰ 2주 내 · ⚡ 1~2시간
+  - 담당: 나
+  - 이유: 기성 스킬은 개인화가 안 돼 있어 절반이 그림의 떡 — 스킬 크리에이터는 MD 파일 직접 작성 없이 Claude가 만들어 주므로 비개발자도 접근 가능하다.
+- 자료: Claude Code 공식 스킬 문서 — Anthropic 공식 사이트 (PPTX/PDF 스킬은 Anthropic 공식 제공이라고 영상에서 언급)
+- 자료: 영상 설명란 PPT 자료 — 클로드 비디오 GitHub 저장소 주소 포함 (영상 내 언급, 실제 주소는 PPT 확인 필요)
+- 자료: 클로드 비디오 설치 시 오류 발생 시 영상 댓글로 문의 (영상 제작자 직접 안내 언급)
+- Timeline: 1일차: 반복 업무 1개 선정 → 2~3일차: 해당 스킬 설치·테스트 → 1~2주차: 스킬 크리에이터로 맞춤 스킬 제작 및 실무 적용
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
+- 주제: [[_topic-스킬]]
+- 핵심 개념: [[_concept-claude-skill|클로드 스킬]] · [[_concept-비개발자-필터링|비개발자 필터링]] · [[_concept-스킬-크리에이터|스킬 크리에이터]] · [[_concept-I'm-Not-AI|I'm Not AI]] · [[_concept-클로드-비디오|클로드 비디오]] · [[_concept-UIux-프로맥스|UIux 프로맥스]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=0) 유튜브에 클로드 코드 필수 스킬 몇
+- [0:03](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=3) 개 영상들 많이 보셨죠? 저는 다
+- [0:07](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=7) 봤어요. 보고 그대로 다 깔아도
+- [0:10](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=10) 봤습니다. 그런데 그 목록 대부분
+- [0:14](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=14) 개발자의 용이거나 코드 리뷰,
+- [0:17](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=17) 리팩토링,
+- [0:18](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=18) 테스트, 저처럼 코드 안짜는 1인
+- [0:21](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=21) 사업가한텐 절반의 그림의 떡입니다.
+- [0:24](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=24) 그리고 별이 15만, 20만이라고
+- [0:28](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=28) 좋은 것도 아니더라고요. 요즘은
+- [0:31](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=31) 인스타처럼 변해서 별 늘리려고 설치
+- [0:34](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=34) 스크립트에 별 눌러 저를 몰래 심어
+- [0:37](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=37) 둔 것까지 있어요. 그래서 오늘은
+- [0:40](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=40) 코드 모르는 1인 크레이터인 제가
+- [0:42](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=42) 실제로 써보고 남긴 것만
+- [0:44](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=44) 추리겠습니다. 화려한 거 말고 진짜
+- [0:47](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=47) 제 2를 줄여 줄 수 있는 스킬 여섯
+- [0:49](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=49) 개랑 그리고 보너스로 한 개 더
+- [0:51](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=51) 가르쳐 드릴게요. 시작 전에 기준
+- [0:54](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=54) 하나만 깔고 가겠습니다. 저는 스킬을
+- [0:57](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=57) 많이 아는 거는 관심 없습니다. 내
+- [0:59](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=59) 반복 업무에 필요한 것만 봤습니다.
+- [1:01](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=61) 그리고 오늘 제가 말해 드리는 것도
+- [1:05](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=65) 모두 안 까셔도 됩니다.이 영상을
+- [1:07](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=67) 보시는 여러분이 선택을 해서 까시면
+- [1:09](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=69) 됩니다. 판정은 스킬마다 직접 해
+- [1:12](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=72) 드릴게요. 쓰는게 좋은지 안 써도
+- [1:15](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=75) 되는 건지 철저하게 비발자 기준으로
+- [1:18](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=78) 말해 드리겠습니다. 첫 번째 스킬
+- [1:21](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=81) 스킬 크리에이터입니다. 이건 다른
+- [1:23](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=83) 스킬을 만드는 스킬이라 가장 먼저
+- [1:26](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=86) 아시는게 좋습니다. 1인 사업은
+- [1:29](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=89) 똑같은 일을 매주 반복을 하는게
+- [1:31](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=91) 일상이죠. 고객 답장, 채널마다 글
+- [1:34](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=94) 고치기, 대본 포맷. 그런데 이건
+- [1:37](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=97) 개인화 영역이라 딱 맞는 기성 스킬이
+- [1:40](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=100) 없습니다. 스킬 크리에이터한테 내
+- [1:42](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=102) 말투로 고객 답장 써 주는 스킬
+- [1:44](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=104) 만들어 줘 하면 MD 파일을 제가
+- [1:47](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=107) 직접 손을 안 대도 클로드가 만들어
+- [1:50](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=110) 줍니다. MD 테스트하고 패키징까지
+- [1:52](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=112) 해 줘요. 저는 이걸 픽셀 캐릭터
+- [1:54](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=114) 제어 하는 거랑 자비스 컨텍스트 같은
+- [1:57](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=117) 재전용 스킬을 만들어서 지금 사용하고
+- [2:00](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=120) 있어요. 제가 판정해 드릴게요.이
+- [2:02](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=122) 스킬은 무조건 쓰세요. 다른 거 하나
+- [2:04](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=124) 쓸 거라도 이건 무조건 쓰세요. 스킬
+- [2:06](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=126) 시작은 바로 이거라고 보시면 돼요.
+- [2:08](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=128) 두 번째 I'm not AI
+- [2:10](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=130) 스킬입니다. 한글에서 AIT를 빼주는
+- [2:13](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=133) 스킬입니다. 1인 크리에이터는 글을
+- [2:15](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=135) 많이 쓰죠. 데본 쓰고 쓰레드하고
+- [2:18](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=138) 블로그하고 카드 뉴스 클로드 초안을
+- [2:21](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=141) 만들 때 항상 씁니다. 그런데 읽어
+- [2:23](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=143) 보면 AIT가 너무나요. 어색한
+- [2:26](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=146) 번역체라서 그런 거 같아요. 이걸
+- [2:27](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=147) 쓰면 내용은 하나도 안 건드리고
+- [2:30](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=150) 문체랑 리듬만 자연스럽게 한국어로
+- [2:33](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=153) 바꿔 줍니다. 의미는 그대로 AI
+- [2:35](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=155) 지문만 지웁니다. 저는 자동화로 위로
+- [2:38](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=158) 채널을 같이 운영하고 있거든요. 그
+- [2:40](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=160) 위로 채널 대본을 만들 때 이거는
+- [2:42](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=162) 항상 씁니다. 단 중요한 거는
+- [2:44](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=164) 100%까지는 안 된다고 생각하시면
+- [2:46](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=166) 됩니다. 80% 정도 막히고 나머지는
+- [2:48](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=168) 제가 한 번 더 대본을 보고 검터해
+- [2:51](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=171) 주시면 돼요. 제가 이걸 판정해
+- [2:53](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=173) 드리겠습니다. 글을 많이 쓰시면
+- [2:55](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=175) 쓰셔도 됩니다. 아주 좋습니다.
+- [2:57](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=177) 하지만 글을 많이 안 쓰신다면 안
+- [3:00](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=180) 쓰셔도 됩니다. 설치하는 시간 또
+- [3:02](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=182) 아깝습니다. 세 번째 클로드 비디오
+- [3:05](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=185) 스킬입니다. 클로드가 유튜브 영상을
+- [3:08](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=188) 진짜로 보게 해 주는 스킬입니다.
+- [3:10](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=190) 보통적으로 유튜브에게 링크를 갖다
+- [3:12](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=192) 주면 유튜브는 항상 말을 합니다.
+- [3:14](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=194) 자기는 영상을 못 본다. 그러니
+- [3:17](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=197) 스크립트를 달라고 합니다. 스킬을
+- [3:19](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=199) 깔면 영상을 받아서 프레임을 뽑고
+- [3:22](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=202) 자막 추출하고 클로드에게 화면을
+- [3:25](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=205) 분석시킵니다.
+- [3:27](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=207) 저는 경쟁 채널 분석할 때도
+- [3:29](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=209) 씁니다.이 사람 첫 10초는 어떻게
+- [3:32](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=212) 시작했는지, 썸네일이랑 도입을 어떻게
+- [3:35](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=215) 이었는지 이런 걸 화면 단위로
+- [3:37](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=217) 봅니다. 벤치마킹 질이 완전히
+- [3:40](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=220) 달라집니다. 판정해 드릴게요. 저
+- [3:42](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=222) 같이 유튜브를 하신다면 무조건
+- [3:45](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=225) 쓰시는게 좋은 겁니다. 하지만 글을
+- [3:47](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=227) 많이 쓰신다면 굳이 안 깔아 보셔도
+- [3:49](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=229) 됩니다.네 번째 UIux
+- [3:52](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=232) 프로맥스입니다. 디자인 결정을 대신
+- [3:55](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=235) 내려주는 스킬입니다. 1인 사업은
+- [3:57](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=237) 결국 랜딩 페이지, 홈페이지를 직접
+- [4:00](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=240) 만들어야 합니다. 그런데 코드로 그냥
+- [4:03](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=243) 만들면 AIT가 많이 나요. 흔하게
+- [4:06](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=246) 보라 그라데이션과 뻔한 레이아웃으로
+- [4:09](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=249) 만들어 줍니다.이 스킬을 내 업종만
+- [4:11](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=251) 넣으면 어울리는 스타일, 색, 폰트,
+- [4:15](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=255) 심지어 피해야 할 패턴까지 가르쳐
+- [4:17](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=257) 줘요. 디자이너가 없이 디자인
+- [4:19](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=259) 시스템을 쓰는 셈입니다. 저는 지금
+- [4:21](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=261) 아이 스토어에 차림 랜딩 만들 때
+- [4:24](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=264) 이걸 톤을 잡습니다.이 스킬도 판정해
+- [4:27](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=267) 드리겠습니다. 페이지를 직접
+- [4:29](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=269) 만드신다면 쓰셔도 좋습니다. 하지만
+- [4:31](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=271) 외주를 맡기시는 것도 나쁘지는
+- [4:33](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=273) 않습니다. 금액적으로 비싸기는 하지만
+- [4:37](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=277) 다섯 번째 슈퍼파워스입니다. 스킬
+- [4:39](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=279) 여러 개가든 플러그인인데 핵심은
+- [4:43](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=283) 클로드가 시니어처럼 순서대로 일을
+- [4:46](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=286) 하게 만드는 겁니다. 보통 뭐 만들어
+- [4:48](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=288) 달라 하면 바로 코드부터 짜다가
+- [4:51](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=291) 이상한 짓을 하죠. 슈퍼파워스는 먼저
+- [4:54](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=294) 멈춰서 누가 쓸 건지, 성공 기준은
+- [4:58](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=298) 어떻게 할 건지를 먼저 묻고 계획부터
+- [5:01](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=301) 세어 줍니다. 저는이 안에서 딱 두
+- [5:03](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=303) 개만 씁니다. 브레인스토밍 만들기
+- [5:06](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=306) 전에 생각 정리를 한번 합니다. 서브
+- [5:09](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=309) 에이전트 큰 일을 나눠서 실행을
+- [5:12](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=312) 하죠. 새 자동화 하나 도구를 만들
+- [5:14](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=314) 때 헛수고를 확 줄어 줍니다. 단,
+- [5:18](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=318) 절차가 많아서 간단한 일엔 조금
+- [5:20](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=320) 무거워요.이 스킬도 판정해 드릴게요.
+- [5:23](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=323) 뭔가 만드는 사람이면 써도 좋습니다.
+- [5:26](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=326) 아주 좋습니다. 하지만 컨텐츠 제작을
+- [5:29](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=329) 한다. 굳이 안 쓰셔도 좋은 거
+- [5:31](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=331) 같습니다. 쓸 리가 없어요. 마지막
+- [5:33](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=333) 여섯 번째입니다. 마케팅
+- [5:35](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=335) 스킬스입니다. 검증된 마케팅 패턴
+- [5:38](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=338) 139개가
+- [5:39](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=339) 라이브러리로 들어가 있습니다. 1인
+- [5:42](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=342) 사업은 카피, 랜딩, 이메일 광고를
+- [5:46](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=346) 혼자 다 해야 하죠. 처음에 뭘
+- [5:47](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=347) 어디서부터 할지 감이 진짜 안 와요.
+- [5:50](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=350) 먼저 프로덕트 마케팅에 내 제품이랑
+- [5:53](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=353) 타겟을 넣어 두면 다른 모든 마케팅
+- [5:56](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=356) 스킬이 그 맥락에 기억을 하고 적용을
+- [5:59](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=359) 해 줘요. 매번 내 고객은 이런
+- [6:02](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=362) 사람이다이라고 다시 설명할 필요가
+- [6:05](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=365) 없어지는 거죠. 저는 사업화를 할 때
+- [6:07](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=367) 그러니까 랜딩에서 이메일을 받는
+- [6:10](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=370) 구조를 짤 때 사용합니다. 단점은
+- [6:12](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=372) 영어권 기준이라 한국에는 안 맞는
+- [6:15](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=375) 부분도 있습니다. 그러니까 골격만
+- [6:18](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=378) 받고 직접 한국식으로 곤쳐야 합니다.
+- [6:21](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=381) 이것도 판정해 드리겠습니다. 내가 내
+- [6:23](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=383) 상품을 팔고 있다 그러면 무조건
+- [6:26](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=386) 쓰세요. 단, 한국식으로 맞추는 건
+- [6:29](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=389) 직접 하셔야 합니다. 마지막 진짜
+- [6:32](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=392) 마지막 보너스입니다. PPTX랑
+- [6:35](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=395) PDF 스킬입니다. 이건 엔트로픽의
+- [6:38](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=398) 공식입니다.이 내용은 슬라이드를
+- [6:40](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=400) 만들어져 하면 표지, 목차, 본문까지
+- [6:44](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=404) 만들어 줍니다. 저는 영상 슬라이드나
+- [6:47](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=407) 가이드 자료를 이걸로 뽑습니다. 발표
+- [6:49](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=409) 자료 손으로 만들기 싫으신 분은
+- [6:52](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=412) 땅입니다. 반대로 비발자는 굳이 안
+- [6:56](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=416) 깔아도 되는 건 솔직하게 짚고
+- [6:58](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=418) 가겠습니다. 유튜브에 자주 나오는
+- [7:01](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=421) 카파시 가이드라인스
+- [7:04](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=424) anything 그릴미 코덱스 리뷰셜
+- [7:08](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=428) 리액트 전부 코드 짜는 사람을 위한
+- [7:11](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=431) 겁니다. 좋은 스킬입니다. 그런데
+- [7:15](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=435) 우리 일엔 안 붙어요.
+- [7:17](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=437) 그리고 브라우저나 에이전트 메모리
+- [7:20](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=440) 같은 건 사실 크롬 연결이나 노션
+- [7:25](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=445) 옵시디언으로 이미 하던 일입니다.
+- [7:28](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=448) 똑같은 걸 중복으로 깔 필요가 없다고
+- [7:30](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=450) 생각해요. 정리할게요. 오늘 여섯
+- [7:33](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=453) 개의 보너스까지 받지만 다 깔지
+- [7:37](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=457) 마세요. 저도 그래 봤는데 컨택트만
+- [7:40](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=460) 무거워집니다. 지금 내가 제일 손많이
+- [7:43](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=463) 가는 반복 업무 하나를 떠올리고
+- [7:47](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=467) 거기에 붙는 스킬 딱 하나만 까세요.
+- [7:50](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=470) 글 많이 쓰면 I'm not AI.
+- [7:53](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=473) 영상 화면 클로드 비디오, 페이지를
+- [7:55](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=475) 만든다면 UIX 프로맥스 딱 맞는게
+- [7:59](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=479) 없으면 스킬 크리에이터로 직접 만드는
+- [8:01](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=481) 것도 나쁘지 않다고 생각합니다.
+- [8:03](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=483) 중요한 건 도구 개수가 아니라 내일에
+- [8:07](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=487) 줄어드느냐입니다. 그렇게 줄어들린
+- [8:09](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=489) 시간에 진짜 내 사업을 고민할 수
+- [8:12](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=492) 있는 겁니다. 오늘 본 것 중에
+- [8:14](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=494) 하나를 골라서 깔아보고 맡기시면 댓글
+- [8:17](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=497) 주세요. 이제 스킬에 대해 설명을 해
+- [8:20](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=500) 드렸으니 참고해 주세요. 유튜브에
+- [8:23](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=503) 클로드 코드 필수 스킬 몇 개 영상들
+- [8:27](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=507) 많이 보셨죠? 저는 다 봤습니다.
+- [8:31](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=511) 저는 다 봤어요. 보고 그대로 다
+- [8:34](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=514) 깔아도 봤습니다. 말고 진짜 제을
+- [8:38](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=518) 줄여 줄 수 있는 스킬 여섯 개랑
+- [8:41](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=521) 그리고 보너스로 한 개 더 가르쳐
+- [8:43](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=523) 드릴게요.
+- [8:46](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=526) 저는 스킬을 많이 아는 거는
+- [8:50](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=530) 내 반복 업무에 필요하니라고 좋은
+- [8:53](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=533) 것도 아니더라고요.
+- [8:55](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=535) 요즘은 있습니다.
+- [8:59](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=539) 별 눌러줘.
+- [9:02](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=542) 별눌러 저를 몰래 심어둔 것
+- [9:05](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=545) 있어요. 별 눌러 저를는 여러분이
+- [9:09](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=549) 파악하이
+- [9:11](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=551) 영상을 보시는 여러분이 선택을 해서
+- [9:14](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=554) 까시면 됩니다.
+- [9:16](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=556) 말해 드리겠습니다.
+- [9:21](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=561) 이건 다른 스킬을 만드는 스킬이라
+- [9:24](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=564) 가장 먼저 아시 고객 답장 채널마다
+- [9:28](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=568) 글 고치기대
+- [9:32](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=572) 내 말투로 고객 답장 써 주는 스킬
+- [9:35](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=575) 만들어 줘 하면 MD 파일을 직접 안
+- [9:38](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=578) 건드려도
+- [9:40](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=580) 아니지
+- [9:44](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=584) MD더라도 얘가 만들어 줍니다.
+- [9:48](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=588) 테스트하고 패키징까지 해 줘요.
+- [9:55](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=595) 스킬을 깔 하지만이 스킬을 깔고 나면
+- [9:58](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=598) 유튜브도 같이 시청을 해 줍니다.
+- [10:03](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=603) 하지만 깔 하지만이 스킬을 깔고 나면
+- [10:06](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=606) 유튜브 하지만이 스킬을 깔고 나면
+- [10:10](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=610) 클로드도 같이
+- [10:12](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=612) 하지만이 스킬을 깔고 나면 클로드도
+- [10:14](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=614) 유튜브를 시청해 줍니다.
+- [10:18](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=618) 그리고음이
+- [10:24](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=624) 스크린
+- [10:27](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=627) 클로드에게 화면을 분석시킵니다.
+- [10:30](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=630) 저는 경쟁 채널 분석할 때도
+- [10:32](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=632) 씁니다.이
+- [10:35](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=635) 사람 첫 10초는 어떻게 시작했는 킹
+- [10:37](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=637) 질이 완전히 달라집니다.
+- [10:40](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=640) 판정해 드릴게요.
+- [10:43](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=643) 유튜브를 하면 무조건 쓰셔야 합니다.
+- [10:46](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=646) 판정해 드릴게요. 저 같이 유튜브를
+- [10:49](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=649) 하신다면 무조건 쓰시는게 좋은
+- [10:52](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=652) 겁니다.
+- [10:54](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=654) 굳이 안 깔아 보셔도 됩니다.
+- [11:00](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=660) 디자인 결정을 대신내 랜딩 페이지,
+- [11:03](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=663) 홈페이지를 직접 만들어야 합니다.
+- [11:05](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=665) 그냥 만들면 AIT가 많이 나요.
+- [11:10](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=670) 흔하게 보라
+- [11:12](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=672) 흔하게 보라색 흔하게 보라
+- [11:15](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=675) 그라데이션과 뻔한이
+- [11:18](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=678) 스킬은 내 업종만 넣으면 어울리는
+- [11:21](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=681) 스타일색
+- [11:24](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=684) 업종만 넣으면 쓰는 셈입니다.
+- [11:28](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=688) 저는 지금 아 저는 지금 아웹
+- [11:34](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=694) 저는 지금 아웹 스토어 어 저는 아웹
+- [11:39](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=699) 아임 저는 지금 아임웹 스토어에
+- [11:47](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=707) 저는 지금 아인 림 랜딩
+- [11:50](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=710) 저는 아인 스토어랑 차림을 잡습니다.
+- [11:56](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=716) 만든
+- [11:58](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=718) 페이지를 직접 만드신다면 쓰셔도
+- [12:00](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=720) 좋습니다.
+- [12:02](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=722) 하지만 외주를 맡기시는 것도 나쁘지는
+- [12:05](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=725) 않습니다.
+- [12:09](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=729) 클로드 비디오를 설치를 할 때 코드에
+- [12:13](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=733) 들어가서 클로드 CLI라는 것을
+- [12:15](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=735) 열고이 플러그인을 등록을 하는 방법이
+- [12:19](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=739) 한 가지가 있고 그리고이 방법은 되는
+- [12:23](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=743) 분이 있고 안 되는 분도 있었습니다.
+- [12:26](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=746) 참고해 주세요. 제일 간단한 방법은
+- [12:29](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=749) 설정에 가서 저희 확장 프로그램
+- [12:32](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=752) 들어가는 거 있죠? 확장 프로그램
+- [12:34](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=754) 들어간 다음에 확장 프로그램에
+- [12:36](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=756) 들어와서 플러그인 플러그인에
+- [12:39](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=759) 플러그인에 들어갑니다. 여기 플러스
+- [12:42](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=762) 버튼이 보이시죠?이
+- [12:44](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=764) 플러스 버튼을 누르고
+- [12:47](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=767) 저장소 추가를 합니다. 기터브에
+- [12:49](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=769) 기터브에 있는 거를 가지고 오는
+- [12:51](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=771) 거죠. 그냥 그리고 주소 치는이
+- [12:55](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=775) 주소를 칩니다.이 주소는 제가 또
+- [12:57](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=777) PPT에 같이 들어가 있습니다.
+- [13:00](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=780) 쳐서 엔터를 쳤을 경우에
+- [13:04](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=784) 클로드 비디오가 들어가시는 분이
+- [13:06](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=786) 있는데 간혹 가다 안 되시는 분들이
+- [13:09](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=789) 있더라고요. 간혹 가다가 안 되시면
+- [13:11](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=791) 댓글을 주세요. 다른 방법으로 설치
+- [13:13](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=793) 방법을 가르쳐 드리겠습니다. 설치가
+- [13:16](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=796) 어려운 부분이 조금 있습니다. 클로드
+- [13:18](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=798) 비디오 같은 경우가 비개발자인
+- [13:21](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=801) 우리들에게 제일 설치가 제일 설치하기
+- [13:25](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=805) 어려운 부분이 조금 있어요. 천천히
+- [13:27](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=807) 보시고 천천히 보시고 따라해 보세요.
+- [13:30](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=810) 설치하실 수 있습니다. 그리고 제가
+- [13:32](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=812) 이렇게 마지막으로이 사무실이라는 이런
+- [13:36](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=816) 컨셉으로 클로드를 언 제작을 하고
+- [13:39](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=819) 있거든요. 저희 서브 채널도 같이
+- [13:41](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=821) 이렇게 나오고 할 일도 리스트로
+- [13:44](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=824) 나오고 그리고 언제 지금은 일이
+- [13:46](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=826) 없어서 그냥 걸어서 다니는 캐릭터들은
+- [13:50](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=830) 일이 없는 겁니다. 앉아서 컴퓨터를
+- [13:52](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=832) 하고 있는 애들은 제가 일을 시켰는게
+- [13:55](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=835) 있어 가지고 업무를 하고 있는 거죠.
+- [13:57](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=837) 이렇게 여러 가지 방법으로 재미있게
+- [13:59](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=839) 클로드를 사용할 수 있게 알려
+- [14:01](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=841) 드리겠습니다. 그리고 구독해 주시면
+- [14:05](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=845) 비개발자인 여러분에게 시과 인력을
+- [14:08](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=848) 줄일 수 있도록 도와드리겠습니다.
+- [14:10](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=850) 시청해 주셔서 감사합니다.
+- [14:15](https://youtube.com/watch?v=Nl9ADfRF7Gs&t=855) 유튜브에 클로드
