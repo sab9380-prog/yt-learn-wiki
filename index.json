@@ -2793,5 +2793,48 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-01-Meta에서-배운-실전-테크닉-AI가-길-잃지-않는-코드베이스-토큰.md",
+    "title": "Meta에서 배운 실전 테크닉 - AI가 길 잃지 않는 코드베이스 & 토큰 비용 최적화",
+    "category": "일반학습",
+    "date": "2026-07-01",
+    "core_message": "에이전트가 진짜 일을 하게 하려면 claude.md(지침)보다 코드베이스 지형(AI 레디 코드베이스)과 토큰 비용 구조를 먼저 정비해야 한다.",
+    "topics": [
+      "스킬",
+      "컨텍스트관리"
+    ],
+    "concepts": [
+      {
+        "id": "AI-레디-코드베이스",
+        "label": "AI 레디 코드베이스",
+        "topic": null
+      },
+      {
+        "id": "카토그래피",
+        "label": "카토그래피",
+        "topic": null
+      },
+      {
+        "id": "코드베이스-새니티",
+        "label": "코드베이스 새니티",
+        "topic": null
+      },
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "프롬프트-캐시",
+        "label": "프롬프트 캐시",
+        "topic": null
+      },
+      {
+        "id": "token-optimization",
+        "label": "토큰 최적화",
+        "topic": "컨텍스트관리"
+      }
+    ]
   }
 ]
