@@ -1,0 +1,626 @@
+---
+title: "https://youtube.com/watch?v=Xe6uonOPX4A"
+source_url: https://youtube.com/watch?v=Xe6uonOPX4A
+video_id: Xe6uonOPX4A
+source_type: youtube
+lang: ko
+analyzed: 2026-07-01
+category: Picks전략
+tags: ["개념/이미지-우선-디자인-워크플로우", "개념/GPT-이미지-2.0", "개념/imagegen-frontend-스킬", "개념/에셋화", "주제/바이브코딩", "개념/바이브코딩/vibe-coding", "개념/섹션별-이미지-생성"]
+key_concepts: ["이미지 우선 디자인 워크플로우", "GPT 이미지 2.0", "imagegen-frontend 스킬", "에셋화(Asset 분리)", "바이브 코딩", "섹션별 이미지 생성"]
+status: active
+---
+# https://youtube.com/watch?v=Xe6uonOPX4A
+
+## 🧠 이해 (Understand)
+- **Summary:** 코덱스 데스크탑 앱과 GPT 이미지 2.0을 활용해 웹사이트 시안 이미지를 먼저 생성한 뒤, 이를 레퍼런스로 프론트엔드 코드를 구현하는 새로운 바이브 코딩 워크플로우를 소개한다. 핵심은 이미지 생성 → 에셋 분리 → 코드 구현 → 애니메이션 추가 → 호스팅 배포의 5단계 흐름이다. 시안 이미지 생성 시 레이아웃 수치를 픽셀 단위로 명시하고, imagegen-frontend 스킬을 활용하면 AI 슬롭 없는 고품질 디자인을 얻을 수 있다. 구현 단계에서는 UI 요소와 배경 이미지 에셋을 분리하는 작업이 품질을 결정하며, 주석 달기 기능으로 세부 수정이 가능하다. 최종 결과물은 Hostinger를 통해 커스텀 도메인으로 배포된다.
+- **Core Message:** 바이브 코딩으로 평범한 결과물이 나올 때는 이미지 시안을 먼저 생성하고 레퍼런스로 삼아 코드를 구현하면, 창의적이고 완성도 높은 웹사이트를 처음부터 배포까지 만들 수 있다.
+> 처음부터 코드로 생성하면 결과물이 다소 평범해지거나 우리의 의도와 전혀 다른 디자인이 생성되어 아까운 토큰과 시간을 낭비하기도 합니다.
+> 조잡한 AI 슬롭 같은 느낌은 다 버리고 웹페이지를 한 섹션당 한 장에 가로 이미지로 정교하게 나눠서 세련된 실무용 디자인을 뽑아 준다는 게 핵심입니다.
+> 가장 마음에 드는 섹션들만 선별해서 조립하는 방식으로 시각적 탐색을 거치면 훨씬 완성도 높은 결과물을 얻으실 수 있겠습니다.
+❗ GPT 이미지 2.0에게 단순히 '웹사이트 이미지를 만들어 달라'고 하면 데스크탑이 아닌 태블릿 화면처럼 UI 요소가 전체적으로 크게 생성되는 경향이 있다.
+❗ 코덱스에서 생성한 이미지는 코드 파일과 달리 로컬 폴더에 자동 저장되지 않아 별도로 수동 저장해야 한다.
+❗ Hostinger 프리미엄 플랜은 12개월 이상 구독 시 첫 1년간 커스텀 도메인을 무료로 제공한다.
+
+## 📚 핵심 용어
+- **imagegen-frontend 스킬:** 코덱스에서 고품질 웹사이트 시안 이미지를 섹션별로 정교하게 생성하도록 안내하는 업무 매뉴얼형 플러그인. / 요리 레시피처럼, AI에게 '웹디자인을 이렇게 만들어라'는 정해진 기준표를 쥐여주는 것이다. / 일반 프롬프트는 AI가 자유 재량으로 결과물을 내지만, 스킬은 출력 형식·품질 기준을 사전에 고정해 AI 슬롭을 방지한다.
+- **에셋화(Asset 분리):** 시안 이미지에서 UI 요소(텍스트·버튼)를 제거하고 배경 이미지만 순수하게 추출하는 작업. / 사진 위에 붙어있던 스티커를 떼어내고 깨끗한 배경 사진만 남기는 것과 같다. / 시안 이미지를 그대로 쓰면 텍스트가 이미지로 고정되지만, 에셋화 후에는 텍스트를 코드로 자유롭게 수정할 수 있다.
+- **바이브 코딩:** AI에게 자연어로 요청해 코드를 자동 생성하는 방식의 개발 접근법. / 설계도 없이 말로만 '거실을 넓게 해줘'라고 하면 인테리어 업자가 알아서 시공하는 것과 같다. / 전통 코딩은 개발자가 한 줄씩 작성하지만, 바이브 코딩은 의도를 설명하면 AI가 코드를 생성해 속도가 빠른 반면 디자인 품질은 평범해질 수 있다.
+- **AI 슬롭:** AI가 생성한 결과물이 조잡하고 범용적이어서 실무에 쓰기 어려운 저품질 산출물. / 누가 봐도 'AI가 만든 것 같은' 어색하고 뻔한 결과물로, 마트 진열대의 무채색 PB 상품 같은 느낌이다. / AI 슬롭은 프롬프트 없이 빠르게 생성된 범용 결과물이고, 스킬+상세 프롬프트를 쓰면 실무용 퀄리티의 결과물이 나온다.
+
+## 🚀 실행 (Execute)
+- [ ] imagegen-frontend 스킬을 코덱스에 설치하고, 자사 브랜드 또는 테스트 프로젝트용 웹사이트 시안 이미지를 섹션별로 생성해본다. — ⏰ 이번 주 · ⚡ 2~3시간 (스킬 설치 30분 + 시안 생성 반복 실험 1~2시간)
+  - 담당: 나
+  - 이유: 스킬 없이 프롬프트만 쓰면 AI 슬롭 수준의 결과물이 나오므로, 스킬 설치가 품질의 핵심 전제조건이다.
+- [ ] 생성한 시안 이미지에서 에셋 분리(UI 제거 → 배경 이미지 추출) → 코드 구현 → 스크롤 애니메이션 추가의 3단계 워크플로우를 한 섹션에 적용해 실습한다. — ⏰ 2주 내 · ⚡ 하루 (섹션 3개 기준)
+  - 담당: 나
+  - 이유: 에셋 분리 없이 코드를 짜면 텍스트가 이미지에 박혀 수정이 불가능하므로, 이 단계가 완성도와 유지보수성을 결정한다.
+- [ ] 완성된 정적 웹사이트를 Hostinger 프리미엄 플랜에 배포하고 커스텀 도메인을 연결한다. — ⏰ 2주 내 · ⚡ 1~2시간 (파일 압축·업로드·도메인 설정 포함)
+  - 담당: 나
+  - 이유: 로컬에만 존재하는 결과물은 포트폴리오나 실제 서비스로 활용할 수 없으며, 12개월 플랜 선택 시 도메인 비용이 무료다.
+- 자료: 코덱스 데스크탑 앱 — codex.openai.com (공식 페이지, 존재 확인됨)
+- 자료: imagegen-frontend 스킬 레포지토리 — 영상 더보기란 링크 참조 (GitHub taste-skills 레포지토리, 확인 필요: 정확한 URL은 영상 더보기란에서 직접 확인)
+- 자료: Gemini(구 Bard) — gemini.google.com, 히어로 이미지를 Veo 모델로 루프 영상으로 변환 시 활용
+- 자료: Hostinger — hostinger.com, 정적 웹사이트 호스팅 및 커스텀 도메인 제공
+- Timeline: 1주차: 스킬 설치 및 시안 이미지 생성 실험(여러 베리에이션 비교) → 2주차: 에셋 분리·코드 구현·애니메이션 추가 → 2주차 말: Hostinger 배포 및 도메인 연결
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
+- 주제: [[_topic-바이브코딩]]
+- 핵심 개념: [[_concept-이미지-우선-디자인-워크플로우|이미지 우선 디자인 워크플로우]] · [[_concept-GPT-이미지-2.0|GPT 이미지 2.0]] · [[_concept-imagegen-frontend-스킬|imagegen-frontend 스킬]] · [[_concept-에셋화|에셋화]] · [[_concept-vibe-coding|바이브 코딩]] · [[_concept-섹션별-이미지-생성|섹션별 이미지 생성]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=Xe6uonOPX4A&t=0) GPT 이미지 2.0 모델 덕분에
+- [0:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=2) 이제 코덱스 데스크탑 앱에서도 이런
+- [0:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=4) 고품질의 UI를 이미지로 생성할 수
+- [0:06](https://youtube.com/watch?v=Xe6uonOPX4A&t=6) 있게 됐습니다. 이건 바이브 코딩으로
+- [0:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=8) 만든 코드 결과물이 아니라 비트맵
+- [0:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=10) 이미지 기반으로 뽑아낸 웹사이트
+- [0:12](https://youtube.com/watch?v=Xe6uonOPX4A&t=12) 시안입니다. 그리고이 이미지를 이렇게
+- [0:14](https://youtube.com/watch?v=Xe6uonOPX4A&t=14) 코드로 구현할 수도 있죠. 그런데
+- [0:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=16) 이렇게 이미지를 생성하고 코드로
+- [0:17](https://youtube.com/watch?v=Xe6uonOPX4A&t=17) 구현하는이 방식이 생각보다 꽤
+- [0:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=20) 유용합니다. 바이브 코딩은 실제로
+- [0:22](https://youtube.com/watch?v=Xe6uonOPX4A&t=22) 작동하는 화면이나 규격화된 컴포넌트를
+- [0:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=24) 빠르게 만드는데 강하지만 처음부터
+- [0:26](https://youtube.com/watch?v=Xe6uonOPX4A&t=26) 코드로 생성하면 결과물이 다소
+- [0:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=28) 평범해지거나 우리의 의도와 전혀 다른
+- [0:30](https://youtube.com/watch?v=Xe6uonOPX4A&t=30) 디자인이 생성되어 아까운 토큰과
+- [0:32](https://youtube.com/watch?v=Xe6uonOPX4A&t=32) 시간을 낭비하기도 합니다. 반면
+- [0:34](https://youtube.com/watch?v=Xe6uonOPX4A&t=34) 이미지 생성 방식은 전체적인 무드나
+- [0:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=37) 실험적인 레이아웃, 복잡한 디테일까지
+- [0:39](https://youtube.com/watch?v=Xe6uonOPX4A&t=39) 훨씬 더 자유롭게 탐색할 수 있고
+- [0:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=41) 같은 컨셉 안에서 여러 가지 시안을
+- [0:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=43) 빠르게 비교해 볼 수도 있습니다.
+- [0:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=45) 우리가 먼저 시안을 생성한 다음
+- [0:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=47) 원하는 방향을 선정하고이를 레퍼런스로
+- [0:49](https://youtube.com/watch?v=Xe6uonOPX4A&t=49) 하여 개발을 이어나갈 수 있는
+- [0:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=51) 것이죠. 그래서 이번 영상에서는
+- [0:52](https://youtube.com/watch?v=Xe6uonOPX4A&t=52) 코덱스 데스크탑 앱에서 스킬을 활용해
+- [0:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=55) 고품질의 웹사이트 시안을 생성하고
+- [0:57](https://youtube.com/watch?v=Xe6uonOPX4A&t=57) 시안을 코드로 구현하여 실제 동작하는
+- [0:59](https://youtube.com/watch?v=Xe6uonOPX4A&t=59) 웹사이트를 만들어 커스텀 도메인으로
+- [1:01](https://youtube.com/watch?v=Xe6uonOPX4A&t=61) 배포하는 과정까지 모두 단계별로 보여
+- [1:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=64) 드리겠습니다. 만약 여러분의 바이브
+- [1:06](https://youtube.com/watch?v=Xe6uonOPX4A&t=66) 코딩 결과물이 다소 평범하다고
+- [1:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=68) 느끼셨다면 또는 웹사이트를 처음부터
+- [1:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=70) 만들고 배포까지 하는 과정이
+- [1:11](https://youtube.com/watch?v=Xe6uonOPX4A&t=71) 막막하셨다면 이번 영상이 꽤 좋은
+- [1:14](https://youtube.com/watch?v=Xe6uonOPX4A&t=74) 대안이 될 수 있을 겁니다. 참고로
+- [1:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=76) 이번 영상에는 글로벌 웹 호스팅
+- [1:17](https://youtube.com/watch?v=Xe6uonOPX4A&t=77) 서비스, 호스팅어의 간접 광고가
+- [1:19](https://youtube.com/watch?v=Xe6uonOPX4A&t=79) 포함되어 있습니다. 이번 과정은 모두
+- [1:22](https://youtube.com/watch?v=Xe6uonOPX4A&t=82) 코덱스 데스크탑 앱에서 진행하기에
+- [1:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=84) 코덱스 데스크탑 앱을 설치하고
+- [1:26](https://youtube.com/watch?v=Xe6uonOPX4A&t=86) 로그인해 주시면 되겠습니다. 먼저
+- [1:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=88) 프로젝트 파일을 읽고 생성하고 수정할
+- [1:30](https://youtube.com/watch?v=Xe6uonOPX4A&t=90) 로컬 폴더를 하나 지정해 주겠습니다.
+- [1:33](https://youtube.com/watch?v=Xe6uonOPX4A&t=93) 프롬프트 입력창 아래에 프로젝트에서
+- [1:35](https://youtube.com/watch?v=Xe6uonOPX4A&t=95) 작업하기를 클릭하고 원하시는 폴더를
+- [1:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=97) 추가하면 됩니다. 저는 미리 만들어
+- [1:40](https://youtube.com/watch?v=Xe6uonOPX4A&t=100) 둔 실습용 폴더를 선택해서
+- [1:42](https://youtube.com/watch?v=Xe6uonOPX4A&t=102) 진행하겠습니다. 다음으로는 권한
+- [1:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=103) 설정을 해 줄 건데요. 현재는 기본
+- [1:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=105) 권한으로 설정되어 있는데 이것을 나
+- [1:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=107) 대신 승인으로 변경하겠습니다. 나
+- [1:49](https://youtube.com/watch?v=Xe6uonOPX4A&t=109) 대신 승인으로 설정해 두시면 아주
+- [1:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=111) 위험한 작업을 제외하고는 알아서
+- [1:53](https://youtube.com/watch?v=Xe6uonOPX4A&t=113) 승인하고 넘어가기 때문에 특정 명령을
+- [1:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=115) 실행할 때마다 일일이 권한을 허용할
+- [1:57](https://youtube.com/watch?v=Xe6uonOPX4A&t=117) 필요 없이 수월하게 작업하실 수
+- [1:59](https://youtube.com/watch?v=Xe6uonOPX4A&t=119) 있습니다. 그리고 모델의 인텔리전스
+- [2:01](https://youtube.com/watch?v=Xe6uonOPX4A&t=121) 성능은 작업의 [음악] 복잡도에
+- [2:03](https://youtube.com/watch?v=Xe6uonOPX4A&t=123) 따라서 높고 낮음을 선택하면 되는데
+- [2:05](https://youtube.com/watch?v=Xe6uonOPX4A&t=125) 우선은 중간으로 설정하겠습니다. 만약
+- [2:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=128) 작업 속도를 더 높이고 싶다면 속도
+- [2:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=130) 메뉴에서 조정이 가능한데 [음악]
+- [2:11](https://youtube.com/watch?v=Xe6uonOPX4A&t=131) 속도를 높이면 작업 속도가 1.5에
+- [2:13](https://youtube.com/watch?v=Xe6uonOPX4A&t=133) 빨라지는 대신 크레딧 소모량은 두
+- [2:15](https://youtube.com/watch?v=Xe6uonOPX4A&t=135) 배로 늘어납니다. [음악]
+- [2:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=136) 속도는 따로 조정하지 않고
+- [2:18](https://youtube.com/watch?v=Xe6uonOPX4A&t=138) 진행할게요. 참고로 제 요금제는
+- [2:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=140) 플러스 플랜인데 서비스를 처음부터
+- [2:23](https://youtube.com/watch?v=Xe6uonOPX4A&t=143) 끝까지 만들어야 하는 무거운 작업이
+- [2:25](https://youtube.com/watch?v=Xe6uonOPX4A&t=145) 아니라면 크레딧이 부족한 편은 아니니
+- [2:27](https://youtube.com/watch?v=Xe6uonOPX4A&t=147) 입문자분들에게 추천드리고요. 만약
+- [2:29](https://youtube.com/watch?v=Xe6uonOPX4A&t=149) 프로플랜을 사용하신다면 크레딧 걱정
+- [2:31](https://youtube.com/watch?v=Xe6uonOPX4A&t=151) 없이 아주 여유롭게 작업하실 수 있을
+- [2:33](https://youtube.com/watch?v=Xe6uonOPX4A&t=153) 겁니다. 그럼 이제 코덱스에서
+- [2:35](https://youtube.com/watch?v=Xe6uonOPX4A&t=155) 웹사이트 시안 이미지부터 생성해
+- [2:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=157) 보겠습니다. 사실 이번에 [음악]
+- [2:39](https://youtube.com/watch?v=Xe6uonOPX4A&t=159) 진행하는 전체 과정에서 가장 중요한
+- [2:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=161) 단계가 바로이 시한 이미지를 생성하는
+- [2:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=163) 단계입니다. 그리고이 단계에서
+- [2:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=165) 결과물의 퀄리티를 결정짓는 두 가지
+- [2:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=167) 중요한 요소가 있는데요. 첫 번째는
+- [2:49](https://youtube.com/watch?v=Xe6uonOPX4A&t=169) 목적에 따른 적절한 프롬프트를
+- [2:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=171) 입력하는 것이고 두 번째는 어떤
+- [2:53](https://youtube.com/watch?v=Xe6uonOPX4A&t=173) 스킬을 사용하느냐입니다. 그럼이 두
+- [2:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=175) 가지에 집중해서 과정을
+- [2:56](https://youtube.com/watch?v=Xe6uonOPX4A&t=176) 진행하겠습니다. 저는 미리 웹사이트
+- [2:58](https://youtube.com/watch?v=Xe6uonOPX4A&t=178) 시한 이미지 생성 프롬프트를 준비해
+- [3:00](https://youtube.com/watch?v=Xe6uonOPX4A&t=180) 두었는데요. 루메라는 가상의 프리미엄
+- [3:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=182) 클린 스킨 케어 브랜드 웹사이트의
+- [3:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=184) 랜딩 페이지를 생성하는
+- [3:06](https://youtube.com/watch?v=Xe6uonOPX4A&t=186) 프롬프트입니다.이 이 프롬프트에서
+- [3:07](https://youtube.com/watch?v=Xe6uonOPX4A&t=187) 가장 중요한 포인트는 레이아웃을
+- [3:09](https://youtube.com/watch?v=Xe6uonOPX4A&t=189) 이렇게 구체적으로 수치화해서 지정해
+- [3:11](https://youtube.com/watch?v=Xe6uonOPX4A&t=191) 주는 것입니다. GPT 이미지 2.0
+- [3:14](https://youtube.com/watch?v=Xe6uonOPX4A&t=194) 모델에게 단순히 웹사이트 이미지를
+- [3:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=196) 만들어 달라고 요청하면 데스크탑이
+- [3:18](https://youtube.com/watch?v=Xe6uonOPX4A&t=198) 아니라 태블릿 화면처럼 UI 요소나
+- [3:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=200) 이미지들이 전체적으로 다소 크게
+- [3:22](https://youtube.com/watch?v=Xe6uonOPX4A&t=202) 생성되는 경향이 있기 때문에 전체
+- [3:23](https://youtube.com/watch?v=Xe6uonOPX4A&t=203) 가로 너비와 콘텐츠가 담기는 컨테이너
+- [3:26](https://youtube.com/watch?v=Xe6uonOPX4A&t=206) 최대 너비 그리고 좌우 바깥 마진을
+- [3:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=208) 픽셀 단위로 명확하게 지정해
+- [3:30](https://youtube.com/watch?v=Xe6uonOPX4A&t=210) 주었습니다. 그리고 추가적인
+- [3:31](https://youtube.com/watch?v=Xe6uonOPX4A&t=211) 가드레일도 작성해 주었고요. [음악]
+- [3:33](https://youtube.com/watch?v=Xe6uonOPX4A&t=213) 반면에 섹션 구성은 총 아홉 개로
+- [3:35](https://youtube.com/watch?v=Xe6uonOPX4A&t=215) 나누되 너무 구체적으로 디테일하게
+- [3:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=217) 지시하지는 않았습니다. 그 이유는
+- [3:39](https://youtube.com/watch?v=Xe6uonOPX4A&t=219) 저희가 지금 바로 코드를 짜는게
+- [3:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=221) 아니라 이미지를 먼저 생성하는 것이기
+- [3:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=223) 때문입니다. GPT 이미지 모델이
+- [3:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=225) 조금 더 자유도를 가지고 창의적인
+- [3:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=227) 결과물을 만들어 내야 우리가 그
+- [3:48](https://youtube.com/watch?v=Xe6uonOPX4A&t=228) 안에서 다양한 시한을 보면서 시각적인
+- [3:50](https://youtube.com/watch?v=Xe6uonOPX4A&t=230) 탐색을 하기가 더 유리합니다. 그래서
+- [3:53](https://youtube.com/watch?v=Xe6uonOPX4A&t=233) 전체적인 구성만 느슨하게
+- [3:54](https://youtube.com/watch?v=Xe6uonOPX4A&t=234) 잡아줬습니다. [음악] 그리고
+- [3:56](https://youtube.com/watch?v=Xe6uonOPX4A&t=236) 스타일은 럭셔리, 미니멀, 보테니컬
+- [3:58](https://youtube.com/watch?v=Xe6uonOPX4A&t=238) 같은 방향과 컬러를 지정해 주었고
+- [4:00](https://youtube.com/watch?v=Xe6uonOPX4A&t=240) 금지 사항에는 좁은 모바일 화면 비율
+- [4:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=242) 금지, 과학의 큰 텍스트나 반복적이고
+- [4:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=244) 단순한 UI 금지 등의 가드레이를 더
+- [4:07](https://youtube.com/watch?v=Xe6uonOPX4A&t=247) 쳐 주었습니다. 그럼 이제이
+- [4:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=248) 프롬프트를 모두 복사해서 코덱스에서
+- [4:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=250) 웹사이트 이미지를 생성해 보겠습니다.
+- [4:13](https://youtube.com/watch?v=Xe6uonOPX4A&t=253) 프롬프트를 코덱스에 그대로 붙여 넣은
+- [4:15](https://youtube.com/watch?v=Xe6uonOPX4A&t=255) 뒤 추가로 아래 가이드를 바탕으로
+- [4:17](https://youtube.com/watch?v=Xe6uonOPX4A&t=257) 웹사이트 이미지를 생성해 줘라고
+- [4:18](https://youtube.com/watch?v=Xe6uonOPX4A&t=258) 작성하겠습니다. 그리고 여기서
+- [4:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=260) 강조드리고 싶은 부분이 스킬을
+- [4:22](https://youtube.com/watch?v=Xe6uonOPX4A&t=262) 사용하는 것인데 슬래시를 입력한 뒤
+- [4:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=264) 이미지젠 프론트 엔드 스킬을 검색해서
+- [4:27](https://youtube.com/watch?v=Xe6uonOPX4A&t=267) 선택해 주겠습니다.이 스킬은 높은
+- [4:29](https://youtube.com/watch?v=Xe6uonOPX4A&t=269) 품질의 웹사이트 시안 이미지를
+- [4:30](https://youtube.com/watch?v=Xe6uonOPX4A&t=270) 생성하도록 돕는 업무 매뉴얼 정도로
+- [4:33](https://youtube.com/watch?v=Xe6uonOPX4A&t=273) 생각하시면 되는데 조잡한 AI 슬롭
+- [4:35](https://youtube.com/watch?v=Xe6uonOPX4A&t=275) 같은 느낌은 다 버리고 웹페이지를 한
+- [4:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=277) 섹션당 한 장에 가로 이미지로
+- [4:39](https://youtube.com/watch?v=Xe6uonOPX4A&t=279) 정교하게 나눠서 세련된 실무용
+- [4:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=281) 디자인을 뽑아 준다는게 핵심입니다.이
+- [4:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=283) 스킬은 기터브의 테이스트 스킬
+- [4:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=285) 레포지토리에서 설치하실 수 있습니다.
+- [4:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=287) 링크는 더이란에 추가해 두었으니
+- [4:49](https://youtube.com/watch?v=Xe6uonOPX4A&t=289) 참고하시면 되겠고요. 설치 방법은
+- [4:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=291) 간단합니다.이 버튼을 클릭해서 기터브
+- [4:53](https://youtube.com/watch?v=Xe6uonOPX4A&t=293) 레포지토리 URL을 복수한 다음
+- [4:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=295) 코덱스 프롬프트 입력창에 URL을
+- [4:58](https://youtube.com/watch?v=Xe6uonOPX4A&t=298) 넣고 스킬 크리에이터를 사용해서이
+- [5:00](https://youtube.com/watch?v=Xe6uonOPX4A&t=300) 스킬을 설치해 주세요라고 입력하면
+- [5:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=302) 코덱스가 알아서 스킬을 설치하고
+- [5:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=304) 저장까지 완료해 줄 겁니다. 설치가
+- [5:07](https://youtube.com/watch?v=Xe6uonOPX4A&t=307) 다 되었다면 코덱스 앱을 한 번만
+- [5:09](https://youtube.com/watch?v=Xe6uonOPX4A&t=309) 재시작해 주면 되겠습니다. 그럼 다시
+- [5:11](https://youtube.com/watch?v=Xe6uonOPX4A&t=311) 돌아와서 이제이 프롬프트를 전송해
+- [5:13](https://youtube.com/watch?v=Xe6uonOPX4A&t=313) 주겠습니다. 그럼 이미지가 하나만
+- [5:15](https://youtube.com/watch?v=Xe6uonOPX4A&t=315) 생성되는 것이 아니라 우리가 입력한
+- [5:18](https://youtube.com/watch?v=Xe6uonOPX4A&t=318) 프롬프트에 따라 웹사이트를 구성하는
+- [5:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=320) 아홉 개의 섹션별 이미지를 순차적으로
+- [5:22](https://youtube.com/watch?v=Xe6uonOPX4A&t=322) 생성해 주기 시작합니다. 잠시
+- [5:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=324) 기다리니 각 섹션별 시안이 모두
+- [5:26](https://youtube.com/watch?v=Xe6uonOPX4A&t=326) 생성되었습니다. 생성된 결과를 자세히
+- [5:29](https://youtube.com/watch?v=Xe6uonOPX4A&t=329) 살펴보기 전에 이미지 저장부터
+- [5:31](https://youtube.com/watch?v=Xe6uonOPX4A&t=331) 하겠습니다. [음악] 코덱스에서 코드
+- [5:32](https://youtube.com/watch?v=Xe6uonOPX4A&t=332) 파일들은 로컬 폴더에 자동으로
+- [5:34](https://youtube.com/watch?v=Xe6uonOPX4A&t=334) 저장되지만 이런 생성 이미지들은
+- [5:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=336) 그렇지 않습니다. 이런 이미지들은
+- [5:38](https://youtube.com/watch?v=Xe6uonOPX4A&t=338) 나중에 실제 개발을 할 때 호스팅
+- [5:40](https://youtube.com/watch?v=Xe6uonOPX4A&t=340) 서비스에 올려서 불러와야 함으로 따로
+- [5:42](https://youtube.com/watch?v=Xe6uonOPX4A&t=342) 저장을 해 두셔야 합니다. 그래서
+- [5:44](https://youtube.com/watch?v=Xe6uonOPX4A&t=344) 생성한 이미지를 모든 로컬 폴더에
+- [5:46](https://youtube.com/watch?v=Xe6uonOPX4A&t=346) 저장하는 과정을 거쳐야 한다는 점
+- [5:48](https://youtube.com/watch?v=Xe6uonOPX4A&t=348) 말씀드립니다. 이미지가 모두 로컬
+- [5:50](https://youtube.com/watch?v=Xe6uonOPX4A&t=350) 폴더에 잘 저장되었고요. 하나씩
+- [5:52](https://youtube.com/watch?v=Xe6uonOPX4A&t=352) 확인해 보면 내비게이션만 따로
+- [5:54](https://youtube.com/watch?v=Xe6uonOPX4A&t=354) 생성되어 있는 이미지 히어로 섹션
+- [5:56](https://youtube.com/watch?v=Xe6uonOPX4A&t=356) 브랜드 철학, 프로덕트 컬렉션, 성분
+- [5:59](https://youtube.com/watch?v=Xe6uonOPX4A&t=359) 소개, 사용법 가이드, 소셜 프루프,
+- [6:01](https://youtube.com/watch?v=Xe6uonOPX4A&t=361) 뉴스레터, 그리고 푸터까지 섹션별로
+- [6:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=364) 잘 생성되어 있죠. 이것들은 모두
+- [6:05](https://youtube.com/watch?v=Xe6uonOPX4A&t=365) 코드가 아니라 비트맵 기반의 이미지로
+- [6:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=368) 생성된 결과물인데 퀄리티가 꽤
+- [6:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=370) 뛰어납니다. 특히 이런 사선으로
+- [6:12](https://youtube.com/watch?v=Xe6uonOPX4A&t=372) 크롭된 레이아웃이나 복잡하게 얽힌
+- [6:14](https://youtube.com/watch?v=Xe6uonOPX4A&t=374) 얇은 라인, 유니크하게 레이어드 된
+- [6:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=376) 디자인들은 바이브 코딩만으로는 구현해
+- [6:18](https://youtube.com/watch?v=Xe6uonOPX4A&t=378) 내기 어려운 실험적이고 창의적인
+- [6:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=380) 디자인들입니다. 그래서 저는 이런
+- [6:22](https://youtube.com/watch?v=Xe6uonOPX4A&t=382) 장점을 좀 더 잘 활용하는 작업
+- [6:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=384) 방식으로 동일한 프롬프트로 여러 번
+- [6:26](https://youtube.com/watch?v=Xe6uonOPX4A&t=386) 시안을 생성하는 걸 추천드립니다.
+- [6:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=388) 이건 동일한 프롬프트로 생성한
+- [6:29](https://youtube.com/watch?v=Xe6uonOPX4A&t=389) 결과물인데 일관된 토넷 모드가
+- [6:31](https://youtube.com/watch?v=Xe6uonOPX4A&t=391) 적용되어 있으면서도 레이아웃이나 배치
+- [6:33](https://youtube.com/watch?v=Xe6uonOPX4A&t=393) 등은 아까와는 다른 컨셉으로 생성되어
+- [6:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=396) 있죠. [음악] 우리는이 시한들을
+- [6:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=397) 베리에이션으로 활용해 볼 수
+- [6:39](https://youtube.com/watch?v=Xe6uonOPX4A&t=399) 있습니다. 이렇게 여러 개를 만들어
+- [6:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=401) 둔 다음 가장 마음에 드는 섹션들만
+- [6:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=403) 선별해서 조립하는 방식으로 시각적
+- [6:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=405) 탐색을 거치면 훨씬 완성도 높은
+- [6:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=407) 결과물을 얻으실 수 있겠습니다. 그럼
+- [6:50](https://youtube.com/watch?v=Xe6uonOPX4A&t=410) 다시 돌아와서 저는 가장 처음에
+- [6:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=411) 생성한 웹안 몇 가지를 가지고 프론트
+- [6:54](https://youtube.com/watch?v=Xe6uonOPX4A&t=414) 엔드 개발을 진행해 볼 건데요.
+- [6:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=415) 우선이 히어로 섹션부터 개발해
+- [6:57](https://youtube.com/watch?v=Xe6uonOPX4A&t=417) 보겠습니다.이 이 단계에서 가장
+- [6:59](https://youtube.com/watch?v=Xe6uonOPX4A&t=419) 중요한 것은 전체 시안 중에서 코드로
+- [7:01](https://youtube.com/watch?v=Xe6uonOPX4A&t=421) 구현해야 할 UI 부분과 순수
+- [7:03](https://youtube.com/watch?v=Xe6uonOPX4A&t=423) 이미지로 들어가야 할 이미지 SF
+- [7:05](https://youtube.com/watch?v=Xe6uonOPX4A&t=425) 부분을 명확하게 분리하는
+- [7:07](https://youtube.com/watch?v=Xe6uonOPX4A&t=427) 작업입니다.이 히어로 섹션을 보시면
+- [7:09](https://youtube.com/watch?v=Xe6uonOPX4A&t=429) 배경 전체에 통 이미지가 깔려 있고
+- [7:11](https://youtube.com/watch?v=Xe6uonOPX4A&t=431) 그 위로 내비게이션, 중앙의 텍스트
+- [7:13](https://youtube.com/watch?v=Xe6uonOPX4A&t=433) 로고 그리고 메인 커피, 그 아래에
+- [7:15](https://youtube.com/watch?v=Xe6uonOPX4A&t=435) CTA 버튼 등이 이미지 위로
+- [7:17](https://youtube.com/watch?v=Xe6uonOPX4A&t=437) 오버레이되어 있는 구조입니다. 여기서
+- [7:19](https://youtube.com/watch?v=Xe6uonOPX4A&t=439) 텍스트와 버튼들은 전부 코드로
+- [7:21](https://youtube.com/watch?v=Xe6uonOPX4A&t=441) 작성되어야 하기 때문에 우리는
+- [7:23](https://youtube.com/watch?v=Xe6uonOPX4A&t=443) 배경으로 쓸 깨끗한 원본 이미지
+- [7:25](https://youtube.com/watch?v=Xe6uonOPX4A&t=445) 에셋이 따로 필요합니다. 그래서
+- [7:27](https://youtube.com/watch?v=Xe6uonOPX4A&t=447) 히어로 섹션에 들어갈 원본 이미지
+- [7:29](https://youtube.com/watch?v=Xe6uonOPX4A&t=449) 에셋을 생성해 보겠습니다. 우선
+- [7:31](https://youtube.com/watch?v=Xe6uonOPX4A&t=451) 이미지를 복사하여 붙여 놓고
+- [7:32](https://youtube.com/watch?v=Xe6uonOPX4A&t=452) 프롬프트로 내가 생성한 이미지를
+- [7:34](https://youtube.com/watch?v=Xe6uonOPX4A&t=454) 웹사이트로 구현하기 위해 에세트화
+- [7:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=456) 작업이 필요해이 히어로 이미지 위에
+- [7:38](https://youtube.com/watch?v=Xe6uonOPX4A&t=458) 얹혀 있는 모든 UI 요소와 디자인
+- [7:40](https://youtube.com/watch?v=Xe6uonOPX4A&t=460) 요소를 제거하고 순수한 배경 이미지
+- [7:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=463) SS로 만들어 줘. 웹사이트 버전과
+- [7:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=465) 모바일 버전을 각각 하나씩 만들어
+- [7:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=467) 주되 모습과 일관성이 훼손되지 않고
+- [7:50](https://youtube.com/watch?v=Xe6uonOPX4A&t=470) 원본 그대로 유지되어야 해. 그리고
+- [7:52](https://youtube.com/watch?v=Xe6uonOPX4A&t=472) 추가로 이미지 생성 결과를 한 번 더
+- [7:54](https://youtube.com/watch?v=Xe6uonOPX4A&t=474) 정리해 주고 전송해 주겠습니다.
+- [7:58](https://youtube.com/watch?v=Xe6uonOPX4A&t=478) 결과물을 보면 불필요한 UI 요소들이
+- [8:01](https://youtube.com/watch?v=Xe6uonOPX4A&t=481) 말끔이 지워지고 딱 히어로 섹션
+- [8:03](https://youtube.com/watch?v=Xe6uonOPX4A&t=483) 배경으로 사용하기 좋은 이미지가
+- [8:05](https://youtube.com/watch?v=Xe6uonOPX4A&t=485) 웹용과 모바일용으로 각각 잘
+- [8:06](https://youtube.com/watch?v=Xe6uonOPX4A&t=486) 생성되었습니다. 이런 식으로
+- [8:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=488) 반응형까지 고려해서 이미지를 생성해
+- [8:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=490) 주면 되겠습니다. 이제 생성한 히어로
+- [8:12](https://youtube.com/watch?v=Xe6uonOPX4A&t=492) 섹션 이미지를 코드로 구현하겠습니다.
+- [8:15](https://youtube.com/watch?v=Xe6uonOPX4A&t=495) 프롬프트로이 히어로 이미지를 리액트와
+- [8:17](https://youtube.com/watch?v=Xe6uonOPX4A&t=497) 테일인드를 사용해서 코드로 구현해
+- [8:19](https://youtube.com/watch?v=Xe6uonOPX4A&t=499) 줘. 그리고 전체 너비와 컨테이너
+- [8:21](https://youtube.com/watch?v=Xe6uonOPX4A&t=501) 최대 너비 좌우 마진 값을 넣어주고
+- [8:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=504) [음악]
+- [8:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=504) 배경은 방금 만든 웹과 모바일 에셋
+- [8:27](https://youtube.com/watch?v=Xe6uonOPX4A&t=507) 이미지를 쓰고 UI와 [음악]
+- [8:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=508) 텍스트는 첨부한 원본 시안과 최대한
+- [8:31](https://youtube.com/watch?v=Xe6uonOPX4A&t=511) 동일하게 구현해라고 작성한 다음
+- [8:33](https://youtube.com/watch?v=Xe6uonOPX4A&t=513) 전송해 줍니다. 그럼 개발이 시작되고
+- [8:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=516) 잠시 기다리면 이렇게 내 컴퓨터
+- [8:38](https://youtube.com/watch?v=Xe6uonOPX4A&t=518) 안에서만 돌아가는 로컬 호스트 서버를
+- [8:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=521) 띄워 줍니다. 클릭하면 오른쪽에서
+- [8:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=523) 프리뷰로 결과를 확인할 수 있는데
+- [8:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=525) 저는 마우스 오른쪽을 클릭해서 외브
+- [8:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=527) 브라우저에서 확인해 보겠습니다.
+- [8:49](https://youtube.com/watch?v=Xe6uonOPX4A&t=529) [음악]
+- [8:50](https://youtube.com/watch?v=Xe6uonOPX4A&t=530) 생성했던 에셋 이미지가 배경에 잘
+- [8:52](https://youtube.com/watch?v=Xe6uonOPX4A&t=532) 자리잡고 있고 메인 타이틀,
+- [8:54](https://youtube.com/watch?v=Xe6uonOPX4A&t=534) 서브타이틀, CTA 버튼도 다 들어가
+- [8:56](https://youtube.com/watch?v=Xe6uonOPX4A&t=536) 있죠. 폰트는 비슷한 이미의 폰트를
+- [8:58](https://youtube.com/watch?v=Xe6uonOPX4A&t=538) 선정해 주었고 행간이나 간격이 다소
+- [9:01](https://youtube.com/watch?v=Xe6uonOPX4A&t=541) 좁아 보이는 부분도 있지만 이런
+- [9:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=542) 부분들은 추후의 수정을 통해 미세
+- [9:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=544) 조정할 수 있습니다. 그리고 상단에
+- [9:06](https://youtube.com/watch?v=Xe6uonOPX4A&t=546) 내비게이션이나 타임 로고는 유사하게
+- [9:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=548) 잘 들어가 있지만 내비게이션 정렬이
+- [9:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=550) 다소 아쉬운 부분이 있습니다. 모바일
+- [9:12](https://youtube.com/watch?v=Xe6uonOPX4A&t=552) 환경으로 화면을 줄여 보면
+- [9:15](https://youtube.com/watch?v=Xe6uonOPX4A&t=555) 내비게이션이 메뉴 버튼으로 바뀌고
+- [9:17](https://youtube.com/watch?v=Xe6uonOPX4A&t=557) 타임로 색상도 반전되는 등 모바일
+- [9:19](https://youtube.com/watch?v=Xe6uonOPX4A&t=559) 환경에 맞춰서 반응하는 것을 볼 수
+- [9:21](https://youtube.com/watch?v=Xe6uonOPX4A&t=561) 있습니다. 괄호 너비가이 정도에서
+- [9:23](https://youtube.com/watch?v=Xe6uonOPX4A&t=563) 브레이크 포인트로 내비게이션이
+- [9:25](https://youtube.com/watch?v=Xe6uonOPX4A&t=565) 전환되는데 데스크탑 사이즈로 나와서
+- [9:27](https://youtube.com/watch?v=Xe6uonOPX4A&t=567) 잘려 보이는 문제도 있습니다. 이런
+- [9:29](https://youtube.com/watch?v=Xe6uonOPX4A&t=569) 부분들은 나중에 다듬기로 하고 우선
+- [9:31](https://youtube.com/watch?v=Xe6uonOPX4A&t=571) 다음 섹션으로 넘어가겠습니다.이어서
+- [9:33](https://youtube.com/watch?v=Xe6uonOPX4A&t=573) 다소 복잡해 보이는 브랜드 철학
+- [9:35](https://youtube.com/watch?v=Xe6uonOPX4A&t=575) 섹션도 같은 방식으로 [음악]
+- [9:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=576) 개발해 보겠습니다.이 섹션에서 오른쪽
+- [9:39](https://youtube.com/watch?v=Xe6uonOPX4A&t=579) 박스들은 일반적인 사각형 박스가
+- [9:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=581) 아니라 사선으로 크롭된 박스들이
+- [9:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=583) 레이어드 주변에 얇은 라인들까지 얽혀
+- [9:46](https://youtube.com/watch?v=Xe6uonOPX4A&t=586) 있어서 코드로 구현하기가 다소
+- [9:48](https://youtube.com/watch?v=Xe6uonOPX4A&t=588) 까다로워 보일 수 있습니다. 하지만
+- [9:50](https://youtube.com/watch?v=Xe6uonOPX4A&t=590) 원리는 앞서 진행한 것과 동일합니다.
+- [9:52](https://youtube.com/watch?v=Xe6uonOPX4A&t=592) 여기서도 에세화 작업이 먼저
+- [9:54](https://youtube.com/watch?v=Xe6uonOPX4A&t=594) 진행되어야겠죠. [음악] 여기서는
+- [9:56](https://youtube.com/watch?v=Xe6uonOPX4A&t=596) 4선으로 크롭된 세 개의 이미지가
+- [9:58](https://youtube.com/watch?v=Xe6uonOPX4A&t=598) 우리가 추출해야 할 에셋입니다. 해당
+- [10:00](https://youtube.com/watch?v=Xe6uonOPX4A&t=600) 영역을 캡처해서 프롬프트 입력창에
+- [10:03](https://youtube.com/watch?v=Xe6uonOPX4A&t=603) 넣고 브랜드 철학 섹션 이미지도 함께
+- [10:05](https://youtube.com/watch?v=Xe6uonOPX4A&t=605) 넣어 줍니다. 그리고 프롬프트로
+- [10:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=608) 브랜드 철학 섹션 오른쪽에 배치된 세
+- [10:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=610) 개의 박스도 크로비나 주변 디자인
+- [10:12](https://youtube.com/watch?v=Xe6uonOPX4A&t=612) 요소를 제거하고 이미지만 에세화해
+- [10:14](https://youtube.com/watch?v=Xe6uonOPX4A&t=614) 달라고 요청하겠습니다.
+- [10:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=616) 주변 요소들이 지워진 깨끗한 이미지
+- [10:19](https://youtube.com/watch?v=Xe6uonOPX4A&t=619) 에셋 세 장이 다 준비되었습니다.
+- [10:21](https://youtube.com/watch?v=Xe6uonOPX4A&t=621) 이제 해당 섹션 이미지와 ES트를
+- [10:23](https://youtube.com/watch?v=Xe6uonOPX4A&t=623) 함께 프롬프트 창에 넣고 히어로 섹션
+- [10:25](https://youtube.com/watch?v=Xe6uonOPX4A&t=625) 아래에이어서 개발을 진행해 달라고
+- [10:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=628) 동일한 방식으로 요청하면 되겠습니다.
+- [10:31](https://youtube.com/watch?v=Xe6uonOPX4A&t=631) 개발 완료된 결과물을 확인해 보면
+- [10:33](https://youtube.com/watch?v=Xe6uonOPX4A&t=633) 이렇게 히어로 섹션 아래에 브랜드
+- [10:35](https://youtube.com/watch?v=Xe6uonOPX4A&t=635) 철학 섹션이 생긴 것을 볼 수
+- [10:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=637) 있습니다. 첫 번째 요청만으로도
+- [10:38](https://youtube.com/watch?v=Xe6uonOPX4A&t=638) 전반적으로 꽤 유사하게 구현되었죠.
+- [10:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=641) 각 크롭된 박스의 이미지들도 잘
+- [10:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=643) 들어가 있고 오른쪽 라인이나 디자인
+- [10:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=645) 요소들도 구현되었고 왼쪽 콘텐츠
+- [10:48](https://youtube.com/watch?v=Xe6uonOPX4A&t=648) 영역도 텍스트가 빠짐없이 잘 들어가
+- [10:50](https://youtube.com/watch?v=Xe6uonOPX4A&t=650) 있습니다. 다만 크롭된 사선의
+- [10:52](https://youtube.com/watch?v=Xe6uonOPX4A&t=652) 기울기나 이미지 S 주변 라인은 거의
+- [10:54](https://youtube.com/watch?v=Xe6uonOPX4A&t=654) 표현되지 않았고 그밖에 수정이 필요해
+- [10:56](https://youtube.com/watch?v=Xe6uonOPX4A&t=656) 보이는 디테일한 부분들도 있습니다.
+- [10:59](https://youtube.com/watch?v=Xe6uonOPX4A&t=659) 저는 [음악] 같은 방식으로 프로덕트
+- [11:01](https://youtube.com/watch?v=Xe6uonOPX4A&t=661) 콜렉션 섹션도 개발을 진행했습니다.
+- [11:03](https://youtube.com/watch?v=Xe6uonOPX4A&t=663) 결과를 보면 이미지 에셋들이 기존
+- [11:05](https://youtube.com/watch?v=Xe6uonOPX4A&t=665) 레퍼런스에 있던 벤토 그리드에 맞춰서
+- [11:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=668) 대체로 잘 개발된 것을 확인할 수
+- [11:09](https://youtube.com/watch?v=Xe6uonOPX4A&t=669) 있습니다. [음악] 다만 콘텐츠
+- [11:11](https://youtube.com/watch?v=Xe6uonOPX4A&t=671) 주변을 전체적으로 감싸고 있는 그리드
+- [11:13](https://youtube.com/watch?v=Xe6uonOPX4A&t=673) 라인은 콘텐츠 영역을 침범하거나
+- [11:15](https://youtube.com/watch?v=Xe6uonOPX4A&t=675) 간격이나 정렬의 에러 사항들이
+- [11:17](https://youtube.com/watch?v=Xe6uonOPX4A&t=677) 있습니다. 대체로 디테일한 부분들에서
+- [11:19](https://youtube.com/watch?v=Xe6uonOPX4A&t=679) 좀 어긋나거나 완성도가 떨어지는 것을
+- [11:21](https://youtube.com/watch?v=Xe6uonOPX4A&t=681) 볼 수 있는데 이제 이런 부분들을
+- [11:23](https://youtube.com/watch?v=Xe6uonOPX4A&t=683) 수정하는 방법을 알아보겠습니다. 모든
+- [11:26](https://youtube.com/watch?v=Xe6uonOPX4A&t=686) 수정 과정을 다 보여 드리면 분량이
+- [11:27](https://youtube.com/watch?v=Xe6uonOPX4A&t=687) 아주 길어질 수 있으니 방법 위주로
+- [11:29](https://youtube.com/watch?v=Xe6uonOPX4A&t=689) 설명드리겠습니다. 가장 쉽고 직관적인
+- [11:32](https://youtube.com/watch?v=Xe6uonOPX4A&t=692) 방법은 이렇게 수정할 부분을 스크린
+- [11:34](https://youtube.com/watch?v=Xe6uonOPX4A&t=694) 캡처하고 원본 섹션 이미지까지 함께
+- [11:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=696) 첨부한 다음 수정하고 싶은 방향을
+- [11:38](https://youtube.com/watch?v=Xe6uonOPX4A&t=698) 프롬프트로 최대한 정교하게 묘사해
+- [11:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=701) 주는 것입니다. 이런 식으로 시각적인
+- [11:42](https://youtube.com/watch?v=Xe6uonOPX4A&t=702) 자료를 맥락으로 제공하는게 때로는
+- [11:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=705) 가장 빠른 수정 방법이 될 수
+- [11:46](https://youtube.com/watch?v=Xe6uonOPX4A&t=706) 있습니다. 이런 과정을 거치면서 보다
+- [11:49](https://youtube.com/watch?v=Xe6uonOPX4A&t=709) 완성도 높은 결과물로 점차 다듬어
+- [11:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=711) 나갈 수 있습니다. 또 다른 수정
+- [11:53](https://youtube.com/watch?v=Xe6uonOPX4A&t=713) 방법은 주석 달기 기능을 활용하는
+- [11:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=715) 것입니다. 화면 가장 [음악] 우측
+- [11:56](https://youtube.com/watch?v=Xe6uonOPX4A&t=716) 아이콘을 클릭하면 사이드 패널을 띄울
+- [11:59](https://youtube.com/watch?v=Xe6uonOPX4A&t=719) 수 있는데 보시면 주석 달기라는
+- [12:00](https://youtube.com/watch?v=Xe6uonOPX4A&t=720) 기능이 있죠. 이걸 클릭하면 화면
+- [12:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=722) 안에 있는 각각의 컴포넌트들, 텍스트
+- [12:05](https://youtube.com/watch?v=Xe6uonOPX4A&t=725) 영역이나 컨테이너 같은 요소들을 직접
+- [12:07](https://youtube.com/watch?v=Xe6uonOPX4A&t=727) 선택할 수 있게 됩니다. 예를 들어이
+- [12:09](https://youtube.com/watch?v=Xe6uonOPX4A&t=729) 헤딩을 클릭하고 설정 아이콘을
+- [12:11](https://youtube.com/watch?v=Xe6uonOPX4A&t=731) 클릭하면 디테일한 변경 사항을 설정할
+- [12:13](https://youtube.com/watch?v=Xe6uonOPX4A&t=733) 수 있는 패널이 나타납니다. 여기서
+- [12:15](https://youtube.com/watch?v=Xe6uonOPX4A&t=735) 할 수 있는게 꽤 많은데요. 텍스트를
+- [12:17](https://youtube.com/watch?v=Xe6uonOPX4A&t=737) 직접 수정하거나 지울 수 있고 텍스트
+- [12:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=740) 색상도 조정할 수 있고 배경 색상도
+- [12:23](https://youtube.com/watch?v=Xe6uonOPX4A&t=743) 바꿀 수 있습니다. 그리고 오퍼시티
+- [12:25](https://youtube.com/watch?v=Xe6uonOPX4A&t=745) 즉 투명도 값도 조정이 가능합니다.
+- [12:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=748) 예를 들어 0.5로 설정하면 50%
+- [12:30](https://youtube.com/watch?v=Xe6uonOPX4A&t=750) 투명도가 적용됩니다. 0.1은
+- [12:32](https://youtube.com/watch?v=Xe6uonOPX4A&t=752) 10%가 되겠죠. 그 외에도 글꼴을
+- [12:35](https://youtube.com/watch?v=Xe6uonOPX4A&t=755) 변경할 수 [음악] 있고
+- [12:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=757) 폰트 사이즈나 폰트 굵기도 조정할 수
+- [12:40](https://youtube.com/watch?v=Xe6uonOPX4A&t=760) 있습니다.
+- [12:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=763) 또 컨테이너의 너비나 높이 그리고
+- [12:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=765) 여백들도 [음악] 다 수정이
+- [12:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=767) 가능합니다. 그리고 원하는 수정
+- [12:49](https://youtube.com/watch?v=Xe6uonOPX4A&t=769) 방향을 텍스트로 직접 입력할 수도
+- [12:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=771) 있는데요. 예를 들어 폰트 행간을
+- [12:53](https://youtube.com/watch?v=Xe6uonOPX4A&t=773) 줄여 달라고 작성해 볼게요. 작성을
+- [12:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=775) 다한 뒤 체크 버튼을 클릭하면 주석이
+- [12:58](https://youtube.com/watch?v=Xe6uonOPX4A&t=778) 저장되고요. 같은 방식으로 여러
+- [13:00](https://youtube.com/watch?v=Xe6uonOPX4A&t=780) 군데의 주석을 달아둘 수도 있습니다.
+- [13:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=782) 저는이 컨테이너에 세로 그리드가
+- [13:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=784) 침범하지 않도록 수정 방향을
+- [13:06](https://youtube.com/watch?v=Xe6uonOPX4A&t=786) 작성했습니다. 주석을 다 달아두면
+- [13:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=788) 프롬프트 입력창에 주석 내용이 들어와
+- [13:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=790) 있는데요. 여기서 이대로 [음악]
+- [13:12](https://youtube.com/watch?v=Xe6uonOPX4A&t=792) 수정을 진행해 달라고 요청하면 바로
+- [13:14](https://youtube.com/watch?v=Xe6uonOPX4A&t=794) 수정이 진행됩니다.
+- [13:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=796) [음악]
+- [13:18](https://youtube.com/watch?v=Xe6uonOPX4A&t=798) 결과를 보면 헤딩의 행간이 줄었고
+- [13:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=800) 세로 그리드가 콘텐츠 영역을 침범하던
+- [13:22](https://youtube.com/watch?v=Xe6uonOPX4A&t=802) 문제도 해결된 걸 확인할 수
+- [13:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=804) 있습니다. 브라우저에서 확인해 봐도
+- [13:26](https://youtube.com/watch?v=Xe6uonOPX4A&t=806) 기존에 영역을 침범하던 요소가
+- [13:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=808) 사라졌고 브레이크 포인트에 따라서
+- [13:30](https://youtube.com/watch?v=Xe6uonOPX4A&t=810) 레이아웃이 잘 반응하는 것도 볼 수
+- [13:32](https://youtube.com/watch?v=Xe6uonOPX4A&t=812) 있습니다. 저는 같은 방식으로 나머지
+- [13:34](https://youtube.com/watch?v=Xe6uonOPX4A&t=814) 히어로 섹션과 브랜드 철학
+- [13:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=816) 섹션도이어서 [음악] 수정 작업을
+- [13:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=817) 진행했습니다. 프로덕트 컬렉션
+- [13:39](https://youtube.com/watch?v=Xe6uonOPX4A&t=819) 페이지의 모든 레이아웃과 정렬이 아주
+- [13:42](https://youtube.com/watch?v=Xe6uonOPX4A&t=822) 깔끔하게 잘 다듬어졌고 브랜드 철학
+- [13:44](https://youtube.com/watch?v=Xe6uonOPX4A&t=824) 섹션도 크롭된 박스나 주변에 감싸고
+- [13:46](https://youtube.com/watch?v=Xe6uonOPX4A&t=826) 있는 사선의 라인들 그리고 지저분하게
+- [13:48](https://youtube.com/watch?v=Xe6uonOPX4A&t=828) 겹쳐졌던 요소들도 깔끔하게 잘 정리가
+- [13:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=831) 되었죠. 히어로 섹션도 상단에
+- [13:53](https://youtube.com/watch?v=Xe6uonOPX4A&t=833) 내비게이션 정렬이 아쉬운 부분이
+- [13:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=835) 있었는데 그 부분도 잘 해결되었고
+- [13:57](https://youtube.com/watch?v=Xe6uonOPX4A&t=837) 폰트도 제가 조금 더 어울리는 폰트로
+- [13:59](https://youtube.com/watch?v=Xe6uonOPX4A&t=839) 바꿔서 수정 작업을 완료했습니다.
+- [14:01](https://youtube.com/watch?v=Xe6uonOPX4A&t=841) 반응형을 [음악] 한번 테스트해 보면
+- [14:03](https://youtube.com/watch?v=Xe6uonOPX4A&t=843) 화면 사이즈를 줄였을 때 태블릿
+- [14:05](https://youtube.com/watch?v=Xe6uonOPX4A&t=845) 사이즈로 변경되었다가 모바일 사이즈로
+- [14:07](https://youtube.com/watch?v=Xe6uonOPX4A&t=847) 변경될 때 내비게이션이 메뉴 버튼으로
+- [14:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=850) 바뀌고 아주 작아졌을 때 이미지까지
+- [14:12](https://youtube.com/watch?v=Xe6uonOPX4A&t=852) 모바일용으로 잘 전환되는 것을 볼 수
+- [14:14](https://youtube.com/watch?v=Xe6uonOPX4A&t=854) 있습니다. 그 아래 브랜드 철학
+- [14:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=856) 섹션과 프로덕트 컬렉션 섹션도
+- [14:18](https://youtube.com/watch?v=Xe6uonOPX4A&t=858) 마찬가지로 모바일 버전에서도 문제없이
+- [14:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=860) 잘 전환되고 있네요. 여기까지 해서
+- [14:22](https://youtube.com/watch?v=Xe6uonOPX4A&t=862) 총 세 가지 섹션을 쭉 만들어
+- [14:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=864) 봤는데요. 이제 이렇게 만들어진
+- [14:26](https://youtube.com/watch?v=Xe6uonOPX4A&t=866) 정적인 결과물에 생동감을 더해 한 층
+- [14:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=868) 더 완성도를 높여 볼 차례입니다.
+- [14:30](https://youtube.com/watch?v=Xe6uonOPX4A&t=870) 바로 애니메이션을 추가하는
+- [14:32](https://youtube.com/watch?v=Xe6uonOPX4A&t=872) 작업인데요. 사용자가 화면을 아래로
+- [14:34](https://youtube.com/watch?v=Xe6uonOPX4A&t=874) 스크롤할 때 각 섹션별 요소들이
+- [14:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=876) 자연스럽게 나타나고 움직일 수 있도록
+- [14:38](https://youtube.com/watch?v=Xe6uonOPX4A&t=878) [음악] 스크롤 애니메이션을 적용하고
+- [14:40](https://youtube.com/watch?v=Xe6uonOPX4A&t=880) 또 히어로 섹션 전체가 통미지로
+- [14:42](https://youtube.com/watch?v=Xe6uonOPX4A&t=882) 들어가 있는데 이걸 영상으로 교체해서
+- [14:44](https://youtube.com/watch?v=Xe6uonOPX4A&t=884) 훨씬 더 시선을 사로잡을 수 있도록
+- [14:46](https://youtube.com/watch?v=Xe6uonOPX4A&t=886) 만드는 작업까지 진행해 보겠습니다.
+- [14:48](https://youtube.com/watch?v=Xe6uonOPX4A&t=888) [음악]
+- [14:48](https://youtube.com/watch?v=Xe6uonOPX4A&t=888) 이제 코덱스로 돌아와서 프롬프트로 각
+- [14:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=891) 섹션별로 스크롤 시 적절한 애니메이션
+- [14:53](https://youtube.com/watch?v=Xe6uonOPX4A&t=893) 효과를 넣어 줘 부드럽고 깔끔한
+- [14:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=895) 느낌으로 이렇게 간단하게만 작성해서
+- [14:57](https://youtube.com/watch?v=Xe6uonOPX4A&t=897) 전송을 해 주겠습니다. 그리고 추가로
+- [14:59](https://youtube.com/watch?v=Xe6uonOPX4A&t=899) 히어로 섹션에도 애니메이션을 넣어
+- [15:01](https://youtube.com/watch?v=Xe6uonOPX4A&t=901) 주고 마우스 호버했을 때도
+- [15:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=902) 애니메이션이 들어가야 해라고 작성해서
+- [15:05](https://youtube.com/watch?v=Xe6uonOPX4A&t=905) 전송해 줬습니다. 이렇게 작업을 한번
+- [15:06](https://youtube.com/watch?v=Xe6uonOPX4A&t=906) 요청한 상태에서 추가로 요청을 해도
+- [15:09](https://youtube.com/watch?v=Xe6uonOPX4A&t=909) 대기열에 들어가기 때문에 기존 작업의
+- [15:11](https://youtube.com/watch?v=Xe6uonOPX4A&t=911) 방향을 바꾸지 않고 순차적으로 작업을
+- [15:13](https://youtube.com/watch?v=Xe6uonOPX4A&t=913) 실행할 수 있습니다. 다만 여기
+- [15:14](https://youtube.com/watch?v=Xe6uonOPX4A&t=914) 보이는 스티어링을 클릭하면 기존
+- [15:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=916) 작업의 방향이 바뀌기 때문에이 부분은
+- [15:19](https://youtube.com/watch?v=Xe6uonOPX4A&t=919) 상황에 따라서 적절하게 선택하면
+- [15:21](https://youtube.com/watch?v=Xe6uonOPX4A&t=921) 되겠습니다. 그리고이어서 히어로
+- [15:23](https://youtube.com/watch?v=Xe6uonOPX4A&t=923) 이미지를 영상으로 만드는 작업도
+- [15:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=924) 진행했는데 기존에 작업한 히어로 섹션
+- [15:27](https://youtube.com/watch?v=Xe6uonOPX4A&t=927) 이미지를 재미나이에 업로드하고 배경
+- [15:29](https://youtube.com/watch?v=Xe6uonOPX4A&t=929) 영상에 어울리도록 루프형으로 만들어
+- [15:31](https://youtube.com/watch?v=Xe6uonOPX4A&t=931) 달라고 요청하면 재미나이가 영상 생성
+- [15:33](https://youtube.com/watch?v=Xe6uonOPX4A&t=933) 모델인 배오를 활용해 이렇게 이미지를
+- [15:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=936) 영상으로 만들어 줍니다. 그리고
+- [15:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=937) 이렇게 완성된 영상을 다운로드 한 뒤
+- [15:40](https://youtube.com/watch?v=Xe6uonOPX4A&t=940) 코덱스에 다시 업로드하고 프롬프트로
+- [15:42](https://youtube.com/watch?v=Xe6uonOPX4A&t=942) 히어로 섹션 이미지를이 영상으로
+- [15:44](https://youtube.com/watch?v=Xe6uonOPX4A&t=944) 대체해 줘라고 작성해서 전송합니다.
+- [15:46](https://youtube.com/watch?v=Xe6uonOPX4A&t=946) 그럼 기본적인 애니메이션 효과까지
+- [15:48](https://youtube.com/watch?v=Xe6uonOPX4A&t=948) 완료됩니다. 이제 어떤 애니메이션이
+- [15:50](https://youtube.com/watch?v=Xe6uonOPX4A&t=950) 적용되었는지 결과를 확인해 보시죠.
+- [15:53](https://youtube.com/watch?v=Xe6uonOPX4A&t=953) 결과를 보면 히어로 섹션의 영상이
+- [15:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=955) 아주 부드럽게 잘 재생되고 있습니다.
+- [15:57](https://youtube.com/watch?v=Xe6uonOPX4A&t=957) 첫 진입식 강 요소들이 자연스럽게
+- [15:59](https://youtube.com/watch?v=Xe6uonOPX4A&t=959) 나타나는 페이드인 애니메이션도
+- [16:01](https://youtube.com/watch?v=Xe6uonOPX4A&t=961) 완벽하게 적용된 것을 확인할 수
+- [16:03](https://youtube.com/watch?v=Xe6uonOPX4A&t=963) 있습니다. [음악] 마우스를 올렸을
+- [16:05](https://youtube.com/watch?v=Xe6uonOPX4A&t=965) 때 반응하는 호버 효과도 아주 잘
+- [16:07](https://youtube.com/watch?v=Xe6uonOPX4A&t=967) 동작하고요.이어서 [음악] 브랜드
+- [16:09](https://youtube.com/watch?v=Xe6uonOPX4A&t=969) 철학 페이지를 보시면 여기에도
+- [16:11](https://youtube.com/watch?v=Xe6uonOPX4A&t=971) 페이드인 애니메이션과 호버 효과가
+- [16:13](https://youtube.com/watch?v=Xe6uonOPX4A&t=973) 통일감 있게 잘 들어가 [음악]
+- [16:14](https://youtube.com/watch?v=Xe6uonOPX4A&t=974) 있습니다. 마지막으로 프로덕트 컬렉션
+- [16:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=976) 페이지 역시 애니메이션이 깔끔하게
+- [16:19](https://youtube.com/watch?v=Xe6uonOPX4A&t=979) 적용된 것을 볼 수 있습니다.
+- [16:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=980) 전체적으로 한 층 더 완성도 높고
+- [16:22](https://youtube.com/watch?v=Xe6uonOPX4A&t=982) 생동감 넘치는 웹사이트가 탄생했네요.
+- [16:25](https://youtube.com/watch?v=Xe6uonOPX4A&t=985) 이제 여기서 다른 섹션이나 디테일
+- [16:27](https://youtube.com/watch?v=Xe6uonOPX4A&t=987) 페이지를 개발하거나 애니메이션이나
+- [16:29](https://youtube.com/watch?v=Xe6uonOPX4A&t=989) 인터랙션을 더 추가하여 완성도를 높여
+- [16:31](https://youtube.com/watch?v=Xe6uonOPX4A&t=991) 나갈 수 있겠습니다. 자, 이렇게
+- [16:33](https://youtube.com/watch?v=Xe6uonOPX4A&t=993) 로컬 환경에서 이미지를 생성하고
+- [16:35](https://youtube.com/watch?v=Xe6uonOPX4A&t=995) 웹사이트까지 구축하는 방법을
+- [16:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=997) 알아보았는데요. 하지만 지금이
+- [16:39](https://youtube.com/watch?v=Xe6uonOPX4A&t=999) 웹사이트는 제 컴퓨터 안에서만
+- [16:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=1001) 돌아가고 있습니다. 누구나 인터넷을
+- [16:42](https://youtube.com/watch?v=Xe6uonOPX4A&t=1002) 통해 접속할 수 있는 진짜 웹사이트로
+- [16:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=1005) 만들려면 나만의 커스텀 도메인을
+- [16:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=1007) 연결하고 호스팅 서버에 배포하는
+- [16:48](https://youtube.com/watch?v=Xe6uonOPX4A&t=1008) 과정이 필요합니다. 이때 제가
+- [16:50](https://youtube.com/watch?v=Xe6uonOPX4A&t=1010) 추천드리는 서비스는 호스팅어입니다.
+- [16:52](https://youtube.com/watch?v=Xe6uonOPX4A&t=1012) 가성비가 가장 뛰어난 전문 호스팅
+- [16:54](https://youtube.com/watch?v=Xe6uonOPX4A&t=1014) 제공체일뿐만 [음악]
+- [16:56](https://youtube.com/watch?v=Xe6uonOPX4A&t=1016) 아니라 플랜을 구독하면 첫 1년 동안
+- [16:58](https://youtube.com/watch?v=Xe6uonOPX4A&t=1018) 커스텀 도메인을 무료로 제공하기
+- [17:00](https://youtube.com/watch?v=Xe6uonOPX4A&t=1020) 때문에 입문자분들이나 개인 프로젝트를
+- [17:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=1022) 진행하시는 분들이 부담없이 시작하기에
+- [17:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=1024) 아주 좋습니다. 영상 더 안에 남겨둔
+- [17:06](https://youtube.com/watch?v=Xe6uonOPX4A&t=1026) 링크를 통해 접속하시면 현재
+- [17:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=1028) 할인가에서 추가로 10% 할인을
+- [17:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=1030) 받으실 수 있으니 참고해 주시고요.
+- [17:13](https://youtube.com/watch?v=Xe6uonOPX4A&t=1033) 그럼 호스팅어 웹사이트에 접속해서
+- [17:15](https://youtube.com/watch?v=Xe6uonOPX4A&t=1035) 상품을 선택하겠습니다. 가격을
+- [17:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=1036) 클릭하면 이렇게 세 가지 상품을
+- [17:18](https://youtube.com/watch?v=Xe6uonOPX4A&t=1038) 확인할 수 있는데요. 저희가 오늘
+- [17:20](https://youtube.com/watch?v=Xe6uonOPX4A&t=1040) 만든 룸의 웹사이트처럼 별도의 복잡한
+- [17:22](https://youtube.com/watch?v=Xe6uonOPX4A&t=1042) 로그인이나 백엔드 데이터베이스가 없는
+- [17:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=1044) 프론트 엔드 위주의 정적 웹사이트라면
+- [17:27](https://youtube.com/watch?v=Xe6uonOPX4A&t=1047) 프리미엄 [음악] 플랜으로도 기능이
+- [17:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=1048) 충분합니다. 바로 구매하기를 클릭하면
+- [17:30](https://youtube.com/watch?v=Xe6uonOPX4A&t=1050) 기간을 설정할 수 있는데 기간은 무료
+- [17:32](https://youtube.com/watch?v=Xe6uonOPX4A&t=1052) 도메인 혜택을 받을 수 있는 최소
+- [17:34](https://youtube.com/watch?v=Xe6uonOPX4A&t=1054) 단위인 12개월을 추천드립니다.이어서
+- [17:37](https://youtube.com/watch?v=Xe6uonOPX4A&t=1057) 우리 웹사이트에 주소가 되는 커스텀
+- [17:39](https://youtube.com/watch?v=Xe6uonOPX4A&t=1059) 도메인 이름을 설정해야 합니다. 저는
+- [17:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=1061) 룸메의 스킨 케어로 설정하겠습니다.
+- [17:44](https://youtube.com/watch?v=Xe6uonOPX4A&t=1064) 그럼 우리가 사용할 수 있는
+- [17:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=1065) 도메인들이 리스트업 되는데 여기서
+- [17:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=1067) 원하는 도메인명을 선택하면 됩니다.
+- [17:49](https://youtube.com/watch?v=Xe6uonOPX4A&t=1069) 저는 이미 만들어 둔 것이 있기에
+- [17:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=1071) 이미의 도메인을 선택하겠습니다. 그럼
+- [17:54](https://youtube.com/watch?v=Xe6uonOPX4A&t=1074) 도메인 기간이 2년으로 설정이 되는데
+- [17:56](https://youtube.com/watch?v=Xe6uonOPX4A&t=1076) 1년까지가 무료이기 때문에이 기간을
+- [17:58](https://youtube.com/watch?v=Xe6uonOPX4A&t=1078) 1년으로 다시 바꿔 주겠습니다.
+- [18:00](https://youtube.com/watch?v=Xe6uonOPX4A&t=1080) 도메인 가격이 무료로 바뀌었죠?
+- [18:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=1082) 그리고 현재이 장바구니에 담긴 상품의
+- [18:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=1084) 가격이 47,988원인
+- [18:07](https://youtube.com/watch?v=Xe6uonOPX4A&t=1087) 것을 확인할 수 있습니다. 여기서 제
+- [18:09](https://youtube.com/watch?v=Xe6uonOPX4A&t=1089) 할인 코드를 적용해서 추가 할인을
+- [18:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=1090) 받으면 이렇게 10% 추가 할인을
+- [18:13](https://youtube.com/watch?v=Xe6uonOPX4A&t=1093) 받을 수가 있습니다. 그리고
+- [18:15](https://youtube.com/watch?v=Xe6uonOPX4A&t=1095) 계속하기를 클릭하면
+- [18:17](https://youtube.com/watch?v=Xe6uonOPX4A&t=1097) 이렇게 결제 수단을 입력할 수 있는
+- [18:19](https://youtube.com/watch?v=Xe6uonOPX4A&t=1099) 페이지로 전환되고 여기서 결제를
+- [18:21](https://youtube.com/watch?v=Xe6uonOPX4A&t=1101) 진행한 다음 디테일 정보를 입력한 뒤
+- [18:24](https://youtube.com/watch?v=Xe6uonOPX4A&t=1104) 잠시 기다리면 도메인 등록이
+- [18:25](https://youtube.com/watch?v=Xe6uonOPX4A&t=1105) 완료됩니다. [음악] 여기서는 한국과
+- [18:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=1108) 가장 가까운 국가를 설정해 주고
+- [18:30](https://youtube.com/watch?v=Xe6uonOPX4A&t=1110) 다음을 클릭합니다.
+- [18:32](https://youtube.com/watch?v=Xe6uonOPX4A&t=1112) 그럼 이제 노드 JS 웹을 배포할 수
+- [18:34](https://youtube.com/watch?v=Xe6uonOPX4A&t=1114) 있는 페이지로 이동되는데 여기서
+- [18:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=1116) 저희는 지금까지 생성한 로컬 파일을
+- [18:38](https://youtube.com/watch?v=Xe6uonOPX4A&t=1118) 업로드할 겁니다. 컨티뉴를 클릭하면
+- [18:41](https://youtube.com/watch?v=Xe6uonOPX4A&t=1121) 이렇게 파일을 업로드하는 페이지로
+- [18:43](https://youtube.com/watch?v=Xe6uonOPX4A&t=1123) 전환되는데 여기서는 압축 파일을
+- [18:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=1125) 지원하기에 로컬 폴더에 있는 파일을
+- [18:47](https://youtube.com/watch?v=Xe6uonOPX4A&t=1127) 압축 파일로 만들어야 합니다. 그래서
+- [18:49](https://youtube.com/watch?v=Xe6uonOPX4A&t=1129) 로컬 폴더로 이동해서 디스트 폴더,
+- [18:51](https://youtube.com/watch?v=Xe6uonOPX4A&t=1131) 스크린샷 폴더, 룸의 이미지 파일
+- [18:53](https://youtube.com/watch?v=Xe6uonOPX4A&t=1133) 폴더, 디자인 MD, 노드 모듈스
+- [18:55](https://youtube.com/watch?v=Xe6uonOPX4A&t=1135) 폴더 같은 불필요한 파일만 제외하고
+- [18:57](https://youtube.com/watch?v=Xe6uonOPX4A&t=1137) 모든 파일들을 하나의 압축 파일로
+- [18:59](https://youtube.com/watch?v=Xe6uonOPX4A&t=1139) 만들어 줍니다. [음악] 압축 파일이
+- [19:02](https://youtube.com/watch?v=Xe6uonOPX4A&t=1142) 잘 만들어졌고 이제이 파일을 다시
+- [19:04](https://youtube.com/watch?v=Xe6uonOPX4A&t=1144) 호스팅어에 업로드 해 주면 됩니다.
+- [19:06](https://youtube.com/watch?v=Xe6uonOPX4A&t=1146) [음악]
+- [19:08](https://youtube.com/watch?v=Xe6uonOPX4A&t=1148) 업로드가 완료되면 컨티뉴를 클릭하고
+- [19:10](https://youtube.com/watch?v=Xe6uonOPX4A&t=1150) 빌드 세팅에서도 이미 호스팅어가
+- [19:12](https://youtube.com/watch?v=Xe6uonOPX4A&t=1152) 최적의 세팅을 해 주었기 때문에 바로
+- [19:14](https://youtube.com/watch?v=Xe6uonOPX4A&t=1154) 디플로이를 클릭해서 배포를 하면
+- [19:16](https://youtube.com/watch?v=Xe6uonOPX4A&t=1156) 됩니다.
+- [19:19](https://youtube.com/watch?v=Xe6uonOPX4A&t=1159) 자, 이제 배포까지 완료되었고 우리가
+- [19:21](https://youtube.com/watch?v=Xe6uonOPX4A&t=1161) 설정한 커스텀 도메인 주소로 접속을
+- [19:23](https://youtube.com/watch?v=Xe6uonOPX4A&t=1163) 해 보겠습니다.
+- [19:25](https://youtube.com/watch?v=Xe6uonOPX4A&t=1165) 보시는 것처럼 내 컴퓨터에서만 보이던
+- [19:28](https://youtube.com/watch?v=Xe6uonOPX4A&t=1168) 루멜 브랜드 웹사이트가 이제 실제
+- [19:30](https://youtube.com/watch?v=Xe6uonOPX4A&t=1170) 인터넷상에 완벽하게 라이브로
+- [19:32](https://youtube.com/watch?v=Xe6uonOPX4A&t=1172) 배포되었습니다. 이렇게 해서 코덱스를
+- [19:34](https://youtube.com/watch?v=Xe6uonOPX4A&t=1174) 활용한 디자인 시안 생성부터 프론트
+- [19:36](https://youtube.com/watch?v=Xe6uonOPX4A&t=1176) 엔드 코드 구현 그리고 호스팅어를
+- [19:38](https://youtube.com/watch?v=Xe6uonOPX4A&t=1178) 통한 실제 도메인 배포까지 진행해
+- [19:40](https://youtube.com/watch?v=Xe6uonOPX4A&t=1180) 봤습니다. 여러분도이 전체 과정을
+- [19:42](https://youtube.com/watch?v=Xe6uonOPX4A&t=1182) 참고하셔서 멋진 웹사이트를 세상에
+- [19:45](https://youtube.com/watch?v=Xe6uonOPX4A&t=1185) 선보이시길
