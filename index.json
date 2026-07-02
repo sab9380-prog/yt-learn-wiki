@@ -2835,5 +2835,47 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-02-메타-개발자가-육아하면서-부업-4개-돌리는-유일한-방법.md",
+    "title": "메타 개발자가 육아하면서 부업 4개 돌리는 유일한 방법",
+    "category": "Picks전략",
+    "date": "2026-07-02",
+    "core_message": "AI 서브에이전트들에게 실행을 위임하고 자신은 오케스트레이터로만 움직이면, 1인이 다수의 사업·창작·직장 업무를 동시에 스케일업할 수 있다.",
+    "topics": [
+      "AI에이전트"
+    ],
+    "concepts": [
+      {
+        "id": "멀티-에이전트-오케스트레이션",
+        "label": "멀티 에이전트 오케스트레이션",
+        "topic": null
+      },
+      {
+        "id": "sub-agent",
+        "label": "서브 에이전트",
+        "topic": "AI에이전트"
+      },
+      {
+        "id": "OpenClaw",
+        "label": "OpenClaw",
+        "topic": null
+      },
+      {
+        "id": "Persistent-Memory",
+        "label": "Persistent Memory",
+        "topic": null
+      },
+      {
+        "id": "CronJob-자동화",
+        "label": "CronJob 자동화",
+        "topic": null
+      },
+      {
+        "id": "Delegate",
+        "label": "Delegate",
+        "topic": null
+      }
+    ]
   }
 ]
