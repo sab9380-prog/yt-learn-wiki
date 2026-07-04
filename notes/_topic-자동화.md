@@ -5,13 +5,14 @@ topic: 자동화
 
 # 🗂️ 자동화
 
-> 주제 집약 · 자동 생성 (수정 금지) · 노트 9개
+> 주제 집약 · 자동 생성 (수정 금지) · 노트 10개
 
 ## 세부 개념
 - [[_concept-workflow-automation|워크플로우 자동화]]
 - [[_concept-ax-transformation|AX]]
 
 ## 관련 노트
+- [[2026-07-04-Claude-Fable-5-Use-Cases-You-Must-Do]] — Claude Fable 5 Use Cases You Must Do NOW (Or Lose Thousands in 1 Week) — Fable 5 무료 사용 기간 안에, Opus로 계획하고 Fable 5로 실행하는 전략으로 소프트웨어 클론·코드 진단·에이전틱 OS 등 고가치 프로젝트를 완성하라.
 - [[2026-06-25-클로드-AI-업무-자동화-3단계]] — 제발 카피하세요. | 클로드 AI 업무 자동화 3단계 — AI 자동화는 '무엇을 시킬까'가 아니라 '업무를 잘게 쪼개는 것'에서 시작한다.
 - [[2026-06-23-자신-있게-말씀드립니다-현-시점-AX는-이-영상으로-종결합니다]] — 자신 있게 말씀드립니다 현 시점 AX는 이 영상으로 종결합니다 — 옵시디언을 에이전트와 사람이 함께 쓰는 누적형 지식 기반으로 만들면, 스킬이 자동으로 연결·강화되어 업무 성장이 복리로 가속화된다.
 - [[2026-06-11-Claude-Code-Graphify-Insane-Agentic-OS]] — Claude Code + Graphify = Insane Agentic OS — Graphify는 코드베이스를 지식 그래프로 변환하여 Claude의 코드 이해 능력을 대폭 향상시키고, agentic operating system과 결합하면 모든 프로젝트를 통합 관리할 수 있는 강력한 개발 환경…
