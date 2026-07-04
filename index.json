@@ -2965,5 +2965,49 @@
         "topic": "컨텍스트관리"
       }
     ]
+  },
+  {
+    "filename": "2026-07-04-클로드-코드-해커톤2위를-수상한-AI-스타트업의-생존기-이제는-이거.md",
+    "title": "클로드 코드 해커톤2위를 수상한 AI 스타트업의 생존기.이제는 이거 하셔야 살아남을수 있습니다 l AI 스타트업 Aristo COO 박인영 (AI 팟캐스트 #74)",
+    "category": "Picks전략",
+    "date": "2026-07-04",
+    "core_message": "비개발자도 바이브 코딩과 컨텍스트 엔지니어링을 이해하면 AI 에이전트 시대의 핵심 문제를 직접 해결하는 스타트업을 만들 수 있다.",
+    "topics": [
+      "컨텍스트관리",
+      "MCP",
+      "바이브코딩"
+    ],
+    "concepts": [
+      {
+        "id": "Universal-Memory",
+        "label": "Universal Memory",
+        "topic": null
+      },
+      {
+        "id": "context-engineering",
+        "label": "컨텍스트 엔지니어링",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "mcp",
+        "label": "MCP",
+        "topic": "MCP"
+      },
+      {
+        "id": "vibe-coding",
+        "label": "바이브 코딩",
+        "topic": "바이브코딩"
+      },
+      {
+        "id": "하이브리드-메모리-구조",
+        "label": "하이브리드 메모리 구조",
+        "topic": null
+      },
+      {
+        "id": "Build-in-Public",
+        "label": "Build in Public",
+        "topic": null
+      }
+    ]
   }
 ]
