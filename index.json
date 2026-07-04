@@ -2921,5 +2921,49 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-04-Claude-Fable-5-Use-Cases-You-Must-Do.md",
+    "title": "Claude Fable 5 Use Cases You Must Do NOW (Or Lose Thousands in 1 Week)",
+    "category": "일반학습",
+    "date": "2026-07-04",
+    "core_message": "Fable 5 무료 사용 기간 안에, Opus로 계획하고 Fable 5로 실행하는 전략으로 소프트웨어 클론·코드 진단·에이전틱 OS 등 고가치 프로젝트를 완성하라.",
+    "topics": [
+      "스킬",
+      "자동화",
+      "컨텍스트관리"
+    ],
+    "concepts": [
+      {
+        "id": "Fable-5",
+        "label": "Fable 5",
+        "topic": null
+      },
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "workflow-automation",
+        "label": "워크플로우 자동화",
+        "topic": "자동화"
+      },
+      {
+        "id": "에이전트-뷰-에이전틱-OS",
+        "label": "에이전트 뷰 / 에이전틱 OS",
+        "topic": null
+      },
+      {
+        "id": "PRD",
+        "label": "PRD",
+        "topic": null
+      },
+      {
+        "id": "context-engineering",
+        "label": "컨텍스트 엔지니어링",
+        "topic": "컨텍스트관리"
+      }
+    ]
   }
 ]
