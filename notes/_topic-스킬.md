@@ -5,13 +5,14 @@ topic: 스킬
 
 # 🗂️ 스킬
 
-> 주제 집약 · 자동 생성 (수정 금지) · 노트 16개
+> 주제 집약 · 자동 생성 (수정 금지) · 노트 17개
 
 ## 세부 개념
 - [[_concept-claude-skill|클로드 스킬]]
 - [[_concept-agent-md|agent.md]]
 
 ## 관련 노트
+- [[2026-07-04-Claude-Fable-5-Use-Cases-You-Must-Do]] — Claude Fable 5 Use Cases You Must Do NOW (Or Lose Thousands in 1 Week) — Fable 5 무료 사용 기간 안에, Opus로 계획하고 Fable 5로 실행하는 전략으로 소프트웨어 클론·코드 진단·에이전틱 OS 등 고가치 프로젝트를 완성하라.
 - [[2026-07-01-Meta에서-배운-실전-테크닉-AI가-길-잃지-않는-코드베이스-토큰]] — Meta에서 배운 실전 테크닉 - AI가 길 잃지 않는 코드베이스 & 토큰 비용 최적화 — 에이전트의 실패는 AI 능력 문제가 아니라 코드베이스 탐색 비용 문제이므로, 코드베이스 지형 자체를 AI 친화적으로 정비하고 토큰 비용을 팀 단위로 자동 통제해야 한다.
 - [[2026-06-30-MD-완벽-개념-설명-claude-claudeskills]] — 클로드 초보를 위한 스킬 | MD 완벽 개념 설명 #claude #claudeskills #claudecode — 스킬을 많이 아는 것보다, 내 반복 업무에 실제로 붙는 스킬 하나를 골라 쓰는 것이 진짜 시간을 줄이는 방법이다.
 - [[2026-06-29-바이브코딩계-GD가-공유한-CLAUDE-md-나눕니다]] — 바이브코딩계 GD가 공유한 CLAUDE.md 나눕니다 — AI는 코드를 못 짜는 게 아니라 너무 빠르고 자신있게 짜는 게 문제이며, Claude.md 4가지 원칙으로 그 브레이크를 걸 수 있다.
