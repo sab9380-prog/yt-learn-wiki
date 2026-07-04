@@ -1,0 +1,412 @@
+---
+title: "Claude Fable 5 Use Cases You Must Do NOW (Or Lose Thousands in 1 Week)"
+source_url: https://youtube.com/watch?v=lplVBFr0Ndc
+video_id: lplVBFr0Ndc
+source_type: youtube
+lang: en
+analyzed: 2026-07-04
+category: 일반학습
+tags: ["개념/Fable-5", "주제/스킬", "개념/스킬/claude-skill", "주제/자동화", "개념/자동화/workflow-automation", "개념/에이전트-뷰-에이전틱-OS", "개념/PRD", "주제/컨텍스트관리", "개념/컨텍스트관리/context-engineering"]
+key_concepts: ["Fable 5 (Claude 최신 모델)", "클로드 스킬", "워크플로우 자동화", "에이전트 뷰 / 에이전틱 OS", "PRD (제품 요구사항 문서)", "컨텍스트 엔지니어링"]
+status: active
+---
+# Claude Fable 5 Use Cases You Must Do NOW (Or Lose Thousands in 1 Week)
+
+## 🧠 이해 (Understand)
+- **Summary:** Claude 4 'Fable 5'(영상 내 코드명)를 Max 플랜으로 무료 사용할 수 있는 기간(~7월 7일)에 최대한 활용하기 위한 5가지 프로젝트를 소개한다. ①기존 유료 소프트웨어 로컬 클론 ②Claude Code 사용 패턴 진단·개선 ③개인 맞춤형 에이전틱 OS 구축 ④코드베이스 리뷰·버그 탐지 ⑤장기 자율 실행이 필요한 커스텀 소프트웨어(게임 등) 제작이 핵심이다. 사용량 제한(주간 50%)을 고려해 Opus 4.8로 사전 계획·PRD를 작성하고, Fable 5는 실행에만 집중하는 투트랙 전략을 강조한다.
+- **Core Message:** Fable 5 무료 사용 기간 안에, Opus로 계획하고 Fable 5로 실행하는 전략으로 소프트웨어 클론·코드 진단·에이전틱 OS 등 고가치 프로젝트를 완성하라.
+> Why are we paying for it? Why don't we just build a clone ourselves and customize it to our needs?
+> Fable 5 wrote 21,000 lines of TypeScript across 90 plus commits to get what you just saw.
+> Use Opus to do the upfront grunt work, and let Fable 5 handle the rest.
+❗ 오픈소스 프로젝트에서 단 하나의 PRD 마크다운 문서만으로 Fable 5가 3JS 브라우저 비디오게임을 21,000줄 TypeScript, 90+ 커밋으로 완성했다.
+❗ Fable 5가 39개의 이전 Claude Code 세션을 분석해 45개 원시 발견 사항을 추출하고 24개로 중복 제거한 뒤 우선순위별로 정리했다.
+❗ Max 플랜에서 7월 7일까지 Fable 5를 쓸 수 있지만 주간 사용량 한도의 50%만 허용되어 프롬프트 효율이 핵심 변수다.
+
+## 📚 핵심 용어
+- **for/goal:** Claude Code에서 장기 자율 실행 작업을 지시할 때 쓰는 명령 패턴으로, 성공 기준을 주면 모델이 스스로 반복 실행한다. / 내비게이션에 목적지만 찍으면 경로를 알아서 재계산하며 달리는 것처럼, 결과물 기준만 주면 AI가 알아서 완료될 때까지 작업한다. / 일반 프롬프트는 질문 1개에 답변 1개지만, for/goal은 목표 달성까지 AI가 스스로 여러 단계를 반복 실행한다는 점이 다르다.
+- **에이전틱 OS:** Claude Code 위에 개인 스킬·자동화·시각 대시보드를 얹어 만든 맞춤형 AI 작업 운영 환경. / 기본 스마트폰에 내가 자주 쓰는 앱과 바로가기를 직접 배치해 나만의 홈 화면을 꾸미는 것과 같다. / 기본 Claude Code가 터미널 CLI라면, 에이전틱 OS는 그 위에 GUI와 대시보드를 씌운 것으로 비기술 팀원도 쓸 수 있다.
+- **PRD (제품 요구사항 문서):** 만들고자 하는 소프트웨어의 목표·기능·제약 조건을 상세히 기술한 마크다운 문서로, AI 장기 실행의 설계도 역할을 한다. / 건축가에게 주는 설계 도면과 같다. 무엇을 어떻게 지을지 명확히 써두면 AI가 그대로 시공한다. / 단순 프롬프트는 구두 지시라면, PRD는 서면 계약서다. 복잡한 프로젝트일수록 PRD가 있어야 일관된 결과가 나온다.
+- **클로드 스킬:** 반복 업무를 Claude Code가 재사용할 수 있도록 정의해둔 작업 단위 템플릿. / 엑셀 매크로처럼, 자주 하는 작업을 한 번 등록해두면 버튼 하나로 반복 실행할 수 있다. / 자동화(Automation)가 일정·트리거에 따라 스킬을 자동 실행하는 것이라면, 스킬 자체는 그 자동화의 재료가 되는 단위 작업이다.
+
+## 🚀 실행 (Execute)
+- [ ] 현재 구독 중인 유료 SaaS 도구 중 1개를 골라 Opus 4.8 + for/dearch로 클론 PRD를 작성하고, Fable 5로 로컬 버전 구현 시작 — ⏰ 이번 주 내 (7월 7일 전) · ⚡ PRD 작성 1~2시간 + Fable 5 실행 자율 진행
+  - 담당: 나
+  - 이유: 7월 7일 이전에 실질적인 구독비 절감 또는 데이터 내재화 효과를 얻을 수 있는 가장 즉각적인 ROI 액션
+- [ ] Claude Code 이전 세션 트랜스크립트를 대상으로 Fable 5에 스킬·자동화 감사(audit) 프롬프트를 실행하고, 제안된 개선 후보를 에이전틱 OS에 반영 — ⏰ 이번 주 내 · ⚡ 프롬프트 설정 30분 + 결과 검토·적용 1시간
+  - 담당: 나
+  - 이유: 반복 작업이 클로드 스킬로 전환되면 이후 모든 세션의 효율이 복리로 개선되는 '지식 복리' 효과
+- [ ] 복잡한 기존 코드베이스가 있다면 Fable 5에 4-병렬 리뷰어 코드 심사 프롬프트를 실행해 버그 목록과 우선순위 수정 계획을 추출 — ⏰ 이번 주 내 · ⚡ 프롬프트 작성 15분 + 결과 검토 1시간
+  - 담당: 나 또는 팀원
+  - 이유: Fable 5 무료 기간 안에 사람이 수일 걸릴 코드 심사를 5분 만에 완료할 수 있는 희소 기회
+- 자료: Anthropic 공식 Claude Fable 5 프롬프팅 가이드 — docs.anthropic.com (확인 필요: 영상에서 언급되었으나 직접 URL 미제공)
+- 자료: WhisperFlow 공식 사이트 — whisperflow.app (클론 대상 참고용)
+- 자료: Brapholk의 오픈소스 3JS 게임 프로젝트 (GitHub, 확인 필요: 영상에서 언급되었으나 정확한 저장소명 미제공)
+- 자료: Claude Code for/goal 및 for/search 명령어 공식 문서 (확인 필요)
+- Timeline: 1일차: 클론할 SaaS 선정 + Opus로 PRD 작성 → 2~3일차: Fable 5로 클론 실행 + 코드 감사 병행 → 4~5일차: 스킬·자동화 audit 결과 에이전틱 OS에 통합 → 6~7일(7월 7일 전): 남은 사용량으로 커스텀 소프트웨어 또는 게임 프로젝트 착수
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-스킬]] · [[_topic-자동화]] · [[_topic-컨텍스트관리]]
+- 핵심 개념: [[_concept-Fable-5|Fable 5]] · [[_concept-claude-skill|클로드 스킬]] · [[_concept-workflow-automation|워크플로우 자동화]] · [[_concept-에이전트-뷰-에이전틱-OS|에이전트 뷰 / 에이전틱 OS]] · [[_concept-PRD|PRD]] · [[_concept-context-engineering|컨텍스트 엔지니어링]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=lplVBFr0Ndc&t=0) The most powerful AI model ever, Fable
+- [0:02](https://youtube.com/watch?v=lplVBFr0Ndc&t=2) 5, is back, but we only have a week to
+- [0:05](https://youtube.com/watch?v=lplVBFr0Ndc&t=5) play around with this thing before we
+- [0:06](https://youtube.com/watch?v=lplVBFr0Ndc&t=6) lose it to API pricing. So, the question
+- [0:09](https://youtube.com/watch?v=lplVBFr0Ndc&t=9) you should be asking yourself is, what
+- [0:11](https://youtube.com/watch?v=lplVBFr0Ndc&t=11) projects can I use Fable 5 on over the
+- [0:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=14) next seven days to get the most bang for
+- [0:17](https://youtube.com/watch?v=lplVBFr0Ndc&t=17) my buck? How can I actually squeeze
+- [0:19](https://youtube.com/watch?v=lplVBFr0Ndc&t=19) every ounce of juice out of this model?
+- [0:22](https://youtube.com/watch?v=lplVBFr0Ndc&t=22) Well, in this video, I'm going to help
+- [0:23](https://youtube.com/watch?v=lplVBFr0Ndc&t=23) you out as I show you five different
+- [0:25](https://youtube.com/watch?v=lplVBFr0Ndc&t=25) projects you can point Fable 5 at and
+- [0:28](https://youtube.com/watch?v=lplVBFr0Ndc&t=28) get your money's worth. So with that,
+- [0:30](https://youtube.com/watch?v=lplVBFr0Ndc&t=30) let's hop in. So the first and arguably
+- [0:32](https://youtube.com/watch?v=lplVBFr0Ndc&t=32) the best use case for Fable 5 is simply
+- [0:34](https://youtube.com/watch?v=lplVBFr0Ndc&t=34) cloning software that already exists out
+- [0:37](https://youtube.com/watch?v=lplVBFr0Ndc&t=37) in the real world. Probably software you
+- [0:38](https://youtube.com/watch?v=lplVBFr0Ndc&t=38) pay for. Well, why are we paying for it?
+- [0:41](https://youtube.com/watch?v=lplVBFr0Ndc&t=41) Why don't we just build a clone
+- [0:42](https://youtube.com/watch?v=lplVBFr0Ndc&t=42) ourselves and customize it to our needs?
+- [0:44](https://youtube.com/watch?v=lplVBFr0Ndc&t=44) Fable 5 is great at doing this. And in
+- [0:46](https://youtube.com/watch?v=lplVBFr0Ndc&t=46) this demo, let's have it clone Whisper
+- [0:49](https://youtube.com/watch?v=lplVBFr0Ndc&t=49) Flow. Ton of you probably use Whisper
+- [0:50](https://youtube.com/watch?v=lplVBFr0Ndc&t=50) Flow or something like it. Well, why are
+- [0:52](https://youtube.com/watch?v=lplVBFr0Ndc&t=52) we paying for this? Furthermore, why are
+- [0:54](https://youtube.com/watch?v=lplVBFr0Ndc&t=54) we giving our data to someone like
+- [0:56](https://youtube.com/watch?v=lplVBFr0Ndc&t=56) Whisperflow and having that information
+- [0:58](https://youtube.com/watch?v=lplVBFr0Ndc&t=58) that we speak into our microphone go to
+- [1:00](https://youtube.com/watch?v=lplVBFr0Ndc&t=60) some cloud server? Why don't we just
+- [1:01](https://youtube.com/watch?v=lplVBFr0Ndc&t=61) create a Whisper Flow that's purely
+- [1:03](https://youtube.com/watch?v=lplVBFr0Ndc&t=63) local, runs on our machine, is faster,
+- [1:06](https://youtube.com/watch?v=lplVBFr0Ndc&t=66) and again, we can customize to our
+- [1:08](https://youtube.com/watch?v=lplVBFr0Ndc&t=68) heart's desire. Well, that's exactly
+- [1:09](https://youtube.com/watch?v=lplVBFr0Ndc&t=69) what Fable 5 can do. Now, when we work
+- [1:12](https://youtube.com/watch?v=lplVBFr0Ndc&t=72) on these big projects, something we do
+- [1:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=74) need to keep in mind is our usage
+- [1:16](https://youtube.com/watch?v=lplVBFr0Ndc&t=76) limits. Up until July 7th, we can use
+- [1:20](https://youtube.com/watch?v=lplVBFr0Ndc&t=80) Fable 5 with our max plans. However, we
+- [1:22](https://youtube.com/watch?v=lplVBFr0Ndc&t=82) can only use up to 50% of the plan's
+- [1:25](https://youtube.com/watch?v=lplVBFr0Ndc&t=85) weekly usage limit. So, we need to be
+- [1:26](https://youtube.com/watch?v=lplVBFr0Ndc&t=86) smart about how we do this. We need to
+- [1:28](https://youtube.com/watch?v=lplVBFr0Ndc&t=88) be smart about the sort of prompts we
+- [1:30](https://youtube.com/watch?v=lplVBFr0Ndc&t=90) create. Doesn't make a lot of sense for
+- [1:32](https://youtube.com/watch?v=lplVBFr0Ndc&t=92) me to just say, "Hey, Fable 5, go
+- [1:33](https://youtube.com/watch?v=lplVBFr0Ndc&t=93) recreate Whisper Flow." We can probably
+- [1:36](https://youtube.com/watch?v=lplVBFr0Ndc&t=96) do better than that. In fact, what we
+- [1:38](https://youtube.com/watch?v=lplVBFr0Ndc&t=98) can probably do is we could use
+- [1:39](https://youtube.com/watch?v=lplVBFr0Ndc&t=99) something like The Research, aka dynamic
+- [1:42](https://youtube.com/watch?v=lplVBFr0Ndc&t=102) workflows, inside of Cloud Code, using a
+- [1:45](https://youtube.com/watch?v=lplVBFr0Ndc&t=105) model like Opus 4.8, have it figure out
+- [1:47](https://youtube.com/watch?v=lplVBFr0Ndc&t=107) a plan that actually makes sense. We
+- [1:50](https://youtube.com/watch?v=lplVBFr0Ndc&t=110) could even use something like codeex to
+- [1:52](https://youtube.com/watch?v=lplVBFr0Ndc&t=112) check that plan. And once we have a plan
+- [1:53](https://youtube.com/watch?v=lplVBFr0Ndc&t=113) that makes sense, we hand it off to
+- [1:56](https://youtube.com/watch?v=lplVBFr0Ndc&t=116) Fable 5. We do some of the upfront grunt
+- [1:58](https://youtube.com/watch?v=lplVBFr0Ndc&t=118) work with Opus and let Fable 5 handle
+- [2:01](https://youtube.com/watch?v=lplVBFr0Ndc&t=121) the rest. So that's exactly what we're
+- [2:02](https://youtube.com/watch?v=lplVBFr0Ndc&t=122) going to do. So again, I'm on Opus 4.8.
+- [2:04](https://youtube.com/watch?v=lplVBFr0Ndc&t=124) I said for/dearch. I want to come up
+- [2:06](https://youtube.com/watch?v=lplVBFr0Ndc&t=126) with a plan to clone WhisperFlow. I want
+- [2:08](https://youtube.com/watch?v=lplVBFr0Ndc&t=128) you to do some deep research on how
+- [2:10](https://youtube.com/watch?v=lplVBFr0Ndc&t=130) Whisperflow works, what we would need to
+- [2:12](https://youtube.com/watch?v=lplVBFr0Ndc&t=132) recreate its base functionality on our
+- [2:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=134) computer. Furthermore, I'd like to
+- [2:15](https://youtube.com/watch?v=lplVBFr0Ndc&t=135) recreate it locally. So I want it to be
+- [2:17](https://youtube.com/watch?v=lplVBFr0Ndc&t=137) a local model running on Aloma that
+- [2:19](https://youtube.com/watch?v=lplVBFr0Ndc&t=139) essentially does what Whisper Flow does.
+- [2:20](https://youtube.com/watch?v=lplVBFr0Ndc&t=140) So we're going to run this. It's going
+- [2:22](https://youtube.com/watch?v=lplVBFr0Ndc&t=142) to come back with a plan and if that
+- [2:24](https://youtube.com/watch?v=lplVBFr0Ndc&t=144) plan makes sense to us, we're going to
+- [2:25](https://youtube.com/watch?v=lplVBFr0Ndc&t=145) go ahead and hand it to Fable 5 and have
+- [2:28](https://youtube.com/watch?v=lplVBFr0Ndc&t=148) it go to work. So it went ahead and
+- [2:29](https://youtube.com/watch?v=lplVBFr0Ndc&t=149) finished the deep research and figured
+- [2:30](https://youtube.com/watch?v=lplVBFr0Ndc&t=150) out, hey, this is what a Whisper Flow
+- [2:32](https://youtube.com/watch?v=lplVBFr0Ndc&t=152) clone should look like. Here's how it
+- [2:33](https://youtube.com/watch?v=lplVBFr0Ndc&t=153) would work on your computer and here's
+- [2:34](https://youtube.com/watch?v=lplVBFr0Ndc&t=154) sort of the local architecture I'm
+- [2:36](https://youtube.com/watch?v=lplVBFr0Ndc&t=156) thinking about. Now, what we want to do
+- [2:38](https://youtube.com/watch?v=lplVBFr0Ndc&t=158) is we want to take this whole report and
+- [2:39](https://youtube.com/watch?v=lplVBFr0Ndc&t=159) we want to turn this into a prompt we
+- [2:40](https://youtube.com/watch?v=lplVBFr0Ndc&t=160) can hand to Fable 5. And we can have
+- [2:42](https://youtube.com/watch?v=lplVBFr0Ndc&t=162) Opus do that just fine. Ideally, we set
+- [2:45](https://youtube.com/watch?v=lplVBFr0Ndc&t=165) up this prompt. So, it makes sense if we
+- [2:47](https://youtube.com/watch?v=lplVBFr0Ndc&t=167) do forward/goal. Remember, forward/goal
+- [2:50](https://youtube.com/watch?v=lplVBFr0Ndc&t=170) is for longrunning agentic tasks, big
+- [2:52](https://youtube.com/watch?v=lplVBFr0Ndc&t=172) projects, things that are perfect for
+- [2:53](https://youtube.com/watch?v=lplVBFr0Ndc&t=173) fable 5. And with for/goal, we're
+- [2:56](https://youtube.com/watch?v=lplVBFr0Ndc&t=176) saying, hey, this is what we want to do,
+- [2:58](https://youtube.com/watch?v=lplVBFr0Ndc&t=178) and here's sort of the success criteria,
+- [3:00](https://youtube.com/watch?v=lplVBFr0Ndc&t=180) and it's just going to keep working and
+- [3:01](https://youtube.com/watch?v=lplVBFr0Ndc&t=181) working and working until it gets to
+- [3:04](https://youtube.com/watch?v=lplVBFr0Ndc&t=184) your end state. So, perfect for things
+- [3:06](https://youtube.com/watch?v=lplVBFr0Ndc&t=186) like this. So, it went ahead and created
+- [3:08](https://youtube.com/watch?v=lplVBFr0Ndc&t=188) that prompt for me. So, I'm just going
+- [3:10](https://youtube.com/watch?v=lplVBFr0Ndc&t=190) to go ahead and copy this thing. We're
+- [3:12](https://youtube.com/watch?v=lplVBFr0Ndc&t=192) then going ahead and just switch the
+- [3:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=194) model over to Fable 5. We pasted the
+- [3:18](https://youtube.com/watch?v=lplVBFr0Ndc&t=198) prompt in there
+- [3:20](https://youtube.com/watch?v=lplVBFr0Ndc&t=200) and we just let it go to work. And after
+- [3:22](https://youtube.com/watch?v=lplVBFr0Ndc&t=202) some back and forth, get the visuals
+- [3:23](https://youtube.com/watch?v=lplVBFr0Ndc&t=203) working, we got this, which is my
+- [3:26](https://youtube.com/watch?v=lplVBFr0Ndc&t=206) version of Whisper Flow, but entirely
+- [3:28](https://youtube.com/watch?v=lplVBFr0Ndc&t=208) local. Nothing leaves my computer.
+- [3:31](https://youtube.com/watch?v=lplVBFr0Ndc&t=211) Doesn't have all the bells and whistles
+- [3:32](https://youtube.com/watch?v=lplVBFr0Ndc&t=212) of Whisper Flow, but it does the basics.
+- [3:34](https://youtube.com/watch?v=lplVBFr0Ndc&t=214) It listens to what's going on with my
+- [3:36](https://youtube.com/watch?v=lplVBFr0Ndc&t=216) microphone. It transcribes it. It sends
+- [3:38](https://youtube.com/watch?v=lplVBFr0Ndc&t=218) it down to the local AI model to clean
+- [3:40](https://youtube.com/watch?v=lplVBFr0Ndc&t=220) it up. And when I'm done talking, it
+- [3:43](https://youtube.com/watch?v=lplVBFr0Ndc&t=223) just populates it inside the text box.
+- [3:45](https://youtube.com/watch?v=lplVBFr0Ndc&t=225) Let's see what it gives us.
+- [3:49](https://youtube.com/watch?v=lplVBFr0Ndc&t=229) So, hey, nothing leaves the computer. It
+- [3:50](https://youtube.com/watch?v=lplVBFr0Ndc&t=230) doesn't have all the bells and whistles,
+- [3:52](https://youtube.com/watch?v=lplVBFr0Ndc&t=232) etc., etc., etc. So, it just took
+- [3:53](https://youtube.com/watch?v=lplVBFr0Ndc&t=233) everything I said and put it inside
+- [3:56](https://youtube.com/watch?v=lplVBFr0Ndc&t=236) here. Now,
+- [3:58](https://youtube.com/watch?v=lplVBFr0Ndc&t=238) all the all that being said, is Whisper
+- [4:00](https://youtube.com/watch?v=lplVBFr0Ndc&t=240) Flow clone the craziest thing ever for
+- [4:02](https://youtube.com/watch?v=lplVBFr0Ndc&t=242) Fable 5? No, it can actually do a lot
+- [4:04](https://youtube.com/watch?v=lplVBFr0Ndc&t=244) more than that. But it just sort of
+- [4:05](https://youtube.com/watch?v=lplVBFr0Ndc&t=245) depends on what you want to clone. I
+- [4:07](https://youtube.com/watch?v=lplVBFr0Ndc&t=247) think you sort of just use the template
+- [4:08](https://youtube.com/watch?v=lplVBFr0Ndc&t=248) I gave you, which is do some deep
+- [4:10](https://youtube.com/watch?v=lplVBFr0Ndc&t=250) research, figure out how that particular
+- [4:12](https://youtube.com/watch?v=lplVBFr0Ndc&t=252) app actually works, figure out how you
+- [4:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=254) want to customize it, get your prompt in
+- [4:16](https://youtube.com/watch?v=lplVBFr0Ndc&t=256) order, and then bring it to Fable 5. I
+- [4:18](https://youtube.com/watch?v=lplVBFr0Ndc&t=258) definitely do not suggest using dynamic
+- [4:20](https://youtube.com/watch?v=lplVBFr0Ndc&t=260) workflows with Fable 5 or you're just
+- [4:22](https://youtube.com/watch?v=lplVBFr0Ndc&t=262) going to burn through all of your usage.
+- [4:24](https://youtube.com/watch?v=lplVBFr0Ndc&t=264) Now, let's move into use case number
+- [4:26](https://youtube.com/watch?v=lplVBFr0Ndc&t=266) two, which is using Fable 5 to do a
+- [4:28](https://youtube.com/watch?v=lplVBFr0Ndc&t=268) complete tearown and diagnosis of how
+- [4:31](https://youtube.com/watch?v=lplVBFr0Ndc&t=271) you use Clawed Code and how you can
+- [4:33](https://youtube.com/watch?v=lplVBFr0Ndc&t=273) improve. Now, I'm not talking about how
+- [4:34](https://youtube.com/watch?v=lplVBFr0Ndc&t=274) you use Claw Code in terms of usage. I'm
+- [4:37](https://youtube.com/watch?v=lplVBFr0Ndc&t=277) saying we're gonna have Fable 5 look
+- [4:38](https://youtube.com/watch?v=lplVBFr0Ndc&t=278) across all your previous sessions. Take
+- [4:40](https://youtube.com/watch?v=lplVBFr0Ndc&t=280) a look at how you use Claude in terms of
+- [4:43](https://youtube.com/watch?v=lplVBFr0Ndc&t=283) your skills, your automations, your
+- [4:45](https://youtube.com/watch?v=lplVBFr0Ndc&t=285) tasks, and then figure out what you're
+- [4:47](https://youtube.com/watch?v=lplVBFr0Ndc&t=287) doing right, what you're doing wrong,
+- [4:49](https://youtube.com/watch?v=lplVBFr0Ndc&t=289) and more importantly, what we can do to
+- [4:51](https://youtube.com/watch?v=lplVBFr0Ndc&t=291) improve this. Does this mean changing
+- [4:53](https://youtube.com/watch?v=lplVBFr0Ndc&t=293) our skills, creating new skills, adding
+- [4:55](https://youtube.com/watch?v=lplVBFr0Ndc&t=295) new automations? So, this is essentially
+- [4:57](https://youtube.com/watch?v=lplVBFr0Ndc&t=297) doing an audit of how you're using the
+- [4:59](https://youtube.com/watch?v=lplVBFr0Ndc&t=299) tool itself. So, here's a look at the
+- [5:01](https://youtube.com/watch?v=lplVBFr0Ndc&t=301) prompt. We're saying reflect on our past
+- [5:02](https://youtube.com/watch?v=lplVBFr0Ndc&t=302) cloud code sessions to find the highest
+- [5:04](https://youtube.com/watch?v=lplVBFr0Ndc&t=304) leverage improvements to my setup. Use
+- [5:06](https://youtube.com/watch?v=lplVBFr0Ndc&t=306) sub agents to pull raw signals from the
+- [5:08](https://youtube.com/watch?v=lplVBFr0Ndc&t=308) transcripts. You cluster them across
+- [5:10](https://youtube.com/watch?v=lplVBFr0Ndc&t=310) sessions and decide per cluster whether
+- [5:12](https://youtube.com/watch?v=lplVBFr0Ndc&t=312) it needs a new skill and automation, a
+- [5:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=314) fix or nothing. Write the candidates in
+- [5:17](https://youtube.com/watch?v=lplVBFr0Ndc&t=317) this MD file. And we're saying, hey, at
+- [5:19](https://youtube.com/watch?v=lplVBFr0Ndc&t=319) first it's just a diagnosis. I want to
+- [5:21](https://youtube.com/watch?v=lplVBFr0Ndc&t=321) see what it comes back with before it
+- [5:22](https://youtube.com/watch?v=lplVBFr0Ndc&t=322) executes anything. Now, if you're
+- [5:24](https://youtube.com/watch?v=lplVBFr0Ndc&t=324) wondering how I'm coming up with these
+- [5:25](https://youtube.com/watch?v=lplVBFr0Ndc&t=325) prompts in this prompt structure, this
+- [5:26](https://youtube.com/watch?v=lplVBFr0Ndc&t=326) is coming from Anthropic's official
+- [5:27](https://youtube.com/watch?v=lplVBFr0Ndc&t=327) documentation when it comes to prompting
+- [5:29](https://youtube.com/watch?v=lplVBFr0Ndc&t=329) Claude Fable 5 because there are some
+- [5:31](https://youtube.com/watch?v=lplVBFr0Ndc&t=331) nuances between how you want to use
+- [5:33](https://youtube.com/watch?v=lplVBFr0Ndc&t=333) Fable and Mythos versus something like
+- [5:35](https://youtube.com/watch?v=lplVBFr0Ndc&t=335) Opus. So, let's see what it comes back
+- [5:37](https://youtube.com/watch?v=lplVBFr0Ndc&t=337) with. So, Fable 5 ran through my last 39
+- [5:39](https://youtube.com/watch?v=lplVBFr0Ndc&t=339) sessions, and this is what it came up
+- [5:41](https://youtube.com/watch?v=lplVBFr0Ndc&t=341) with. It broke it out into three
+- [5:42](https://youtube.com/watch?v=lplVBFr0Ndc&t=342) different batches based on how much
+- [5:44](https://youtube.com/watch?v=lplVBFr0Ndc&t=344) leverage it think gave me. and they
+- [5:46](https://youtube.com/watch?v=lplVBFr0Ndc&t=346) range from creating new skills to
+- [5:48](https://youtube.com/watch?v=lplVBFr0Ndc&t=348) setting certain skills as automations
+- [5:51](https://youtube.com/watch?v=lplVBFr0Ndc&t=351) and some simple changes to things like
+- [5:53](https://youtube.com/watch?v=lplVBFr0Ndc&t=353) mycloud.md. So this is a really simple
+- [5:55](https://youtube.com/watch?v=lplVBFr0Ndc&t=355) use case to improve your workflows
+- [5:57](https://youtube.com/watch?v=lplVBFr0Ndc&t=357) within cloud code and it's something
+- [5:58](https://youtube.com/watch?v=lplVBFr0Ndc&t=358) you'll get a lot more out of if you fall
+- [6:01](https://youtube.com/watch?v=lplVBFr0Ndc&t=361) into the power user side of the
+- [6:03](https://youtube.com/watch?v=lplVBFr0Ndc&t=363) equation. So before we jump into the
+- [6:05](https://youtube.com/watch?v=lplVBFr0Ndc&t=365) next use case just want to give you a
+- [6:07](https://youtube.com/watch?v=lplVBFr0Ndc&t=367) quick word from today's sponsor which is
+- [6:09](https://youtube.com/watch?v=lplVBFr0Ndc&t=369) me. I just released the Claude Code
+- [6:11](https://youtube.com/watch?v=lplVBFr0Ndc&t=371) Masterass not too long ago and it is the
+- [6:13](https://youtube.com/watch?v=lplVBFr0Ndc&t=373) number one way to go from zero to AI
+- [6:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=374) dev, especially if you don't come from a
+- [6:16](https://youtube.com/watch?v=lplVBFr0Ndc&t=376) technical background. We update this
+- [6:18](https://youtube.com/watch?v=lplVBFr0Ndc&t=378) every single week and all the resources
+- [6:20](https://youtube.com/watch?v=lplVBFr0Ndc&t=380) you see in today's video, including my
+- [6:22](https://youtube.com/watch?v=lplVBFr0Ndc&t=382) cloud OS, can be found here inside of
+- [6:24](https://youtube.com/watch?v=lplVBFr0Ndc&t=384) Chase AI Plus. There's a link to that in
+- [6:26](https://youtube.com/watch?v=lplVBFr0Ndc&t=386) the pinned comment. So, definitely check
+- [6:28](https://youtube.com/watch?v=lplVBFr0Ndc&t=388) us out if you are trying to get more
+- [6:30](https://youtube.com/watch?v=lplVBFr0Ndc&t=390) serious about your AI journey. Now,
+- [6:32](https://youtube.com/watch?v=lplVBFr0Ndc&t=392) let's go into use case number three,
+- [6:33](https://youtube.com/watch?v=lplVBFr0Ndc&t=393) which is building your own agentic OS.
+- [6:35](https://youtube.com/watch?v=lplVBFr0Ndc&t=395) What you see here is one I built with
+- [6:37](https://youtube.com/watch?v=lplVBFr0Ndc&t=397) Fable 5, and this essentially acts as a
+- [6:40](https://youtube.com/watch?v=lplVBFr0Ndc&t=400) custom wrapper over the top of Cloud
+- [6:42](https://youtube.com/watch?v=lplVBFr0Ndc&t=402) Code. What we see here is the visual
+- [6:44](https://youtube.com/watch?v=lplVBFr0Ndc&t=404) side of it, but what's most important is
+- [6:46](https://youtube.com/watch?v=lplVBFr0Ndc&t=406) what's going on under the hood. And it's
+- [6:48](https://youtube.com/watch?v=lplVBFr0Ndc&t=408) a perfect follow on from use case number
+- [6:50](https://youtube.com/watch?v=lplVBFr0Ndc&t=410) two, which is essentially codifying
+- [6:52](https://youtube.com/watch?v=lplVBFr0Ndc&t=412) everything you do in your day-to-day,
+- [6:54](https://youtube.com/watch?v=lplVBFr0Ndc&t=414) your week to week into skills and
+- [6:55](https://youtube.com/watch?v=lplVBFr0Ndc&t=415) automations. But this gives us the
+- [6:57](https://youtube.com/watch?v=lplVBFr0Ndc&t=417) additional advantages of certain visual
+- [6:59](https://youtube.com/watch?v=lplVBFr0Ndc&t=419) metrics that we just can't get inside of
+- [7:00](https://youtube.com/watch?v=lplVBFr0Ndc&t=420) the terminal. So for me, that includes
+- [7:02](https://youtube.com/watch?v=lplVBFr0Ndc&t=422) things like content, right? what's been
+- [7:04](https://youtube.com/watch?v=lplVBFr0Ndc&t=424) going on with my content game across
+- [7:06](https://youtube.com/watch?v=lplVBFr0Ndc&t=426) multiple platforms. I can see things
+- [7:08](https://youtube.com/watch?v=lplVBFr0Ndc&t=428) like my different like morning reports
+- [7:10](https://youtube.com/watch?v=lplVBFr0Ndc&t=430) and things of that nature. This is all
+- [7:11](https://youtube.com/watch?v=lplVBFr0Ndc&t=431) linked to Obsidian. And I have all of my
+- [7:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=434) mostus skills and automations over here
+- [7:16](https://youtube.com/watch?v=lplVBFr0Ndc&t=436) on the right, which are just a click
+- [7:18](https://youtube.com/watch?v=lplVBFr0Ndc&t=438) away. Now, again, I've done deep dives
+- [7:19](https://youtube.com/watch?v=lplVBFr0Ndc&t=439) on this. I'm not going to turn this into
+- [7:20](https://youtube.com/watch?v=lplVBFr0Ndc&t=440) a deep dive aentic OS video, but the
+- [7:23](https://youtube.com/watch?v=lplVBFr0Ndc&t=443) most important part are all those skills
+- [7:25](https://youtube.com/watch?v=lplVBFr0Ndc&t=445) and automations I'm talking about. You
+- [7:26](https://youtube.com/watch?v=lplVBFr0Ndc&t=446) need to use Fable 5 to come up with the
+- [7:29](https://youtube.com/watch?v=lplVBFr0Ndc&t=449) skills and automations that make sense
+- [7:30](https://youtube.com/watch?v=lplVBFr0Ndc&t=450) for you. For me, that has to do with
+- [7:32](https://youtube.com/watch?v=lplVBFr0Ndc&t=452) like research, content, things on my
+- [7:34](https://youtube.com/watch?v=lplVBFr0Ndc&t=454) agency side like sales and finance. All
+- [7:36](https://youtube.com/watch?v=lplVBFr0Ndc&t=456) my individual tasks, Fable 5 turns into
+- [7:39](https://youtube.com/watch?v=lplVBFr0Ndc&t=459) skills and turns them into automations,
+- [7:41](https://youtube.com/watch?v=lplVBFr0Ndc&t=461) if that makes sense. And in certain
+- [7:42](https://youtube.com/watch?v=lplVBFr0Ndc&t=462) cases, we apply loop engineering to
+- [7:45](https://youtube.com/watch?v=lplVBFr0Ndc&t=465) those skills as well. But that really
+- [7:47](https://youtube.com/watch?v=lplVBFr0Ndc&t=467) depends on the use case. But this sort
+- [7:49](https://youtube.com/watch?v=lplVBFr0Ndc&t=469) of customized Aentic OS is pretty simple
+- [7:51](https://youtube.com/watch?v=lplVBFr0Ndc&t=471) for Fable 5 to create. And one of the
+- [7:53](https://youtube.com/watch?v=lplVBFr0Ndc&t=473) best parts about this is that if you're
+- [7:55](https://youtube.com/watch?v=lplVBFr0Ndc&t=475) in the AI agency game, you can package
+- [7:57](https://youtube.com/watch?v=lplVBFr0Ndc&t=477) this since it's essentially a web app
+- [7:58](https://youtube.com/watch?v=lplVBFr0Ndc&t=478) that anyone can put on top of their
+- [8:00](https://youtube.com/watch?v=lplVBFr0Ndc&t=480) claude code and sell it. Or you can
+- [8:03](https://youtube.com/watch?v=lplVBFr0Ndc&t=483) clone it and give this to teammates who
+- [8:05](https://youtube.com/watch?v=lplVBFr0Ndc&t=485) aren't going to use the CLI or aren't
+- [8:07](https://youtube.com/watch?v=lplVBFr0Ndc&t=487) going to use the claude app because they
+- [8:09](https://youtube.com/watch?v=lplVBFr0Ndc&t=489) can add whatever they want to this and
+- [8:10](https://youtube.com/watch?v=lplVBFr0Ndc&t=490) you pretty much just wire up different
+- [8:13](https://youtube.com/watch?v=lplVBFr0Ndc&t=493) skills and automations that you would
+- [8:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=494) use because it's just doing clawed
+- [8:16](https://youtube.com/watch?v=lplVBFr0Ndc&t=496) headlessp under the hood which luckily
+- [8:19](https://youtube.com/watch?v=lplVBFr0Ndc&t=499) for us isn't pulling from API prices
+- [8:22](https://youtube.com/watch?v=lplVBFr0Ndc&t=502) anymore since Anthropic walked that back
+- [8:24](https://youtube.com/watch?v=lplVBFr0Ndc&t=504) a few weeks ago. Now use case number
+- [8:25](https://youtube.com/watch?v=lplVBFr0Ndc&t=505) four comes directly from Enthropic
+- [8:27](https://youtube.com/watch?v=lplVBFr0Ndc&t=507) itself and that is code review and
+- [8:28](https://youtube.com/watch?v=lplVBFr0Ndc&t=508) debugging. If you have a complicated
+- [8:30](https://youtube.com/watch?v=lplVBFr0Ndc&t=510) project, if you have a huge codebase,
+- [8:31](https://youtube.com/watch?v=lplVBFr0Ndc&t=511) now is the time to take Fable 5 and
+- [8:34](https://youtube.com/watch?v=lplVBFr0Ndc&t=514) point it at that codebase and see if you
+- [8:36](https://youtube.com/watch?v=lplVBFr0Ndc&t=516) can figure out what code looks bad and
+- [8:38](https://youtube.com/watch?v=lplVBFr0Ndc&t=518) what are actually bugs. And the prompt
+- [8:41](https://youtube.com/watch?v=lplVBFr0Ndc&t=521) for this doesn't have to be complicated.
+- [8:44](https://youtube.com/watch?v=lplVBFr0Ndc&t=524) Hey, so I want you to take a look at
+- [8:46](https://youtube.com/watch?v=lplVBFr0Ndc&t=526) this codebase and I want you to do a
+- [8:48](https://youtube.com/watch?v=lplVBFr0Ndc&t=528) full code review and also let me know
+- [8:50](https://youtube.com/watch?v=lplVBFr0Ndc&t=530) about any bugs you find and it's going
+- [8:52](https://youtube.com/watch?v=lplVBFr0Ndc&t=532) to come back with whatever it finds. So
+- [8:53](https://youtube.com/watch?v=lplVBFr0Ndc&t=533) after about 5 minutes it found 45 raw
+- [8:55](https://youtube.com/watch?v=lplVBFr0Ndc&t=535) findings from four parallel reviewers
+- [8:57](https://youtube.com/watch?v=lplVBFr0Ndc&t=537) dduped down to 24 and then it took those
+- [9:00](https://youtube.com/watch?v=lplVBFr0Ndc&t=540) 24 and it broke it down by severity and
+- [9:03](https://youtube.com/watch?v=lplVBFr0Ndc&t=543) it gives us sort of an explanation of
+- [9:05](https://youtube.com/watch?v=lplVBFr0Ndc&t=545) what's wrong at each step kind of like
+- [9:06](https://youtube.com/watch?v=lplVBFr0Ndc&t=546) where the issue is and then it gives us
+- [9:08](https://youtube.com/watch?v=lplVBFr0Ndc&t=548) a specific fix priority and it's like
+- [9:11](https://youtube.com/watch?v=lplVBFr0Ndc&t=551) hey do you want to go ahead and start
+- [9:12](https://youtube.com/watch?v=lplVBFr0Ndc&t=552) working on these? Now the cool thing
+- [9:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=554) about this is I found all these things
+- [9:15](https://youtube.com/watch?v=lplVBFr0Ndc&t=555) wrong in a codebase that isn't
+- [9:17](https://youtube.com/watch?v=lplVBFr0Ndc&t=557) necessarily that complicated. There's
+- [9:19](https://youtube.com/watch?v=lplVBFr0Ndc&t=559) things that are infinitely more
+- [9:20](https://youtube.com/watch?v=lplVBFr0Ndc&t=560) complicated than what I'm doing here.
+- [9:22](https://youtube.com/watch?v=lplVBFr0Ndc&t=562) So, if you are in that camp of someone
+- [9:24](https://youtube.com/watch?v=lplVBFr0Ndc&t=564) who has something very complicated,
+- [9:25](https://youtube.com/watch?v=lplVBFr0Ndc&t=565) there is no reason you should not be
+- [9:27](https://youtube.com/watch?v=lplVBFr0Ndc&t=567) pointing Fable 5 at it and at least
+- [9:29](https://youtube.com/watch?v=lplVBFr0Ndc&t=569) having it get eyes on on the work you've
+- [9:30](https://youtube.com/watch?v=lplVBFr0Ndc&t=570) already done. Now, use case number five
+- [9:31](https://youtube.com/watch?v=lplVBFr0Ndc&t=571) is what you see right here. It's having
+- [9:33](https://youtube.com/watch?v=lplVBFr0Ndc&t=573) Fable 5 create whatever custom software
+- [9:35](https://youtube.com/watch?v=lplVBFr0Ndc&t=575) you want. Something that is going to
+- [9:36](https://youtube.com/watch?v=lplVBFr0Ndc&t=576) require a long horizon. This is a video
+- [9:38](https://youtube.com/watch?v=lplVBFr0Ndc&t=578) game built in a browser running on 3JS.
+- [9:42](https://youtube.com/watch?v=lplVBFr0Ndc&t=582) And this looks wild. This is an insane
+- [9:45](https://youtube.com/watch?v=lplVBFr0Ndc&t=585) accomplishment by Fable 5. You would not
+- [9:47](https://youtube.com/watch?v=lplVBFr0Ndc&t=587) be able to create this using something
+- [9:49](https://youtube.com/watch?v=lplVBFr0Ndc&t=589) like Opus 4.8 unless you knew exactly
+- [9:51](https://youtube.com/watch?v=lplVBFr0Ndc&t=591) what you were doing. This is again, this
+- [9:53](https://youtube.com/watch?v=lplVBFr0Ndc&t=593) is all running on the browser. This
+- [9:54](https://youtube.com/watch?v=lplVBFr0Ndc&t=594) isn't like a downloaded video game. This
+- [9:56](https://youtube.com/watch?v=lplVBFr0Ndc&t=596) is all browser graphics and it's crazy.
+- [9:59](https://youtube.com/watch?v=lplVBFr0Ndc&t=599) Now, I wasn't the one who actually built
+- [10:01](https://youtube.com/watch?v=lplVBFr0Ndc&t=601) that. This is an open- source project
+- [10:02](https://youtube.com/watch?v=lplVBFr0Ndc&t=602) from Brapholk, who created this using
+- [10:04](https://youtube.com/watch?v=lplVBFr0Ndc&t=604) Fable 5 the first time it came out. But
+- [10:06](https://youtube.com/watch?v=lplVBFr0Ndc&t=606) I think this is a great case study for
+- [10:08](https://youtube.com/watch?v=lplVBFr0Ndc&t=608) the sort of things you can create. And
+- [10:11](https://youtube.com/watch?v=lplVBFr0Ndc&t=611) the power here isn't just that Fable 5
+- [10:14](https://youtube.com/watch?v=lplVBFr0Ndc&t=614) built it. The power is that we can look
+- [10:16](https://youtube.com/watch?v=lplVBFr0Ndc&t=616) at sort of how he created this from
+- [10:18](https://youtube.com/watch?v=lplVBFr0Ndc&t=618) scratch. So the readme talks about the
+- [10:22](https://youtube.com/watch?v=lplVBFr0Ndc&t=622) one document that they gave Fable 5 in
+- [10:24](https://youtube.com/watch?v=lplVBFr0Ndc&t=624) order to create this. So the human
+- [10:27](https://youtube.com/watch?v=lplVBFr0Ndc&t=627) partially wrote one document which is
+- [10:29](https://youtube.com/watch?v=lplVBFr0Ndc&t=629) this markdown file. And what is this?
+- [10:30](https://youtube.com/watch?v=lplVBFr0Ndc&t=630) This is a PRD. This is a product
+- [10:32](https://youtube.com/watch?v=lplVBFr0Ndc&t=632) requirements document spelling out, hey,
+- [10:34](https://youtube.com/watch?v=lplVBFr0Ndc&t=634) here's what we want to build, right? The
+- [10:36](https://youtube.com/watch?v=lplVBFr0Ndc&t=636) visual target is a current gen Unreal
+- [10:39](https://youtube.com/watch?v=lplVBFr0Ndc&t=639) Engine 5 showcase footage. And then it
+- [10:41](https://youtube.com/watch?v=lplVBFr0Ndc&t=641) goes through sort of like the pillars of
+- [10:43](https://youtube.com/watch?v=lplVBFr0Ndc&t=643) this application, the instructions, the
+- [10:45](https://youtube.com/watch?v=lplVBFr0Ndc&t=645) constraint, the floors, etc., etc. Like
+- [10:47](https://youtube.com/watch?v=lplVBFr0Ndc&t=647) I said, this was only partially written
+- [10:49](https://youtube.com/watch?v=lplVBFr0Ndc&t=649) by the human. So, what you need to do if
+- [10:51](https://youtube.com/watch?v=lplVBFr0Ndc&t=651) you're trying to create your own sort of
+- [10:53](https://youtube.com/watch?v=lplVBFr0Ndc&t=653) software or game or whatever it is, some
+- [10:55](https://youtube.com/watch?v=lplVBFr0Ndc&t=655) sort of crazy project that only Fable 5
+- [10:57](https://youtube.com/watch?v=lplVBFr0Ndc&t=657) can build, you need to nail this down.
+- [10:58](https://youtube.com/watch?v=lplVBFr0Ndc&t=658) You need to nail down the PRD. Now,
+- [11:00](https://youtube.com/watch?v=lplVBFr0Ndc&t=660) Fable 5 can help you, but we want to be
+- [11:02](https://youtube.com/watch?v=lplVBFr0Ndc&t=662) very conscious of our usage. So, this is
+- [11:04](https://youtube.com/watch?v=lplVBFr0Ndc&t=664) something Opus 4.8 can at least get it
+- [11:07](https://youtube.com/watch?v=lplVBFr0Ndc&t=667) started with you, right? You should be
+- [11:09](https://youtube.com/watch?v=lplVBFr0Ndc&t=669) able to create some sort of PRD with the
+- [11:11](https://youtube.com/watch?v=lplVBFr0Ndc&t=671) specific instructions and with the
+- [11:13](https://youtube.com/watch?v=lplVBFr0Ndc&t=673) specific requirements with Opus 4.8.
+- [11:15](https://youtube.com/watch?v=lplVBFr0Ndc&t=675) Again, use something like deep research
+- [11:17](https://youtube.com/watch?v=lplVBFr0Ndc&t=677) to help you do that and then bring it to
+- [11:19](https://youtube.com/watch?v=lplVBFr0Ndc&t=679) Fable 5. Essentially recreate what we
+- [11:21](https://youtube.com/watch?v=lplVBFr0Ndc&t=681) did in the first use case. And after
+- [11:23](https://youtube.com/watch?v=lplVBFr0Ndc&t=683) that, you pretty much just hand it to
+- [11:24](https://youtube.com/watch?v=lplVBFr0Ndc&t=684) Fable 5 and you let it execute it across
+- [11:26](https://youtube.com/watch?v=lplVBFr0Ndc&t=686) long autonomous sessions exactly like
+- [11:29](https://youtube.com/watch?v=lplVBFr0Ndc&t=689) the forward/goal scenario we did
+- [11:31](https://youtube.com/watch?v=lplVBFr0Ndc&t=691) earlier. In this particular setup, Fable
+- [11:32](https://youtube.com/watch?v=lplVBFr0Ndc&t=692) 5 wrote 21,000 lines of TypeScript
+- [11:35](https://youtube.com/watch?v=lplVBFr0Ndc&t=695) across 90 plus commits to get what you
+- [11:37](https://youtube.com/watch?v=lplVBFr0Ndc&t=697) just saw. So really cool stuff and
+- [11:39](https://youtube.com/watch?v=lplVBFr0Ndc&t=699) that's just a taste of what this model
+- [11:41](https://youtube.com/watch?v=lplVBFr0Ndc&t=701) is able to build for you. So, those are
+- [11:43](https://youtube.com/watch?v=lplVBFr0Ndc&t=703) the five table five use cases you need
+- [11:45](https://youtube.com/watch?v=lplVBFr0Ndc&t=705) to try out this week. As always, let me
+- [11:48](https://youtube.com/watch?v=lplVBFr0Ndc&t=708) know what you thought about this video
+- [11:49](https://youtube.com/watch?v=lplVBFr0Ndc&t=709) in the comments. Make sure to check out
+- [11:51](https://youtube.com/watch?v=lplVBFr0Ndc&t=711) Chase AI Plus if you want to get your
+- [11:52](https://youtube.com/watch?v=lplVBFr0Ndc&t=712) hands on the Claude Code Masterass or my
+- [11:54](https://youtube.com/watch?v=lplVBFr0Ndc&t=714) exact Claude OS setup. And besides that,
+- [11:57](https://youtube.com/watch?v=lplVBFr0Ndc&t=717) I'll see you
