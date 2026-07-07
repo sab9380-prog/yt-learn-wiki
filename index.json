@@ -3009,5 +3009,53 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-07-Anthropic-개발자가-직접-공개한-Claude-Fable-5.md",
+    "title": "Anthropic 개발자가 직접 공개한 Claude Fable 5 사용법 (핵심은 언노운 찾기)",
+    "category": "일반학습",
+    "date": "2026-07-07",
+    "core_message": "AI 결과물의 품질은 모델 성능이 아니라 내가 '모른다는 것조차 모르는 것(언노운)'을 얼마나 빨리 발굴하느냐에 달려 있으므로, AI에게 더 시키기 전에 AI로 나 자신을 먼저 업그레이드하라.",
+    "topics": [
+      "컨텍스트관리",
+      "ANTHROPIC"
+    ],
+    "concepts": [
+      {
+        "id": "언노운",
+        "label": "언노운",
+        "topic": null
+      },
+      {
+        "id": "context-engineering",
+        "label": "컨텍스트 엔지니어링",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "블라인드스팟-패스",
+        "label": "블라인드스팟 패스",
+        "topic": null
+      },
+      {
+        "id": "브레인스토밍-프로토타입",
+        "label": "브레인스토밍 프로토타입",
+        "topic": null
+      },
+      {
+        "id": "인터뷰-패턴",
+        "label": "인터뷰 패턴",
+        "topic": null
+      },
+      {
+        "id": "구현-노트",
+        "label": "구현 노트",
+        "topic": null
+      },
+      {
+        "id": "anthropic",
+        "label": "Anthropic",
+        "topic": "ANTHROPIC"
+      }
+    ]
   }
 ]
