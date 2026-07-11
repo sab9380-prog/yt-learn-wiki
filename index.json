@@ -3101,5 +3101,47 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-11-클로드-페이블5로-자동화-여기까지-된다-I-클로드-500시간-써본-대표.md",
+    "title": "클로드 페이블5로 자동화 여기까지 된다? I 클로드 500시간 써본 대표 후기",
+    "category": "Picks전략",
+    "date": "2026-07-11",
+    "core_message": "AI 이미지 워크플로우의 병목을 직접 체험으로 찾아내고, 여러 AI 도구를 역할별로 조합해 내부 자동화 웹앱으로 해결한 실전 사례.",
+    "topics": [
+      "스킬"
+    ],
+    "concepts": [
+      {
+        "id": "모델-스튜디오",
+        "label": "모델 스튜디오",
+        "topic": null
+      },
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "턴어라운드",
+        "label": "턴어라운드",
+        "topic": null
+      },
+      {
+        "id": "병목-구간-파악",
+        "label": "병목 구간 파악",
+        "topic": null
+      },
+      {
+        "id": "Fable-5",
+        "label": "Fable 5",
+        "topic": null
+      },
+      {
+        "id": "Flux-Fill",
+        "label": "Flux Fill",
+        "topic": null
+      }
+    ]
   }
 ]
