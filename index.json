@@ -3143,5 +3143,47 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-12-4일-만에-만들었는데-결제-붙이는-데-2달-걸렸습니다.md",
+    "title": "4일 만에 만들었는데, 결제 붙이는 데 2달 걸렸습니다",
+    "category": "Picks전략",
+    "date": "2026-07-12",
+    "core_message": "코드는 AI가 짜주는 시대가 됐으니, 이제 경쟁력은 일관된 디자인·돈 받는 구조·알려지는 시스템을 먼저 갖추는 데 있다.",
+    "topics": [
+      "바이브코딩"
+    ],
+    "concepts": [
+      {
+        "id": "vibe-coding",
+        "label": "바이브 코딩",
+        "topic": "바이브코딩"
+      },
+      {
+        "id": "데모와-제품의-차이",
+        "label": "데모와 제품의 차이",
+        "topic": null
+      },
+      {
+        "id": "design.md",
+        "label": "design.md",
+        "topic": null
+      },
+      {
+        "id": "PG사-심사",
+        "label": "PG사 심사",
+        "topic": null
+      },
+      {
+        "id": "멱등성",
+        "label": "멱등성",
+        "topic": null
+      },
+      {
+        "id": "웹훅",
+        "label": "웹훅",
+        "topic": null
+      }
+    ]
   }
 ]
