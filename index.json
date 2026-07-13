@@ -3185,5 +3185,47 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-13-1-AX인재전쟁-라이브-2시간만에-우승-도전합니다.md",
+    "title": "1000:1 AX인재전쟁, 라이브 2시간만에 우승 도전합니다",
+    "category": "Picks전략",
+    "date": "2026-07-13",
+    "core_message": "AX 역량의 핵심은 코딩이 아니라 문제를 구조화하는 scaffolding, 에이전트를 병렬로 위임하는 능력, 그리고 결과물의 임팩트를 판별하는 검증 눈(Taste)이다.",
+    "topics": [
+      "컨텍스트관리"
+    ],
+    "concepts": [
+      {
+        "id": "AX-인재전쟁-해커톤",
+        "label": "AX 인재전쟁 해커톤",
+        "topic": null
+      },
+      {
+        "id": "Codex-플러그인",
+        "label": "Codex 플러그인",
+        "topic": null
+      },
+      {
+        "id": "scaffolding",
+        "label": "scaffolding",
+        "topic": null
+      },
+      {
+        "id": "멀티-에이전트-오케스트레이션",
+        "label": "멀티 에이전트 오케스트레이션",
+        "topic": null
+      },
+      {
+        "id": "context-engineering",
+        "label": "컨텍스트 엔지니어링",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "문제정의",
+        "label": "문제정의",
+        "topic": null
+      }
+    ]
   }
 ]
