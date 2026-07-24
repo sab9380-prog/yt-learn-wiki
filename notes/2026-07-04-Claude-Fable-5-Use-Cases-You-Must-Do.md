@@ -6,7 +6,7 @@ source_type: youtube
 lang: en
 analyzed: 2026-07-04
 category: 일반학습
-tags: ["개념/Fable-5", "주제/스킬", "개념/스킬/claude-skill", "주제/자동화", "개념/자동화/workflow-automation", "개념/에이전트-뷰-에이전틱-OS", "개념/PRD", "주제/컨텍스트관리", "개념/컨텍스트관리/context-engineering"]
+tags: ["주제/ANTHROPIC", "개념/ANTHROPIC/claude-model", "주제/스킬", "개념/스킬/claude-skill", "주제/자동화", "개념/자동화/workflow-automation", "개념/에이전트-뷰-에이전틱-OS", "개념/PRD", "주제/컨텍스트관리", "개념/컨텍스트관리/context-engineering"]
 key_concepts: ["Fable 5 (Claude 최신 모델)", "클로드 스킬", "워크플로우 자동화", "에이전트 뷰 / 에이전틱 OS", "PRD (제품 요구사항 문서)", "컨텍스트 엔지니어링"]
 status: active
 ---
@@ -46,8 +46,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
-- 주제: [[_topic-스킬]] · [[_topic-자동화]] · [[_topic-컨텍스트관리]]
-- 핵심 개념: [[_concept-Fable-5|Fable 5]] · [[_concept-claude-skill|클로드 스킬]] · [[_concept-workflow-automation|워크플로우 자동화]] · [[_concept-에이전트-뷰-에이전틱-OS|에이전트 뷰 / 에이전틱 OS]] · [[_concept-PRD|PRD]] · [[_concept-context-engineering|컨텍스트 엔지니어링]]
+- 주제: [[_topic-ANTHROPIC]] · [[_topic-스킬]] · [[_topic-자동화]] · [[_topic-컨텍스트관리]]
+- 핵심 개념: [[_concept-claude-model|Claude]] · [[_concept-claude-skill|클로드 스킬]] · [[_concept-workflow-automation|워크플로우 자동화]] · [[_concept-에이전트-뷰-에이전틱-OS|에이전트 뷰 / 에이전틱 OS]] · [[_concept-PRD|PRD]] · [[_concept-context-engineering|컨텍스트 엔지니어링]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=lplVBFr0Ndc&t=0) The most powerful AI model ever, Fable
