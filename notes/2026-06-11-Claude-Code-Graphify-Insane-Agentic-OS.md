@@ -6,7 +6,7 @@ source_type: youtube
 lang: en
 analyzed: 2026-06-11
 category: 일반학습
-tags: ["주제/RAG검색", "개념/RAG검색/graph-rag", "주제/자동화", "개념/자동화/ax-transformation", "주제/컨텍스트관리", "개념/컨텍스트관리/token-optimization"]
+tags: ["주제/RAG검색", "개념/RAG검색/graph-rag", "주제/자동화", "개념/자동화/ax-transformation", "주제/토큰최적화", "개념/토큰최적화/token-optimization"]
 key_concepts: ["Graphify", "God nodes", "Agentic Operating System", "Token optimization"]
 status: active
 ---
@@ -32,7 +32,7 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
-- 주제: [[_topic-RAG검색]] · [[_topic-자동화]] · [[_topic-컨텍스트관리]]
+- 주제: [[_topic-RAG검색]] · [[_topic-자동화]] · [[_topic-토큰최적화]]
 - 핵심 개념: [[_concept-graph-rag|그래프 RAG]] · [[_concept-ax-transformation|AX]] · [[_concept-token-optimization|토큰 최적화]]
 
 ## 📝 자막 전문
