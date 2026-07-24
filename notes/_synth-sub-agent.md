@@ -59,5 +59,19 @@ concept: sub-agent
 > **서브 에이전트란, 메인 AI가 특정 작업을 위해 별도로 생성하는 독립 AI로 — 중간 과정을 격리해 메인 컨텍스트를 깨끗하게 유지하면서 동시에 여러 작업을 병렬 처리하게 해주는 분업 구조다.**
 
 ---
+## 📎 참조 노트 (클릭 → 원문)
+- [유능한 페이블을 바보로 만들지 마세요. 명령은 줄이고, 이유를 말하세요.](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-03-유능한-페이블을-바보로-만들지-마세요-명령은-줄이고-이유를-말하세요.md)
+- [메타 개발자가 육아하면서 부업 4개 돌리는 유일한 방법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-02-메타-개발자가-육아하면서-부업-4개-돌리는-유일한-방법.md)
+- [100만 토큰시대! 앤트로픽이 알려준 클로드코드 컨텍스트 관리법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-26-100만-토큰시대-앤트로픽이-알려준-클로드코드-컨텍스트-관리법.md)
+- [클로드 코드 Dynamic Workflow 기능 비교 총정리!](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-04-클로드-코드-Dynamic-Workflow-기능-비교-총정리.md)
+- [100만 토큰시대! 앤트로픽이 알려준 클로드코드 컨텍스트 관리법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-100만-토큰시대-앤트로픽이-알려준-클로드코드-컨텍스트-관리법.md)
+- [AI 코딩 판이 바뀌었습니다. 클로드코드 에이전트뷰 직접 써봤습니다 #클로드코드 #agents](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-AI-코딩-판이-바뀌었습니다-클로드코드-에이전트뷰-직접-써봤습니다.md)
+- [Claude Code 비용 80% 절감하는 settings.json 3줄과 14만명이 쓰는 everything-claude-code 설정법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-Claude-Code-비용-80-절감하는-settings-json.md)
+- [GSD, Superpowers, Claude Code 중 누가 새로운 AI 최강자일까요?](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-GSD-Superpowers-Claude-Code-중-누가-새로운-AI.md)
+- [GStack + Superpowers로 클로드코드 완전히 달라진 사람의 후기](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-GStack-Superpowers로-클로드코드-완전히-달라진-사람의-후기.md)
+- [딸깍 AI 어떻게 작동되는지 아시나요...? AI로 세상이 어떻게 변하고 있는지 보여드립니다. 하네스 딸깍 시연회](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-딸깍-AI-어떻게-작동되는지-아시나요-AI로-세상이-어떻게-변하고.md)
+- [클로드 코드 안에서 코덱스를 사용하는 코덱스 플러그인 세팅 가이드](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-클로드-코드-안에서-코덱스를-사용하는-코덱스-플러그인-세팅-가이드.md)
+
+---
 - 개념 페이지: [[_concept-sub-agent]]
 - [[INDEX]]
