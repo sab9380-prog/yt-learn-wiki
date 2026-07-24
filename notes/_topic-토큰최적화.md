@@ -1,13 +1,14 @@
 ---
-type: concept-moc
-concept: token-optimization
+type: topic-moc
+topic: 토큰최적화
 ---
 
-# 🧩 토큰 최적화
+# 🗂️ 토큰최적화
 
-> 개념 집약 · 자동 생성 (수정 금지) · 노트 7개
+> 주제 집약 · 자동 생성 (수정 금지) · 노트 7개
 
-- 상위 주제: [[_topic-토큰최적화]]
+## 세부 개념
+- [[_concept-token-optimization|토큰 최적화]]
 
 ## 관련 노트
 - [[2026-06-11-Claude-Code-Graphify-Insane-Agentic-OS]] — Claude Code + Graphify = Insane Agentic OS — Graphify는 코드베이스를 지식 그래프로 변환하여 Claude의 코드 이해 능력을 대폭 향상시키고, agentic operating system과 결합하면 모든 프로젝트를 통합 관리할 수 있는 강력한 개발 환경…

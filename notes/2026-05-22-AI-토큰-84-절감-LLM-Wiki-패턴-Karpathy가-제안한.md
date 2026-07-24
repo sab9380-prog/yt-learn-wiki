@@ -6,7 +6,7 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
-tags: ["주제/위키", "개념/위키/llm-wiki", "주제/컨텍스트관리", "개념/컨텍스트관리/context-engineering", "개념/컨텍스트관리/token-optimization", "개념/인제스트"]
+tags: ["주제/위키", "개념/위키/llm-wiki", "주제/컨텍스트관리", "개념/컨텍스트관리/context-engineering", "주제/토큰최적화", "개념/토큰최적화/token-optimization", "개념/인제스트"]
 key_concepts: ["LLM 위키", "컨텍스트", "토큰", "인제스트"]
 status: active
 ---
@@ -42,7 +42,7 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
-- 주제: [[_topic-위키]] · [[_topic-컨텍스트관리]]
+- 주제: [[_topic-위키]] · [[_topic-컨텍스트관리]] · [[_topic-토큰최적화]]
 - 핵심 개념: [[_concept-llm-wiki|LLM 위키]] · [[_concept-context-engineering|컨텍스트 엔지니어링]] · [[_concept-token-optimization|토큰 최적화]] · [[_concept-인제스트|인제스트]]
 
 ## 📝 자막 전문

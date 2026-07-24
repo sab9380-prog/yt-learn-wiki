@@ -6,7 +6,7 @@ source_type: youtube
 lang: en
 analyzed: 2026-05-22
 category: Picks전략
-tags: ["주제/위키", "개념/위키/second-brain", "주제/MCP", "개념/MCP/mcp", "주제/컨텍스트관리", "개념/컨텍스트관리/token-optimization", "주제/스킬", "개념/스킬/claude-skill"]
+tags: ["주제/위키", "개념/위키/second-brain", "주제/MCP", "개념/MCP/mcp", "주제/토큰최적화", "개념/토큰최적화/token-optimization", "주제/스킬", "개념/스킬/claude-skill"]
 key_concepts: ["세컨드 브레인(Second Brain)", "MCP (Model Context Protocol)", "토큰 최적화", "Claude Skills"]
 status: active
 ---
@@ -44,7 +44,7 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-Picks전략]]
-- 주제: [[_topic-위키]] · [[_topic-MCP]] · [[_topic-컨텍스트관리]] · [[_topic-스킬]]
+- 주제: [[_topic-위키]] · [[_topic-MCP]] · [[_topic-토큰최적화]] · [[_topic-스킬]]
 - 핵심 개념: [[_concept-second-brain|세컨드 브레인]] · [[_concept-mcp|MCP]] · [[_concept-token-optimization|토큰 최적화]] · [[_concept-claude-skill|클로드 스킬]]
 
 ## 📝 자막 전문
