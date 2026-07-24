@@ -5,12 +5,13 @@ topic: 토큰최적화
 
 # 🗂️ 토큰최적화
 
-> 주제 집약 · 자동 생성 (수정 금지) · 노트 7개
+> 주제 집약 · 자동 생성 (수정 금지) · 노트 8개
 
 ## 세부 개념
 - [[_concept-token-optimization|토큰 최적화]]
 
 ## 관련 노트
+- [[2026-07-01-Meta에서-배운-실전-테크닉-AI가-길-잃지-않는-코드베이스-토큰]] — Meta에서 배운 실전 테크닉 - AI가 길 잃지 않는 코드베이스 & 토큰 비용 최적화 — 에이전트의 실패는 AI 능력 문제가 아니라 코드베이스 탐색 비용 문제이므로, 코드베이스 지형 자체를 AI 친화적으로 정비하고 토큰 비용을 팀 단위로 자동 통제해야 한다.
 - [[2026-06-11-Claude-Code-Graphify-Insane-Agentic-OS]] — Claude Code + Graphify = Insane Agentic OS — Graphify는 코드베이스를 지식 그래프로 변환하여 Claude의 코드 이해 능력을 대폭 향상시키고, agentic operating system과 결합하면 모든 프로젝트를 통합 관리할 수 있는 강력한 개발 환경…
 - [[2026-05-22-5-Skills-to-Build-an-AI-Operating]] — 5 Skills to Build an AI Operating System Like The 1% (Full Guide) — AI 도구의 진정한 잠재력을 발휘하려면 개인과 비즈니스의 모든 맥락이 담긴 세컨드 브레인을 구축하여 AI가 항상 관련성 높은 정보에 접근할 수 있도록 해야 한다.
 - [[2026-05-22-AI-토큰-84-절감-LLM-Wiki-패턴-Karpathy가-제안한]] — AI 토큰 84% 절감 LLM Wiki 패턴, Karpathy가 제안한 컨텍스트 관리법 — AI가 매번 문서를 처음부터 읽는 비효율을 해결하기 위해 핵심만 정리한 위키를 만들어 토큰을 84%까지 절약할 수 있다.
