@@ -6,7 +6,7 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
-tags: ["주제/위키", "개념/위키/llm-wiki", "주제/컨텍스트관리", "개념/컨텍스트관리/token-optimization", "개념/위키/second-brain"]
+tags: ["주제/위키", "개념/위키/llm-wiki", "주제/토큰최적화", "개념/토큰최적화/token-optimization", "개념/위키/second-brain"]
 key_concepts: ["RAM 지식 위키", "토큰 효율성", "지식 누적 시스템"]
 status: active
 ---
@@ -41,7 +41,7 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
-- 주제: [[_topic-위키]] · [[_topic-컨텍스트관리]]
+- 주제: [[_topic-위키]] · [[_topic-토큰최적화]]
 - 핵심 개념: [[_concept-llm-wiki|LLM 위키]] · [[_concept-token-optimization|토큰 최적화]] · [[_concept-second-brain|세컨드 브레인]]
 
 ## 📝 자막 전문
