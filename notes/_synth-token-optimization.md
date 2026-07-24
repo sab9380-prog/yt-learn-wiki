@@ -66,5 +66,16 @@ concept: token-optimization
 **토큰 최적화란 AI가 매번 처음부터 모든 것을 읽는 낭비를 막기 위해, 정보를 미리 압축·구조화하고 비용을 자동 통제하여 같은 작업을 84~95% 저렴하게 처리하는 전략이다.**
 
 ---
+## 📎 참조 노트 (클릭 → 원문)
+- [Meta에서 배운 실전 테크닉 - AI가 길 잃지 않는 코드베이스 & 토큰 비용 최적화](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-01-Meta에서-배운-실전-테크닉-AI가-길-잃지-않는-코드베이스-토큰.md)
+- [Claude Code + Graphify = Insane Agentic OS](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-11-Claude-Code-Graphify-Insane-Agentic-OS.md)
+- [5 Skills to Build an AI Operating System Like The 1% (Full Guide)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-5-Skills-to-Build-an-AI-Operating.md)
+- [AI 토큰 84% 절감 LLM Wiki 패턴, Karpathy가 제안한 컨텍스트 관리법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-AI-토큰-84-절감-LLM-Wiki-패턴-Karpathy가-제안한.md)
+- [Andrej Karpathy 덕분에 모두의 Claude Code가 10배 강해졌습니다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-Andrej-Karpathy-덕분에-모두의-Claude-Code가.md)
+- [Codex의 이 기능은 반드시 쓰셔야 합니다 (/goal 마스터코스)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-Codex의-이-기능은-반드시-쓰셔야-합니다-goal-마스터코스.md)
+- [[UX 모킹] 비유·비교 표시 방식 4 옵션 비교 (재열님 결정용)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-비교-표시-방식-4-옵션-비교-재열님-결정용.md)
+- [클로드코드채널을 통해 Hermes Agent를 구독으로만 쓴다고???](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-클로드코드채널을-통해-Hermes-Agent를-구독으로만-쓴다고.md)
+
+---
 - 개념 페이지: [[_concept-token-optimization]]
 - [[INDEX]]
