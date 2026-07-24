@@ -6,7 +6,7 @@ source_type: youtube
 lang: ko
 analyzed: 2026-05-22
 category: 일반학습
-tags: ["개념/OAuth-인증", "주제/MCP", "개념/MCP/mcp", "주제/컨텍스트관리", "개념/컨텍스트관리/token-optimization"]
+tags: ["개념/OAuth-인증", "주제/MCP", "개념/MCP/mcp", "주제/토큰최적화", "개념/토큰최적화/token-optimization"]
 key_concepts: ["OAuth 인증", "MCP (Model Context Protocol)", "토큰 위임"]
 status: active
 ---
@@ -40,7 +40,7 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-일반학습]]
-- 주제: [[_topic-MCP]] · [[_topic-컨텍스트관리]]
+- 주제: [[_topic-MCP]] · [[_topic-토큰최적화]]
 - 핵심 개념: [[_concept-OAuth-인증|OAuth 인증]] · [[_concept-mcp|MCP]] · [[_concept-token-optimization|토큰 최적화]]
 
 ## 📝 자막 전문
