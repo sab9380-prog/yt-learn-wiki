@@ -6,7 +6,7 @@ source_type: youtube
 lang: ko
 analyzed: 2026-07-01
 category: Picks전략
-tags: ["개념/이미지-우선-디자인-워크플로우", "개념/GPT-이미지-2.0", "개념/imagegen-frontend-스킬", "개념/에셋화", "주제/바이브코딩", "개념/바이브코딩/vibe-coding", "개념/섹션별-이미지-생성"]
+tags: ["개념/이미지-우선-디자인-워크플로우", "주제/디자인", "개념/디자인/ai-image-design", "개념/imagegen-frontend-스킬", "개념/에셋화", "주제/바이브코딩", "개념/바이브코딩/vibe-coding", "개념/섹션별-이미지-생성"]
 key_concepts: ["이미지 우선 디자인 워크플로우", "GPT 이미지 2.0", "imagegen-frontend 스킬", "에셋화(Asset 분리)", "바이브 코딩", "섹션별 이미지 생성"]
 status: active
 ---
@@ -46,8 +46,8 @@ status: active
 
 ## 🔗 연결
 - 카테고리: [[_category-Picks전략]]
-- 주제: [[_topic-바이브코딩]]
-- 핵심 개념: [[_concept-이미지-우선-디자인-워크플로우|이미지 우선 디자인 워크플로우]] · [[_concept-GPT-이미지-2.0|GPT 이미지 2.0]] · [[_concept-imagegen-frontend-스킬|imagegen-frontend 스킬]] · [[_concept-에셋화|에셋화]] · [[_concept-vibe-coding|바이브 코딩]] · [[_concept-섹션별-이미지-생성|섹션별 이미지 생성]]
+- 주제: [[_topic-디자인]] · [[_topic-바이브코딩]]
+- 핵심 개념: [[_concept-이미지-우선-디자인-워크플로우|이미지 우선 디자인 워크플로우]] · [[_concept-ai-image-design|AI 이미지 디자인]] · [[_concept-imagegen-frontend-스킬|imagegen-frontend 스킬]] · [[_concept-에셋화|에셋화]] · [[_concept-vibe-coding|바이브 코딩]] · [[_concept-섹션별-이미지-생성|섹션별 이미지 생성]]
 
 ## 📝 자막 전문
 - [0:00](https://youtube.com/watch?v=Xe6uonOPX4A&t=0) GPT 이미지 2.0 모델 덕분에
