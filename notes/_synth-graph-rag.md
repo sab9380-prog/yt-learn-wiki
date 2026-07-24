@@ -55,5 +55,11 @@ concept: graph-rag
 > **그래프 RAG**란, 문서·코드를 매번 처음부터 읽히는 대신 *관계 지도(그래프
 
 ---
+## 📎 참조 노트 (클릭 → 원문)
+- [https://youtube.com/watch?v=uVEA1SKmymg](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-29-youtube-com-watch-v-uVEA1SKmymg.md)
+- [Claude Code + Graphify = Insane Agentic OS](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-11-Claude-Code-Graphify-Insane-Agentic-OS.md)
+- [The 7 Levels of Claude Code & RAG](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-The-7-Levels-of-Claude-Code-RAG.md)
+
+---
 - 개념 페이지: [[_concept-graph-rag]]
 - [[INDEX]]
