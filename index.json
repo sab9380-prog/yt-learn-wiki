@@ -190,11 +190,6 @@
         "topic": "MCP"
       },
       {
-        "id": "시맨틱-변수",
-        "label": "시맨틱 변수",
-        "topic": null
-      },
-      {
         "id": "컴포넌트-변수",
         "label": "컴포넌트 변수",
         "topic": null
@@ -817,16 +812,6 @@
         "id": "web-dev",
         "label": "웹 개발",
         "topic": "웹개발"
-      },
-      {
-        "id": "API",
-        "label": "API",
-        "topic": null
-      },
-      {
-        "id": "포트",
-        "label": "포트",
-        "topic": null
       },
       {
         "id": "배포",
@@ -1488,16 +1473,6 @@
         "id": "web-dev",
         "label": "웹 개발",
         "topic": "웹개발"
-      },
-      {
-        "id": "API",
-        "label": "API",
-        "topic": null
-      },
-      {
-        "id": "DNS",
-        "label": "DNS",
-        "topic": null
       }
     ]
   },
@@ -1655,7 +1630,8 @@
     "date": "2026-05-29",
     "core_message": "HTML, CSS, JavaScript 기본 문법부터 DOM 조작과 이벤트 처리까지 실습 중심으로 학습하여 실제 웹 애플리케이션을 만들 수 있는 기초 역량을 쌓을 수 있다.",
     "topics": [
-      "디자인"
+      "디자인",
+      "웹개발"
     ],
     "concepts": [
       {
@@ -1674,9 +1650,9 @@
         "topic": "디자인"
       },
       {
-        "id": "DOM",
-        "label": "DOM",
-        "topic": null
+        "id": "web-dev",
+        "label": "웹 개발",
+        "topic": "웹개발"
       }
     ]
   },
@@ -1824,15 +1800,15 @@
     "date": "2026-06-08",
     "core_message": "AI 자동화 성공의 핵심은 데이터 자체가 아니라 구조화된 맥락과 절차적 지식(스킬)을 제공하는 것이다.",
     "topics": [
+      "검증",
       "스킬",
-      "디자인",
-      "검증"
+      "디자인"
     ],
     "concepts": [
       {
-        "id": "표준-데이터셋",
+        "id": "eval-dataset",
         "label": "표준 데이터셋",
-        "topic": null
+        "topic": "검증"
       },
       {
         "id": "claude-skill",
@@ -2266,6 +2242,7 @@
     "core_message": "AI를 잘 쓰는 사람은 프롬프트를 잘 쓰는 사람이 아니라, 자기 작업 방식을 구조화해 스킬로 저장하고 계속 개선하는 사람이다.",
     "topics": [
       "스킬",
+      "검증",
       "컨텍스트관리"
     ],
     "concepts": [
@@ -2275,9 +2252,9 @@
         "topic": "스킬"
       },
       {
-        "id": "AI-슬로프",
-        "label": "AI 슬로프",
-        "topic": null
+        "id": "ai-slop",
+        "label": "AI 슬롭",
+        "topic": "검증"
       },
       {
         "id": "에이전트-메모리",
@@ -2367,14 +2344,15 @@
     "date": "2026-06-25",
     "core_message": "AI 정확도는 모델 성능이 아니라 구조화된 맥락(스킬 문서)과 강제된 유지관리가 결정한다.",
     "topics": [
+      "검증",
       "스킬",
-      "검증"
+      "디자인"
     ],
     "concepts": [
       {
-        "id": "표준-데이터셋",
+        "id": "eval-dataset",
         "label": "표준 데이터셋",
-        "topic": null
+        "topic": "검증"
       },
       {
         "id": "4층-구조-시스템",
@@ -2387,9 +2365,9 @@
         "topic": "스킬"
       },
       {
-        "id": "시맨틱-레이어",
-        "label": "시맨틱 레이어",
-        "topic": null
+        "id": "design-token",
+        "label": "디자인 토큰",
+        "topic": "디자인"
       },
       {
         "id": "CI-CD-강제화",
@@ -2410,13 +2388,14 @@
     "date": "2026-06-25",
     "core_message": "AI 자동화는 '무엇을 시킬까'가 아니라 '업무를 잘게 쪼개는 것'에서 시작한다.",
     "topics": [
+      "스킬",
       "자동화"
     ],
     "concepts": [
       {
-        "id": "Claude-스킬",
-        "label": "Claude 스킬",
-        "topic": null
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
       },
       {
         "id": "커넥터",
@@ -2443,9 +2422,9 @@
     ],
     "concepts": [
       {
-        "id": "컨텍스트-창",
-        "label": "컨텍스트 창",
-        "topic": null
+        "id": "context-engineering",
+        "label": "컨텍스트 엔지니어링",
+        "topic": "컨텍스트관리"
       },
       {
         "id": "context-rot",
@@ -2760,6 +2739,7 @@
     "date": "2026-07-01",
     "core_message": "바이브 코딩으로 평범한 결과물이 나올 때는 이미지 시안을 먼저 생성하고 레퍼런스로 삼아 코드를 구현하면, 창의적이고 완성도 높은 웹사이트를 처음부터 배포까지 만들 수 있다.",
     "topics": [
+      "디자인",
       "바이브코딩"
     ],
     "concepts": [
@@ -2769,9 +2749,9 @@
         "topic": null
       },
       {
-        "id": "GPT-이미지-2.0",
-        "label": "GPT 이미지 2.0",
-        "topic": null
+        "id": "ai-image-design",
+        "label": "AI 이미지 디자인",
+        "topic": "디자인"
       },
       {
         "id": "imagegen-frontend-스킬",
@@ -2802,7 +2782,8 @@
     "date": "2026-07-01",
     "core_message": "에이전트의 실패는 AI 능력 문제가 아니라 코드베이스 탐색 비용 문제이므로, 코드베이스 지형 자체를 AI 친화적으로 정비하고 토큰 비용을 팀 단위로 자동 통제해야 한다.",
     "topics": [
-      "스킬"
+      "스킬",
+      "토큰최적화"
     ],
     "concepts": [
       {
@@ -2831,9 +2812,9 @@
         "topic": null
       },
       {
-        "id": "토큰-효율",
-        "label": "토큰 효율",
-        "topic": null
+        "id": "token-optimization",
+        "label": "토큰 최적화",
+        "topic": "토큰최적화"
       }
     ]
   },
@@ -2848,9 +2829,9 @@
     ],
     "concepts": [
       {
-        "id": "멀티-에이전트-오케스트레이션",
-        "label": "멀티 에이전트 오케스트레이션",
-        "topic": null
+        "id": "multi-agent",
+        "label": "멀티 에이전트",
+        "topic": "AI에이전트"
       },
       {
         "id": "sub-agent",
@@ -2888,6 +2869,7 @@
     "topics": [
       "컨텍스트관리",
       "AI에이전트",
+      "자동화",
       "검증"
     ],
     "concepts": [
@@ -2907,9 +2889,9 @@
         "topic": null
       },
       {
-        "id": "다이나믹-워크플로우스",
-        "label": "다이나믹 워크플로우스",
-        "topic": null
+        "id": "workflow-automation",
+        "label": "워크플로우 자동화",
+        "topic": "자동화"
       },
       {
         "id": "creator-verifier",
@@ -2930,15 +2912,16 @@
     "date": "2026-07-04",
     "core_message": "Fable 5 무료 사용 기간 안에, Opus로 계획하고 Fable 5로 실행하는 전략으로 소프트웨어 클론·코드 진단·에이전틱 OS 등 고가치 프로젝트를 완성하라.",
     "topics": [
+      "ANTHROPIC",
       "스킬",
       "자동화",
       "컨텍스트관리"
     ],
     "concepts": [
       {
-        "id": "Fable-5",
-        "label": "Fable 5",
-        "topic": null
+        "id": "claude-model",
+        "label": "Claude",
+        "topic": "ANTHROPIC"
       },
       {
         "id": "claude-skill",
@@ -3066,15 +3049,16 @@
     "date": "2026-07-08",
     "core_message": "Anthropic 공식 프롬프트 가이드를 Claude 자신에게 읽혀 최적 프롬프트를 만들게 하면, Claude Code로 복잡한 프로그램도 단번에 완성할 수 있다.",
     "topics": [
+      "ANTHROPIC",
       "클로드코드",
       "스킬",
       "바이브코딩"
     ],
     "concepts": [
       {
-        "id": "Claude-Sonnet-5",
-        "label": "Claude Sonnet 5",
-        "topic": null
+        "id": "claude-model",
+        "label": "Claude",
+        "topic": "ANTHROPIC"
       },
       {
         "id": "Anthropic-공식-프롬프트-가이드",
@@ -3110,7 +3094,8 @@
     "date": "2026-07-11",
     "core_message": "AI 이미지 워크플로우의 병목을 직접 체험으로 찾아내고, 여러 AI 도구를 역할별로 조합해 내부 자동화 웹앱으로 해결한 실전 사례.",
     "topics": [
-      "스킬"
+      "스킬",
+      "ANTHROPIC"
     ],
     "concepts": [
       {
@@ -3134,9 +3119,9 @@
         "topic": null
       },
       {
-        "id": "Fable-5",
-        "label": "Fable 5",
-        "topic": null
+        "id": "claude-model",
+        "label": "Claude",
+        "topic": "ANTHROPIC"
       },
       {
         "id": "Flux-Fill",
@@ -3152,7 +3137,8 @@
     "date": "2026-07-12",
     "core_message": "코드는 AI가 짜주는 시대가 됐으니, 이제 경쟁력은 일관된 디자인·돈 받는 구조·알려지는 시스템을 먼저 갖추는 데 있다.",
     "topics": [
-      "바이브코딩"
+      "바이브코딩",
+      "스킬"
     ],
     "concepts": [
       {
@@ -3166,9 +3152,9 @@
         "topic": null
       },
       {
-        "id": "design.md",
-        "label": "design.md",
-        "topic": null
+        "id": "agent-md",
+        "label": "agent.md",
+        "topic": "스킬"
       },
       {
         "id": "PG사-심사",
@@ -3194,6 +3180,7 @@
     "date": "2026-07-13",
     "core_message": "AX 역량의 핵심은 코딩이 아니라 문제를 구조화하는 scaffolding, 에이전트를 병렬로 위임하는 능력, 그리고 결과물의 임팩트를 판별하는 검증 눈(Taste)이다.",
     "topics": [
+      "AI에이전트",
       "컨텍스트관리"
     ],
     "concepts": [
@@ -3213,9 +3200,9 @@
         "topic": null
       },
       {
-        "id": "멀티-에이전트-오케스트레이션",
-        "label": "멀티 에이전트 오케스트레이션",
-        "topic": null
+        "id": "multi-agent",
+        "label": "멀티 에이전트",
+        "topic": "AI에이전트"
       },
       {
         "id": "context-engineering",
