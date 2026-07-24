@@ -49,5 +49,11 @@ concept: validation-contract
 > **검증 계약이란, AI가 일을 시작하기 *전에* "이래야 끝난 것"을 명문화해두는 완료 기준서로, 이것 없이는 AI의 자율 실행이 방향 없이 달리거나 거짓 완료를 선언하는 것을 막을 수 없다.**
 
 ---
+## 📎 참조 노트 (클릭 → 원문)
+- [The Multi-Agent Architecture That Actually Ships — Luke Alvoeiro, Factory](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-20-The-Multi-Agent-Architecture-That.md)
+- [Codex의 이 기능은 반드시 쓰셔야 합니다 (/goal 마스터코스)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-Codex의-이-기능은-반드시-쓰셔야-합니다-goal-마스터코스.md)
+- [클로드 코드, 그냥 돌리면 실패합니다 (feat. Ralph Loop)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-클로드-코드-그냥-돌리면-실패합니다-feat-Ralph-Loop.md)
+
+---
 - 개념 페이지: [[_concept-validation-contract]]
 - [[INDEX]]
