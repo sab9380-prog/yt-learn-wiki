@@ -50,5 +50,16 @@ MCP는 **AI가 외부 도구·데이터·서비스에 표준화된 방식으로 
 > **MCP란, AI가 어떤 외부 도구나 데이터와도 하나의 공통 규격으로 연결되게 해주는 'AI용 USB 표준'이다.**
 
 ---
+## 📎 참조 노트 (클릭 → 원문)
+- [클로드 코드 해커톤2위를 수상한 AI 스타트업의 생존기.이제는 이거 하셔야 살아남을수 있습니다 l AI 스타트업 Aristo COO 박인영 (AI 팟캐스트 #74)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-04-클로드-코드-해커톤2위를-수상한-AI-스타트업의-생존기-이제는-이거.md)
+- [5 Skills to Build an AI Operating System Like The 1% (Full Guide)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-5-Skills-to-Build-an-AI-Operating.md)
+- [AI가 Figma 변수 200개를 혼자 만듦. 디자인 토큰부터 변수 구조, 시스템까지 자동 완성 실화임? (feat. Claude)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-AI가-Figma-변수-200개를-혼자-만듦-디자인-토큰부터-변수-구조.md)
+- [카카오톡으로 클로드가 들어왔습니다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-카카오톡으로-클로드가-들어왔습니다.md)
+- [카파시도 못 말한 LLM-Wiki의 진실: 개인 지식 베이스가 망하는 이유 | #NEWIT](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-카파시도-못-말한-LLM-Wiki의-진실.md)
+- [클로드 코드 안에서 코덱스를 사용하는 코덱스 플러그인 세팅 가이드](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-클로드-코드-안에서-코덱스를-사용하는-코덱스-플러그인-세팅-가이드.md)
+- [클로드코드채널을 통해 Hermes Agent를 구독으로만 쓴다고???](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-클로드코드채널을-통해-Hermes-Agent를-구독으로만-쓴다고.md)
+- [[한국어더빙] Claude Design보다 더 나은 도구는 이미 있습니다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-한국어더빙-Claude-Design보다-더-나은-도구는-이미-있습니다.md)
+
+---
 - 개념 페이지: [[_concept-mcp]]
 - [[INDEX]]
