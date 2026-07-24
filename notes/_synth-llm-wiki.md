@@ -72,5 +72,21 @@ AI가 새 자료를 **인제스트**(소화)할 때마다 기존 위키를 업�
 > **LLM 위키란, AI가 내 자료를 직접 읽어 요약·연결·갱신하는 개인 지식 시스템으로 — 대화가 끝나도 맥락이 사라지지 않고 복리처럼 쌓이는 AI 전용 두뇌다.**
 
 ---
+## 📎 참조 노트 (클릭 → 원문)
+- [[Skill Review] GBrain, 인공지능 에이전트가 사용자의 개인적인 삶과 지식을 깊이 있게 학습할 수 있도록 돕는 Skill](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-15-Skill-Review-GBrain-인공지능-에이전트가-사용자의.md)
+- [옵시디언 하나에 모든 AI 에이전트 연결 | 무료 템플릿 제공](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-15-옵시디언-하나에-모든-AI-에이전트-연결.md)
+- [옵시디언 LLM Wiki, 아무 자료나 넣으면 안 됩니다 | LLM Wiki 만들기 전에 꼭 정해야 하는 2가지](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-12-옵시디언-LLM-Wiki-아무-자료나-넣으면-안-됩니다.md)
+- [같은 LLM 위키인데 결과물이 1,000배 차이나는 이유!!!(활용법 3가지 + 제 사용법 전부 공개)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-11-같은-LLM-위키인데-결과물이-1-000배-차이나는-이유-활용법-3가지.md)
+- [UX/UI 디자이너에게 옵시디언이 필수가 되고 있는 이유](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-05-UX-UI-디자이너에게-옵시디언이-필수가-되고-있는-이유.md)
+- [카파시의 LLM Wiki로 나만의 AI 세컨드 브레인 만들기, 이것만 보세요— 클로드 코드 × 옵시디언 × Graphify](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-24-카파시의-LLM-Wiki로-나만의-AI-세컨드-브레인-만들기-이것만.md)
+- [AI 토큰 84% 절감 LLM Wiki 패턴, Karpathy가 제안한 컨텍스트 관리법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-AI-토큰-84-절감-LLM-Wiki-패턴-Karpathy가-제안한.md)
+- [Andrej Karpathy 덕분에 모두의 Claude Code가 10배 강해졌습니다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-Andrej-Karpathy-덕분에-모두의-Claude-Code가.md)
+- [LLM Wiki가 망하는 진짜 이유: Obsidian·Claude Code보다 중요한 AI OS 설계](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-Claude-Code보다-중요한-AI-OS-설계.md)
+- [세계가 주목한 Karpathy LLM Wiki, 진짜 돌아가는 도구를 만들었습니다 | MindVault](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-세계가-주목한-Karpathy-LLM-Wiki-진짜-돌아가는-도구를.md)
+- [안쓰면 손해! 클로드코드가 내 노하우를 나무위키처럼 정리해줍니다 (feat. 안드레 카파시)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-안쓰면-손해-클로드코드가-내-노하우를-나무위키처럼-정리해줍니다-feat.md)
+- [옵시디언 + LLM 이 조합 미쳤습니다 | 옵시디언 + LLM Wiki로 만드는 나만의 AI 업무 시스템](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-옵시디언-LLM-Wiki로-만드는-나만의-AI-업무-시스템.md)
+- [카파시가 모두의 Claude Code를 10배 향상 시켰습니다...](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-카파시가-모두의-Claude-Code를-10배-향상-시켰습니다.md)
+
+---
 - 개념 페이지: [[_concept-llm-wiki]]
 - [[INDEX]]
