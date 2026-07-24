@@ -75,5 +75,21 @@ concept: claude-skill
 > **클로드 스킬은 반복 업무의 절차와 기준을 AI에게 한 번 가르쳐두는 재사용 매뉴얼로, 스킬의 수보다 최신성 유지가 AI 정확도를 결정한다.**
 
 ---
+## 📎 참조 노트 (클릭 → 원문)
+- [클로드 페이블5로 자동화 여기까지 된다? I 클로드 500시간 써본 대표 후기](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-11-클로드-페이블5로-자동화-여기까지-된다-I-클로드-500시간-써본-대표.md)
+- [클로드 페이블5 100% 사용 방법 | 딱 1가지만 따라해 보세요](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-08-클로드-페이블5-100-사용-방법.md)
+- [Claude Fable 5 Use Cases You Must Do NOW (Or Lose Thousands in 1 Week)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-04-Claude-Fable-5-Use-Cases-You-Must-Do.md)
+- [Meta에서 배운 실전 테크닉 - AI가 길 잃지 않는 코드베이스 & 토큰 비용 최적화](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-01-Meta에서-배운-실전-테크닉-AI가-길-잃지-않는-코드베이스-토큰.md)
+- [클로드 초보를 위한 스킬 | MD 완벽 개념 설명 #claude #claudeskills #claudecode](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-30-MD-완벽-개념-설명-claude-claudeskills.md)
+- [진짜는 에이전트가 아니라 '스킬'이었다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-25-진짜는-에이전트가-아니라-스킬-이었다.md)
+- [제발 카피하세요. | 클로드 AI 업무 자동화 3단계](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-25-클로드-AI-업무-자동화-3단계.md)
+- [클로드 코드 10분안에 레벨업 시키는 필수 스킬 7개 전부 공개합니다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-24-클로드-코드-10분안에-레벨업-시키는-필수-스킬-7개-전부-공개합니다.md)
+- [[Skill Review] GBrain, 인공지능 에이전트가 사용자의 개인적인 삶과 지식을 깊이 있게 학습할 수 있도록 돕는 Skill](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-15-Skill-Review-GBrain-인공지능-에이전트가-사용자의.md)
+- [진짜는 에이전트가 아니라 '스킬'이었다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-08-진짜는-에이전트가-아니라-스킬-이었다.md)
+- [5 Skills to Build an AI Operating System Like The 1% (Full Guide)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-5-Skills-to-Build-an-AI-Operating.md)
+- [나의 AI 에이전트 전환기 (w. 클로드 코드, 오픈클로)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-나의-AI-에이전트-전환기-w-클로드-코드-오픈클로.md)
+- [엔트로픽의 frontend-design 스킬보다 좀 더 고급스킬인 impeccable 알아보기 | 클로드 코드](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-엔트로픽의-frontend-design-스킬보다-좀-더-고급스킬인.md)
+
+---
 - 개념 페이지: [[_concept-claude-skill]]
 - [[INDEX]]
