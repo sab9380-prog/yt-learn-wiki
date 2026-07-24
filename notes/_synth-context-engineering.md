@@ -50,5 +50,23 @@ LLM 위키도, 프롬프트도, 도구도 — 많이 줄수록 오히려 성능�
 > **컨텍스트 엔지니어링이란, AI에게 어떤 정보를 언제 얼마나 주고 어떤 구조로 움직이게 할지를 설계하는 기술 — 프롬프트 한 줄이 아닌 AI의 작업 환경 전체를 짜는 것이다.**
 
 ---
+## 📎 참조 노트 (클릭 → 원문)
+- [1000:1 AX인재전쟁, 라이브 2시간만에 우승 도전합니다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-13-1-AX인재전쟁-라이브-2시간만에-우승-도전합니다.md)
+- [Anthropic 개발자가 직접 공개한 Claude Fable 5 사용법 (핵심은 언노운 찾기)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-07-Anthropic-개발자가-직접-공개한-Claude-Fable-5.md)
+- [Claude Fable 5 Use Cases You Must Do NOW (Or Lose Thousands in 1 Week)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-04-Claude-Fable-5-Use-Cases-You-Must-Do.md)
+- [클로드 코드 해커톤2위를 수상한 AI 스타트업의 생존기.이제는 이거 하셔야 살아남을수 있습니다 l AI 스타트업 Aristo COO 박인영 (AI 팟캐스트 #74)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-04-클로드-코드-해커톤2위를-수상한-AI-스타트업의-생존기-이제는-이거.md)
+- [유능한 페이블을 바보로 만들지 마세요. 명령은 줄이고, 이유를 말하세요.](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-07-03-유능한-페이블을-바보로-만들지-마세요-명령은-줄이고-이유를-말하세요.md)
+- [100만 토큰시대! 앤트로픽이 알려준 클로드코드 컨텍스트 관리법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-26-100만-토큰시대-앤트로픽이-알려준-클로드코드-컨텍스트-관리법.md)
+- [AI가 까먹는 진짜 이유 | Anthropic 컨텍스트 엔지니어링 완벽 가이드](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-24-Anthropic-컨텍스트-엔지니어링-완벽-가이드.md)
+- [프롬프트 엔지니어링은 끝났다｜상위 1%가 쓰는 컨텍스트 엔지니어링의 진실](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-24-상위-1-가-쓰는-컨텍스트-엔지니어링의-진실.md)
+- [클로드 코드 10분안에 레벨업 시키는 필수 스킬 7개 전부 공개합니다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-24-클로드-코드-10분안에-레벨업-시키는-필수-스킬-7개-전부-공개합니다.md)
+- [옵시디언 LLM Wiki, 아무 자료나 넣으면 안 됩니다 | LLM Wiki 만들기 전에 꼭 정해야 하는 2가지](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-12-옵시디언-LLM-Wiki-아무-자료나-넣으면-안-됩니다.md)
+- [아직도 클로드코드에 외부 툴 붙이세요? 이제 다 안에 있습니다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-01-아직도-클로드코드에-외부-툴-붙이세요-이제-다-안에-있습니다.md)
+- [AI 토큰 84% 절감 LLM Wiki 패턴, Karpathy가 제안한 컨텍스트 관리법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-AI-토큰-84-절감-LLM-Wiki-패턴-Karpathy가-제안한.md)
+- [엔트로픽의 frontend-design 스킬보다 좀 더 고급스킬인 impeccable 알아보기 | 클로드 코드](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-엔트로픽의-frontend-design-스킬보다-좀-더-고급스킬인.md)
+- [제 인생 모든 데이터를 OpenClaw에 줘봤습니다 | 하네스 엔지니어링 · 옵시디언 · Claude Code · 라이프로깅 · AI OS](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-제-인생-모든-데이터를-OpenClaw에-줘봤습니다.md)
+- [클로드와 Codex가 자동 티키타카하며 개발하는 셋업 보여드립니다 - 회의·리뷰·구현까지 (오픈클로+디스코드)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-클로드와-Codex가-자동-티키타카하며-개발하는-셋업-보여드립니다-회의.md)
+
+---
 - 개념 페이지: [[_concept-context-engineering]]
 - [[INDEX]]
