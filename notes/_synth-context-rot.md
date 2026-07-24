@@ -66,5 +66,19 @@ concept: context-rot
 > AI 대화가 길어질수록 정보가 과부하되어 성능이 조용히 무너지는 현상 — 100만 토큰 창이 있어도 40%만 써도 이미 시작되며, 원인은 모델이 아니라 관리를 안 한 탓이다.
 
 ---
+## 📎 참조 노트 (클릭 → 원문)
+- [AI 세팅 1등 비법, 뉴욕 해커톤 8시간 우승자의 비밀](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-27-AI-세팅-1등-비법-뉴욕-해커톤-8시간-우승자의-비밀.md)
+- [100만 토큰시대! 앤트로픽이 알려준 클로드코드 컨텍스트 관리법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-26-100만-토큰시대-앤트로픽이-알려준-클로드코드-컨텍스트-관리법.md)
+- [AI가 까먹는 진짜 이유 | Anthropic 컨텍스트 엔지니어링 완벽 가이드](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-24-Anthropic-컨텍스트-엔지니어링-완벽-가이드.md)
+- [프롬프트 엔지니어링은 끝났다｜상위 1%가 쓰는 컨텍스트 엔지니어링의 진실](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-24-상위-1-가-쓰는-컨텍스트-엔지니어링의-진실.md)
+- [옵시디언 하나에 모든 AI 에이전트 연결 | 무료 템플릿 제공](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-15-옵시디언-하나에-모든-AI-에이전트-연결.md)
+- [카파시의 LLM Wiki로 나만의 AI 세컨드 브레인 만들기, 이것만 보세요— 클로드 코드 × 옵시디언 × Graphify](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-24-카파시의-LLM-Wiki로-나만의-AI-세컨드-브레인-만들기-이것만.md)
+- [100만 토큰시대! 앤트로픽이 알려준 클로드코드 컨텍스트 관리법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-100만-토큰시대-앤트로픽이-알려준-클로드코드-컨텍스트-관리법.md)
+- [Claude Code 비용 80% 절감하는 settings.json 3줄과 14만명이 쓰는 everything-claude-code 설정법](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-Claude-Code-비용-80-절감하는-settings-json.md)
+- [LLM Wiki가 망하는 진짜 이유: Obsidian·Claude Code보다 중요한 AI OS 설계](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-Claude-Code보다-중요한-AI-OS-설계.md)
+- [GSD, Superpowers, Claude Code 중 누가 새로운 AI 최강자일까요?](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-GSD-Superpowers-Claude-Code-중-누가-새로운-AI.md)
+- [The 7 Levels of Claude Code & RAG](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-The-7-Levels-of-Claude-Code-RAG.md)
+
+---
 - 개념 페이지: [[_concept-context-rot]]
 - [[INDEX]]
