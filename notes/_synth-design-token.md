@@ -48,5 +48,11 @@ concept: design-token
 > **디자인 토큰이란, "색상·크기 같은 디자인의 기본값을 단 하나의 이름으로 등록해 두고, 모든 곳에서 그것을 참조하게 만드는 디자인의 표준 레시피"다.**
 
 ---
+## 📎 참조 노트 (클릭 → 원문)
+- [진짜는 에이전트가 아니라 '스킬'이었다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-25-진짜는-에이전트가-아니라-스킬-이었다.md)
+- [진짜는 에이전트가 아니라 '스킬'이었다](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-06-08-진짜는-에이전트가-아니라-스킬-이었다.md)
+- [AI가 Figma 변수 200개를 혼자 만듦. 디자인 토큰부터 변수 구조, 시스템까지 자동 완성 실화임? (feat. Claude)](https://github.com/sab9380-prog/yt-learn-wiki/blob/main/notes/2026-05-22-AI가-Figma-변수-200개를-혼자-만듦-디자인-토큰부터-변수-구조.md)
+
+---
 - 개념 페이지: [[_concept-design-token]]
 - [[INDEX]]
