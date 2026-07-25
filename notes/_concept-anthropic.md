@@ -8,6 +8,7 @@ concept: anthropic
 > 개념 집약 · 자동 생성 (수정 금지) · 노트 6개
 
 - 상위 주제: [[_topic-ANTHROPIC]]
+- 🧭 종합: [[_synth-anthropic]]
 
 ## 관련 노트
 - [[2026-07-07-Anthropic-개발자가-직접-공개한-Claude-Fable-5]] — Anthropic 개발자가 직접 공개한 Claude Fable 5 사용법 (핵심은 언노운 찾기) — AI 결과물의 품질은 모델 성능이 아니라 내가 '모른다는 것조차 모르는 것(언노운)'을 얼마나 빨리 발굴하느냐에 달려 있으므로, AI에게 더 시키기 전에 AI로 나 자신을 먼저 업그레이드하라.
