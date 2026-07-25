@@ -3255,5 +3255,45 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-25-99-는-모르는-종이-질감-모션그래픽-감각-없이도-만드는-법-feat.md",
+    "title": "99%는 모르는 종이 질감 모션그래픽, 감각 없이도 만드는 법 (feat. 구글 flow 옴니)",
+    "category": "Picks전략",
+    "date": "2026-07-25",
+    "core_message": "디자인 감각이 없어도 Pinterest 레퍼런스 + Google Flow + 무료 TTS 조합으로 EBS·Vox 스타일 교육용 모션 그래픽 영상을 무료에 가깝게 만들 수 있다.",
+    "topics": [],
+    "concepts": [
+      {
+        "id": "스타일-시트",
+        "label": "스타일 시트",
+        "topic": null
+      },
+      {
+        "id": "Google-Flow",
+        "label": "Google Flow",
+        "topic": null
+      },
+      {
+        "id": "모션-그래픽",
+        "label": "모션 그래픽",
+        "topic": null
+      },
+      {
+        "id": "레퍼런스-수집",
+        "label": "레퍼런스 수집",
+        "topic": null
+      },
+      {
+        "id": "TTS",
+        "label": "TTS",
+        "topic": null
+      },
+      {
+        "id": "에이전트-모드",
+        "label": "에이전트 모드",
+        "topic": null
+      }
+    ]
   }
 ]
