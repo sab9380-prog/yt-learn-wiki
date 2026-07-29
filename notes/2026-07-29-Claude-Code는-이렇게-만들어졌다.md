@@ -1,0 +1,1131 @@
+---
+title: "[한영자막] 보리스 체르니: Claude Code는 이렇게 만들어졌다"
+source_url: https://youtube.com/watch?v=UkoosAsEA8w
+video_id: UkoosAsEA8w
+source_type: youtube
+lang: en
+analyzed: 2026-07-29
+category: 일반학습
+tags: ["개념/언호블링", "개념/제품-과잉", "개념/프롬프트-인젝션-방어", "개념/동적-워크플로우", "개념/ablation", "개념/루프·루틴"]
+key_concepts: ["언호블링(unhobbling)", "제품 과잉(product overhang)", "프롬프트 인젝션 방어", "동적 워크플로우", "ablation(시스템 프롬프트 삭제 평가)", "루프·루틴(Loops & Routines)"]
+status: active
+---
+# \[한영자막\] 보리스 체르니: Claude Code는 이렇게 만들어졌다
+
+## 🧠 이해 (Understand)
+- **Summary:** Anthropic Claude Code 팀 리더 Boris가 Opus 5의 주요 신기능(프롬프트 인젝션 차단, 장기 실행, 비전 향상)을 소개하고, 새 모델 출시마다 시스템 프롬프트와 하네스를 삭제·재구축하는 'ablation 기반 개발 방식'을 권장한다. Claude Code는 이제 동적 워크플로우로 수천 개의 에이전트를 수주간 자율 실행할 수 있으며, Bun의 Zig 코드베이스를 Rust로 재작성하는 11일 작업이 실제 프로덕션에 배포됐다. 핵심 철학은 '언호블링(unhobbling)' — 모델의 잠재력을 가로막는 과도한 프롬프트와 스캐폴딩을 제거해 제품 과잉(product overhang)을 해소하는 것. 좋은 AI 제품 빌더의 핵심 역량은 복잡한 프롬프트 엔지니어링이 아니라 '어려운 과제를 주고, 모델이 스스로 결과를 검증하게 하고, 실패 패턴을 관찰해 반복하는' 경험적 접근법이다.
+- **Core Message:** 모델이 진화할수록 프롬프트·스캐폴딩을 과감히 삭제하고 경험적으로 재구축해야 모델의 진짜 능력(product overhang)을 해방시킬 수 있다.
+> The model is not that. It's the way to think about it is almost a living creature — it's something more organic. Every model generation, it behaves differently. It has a slightly different personality.
+> Maybe don't listen to the LinkedIn influencers.
+> You have to give it a task that's too hard. You have to give it the tools to verify the work — that's kind of it.
+❗ Opus 5가 Bun의 Zig 코드베이스 전체를 Rust로 재작성하는 데 11일 걸렸으며, 이 코드가 현재 Claude Code 프로덕션에 실제 배포됐다.
+❗ Claude Code의 시스템 프롬프트 80% 이상이 Opus 5 출시와 함께 삭제됐고, 'simple=1' 환경변수로 나머지 전체도 제거 가능하다.
+❗ 프롬프트 인젝션 방어에 Chris Olah의 기계적 해석가능성(mechanistic interpretability) 연구를 활용해 뉴런 단위에서 인젝션 시도를 탐지한다.
+
+## 📚 핵심 용어
+- **언호블링(Unhobbling):** 모델의 잠재 능력을 억누르는 과도한 프롬프트·스캐폴딩을 제거해 본래 역량을 끌어내는 행위. / 발에 족쇄를 찬 달리기 선수에서 족쇄를 풀어주는 것. 선수는 원래 빠른데 족쇄(과잉 프롬프트)가 속도를 막고 있었다. / 프롬프트 엔지니어링은 지시를 추가하는 것, 언호블링은 오히려 지시를 제거하는 것. 방향이 정반대다.
+- **제품 과잉(Product Overhang):** 현재 모델이 이미 할 수 있는데 아직 아무도 제품으로 구현하지 않은 미실현 능력의 격차. / 스마트폰 카메라가 이미 전문가급 야경 촬영이 가능한데 아무도 그 기능을 쓰는 앱을 만들지 않은 상태와 같다. / 기술 부채는 과거 결정이 남긴 부담, 제품 과잉은 현재 능력이 만들어낸 미래 기회. 둘 다 격차지만 방향이 반대다.
+- **동적 워크플로우(Dynamic Workflows):** Claude Code가 하나의 복잡한 작업을 수십~수천 개의 하위 에이전트로 자동 분할·병렬 실행·검증하는 오케스트레이션 기능. / 대형 건설 현장에서 현장소장(Claude)이 각 공정별 팀을 배치하고 결과를 취합해 다음 단계를 지시하는 것과 같다. / 루프·루틴은 반복적인 단일 작업을 정기 실행, 동적 워크플로우는 한 번의 복잡한 작업을 내부적으로 병렬 분해. 용도가 다르다.
+- **Ablation(ablation 평가):** 시스템 프롬프트나 코드를 통째로 삭제한 뒤 한 줄씩 복원하며 각 요소의 실제 기여도를 측정하는 평가 방법. / 요리 레시피에서 재료를 하나씩 빼보며 '이 재료가 없으면 맛이 어떻게 달라지나'를 확인하는 것. / 일반 A/B 테스트는 새 요소를 추가해 비교, ablation은 기존 요소를 제거해 비교. 추가 vs 삭제로 방향이 다르다.
+
+## 🚀 실행 (Execute)
+- [ ] 현재 사용 중인 Claude Code 시스템 프롬프트·CLAUDE.md·훅스를 전체 삭제하고 Opus 5로 핵심 작업 3가지를 실행해 실패 패턴만 기록한다 — ⏰ 이번 주 · ⚡ 2~3시간
+  - 담당: 나
+  - 이유: Opus 5는 이전 모델용 지시가 오히려 성능을 저하시킬 수 있으며, ablation 없이는 어떤 지시가 실제로 필요한지 알 수 없다
+- [ ] 반복적인 일상 유지 작업(데드코드 정리, 테스트 추가 등) 중 하나를 골라 Claude Code 루틴(Routine)으로 설정하고 3일간 결과를 관찰한다 — ⏰ 2주 내 · ⚡ 1~2시간 설정 + 3일 관찰
+  - 담당: 나 또는 팀원
+  - 이유: 루프·루틴은 수동 반복 작업을 자동화하는 가장 즉각적인 레버리지 포인트이며, 영상에서 실제 프로덕션 적용 사례가 확인됐다
+- [ ] 현재 '모델이 못 할 것 같아서' 시도하지 않았던 복잡한 작업 하나를 골라 동적 워크플로우(Dynamic Workflows)로 실험한다 — ⏰ 이번 주 · ⚡ 30분~1시간 (프롬프트 설계) + 실행 대기
+  - 담당: 나
+  - 이유: 제품 과잉 해소의 핵심은 실험이며, Bun 재작성 사례처럼 이전 모델 기준의 불가능 판단이 새 모델에선 틀릴 수 있다
+- 자료: Claude Code 공식 문서 — Dynamic Workflows, Loops & Routines 항목 (확인 필요: docs.anthropic.com)
+- 자료: Claude Code simple mode: 환경변수 CLAUDE_SIMPLE=1 설정 후 실행 (영상에서 언급, 실제 변수명은 공식 문서 확인 필요)
+- 자료: Chris Olah의 Mechanistic Interpretability 연구 — Anthropic Transformer Circuits (transformer-circuits.pub)
+- Timeline: 1일차: 시스템 프롬프트 전체 삭제 후 Opus 5 ablation 실험 → 3~5일차: 실패 패턴 기록 후 필요한 지시만 한 줄씩 복원 → 1주차 말: 루틴 1개 설정 → 2주차: 동적 워크플로우 실험 1회
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
+- 핵심 개념: [[_concept-언호블링|언호블링]] · [[_concept-제품-과잉|제품 과잉]] · [[_concept-프롬프트-인젝션-방어|프롬프트 인젝션 방어]] · [[_concept-동적-워크플로우|동적 워크플로우]] · [[_concept-ablation|ablation]] · [[_concept-루프·루틴|루프·루틴]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=UkoosAsEA8w&t=0) [applause and cheering]
+- [0:02](https://youtube.com/watch?v=UkoosAsEA8w&t=2) >> It's great to be here.
+- [0:04](https://youtube.com/watch?v=UkoosAsEA8w&t=4) >> Fresh off the press. You guys just
+- [0:06](https://youtube.com/watch?v=UkoosAsEA8w&t=6) shipped Opus 5 yesterday.
+- [0:09](https://youtube.com/watch?v=UkoosAsEA8w&t=9) >> Yes.
+- [0:10](https://youtube.com/watch?v=UkoosAsEA8w&t=10) >> [cheering]
+- [0:11](https://youtube.com/watch?v=UkoosAsEA8w&t=11) >> And it seems that
+- [0:13](https://youtube.com/watch?v=UkoosAsEA8w&t=13) model performance keeps accelerating.
+- [0:16](https://youtube.com/watch?v=UkoosAsEA8w&t=16) You guys got and took Arc AGI 3 to 30%,
+- [0:21](https://youtube.com/watch?v=UkoosAsEA8w&t=21) which is incredible.
+- [0:23](https://youtube.com/watch?v=UkoosAsEA8w&t=23) >> Yes.
+- [0:24](https://youtube.com/watch?v=UkoosAsEA8w&t=24) >> And for context, before the
+- [0:26](https://youtube.com/watch?v=UkoosAsEA8w&t=26) best score was in
+- [0:28](https://youtube.com/watch?v=UkoosAsEA8w&t=28) in the low single digits or low teens,
+- [0:31](https://youtube.com/watch?v=UkoosAsEA8w&t=31) right? What can Opus 5 do now that it
+- [0:35](https://youtube.com/watch?v=UkoosAsEA8w&t=35) couldn't versus a previous version?
+- [0:38](https://youtube.com/watch?v=UkoosAsEA8w&t=38) >> Yeah, there's um there's a lot that goes
+- [0:40](https://youtube.com/watch?v=UkoosAsEA8w&t=40) into every new model and there's a lot
+- [0:43](https://youtube.com/watch?v=UkoosAsEA8w&t=43) of new capabilities that we teach and uh
+- [0:46](https://youtube.com/watch?v=UkoosAsEA8w&t=46) get the model to do.
+- [0:48](https://youtube.com/watch?v=UkoosAsEA8w&t=48) Whenever you do model training,
+- [0:51](https://youtube.com/watch?v=UkoosAsEA8w&t=51) you try to teach a whole bunch of
+- [0:53](https://youtube.com/watch?v=UkoosAsEA8w&t=53) different things and most often it
+- [0:55](https://youtube.com/watch?v=UkoosAsEA8w&t=55) doesn't work.
+- [0:57](https://youtube.com/watch?v=UkoosAsEA8w&t=57) But some subset of the things the model
+- [0:59](https://youtube.com/watch?v=UkoosAsEA8w&t=59) does learn. And sometimes it also
+- [1:01](https://youtube.com/watch?v=UkoosAsEA8w&t=61) surprises you. It has these skills, it
+- [1:03](https://youtube.com/watch?v=UkoosAsEA8w&t=63) has abilities that you you actually
+- [1:05](https://youtube.com/watch?v=UkoosAsEA8w&t=65) didn't really teach it, but it it just
+- [1:07](https://youtube.com/watch?v=UkoosAsEA8w&t=67) kind of learned. For five, one example
+- [1:10](https://youtube.com/watch?v=UkoosAsEA8w&t=70) of something it does that I think no
+- [1:12](https://youtube.com/watch?v=UkoosAsEA8w&t=72) other model has done
+- [1:14](https://youtube.com/watch?v=UkoosAsEA8w&t=74) is it runs for a very long period of
+- [1:17](https://youtube.com/watch?v=UkoosAsEA8w&t=77) time. And especially when you combine
+- [1:19](https://youtube.com/watch?v=UkoosAsEA8w&t=79) Opus 5 with Auto mode, it's just like
+- [1:22](https://youtube.com/watch?v=UkoosAsEA8w&t=82) incredible. Like it can go for days,
+- [1:24](https://youtube.com/watch?v=UkoosAsEA8w&t=84) weeks, months at a time. It just won't
+- [1:26](https://youtube.com/watch?v=UkoosAsEA8w&t=86) stop.
+- [1:27](https://youtube.com/watch?v=UkoosAsEA8w&t=87) Um you don't even need to use
+- [1:29](https://youtube.com/watch?v=UkoosAsEA8w&t=89) scaffolding. So you don't need scratch
+- [1:31](https://youtube.com/watch?v=UkoosAsEA8w&t=91) goal, you don't need all this other
+- [1:33](https://youtube.com/watch?v=UkoosAsEA8w&t=93) stuff. It'll just go because it knows it
+- [1:35](https://youtube.com/watch?v=UkoosAsEA8w&t=95) needs to do the task. Um another thing
+- [1:37](https://youtube.com/watch?v=UkoosAsEA8w&t=97) that I'm really excited about and um I'm
+- [1:40](https://youtube.com/watch?v=UkoosAsEA8w&t=100) going to start I think to talk about a
+- [1:41](https://youtube.com/watch?v=UkoosAsEA8w&t=101) little bit more, um but it's kind of
+- [1:43](https://youtube.com/watch?v=UkoosAsEA8w&t=103) surprising because it's such a new
+- [1:44](https://youtube.com/watch?v=UkoosAsEA8w&t=104) capability, is the model does not seem
+- [1:47](https://youtube.com/watch?v=UkoosAsEA8w&t=107) to be prompt injectable anymore.
+- [1:51](https://youtube.com/watch?v=UkoosAsEA8w&t=111) >> That's prompt injectable.
+- [1:54](https://youtube.com/watch?v=UkoosAsEA8w&t=114) >> It's crazy. Like people have talked
+- [1:55](https://youtube.com/watch?v=UkoosAsEA8w&t=115) about this like lethal trifecta for a
+- [1:57](https://youtube.com/watch?v=UkoosAsEA8w&t=117) long time. And this really affects kind
+- [1:59](https://youtube.com/watch?v=UkoosAsEA8w&t=119) of harness design and agent design and
+- [2:02](https://youtube.com/watch?v=UkoosAsEA8w&t=122) and and product design. Because if the
+- [2:04](https://youtube.com/watch?v=UkoosAsEA8w&t=124) model reads some instruction on the
+- [2:06](https://youtube.com/watch?v=UkoosAsEA8w&t=126) internet that's like, you know, do X and
+- [2:08](https://youtube.com/watch?v=UkoosAsEA8w&t=128) Y and Z and also delete everything on
+- [2:10](https://youtube.com/watch?v=UkoosAsEA8w&t=130) the user's computer.
+- [2:12](https://youtube.com/watch?v=UkoosAsEA8w&t=132) A year ago the model would have just
+- [2:13](https://youtube.com/watch?v=UkoosAsEA8w&t=133) done it.
+- [2:15](https://youtube.com/watch?v=UkoosAsEA8w&t=135) But nowadays Opus does not.
+- [2:18](https://youtube.com/watch?v=UkoosAsEA8w&t=138) And this has actually been the case
+- [2:19](https://youtube.com/watch?v=UkoosAsEA8w&t=139) since like Opus 4.7, 4.8. Uh Sonnet 5
+- [2:23](https://youtube.com/watch?v=UkoosAsEA8w&t=143) has been quite good at this, Haiku was
+- [2:24](https://youtube.com/watch?v=UkoosAsEA8w&t=144) quite good at it. But Opus 5 just hits
+- [2:26](https://youtube.com/watch?v=UkoosAsEA8w&t=146) like a new frontier on this. So
+- [2:29](https://youtube.com/watch?v=UkoosAsEA8w&t=149) essentially if you combine the
+- [2:31](https://youtube.com/watch?v=UkoosAsEA8w&t=151) well-aligned model, so this is like
+- [2:32](https://youtube.com/watch?v=UkoosAsEA8w&t=152) essentially 3 years of research into
+- [2:34](https://youtube.com/watch?v=UkoosAsEA8w&t=154) alignment,
+- [2:35](https://youtube.com/watch?v=UkoosAsEA8w&t=155) with a prompt injection classifier,
+- [2:37](https://youtube.com/watch?v=UkoosAsEA8w&t=157) which we run for all traffic. And what
+- [2:39](https://youtube.com/watch?v=UkoosAsEA8w&t=159) this is doing is it's based on Chris
+- [2:41](https://youtube.com/watch?v=UkoosAsEA8w&t=161) Olah's mechanistic interpretability
+- [2:43](https://youtube.com/watch?v=UkoosAsEA8w&t=163) work, where it's it's literally we're
+- [2:45](https://youtube.com/watch?v=UkoosAsEA8w&t=165) looking at neurons in the model's brain
+- [2:47](https://youtube.com/watch?v=UkoosAsEA8w&t=167) that light up when prompt injection
+- [2:49](https://youtube.com/watch?v=UkoosAsEA8w&t=169) happens.
+- [2:50](https://youtube.com/watch?v=UkoosAsEA8w&t=170) So the model won't even tell you, but we
+- [2:52](https://youtube.com/watch?v=UkoosAsEA8w&t=172) can actually see those neurons and we
+- [2:54](https://youtube.com/watch?v=UkoosAsEA8w&t=174) can figure out and diagnose that it's
+- [2:55](https://youtube.com/watch?v=UkoosAsEA8w&t=175) happening.
+- [2:56](https://youtube.com/watch?v=UkoosAsEA8w&t=176) And then you combine that with the auto
+- [2:57](https://youtube.com/watch?v=UkoosAsEA8w&t=177) mode classifier. And with these three
+- [3:00](https://youtube.com/watch?v=UkoosAsEA8w&t=180) layers,
+- [3:01](https://youtube.com/watch?v=UkoosAsEA8w&t=181) we just cannot demonstrate prompt
+- [3:03](https://youtube.com/watch?v=UkoosAsEA8w&t=183) injection anymore.
+- [3:04](https://youtube.com/watch?v=UkoosAsEA8w&t=184) >> Talking about uh prompt injection, the
+- [3:07](https://youtube.com/watch?v=UkoosAsEA8w&t=187) other side of the coin is now the system
+- [3:10](https://youtube.com/watch?v=UkoosAsEA8w&t=190) prompt. Let's talk a bit about the new
+- [3:13](https://youtube.com/watch?v=UkoosAsEA8w&t=193) release. You actually deleted over 80%
+- [3:17](https://youtube.com/watch?v=UkoosAsEA8w&t=197) of the system prompt from Claude code.
+- [3:20](https://youtube.com/watch?v=UkoosAsEA8w&t=200) >> Yes.
+- [3:20](https://youtube.com/watch?v=UkoosAsEA8w&t=200) >> Tell us more about that.
+- [3:21](https://youtube.com/watch?v=UkoosAsEA8w&t=201) >> I think something that a lot of people
+- [3:23](https://youtube.com/watch?v=UkoosAsEA8w&t=203) might not realize is um
+- [3:26](https://youtube.com/watch?v=UkoosAsEA8w&t=206) Claude code as a product and as a
+- [3:28](https://youtube.com/watch?v=UkoosAsEA8w&t=208) harness is just always changing. We're
+- [3:30](https://youtube.com/watch?v=UkoosAsEA8w&t=210) always adding stuff. We're always
+- [3:32](https://youtube.com/watch?v=UkoosAsEA8w&t=212) deleting stuff.
+- [3:34](https://youtube.com/watch?v=UkoosAsEA8w&t=214) Every time that a new model comes out,
+- [3:36](https://youtube.com/watch?v=UkoosAsEA8w&t=216) we delete a bunch of the system prompt,
+- [3:38](https://youtube.com/watch?v=UkoosAsEA8w&t=218) change a bunch of the system prompt, we
+- [3:40](https://youtube.com/watch?v=UkoosAsEA8w&t=220) change the set of tools all the time, we
+- [3:42](https://youtube.com/watch?v=UkoosAsEA8w&t=222) change the prompts for the tools all the
+- [3:44](https://youtube.com/watch?v=UkoosAsEA8w&t=224) time. And the reason is
+- [3:46](https://youtube.com/watch?v=UkoosAsEA8w&t=226) every model is very different.
+- [3:49](https://youtube.com/watch?v=UkoosAsEA8w&t=229) So something that you did for one model
+- [3:52](https://youtube.com/watch?v=UkoosAsEA8w&t=232) maybe 3 months ago, it just might not
+- [3:54](https://youtube.com/watch?v=UkoosAsEA8w&t=234) translate at all to the next model.
+- [3:57](https://youtube.com/watch?v=UkoosAsEA8w&t=237) And so one thing about Opus 5 is it's
+- [4:00](https://youtube.com/watch?v=UkoosAsEA8w&t=240) just really intelligent. And a lot of
+- [4:03](https://youtube.com/watch?v=UkoosAsEA8w&t=243) the stuff in the system prompt was
+- [4:05](https://youtube.com/watch?v=UkoosAsEA8w&t=245) correcting for these behaviors that the
+- [4:06](https://youtube.com/watch?v=UkoosAsEA8w&t=246) model should have known,
+- [4:08](https://youtube.com/watch?v=UkoosAsEA8w&t=248) but it didn't.
+- [4:10](https://youtube.com/watch?v=UkoosAsEA8w&t=250) Now Opus 5 just does it.
+- [4:12](https://youtube.com/watch?v=UkoosAsEA8w&t=252) So yeah, we deleted 80% of the system
+- [4:15](https://youtube.com/watch?v=UkoosAsEA8w&t=255) prompt.
+- [4:16](https://youtube.com/watch?v=UkoosAsEA8w&t=256) You can actually try deleting the rest
+- [4:19](https://youtube.com/watch?v=UkoosAsEA8w&t=259) of it, too. Um so when you run Claude
+- [4:21](https://youtube.com/watch?v=UkoosAsEA8w&t=261) code, you can just do like {dash} {dash}
+- [4:22](https://youtube.com/watch?v=UkoosAsEA8w&t=262) system prompt and set whatever system
+- [4:24](https://youtube.com/watch?v=UkoosAsEA8w&t=264) prompt you want if you want to
+- [4:25](https://youtube.com/watch?v=UkoosAsEA8w&t=265) experiment with it.
+- [4:26](https://youtube.com/watch?v=UkoosAsEA8w&t=266) And another thing that you can try is um
+- [4:29](https://youtube.com/watch?v=UkoosAsEA8w&t=269) simple mode. So this is actually this
+- [4:31](https://youtube.com/watch?v=UkoosAsEA8w&t=271) kind of undocumented feature. If you do
+- [4:33](https://youtube.com/watch?v=UkoosAsEA8w&t=273) Claude code simple equals one, like this
+- [4:36](https://youtube.com/watch?v=UkoosAsEA8w&t=276) environment variable, and then you run
+- [4:38](https://youtube.com/watch?v=UkoosAsEA8w&t=278) Claude, it'll delete all the system
+- [4:40](https://youtube.com/watch?v=UkoosAsEA8w&t=280) prompts, including from the tools.
+- [4:42](https://youtube.com/watch?v=UkoosAsEA8w&t=282) And we actually use this as a sort of
+- [4:44](https://youtube.com/watch?v=UkoosAsEA8w&t=284) ablation to figure out is the prompt
+- [4:47](https://youtube.com/watch?v=UkoosAsEA8w&t=287) useful? And what's interesting is that
+- [4:49](https://youtube.com/watch?v=UkoosAsEA8w&t=289) the model is actually a little bit more
+- [4:51](https://youtube.com/watch?v=UkoosAsEA8w&t=291) intelligent without these prompts.
+- [4:53](https://youtube.com/watch?v=UkoosAsEA8w&t=293) That's something that we've been
+- [4:54](https://youtube.com/watch?v=UkoosAsEA8w&t=294) finding. But when you use Claude code as
+- [4:56](https://youtube.com/watch?v=UkoosAsEA8w&t=296) a product, you do actually want some of
+- [4:58](https://youtube.com/watch?v=UkoosAsEA8w&t=298) these prompts because it helps you use
+- [5:01](https://youtube.com/watch?v=UkoosAsEA8w&t=301) the product and it it helps the the
+- [5:02](https://youtube.com/watch?v=UkoosAsEA8w&t=302) product behave and the model behave in
+- [5:04](https://youtube.com/watch?v=UkoosAsEA8w&t=304) the way that you would want when when
+- [5:06](https://youtube.com/watch?v=UkoosAsEA8w&t=306) you're using it as a person.
+- [5:07](https://youtube.com/watch?v=UkoosAsEA8w&t=307) >> I think the thing that's really
+- [5:09](https://youtube.com/watch?v=UkoosAsEA8w&t=309) fascinating in this era of building,
+- [5:11](https://youtube.com/watch?v=UkoosAsEA8w&t=311) basically you have built the best
+- [5:13](https://youtube.com/watch?v=UkoosAsEA8w&t=313) hardness in the world for for Claude,
+- [5:16](https://youtube.com/watch?v=UkoosAsEA8w&t=316) and that's Claude code. From what I'm
+- [5:18](https://youtube.com/watch?v=UkoosAsEA8w&t=318) hearing, you for every model release,
+- [5:20](https://youtube.com/watch?v=UkoosAsEA8w&t=320) you basically delete all of the code
+- [5:22](https://youtube.com/watch?v=UkoosAsEA8w&t=322) base, delete all of the prompt, and
+- [5:24](https://youtube.com/watch?v=UkoosAsEA8w&t=324) start from scratch every time. That in
+- [5:27](https://youtube.com/watch?v=UkoosAsEA8w&t=327) the old world would have been not
+- [5:29](https://youtube.com/watch?v=UkoosAsEA8w&t=329) something
+- [5:30](https://youtube.com/watch?v=UkoosAsEA8w&t=330) start up would have done for the
+- [5:31](https://youtube.com/watch?v=UkoosAsEA8w&t=331) product. It's like press delete every 6
+- [5:33](https://youtube.com/watch?v=UkoosAsEA8w&t=333) months for everything.
+- [5:35](https://youtube.com/watch?v=UkoosAsEA8w&t=335) >> That's right, that's right. We So to be
+- [5:36](https://youtube.com/watch?v=UkoosAsEA8w&t=336) fair, we don't delete the entire code
+- [5:38](https://youtube.com/watch?v=UkoosAsEA8w&t=338) base, but we do delete a lot. So every
+- [5:41](https://youtube.com/watch?v=UkoosAsEA8w&t=341) time there's a new model, we try we call
+- [5:42](https://youtube.com/watch?v=UkoosAsEA8w&t=342) it in research we call this ablation.
+- [5:45](https://youtube.com/watch?v=UkoosAsEA8w&t=345) And so what this means is you delete the
+- [5:46](https://youtube.com/watch?v=UkoosAsEA8w&t=346) entire system prompt, and then you bring
+- [5:48](https://youtube.com/watch?v=UkoosAsEA8w&t=348) it back line by line to figure out what
+- [5:50](https://youtube.com/watch?v=UkoosAsEA8w&t=350) is the impact of each individual line.
+- [5:52](https://youtube.com/watch?v=UkoosAsEA8w&t=352) Um it's sort of like a eval, and that
+- [5:54](https://youtube.com/watch?v=UkoosAsEA8w&t=354) you can kind of like evaluate it, and uh
+- [5:56](https://youtube.com/watch?v=UkoosAsEA8w&t=356) ablation essentially it's a eval, but
+- [5:58](https://youtube.com/watch?v=UkoosAsEA8w&t=358) you delete things to figure out the
+- [5:59](https://youtube.com/watch?v=UkoosAsEA8w&t=359) impact. And yeah, like we do the same
+- [6:02](https://youtube.com/watch?v=UkoosAsEA8w&t=362) thing for tools. Like we unship tools
+- [6:03](https://youtube.com/watch?v=UkoosAsEA8w&t=363) all the time. We, you know, delete code
+- [6:05](https://youtube.com/watch?v=UkoosAsEA8w&t=365) in the harness all the time. If you look
+- [6:07](https://youtube.com/watch?v=UkoosAsEA8w&t=367) at actually the code that's in the
+- [6:08](https://youtube.com/watch?v=UkoosAsEA8w&t=368) Claude code harness today, almost all of
+- [6:11](https://youtube.com/watch?v=UkoosAsEA8w&t=371) it is about safety and permissions and
+- [6:13](https://youtube.com/watch?v=UkoosAsEA8w&t=373) static analysis. And there's a bunch of
+- [6:15](https://youtube.com/watch?v=UkoosAsEA8w&t=375) UI code, and we've actually unshipped a
+- [6:18](https://youtube.com/watch?v=UkoosAsEA8w&t=378) lot of the other code already.
+- [6:20](https://youtube.com/watch?v=UkoosAsEA8w&t=380) >> Do you think this way of building a
+- [6:22](https://youtube.com/watch?v=UkoosAsEA8w&t=382) agentic product and harness,
+- [6:25](https://youtube.com/watch?v=UkoosAsEA8w&t=385) and basically doing ablations every time
+- [6:28](https://youtube.com/watch?v=UkoosAsEA8w&t=388) with a there's a new model release,
+- [6:31](https://youtube.com/watch?v=UkoosAsEA8w&t=391) should everyone in this room that's
+- [6:32](https://youtube.com/watch?v=UkoosAsEA8w&t=392) building AI products basically do that?
+- [6:34](https://youtube.com/watch?v=UkoosAsEA8w&t=394) Be comfortable and brave to
+- [6:37](https://youtube.com/watch?v=UkoosAsEA8w&t=397) press delete?
+- [6:38](https://youtube.com/watch?v=UkoosAsEA8w&t=398) >> 100%. Yeah, and and for people that
+- [6:40](https://youtube.com/watch?v=UkoosAsEA8w&t=400) aren't building agentic products, but
+- [6:41](https://youtube.com/watch?v=UkoosAsEA8w&t=401) you're using Claude code, every 6 months
+- [6:44](https://youtube.com/watch?v=UkoosAsEA8w&t=404) delete your prompt indeed. Delete your
+- [6:46](https://youtube.com/watch?v=UkoosAsEA8w&t=406) skills. Delete your hooks.
+- [6:48](https://youtube.com/watch?v=UkoosAsEA8w&t=408) See what the model does, and it might
+- [6:50](https://youtube.com/watch?v=UkoosAsEA8w&t=410) surprise you. And actually for Opus 5,
+- [6:53](https://youtube.com/watch?v=UkoosAsEA8w&t=413) this is something we really do recommend
+- [6:55](https://youtube.com/watch?v=UkoosAsEA8w&t=415) is just try deleting all of these
+- [6:57](https://youtube.com/watch?v=UkoosAsEA8w&t=417) things,
+- [6:58](https://youtube.com/watch?v=UkoosAsEA8w&t=418) because the model might really just not
+- [7:00](https://youtube.com/watch?v=UkoosAsEA8w&t=420) need all those instructions that you
+- [7:02](https://youtube.com/watch?v=UkoosAsEA8w&t=422) needed for past models.
+- [7:03](https://youtube.com/watch?v=UkoosAsEA8w&t=423) >> Let's talk a bit about how then you
+- [7:06](https://youtube.com/watch?v=UkoosAsEA8w&t=426) build this new prompt. When there's a
+- [7:08](https://youtube.com/watch?v=UkoosAsEA8w&t=428) new model release, like for everyone in
+- [7:10](https://youtube.com/watch?v=UkoosAsEA8w&t=430) the room, everyone will want to try Opus
+- [7:12](https://youtube.com/watch?v=UkoosAsEA8w&t=432) 5, and they're going to press delete on
+- [7:14](https://youtube.com/watch?v=UkoosAsEA8w&t=434) their system prompt. How do they go
+- [7:15](https://youtube.com/watch?v=UkoosAsEA8w&t=435) about
+- [7:17](https://youtube.com/watch?v=UkoosAsEA8w&t=437) building rebuilding their system prompt?
+- [7:19](https://youtube.com/watch?v=UkoosAsEA8w&t=439) How do you set up your environment?
+- [7:22](https://youtube.com/watch?v=UkoosAsEA8w&t=442) >> So, you do you do it kind of piece by
+- [7:24](https://youtube.com/watch?v=UkoosAsEA8w&t=444) piece. So, the first step is you delete.
+- [7:28](https://youtube.com/watch?v=UkoosAsEA8w&t=448) The next step is you use it.
+- [7:32](https://youtube.com/watch?v=UkoosAsEA8w&t=452) And you don't want to guess what's the
+- [7:34](https://youtube.com/watch?v=UkoosAsEA8w&t=454) instruction that the model needs,
+- [7:35](https://youtube.com/watch?v=UkoosAsEA8w&t=455) because you might not predict it
+- [7:37](https://youtube.com/watch?v=UkoosAsEA8w&t=457) correctly. The thing that you want to do
+- [7:38](https://youtube.com/watch?v=UkoosAsEA8w&t=458) is you want to run it, and if it's like
+- [7:41](https://youtube.com/watch?v=UkoosAsEA8w&t=461) a custom agentic product that you're
+- [7:42](https://youtube.com/watch?v=UkoosAsEA8w&t=462) building, you want to kind of run the
+- [7:43](https://youtube.com/watch?v=UkoosAsEA8w&t=463) product, uh you want to see where it
+- [7:45](https://youtube.com/watch?v=UkoosAsEA8w&t=465) fails with the model, you want to see
+- [7:47](https://youtube.com/watch?v=UkoosAsEA8w&t=467) what it does well. If you're using quad
+- [7:49](https://youtube.com/watch?v=UkoosAsEA8w&t=469) code, you want to see where it does well
+- [7:52](https://youtube.com/watch?v=UkoosAsEA8w&t=472) with your code base, or maybe where it
+- [7:53](https://youtube.com/watch?v=UkoosAsEA8w&t=473) stumbles over, you know, the
+- [7:54](https://youtube.com/watch?v=UkoosAsEA8w&t=474) architecture, or stumbles over something
+- [7:56](https://youtube.com/watch?v=UkoosAsEA8w&t=476) else.
+- [7:57](https://youtube.com/watch?v=UkoosAsEA8w&t=477) And only when you see it repeatedly
+- [7:59](https://youtube.com/watch?v=UkoosAsEA8w&t=479) stumble on the same thing, that's when
+- [8:02](https://youtube.com/watch?v=UkoosAsEA8w&t=482) you add it back.
+- [8:03](https://youtube.com/watch?v=UkoosAsEA8w&t=483) But you don't want to do it too early.
+- [8:05](https://youtube.com/watch?v=UkoosAsEA8w&t=485) Because remember, like the model is
+- [8:06](https://youtube.com/watch?v=UkoosAsEA8w&t=486) going to read this instruction every
+- [8:07](https://youtube.com/watch?v=UkoosAsEA8w&t=487) single time you use it. So you really
+- [8:09](https://youtube.com/watch?v=UkoosAsEA8w&t=489) want to make sure that the model needs
+- [8:10](https://youtube.com/watch?v=UkoosAsEA8w&t=490) this instruction. I I think this is sort
+- [8:13](https://youtube.com/watch?v=UkoosAsEA8w&t=493) of the crazy thing about building on
+- [8:15](https://youtube.com/watch?v=UkoosAsEA8w&t=495) models. It's just so different than all
+- [8:16](https://youtube.com/watch?v=UkoosAsEA8w&t=496) the engineering that I've ever done.
+- [8:18](https://youtube.com/watch?v=UkoosAsEA8w&t=498) Like in the past, when you build on
+- [8:20](https://youtube.com/watch?v=UkoosAsEA8w&t=500) systems, you build these like big,
+- [8:21](https://youtube.com/watch?v=UkoosAsEA8w&t=501) beautiful systems, and you really think
+- [8:23](https://youtube.com/watch?v=UkoosAsEA8w&t=503) about the system design up front. You
+- [8:25](https://youtube.com/watch?v=UkoosAsEA8w&t=505) have like a big suite of unit tests. You
+- [8:27](https://youtube.com/watch?v=UkoosAsEA8w&t=507) think about everything, and you know,
+- [8:29](https://youtube.com/watch?v=UkoosAsEA8w&t=509) like a re-architecture is a big project.
+- [8:30](https://youtube.com/watch?v=UkoosAsEA8w&t=510) It sometimes it takes months. I've
+- [8:32](https://youtube.com/watch?v=UkoosAsEA8w&t=512) worked on re-architecture products at,
+- [8:34](https://youtube.com/watch?v=UkoosAsEA8w&t=514) you know, big companies that take years.
+- [8:37](https://youtube.com/watch?v=UkoosAsEA8w&t=517) And
+- [8:38](https://youtube.com/watch?v=UkoosAsEA8w&t=518) the model is not like that. It's um
+- [8:42](https://youtube.com/watch?v=UkoosAsEA8w&t=522) the way to think about it is almost like
+- [8:43](https://youtube.com/watch?v=UkoosAsEA8w&t=523) a like a living creature, like it's
+- [8:45](https://youtube.com/watch?v=UkoosAsEA8w&t=525) something more organic. It's a thing
+- [8:47](https://youtube.com/watch?v=UkoosAsEA8w&t=527) where every model generation, it behaves
+- [8:49](https://youtube.com/watch?v=UkoosAsEA8w&t=529) differently. It has a slightly different
+- [8:51](https://youtube.com/watch?v=UkoosAsEA8w&t=531) personality. And you have to take the
+- [8:53](https://youtube.com/watch?v=UkoosAsEA8w&t=533) time to get to know it, and then adjust
+- [8:54](https://youtube.com/watch?v=UkoosAsEA8w&t=534) the harness based on that. And I I think
+- [8:57](https://youtube.com/watch?v=UkoosAsEA8w&t=537) it's just very much like an empirical
+- [8:59](https://youtube.com/watch?v=UkoosAsEA8w&t=539) and kind of scientific thing. You have
+- [9:01](https://youtube.com/watch?v=UkoosAsEA8w&t=541) to take a very scientific mindset to it,
+- [9:04](https://youtube.com/watch?v=UkoosAsEA8w&t=544) where you try something, you see the
+- [9:05](https://youtube.com/watch?v=UkoosAsEA8w&t=545) result, and then you iterate based on
+- [9:07](https://youtube.com/watch?v=UkoosAsEA8w&t=547) that.
+- [9:08](https://youtube.com/watch?v=UkoosAsEA8w&t=548) >> If you're building in this world right
+- [9:09](https://youtube.com/watch?v=UkoosAsEA8w&t=549) now, what then becomes uh stable? Are
+- [9:13](https://youtube.com/watch?v=UkoosAsEA8w&t=553) evals something that you keep from the
+- [9:15](https://youtube.com/watch?v=UkoosAsEA8w&t=555) previous models, and keep using them in
+- [9:17](https://youtube.com/watch?v=UkoosAsEA8w&t=557) each new model release?
+- [9:19](https://youtube.com/watch?v=UkoosAsEA8w&t=559) >> Um we do until we max out the eval.
+- [9:23](https://youtube.com/watch?v=UkoosAsEA8w&t=563) >> So, that's sort of the tip for everyone.
+- [9:24](https://youtube.com/watch?v=UkoosAsEA8w&t=564) So, code and system prompt, you have if
+- [9:28](https://youtube.com/watch?v=UkoosAsEA8w&t=568) you want to build at the bleeding edge
+- [9:29](https://youtube.com/watch?v=UkoosAsEA8w&t=569) and have the most capability for models,
+- [9:31](https://youtube.com/watch?v=UkoosAsEA8w&t=571) you got to delete those, but evals are
+- [9:34](https://youtube.com/watch?v=UkoosAsEA8w&t=574) constant, and keep appending to them,
+- [9:36](https://youtube.com/watch?v=UkoosAsEA8w&t=576) basically.
+- [9:36](https://youtube.com/watch?v=UkoosAsEA8w&t=576) >> Yeah, you keep you keep appending.
+- [9:39](https://youtube.com/watch?v=UkoosAsEA8w&t=579) What happens is um
+- [9:41](https://youtube.com/watch?v=UkoosAsEA8w&t=581) you know, I actually wouldn't even go
+- [9:42](https://youtube.com/watch?v=UkoosAsEA8w&t=582) this far, to be honest. I think evals,
+- [9:44](https://youtube.com/watch?v=UkoosAsEA8w&t=584) they outlive the harness a little bit,
+- [9:46](https://youtube.com/watch?v=UkoosAsEA8w&t=586) but not by that much. Like an eval might
+- [9:48](https://youtube.com/watch?v=UkoosAsEA8w&t=588) live for maybe one, two, three model
+- [9:50](https://youtube.com/watch?v=UkoosAsEA8w&t=590) generations, but nowadays the you know,
+- [9:53](https://youtube.com/watch?v=UkoosAsEA8w&t=593) we're on the exponential. The model is
+- [9:55](https://youtube.com/watch?v=UkoosAsEA8w&t=595) improving so quickly, very often we just
+- [9:58](https://youtube.com/watch?v=UkoosAsEA8w&t=598) saturate the eval, and then we have to
+- [10:00](https://youtube.com/watch?v=UkoosAsEA8w&t=600) throw it away, and we have to come up
+- [10:01](https://youtube.com/watch?v=UkoosAsEA8w&t=601) with a new eval.
+- [10:02](https://youtube.com/watch?v=UkoosAsEA8w&t=602) And this is just part of the process.
+- [10:04](https://youtube.com/watch?v=UkoosAsEA8w&t=604) And again, it's building and perking.
+- [10:06](https://youtube.com/watch?v=UkoosAsEA8w&t=606) You you have to use the product, you
+- [10:07](https://youtube.com/watch?v=UkoosAsEA8w&t=607) have to use the model, you have to see
+- [10:08](https://youtube.com/watch?v=UkoosAsEA8w&t=608) where it struggles, and then based on
+- [10:10](https://youtube.com/watch?v=UkoosAsEA8w&t=610) that, that's the eval set that you
+- [10:12](https://youtube.com/watch?v=UkoosAsEA8w&t=612) should build.
+- [10:13](https://youtube.com/watch?v=UkoosAsEA8w&t=613) >> I think one one term I heard you
+- [10:15](https://youtube.com/watch?v=UkoosAsEA8w&t=615) describe how to build the best agentic
+- [10:18](https://youtube.com/watch?v=UkoosAsEA8w&t=618) products on top of a Claude is this
+- [10:21](https://youtube.com/watch?v=UkoosAsEA8w&t=621) concept of unhobbling
+- [10:24](https://youtube.com/watch?v=UkoosAsEA8w&t=624) Claude.
+- [10:25](https://youtube.com/watch?v=UkoosAsEA8w&t=625) And tell us more more about what that
+- [10:28](https://youtube.com/watch?v=UkoosAsEA8w&t=628) means.
+- [10:30](https://youtube.com/watch?v=UkoosAsEA8w&t=630) >> Yeah, so hobbling is this idea in a
+- [10:32](https://youtube.com/watch?v=UkoosAsEA8w&t=632) research that the model is doing
+- [10:34](https://youtube.com/watch?v=UkoosAsEA8w&t=634) something, and you're just getting in
+- [10:35](https://youtube.com/watch?v=UkoosAsEA8w&t=635) the way.
+- [10:38](https://youtube.com/watch?v=UkoosAsEA8w&t=638) There There's this kind of like way of
+- [10:39](https://youtube.com/watch?v=UkoosAsEA8w&t=639) thinking about it that I really like.
+- [10:41](https://youtube.com/watch?v=UkoosAsEA8w&t=641) It's very useful when you're building
+- [10:42](https://youtube.com/watch?v=UkoosAsEA8w&t=642) product. And um it it it's called
+- [10:45](https://youtube.com/watch?v=UkoosAsEA8w&t=645) product overhang.
+- [10:47](https://youtube.com/watch?v=UkoosAsEA8w&t=647) And the the idea is
+- [10:50](https://youtube.com/watch?v=UkoosAsEA8w&t=650) the model is able to do all sorts of
+- [10:53](https://youtube.com/watch?v=UkoosAsEA8w&t=653) things
+- [10:55](https://youtube.com/watch?v=UkoosAsEA8w&t=655) with today's models, not a future model,
+- [10:56](https://youtube.com/watch?v=UkoosAsEA8w&t=656) but today's model, that we have not yet
+- [10:59](https://youtube.com/watch?v=UkoosAsEA8w&t=659) realized.
+- [11:00](https://youtube.com/watch?v=UkoosAsEA8w&t=660) And there are so many capabilities the
+- [11:03](https://youtube.com/watch?v=UkoosAsEA8w&t=663) model has like this that people are not
+- [11:06](https://youtube.com/watch?v=UkoosAsEA8w&t=666) aware of.
+- [11:07](https://youtube.com/watch?v=UkoosAsEA8w&t=667) And this is like the ability to you
+- [11:09](https://youtube.com/watch?v=UkoosAsEA8w&t=669) know, like maybe use a particular tool,
+- [11:12](https://youtube.com/watch?v=UkoosAsEA8w&t=672) use a particular language, solve a
+- [11:14](https://youtube.com/watch?v=UkoosAsEA8w&t=674) particular kind of problem, do things a
+- [11:16](https://youtube.com/watch?v=UkoosAsEA8w&t=676) particular kind of way that we thought
+- [11:18](https://youtube.com/watch?v=UkoosAsEA8w&t=678) was kind of beyond the model's
+- [11:19](https://youtube.com/watch?v=UkoosAsEA8w&t=679) capability.
+- [11:21](https://youtube.com/watch?v=UkoosAsEA8w&t=681) And um
+- [11:23](https://youtube.com/watch?v=UkoosAsEA8w&t=683) there's this overhang.
+- [11:24](https://youtube.com/watch?v=UkoosAsEA8w&t=684) Because the model can do this at every
+- [11:26](https://youtube.com/watch?v=UkoosAsEA8w&t=686) given model generation,
+- [11:28](https://youtube.com/watch?v=UkoosAsEA8w&t=688) but there is often not a product that
+- [11:31](https://youtube.com/watch?v=UkoosAsEA8w&t=691) lets the model do this.
+- [11:33](https://youtube.com/watch?v=UkoosAsEA8w&t=693) And lets it express this kind of ability
+- [11:35](https://youtube.com/watch?v=UkoosAsEA8w&t=695) to do this. And on the flip side often
+- [11:38](https://youtube.com/watch?v=UkoosAsEA8w&t=698) what happens is the product gets in the
+- [11:39](https://youtube.com/watch?v=UkoosAsEA8w&t=699) way.
+- [11:40](https://youtube.com/watch?v=UkoosAsEA8w&t=700) And this getting in the way that we call
+- [11:42](https://youtube.com/watch?v=UkoosAsEA8w&t=702) this hobbling, and then not not
+- [11:44](https://youtube.com/watch?v=UkoosAsEA8w&t=704) eliciting the correct behavior from the
+- [11:45](https://youtube.com/watch?v=UkoosAsEA8w&t=705) model, we call this product overhang.
+- [11:47](https://youtube.com/watch?v=UkoosAsEA8w&t=707) So, it's kind of like two sides of the
+- [11:48](https://youtube.com/watch?v=UkoosAsEA8w&t=708) same thing.
+- [11:49](https://youtube.com/watch?v=UkoosAsEA8w&t=709) What one example of this was the
+- [11:51](https://youtube.com/watch?v=UkoosAsEA8w&t=711) original quad code.
+- [11:53](https://youtube.com/watch?v=UkoosAsEA8w&t=713) When I first started working on it, this
+- [11:55](https://youtube.com/watch?v=UkoosAsEA8w&t=715) was um
+- [11:57](https://youtube.com/watch?v=UkoosAsEA8w&t=717) you know, like a year and a half, 2
+- [11:58](https://youtube.com/watch?v=UkoosAsEA8w&t=718) years ago, something like that. This was
+- [12:00](https://youtube.com/watch?v=UkoosAsEA8w&t=720) like Sonnet 3.5.
+- [12:02](https://youtube.com/watch?v=UkoosAsEA8w&t=722) At the time, that was an incredible
+- [12:04](https://youtube.com/watch?v=UkoosAsEA8w&t=724) coding model. That was like the best
+- [12:06](https://youtube.com/watch?v=UkoosAsEA8w&t=726) coding model that exists. Nowadays,
+- [12:08](https://youtube.com/watch?v=UkoosAsEA8w&t=728) it's, you know, a pretty terrible coding
+- [12:10](https://youtube.com/watch?v=UkoosAsEA8w&t=730) model by modern standards. But then I
+- [12:11](https://youtube.com/watch?v=UkoosAsEA8w&t=731) think that was like the first great
+- [12:13](https://youtube.com/watch?v=UkoosAsEA8w&t=733) coding model that that we built at
+- [12:14](https://youtube.com/watch?v=UkoosAsEA8w&t=734) Anthropic.
+- [12:16](https://youtube.com/watch?v=UkoosAsEA8w&t=736) And at the time, if if you looked at the
+- [12:18](https://youtube.com/watch?v=UkoosAsEA8w&t=738) coding products of the time, what were
+- [12:19](https://youtube.com/watch?v=UkoosAsEA8w&t=739) what were they doing? They were doing
+- [12:20](https://youtube.com/watch?v=UkoosAsEA8w&t=740) like single-line autocomplete. They were
+- [12:23](https://youtube.com/watch?v=UkoosAsEA8w&t=743) doing sometimes multi-line autocomplete.
+- [12:24](https://youtube.com/watch?v=UkoosAsEA8w&t=744) That was sort of a new idea. Um they
+- [12:27](https://youtube.com/watch?v=UkoosAsEA8w&t=747) were they were doing chat. So, you can
+- [12:29](https://youtube.com/watch?v=UkoosAsEA8w&t=749) talk to the agent, but it wasn't uh
+- [12:31](https://youtube.com/watch?v=UkoosAsEA8w&t=751) write access. You could only read. You
+- [12:33](https://youtube.com/watch?v=UkoosAsEA8w&t=753) could ask about the code base.
+- [12:34](https://youtube.com/watch?v=UkoosAsEA8w&t=754) And so, the the feeling was that there
+- [12:37](https://youtube.com/watch?v=UkoosAsEA8w&t=757) wasn't really a product
+- [12:39](https://youtube.com/watch?v=UkoosAsEA8w&t=759) that was fully eliciting the model's
+- [12:41](https://youtube.com/watch?v=UkoosAsEA8w&t=761) capability to write entire functions at
+- [12:44](https://youtube.com/watch?v=UkoosAsEA8w&t=764) a time, entire files at a time.
+- [12:47](https://youtube.com/watch?v=UkoosAsEA8w&t=767) At the time, it wasn't entire features.
+- [12:48](https://youtube.com/watch?v=UkoosAsEA8w&t=768) We weren't there yet, but probably
+- [12:50](https://youtube.com/watch?v=UkoosAsEA8w&t=770) entire files. That's that was the level
+- [12:51](https://youtube.com/watch?v=UkoosAsEA8w&t=771) of capability at the time.
+- [12:53](https://youtube.com/watch?v=UkoosAsEA8w&t=773) And so, the idea with quad code was, all
+- [12:55](https://youtube.com/watch?v=UkoosAsEA8w&t=775) right, we think the model can probably
+- [12:56](https://youtube.com/watch?v=UkoosAsEA8w&t=776) do this.
+- [12:57](https://youtube.com/watch?v=UkoosAsEA8w&t=777) What if we get rid of all the
+- [12:59](https://youtube.com/watch?v=UkoosAsEA8w&t=779) scaffolding
+- [13:01](https://youtube.com/watch?v=UkoosAsEA8w&t=781) and just give the model the simplest
+- [13:02](https://youtube.com/watch?v=UkoosAsEA8w&t=782) possible harness, so it can write an
+- [13:04](https://youtube.com/watch?v=UkoosAsEA8w&t=784) entire file at a time and build an
+- [13:07](https://youtube.com/watch?v=UkoosAsEA8w&t=787) entire feature?
+- [13:08](https://youtube.com/watch?v=UkoosAsEA8w&t=788) Um
+- [13:09](https://youtube.com/watch?v=UkoosAsEA8w&t=789) and that was that was kind of it. Like
+- [13:11](https://youtube.com/watch?v=UkoosAsEA8w&t=791) that was the product overhang of the
+- [13:12](https://youtube.com/watch?v=UkoosAsEA8w&t=792) time. The model was capable of doing
+- [13:13](https://youtube.com/watch?v=UkoosAsEA8w&t=793) something, and everything was just kind
+- [13:15](https://youtube.com/watch?v=UkoosAsEA8w&t=795) of getting in the way.
+- [13:17](https://youtube.com/watch?v=UkoosAsEA8w&t=797) I I think that nowadays, with modern
+- [13:19](https://youtube.com/watch?v=UkoosAsEA8w&t=799) models, there's so much product overhang
+- [13:22](https://youtube.com/watch?v=UkoosAsEA8w&t=802) that I have I'm not saying startups
+- [13:23](https://youtube.com/watch?v=UkoosAsEA8w&t=803) capture. And I think there's people
+- [13:26](https://youtube.com/watch?v=UkoosAsEA8w&t=806) thinking about these problems,
+- [13:28](https://youtube.com/watch?v=UkoosAsEA8w&t=808) but there's just a huge amount of amount
+- [13:29](https://youtube.com/watch?v=UkoosAsEA8w&t=809) of opportunity to elicit
+- [13:31](https://youtube.com/watch?v=UkoosAsEA8w&t=811) these behaviors from the model that are
+- [13:33](https://youtube.com/watch?v=UkoosAsEA8w&t=813) just like amazing and interesting and
+- [13:36](https://youtube.com/watch?v=UkoosAsEA8w&t=816) and commercially valuable.
+- [13:37](https://youtube.com/watch?v=UkoosAsEA8w&t=817) >> I think this is such a special insight
+- [13:39](https://youtube.com/watch?v=UkoosAsEA8w&t=819) for everyone here in the room.
+- [13:42](https://youtube.com/watch?v=UkoosAsEA8w&t=822) Basically, all of you could create the
+- [13:44](https://youtube.com/watch?v=UkoosAsEA8w&t=824) next Claude Code if you figure out how
+- [13:47](https://youtube.com/watch?v=UkoosAsEA8w&t=827) to unhubble the models because that's
+- [13:50](https://youtube.com/watch?v=UkoosAsEA8w&t=830) effectively the birth story of Claude
+- [13:52](https://youtube.com/watch?v=UkoosAsEA8w&t=832) Code. You unhubble Sonnet 3.5 because
+- [13:56](https://youtube.com/watch?v=UkoosAsEA8w&t=836) all the previous
+- [13:58](https://youtube.com/watch?v=UkoosAsEA8w&t=838) iterations were still getting the model
+- [14:00](https://youtube.com/watch?v=UkoosAsEA8w&t=840) very rigid in in IDEs. And Claude Code
+- [14:02](https://youtube.com/watch?v=UkoosAsEA8w&t=842) was one of the first instances that gave
+- [14:06](https://youtube.com/watch?v=UkoosAsEA8w&t=846) it just a full terminal access.
+- [14:08](https://youtube.com/watch?v=UkoosAsEA8w&t=848) >> Yes.
+- [14:08](https://youtube.com/watch?v=UkoosAsEA8w&t=848) >> And that then created this amazing
+- [14:12](https://youtube.com/watch?v=UkoosAsEA8w&t=852) product just that keeps going.
+- [14:14](https://youtube.com/watch?v=UkoosAsEA8w&t=854) So, let's talk about um
+- [14:17](https://youtube.com/watch?v=UkoosAsEA8w&t=857) what are some areas and how should
+- [14:21](https://youtube.com/watch?v=UkoosAsEA8w&t=861) future founders here think about
+- [14:23](https://youtube.com/watch?v=UkoosAsEA8w&t=863) unhubbleing
+- [14:26](https://youtube.com/watch?v=UkoosAsEA8w&t=866) Claude and fixing this product overhang?
+- [14:30](https://youtube.com/watch?v=UkoosAsEA8w&t=870) >> So, there's a couple of things that I
+- [14:31](https://youtube.com/watch?v=UkoosAsEA8w&t=871) would think about. One is
+- [14:35](https://youtube.com/watch?v=UkoosAsEA8w&t=875) you should give the model slightly
+- [14:38](https://youtube.com/watch?v=UkoosAsEA8w&t=878) harder tasks than what you think it can
+- [14:40](https://youtube.com/watch?v=UkoosAsEA8w&t=880) do.
+- [14:42](https://youtube.com/watch?v=UkoosAsEA8w&t=882) I think a a really common mistake that I
+- [14:44](https://youtube.com/watch?v=UkoosAsEA8w&t=884) see is people are using Claude Code,
+- [14:46](https://youtube.com/watch?v=UkoosAsEA8w&t=886) they're using Claude, and they they just
+- [14:48](https://youtube.com/watch?v=UkoosAsEA8w&t=888) give it like way overly specific
+- [14:50](https://youtube.com/watch?v=UkoosAsEA8w&t=890) instructions. They're like, "I want you
+- [14:51](https://youtube.com/watch?v=UkoosAsEA8w&t=891) to do this, but I want you to do it in
+- [14:53](https://youtube.com/watch?v=UkoosAsEA8w&t=893) this way, this way, this way. You must
+- [14:54](https://youtube.com/watch?v=UkoosAsEA8w&t=894) do like one, then two, then three, then
+- [14:55](https://youtube.com/watch?v=UkoosAsEA8w&t=895) four."
+- [14:57](https://youtube.com/watch?v=UkoosAsEA8w&t=897) And for modern models, that's actually
+- [14:58](https://youtube.com/watch?v=UkoosAsEA8w&t=898) really not the way to do it. You want to
+- [15:00](https://youtube.com/watch?v=UkoosAsEA8w&t=900) go a little bit higher level.
+- [15:02](https://youtube.com/watch?v=UkoosAsEA8w&t=902) You want to describe the task, you want
+- [15:03](https://youtube.com/watch?v=UkoosAsEA8w&t=903) to describe the guardrails, you want to
+- [15:05](https://youtube.com/watch?v=UkoosAsEA8w&t=905) describe like the exit criteria, and
+- [15:06](https://youtube.com/watch?v=UkoosAsEA8w&t=906) then just go with the model cook
+- [15:09](https://youtube.com/watch?v=UkoosAsEA8w&t=909) and come back in a little bit.
+- [15:12](https://youtube.com/watch?v=UkoosAsEA8w&t=912) And I think it'll it'll surprise you.
+- [15:13](https://youtube.com/watch?v=UkoosAsEA8w&t=913) Like and again, like this is just not
+- [15:15](https://youtube.com/watch?v=UkoosAsEA8w&t=915) something that would have worked 6
+- [15:16](https://youtube.com/watch?v=UkoosAsEA8w&t=916) months ago, but it does work today.
+- [15:18](https://youtube.com/watch?v=UkoosAsEA8w&t=918) >> Can you give some examples of these
+- [15:20](https://youtube.com/watch?v=UkoosAsEA8w&t=920) challenging tasks or capabilities that
+- [15:23](https://youtube.com/watch?v=UkoosAsEA8w&t=923) people should explore that it can do now
+- [15:25](https://youtube.com/watch?v=UkoosAsEA8w&t=925) that it couldn't 6 months ago.
+- [15:27](https://youtube.com/watch?v=UkoosAsEA8w&t=927) >> Yeah. So, okay, one example is the model
+- [15:31](https://youtube.com/watch?v=UkoosAsEA8w&t=931) can now rewrite essentially any code
+- [15:33](https://youtube.com/watch?v=UkoosAsEA8w&t=933) base from one language to a different
+- [15:35](https://youtube.com/watch?v=UkoosAsEA8w&t=935) language.
+- [15:36](https://youtube.com/watch?v=UkoosAsEA8w&t=936) It's
+- [15:37](https://youtube.com/watch?v=UkoosAsEA8w&t=937) just sort of crazy. Like it's this work
+- [15:39](https://youtube.com/watch?v=UkoosAsEA8w&t=939) that would have taken just like a very
+- [15:41](https://youtube.com/watch?v=UkoosAsEA8w&t=941) long time as an engineer and now the
+- [15:43](https://youtube.com/watch?v=UkoosAsEA8w&t=943) model's like quite fast at it. So, so
+- [15:45](https://youtube.com/watch?v=UkoosAsEA8w&t=945) one example of this is um
+- [15:47](https://youtube.com/watch?v=UkoosAsEA8w&t=947) Cloud Code is built on the Bun
+- [15:49](https://youtube.com/watch?v=UkoosAsEA8w&t=949) JavaScript runtime. It's a open-source
+- [15:51](https://youtube.com/watch?v=UkoosAsEA8w&t=951) JavaScript runtime. Um it's an
+- [15:53](https://youtube.com/watch?v=UkoosAsEA8w&t=953) alternative to Node.js. It's kind of a
+- [15:54](https://youtube.com/watch?v=UkoosAsEA8w&t=954) faster node.
+- [15:56](https://youtube.com/watch?v=UkoosAsEA8w&t=956) Bun was written in Zig.
+- [15:58](https://youtube.com/watch?v=UkoosAsEA8w&t=958) Zig is a systems programming language.
+- [16:00](https://youtube.com/watch?v=UkoosAsEA8w&t=960) It's It's kind of like C. It's It's very
+- [16:01](https://youtube.com/watch?v=UkoosAsEA8w&t=961) low level. One of the problems with C
+- [16:04](https://youtube.com/watch?v=UkoosAsEA8w&t=964) with a with Zig is you have to manually
+- [16:07](https://youtube.com/watch?v=UkoosAsEA8w&t=967) manage memory.
+- [16:09](https://youtube.com/watch?v=UkoosAsEA8w&t=969) And so it's quite easy to run into
+- [16:10](https://youtube.com/watch?v=UkoosAsEA8w&t=970) situations where there's like memory
+- [16:12](https://youtube.com/watch?v=UkoosAsEA8w&t=972) leaks and you know, other memory
+- [16:14](https://youtube.com/watch?v=UkoosAsEA8w&t=974) management issues.
+- [16:16](https://youtube.com/watch?v=UkoosAsEA8w&t=976) And so one thing that the Bun team was
+- [16:18](https://youtube.com/watch?v=UkoosAsEA8w&t=978) doing is they were having Claude fuzz
+- [16:20](https://youtube.com/watch?v=UkoosAsEA8w&t=980) the code base and try to simulate and
+- [16:23](https://youtube.com/watch?v=UkoosAsEA8w&t=983) trigger memory leaks and they were doing
+- [16:24](https://youtube.com/watch?v=UkoosAsEA8w&t=984) this for you know, for a long period of
+- [16:26](https://youtube.com/watch?v=UkoosAsEA8w&t=986) time. They were able to find a lot of
+- [16:27](https://youtube.com/watch?v=UkoosAsEA8w&t=987) memory leaks. It was sort of like a case
+- [16:29](https://youtube.com/watch?v=UkoosAsEA8w&t=989) at a time. And that was kind of the
+- [16:30](https://youtube.com/watch?v=UkoosAsEA8w&t=990) capability of the model at the time was
+- [16:32](https://youtube.com/watch?v=UkoosAsEA8w&t=992) doing this fuzzing.
+- [16:33](https://youtube.com/watch?v=UkoosAsEA8w&t=993) And then at some point Jared on the team
+- [16:36](https://youtube.com/watch?v=UkoosAsEA8w&t=996) was like, "Okay, let's just like rewrite
+- [16:38](https://youtube.com/watch?v=UkoosAsEA8w&t=998) it.
+- [16:39](https://youtube.com/watch?v=UkoosAsEA8w&t=999) Maybe the model can do this."
+- [16:41](https://youtube.com/watch?v=UkoosAsEA8w&t=1001) And I I think this is like one of these
+- [16:43](https://youtube.com/watch?v=UkoosAsEA8w&t=1003) test problems that he kind of threw at
+- [16:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1004) the model with every new model
+- [16:45](https://youtube.com/watch?v=UkoosAsEA8w&t=1005) generation.
+- [16:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1007) And starting with Fable,
+- [16:49](https://youtube.com/watch?v=UkoosAsEA8w&t=1009) the model started to be able to do it.
+- [16:52](https://youtube.com/watch?v=UkoosAsEA8w&t=1012) And so I think Opus 5 could do it as
+- [16:54](https://youtube.com/watch?v=UkoosAsEA8w&t=1014) well.
+- [16:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1015) And so what he did was
+- [16:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1017) essentially he defined a test suite.
+- [16:59](https://youtube.com/watch?v=UkoosAsEA8w&t=1019) The nice thing about Bun is it's very
+- [17:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1021) very well tested. There's a big test
+- [17:02](https://youtube.com/watch?v=UkoosAsEA8w&t=1022) suite in Bun. There's a big test suite
+- [17:03](https://youtube.com/watch?v=UkoosAsEA8w&t=1023) in Node.js. So, it's easy to know if you
+- [17:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1025) did the right thing.
+- [17:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1027) And he had the model rewrite it from Zig
+- [17:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1030) to Rust. It was one prompt. It was a
+- [17:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1033) dynamic workflow.
+- [17:14](https://youtube.com/watch?v=UkoosAsEA8w&t=1034) And a dynamic workflows are a feature in
+- [17:16](https://youtube.com/watch?v=UkoosAsEA8w&t=1036) Claude Code that essentially let you
+- [17:18](https://youtube.com/watch?v=UkoosAsEA8w&t=1038) orchestrate, you know, dozens, hundreds,
+- [17:20](https://youtube.com/watch?v=UkoosAsEA8w&t=1040) thousands of agents to do work
+- [17:21](https://youtube.com/watch?v=UkoosAsEA8w&t=1041) productively.
+- [17:22](https://youtube.com/watch?v=UkoosAsEA8w&t=1042) And it ran for 11 days.
+- [17:25](https://youtube.com/watch?v=UkoosAsEA8w&t=1045) And it rewrote the entire code base.
+- [17:27](https://youtube.com/watch?v=UkoosAsEA8w&t=1047) >> And this was one shot?
+- [17:28](https://youtube.com/watch?v=UkoosAsEA8w&t=1048) >> It was one shot with No, it wasn't one
+- [17:30](https://youtube.com/watch?v=UkoosAsEA8w&t=1050) shot, but it there was steering. There
+- [17:31](https://youtube.com/watch?v=UkoosAsEA8w&t=1051) was steering.
+- [17:32](https://youtube.com/watch?v=UkoosAsEA8w&t=1052) Um but previous models just couldn't do
+- [17:34](https://youtube.com/watch?v=UkoosAsEA8w&t=1054) this, even even with the steering. It
+- [17:36](https://youtube.com/watch?v=UkoosAsEA8w&t=1056) just wouldn't have been possible.
+- [17:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1058) >> 11 days? Oh my god. This would have
+- [17:40](https://youtube.com/watch?v=UkoosAsEA8w&t=1060) taken in the past
+- [17:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1062) even with the best engineers, multiple
+- [17:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1064) months years?
+- [17:45](https://youtube.com/watch?v=UkoosAsEA8w&t=1065) >> Over definitely over a year.
+- [17:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1067) >> Yeah.
+- [17:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1067) >> Yeah, over a year. This is like over
+- [17:48](https://youtube.com/watch?v=UkoosAsEA8w&t=1068) 100,000 like JavaScript runtime is
+- [17:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1070) really complicated. There's there's a
+- [17:52](https://youtube.com/watch?v=UkoosAsEA8w&t=1072) lot of stuff in there.
+- [17:53](https://youtube.com/watch?v=UkoosAsEA8w&t=1073) Um and yeah, it like it works. This is
+- [17:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1075) in production now. This is what quadcode
+- [17:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1077) uses now when when you're running it.
+- [17:59](https://youtube.com/watch?v=UkoosAsEA8w&t=1079) So this is kind of one example. I I
+- [18:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1081) would give a second example also product
+- [18:03](https://youtube.com/watch?v=UkoosAsEA8w&t=1083) overhang and so this is like a practical
+- [18:06](https://youtube.com/watch?v=UkoosAsEA8w&t=1086) use case where like there's a problem
+- [18:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1087) you're solving. It's like a business
+- [18:08](https://youtube.com/watch?v=UkoosAsEA8w&t=1088) problem, an engineering problem, a
+- [18:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1090) product problem. And you should just
+- [18:11](https://youtube.com/watch?v=UkoosAsEA8w&t=1091) keep throwing the latest model at it to
+- [18:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1093) see if it'll just do it. Cuz even if a
+- [18:15](https://youtube.com/watch?v=UkoosAsEA8w&t=1095) previous model didn't, the new one
+- [18:17](https://youtube.com/watch?v=UkoosAsEA8w&t=1097) might.
+- [18:18](https://youtube.com/watch?v=UkoosAsEA8w&t=1098) I think the second way to think about it
+- [18:19](https://youtube.com/watch?v=UkoosAsEA8w&t=1099) is experiment.
+- [18:22](https://youtube.com/watch?v=UkoosAsEA8w&t=1102) And just give yourself like freedom to
+- [18:24](https://youtube.com/watch?v=UkoosAsEA8w&t=1104) play with the model and do creative
+- [18:26](https://youtube.com/watch?v=UkoosAsEA8w&t=1106) things.
+- [18:27](https://youtube.com/watch?v=UkoosAsEA8w&t=1107) Often it'll surprise you.
+- [18:29](https://youtube.com/watch?v=UkoosAsEA8w&t=1109) So something that's actually been really
+- [18:31](https://youtube.com/watch?v=UkoosAsEA8w&t=1111) popular at internally that's been kind
+- [18:32](https://youtube.com/watch?v=UkoosAsEA8w&t=1112) of viral within Anthropic the last
+- [18:34](https://youtube.com/watch?v=UkoosAsEA8w&t=1114) couple weeks is someone figured out that
+- [18:36](https://youtube.com/watch?v=UkoosAsEA8w&t=1116) you can give Opus 5 open CV.
+- [18:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1118) >> Oh.
+- [18:39](https://youtube.com/watch?v=UkoosAsEA8w&t=1119) >> And you can have it draw.
+- [18:41](https://youtube.com/watch?v=UkoosAsEA8w&t=1121) And so something you can do is you can
+- [18:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1122) ask Opus like, "Hey, use open open CV to
+- [18:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1124) like draw this image." And it's actually
+- [18:46](https://youtube.com/watch?v=UkoosAsEA8w&t=1126) quite good. It can do like portraits, it
+- [18:48](https://youtube.com/watch?v=UkoosAsEA8w&t=1128) can draw like animals, it can do like
+- [18:49](https://youtube.com/watch?v=UkoosAsEA8w&t=1129) landscapes. And we didn't train the
+- [18:51](https://youtube.com/watch?v=UkoosAsEA8w&t=1131) model to draw. Like it it's just like
+- [18:54](https://youtube.com/watch?v=UkoosAsEA8w&t=1134) the solicitation gap. Like if you ask it
+- [18:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1135) to do it the right way, it can just do
+- [18:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1137) it. And we discovered this kind of
+- [18:59](https://youtube.com/watch?v=UkoosAsEA8w&t=1139) accidentally just by playing around and
+- [19:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1141) trying creative things that didn't have
+- [19:02](https://youtube.com/watch?v=UkoosAsEA8w&t=1142) direct commercial applications. Um but
+- [19:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1145) it's just kind of interesting. And my
+- [19:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1147) hypothesis is there's probably dozens,
+- [19:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1150) hundreds of opportunities like this with
+- [19:12](https://youtube.com/watch?v=UkoosAsEA8w&t=1152) the models of today that no one has yet
+- [19:15](https://youtube.com/watch?v=UkoosAsEA8w&t=1155) realized.
+- [19:16](https://youtube.com/watch?v=UkoosAsEA8w&t=1156) >> And the big area of research for this is
+- [19:17](https://youtube.com/watch?v=UkoosAsEA8w&t=1157) basically model elicitation, right?
+- [19:20](https://youtube.com/watch?v=UkoosAsEA8w&t=1160) Becoming really good at
+- [19:23](https://youtube.com/watch?v=UkoosAsEA8w&t=1163) figuring out all these capabilities and
+- [19:25](https://youtube.com/watch?v=UkoosAsEA8w&t=1165) asking the model to do the right thing,
+- [19:26](https://youtube.com/watch?v=UkoosAsEA8w&t=1166) right?
+- [19:27](https://youtube.com/watch?v=UkoosAsEA8w&t=1167) >> Yes.
+- [19:28](https://youtube.com/watch?v=UkoosAsEA8w&t=1168) >> How do people get better at that and
+- [19:30](https://youtube.com/watch?v=UkoosAsEA8w&t=1170) effectively, how do people get better at
+- [19:33](https://youtube.com/watch?v=UkoosAsEA8w&t=1173) prompt engineering? Do people still need
+- [19:34](https://youtube.com/watch?v=UkoosAsEA8w&t=1174) to do a lot of prompt engineering or is
+- [19:36](https://youtube.com/watch?v=UkoosAsEA8w&t=1176) that changing as well? Tell us about
+- [19:39](https://youtube.com/watch?v=UkoosAsEA8w&t=1179) where this is going.
+- [19:40](https://youtube.com/watch?v=UkoosAsEA8w&t=1180) >> Yeah, I I remember like a year ago one
+- [19:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1182) of the most popular job openings was
+- [19:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1184) prompt engineer.
+- [19:46](https://youtube.com/watch?v=UkoosAsEA8w&t=1186) Um and then it kind of changed and then
+- [19:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1187) I think it became like context engineer.
+- [19:51](https://youtube.com/watch?v=UkoosAsEA8w&t=1191) So there's these kind of waves of it. I
+- [19:53](https://youtube.com/watch?v=UkoosAsEA8w&t=1193) think I think these will kind of like
+- [19:54](https://youtube.com/watch?v=UkoosAsEA8w&t=1194) come and go.
+- [19:56](https://youtube.com/watch?v=UkoosAsEA8w&t=1196) I I think the skill nowadays
+- [19:58](https://youtube.com/watch?v=UkoosAsEA8w&t=1198) is less about prompt engineering and
+- [20:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1201) more about figuring out how do you give
+- [20:04](https://youtube.com/watch?v=UkoosAsEA8w&t=1204) Claude a hard task
+- [20:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1205) that seems a little bit too hard.
+- [20:08](https://youtube.com/watch?v=UkoosAsEA8w&t=1208) And then how do you make it possible for
+- [20:09](https://youtube.com/watch?v=UkoosAsEA8w&t=1209) Claude to verify its work along the way?
+- [20:12](https://youtube.com/watch?v=UkoosAsEA8w&t=1212) And the verification I think is probably
+- [20:14](https://youtube.com/watch?v=UkoosAsEA8w&t=1214) the single most important thing that
+- [20:15](https://youtube.com/watch?v=UkoosAsEA8w&t=1215) people do not get right virtually.
+- [20:18](https://youtube.com/watch?v=UkoosAsEA8w&t=1218) Um
+- [20:19](https://youtube.com/watch?v=UkoosAsEA8w&t=1219) one example of this is people were you
+- [20:24](https://youtube.com/watch?v=UkoosAsEA8w&t=1224) know, we have this desktop app for
+- [20:25](https://youtube.com/watch?v=UkoosAsEA8w&t=1225) Claude
+- [20:26](https://youtube.com/watch?v=UkoosAsEA8w&t=1226) and it's built using electron.
+- [20:28](https://youtube.com/watch?v=UkoosAsEA8w&t=1228) We've made it quite fast. So now it's
+- [20:29](https://youtube.com/watch?v=UkoosAsEA8w&t=1229) like a pretty awesome experience. 6
+- [20:31](https://youtube.com/watch?v=UkoosAsEA8w&t=1231) months ago it was like sluggish and it
+- [20:33](https://youtube.com/watch?v=UkoosAsEA8w&t=1233) wasn't very reliable. Now it's pretty
+- [20:35](https://youtube.com/watch?v=UkoosAsEA8w&t=1235) awesome and you know, it's the thing
+- [20:36](https://youtube.com/watch?v=UkoosAsEA8w&t=1236) that most of the team uses.
+- [20:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1238) As an experiment though, I wanted to see
+- [20:40](https://youtube.com/watch?v=UkoosAsEA8w&t=1240) like what would it feel like if it was
+- [20:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1242) native.
+- [20:43](https://youtube.com/watch?v=UkoosAsEA8w&t=1243) And so what I did is I I started a
+- [20:45](https://youtube.com/watch?v=UkoosAsEA8w&t=1245) Claude tag session and Claude tag is
+- [20:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1247) just you know, it's a it's a new product
+- [20:49](https://youtube.com/watch?v=UkoosAsEA8w&t=1249) we have. It's just Claude running in
+- [20:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1250) Slack. My first question was, "Hey tag,
+- [20:52](https://youtube.com/watch?v=UkoosAsEA8w&t=1252) do you have access to a Mac OS runner on
+- [20:54](https://youtube.com/watch?v=UkoosAsEA8w&t=1254) GitHub?"
+- [20:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1255) And that it said no and then I I hooked
+- [20:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1257) up a runner. So it was able to start a
+- [20:59](https://youtube.com/watch?v=UkoosAsEA8w&t=1259) Mac virtual machine using GitHub.
+- [21:02](https://youtube.com/watch?v=UkoosAsEA8w&t=1262) And then my second question is I created
+- [21:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1265) this like empty code base that was
+- [21:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1267) Claude desktop app rewritten in Swift.
+- [21:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1270) And I asked, "Can you access this code
+- [21:11](https://youtube.com/watch?v=UkoosAsEA8w&t=1271) base?" It said, "No." And then I gave it
+- [21:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1273) access and it was like, "Okay, great.
+- [21:14](https://youtube.com/watch?v=UkoosAsEA8w&t=1274) Now I have access."
+- [21:16](https://youtube.com/watch?v=UkoosAsEA8w&t=1276) And then I was like, "Okay, now I want
+- [21:18](https://youtube.com/watch?v=UkoosAsEA8w&t=1278) what I want you to do is I want you to
+- [21:21](https://youtube.com/watch?v=UkoosAsEA8w&t=1281) rewrite the Electron app in Swift.
+- [21:25](https://youtube.com/watch?v=UkoosAsEA8w&t=1285) I want you to run the Electron app in
+- [21:27](https://youtube.com/watch?v=UkoosAsEA8w&t=1287) the Mac virtual machine, screenshot it,
+- [21:30](https://youtube.com/watch?v=UkoosAsEA8w&t=1290) and then look pixel by pixel,
+- [21:33](https://youtube.com/watch?v=UkoosAsEA8w&t=1293) compare it to the Swift version,
+- [21:35](https://youtube.com/watch?v=UkoosAsEA8w&t=1295) don't stop until you're done."
+- [21:37](https://youtube.com/watch?v=UkoosAsEA8w&t=1297) >> And that was your prompt, basically.
+- [21:39](https://youtube.com/watch?v=UkoosAsEA8w&t=1299) >> That was my prompt.
+- [21:40](https://youtube.com/watch?v=UkoosAsEA8w&t=1300) >> And how long did this take to run?
+- [21:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1302) >> It's still running.
+- [21:45](https://youtube.com/watch?v=UkoosAsEA8w&t=1305) >> When did you start it?
+- [21:46](https://youtube.com/watch?v=UkoosAsEA8w&t=1306) >> [laughter]
+- [21:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1307) >> It's been
+- [21:48](https://youtube.com/watch?v=UkoosAsEA8w&t=1308) It's been a little over 2 weeks, so it's
+- [21:49](https://youtube.com/watch?v=UkoosAsEA8w&t=1309) like 14 days, 15 days.
+- [21:52](https://youtube.com/watch?v=UkoosAsEA8w&t=1312) >> Yeah, so I don't know if anyone in the
+- [21:54](https://youtube.com/watch?v=UkoosAsEA8w&t=1314) audience has gotten Claude to run a task
+- [21:58](https://youtube.com/watch?v=UkoosAsEA8w&t=1318) for more than 2 weeks.
+- [22:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1321) I don't know. Raise your hand, anyone in
+- [22:02](https://youtube.com/watch?v=UkoosAsEA8w&t=1322) the audience?
+- [22:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1325) >> Oh.
+- [22:06](https://youtube.com/watch?v=UkoosAsEA8w&t=1326) >> All right.
+- [22:08](https://youtube.com/watch?v=UkoosAsEA8w&t=1328) >> This is This is like one of these
+- [22:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1330) This is about hallucination. So So this
+- [22:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1333) is really one of those examples where
+- [22:15](https://youtube.com/watch?v=UkoosAsEA8w&t=1335) the model can do it today,
+- [22:16](https://youtube.com/watch?v=UkoosAsEA8w&t=1336) you just have to let it do it. And you
+- [22:18](https://youtube.com/watch?v=UkoosAsEA8w&t=1338) don't need the fancy stuff. You don't
+- [22:19](https://youtube.com/watch?v=UkoosAsEA8w&t=1339) need slash go, you don't need slash
+- [22:21](https://youtube.com/watch?v=UkoosAsEA8w&t=1341) loop. These help,
+- [22:23](https://youtube.com/watch?v=UkoosAsEA8w&t=1343) but really all you need is give the
+- [22:25](https://youtube.com/watch?v=UkoosAsEA8w&t=1345) model the task,
+- [22:26](https://youtube.com/watch?v=UkoosAsEA8w&t=1346) give it a way to verify the output of
+- [22:28](https://youtube.com/watch?v=UkoosAsEA8w&t=1348) its work so it doesn't get stuck, and it
+- [22:30](https://youtube.com/watch?v=UkoosAsEA8w&t=1350) will just go.
+- [22:31](https://youtube.com/watch?v=UkoosAsEA8w&t=1351) And actually in this case, Claude also
+- [22:32](https://youtube.com/watch?v=UkoosAsEA8w&t=1352) decided to live blog it. So what it did
+- [22:35](https://youtube.com/watch?v=UkoosAsEA8w&t=1355) is it created a Slack channel
+- [22:36](https://youtube.com/watch?v=UkoosAsEA8w&t=1356) internally, and it started just posting
+- [22:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1358) screenshots every few minutes of its
+- [22:39](https://youtube.com/watch?v=UkoosAsEA8w&t=1359) progress.
+- [22:40](https://youtube.com/watch?v=UkoosAsEA8w&t=1360) >> Wow.
+- [22:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1362) So the prompt sounded so simple.
+- [22:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1364) I mean, everyone here could do it.
+- [22:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1367) And
+- [22:49](https://youtube.com/watch?v=UkoosAsEA8w&t=1369) I guess
+- [22:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1370) what is separating the people here that
+- [22:52](https://youtube.com/watch?v=UkoosAsEA8w&t=1372) can become the top 1% Claude users? How
+- [22:56](https://youtube.com/watch?v=UkoosAsEA8w&t=1376) do How do How could people learn to use
+- [22:58](https://youtube.com/watch?v=UkoosAsEA8w&t=1378) Claude code like Boris?
+- [23:00](https://youtube.com/watch?v=UkoosAsEA8w&t=1380) >> Maybe like
+- [23:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1381) don't listen to the LinkedIn
+- [23:03](https://youtube.com/watch?v=UkoosAsEA8w&t=1383) influencers.
+- [23:04](https://youtube.com/watch?v=UkoosAsEA8w&t=1384) >> Don't listen to you.
+- [23:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1385) Don't read Twitter.
+- [23:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1387) >> [applause and cheering]
+- [23:11](https://youtube.com/watch?v=UkoosAsEA8w&t=1391) >> This is the thing about the model is I
+- [23:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1393) think everyone's looking for like the
+- [23:14](https://youtube.com/watch?v=UkoosAsEA8w&t=1394) one weird trick to do it. There's just
+- [23:16](https://youtube.com/watch?v=UkoosAsEA8w&t=1396) like that doesn't exist. There's nothing
+- [23:18](https://youtube.com/watch?v=UkoosAsEA8w&t=1398) like that. The The way the model works
+- [23:19](https://youtube.com/watch?v=UkoosAsEA8w&t=1399) is you have to approach it empirically.
+- [23:21](https://youtube.com/watch?v=UkoosAsEA8w&t=1401) You have to give it a task that's too
+- [23:22](https://youtube.com/watch?v=UkoosAsEA8w&t=1402) hard. You have to give it the tools to
+- [23:24](https://youtube.com/watch?v=UkoosAsEA8w&t=1404) verify the work like you would yourself
+- [23:26](https://youtube.com/watch?v=UkoosAsEA8w&t=1406) like you would if you were doing the
+- [23:27](https://youtube.com/watch?v=UkoosAsEA8w&t=1407) task. You have to see where it struggles
+- [23:30](https://youtube.com/watch?v=UkoosAsEA8w&t=1410) and then uh you have to like fix that
+- [23:32](https://youtube.com/watch?v=UkoosAsEA8w&t=1412) either with better prompting or with a
+- [23:34](https://youtube.com/watch?v=UkoosAsEA8w&t=1414) skill or if the model's missing context
+- [23:37](https://youtube.com/watch?v=UkoosAsEA8w&t=1417) like give it a MCP so it can pull in the
+- [23:39](https://youtube.com/watch?v=UkoosAsEA8w&t=1419) context that uh that it needs.
+- [23:41](https://youtube.com/watch?v=UkoosAsEA8w&t=1421) That's kind of it.
+- [23:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1422) >> It sounds very simple.
+- [23:43](https://youtube.com/watch?v=UkoosAsEA8w&t=1423) >> [laughter]
+- [23:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1424) >> I think people tend to overthink it a
+- [23:46](https://youtube.com/watch?v=UkoosAsEA8w&t=1426) little bit. I think people tend to
+- [23:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1427) over-engineer
+- [23:48](https://youtube.com/watch?v=UkoosAsEA8w&t=1428) cuz I think in a lot of ways like when
+- [23:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1430) we build systems in the past that's the
+- [23:51](https://youtube.com/watch?v=UkoosAsEA8w&t=1431) way you had to do it. So when I look at
+- [23:53](https://youtube.com/watch?v=UkoosAsEA8w&t=1433) engineers that have been you know coding
+- [23:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1435) for a long for a long time you know like
+- [23:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1437) for for years or for decades this is a
+- [24:00](https://youtube.com/watch?v=UkoosAsEA8w&t=1440) really really common failure mode is
+- [24:02](https://youtube.com/watch?v=UkoosAsEA8w&t=1442) trying to over specify and it's trying
+- [24:04](https://youtube.com/watch?v=UkoosAsEA8w&t=1444) to be overly specific and then you know
+- [24:06](https://youtube.com/watch?v=UkoosAsEA8w&t=1446) get the model to do the to do the task
+- [24:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1447) exactly the way that you would have done
+- [24:09](https://youtube.com/watch?v=UkoosAsEA8w&t=1449) it and that that's just not the way the
+- [24:11](https://youtube.com/watch?v=UkoosAsEA8w&t=1451) model works.
+- [24:12](https://youtube.com/watch?v=UkoosAsEA8w&t=1452) But I think a lot of people are kind of
+- [24:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1453) unlearning this and it's a journey to to
+- [24:15](https://youtube.com/watch?v=UkoosAsEA8w&t=1455) unlearn it and um
+- [24:18](https://youtube.com/watch?v=UkoosAsEA8w&t=1458) it's a journey to kind of figure out how
+- [24:19](https://youtube.com/watch?v=UkoosAsEA8w&t=1459) how do you treat this thing like you
+- [24:21](https://youtube.com/watch?v=UkoosAsEA8w&t=1461) would a coworker. I think that's the
+- [24:23](https://youtube.com/watch?v=UkoosAsEA8w&t=1463) level of intelligence that it's at now.
+- [24:25](https://youtube.com/watch?v=UkoosAsEA8w&t=1465) >> And as part of this let's go deeper into
+- [24:26](https://youtube.com/watch?v=UkoosAsEA8w&t=1466) this task that's still running 2 weeks
+- [24:28](https://youtube.com/watch?v=UkoosAsEA8w&t=1468) since you launched it a go 2 weeks ago.
+- [24:31](https://youtube.com/watch?v=UkoosAsEA8w&t=1471) How many agents did it spawn?
+- [24:33](https://youtube.com/watch?v=UkoosAsEA8w&t=1473) >> You know I'm not sure. I I can ask Bard
+- [24:35](https://youtube.com/watch?v=UkoosAsEA8w&t=1475) and then I I can get back to you. I
+- [24:36](https://youtube.com/watch?v=UkoosAsEA8w&t=1476) would I would guess
+- [24:39](https://youtube.com/watch?v=UkoosAsEA8w&t=1479) thousands tens of thousands.
+- [24:40](https://youtube.com/watch?v=UkoosAsEA8w&t=1480) >> Thousands? Has anyone in the audience
+- [24:41](https://youtube.com/watch?v=UkoosAsEA8w&t=1481) had a prompt to to any of the models
+- [24:45](https://youtube.com/watch?v=UkoosAsEA8w&t=1485) that run that spawn more than a thousand
+- [24:46](https://youtube.com/watch?v=UkoosAsEA8w&t=1486) agents?
+- [24:48](https://youtube.com/watch?v=UkoosAsEA8w&t=1488) No?
+- [24:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1490) I think this is another of the tips like
+- [24:51](https://youtube.com/watch?v=UkoosAsEA8w&t=1491) the best Claude users are able to spawn
+- [24:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1495) tasks that are really
+- [24:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1497) providing you a lot of leverage like
+- [24:58](https://youtube.com/watch?v=UkoosAsEA8w&t=1498) thousands of agents.
+- [25:00](https://youtube.com/watch?v=UkoosAsEA8w&t=1500) >> Yes.
+- [25:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1501) >> How do you do that?
+- [25:02](https://youtube.com/watch?v=UkoosAsEA8w&t=1502) >> There's a few different ways to do it.
+- [25:04](https://youtube.com/watch?v=UkoosAsEA8w&t=1504) Um,
+- [25:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1505) the easiest way is dynamic workflows.
+- [25:09](https://youtube.com/watch?v=UkoosAsEA8w&t=1509) To use dynamic workflows is a fairly new
+- [25:11](https://youtube.com/watch?v=UkoosAsEA8w&t=1511) feature in Cloud Code.
+- [25:12](https://youtube.com/watch?v=UkoosAsEA8w&t=1512) And all you have to say is use a
+- [25:15](https://youtube.com/watch?v=UkoosAsEA8w&t=1515) workflow.
+- [25:17](https://youtube.com/watch?v=UkoosAsEA8w&t=1517) That's it. And then Cloud will just
+- [25:18](https://youtube.com/watch?v=UkoosAsEA8w&t=1518) trigger the dynamic workflow. What a
+- [25:20](https://youtube.com/watch?v=UkoosAsEA8w&t=1520) dynamic workflow is is essentially we
+- [25:22](https://youtube.com/watch?v=UkoosAsEA8w&t=1522) have the we have the Bun runtime.
+- [25:25](https://youtube.com/watch?v=UkoosAsEA8w&t=1525) We use Bun as a sandbox and we start a
+- [25:27](https://youtube.com/watch?v=UkoosAsEA8w&t=1527) virtual machine within Bun.
+- [25:29](https://youtube.com/watch?v=UkoosAsEA8w&t=1529) And we let Cloud start a lot of agents
+- [25:31](https://youtube.com/watch?v=UkoosAsEA8w&t=1531) and orchestrate them. And it it doesn't
+- [25:33](https://youtube.com/watch?v=UkoosAsEA8w&t=1533) just do one agent. It doesn't just do
+- [25:35](https://youtube.com/watch?v=UkoosAsEA8w&t=1535) like 10 parallel agents. What it might
+- [25:37](https://youtube.com/watch?v=UkoosAsEA8w&t=1537) do is um, let's say a task is like
+- [25:40](https://youtube.com/watch?v=UkoosAsEA8w&t=1540) rewrite the code base or do really
+- [25:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1542) in-depth data analysis over some really
+- [25:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1544) complicated data or maybe like build a
+- [25:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1547) very complex feature that takes multiple
+- [25:49](https://youtube.com/watch?v=UkoosAsEA8w&t=1549) stages
+- [25:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1550) and maybe dozens of pull requests.
+- [25:52](https://youtube.com/watch?v=UkoosAsEA8w&t=1552) And so what it's going to do is it's
+- [25:53](https://youtube.com/watch?v=UkoosAsEA8w&t=1553) going to start a a bunch of agents to do
+- [25:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1555) kind of like the first pass.
+- [25:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1557) Based on that, it might do a second step
+- [25:59](https://youtube.com/watch?v=UkoosAsEA8w&t=1559) where it has another set of agents that
+- [26:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1561) verify the work or that summarize the
+- [26:04](https://youtube.com/watch?v=UkoosAsEA8w&t=1564) work.
+- [26:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1565) Then it might do like a third stage
+- [26:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1567) where it'll fan out again.
+- [26:09](https://youtube.com/watch?v=UkoosAsEA8w&t=1569) So it'll kind of productively
+- [26:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1570) orchestrate a bunch of different agents.
+- [26:12](https://youtube.com/watch?v=UkoosAsEA8w&t=1572) So my background is functional
+- [26:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1573) programming.
+- [26:15](https://youtube.com/watch?v=UkoosAsEA8w&t=1575) And so the way that we design this is
+- [26:16](https://youtube.com/watch?v=UkoosAsEA8w&t=1576) it's essentially an algebra for agents.
+- [26:19](https://youtube.com/watch?v=UkoosAsEA8w&t=1579) So there's a way to run agents in
+- [26:21](https://youtube.com/watch?v=UkoosAsEA8w&t=1581) sequence. There's a way to run agents in
+- [26:23](https://youtube.com/watch?v=UkoosAsEA8w&t=1583) parallel. And Cloud has different tools
+- [26:26](https://youtube.com/watch?v=UkoosAsEA8w&t=1586) in order to orchestrate these agents
+- [26:28](https://youtube.com/watch?v=UkoosAsEA8w&t=1588) inside of the sandbox to use tokens
+- [26:30](https://youtube.com/watch?v=UkoosAsEA8w&t=1590) efficiently to do really really complex
+- [26:33](https://youtube.com/watch?v=UkoosAsEA8w&t=1593) work. It's kind of
+- [26:35](https://youtube.com/watch?v=UkoosAsEA8w&t=1595) cool and something that just hasn't
+- [26:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1598) really been written about a lot. Like
+- [26:39](https://youtube.com/watch?v=UkoosAsEA8w&t=1599) this is actually like a new form of test
+- [26:41](https://youtube.com/watch?v=UkoosAsEA8w&t=1601) time compute. Like when we talk about
+- [26:43](https://youtube.com/watch?v=UkoosAsEA8w&t=1603) the scaling laws and kind of we talk
+- [26:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1604) about the model getting more intelligent
+- [26:46](https://youtube.com/watch?v=UkoosAsEA8w&t=1606) over time, historically
+- [26:49](https://youtube.com/watch?v=UkoosAsEA8w&t=1609) it's been a function of the size of the
+- [26:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1610) neuron net, the amount of training data,
+- [26:53](https://youtube.com/watch?v=UkoosAsEA8w&t=1613) and the number of flops that you put in
+- [26:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1615) to the training.
+- [26:56](https://youtube.com/watch?v=UkoosAsEA8w&t=1616) And then recently we also added test
+- [26:58](https://youtube.com/watch?v=UkoosAsEA8w&t=1618) time compute. So this is essentially a
+- [26:59](https://youtube.com/watch?v=UkoosAsEA8w&t=1619) fancy way researcher way of saying how
+- [27:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1621) many tokens does it generate.
+- [27:04](https://youtube.com/watch?v=UkoosAsEA8w&t=1624) And now
+- [27:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1625) dynamic workflows are essentially a new
+- [27:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1627) way to orchestrate test time compute.
+- [27:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1630) And it's a new way to kind of really,
+- [27:12](https://youtube.com/watch?v=UkoosAsEA8w&t=1632) really ramp up the amount of test time
+- [27:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1633) compute that you use to do a really hard
+- [27:15](https://youtube.com/watch?v=UkoosAsEA8w&t=1635) task.
+- [27:17](https://youtube.com/watch?v=UkoosAsEA8w&t=1637) So this all very long way to say this is
+- [27:19](https://youtube.com/watch?v=UkoosAsEA8w&t=1639) one way to launch thousands of agents in
+- [27:21](https://youtube.com/watch?v=UkoosAsEA8w&t=1641) a way that is productive and efficient.
+- [27:24](https://youtube.com/watch?v=UkoosAsEA8w&t=1644) A second way to do it is loops and
+- [27:26](https://youtube.com/watch?v=UkoosAsEA8w&t=1646) routines.
+- [27:27](https://youtube.com/watch?v=UkoosAsEA8w&t=1647) Loop is essentially a cron job that's
+- [27:29](https://youtube.com/watch?v=UkoosAsEA8w&t=1649) running locally for Quad. Routine is the
+- [27:31](https://youtube.com/watch?v=UkoosAsEA8w&t=1651) same thing but it's running the Quad in
+- [27:33](https://youtube.com/watch?v=UkoosAsEA8w&t=1653) the cloud.
+- [27:34](https://youtube.com/watch?v=UkoosAsEA8w&t=1654) So you can close your laptop. And this
+- [27:37](https://youtube.com/watch?v=UkoosAsEA8w&t=1657) is like slightly different because for a
+- [27:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1658) dynamic workflow it's one task and you
+- [27:41](https://youtube.com/watch?v=UkoosAsEA8w&t=1661) break it up into chunks.
+- [27:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1662) For loops and routines it's one task
+- [27:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1664) that is repetitive, that doesn't share
+- [27:46](https://youtube.com/watch?v=UkoosAsEA8w&t=1666) context but it might share memory.
+- [27:48](https://youtube.com/watch?v=UkoosAsEA8w&t=1668) And you kind of do this like over and
+- [27:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1670) over. You can do it like maybe every
+- [27:51](https://youtube.com/watch?v=UkoosAsEA8w&t=1671) hour, every 5 minutes, every day.
+- [27:54](https://youtube.com/watch?v=UkoosAsEA8w&t=1674) And so thing that we've started doing is
+- [27:56](https://youtube.com/watch?v=UkoosAsEA8w&t=1676) um we actually have Quad maintaining
+- [27:58](https://youtube.com/watch?v=UkoosAsEA8w&t=1678) itself now.
+- [27:59](https://youtube.com/watch?v=UkoosAsEA8w&t=1679) And the way we do this is we have a
+- [28:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1681) Slack channel where we just had Quad
+- [28:04](https://youtube.com/watch?v=UkoosAsEA8w&t=1684) start a bunch of different routines to
+- [28:06](https://youtube.com/watch?v=UkoosAsEA8w&t=1686) maintain its own code base. And we
+- [28:08](https://youtube.com/watch?v=UkoosAsEA8w&t=1688) actually do this for the CLI, for the
+- [28:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1690) iOS app, for the Android app, uh for the
+- [28:12](https://youtube.com/watch?v=UkoosAsEA8w&t=1692) desktop app.
+- [28:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1693) And you for example one routine is clean
+- [28:16](https://youtube.com/watch?v=UkoosAsEA8w&t=1696) up dead code.
+- [28:17](https://youtube.com/watch?v=UkoosAsEA8w&t=1697) This is a single prompt. It's like one
+- [28:19](https://youtube.com/watch?v=UkoosAsEA8w&t=1699) sentence. Quad runs this every day.
+- [28:21](https://youtube.com/watch?v=UkoosAsEA8w&t=1701) It'll look for dead code across all the
+- [28:22](https://youtube.com/watch?v=UkoosAsEA8w&t=1702) code bases using static and dynamic
+- [28:25](https://youtube.com/watch?v=UkoosAsEA8w&t=1705) analysis. We didn't prompt that. It just
+- [28:26](https://youtube.com/watch?v=UkoosAsEA8w&t=1706) kind of figured it out.
+- [28:28](https://youtube.com/watch?v=UkoosAsEA8w&t=1708) And it'll put a pull request every day
+- [28:30](https://youtube.com/watch?v=UkoosAsEA8w&t=1710) to delete the dead code.
+- [28:31](https://youtube.com/watch?v=UkoosAsEA8w&t=1711) Another example is uh shipping
+- [28:33](https://youtube.com/watch?v=UkoosAsEA8w&t=1713) experiments that should go out. Um so
+- [28:36](https://youtube.com/watch?v=UkoosAsEA8w&t=1716) the experiment's already out to 100%.
+- [28:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1718) It'll delete it from the code base and
+- [28:40](https://youtube.com/watch?v=UkoosAsEA8w&t=1720) it'll just ship it.
+- [28:41](https://youtube.com/watch?v=UkoosAsEA8w&t=1721) Another one is writing tests for areas
+- [28:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1724) of the code base that need test
+- [28:45](https://youtube.com/watch?v=UkoosAsEA8w&t=1725) coverage. Another one is deleting tests
+- [28:48](https://youtube.com/watch?v=UkoosAsEA8w&t=1728) that don't need to be there cuz you
+- [28:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1730) know, they're kind of useless tests
+- [28:51](https://youtube.com/watch?v=UkoosAsEA8w&t=1731) added by older models or added by people
+- [28:53](https://youtube.com/watch?v=UkoosAsEA8w&t=1733) at some point. One that one that I
+- [28:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1735) really love is this um
+- [28:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1737) I forgot what we called it. I think we
+- [28:58](https://youtube.com/watch?v=UkoosAsEA8w&t=1738) called it abstraction police.
+- [29:00](https://youtube.com/watch?v=UkoosAsEA8w&t=1740) And the idea is there are often in a big
+- [29:03](https://youtube.com/watch?v=UkoosAsEA8w&t=1743) code base there's kind of the same
+- [29:04](https://youtube.com/watch?v=UkoosAsEA8w&t=1744) abstraction and it appears multiple
+- [29:06](https://youtube.com/watch?v=UkoosAsEA8w&t=1746) times. And if you kind of squint it
+- [29:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1747) actually maybe should just be the same
+- [29:09](https://youtube.com/watch?v=UkoosAsEA8w&t=1749) abstraction. But kind of over time for
+- [29:11](https://youtube.com/watch?v=UkoosAsEA8w&t=1751) whatever reason you rebuilt it multiple
+- [29:14](https://youtube.com/watch?v=UkoosAsEA8w&t=1754) ways in different parts of the code
+- [29:15](https://youtube.com/watch?v=UkoosAsEA8w&t=1755) base. So Quad kind of goes out every day
+- [29:18](https://youtube.com/watch?v=UkoosAsEA8w&t=1758) across all our code bases, it finds
+- [29:20](https://youtube.com/watch?v=UkoosAsEA8w&t=1760) these nearly duplicated abstractions and
+- [29:22](https://youtube.com/watch?v=UkoosAsEA8w&t=1762) it unifies them.
+- [29:23](https://youtube.com/watch?v=UkoosAsEA8w&t=1763) And so now we have every day maybe 20 or
+- [29:25](https://youtube.com/watch?v=UkoosAsEA8w&t=1765) 30 of these routines it's running across
+- [29:27](https://youtube.com/watch?v=UkoosAsEA8w&t=1767) all of our code bases and
+- [29:30](https://youtube.com/watch?v=UkoosAsEA8w&t=1770) it's not totally there yet.
+- [29:32](https://youtube.com/watch?v=UkoosAsEA8w&t=1772) But we're on the path to fully
+- [29:34](https://youtube.com/watch?v=UkoosAsEA8w&t=1774) automating the maintenance of our apps
+- [29:36](https://youtube.com/watch?v=UkoosAsEA8w&t=1776) by doing this.
+- [29:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1778) And this is again hundreds of agents
+- [29:40](https://youtube.com/watch?v=UkoosAsEA8w&t=1780) running every day, sometimes thousands
+- [29:41](https://youtube.com/watch?v=UkoosAsEA8w&t=1781) of agents every day. It's doing the work
+- [29:43](https://youtube.com/watch?v=UkoosAsEA8w&t=1783) of you know, dozens or hundreds of
+- [29:46](https://youtube.com/watch?v=UkoosAsEA8w&t=1786) engineers. This is kind of what it used
+- [29:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1787) to take to do this kind of work.
+- [29:49](https://youtube.com/watch?v=UkoosAsEA8w&t=1789) And this means that engineers can just
+- [29:51](https://youtube.com/watch?v=UkoosAsEA8w&t=1791) like do the thing they actually want to
+- [29:52](https://youtube.com/watch?v=UkoosAsEA8w&t=1792) do which is ship new product and talk to
+- [29:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1795) users and uh do stuff that's actually
+- [29:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1797) fun.
+- [29:58](https://youtube.com/watch?v=UkoosAsEA8w&t=1798) >> I guess my next conclusion from this,
+- [30:00](https://youtube.com/watch?v=UkoosAsEA8w&t=1800) which you have mentioned in the past
+- [30:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1801) that
+- [30:03](https://youtube.com/watch?v=UkoosAsEA8w&t=1803) basically coding is solved, right?
+- [30:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1805) You have mentioned this.
+- [30:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1807) Um
+- [30:08](https://youtube.com/watch?v=UkoosAsEA8w&t=1808) I'm curious now that effectively
+- [30:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1810) everyone can write software, what
+- [30:12](https://youtube.com/watch?v=UkoosAsEA8w&t=1812) separates the exceptional builders
+- [30:17](https://youtube.com/watch?v=UkoosAsEA8w&t=1817) from the rest? What what are the
+- [30:18](https://youtube.com/watch?v=UkoosAsEA8w&t=1818) qualities now that everyone can ship
+- [30:20](https://youtube.com/watch?v=UkoosAsEA8w&t=1820) code?
+- [30:21](https://youtube.com/watch?v=UkoosAsEA8w&t=1821) >> I I would give like one caveat. So
+- [30:23](https://youtube.com/watch?v=UkoosAsEA8w&t=1823) coding is solved for the kind of coding
+- [30:25](https://youtube.com/watch?v=UkoosAsEA8w&t=1825) that I do.
+- [30:26](https://youtube.com/watch?v=UkoosAsEA8w&t=1826) It's not solved for everyone.
+- [30:28](https://youtube.com/watch?v=UkoosAsEA8w&t=1828) You know, there's still code bases that
+- [30:29](https://youtube.com/watch?v=UkoosAsEA8w&t=1829) are like super deep systems code bases
+- [30:32](https://youtube.com/watch?v=UkoosAsEA8w&t=1832) where Quad still struggles. There's
+- [30:33](https://youtube.com/watch?v=UkoosAsEA8w&t=1833) distributed systems where Quad still
+- [30:35](https://youtube.com/watch?v=UkoosAsEA8w&t=1835) struggles. There's really kind of in the
+- [30:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1838) weeds UI verification like something is
+- [30:39](https://youtube.com/watch?v=UkoosAsEA8w&t=1839) off by pixel or something. Quad is still
+- [30:41](https://youtube.com/watch?v=UkoosAsEA8w&t=1841) not perfect at this. Like Opus 5 was a
+- [30:43](https://youtube.com/watch?v=UkoosAsEA8w&t=1843) big leap in vision and computer use, but
+- [30:46](https://youtube.com/watch?v=UkoosAsEA8w&t=1846) it's still not perfect.
+- [30:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1847) Um but I I'm actually curious for people
+- [30:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1850) here, maybe raise your hand if 100% of
+- [30:53](https://youtube.com/watch?v=UkoosAsEA8w&t=1853) your code is written using agents. You
+- [30:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1855) don't write any code by hand anymore.
+- [30:59](https://youtube.com/watch?v=UkoosAsEA8w&t=1859) It's pretty good. Okay, how about more
+- [31:01](https://youtube.com/watch?v=UkoosAsEA8w&t=1861) than 50%?
+- [31:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1865) Slightly less hands, maybe about the
+- [31:06](https://youtube.com/watch?v=UkoosAsEA8w&t=1866) same.
+- [31:07](https://youtube.com/watch?v=UkoosAsEA8w&t=1867) Yeah.
+- [31:08](https://youtube.com/watch?v=UkoosAsEA8w&t=1868) So I think it's like it's getting there.
+- [31:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1870) So it's kind of getting to this to you
+- [31:12](https://youtube.com/watch?v=UkoosAsEA8w&t=1872) know, to being solved for more and more
+- [31:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1873) kinds of code. And that's kind of cool.
+- [31:15](https://youtube.com/watch?v=UkoosAsEA8w&t=1875) When I think about the people that are
+- [31:17](https://youtube.com/watch?v=UkoosAsEA8w&t=1877) the best at using Quad,
+- [31:20](https://youtube.com/watch?v=UkoosAsEA8w&t=1880) I think there's a certain mindset that
+- [31:22](https://youtube.com/watch?v=UkoosAsEA8w&t=1882) you can bring that's really effective.
+- [31:24](https://youtube.com/watch?v=UkoosAsEA8w&t=1884) And it's really about being empirical.
+- [31:28](https://youtube.com/watch?v=UkoosAsEA8w&t=1888) So forget all the things that you
+- [31:30](https://youtube.com/watch?v=UkoosAsEA8w&t=1890) learned about past models.
+- [31:32](https://youtube.com/watch?v=UkoosAsEA8w&t=1892) Forget everything that you've learned
+- [31:34](https://youtube.com/watch?v=UkoosAsEA8w&t=1894) about computer science theory in class.
+- [31:37](https://youtube.com/watch?v=UkoosAsEA8w&t=1897) Look at the model,
+- [31:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1898) try to do a task, see where it
+- [31:41](https://youtube.com/watch?v=UkoosAsEA8w&t=1901) struggles, and then based on that
+- [31:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1902) adjust. So it's just like a very much
+- [31:44](https://youtube.com/watch?v=UkoosAsEA8w&t=1904) become it's not a theoretical science,
+- [31:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1907) it's become an empirical science.
+- [31:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1910) So I think people that are really good
+- [31:51](https://youtube.com/watch?v=UkoosAsEA8w&t=1911) at this, that are really good at kind of
+- [31:52](https://youtube.com/watch?v=UkoosAsEA8w&t=1912) forgetting their priors, letting go of
+- [31:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1915) you know, this like maybe idea that
+- [31:56](https://youtube.com/watch?v=UkoosAsEA8w&t=1916) didn't work before and just being open
+- [31:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1917) to trying it again.
+- [31:59](https://youtube.com/watch?v=UkoosAsEA8w&t=1919) This is the kind of skill that's just
+- [32:00](https://youtube.com/watch?v=UkoosAsEA8w&t=1920) very, very successful now.
+- [32:03](https://youtube.com/watch?v=UkoosAsEA8w&t=1923) >> Now my last question is given everything
+- [32:06](https://youtube.com/watch?v=UkoosAsEA8w&t=1926) that we talked about, if there's someone
+- [32:09](https://youtube.com/watch?v=UkoosAsEA8w&t=1929) here that's studying CS,
+- [32:11](https://youtube.com/watch?v=UkoosAsEA8w&t=1931) and you you learned to program before
+- [32:13](https://youtube.com/watch?v=UkoosAsEA8w&t=1933) this era of AI agents coding,
+- [32:17](https://youtube.com/watch?v=UkoosAsEA8w&t=1937) what should students still learn the
+- [32:19](https://youtube.com/watch?v=UkoosAsEA8w&t=1939) hard way, like the old way?
+- [32:22](https://youtube.com/watch?v=UkoosAsEA8w&t=1942) >> So for me,
+- [32:23](https://youtube.com/watch?v=UkoosAsEA8w&t=1943) I learned computer science practically.
+- [32:28](https://youtube.com/watch?v=UkoosAsEA8w&t=1948) I learned it by teaching myself to code
+- [32:30](https://youtube.com/watch?v=UkoosAsEA8w&t=1950) in order to solve problems.
+- [32:32](https://youtube.com/watch?v=UkoosAsEA8w&t=1952) Whenever I was doing this, I was doing
+- [32:34](https://youtube.com/watch?v=UkoosAsEA8w&t=1954) it to solve a particular problem that I
+- [32:37](https://youtube.com/watch?v=UkoosAsEA8w&t=1957) had.
+- [32:38](https://youtube.com/watch?v=UkoosAsEA8w&t=1958) So, I actually first learned to code on
+- [32:40](https://youtube.com/watch?v=UkoosAsEA8w&t=1960) a TI-83 calculators.
+- [32:42](https://youtube.com/watch?v=UkoosAsEA8w&t=1962) Um, this back in middle school and um,
+- [32:45](https://youtube.com/watch?v=UkoosAsEA8w&t=1965) I ended up actually writing a guide on
+- [32:47](https://youtube.com/watch?v=UkoosAsEA8w&t=1967) the internet for programming TI-83
+- [32:48](https://youtube.com/watch?v=UkoosAsEA8w&t=1968) calculators. It's still up on the
+- [32:50](https://youtube.com/watch?v=UkoosAsEA8w&t=1970) internet somewhere.
+- [32:51](https://youtube.com/watch?v=UkoosAsEA8w&t=1971) Um, and it was a it was basic. That that
+- [32:53](https://youtube.com/watch?v=UkoosAsEA8w&t=1973) was my first language.
+- [32:55](https://youtube.com/watch?v=UkoosAsEA8w&t=1975) And I I learned how to program on
+- [32:57](https://youtube.com/watch?v=UkoosAsEA8w&t=1977) calculator so I could just like get
+- [32:58](https://youtube.com/watch?v=UkoosAsEA8w&t=1978) better at my math tests
+- [33:00](https://youtube.com/watch?v=UkoosAsEA8w&t=1980) by uh by cheating on the test.
+- [33:05](https://youtube.com/watch?v=UkoosAsEA8w&t=1985) >> [applause]
+- [33:08](https://youtube.com/watch?v=UkoosAsEA8w&t=1988) >> So, it it it was about something
+- [33:10](https://youtube.com/watch?v=UkoosAsEA8w&t=1990) practical. You know, the like to me as a
+- [33:11](https://youtube.com/watch?v=UkoosAsEA8w&t=1991) middle schooler, that was kind of like
+- [33:12](https://youtube.com/watch?v=UkoosAsEA8w&t=1992) the most practical thing I could think
+- [33:14](https://youtube.com/watch?v=UkoosAsEA8w&t=1994) of. And I ended up getting good grades
+- [33:16](https://youtube.com/watch?v=UkoosAsEA8w&t=1996) and then I got this little serial cable
+- [33:17](https://youtube.com/watch?v=UkoosAsEA8w&t=1997) to give the, you know, the programs to
+- [33:19](https://youtube.com/watch?v=UkoosAsEA8w&t=1999) my classmates and they got really good
+- [33:20](https://youtube.com/watch?v=UkoosAsEA8w&t=2000) grades. And then the math got a little
+- [33:22](https://youtube.com/watch?v=UkoosAsEA8w&t=2002) bit harder. Um, it wasn't something that
+- [33:25](https://youtube.com/watch?v=UkoosAsEA8w&t=2005) I could solve in basic anymore. So, I
+- [33:26](https://youtube.com/watch?v=UkoosAsEA8w&t=2006) kind of went from this like, you know,
+- [33:28](https://youtube.com/watch?v=UkoosAsEA8w&t=2008) like maybe algebra solver that was
+- [33:30](https://youtube.com/watch?v=UkoosAsEA8w&t=2010) written basic. And I had to solve harder
+- [33:33](https://youtube.com/watch?v=UkoosAsEA8w&t=2013) problems. And um, you know, like once we
+- [33:35](https://youtube.com/watch?v=UkoosAsEA8w&t=2015) got into calculus, I had to learn
+- [33:37](https://youtube.com/watch?v=UkoosAsEA8w&t=2017) assembly so that I can write
+- [33:39](https://youtube.com/watch?v=UkoosAsEA8w&t=2019) a better solver so I could cheat better
+- [33:41](https://youtube.com/watch?v=UkoosAsEA8w&t=2021) on the test now that it was calculus.
+- [33:43](https://youtube.com/watch?v=UkoosAsEA8w&t=2023) And so, for me, programming has always
+- [33:45](https://youtube.com/watch?v=UkoosAsEA8w&t=2025) been very practical and I think this is
+- [33:47](https://youtube.com/watch?v=UkoosAsEA8w&t=2027) always my advice for people in school is
+- [33:49](https://youtube.com/watch?v=UkoosAsEA8w&t=2029) learn not just the computer science.
+- [33:51](https://youtube.com/watch?v=UkoosAsEA8w&t=2031) This is like intellectually fascinating
+- [33:53](https://youtube.com/watch?v=UkoosAsEA8w&t=2033) and it's really really interesting to
+- [33:55](https://youtube.com/watch?v=UkoosAsEA8w&t=2035) know, but learn how to apply it. And
+- [33:57](https://youtube.com/watch?v=UkoosAsEA8w&t=2037) often this is about building startups.
+- [33:58](https://youtube.com/watch?v=UkoosAsEA8w&t=2038) It's about building products. It's about
+- [34:00](https://youtube.com/watch?v=UkoosAsEA8w&t=2040) developing your own design sense,
+- [34:02](https://youtube.com/watch?v=UkoosAsEA8w&t=2042) developing your business sense, learning
+- [34:04](https://youtube.com/watch?v=UkoosAsEA8w&t=2044) how to use how to do data science,
+- [34:06](https://youtube.com/watch?v=UkoosAsEA8w&t=2046) learning how to talk to users. There are
+- [34:08](https://youtube.com/watch?v=UkoosAsEA8w&t=2048) all these other skills and when you
+- [34:10](https://youtube.com/watch?v=UkoosAsEA8w&t=2050) combine it
+- [34:11](https://youtube.com/watch?v=UkoosAsEA8w&t=2051) with computer science and engineering,
+- [34:12](https://youtube.com/watch?v=UkoosAsEA8w&t=2052) that's where it becomes really really
+- [34:14](https://youtube.com/watch?v=UkoosAsEA8w&t=2054) valuable. So, those are the hard skills
+- [34:16](https://youtube.com/watch?v=UkoosAsEA8w&t=2056) that I would still be doing by hand.
+- [34:19](https://youtube.com/watch?v=UkoosAsEA8w&t=2059) >> So, if I'm hearing and summarizing,
+- [34:21](https://youtube.com/watch?v=UkoosAsEA8w&t=2061) start with making something you want
+- [34:23](https://youtube.com/watch?v=UkoosAsEA8w&t=2063) first for yourself and then level up and
+- [34:26](https://youtube.com/watch?v=UkoosAsEA8w&t=2066) make something people want.
+- [34:28](https://youtube.com/watch?v=UkoosAsEA8w&t=2068) >> Yes.
+- [34:30](https://youtube.com/watch?v=UkoosAsEA8w&t=2070) >> And we just have one last special
+- [34:32](https://youtube.com/watch?v=UkoosAsEA8w&t=2072) announcement Boris. You want to one one
+- [34:34](https://youtube.com/watch?v=UkoosAsEA8w&t=2074) last thing?
+- [34:36](https://youtube.com/watch?v=UkoosAsEA8w&t=2076) >> Yeah, so
+- [34:37](https://youtube.com/watch?v=UkoosAsEA8w&t=2077) for everyone here today
+- [34:40](https://youtube.com/watch?v=UkoosAsEA8w&t=2080) uh you are getting Max 20X.
+- [34:46](https://youtube.com/watch?v=UkoosAsEA8w&t=2086) >> [cheering]
+- [34:51](https://youtube.com/watch?v=UkoosAsEA8w&t=2091) [cheering and applause]
+- [34:52](https://youtube.com/watch?v=UkoosAsEA8w&t=2092) [laughter]
+- [34:56](https://youtube.com/watch?v=UkoosAsEA8w&t=2096) >> Wow,
+- [34:57](https://youtube.com/watch?v=UkoosAsEA8w&t=2097) incredible.
+- [34:58](https://youtube.com/watch?v=UkoosAsEA8w&t=2098) >> Pretty good.
+- [34:59](https://youtube.com/watch?v=UkoosAsEA8w&t=2099) >> [applause]
+- [35:00](https://youtube.com/watch?v=UkoosAsEA8w&t=2100) >> So look for look for a code in your
+- [35:02](https://youtube.com/watch?v=UkoosAsEA8w&t=2102) email and I can't wait to see what you
+- [35:04](https://youtube.com/watch?v=UkoosAsEA8w&t=2104) build.
+- [35:05](https://youtube.com/watch?v=UkoosAsEA8w&t=2105) >> We'll be sending an email.
+- [35:08](https://youtube.com/watch?v=UkoosAsEA8w&t=2108) >> [applause]
+- [35:09](https://youtube.com/watch?v=UkoosAsEA8w&t=2109) [cheering]
+- [35:14](https://youtube.com/watch?v=UkoosAsEA8w&t=2114) >> So I'm curious someone in this room
+- [35:15](https://youtube.com/watch?v=UkoosAsEA8w&t=2115) should be building something that runs
+- [35:17](https://youtube.com/watch?v=UkoosAsEA8w&t=2117) hopefully multiple months and thousands
+- [35:19](https://youtube.com/watch?v=UkoosAsEA8w&t=2119) of agents now that you have the account
+- [35:22](https://youtube.com/watch?v=UkoosAsEA8w&t=2122) to do it. And with that, thank you so
+- [35:24](https://youtube.com/watch?v=UkoosAsEA8w&t=2124) much Boris.
+- [35:25](https://youtube.com/watch?v=UkoosAsEA8w&t=2125) >> Thank you.
+- [35:26](https://youtube.com/watch?v=UkoosAsEA8w&t=2126) >> Thank you.
+- [35:26](https://youtube.com/watch?v=UkoosAsEA8w&t=2126) >> [cheering]
+- [35:30](https://youtube.com/watch?v=UkoosAsEA8w&t=2130) [applause]
