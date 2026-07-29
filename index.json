@@ -3295,5 +3295,45 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-29-Claude-Code는-이렇게-만들어졌다.md",
+    "title": "[한영자막] 보리스 체르니: Claude Code는 이렇게 만들어졌다",
+    "category": "일반학습",
+    "date": "2026-07-29",
+    "core_message": "모델이 진화할수록 프롬프트·스캐폴딩을 과감히 삭제하고 경험적으로 재구축해야 모델의 진짜 능력(product overhang)을 해방시킬 수 있다.",
+    "topics": [],
+    "concepts": [
+      {
+        "id": "언호블링",
+        "label": "언호블링",
+        "topic": null
+      },
+      {
+        "id": "제품-과잉",
+        "label": "제품 과잉",
+        "topic": null
+      },
+      {
+        "id": "프롬프트-인젝션-방어",
+        "label": "프롬프트 인젝션 방어",
+        "topic": null
+      },
+      {
+        "id": "동적-워크플로우",
+        "label": "동적 워크플로우",
+        "topic": null
+      },
+      {
+        "id": "ablation",
+        "label": "ablation",
+        "topic": null
+      },
+      {
+        "id": "루프·루틴",
+        "label": "루프·루틴",
+        "topic": null
+      }
+    ]
   }
 ]
