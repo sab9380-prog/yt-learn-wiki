@@ -3335,5 +3335,47 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-31-영상-편집-안해도-돼요-글-한줄로-영상-10개씩-뽑아-하루-110만원.md",
+    "title": "\"영상 편집 안해도 돼요\" 글 한줄로 영상 10개씩 뽑아 하루 110만원 버는 여자 (뻔한 AI 프로그램❌)",
+    "category": "Picks전략",
+    "date": "2026-07-31",
+    "core_message": "클로드 코드·튜브워커 등 AI 도구를 파이프라인으로 연결하면 얼굴·촬영 없이도 고RPM 지식 채널로 월 1,000만 원대 수익이 가능하다.",
+    "topics": [
+      "클로드코드"
+    ],
+    "concepts": [
+      {
+        "id": "claude-code",
+        "label": "클로드 코드",
+        "topic": "클로드코드"
+      },
+      {
+        "id": "튜브워커",
+        "label": "튜브워커",
+        "topic": null
+      },
+      {
+        "id": "AI-자동-영상-제작",
+        "label": "AI 자동 영상 제작",
+        "topic": null
+      },
+      {
+        "id": "RPM",
+        "label": "RPM",
+        "topic": null
+      },
+      {
+        "id": "롱폼-지식-채널",
+        "label": "롱폼 지식 채널",
+        "topic": null
+      },
+      {
+        "id": "TTS",
+        "label": "TTS",
+        "topic": null
+      }
+    ]
   }
 ]
