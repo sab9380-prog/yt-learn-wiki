@@ -3874,5 +3874,47 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-31-나도-AI로-영화를-만들-수-있을까.md",
+    "title": "나도 AI로 영화를 만들 수 있을까",
+    "category": "일반학습",
+    "date": "2026-07-31",
+    "core_message": "AI 영상 생성 도구와 올바른 프롬프트 전략만 있으면 영화 전문 지식이 없어도 시네마틱 단편 영상을 누구나 만들 수 있다.",
+    "topics": [
+      "스킬"
+    ],
+    "concepts": [
+      {
+        "id": "Kling-Video-Sience-2.0",
+        "label": "Kling Video Sience 2.0",
+        "topic": null
+      },
+      {
+        "id": "캐릭터-시트",
+        "label": "캐릭터 시트",
+        "topic": null
+      },
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "프롬프트-엔지니어링",
+        "label": "프롬프트 엔지니어링",
+        "topic": null
+      },
+      {
+        "id": "시네마틱-영상",
+        "label": "시네마틱 영상",
+        "topic": null
+      },
+      {
+        "id": "컷-편집-전략",
+        "label": "컷 편집 전략",
+        "topic": null
+      }
+    ]
   }
 ]
