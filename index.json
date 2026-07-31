@@ -3543,5 +3543,48 @@
         "topic": "바이브코딩"
       }
     ]
+  },
+  {
+    "filename": "2026-07-31-클로드와-GPT는-끝났다-실리콘밸리에서-급성장-중인-AI-리뷰-l.md",
+    "title": "클로드와 GPT는 끝났다. 실리콘밸리에서 급성장 중인 AI 리뷰 l 언제요 Ep16 ",
+    "category": "일반학습",
+    "date": "2026-07-31",
+    "core_message": "AI 세컨 브레인은 개인 맥락을 학습해 업무 속도를 높이지만, 일의 총량 자체는 줄어들지 않는다.",
+    "topics": [
+      "컨텍스트관리",
+      "자동화"
+    ],
+    "concepts": [
+      {
+        "id": "세컨-브레인",
+        "label": "세컨 브레인",
+        "topic": null
+      },
+      {
+        "id": "context-engineering",
+        "label": "컨텍스트 엔지니어링",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "개인-데이터-연동",
+        "label": "개인 데이터 연동",
+        "topic": null
+      },
+      {
+        "id": "AI-메모리",
+        "label": "AI 메모리",
+        "topic": null
+      },
+      {
+        "id": "workflow-automation",
+        "label": "워크플로우 자동화",
+        "topic": "자동화"
+      },
+      {
+        "id": "Genspark",
+        "label": "Genspark",
+        "topic": null
+      }
+    ]
   }
 ]
