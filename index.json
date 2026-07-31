@@ -3666,5 +3666,45 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-31-알고보니-VFX도-시댄스가-최강이네요-시댄스-영상수정법-공개.md",
+    "title": "알고보니 VFX도 시댄스가 최강이네요!! 시댄스 영상수정법 공개",
+    "category": "Picks전략",
+    "date": "2026-07-31",
+    "core_message": "시댄스 4K 합성은 화질 열화·액션 트래킹 문제를 동시에 해결해, 실무 VFX 영상 합성이 이제 실질적으로 가능하다.",
+    "topics": [],
+    "concepts": [
+      {
+        "id": "시댄스",
+        "label": "시댄스",
+        "topic": null
+      },
+      {
+        "id": "4K-합성",
+        "label": "4K 합성",
+        "topic": null
+      },
+      {
+        "id": "옴니-레퍼런스",
+        "label": "옴니 레퍼런스",
+        "topic": null
+      },
+      {
+        "id": "단일-컷-합성",
+        "label": "단일 컷 합성",
+        "topic": null
+      },
+      {
+        "id": "액션-트래킹",
+        "label": "액션 트래킹",
+        "topic": null
+      },
+      {
+        "id": "드림미나",
+        "label": "드림미나",
+        "topic": null
+      }
+    ]
   }
 ]
