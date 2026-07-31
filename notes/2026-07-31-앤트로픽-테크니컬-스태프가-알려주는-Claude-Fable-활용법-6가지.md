@@ -1,0 +1,483 @@
+---
+title: "앤트로픽 테크니컬 스태프가 알려주는 Claude Fable 활용법 6가지"
+source_url: https://youtube.com/watch?v=vZaG9KlT-40
+video_id: vZaG9KlT-40
+source_type: youtube
+lang: ko
+analyzed: 2026-07-31
+category: 일반학습
+tags: ["개념/커패빌리티-오버행", "개념/지도와-영토의-간극", "개념/언노운", "개념/사각지대-점검", "개념/구현-노트", "주제/컨텍스트관리", "개념/컨텍스트관리/context-engineering", "주제/ANTHROPIC", "개념/ANTHROPIC/anthropic"]
+key_concepts: ["커패빌리티 오버행(능력 과잉)", "지도와 영토의 간극", "언노운(Unknown) 매트릭스", "사각지대 점검", "구현 노트", "컨텍스트 엔지니어링"]
+status: active
+---
+# 앤트로픽 테크니컬 스태프가 알려주는 Claude Fable 활용법 6가지
+
+## 🧠 이해 (Understand)
+- **Summary:** Anthropic Claude Code 팀 엔지니어 타릭이 280만 뷰 글과 19분 키노트를 통해 전달한 핵심: 최신 모델 Claude 4(Fable)가 강력해질수록 결과물 품질의 병목은 AI가 아닌 사용자 자신이다. 모델은 사용자가 준 '지도(프롬프트·스펙)'와 실제 '영토(현실)' 사이의 간극, 즉 '모르는 것'을 마주치면 멈추지 않고 추측하기 때문에 결과가 어긋난다. 이를 해결하는 6가지 기법(사각지대 점검·프로토타입·인터뷰·레퍼런스·구현 노트·퀴즈)으로 비싼 실수를 싸게 미리 찾아낼 수 있다. 발표자는 기술 효용뿐 아니라 '손코딩 시절을 사랑했지만 돌아갈 수 없다'는 감정적 솔직함과 함께, 트레이드오프는 실재하지 않는다는 '비합리적으로 굴기' 철학을 제시한다.
+- **Core Message:** AI 결과물의 병목은 모델이 아니라 '내가 모르는 것을 모르는 상태'이며, 6가지 기법으로 그 간극을 미리 채우는 것이 곧 AI 시대의 핵심 역량이다.
+> 이제 결과물 품질의 병목은 AI가 아니라 당신이다. 모델이 좋아질수록 더 그렇다.
+> 실패 속에서 헤엄치던 기억만 난다. 코딩은 극도로 어렵다. 그 좋았던 감각을 사랑했지만, 돌아갈 수 없다.
+> 트레이드오프는 실제하지 않는다는 믿음 — 현실이 트레이드오프를 보여줄 때까지 밀어붙여라.
+❗ Anthropic이 Claude Code 시스템 프롬프트의 80%를 삭제했다. 새 모델에게 제약 목록은 오히려 상상력을 가두는 족쇄였기 때문.
+❗ 이름이 '5'로 끝나는 포켓몬을 일반 채팅 모델은 틀리지만, Claude Code는 스크립트를 짜서 직접 필터링해 정답을 맞힌다.
+❗ 19분짜리 키노트 발표 덱을 전날 밤 Claude 4(Fable)와 4시간 만에 완성했다.
+
+## 📚 핵심 용어
+- **커패빌리티 오버행(능력 과잉):** 모델 안에 능력은 이미 있지만 사용자가 꺼내는 법을 몰라 활용되지 못하는 상태. / 고급 오븐이 있는데 '굽기' 버튼만 쓰고 '발효·스팀' 기능은 존재도 모르는 것과 같다. / 모델 성능 한계와 다르다. 성능 한계는 AI 자체의 문제, 커패빌리티 오버행은 사용자의 활용법 문제다.
+- **지도와 영토의 간극:** 사용자가 AI에게 주는 프롬프트·스펙(지도)과 실제 작업 현실(영토)이 일치하지 않는 차이. / 2년 전 종이 지도로 공사 중인 골목을 찾아가는 것처럼, 지도에 없는 지형에서 AI는 멈추지 않고 혼자 추측해 길을 만든다. / 프롬프트 오류와 다르다. 프롬프트 오류는 잘못 쓴 것, 지도-영토 간극은 애초에 그릴 수 없었던 것이다.
+- **언노운 매트릭스(Unknown Matrix):** 알려진 것·모르는 줄 아는 것·당연해서 안 쓴 것·고려조차 못 한 것, 4칸으로 나눈 지식 공백 지도. / 병원 문진표처럼, 증상을 4칸에 나눠 적으면 의사가 놓치는 항목 없이 진단할 수 있다. / 단순 체크리스트와 다르다. 체크리스트는 아는 것만 확인, 언노운 매트릭스는 '모르는 줄도 몰랐던 것'을 끌어낸다.
+- **사각지대 점검(Blind Spot Check):** 작업 전 AI에게 '내가 모르는지도 모르는 것'을 먼저 찾아달라고 요청하는 기법. / 운전 전 교관이 '사이드미러 사각지대 확인했어요?'라고 묻듯, 일 시작 전 빠진 맥락을 AI가 먼저 짚어준다. / 일반 질문과 다르다. 일반 질문은 아는 것을 확인, 사각지대 점검은 모르는 영역 자체를 발굴한다.
+
+## 🚀 실행 (Execute)
+- [ ] 다음 프로젝트 착수 전, '사각지대 점검' 프롬프트를 템플릿으로 저장하고 실제 한 건에 적용해보기. 예: '나는 [도메인]에 대해 거의 모른다. 내가 모르는지도 모르는 것들을 알려주고, 내가 더 나은 프롬프트를 쓸 수 있게 도와줘.' — ⏰ 다음 프로젝트 착수 시점 · ⚡ 30분 (템플릿 작성 10분 + 첫 적용 20분)
+  - 담당: 나
+  - 이유: 가장 비싼 실수(언노운 언노운)를 착수 전에 싸게 발굴하는 것이 이 영상의 핵심 실행 포인트이기 때문.
+- [ ] '구현 노트' 파일 규칙 세우기: 모든 AI 작업 세션에서 '계획 이탈 시 보수적 선택 → 이탈 항목 기록 → 계속 진행' 규칙을 문서화하고, 세션 종료 후 퀴즈 요청으로 마무리하는 루틴 정착. — ⏰ 이번 주 진행 중인 작업부터 · ⚡ 첫 세팅 1시간, 이후 매 세션 5분
+  - 담당: 나
+  - 이유: 구현 노트는 한 프로젝트의 지도가 다음 프로젝트의 지도가 되어 실수 비용이 누적 감소하기 때문.
+- [ ] PICKS 또는 웹소설 기획 업무에서 '프로토타입 먼저' 방식 시험: 말로 설명하기 어려운 디자인·방향성 결정 시, 스펙 작성 대신 '완전히 다른 방향 3~4개로 먼저 만들어 달라'고 요청 후 반응 기반으로 좁혀가기. — ⏰ 2주 내 · ⚡ 1~2시간 (첫 시도 기준)
+  - 담당: 나
+  - 이유: 언어로 표현 못 하는 취향·감각 판단을 눈앞에 놓인 결과물로 대체하면 지도-영토 간극이 줄고 수정 횟수가 감소하기 때문.
+- 자료: 타릭의 원본 글 (280만 뷰) — 'Vibe coding but for prompts' 또는 작성자 이름 'Tariq' + Anthropic으로 검색 (정확한 URL 확인 필요)
+- 자료: AI Engineer World's Fair 2025 타릭 키노트 영상 — YouTube에서 'Tariq Anthropic AI Engineer World's Fair' 검색 (확인 필요)
+- 자료: Claude.ai 공식 문서의 Claude 4 (Opus 4 / Fable) 관련 릴리즈 노트 — anthropic.com
+- Timeline: 1순위(오늘~이번 주): 사각지대 점검 프롬프트 템플릿 저장 및 즉시 적용 / 2순위(이번 주): 구현 노트 + 퀴즈 루틴 세팅 / 3순위(2주 내): 프로토타입 먼저 방식을 실제 업무 한 건에 적용해 효과 검증
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-컨텍스트관리]] · [[_topic-ANTHROPIC]]
+- 핵심 개념: [[_concept-커패빌리티-오버행|커패빌리티 오버행]] · [[_concept-지도와-영토의-간극|지도와 영토의 간극]] · [[_concept-언노운|언노운]] · [[_concept-사각지대-점검|사각지대 점검]] · [[_concept-구현-노트|구현 노트]] · [[_concept-context-engineering|컨텍스트 엔지니어링]] · [[_concept-anthropic|Anthropic]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=vZaG9KlT-40&t=0) 글 하나가 나에 280만 명한테
+- [0:02](https://youtube.com/watch?v=vZaG9KlT-40&t=2) 읽혔어요. 쓴 사람은 엔트로픽에서
+- [0:03](https://youtube.com/watch?v=vZaG9KlT-40&t=3) 클로드 코드를 만드는 개발자고요.
+- [0:05](https://youtube.com/watch?v=vZaG9KlT-40&t=5) 주제는 딱 하나예요. 이번에 나온
+- [0:06](https://youtube.com/watch?v=vZaG9KlT-40&t=6) 가장 강력한 모델. 페이블한테 2을
+- [0:08](https://youtube.com/watch?v=vZaG9KlT-40&t=8) 맡겼는데 왜 결과물이 내 기대랑
+- [0:09](https://youtube.com/watch?v=vZaG9KlT-40&t=9) 다르게 나오는가?이 이 영상을 보시면
+- [0:11](https://youtube.com/watch?v=vZaG9KlT-40&t=11) 그 사람이 실제로 쓰는 기법 여섯
+- [0:13](https://youtube.com/watch?v=vZaG9KlT-40&t=13) 개를 그대로 가져가실 수 있어요.
+- [0:14](https://youtube.com/watch?v=vZaG9KlT-40&t=14) 글에 프롬프트 예시까지 통째로 공개돼
+- [0:16](https://youtube.com/watch?v=vZaG9KlT-40&t=16) 있거든요. 근데이 글의 전제가 좀
+- [0:17](https://youtube.com/watch?v=vZaG9KlT-40&t=17) 도발적이에요. 이제 결과물 품질의
+- [0:19](https://youtube.com/watch?v=vZaG9KlT-40&t=19) 병목은 AI가 아니라 당신이다.
+- [0:20](https://youtube.com/watch?v=vZaG9KlT-40&t=20) 모델이 좋아질수록 더 그렇다.
+- [0:22](https://youtube.com/watch?v=vZaG9KlT-40&t=22) 페이블이 뭔지 먼저 짚을게요.
+- [0:23](https://youtube.com/watch?v=vZaG9KlT-40&t=23) 엔트로픽이 이번에 공개한 최신
+- [0:25](https://youtube.com/watch?v=vZaG9KlT-40&t=25) 모델이고 지금 쓸 수 있는 클로드
+- [0:26](https://youtube.com/watch?v=vZaG9KlT-40&t=26) 중에 가장 강력한 모델이에요.
+- [0:27](https://youtube.com/watch?v=vZaG9KlT-40&t=27) 그러니까 오늘 내용은 일반 논이
+- [0:28](https://youtube.com/watch?v=vZaG9KlT-40&t=28) 아니라이 최상의 모델을 론칭 전부터
+- [0:30](https://youtube.com/watch?v=vZaG9KlT-40&t=30) 만져 본 사람이 페이블에 한해서 느낀
+- [0:32](https://youtube.com/watch?v=vZaG9KlT-40&t=32) 것들이에요. 자료는 두 개예요.
+- [0:33](https://youtube.com/watch?v=vZaG9KlT-40&t=33) 하나는 그 280만 뷰 그리고 하나는
+- [0:35](https://youtube.com/watch?v=vZaG9KlT-40&t=35) 같은 사람이 AI 엔지니어 월드페어
+- [0:37](https://youtube.com/watch?v=vZaG9KlT-40&t=37) 무대에서 한 19분짜리 키노트예요.
+- [0:39](https://youtube.com/watch?v=vZaG9KlT-40&t=39) 같은 내용인데 무대 버전에는 글에
+- [0:40](https://youtube.com/watch?v=vZaG9KlT-40&t=40) 없는 파트가 둘 더 있어요. 그 중
+- [0:42](https://youtube.com/watch?v=vZaG9KlT-40&t=42) 하나는 기술 얘기가 아니라 이건
+- [0:43](https://youtube.com/watch?v=vZaG9KlT-40&t=43) 뒤에서 말씀드릴게요. 영상 중간중간
+- [0:45](https://youtube.com/watch?v=vZaG9KlT-40&t=45) 발표자 클립이 들어갑니다. 한국어
+- [0:46](https://youtube.com/watch?v=vZaG9KlT-40&t=46) 자막같이 띄울게요. 발표자는 타릭
+- [0:48](https://youtube.com/watch?v=vZaG9KlT-40&t=48) 앤트로피 클로드 코드 팀에서 테크니컬
+- [0:50](https://youtube.com/watch?v=vZaG9KlT-40&t=50) 스테프로 일하는 엔지니어인데 클로드가
+- [0:52](https://youtube.com/watch?v=vZaG9KlT-40&t=52) 거꾸로 선택지를 주면서 질문하는 그
+- [0:53](https://youtube.com/watch?v=vZaG9KlT-40&t=53) 기능을 만든 사람이에요. 첫 번째
+- [0:55](https://youtube.com/watch?v=vZaG9KlT-40&t=55) 파트는이 질문에서 시작해요. 지금
+- [0:56](https://youtube.com/watch?v=vZaG9KlT-40&t=56) AI 우리가 능력을 다 꺼내 쓰고
+- [0:58](https://youtube.com/watch?v=vZaG9KlT-40&t=58) 있긴 한 걸까? 엔트로픽 사람들이
+- [0:59](https://youtube.com/watch?v=vZaG9KlT-40&t=59) 자주 하는 말이 있대요. 모델은
+- [1:00](https://youtube.com/watch?v=vZaG9KlT-40&t=60) 설계되는게 아니라 길러진다. 데이터랑
+- [1:02](https://youtube.com/watch?v=vZaG9KlT-40&t=62) 피드백을 주면서 유기적으로 자라나는
+- [1:04](https://youtube.com/watch?v=vZaG9KlT-40&t=64) 거라 만든 사람들조차 뭘 할 수
+- [1:05](https://youtube.com/watch?v=vZaG9KlT-40&t=65) 있는지 다 모른 채로 세상에 나와요.
+- [1:07](https://youtube.com/watch?v=vZaG9KlT-40&t=67) 그래서 모델을 가주는 건 모델 자신이
+- [1:08](https://youtube.com/watch?v=vZaG9KlT-40&t=68) 아니라 우리예요. 우리가 짜준
+- [1:09](https://youtube.com/watch?v=vZaG9KlT-40&t=69) 프롬프트, 우리가 쉬운 규칙이요.
+- [1:11](https://youtube.com/watch?v=vZaG9KlT-40&t=71) 이걸 능력 과잉, 커패빌리티
+- [1:12](https://youtube.com/watch?v=vZaG9KlT-40&t=72) 오버행위라고 불러요. 능력은 이미
+- [1:14](https://youtube.com/watch?v=vZaG9KlT-40&t=74) 모델 안에 있는데 우리가 꺼내는 법을
+- [1:16](https://youtube.com/watch?v=vZaG9KlT-40&t=76) 몰라서 못 쓰는 상태. 몇 주 전에
+- [1:17](https://youtube.com/watch?v=vZaG9KlT-40&t=77) 이런 트위이 돌았어요. 왜 LM은
+- [1:19](https://youtube.com/watch?v=vZaG9KlT-40&t=79) 이름이 5로 끝나는 포켓몬을 못
+- [1:20](https://youtube.com/watch?v=vZaG9KlT-40&t=80) 찾을까? 포켓몬은 1천 마리가 넘고
+- [1:22](https://youtube.com/watch?v=vZaG9KlT-40&t=82) 정답은 딱 두 마리인데 일반 체포한테
+- [1:24](https://youtube.com/watch?v=vZaG9KlT-40&t=84) 물어보면 진짜 틀려요. 근데
+- [1:25](https://youtube.com/watch?v=vZaG9KlT-40&t=85) 이상하잖아요. 모델은 포켓몬 천마리
+- [1:27](https://youtube.com/watch?v=vZaG9KlT-40&t=87) 이름을 이미 다 알고 있어요.
+- [1:34](https://youtube.com/watch?v=vZaG9KlT-40&t=94) say which pok in aw
+- [1:37](https://youtube.com/watch?v=vZaG9KlT-40&t=97) there are000 pok
+- [1:39](https://youtube.com/watch?v=vZaG9KlT-40&t=99) right and turns out
+- [1:40](https://youtube.com/watch?v=vZaG9KlT-40&t=100) there are two who
+- [1:41](https://youtube.com/watch?v=vZaG9KlT-40&t=101) whose name aw croc
+- [1:43](https://youtube.com/watch?v=vZaG9KlT-40&t=103) and dread right and
+- [1:45](https://youtube.com/watch?v=vZaG9KlT-40&t=105) it turns out if you
+- [1:45](https://youtube.com/watch?v=vZaG9KlT-40&t=105) ask like a normal
+- [1:46](https://youtube.com/watch?v=vZaG9KlT-40&t=106) chat model it can't
+- [1:47](https://youtube.com/watch?v=vZaG9KlT-40&t=107) answer it is kind of
+- [1:48](https://youtube.com/watch?v=vZaG9KlT-40&t=108) confusing because
+- [1:49](https://youtube.com/watch?v=vZaG9KlT-40&t=109) like you know it
+- [1:50](https://youtube.com/watch?v=vZaG9KlT-40&t=110) definitely knows all
+- [1:51](https://youtube.com/watch?v=vZaG9KlT-40&t=111) the names of the pok
+- [1:52](https://youtube.com/watch?v=vZaG9KlT-40&t=112) right but if you uh
+- [1:54](https://youtube.com/watch?v=vZaG9KlT-40&t=114) ask cloud code it
+- [1:55](https://youtube.com/watch?v=vZaG9KlT-40&t=115) can right cuuse what
+- [1:57](https://youtube.com/watch?v=vZaG9KlT-40&t=117) it does is that it
+- [1:57](https://youtube.com/watch?v=vZaG9KlT-40&t=117) fetches every pokon
+- [2:00](https://youtube.com/watch?v=vZaG9KlT-40&t=120) and writes a script
+- [2:01](https://youtube.com/watch?v=vZaG9KlT-40&t=121) to filter for
+- [2:03](https://youtube.com/watch?v=vZaG9KlT-40&t=123) Right? And so this
+- [2:05](https://youtube.com/watch?v=vZaG9KlT-40&t=125) is what I mean by
+- [2:07](https://youtube.com/watch?v=vZaG9KlT-40&t=127) like unhobling
+- [2:08](https://youtube.com/watch?v=vZaG9KlT-40&t=128) cloud. We call this
+- [2:09](https://youtube.com/watch?v=vZaG9KlT-40&t=129) capability overhang
+- [2:11](https://youtube.com/watch?v=vZaG9KlT-40&t=131) right gets smarter
+- [2:13](https://youtube.com/watch?v=vZaG9KlT-40&t=133) in spiky ways. So it
+- [2:15](https://youtube.com/watch?v=vZaG9KlT-40&t=135) doesn't remember
+- [2:16](https://youtube.com/watch?v=vZaG9KlT-40&t=136) every pokason
+- [2:18](https://youtube.com/watch?v=vZaG9KlT-40&t=138) through ite
+- [2:20](https://youtube.com/watch?v=vZaG9KlT-40&t=140) tool can.이
+- [2:24](https://youtube.com/watch?v=vZaG9KlT-40&t=144) >> 능력 과잉 문제를 엔트로픽은 자기네
+- [2:26](https://youtube.com/watch?v=vZaG9KlT-40&t=146) 제품에도 그대로 적용했어요. 최근에
+- [2:28](https://youtube.com/watch?v=vZaG9KlT-40&t=148) 클로드 코드 시스템 프롬프트의
+- [2:29](https://youtube.com/watch?v=vZaG9KlT-40&t=149) 80%를 지웠대요. 예전 모델은 이거
+- [2:31](https://youtube.com/watch?v=vZaG9KlT-40&t=151) 하지 마. 목록이 길수록 안전했는데
+- [2:33](https://youtube.com/watch?v=vZaG9KlT-40&t=153) 새 모델한테는 예시랑 금지 목록이
+- [2:35](https://youtube.com/watch?v=vZaG9KlT-40&t=155) 오히려 상상력을 가두는 굴래가
+- [2:36](https://youtube.com/watch?v=vZaG9KlT-40&t=156) 되더라는 거예요. 그래서 방향을
+- [2:38](https://youtube.com/watch?v=vZaG9KlT-40&t=158) 바꿨어요. 제약 대신 맥락을 준다.
+- [2:39](https://youtube.com/watch?v=vZaG9KlT-40&t=159) 아까이 사람이 질문 도구를 만들었다고
+- [2:41](https://youtube.com/watch?v=vZaG9KlT-40&t=161) 했잖아요. 그 도구 하나로 모델 세대
+- [2:43](https://youtube.com/watch?v=vZaG9KlT-40&t=163) 차이가 그대로 보여요. 오퍼스 4은
+- [2:45](https://youtube.com/watch?v=vZaG9KlT-40&t=165) 그 도구를 제대로 호출하지도 못해서
+- [2:46](https://youtube.com/watch?v=vZaG9KlT-40&t=166) 계속 손 줘야 했대요. 오퍼스
+- [2:47](https://youtube.com/watch?v=vZaG9KlT-40&t=167) 4.5부터는 스펙에 대해 질문 만개
+- [2:49](https://youtube.com/watch?v=vZaG9KlT-40&t=169) 해 줘라고 하면 인터뷰가 됐고요.
+- [2:51](https://youtube.com/watch?v=vZaG9KlT-40&t=171) 지금 페이블은 그 질문들을 통째로
+- [2:53](https://youtube.com/watch?v=vZaG9KlT-40&t=173) HTML 보고서 안에 심어서
+- [2:55](https://youtube.com/watch?v=vZaG9KlT-40&t=175) 가져와요. 같은 도구, 같은 사람인데
+- [2:57](https://youtube.com/watch?v=vZaG9KlT-40&t=177) 모델이 바뀔 때마다 일하는 방식
+- [2:58](https://youtube.com/watch?v=vZaG9KlT-40&t=178) 자체가 바뀐 거예요. 자, 모델이이
+- [3:00](https://youtube.com/watch?v=vZaG9KlT-40&t=180) 정도라면 질문이 하나 남아요. 그런데
+- [3:02](https://youtube.com/watch?v=vZaG9KlT-40&t=182) 왜 여전히 결과물은 이상하게 나올까?
+- [3:03](https://youtube.com/watch?v=vZaG9KlT-40&t=183) 여기서이 글의 핵심 프레임이
+- [3:04](https://youtube.com/watch?v=vZaG9KlT-40&t=184) 나옵니다. 지도는 영토가 아니다.
+- [3:06](https://youtube.com/watch?v=vZaG9KlT-40&t=186) 지도는 내가 AI한테 주는 것
+- [3:08](https://youtube.com/watch?v=vZaG9KlT-40&t=188) 전부예요. 프롬프트, 스펙, 스킬,
+- [3:10](https://youtube.com/watch?v=vZaG9KlT-40&t=190) 컨텍스트. 영토는 일이 실제로
+- [3:12](https://youtube.com/watch?v=vZaG9KlT-40&t=192) 벌어지는 곳이에요. 진짜 코드
+- [3:13](https://youtube.com/watch?v=vZaG9KlT-40&t=193) 베이스, 진짜 현실, 진짜 제약
+- [3:15](https://youtube.com/watch?v=vZaG9KlT-40&t=195) 조건. 문제는 지도가 아무리
+- [3:16](https://youtube.com/watch?v=vZaG9KlT-40&t=196) 정성스러워도 영토랑 똑같을 수는
+- [3:18](https://youtube.com/watch?v=vZaG9KlT-40&t=198) 없다는 거예요. AI가 지도에 없는
+- [3:20](https://youtube.com/watch?v=vZaG9KlT-40&t=200) 지형을 만나는 순간 그게이 사람이
+- [3:21](https://youtube.com/watch?v=vZaG9KlT-40&t=201) 말하는 언노. 모르는 것이에요. 그
+- [3:23](https://youtube.com/watch?v=vZaG9KlT-40&t=203) 순간 AI는 멈추고 물어보는게 아니라
+- [3:25](https://youtube.com/watch?v=vZaG9KlT-40&t=205) 내가 뭘 원할지 추측해서 결정해요.
+- [3:27](https://youtube.com/watch?v=vZaG9KlT-40&t=207) 내가 지정한 적 없는 결정 지점이
+- [3:29](https://youtube.com/watch?v=vZaG9KlT-40&t=209) 생기는 거죠. 그리고이를 크게
+- [3:30](https://youtube.com/watch?v=vZaG9KlT-40&t=210) 맡길수록 클로드가 돌아다니는 영토가
+- [3:32](https://youtube.com/watch?v=vZaG9KlT-40&t=212) 넓어질수록 그런 추측 지점은 늘어날
+- [3:34](https://youtube.com/watch?v=vZaG9KlT-40&t=214) 수밖에 없어요.
+- [3:53](https://youtube.com/watch?v=vZaG9KlT-40&t=233) CL needs to
+- [3:53](https://youtube.com/watch?v=vZaG9KlT-40&t=233) navigate, right? And
+- [3:55](https://youtube.com/watch?v=vZaG9KlT-40&t=235) whenever Claud runs
+- [3:56](https://youtube.com/watch?v=vZaG9KlT-40&t=236) into something in
+- [3:56](https://youtube.com/watch?v=vZaG9KlT-40&t=236) the territory that's
+- [3:57](https://youtube.com/watch?v=vZaG9KlT-40&t=237) not in the map, I
+- [3:58](https://youtube.com/watch?v=vZaG9KlT-40&t=238) call that an
+- [3:59](https://youtube.com/watch?v=vZaG9KlT-40&t=239) unknown. Right?
+- [4:00](https://youtube.com/watch?v=vZaG9KlT-40&t=240) Claud has to figure
+- [4:01](https://youtube.com/watch?v=vZaG9KlT-40&t=241) out what to do about
+- [4:02](https://youtube.com/watch?v=vZaG9KlT-40&t=242) it. It's a decision
+- [4:03](https://youtube.com/watch?v=vZaG9KlT-40&t=243) point that I haven
+- [4:04](https://youtube.com/watch?v=vZaG9KlT-40&t=244) specified. And Fable
+- [4:06](https://youtube.com/watch?v=vZaG9KlT-40&t=246) is one of the first
+- [4:07](https://youtube.com/watch?v=vZaG9KlT-40&t=247) models where I felt
+- [4:08](https://youtube.com/watch?v=vZaG9KlT-40&t=248) that like I really
+- [4:10](https://youtube.com/watch?v=vZaG9KlT-40&t=250) have to figure out
+- [4:11](https://youtube.com/watch?v=vZaG9KlT-40&t=251) my unknowns because
+- [4:12](https://youtube.com/watch?v=vZaG9KlT-40&t=252) if not it's going to
+- [4:13](https://youtube.com/watch?v=vZaG9KlT-40&t=253) traverse such a
+- [4:15](https://youtube.com/watch?v=vZaG9KlT-40&t=255) large area that like
+- [4:16](https://youtube.com/watch?v=vZaG9KlT-40&t=256) it's going to run
+- [4:16](https://youtube.com/watch?v=vZaG9KlT-40&t=256) into a lot of them.
+- [4:18](https://youtube.com/watch?v=vZaG9KlT-40&t=258) So, how do you
+- [4:19](https://youtube.com/watch?v=vZaG9KlT-40&t=259) figure out your
+- [4:20](https://youtube.com/watch?v=vZaG9KlT-40&t=260) unknowns?
+- [4:21](https://youtube.com/watch?v=vZaG9KlT-40&t=261) Um
+- [4:23](https://youtube.com/watch?v=vZaG9KlT-40&t=263) I fables bottleneck
+- [4:25](https://youtube.com/watch?v=vZaG9KlT-40&t=265) my by my ability to
+- [4:26](https://youtube.com/watch?v=vZaG9KlT-40&t=266) match the map and
+- [4:27](https://youtube.com/watch?v=vZaG9KlT-40&t=267) the territory to
+- [4:28](https://youtube.com/watch?v=vZaG9KlT-40&t=268) find my unes. So a
+- [4:31](https://youtube.com/watch?v=vZaG9KlT-40&t=271) few um few ways to
+- [4:33](https://youtube.com/watch?v=vZaG9KlT-40&t=273) think about this. I
+- [4:34](https://youtube.com/watch?v=vZaG9KlT-40&t=274) like to think of it
+- [4:35](https://youtube.com/watch?v=vZaG9KlT-40&t=275) in a matrix. So like
+- [4:37](https://youtube.com/watch?v=vZaG9KlT-40&t=277) for any problem I
+- [4:39](https://youtube.com/watch?v=vZaG9KlT-40&t=279) have a bunch of
+- [4:40](https://youtube.com/watch?v=vZaG9KlT-40&t=280) known knowns. This
+- [4:40](https://youtube.com/watch?v=vZaG9KlT-40&t=280) is usually like what
+- [4:41](https://youtube.com/watch?v=vZaG9KlT-40&t=281) I write in my
+- [4:42](https://youtube.com/watch?v=vZaG9KlT-40&t=282) prompt. What do I
+- [4:43](https://youtube.com/watch?v=vZaG9KlT-40&t=283) want right? Then I
+- [4:44](https://youtube.com/watch?v=vZaG9KlT-40&t=284) have known unknowns.
+- [4:45](https://youtube.com/watch?v=vZaG9KlT-40&t=285) Things that like I
+- [4:46](https://youtube.com/watch?v=vZaG9KlT-40&t=286) know I haven't
+- [4:47](https://youtube.com/watch?v=vZaG9KlT-40&t=287) really know yet but
+- [4:48](https://youtube.com/watch?v=vZaG9KlT-40&t=288) I just haven't
+- [4:49](https://youtube.com/watch?v=vZaG9KlT-40&t=289) figured out yet. I
+- [4:50](https://youtube.com/watch?v=vZaG9KlT-40&t=290) can um
+- [4:52](https://youtube.com/watch?v=vZaG9KlT-40&t=292) yeah then I've got
+- [4:52](https://youtube.com/watch?v=vZaG9KlT-40&t=292) unknown known like
+- [4:53](https://youtube.com/watch?v=vZaG9KlT-40&t=293) what's so obvious
+- [4:54](https://youtube.com/watch?v=vZaG9KlT-40&t=294) that I just wouldn't
+- [4:55](https://youtube.com/watch?v=vZaG9KlT-40&t=295) write it down, you
+- [4:56](https://youtube.com/watch?v=vZaG9KlT-40&t=296) know, but I I know
+- [4:57](https://youtube.com/watch?v=vZaG9KlT-40&t=297) it when I see it,
+- [4:58](https://youtube.com/watch?v=vZaG9KlT-40&t=298) right? And then
+- [4:59](https://youtube.com/watch?v=vZaG9KlT-40&t=299) finally unknowns
+- [5:00](https://youtube.com/watch?v=vZaG9KlT-40&t=300) unknowns. What hav I
+- [5:02](https://youtube.com/watch?v=vZaG9KlT-40&t=302) considered at all?
+- [5:02](https://youtube.com/watch?v=vZaG9KlT-40&t=302) What do I not know?
+- [5:04](https://youtube.com/watch?v=vZaG9KlT-40&t=304) Right? Like what is
+- [5:05](https://youtube.com/watch?v=vZaG9KlT-40&t=305) something that could
+- [5:06](https://youtube.com/watch?v=vZaG9KlT-40&t=306) change how?이네
+- [5:09](https://youtube.com/watch?v=vZaG9KlT-40&t=309) >> 칸 중에 제일 비싼게 마지막
+- [5:10](https://youtube.com/watch?v=vZaG9KlT-40&t=310) 칸이에요. 고려조차 안 해본 것.
+- [5:12](https://youtube.com/watch?v=vZaG9KlT-40&t=312) 도로에 있는 줄도 몰랐던 웅덩이.
+- [5:13](https://youtube.com/watch?v=vZaG9KlT-40&t=313) 프로젝트가 끝나갈 때쯤 발견되면
+- [5:15](https://youtube.com/watch?v=vZaG9KlT-40&t=315) 갈아엎어야 하는 것들이 다 여기서
+- [5:16](https://youtube.com/watch?v=vZaG9KlT-40&t=316) 나오거든요. 그래서이 글의 본론은
+- [5:18](https://youtube.com/watch?v=vZaG9KlT-40&t=318) 이거예요. 그 모르는 것들을 비싸지기
+- [5:20](https://youtube.com/watch?v=vZaG9KlT-40&t=320) 전에 싸게 찾아내는 기법 여섯 개.
+- [5:22](https://youtube.com/watch?v=vZaG9KlT-40&t=322) 9연 전에네 개. 9연 중에 하나.
+- [5:23](https://youtube.com/watch?v=vZaG9KlT-40&t=323) 9연 후에 하나예요. 첫째 사각지대
+- [5:25](https://youtube.com/watch?v=vZaG9KlT-40&t=325) 점검이에요. 낯선 영역에서 일을
+- [5:27](https://youtube.com/watch?v=vZaG9KlT-40&t=327) 시작할 때 일부터 시키지 말고 이렇게
+- [5:29](https://youtube.com/watch?v=vZaG9KlT-40&t=329) 물어보는 거예요. 나이 코드 베이스의
+- [5:30](https://youtube.com/watch?v=vZaG9KlT-40&t=330) 인증 모주를 하나도 몰라. 사각지대
+- [5:32](https://youtube.com/watch?v=vZaG9KlT-40&t=332) 점검을 해서 내가 모르는지도 모르는
+- [5:34](https://youtube.com/watch?v=vZaG9KlT-40&t=334) 것들을 알려주고 내가 너한테
+- [5:35](https://youtube.com/watch?v=vZaG9KlT-40&t=335) 프롬프트를 더 잘 쓰게 도와줘.
+- [5:37](https://youtube.com/watch?v=vZaG9KlT-40&t=337) 코딩만이 아니에요.이 사람은 색보정이
+- [5:39](https://youtube.com/watch?v=vZaG9KlT-40&t=339) 뭔지도 모르는 채로 영상 편집을
+- [5:40](https://youtube.com/watch?v=vZaG9KlT-40&t=340) 하다가 색보정을 가르쳐 달라고
+- [5:41](https://youtube.com/watch?v=vZaG9KlT-40&t=341) 했어요. 둘째, 브레인스토밍이랑
+- [5:43](https://youtube.com/watch?v=vZaG9KlT-40&t=343) 프로토타입. 이건 보면 아는데 말로는
+- [5:45](https://youtube.com/watch?v=vZaG9KlT-40&t=345) 못 하는 것들을 위한 거예요. 디자인
+- [5:47](https://youtube.com/watch?v=vZaG9KlT-40&t=347) 같은 거요. 나 디자인 감각가 없어.
+- [5:48](https://youtube.com/watch?v=vZaG9KlT-40&t=348) 완전히 다른 방향네 가지로 만들어서
+- [5:50](https://youtube.com/watch?v=vZaG9KlT-40&t=350) 보여 줘. 내가 반응할게. 말로
+- [5:51](https://youtube.com/watch?v=vZaG9KlT-40&t=351) 스펙을 쥐었어는 대신 눈앞에 놓고
+- [5:53](https://youtube.com/watch?v=vZaG9KlT-40&t=353) 고르는 거예요. 셋째, 인터뷰.
+- [5:55](https://youtube.com/watch?v=vZaG9KlT-40&t=355) 방향이 잡혔으면 거꾸로 AI가 나를
+- [5:57](https://youtube.com/watch?v=vZaG9KlT-40&t=357) 취조하게 해요. 매매한 걸 한 번에
+- [5:58](https://youtube.com/watch?v=vZaG9KlT-40&t=358) 하나씩 물어봐. 답에 따라 설계가
+- [5:59](https://youtube.com/watch?v=vZaG9KlT-40&t=359) 통째로 바뀌는 질문부터 질문 순서까지
+- [6:01](https://youtube.com/watch?v=vZaG9KlT-40&t=361) 지정하는게 포인트예요. 넷째,
+- [6:03](https://youtube.com/watch?v=vZaG9KlT-40&t=363) 레퍼런스. 원하는 걸 말로 설명 못
+- [6:05](https://youtube.com/watch?v=vZaG9KlT-40&t=365) 하겠으면 코드를 던져요.이 폴더의
+- [6:07](https://youtube.com/watch?v=vZaG9KlT-40&t=367) 러스트 라이브러리가 내가 원하는 동작
+- [6:08](https://youtube.com/watch?v=vZaG9KlT-40&t=368) 그대로야. 읽고 같은 의미로
+- [6:09](https://youtube.com/watch?v=vZaG9KlT-40&t=369) 타입스크립트에 다시 구현해. 언어가
+- [6:11](https://youtube.com/watch?v=vZaG9KlT-40&t=371) 달라도 돼요. 지도를 그려주는 제일
+- [6:13](https://youtube.com/watch?v=vZaG9KlT-40&t=373) 좋은 방법은 이미 그려진 다른 지도를
+- [6:14](https://youtube.com/watch?v=vZaG9KlT-40&t=374) 주는 거니까요. 다섯째, 구현 노트.
+- [6:16](https://youtube.com/watch?v=vZaG9KlT-40&t=376) 아무리 준비해도 구연 중에 복병은
+- [6:18](https://youtube.com/watch?v=vZaG9KlT-40&t=378) 나와요. 그래서 작업시키기 전에 한
+- [6:19](https://youtube.com/watch?v=vZaG9KlT-40&t=379) 줄을 붙여요. 구현 노트 파일을
+- [6:21](https://youtube.com/watch?v=vZaG9KlT-40&t=381) 만들어 계획에서 벗어나야 하면
+- [6:22](https://youtube.com/watch?v=vZaG9KlT-40&t=382) 보수적인 쪽을 고르고 이탈 항목에
+- [6:24](https://youtube.com/watch?v=vZaG9KlT-40&t=384) 기록하고 멈추지 말고 계속 가.
+- [6:26](https://youtube.com/watch?v=vZaG9KlT-40&t=386) 나중에이 파일이 다음 프로젝트에
+- [6:27](https://youtube.com/watch?v=vZaG9KlT-40&t=387) 지도가 돼요. 여섯째, 퀴즈. 작업이
+- [6:29](https://youtube.com/watch?v=vZaG9KlT-40&t=389) 끝나면 마지막으로 이렇게 요구해요.
+- [6:30](https://youtube.com/watch?v=vZaG9KlT-40&t=390) 이번 변경을 내가 다 이해했는지
+- [6:32](https://youtube.com/watch?v=vZaG9KlT-40&t=392) 확인해야겠어. 보고서 만들어 주고
+- [6:34](https://youtube.com/watch?v=vZaG9KlT-40&t=394) 끝에 퀴즈 붙여. 나 이거 만점
+- [6:35](https://youtube.com/watch?v=vZaG9KlT-40&t=395) 받아야 뭐지 할 거야. AI가 한
+- [6:36](https://youtube.com/watch?v=vZaG9KlT-40&t=396) 일을 내가 설명 못 하면 그 코드는
+- [6:38](https://youtube.com/watch?v=vZaG9KlT-40&t=398) 아직 내게 아닌 거예요. 여기까지가
+- [6:39](https://youtube.com/watch?v=vZaG9KlT-40&t=399) 280만 명이 읽은 글의 전부예요.
+- [6:41](https://youtube.com/watch?v=vZaG9KlT-40&t=401) 근데 아까 무대 버전에만 있는 파트가
+- [6:43](https://youtube.com/watch?v=vZaG9KlT-40&t=403) 있다고 했잖아요. 기술 얘기가
+- [6:44](https://youtube.com/watch?v=vZaG9KlT-40&t=404) 아니라고요.이 발표 후반부에 갑자기
+- [6:46](https://youtube.com/watch?v=vZaG9KlT-40&t=406) 방향이 꺾여요.이 사람 엔트로피 오기
+- [6:48](https://youtube.com/watch?v=vZaG9KlT-40&t=408) 전에 30명짜리 스타트업 운영했어요.
+- [6:49](https://youtube.com/watch?v=vZaG9KlT-40&t=409) 그때는 코드가 너무 어려워서 맨날 둘
+- [6:51](https://youtube.com/watch?v=vZaG9KlT-40&t=411) 중 하나를 골라야 했대요. 앱을
+- [6:52](https://youtube.com/watch?v=vZaG9KlT-40&t=412) 빠르게 만들거나 세 기능을 실험하거나
+- [6:54](https://youtube.com/watch?v=vZaG9KlT-40&t=414) 하나의 한 달, 다른 하나의 두 달.
+- [6:56](https://youtube.com/watch?v=vZaG9KlT-40&t=416) 둘다는 절대 안 됐어요. 그리고 몇
+- [6:57](https://youtube.com/watch?v=vZaG9KlT-40&t=417) 주 전에 그 옛날 코드 베이스를 다시
+- [6:58](https://youtube.com/watch?v=vZaG9KlT-40&t=418) 열어봤어요. 몇 주 걸리던 일들이 몇
+- [7:00](https://youtube.com/watch?v=vZaG9KlT-40&t=420) 시간 만에 끝났어요.이 사람
+- [7:01](https://youtube.com/watch?v=vZaG9KlT-40&t=421) 표현으로는 LLM 이전에 코딩을
+- [7:03](https://youtube.com/watch?v=vZaG9KlT-40&t=423) 떠올리면 이제 외국에 온 거 같아요.
+- [7:09](https://youtube.com/watch?v=vZaG9KlT-40&t=429) LMS for country
+- [7:13](https://youtube.com/watch?v=vZaG9KlT-40&t=433) YC startup about 30
+- [7:14](https://youtube.com/watch?v=vZaG9KlT-40&t=434) people
+- [7:17](https://youtube.com/watch?v=vZaG9KlT-40&t=437) tradeofs because of
+- [7:18](https://youtube.com/watch?v=vZaG9KlT-40&t=438) how hard code was,
+- [7:19](https://youtube.com/watch?v=vZaG9KlT-40&t=439) right? we could make
+- [7:20](https://youtube.com/watch?v=vZaG9KlT-40&t=440) the the app fast or
+- [7:21](https://youtube.com/watch?v=vZaG9KlT-40&t=441) we could try
+- [7:22](https://youtube.com/watch?v=vZaG9KlT-40&t=442) prototyping a new
+- [7:23](https://youtube.com/watch?v=vZaG9KlT-40&t=443) feature and and this
+- [7:24](https://youtube.com/watch?v=vZaG9KlT-40&t=444) might take a month
+- [7:24](https://youtube.com/watch?v=vZaG9KlT-40&t=444) or this would take
+- [7:25](https://youtube.com/watch?v=vZaG9KlT-40&t=445) two months and so we
+- [7:26](https://youtube.com/watch?v=vZaG9KlT-40&t=446) had to choose and it
+- [7:27](https://youtube.com/watch?v=vZaG9KlT-40&t=447) was just really
+- [7:27](https://youtube.com/watch?v=vZaG9KlT-40&t=447) really hard. Um, and
+- [7:30](https://youtube.com/watch?v=vZaG9KlT-40&t=450) now I went back to
+- [7:31](https://youtube.com/watch?v=vZaG9KlT-40&t=451) that codebase a
+- [7:31](https://youtube.com/watch?v=vZaG9KlT-40&t=451) couple weeks ago and
+- [7:33](https://youtube.com/watch?v=vZaG9KlT-40&t=453) I thought about some
+- [7:34](https://youtube.com/watch?v=vZaG9KlT-40&t=454) of the things that I
+- [7:35](https://youtube.com/watch?v=vZaG9KlT-40&t=455) wanted to do and uh
+- [7:38](https://youtube.com/watch?v=vZaG9KlT-40&t=458) it was just way
+- [7:39](https://youtube.com/watch?v=vZaG9KlT-40&t=459) easier. It was like
+- [7:40](https://youtube.com/watch?v=vZaG9KlT-40&t=460) the things that
+- [7:41](https://youtube.com/watch?v=vZaG9KlT-40&t=461) would have taken me
+- [7:42](https://youtube.com/watch?v=vZaG9KlT-40&t=462) weeks I could do in
+- [7:43](https://youtube.com/watch?v=vZaG9KlT-40&t=463) hours, you know, and
+- [7:45](https://youtube.com/watch?v=vZaG9KlT-40&t=465) uh at some point
+- [7:46](https://youtube.com/watch?v=vZaG9KlT-40&t=466) it's like yeah like
+- [7:46](https://youtube.com/watch?v=vZaG9KlT-40&t=466) how can you not
+- [7:47](https://youtube.com/watch?v=vZaG9KlT-40&t=467) laugh but also how
+- [7:48](https://youtube.com/watch?v=vZaG9KlT-40&t=468) can you not cry
+- [7:50](https://youtube.com/watch?v=vZaG9KlT-40&t=470) honestly like it's
+- [7:50](https://youtube.com/watch?v=vZaG9KlT-40&t=470) like one of these
+- [7:51](https://youtube.com/watch?v=vZaG9KlT-40&t=471) things where um I
+- [7:53](https://youtube.com/watch?v=vZaG9KlT-40&t=473) really really loved
+- [7:54](https://youtube.com/watch?v=vZaG9KlT-40&t=474) programming and
+- [7:55](https://youtube.com/watch?v=vZaG9KlT-40&t=475) writing code by
+- [7:56](https://youtube.com/watch?v=vZaG9KlT-40&t=476) hand. I love the
+- [7:56](https://youtube.com/watch?v=vZaG9KlT-40&t=476) feeling of like
+- [7:58](https://youtube.com/watch?v=vZaG9KlT-40&t=478) seeing the code base
+- [7:59](https://youtube.com/watch?v=vZaG9KlT-40&t=479) in my mind and like
+- [8:00](https://youtube.com/watch?v=vZaG9KlT-40&t=480) rotating it. But I
+- [8:02](https://youtube.com/watch?v=vZaG9KlT-40&t=482) also remember just,
+- [8:03](https://youtube.com/watch?v=vZaG9KlT-40&t=483) you know, like
+- [8:04](https://youtube.com/watch?v=vZaG9KlT-40&t=484) staying up late
+- [8:05](https://youtube.com/watch?v=vZaG9KlT-40&t=485) nights trying to
+- [8:06](https://youtube.com/watch?v=vZaG9KlT-40&t=486) debug, working on
+- [8:07](https://youtube.com/watch?v=vZaG9KlT-40&t=487) things for weeks
+- [8:08](https://youtube.com/watch?v=vZaG9KlT-40&t=488) without working,
+- [8:09](https://youtube.com/watch?v=vZaG9KlT-40&t=489) right? I just
+- [8:10](https://youtube.com/watch?v=vZaG9KlT-40&t=490) remember swimming in
+- [8:12](https://youtube.com/watch?v=vZaG9KlT-40&t=492) failure. I just
+- [8:12](https://youtube.com/watch?v=vZaG9KlT-40&t=492) remember that like
+- [8:13](https://youtube.com/watch?v=vZaG9KlT-40&t=493) the most of the
+- [8:14](https://youtube.com/watch?v=vZaG9KlT-40&t=494) projects I've ever
+- [8:14](https://youtube.com/watch?v=vZaG9KlT-40&t=494) worked on have
+- [8:15](https://youtube.com/watch?v=vZaG9KlT-40&t=495) failed. Most
+- [8:16](https://youtube.com/watch?v=vZaG9KlT-40&t=496) startups go
+- [8:17](https://youtube.com/watch?v=vZaG9KlT-40&t=497) bankrupt, you know.
+- [8:18](https://youtube.com/watch?v=vZaG9KlT-40&t=498) I think just overall
+- [8:19](https://youtube.com/watch?v=vZaG9KlT-40&t=499) programming and
+- [8:20](https://youtube.com/watch?v=vZaG9KlT-40&t=500) coding is extremely
+- [8:21](https://youtube.com/watch?v=vZaG9KlT-40&t=501) hard and like as
+- [8:24](https://youtube.com/watch?v=vZaG9KlT-40&t=504) much as I enjoy
+- [8:25](https://youtube.com/watch?v=vZaG9KlT-40&t=505) those highs I can
+- [8:26](https://youtube.com/watch?v=vZaG9KlT-40&t=506) cannot go back right
+- [8:29](https://youtube.com/watch?v=vZaG9KlT-40&t=509) and uh the way my
+- [8:30](https://youtube.com/watch?v=vZaG9KlT-40&t=510) reflection here is
+- [8:31](https://youtube.com/watch?v=vZaG9KlT-40&t=511) like the only way
+- [8:31](https://youtube.com/watch?v=vZaG9KlT-40&t=511) out is through right
+- [8:33](https://youtube.com/watch?v=vZaG9KlT-40&t=513) there's still a lot
+- [8:34](https://youtube.com/watch?v=vZaG9KlT-40&t=514) to learn with the
+- [8:35](https://youtube.com/watch?v=vZaG9KlT-40&t=515) gent coding.
+- [8:37](https://youtube.com/watch?v=vZaG9KlT-40&t=517) Fable
+- [8:41](https://youtube.com/watch?v=vZaG9KlT-40&t=521) un
+- [8:43](https://youtube.com/watch?v=vZaG9KlT-40&t=523) can
+- [8:49](https://youtube.com/watch?v=vZaG9KlT-40&t=529) >> 저는이 대목이이 발표의 진짜 무게라고
+- [8:51](https://youtube.com/watch?v=vZaG9KlT-40&t=531) 생각해요. AI로 뭘 얻었는지가
+- [8:53](https://youtube.com/watch?v=vZaG9KlT-40&t=533) 아니라 뭘 잃었는지까지 말하는 발표는
+- [8:54](https://youtube.com/watch?v=vZaG9KlT-40&t=534) 흔치 않거든요. 손으로 코드를 쓰던
+- [8:56](https://youtube.com/watch?v=vZaG9KlT-40&t=536) 시절을 사랑했던 사람이 그래도 돌아갈
+- [8:57](https://youtube.com/watch?v=vZaG9KlT-40&t=537) 수 없다고 인정하는 거. 그래서이
+- [8:59](https://youtube.com/watch?v=vZaG9KlT-40&t=539) 사람이 내린 결론이 발표의 마지막
+- [9:00](https://youtube.com/watch?v=vZaG9KlT-40&t=540) 파트예요. 제목이 재밌어요.
+- [9:02](https://youtube.com/watch?v=vZaG9KlT-40&t=542) 비합리적으로 굴기. 우리는 우선순이
+- [9:04](https://youtube.com/watch?v=vZaG9KlT-40&t=544) 정하는 걸 어른스러운 일이라고
+- [9:05](https://youtube.com/watch?v=vZaG9KlT-40&t=545) 배웠잖아요. 리스트 쓰고 하나 고르고
+- [9:07](https://youtube.com/watch?v=vZaG9KlT-40&t=547) 나머지는 접고이 사람도 참업하던
+- [9:08](https://youtube.com/watch?v=vZaG9KlT-40&t=548) 시절엔 그게 합리적이라고 믿었대요.
+- [9:10](https://youtube.com/watch?v=vZaG9KlT-40&t=550) 근데 엔트로픽에 와서 배운 것 중에
+- [9:11](https://youtube.com/watch?v=vZaG9KlT-40&t=551) 제일 좋아하는게 있대요.
+- [9:12](https://youtube.com/watch?v=vZaG9KlT-40&t=552) 트레이드오프는 실제하지 않는다는
+- [9:14](https://youtube.com/watch?v=vZaG9KlT-40&t=554) 믿음이에요.
+- [9:23](https://youtube.com/watch?v=vZaG9KlT-40&t=563) I think often like
+- [9:26](https://youtube.com/watch?v=vZaG9KlT-40&t=566) in my previous
+- [9:26](https://youtube.com/watch?v=vZaG9KlT-40&t=566) company I was very
+- [9:27](https://youtube.com/watch?v=vZaG9KlT-40&t=567) used to being
+- [9:27](https://youtube.com/watch?v=vZaG9KlT-40&t=567) reasonable. So I'd
+- [9:28](https://youtube.com/watch?v=vZaG9KlT-40&t=568) like write down this
+- [9:29](https://youtube.com/watch?v=vZaG9KlT-40&t=569) list of priorities
+- [9:30](https://youtube.com/watch?v=vZaG9KlT-40&t=570) and I'd be like,
+- [9:31](https://youtube.com/watch?v=vZaG9KlT-40&t=571) "Well, I guess we
+- [9:31](https://youtube.com/watch?v=vZaG9KlT-40&t=571) can prioritize this
+- [9:33](https://youtube.com/watch?v=vZaG9KlT-40&t=573) against this, right?
+- [9:34](https://youtube.com/watch?v=vZaG9KlT-40&t=574) Um, and uh, like,
+- [9:36](https://youtube.com/watch?v=vZaG9KlT-40&t=576) you know, that makes
+- [9:36](https://youtube.com/watch?v=vZaG9KlT-40&t=576) sense. So, we this
+- [9:38](https://youtube.com/watch?v=vZaG9KlT-40&t=578) will be our priority
+- [9:39](https://youtube.com/watch?v=vZaG9KlT-40&t=579) this quarter. But
+- [9:40](https://youtube.com/watch?v=vZaG9KlT-40&t=580) what if you uh just
+- [9:40](https://youtube.com/watch?v=vZaG9KlT-40&t=580) did all of it, you
+- [9:41](https://youtube.com/watch?v=vZaG9KlT-40&t=581) know, what if you
+- [9:43](https://youtube.com/watch?v=vZaG9KlT-40&t=583) forest reality to
+- [9:44](https://youtube.com/watch?v=vZaG9KlT-40&t=584) show you the
+- [9:45](https://youtube.com/watch?v=vZaG9KlT-40&t=585) tradeof, right? Um,
+- [9:47](https://youtube.com/watch?v=vZaG9KlT-40&t=587) this is something
+- [9:47](https://youtube.com/watch?v=vZaG9KlT-40&t=587) I've really valued
+- [9:48](https://youtube.com/watch?v=vZaG9KlT-40&t=588) culture and
+- [9:49](https://youtube.com/watch?v=vZaG9KlT-40&t=589) anthropic and my
+- [9:50](https://youtube.com/watch?v=vZaG9KlT-40&t=590) reflection going
+- [9:51](https://youtube.com/watch?v=vZaG9KlT-40&t=591) forward is that I'm
+- [9:51](https://youtube.com/watch?v=vZaG9KlT-40&t=591) going to be a lot
+- [9:52](https://youtube.com/watch?v=vZaG9KlT-40&t=592) less reasonable.
+- [9:55](https://youtube.com/watch?v=vZaG9KlT-40&t=595) I think one of this
+- [9:56](https://youtube.com/watch?v=vZaG9KlT-40&t=596) like the mathlaud
+- [9:58](https://youtube.com/watch?v=vZaG9KlT-40&t=598) and really changes
+- [10:00](https://youtube.com/watch?v=vZaG9KlT-40&t=600) how you think about
+- [10:01](https://youtube.com/watch?v=vZaG9KlT-40&t=601) tradeofs andck
+- [10:07](https://youtube.com/watch?v=vZaG9KlT-40&t=607) >> 그 증거가이 발표 자체예요.
+- [10:09](https://youtube.com/watch?v=vZaG9KlT-40&t=609) 19분짜리 키노트 덱을 전날 밤에
+- [10:10](https://youtube.com/watch?v=vZaG9KlT-40&t=610) 페이블이랑 4시간 만에 만들었대요.
+- [10:12](https://youtube.com/watch?v=vZaG9KlT-40&t=612) 그러면서 하나는 분명히 해요. 만드는
+- [10:13](https://youtube.com/watch?v=vZaG9KlT-40&t=613) 건 쉬워졌지만 가치를 만드는 건
+- [10:15](https://youtube.com/watch?v=vZaG9KlT-40&t=615) 여전히 어렵다. 도구 세팅에 빠져
+- [10:16](https://youtube.com/watch?v=vZaG9KlT-40&t=616) 있지 말고 그 빨라진 손으로 인생에서
+- [10:18](https://youtube.com/watch?v=vZaG9KlT-40&t=618) 제일 좋은 작업을 하라는 거예요.
+- [10:19](https://youtube.com/watch?v=vZaG9KlT-40&t=619) 정리할게요. 하나. AI가 멍청해
+- [10:21](https://youtube.com/watch?v=vZaG9KlT-40&t=621) 보이면 능력이 없는게 아니라 내가
+- [10:23](https://youtube.com/watch?v=vZaG9KlT-40&t=623) 굴래를 씌운 건 아닌지 먼저
+- [10:24](https://youtube.com/watch?v=vZaG9KlT-40&t=624) 의심하기. 포켓몬 문제처럼요. 둘,
+- [10:26](https://youtube.com/watch?v=vZaG9KlT-40&t=626) 결과물이 이상하면 프롬프트를 느리지
+- [10:27](https://youtube.com/watch?v=vZaG9KlT-40&t=627) 말고 내 지도랑 영토의 간극. 모르는
+- [10:29](https://youtube.com/watch?v=vZaG9KlT-40&t=629) 것부터 찾기. 셋, 그걸 찾는 도구가
+- [10:31](https://youtube.com/watch?v=vZaG9KlT-40&t=631) 여섯 개. 시작 전에 사각지대 점검.
+- [10:33](https://youtube.com/watch?v=vZaG9KlT-40&t=633) 프로토타입, 인터뷰, 레퍼런스 하는
+- [10:35](https://youtube.com/watch?v=vZaG9KlT-40&t=635) 중에 구연 노트. 끝나면 퀴즈. 넷.
+- [10:37](https://youtube.com/watch?v=vZaG9KlT-40&t=637) 브레인스토밍이든 인터뷰든
+- [10:38](https://youtube.com/watch?v=vZaG9KlT-40&t=638) 프로토타입이든 전부 나중에 비싸질
+- [10:40](https://youtube.com/watch?v=vZaG9KlT-40&t=640) 실수를 미리 싸게 사는 거예요.
+- [10:41](https://youtube.com/watch?v=vZaG9KlT-40&t=641) 후에서 병목은 당신이라고 했잖아요.
+- [10:43](https://youtube.com/watch?v=vZaG9KlT-40&t=643) 기분 나쁘고 한 말이 아니에요.
+- [10:44](https://youtube.com/watch?v=vZaG9KlT-40&t=644) 병목이 나라는 건 결정권이 나한테
+- [10:46](https://youtube.com/watch?v=vZaG9KlT-40&t=646) 넘어왔다는 뜻이거든요. 모델이
+- [10:47](https://youtube.com/watch?v=vZaG9KlT-40&t=647) 좋아질수록 좋아지는 건 도구가 아니라
+- [10:49](https://youtube.com/watch?v=vZaG9KlT-40&t=649) 내가 뭘 원하는지 아는 사람의
+- [10:50](https://youtube.com/watch?v=vZaG9KlT-40&t=650) 갑어치예요. 그래서 다음 프로젝트
+- [10:51](https://youtube.com/watch?v=vZaG9KlT-40&t=651) 시작하실 때 일부터 시키지 말고이 한
+- [10:53](https://youtube.com/watch?v=vZaG9KlT-40&t=653) 문장을 먼저 던져 보세요. 내가 뭘
+- [10:55](https://youtube.com/watch?v=vZaG9KlT-40&t=655) 모르는지부터 같이 찾자 280만 명이
+- [10:57](https://youtube.com/watch?v=vZaG9KlT-40&t=657) 읽은 글이 사실이 한 문장이에요.
+- [10:58](https://youtube.com/watch?v=vZaG9KlT-40&t=658) 구독과 좋아요는 영상을 만드는데 큰
+- [11:00](https://youtube.com/watch?v=vZaG9KlT-40&t=660) 힘이 됩니다. 오늘은 여기까지입니다.
