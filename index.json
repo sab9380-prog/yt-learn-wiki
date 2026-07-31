@@ -3794,5 +3794,45 @@
         "topic": "ANTHROPIC"
       }
     ]
+  },
+  {
+    "filename": "2026-07-31-Claude로-웹소설-처음-쓰는-법.md",
+    "title": "ChatGPT·Claude로 웹소설 처음 쓰는 법 — 발주 5원칙 + 세계관 7단계",
+    "category": "웹소설",
+    "date": "2026-07-31",
+    "core_message": "AI는 초안 생성 도구일 뿐, 작가가 컨텍스트를 설계하고 발주·검토·편집을 반복해야 시장에서 통하는 웹소설이 나온다.",
+    "topics": [],
+    "concepts": [
+      {
+        "id": "발주법",
+        "label": "발주법",
+        "topic": null
+      },
+      {
+        "id": "컨텍스트-관리",
+        "label": "컨텍스트 관리",
+        "topic": null
+      },
+      {
+        "id": "인물·세계관-시트",
+        "label": "인물·세계관 시트",
+        "topic": null
+      },
+      {
+        "id": "디렉터-겸-편집자-역할",
+        "label": "디렉터 겸 편집자 역할",
+        "topic": null
+      },
+      {
+        "id": "로그라인",
+        "label": "로그라인",
+        "topic": null
+      },
+      {
+        "id": "부분-수정-요청",
+        "label": "부분 수정 요청",
+        "topic": null
+      }
+    ]
   }
 ]
