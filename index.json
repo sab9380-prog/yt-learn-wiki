@@ -3746,5 +3746,53 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-31-앤트로픽-테크니컬-스태프가-알려주는-Claude-Fable-활용법-6가지.md",
+    "title": "앤트로픽 테크니컬 스태프가 알려주는 Claude Fable 활용법 6가지",
+    "category": "일반학습",
+    "date": "2026-07-31",
+    "core_message": "AI 결과물의 병목은 모델이 아니라 '내가 모르는 것을 모르는 상태'이며, 6가지 기법으로 그 간극을 미리 채우는 것이 곧 AI 시대의 핵심 역량이다.",
+    "topics": [
+      "컨텍스트관리",
+      "ANTHROPIC"
+    ],
+    "concepts": [
+      {
+        "id": "커패빌리티-오버행",
+        "label": "커패빌리티 오버행",
+        "topic": null
+      },
+      {
+        "id": "지도와-영토의-간극",
+        "label": "지도와 영토의 간극",
+        "topic": null
+      },
+      {
+        "id": "언노운",
+        "label": "언노운",
+        "topic": null
+      },
+      {
+        "id": "사각지대-점검",
+        "label": "사각지대 점검",
+        "topic": null
+      },
+      {
+        "id": "구현-노트",
+        "label": "구현 노트",
+        "topic": null
+      },
+      {
+        "id": "context-engineering",
+        "label": "컨텍스트 엔지니어링",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "anthropic",
+        "label": "Anthropic",
+        "topic": "ANTHROPIC"
+      }
+    ]
   }
 ]
