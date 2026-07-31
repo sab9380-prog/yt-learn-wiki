@@ -3377,5 +3377,45 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-07-31-OO해줘-라고-명령하시면-안-됩니다.md",
+    "title": "\"OO해줘\" 라고 명령하시면 안 됩니다 | 서울대 박현우 교수 | 샤로잡다 시즌2 (ENG CC)",
+    "category": "일반학습",
+    "date": "2026-07-31",
+    "core_message": "AI 시대에 진짜 경쟁력은 AI를 쓰는 것이 아니라, AI를 쓰는 방식 자체를 AI와 함께 개선하는 메타인지적 태도에서 나온다.",
+    "topics": [],
+    "concepts": [
+      {
+        "id": "메타인지",
+        "label": "메타인지",
+        "topic": null
+      },
+      {
+        "id": "Known-Unknown-매트릭스",
+        "label": "Known-Unknown 매트릭스",
+        "topic": null
+      },
+      {
+        "id": "AI-눈높이-법칙",
+        "label": "AI 눈높이 법칙",
+        "topic": null
+      },
+      {
+        "id": "도구를-만드는-도구",
+        "label": "도구를 만드는 도구",
+        "topic": null
+      },
+      {
+        "id": "검증-비용",
+        "label": "검증 비용",
+        "topic": null
+      },
+      {
+        "id": "성실함의-역설",
+        "label": "성실함의 역설",
+        "topic": null
+      }
+    ]
   }
 ]
