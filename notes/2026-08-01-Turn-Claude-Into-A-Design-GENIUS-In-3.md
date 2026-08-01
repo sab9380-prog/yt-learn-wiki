@@ -1,0 +1,768 @@
+---
+title: "Turn Claude Into A Design GENIUS In 3 Simple Steps"
+source_url: https://youtube.com/watch?v=7FU98O0JLHs
+video_id: 7FU98O0JLHs
+source_type: youtube
+lang: en
+analyzed: 2026-08-01
+category: Picks전략
+tags: ["주제/검증", "개념/검증/ai-slop", "개념/취향-라이브러리", "개념/Impeccable", "개념/Taste-Skill", "개념/Higgs-Field-MCP", "개념/21st.dev"]
+key_concepts: ["AI 슬롭", "취향 라이브러리", "Impeccable", "Taste Skill", "Higgs Field MCP", "21st.dev"]
+status: active
+---
+# Turn Claude Into A Design GENIUS In 3 Simple Steps
+
+## 🧠 이해 (Understand)
+- **Summary:** AI가 생성하는 '슬롭(slop)' 디자인을 탈출하는 3단계 워크플로우를 소개한다. 1단계: Dribbble·Pinterest·Twitter에서 영감을 수집해 취향 라이브러리를 구축한다. 2단계: Impeccable·Taste Skill·Higgs Field MCP 등 외부 도구로 Claude Code의 디자인 역량을 확장한다. 3단계: 한 번에 완성하려 하지 말고, 5가지 스타일 → 3가지 변형 → 세부 조정 순으로 넓은 탐색에서 좁혀가며 반복한다. 핵심은 '취향'이라는 주관적 기준을 AI에게 주입하는 것이며, 이를 위해 레퍼런스 이미지·미적 방향·의도·가드레일 4가지를 프롬프트에 담아야 한다.
+- **Core Message:** AI에게 '취향'을 주입하는 체계적인 수집-도구-반복 워크플로우로 AI 슬롭을 극복할 수 있다.
+> AI has no taste. No matter how good the models get, it'll just change what we consider to be generic.
+> We aren't trying to match content-wise or design-wise — we're going for a feeling, an aesthetic.
+> I don't want to just sit at the mercy of Claude Code one-shots, playing the lottery game with a random prompt saying 'please make it look more premium.'
+❗ Impeccable은 깃허브 GitHub 공식 AI 도구에 편입됐으며 GitHub Stars 약 5만 개를 보유하고 있다.
+❗ Impeccable은 AI 슬롭 패턴을 46가지로 분류해 CLI로 자동 감지한다.
+❗ Taste Skill은 GitHub Stars 약 6만 6천 개로 Impeccable보다 더 많은 스타를 받았지만, 영상에서는 Impeccable을 '현재 최고'로 평가했다.
+
+## 📚 핵심 용어
+- **AI 슬롭:** AI가 평균적 학습 데이터로 수렴해 만들어내는 무개성·범용 디자인 결과물. / 편의점 도시락처럼 먹을 순 있지만, 누가 만들었는지 알 수 없는 맛. 퍼플 그라디언트·Inter 폰트가 대표 증상이다. / 일반 Claude 출력과 슬롭의 차이 — 둘 다 기능은 하지만, 슬롭은 '한 프롬프트짜리 결과'임이 한눈에 드러난다.
+- **Impeccable:** AI 디자인의 슬롭 패턴 46가지를 감지·교정하는 오픈소스 프런트엔드 CLI 스킬. / 맞춤법 검사기처럼, '디자인 오류'를 자동으로 찾아 bolder·clarify 등 23개 명령으로 고쳐준다. / Taste Skill도 유사하지만, Impeccable은 라이브 서버에서 컴포넌트별 시각 편집까지 지원한다.
+- **Higgs Field MCP:** Claude Code에 이미지·영상 생성 기능을 추가해주는 외부 MCP 도구. / 기본 사무용 PC에 그래픽카드를 꽂는 것처럼, Claude가 원래 못 하던 이미지 생성을 가능하게 해준다. / Claude Code 기본 기능은 HTML/CSS만 다루지만, Higgs Field MCP는 GPT Images·SeaDance 등 외부 생성 AI를 직접 호출한다.
+- **와이드넷 프로토타이핑:** 한 번에 5가지 스타일을 동시 생성해 방향성을 빠르게 비교·선택하는 반복 설계 방식. / 옷 살 때 한 벌만 입어보지 않고 여러 벌을 걸쳐보고 고르는 것처럼, 처음부터 선택지를 넓게 펼친다. / 원샷 프롬프트는 결과가 마음에 안 들면 처음부터 다시, 와이드넷은 마음에 드는 것을 골라 좁혀가므로 시간이 절약된다.
+
+## 🚀 실행 (Execute)
+- [ ] Dribbble·Pinterest·Twitter에서 웹 디자인 레퍼런스 20~30개 수집 후 취향 라이브러리 파일 또는 간단한 Claude Code 앱으로 정리 — ⏰ 이번 주 · ⚡ 2~3시간
+  - 담당: 나
+  - 이유: 레퍼런스 없이 프롬프트만 넣으면 AI 슬롭 평균으로 수렴한다. 라이브러리가 있어야 3단계 프롬프트에 미적 방향과 참조 이미지를 실제로 넣을 수 있다.
+- [ ] Claude Code 환경에 Impeccable CLI 설치(impeccable.style 참고) 후 기존 프로젝트 한 개에 'impeccable bolder' 등 명령 3가지 직접 실행해 비교 — ⏰ 이번 주 · ⚡ 1시간
+  - 담당: 나
+  - 이유: 도구의 실제 효과는 설치 후 직접 비교해야 체감된다. 한 번 써보면 이후 모든 디자인 작업에 습관적으로 적용할 수 있다.
+- [ ] PICKS 또는 웹소설 플랫폼용 랜딩페이지를 영상의 4요소(미적 방향·레퍼런스 이미지·의도·가드레일) 프롬프트 구조로 5가지 스타일 동시 생성 → 1개 선택 → 3가지 변형 → 트윅 바 반복 조정 — ⏰ 2주 내 · ⚡ 반나절(3~4시간)
+  - 담당: 나
+  - 이유: 와이드넷 프로토타이핑을 실제 업무 산출물에 적용해야 워크플로우가 몸에 익는다. 이론만 아는 것과 직접 해본 것의 차이가 크다.
+- 자료: Impeccable CLI — impeccable.style (실제 존재 확인됨)
+- 자료: Taste Skill — GitHub 검색 'Taste Skill v2' (확인 필요: 정확한 리포지토리 URL은 원문에 미기재)
+- 자료: Higgs Field MCP — higgsfield.ai/mcp (실제 존재 확인 필요)
+- 자료: 21st.dev — 컴포넌트 레퍼런스 및 프롬프트 복사 (실제 존재 확인됨)
+- 자료: Dribbble(dribbble.com), Pinterest, Twitter/X — 디자인 영감 수집
+- Timeline: 1주차: 취향 라이브러리 구축 + Impeccable 설치·체험 → 2주차: 실제 프로젝트에 와이드넷 프로토타이핑 적용 → 이후: Higgs Field MCP로 이미지 생성 연동 및 트윅 바 반복 조정 루틴화
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
+- 주제: [[_topic-검증]]
+- 핵심 개념: [[_concept-ai-slop|AI 슬롭]] · [[_concept-취향-라이브러리|취향 라이브러리]] · [[_concept-Impeccable|Impeccable]] · [[_concept-Taste-Skill|Taste Skill]] · [[_concept-Higgs-Field-MCP|Higgs Field MCP]] · [[_concept-21st.dev|21st.dev]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=7FU98O0JLHs&t=0) I'm going to teach you how to defeat the
+- [0:01](https://youtube.com/watch?v=7FU98O0JLHs&t=1) monster known as AI slop in three simple
+- [0:04](https://youtube.com/watch?v=7FU98O0JLHs&t=4) steps. Now, AI slop has taken a number
+- [0:06](https://youtube.com/watch?v=7FU98O0JLHs&t=6) of forms over the years, and it wasn't
+- [0:08](https://youtube.com/watch?v=7FU98O0JLHs&t=8) too long ago that it looked something
+- [0:10](https://youtube.com/watch?v=7FU98O0JLHs&t=10) like this. A generic SaaS template with
+- [0:13](https://youtube.com/watch?v=7FU98O0JLHs&t=13) Inter font everywhere and blue purple
+- [0:15](https://youtube.com/watch?v=7FU98O0JLHs&t=15) gradients. But now, AI slop looks
+- [0:18](https://youtube.com/watch?v=7FU98O0JLHs&t=18) something like this. This is definitely
+- [0:19](https://youtube.com/watch?v=7FU98O0JLHs&t=19) better, but it still screams AI. It has
+- [0:22](https://youtube.com/watch?v=7FU98O0JLHs&t=22) a specific color palette, a specific
+- [0:24](https://youtube.com/watch?v=7FU98O0JLHs&t=24) font, just a general style that right
+- [0:26](https://youtube.com/watch?v=7FU98O0JLHs&t=26) away you can tell this was generated in
+- [0:28](https://youtube.com/watch?v=7FU98O0JLHs&t=28) just a prompt or two. But today, I'm
+- [0:30](https://youtube.com/watch?v=7FU98O0JLHs&t=30) going to show you how to break out of
+- [0:31](https://youtube.com/watch?v=7FU98O0JLHs&t=31) this mold. I'm going to teach you how to
+- [0:33](https://youtube.com/watch?v=7FU98O0JLHs&t=33) cultivate and inject your own taste into
+- [0:35](https://youtube.com/watch?v=7FU98O0JLHs&t=35) the web design process. I'm going to
+- [0:36](https://youtube.com/watch?v=7FU98O0JLHs&t=36) show you what sort of skills and MCPs
+- [0:39](https://youtube.com/watch?v=7FU98O0JLHs&t=39) you need to begin using to help you in
+- [0:41](https://youtube.com/watch?v=7FU98O0JLHs&t=41) that endeavor. And lastly, I'm going to
+- [0:43](https://youtube.com/watch?v=7FU98O0JLHs&t=43) show you the exact sort of build
+- [0:45](https://youtube.com/watch?v=7FU98O0JLHs&t=45) sequence you need to begin applying to
+- [0:47](https://youtube.com/watch?v=7FU98O0JLHs&t=47) this. What are the prompts we should be
+- [0:48](https://youtube.com/watch?v=7FU98O0JLHs&t=48) using? How should we be prototyping?
+- [0:50](https://youtube.com/watch?v=7FU98O0JLHs&t=50) What does it mean to iterate and tweak
+- [0:51](https://youtube.com/watch?v=7FU98O0JLHs&t=51) our web design until we get something we
+- [0:53](https://youtube.com/watch?v=7FU98O0JLHs&t=53) actually like? And by the end, you're
+- [0:55](https://youtube.com/watch?v=7FU98O0JLHs&t=55) going to have a flexible roadmap that
+- [0:56](https://youtube.com/watch?v=7FU98O0JLHs&t=56) you can apply to all of your AI design
+- [0:58](https://youtube.com/watch?v=7FU98O0JLHs&t=58) work. So, let's get started. AI has no
+- [1:01](https://youtube.com/watch?v=7FU98O0JLHs&t=61) taste. Now, this is a phrase you've
+- [1:02](https://youtube.com/watch?v=7FU98O0JLHs&t=62) definitely heard of before, but it's an
+- [1:03](https://youtube.com/watch?v=7FU98O0JLHs&t=63) important one, and it's what step one is
+- [1:04](https://youtube.com/watch?v=7FU98O0JLHs&t=64) all about because step one is figuring
+- [1:06](https://youtube.com/watch?v=7FU98O0JLHs&t=66) out how do we cultivate taste? How do we
+- [1:08](https://youtube.com/watch?v=7FU98O0JLHs&t=68) curate it? How do we bring that into the
+- [1:11](https://youtube.com/watch?v=7FU98O0JLHs&t=71) web design process? Because the problem
+- [1:13](https://youtube.com/watch?v=7FU98O0JLHs&t=73) with this website and this website isn't
+- [1:14](https://youtube.com/watch?v=7FU98O0JLHs&t=74) a technical one, it's simply generic.
+- [1:17](https://youtube.com/watch?v=7FU98O0JLHs&t=77) And no matter how good the models get,
+- [1:18](https://youtube.com/watch?v=7FU98O0JLHs&t=78) they could get 10 times better tomorrow,
+- [1:20](https://youtube.com/watch?v=7FU98O0JLHs&t=80) it'll just change what we consider to be
+- [1:22](https://youtube.com/watch?v=7FU98O0JLHs&t=82) generic. But instead, if we are able to
+- [1:24](https://youtube.com/watch?v=7FU98O0JLHs&t=84) inject our taste into the design
+- [1:27](https://youtube.com/watch?v=7FU98O0JLHs&t=87) process, we are going to be able to
+- [1:28](https://youtube.com/watch?v=7FU98O0JLHs&t=88) create something that is unique because
+- [1:29](https://youtube.com/watch?v=7FU98O0JLHs&t=89) it's specific to you, and it's very
+- [1:31](https://youtube.com/watch?v=7FU98O0JLHs&t=91) subjective, but also something that is,
+- [1:33](https://youtube.com/watch?v=7FU98O0JLHs&t=93) quote unquote, good. So, for step one,
+- [1:35](https://youtube.com/watch?v=7FU98O0JLHs&t=95) what we are going to do is we are going
+- [1:37](https://youtube.com/watch?v=7FU98O0JLHs&t=97) to curate a library of design
+- [1:40](https://youtube.com/watch?v=7FU98O0JLHs&t=100) inspiration. This is also going to help
+- [1:42](https://youtube.com/watch?v=7FU98O0JLHs&t=102) us cultivate our own taste. We're going
+- [1:43](https://youtube.com/watch?v=7FU98O0JLHs&t=103) to expose ourselves to a lot of, you
+- [1:46](https://youtube.com/watch?v=7FU98O0JLHs&t=106) know, high-level web design or whatever
+- [1:47](https://youtube.com/watch?v=7FU98O0JLHs&t=107) you want to call it. And once we have
+- [1:49](https://youtube.com/watch?v=7FU98O0JLHs&t=109) this library of stuff we like, you know,
+- [1:51](https://youtube.com/watch?v=7FU98O0JLHs&t=111) this is a reflection of our taste, we
+- [1:53](https://youtube.com/watch?v=7FU98O0JLHs&t=113) can then bring that to AI and use that
+- [1:55](https://youtube.com/watch?v=7FU98O0JLHs&t=115) as the foundation for what we are going
+- [1:57](https://youtube.com/watch?v=7FU98O0JLHs&t=117) to build moving forward instead of
+- [1:59](https://youtube.com/watch?v=7FU98O0JLHs&t=119) relying on nothing and instead just
+- [2:01](https://youtube.com/watch?v=7FU98O0JLHs&t=121) getting an average regression to the
+- [2:03](https://youtube.com/watch?v=7FU98O0JLHs&t=123) mean output. So, where should you go to
+- [2:05](https://youtube.com/watch?v=7FU98O0JLHs&t=125) find inspiration? Well, there's a number
+- [2:07](https://youtube.com/watch?v=7FU98O0JLHs&t=127) of websites that I think do a really
+- [2:08](https://youtube.com/watch?v=7FU98O0JLHs&t=128) good job. What I'm on right now is
+- [2:10](https://youtube.com/watch?v=7FU98O0JLHs&t=130) Dribbble. That's Dribbble with three
+- [2:11](https://youtube.com/watch?v=7FU98O0JLHs&t=131) B's. I just typed in web design, put in
+- [2:13](https://youtube.com/watch?v=7FU98O0JLHs&t=133) popular, and I can see a bunch of
+- [2:15](https://youtube.com/watch?v=7FU98O0JLHs&t=135) different landing pages. Another good
+- [2:17](https://youtube.com/watch?v=7FU98O0JLHs&t=137) one is Pinterest. Again, all as I did
+- [2:18](https://youtube.com/watch?v=7FU98O0JLHs&t=138) was throw in web design and what do I
+- [2:20](https://youtube.com/watch?v=7FU98O0JLHs&t=140) see? I see a bunch of hero pages that
+- [2:22](https://youtube.com/watch?v=7FU98O0JLHs&t=142) are much different than what Claude is
+- [2:24](https://youtube.com/watch?v=7FU98O0JLHs&t=144) going to generate me when I say build me
+- [2:26](https://youtube.com/watch?v=7FU98O0JLHs&t=146) a landing page. And lastly, we got
+- [2:27](https://youtube.com/watch?v=7FU98O0JLHs&t=147) Twitter which I think is my favorite of
+- [2:29](https://youtube.com/watch?v=7FU98O0JLHs&t=149) the bunch because there are a ton of
+- [2:30](https://youtube.com/watch?v=7FU98O0JLHs&t=150) awesome creators in this space that are
+- [2:33](https://youtube.com/watch?v=7FU98O0JLHs&t=153) doing really cool design work and UI
+- [2:35](https://youtube.com/watch?v=7FU98O0JLHs&t=155) stuff that you just aren't going to see
+- [2:37](https://youtube.com/watch?v=7FU98O0JLHs&t=157) anywhere else. And so, your first job is
+- [2:38](https://youtube.com/watch?v=7FU98O0JLHs&t=158) simply to go to these websites, start
+- [2:40](https://youtube.com/watch?v=7FU98O0JLHs&t=160) looking for things you like, and just
+- [2:42](https://youtube.com/watch?v=7FU98O0JLHs&t=162) start screenshotting them, saving them.
+- [2:43](https://youtube.com/watch?v=7FU98O0JLHs&t=163) You can even save links if you have the
+- [2:45](https://youtube.com/watch?v=7FU98O0JLHs&t=165) actual websites themselves. Now, once
+- [2:47](https://youtube.com/watch?v=7FU98O0JLHs&t=167) you do that, you can just leave all
+- [2:48](https://youtube.com/watch?v=7FU98O0JLHs&t=168) those screenshots in a screenshot folder
+- [2:50](https://youtube.com/watch?v=7FU98O0JLHs&t=170) or you can do what I did and have Claude
+- [2:51](https://youtube.com/watch?v=7FU98O0JLHs&t=171) code create a simple web app that's
+- [2:53](https://youtube.com/watch?v=7FU98O0JLHs&t=173) essentially your inspiration library.
+- [2:56](https://youtube.com/watch?v=7FU98O0JLHs&t=176) It's going to put everything in one
+- [2:57](https://youtube.com/watch?v=7FU98O0JLHs&t=177) place, but more importantly, it's going
+- [2:59](https://youtube.com/watch?v=7FU98O0JLHs&t=179) to group them based on design type and
+- [3:01](https://youtube.com/watch?v=7FU98O0JLHs&t=181) you can have it explain what the design
+- [3:04](https://youtube.com/watch?v=7FU98O0JLHs&t=184) even is, what it means, what is the
+- [3:05](https://youtube.com/watch?v=7FU98O0JLHs&t=185) actual vocabulary associated with this
+- [3:09](https://youtube.com/watch?v=7FU98O0JLHs&t=189) design. And when I click on one of these
+- [3:10](https://youtube.com/watch?v=7FU98O0JLHs&t=190) screenshots, it gives me some keywords
+- [3:12](https://youtube.com/watch?v=7FU98O0JLHs&t=192) associated with this design. So, this is
+- [3:13](https://youtube.com/watch?v=7FU98O0JLHs&t=193) something like a Vauxhall rendered
+- [3:15](https://youtube.com/watch?v=7FU98O0JLHs&t=195) landscape. And then down here, I can
+- [3:17](https://youtube.com/watch?v=7FU98O0JLHs&t=197) both copy the image prompt. So, if I
+- [3:19](https://youtube.com/watch?v=7FU98O0JLHs&t=199) wanted to create an image for my hero
+- [3:21](https://youtube.com/watch?v=7FU98O0JLHs&t=201) section in the background like this one,
+- [3:22](https://youtube.com/watch?v=7FU98O0JLHs&t=202) this sort of gives me the foundation for
+- [3:24](https://youtube.com/watch?v=7FU98O0JLHs&t=204) that. And then I also have this button
+- [3:25](https://youtube.com/watch?v=7FU98O0JLHs&t=205) that says copy brief and that's
+- [3:26](https://youtube.com/watch?v=7FU98O0JLHs&t=206) something I would use to actually create
+- [3:28](https://youtube.com/watch?v=7FU98O0JLHs&t=208) the website in its entirety. And we'll
+- [3:31](https://youtube.com/watch?v=7FU98O0JLHs&t=211) go into prompting and all of that in
+- [3:33](https://youtube.com/watch?v=7FU98O0JLHs&t=213) step three. But big picture, step one is
+- [3:36](https://youtube.com/watch?v=7FU98O0JLHs&t=216) cultivating our taste. It's creating
+- [3:38](https://youtube.com/watch?v=7FU98O0JLHs&t=218) this library of inspiration so you don't
+- [3:40](https://youtube.com/watch?v=7FU98O0JLHs&t=220) just have to sit there and come up with
+- [3:42](https://youtube.com/watch?v=7FU98O0JLHs&t=222) something from scratch. Just come up
+- [3:43](https://youtube.com/watch?v=7FU98O0JLHs&t=223) with something, you know, that's been
+- [3:45](https://youtube.com/watch?v=7FU98O0JLHs&t=225) sitting in your brain because when we're
+- [3:46](https://youtube.com/watch?v=7FU98O0JLHs&t=226) just getting started, we're really not
+- [3:48](https://youtube.com/watch?v=7FU98O0JLHs&t=228) good enough for that yet. We need to
+- [3:49](https://youtube.com/watch?v=7FU98O0JLHs&t=229) find stuff that's actually working that
+- [3:51](https://youtube.com/watch?v=7FU98O0JLHs&t=231) we like and use that as our base. Now,
+- [3:55](https://youtube.com/watch?v=7FU98O0JLHs&t=235) step two is all about the external tools
+- [3:57](https://youtube.com/watch?v=7FU98O0JLHs&t=237) we are going to give Claude code so that
+- [3:59](https://youtube.com/watch?v=7FU98O0JLHs&t=239) when we move on to step three, which is
+- [4:01](https://youtube.com/watch?v=7FU98O0JLHs&t=241) actually creating the website, it gives
+- [4:03](https://youtube.com/watch?v=7FU98O0JLHs&t=243) us better outputs right away. And the
+- [4:05](https://youtube.com/watch?v=7FU98O0JLHs&t=245) first one I want to talk about is
+- [4:06](https://youtube.com/watch?v=7FU98O0JLHs&t=246) impeccable, which I think is the best
+- [4:09](https://youtube.com/watch?v=7FU98O0JLHs&t=249) front-end design skill in the game right
+- [4:10](https://youtube.com/watch?v=7FU98O0JLHs&t=250) now. Now, impeccable is an open-source
+- [4:12](https://youtube.com/watch?v=7FU98O0JLHs&t=252) tool. It's got almost 50,000 stars on
+- [4:14](https://youtube.com/watch?v=7FU98O0JLHs&t=254) GitHub. And speaking of GitHub, they now
+- [4:16](https://youtube.com/watch?v=7FU98O0JLHs&t=256) turned it into like an official part of
+- [4:19](https://youtube.com/watch?v=7FU98O0JLHs&t=259) GitHub's AI tool. And it's one skill,
+- [4:22](https://youtube.com/watch?v=7FU98O0JLHs&t=262) but it includes 23 different commands
+- [4:25](https://youtube.com/watch?v=7FU98O0JLHs&t=265) that will essentially improve your web
+- [4:27](https://youtube.com/watch?v=7FU98O0JLHs&t=267) design or your website's components in a
+- [4:29](https://youtube.com/watch?v=7FU98O0JLHs&t=269) number of different ways. So, it's able
+- [4:31](https://youtube.com/watch?v=7FU98O0JLHs&t=271) to, you know, critique any issues. It's
+- [4:34](https://youtube.com/watch?v=7FU98O0JLHs&t=274) able to add additional polish, make it
+- [4:35](https://youtube.com/watch?v=7FU98O0JLHs&t=275) bolder, make it quieter, etc., etc.
+- [4:37](https://youtube.com/watch?v=7FU98O0JLHs&t=277) There's 23 different things. Now, it's
+- [4:38](https://youtube.com/watch?v=7FU98O0JLHs&t=278) kind of impossible to understand what
+- [4:39](https://youtube.com/watch?v=7FU98O0JLHs&t=279) those 23 things do without seeing them
+- [4:42](https://youtube.com/watch?v=7FU98O0JLHs&t=282) in action. But if you go into the actual
+- [4:43](https://youtube.com/watch?v=7FU98O0JLHs&t=283) impeccable website, which is
+- [4:45](https://youtube.com/watch?v=7FU98O0JLHs&t=285) impeccable.style, we can see all those
+- [4:47](https://youtube.com/watch?v=7FU98O0JLHs&t=287) 23 different commands over here on the
+- [4:49](https://youtube.com/watch?v=7FU98O0JLHs&t=289) left. So, if I look at bolder, for
+- [4:51](https://youtube.com/watch?v=7FU98O0JLHs&t=291) example, it explains what it does. It
+- [4:53](https://youtube.com/watch?v=7FU98O0JLHs&t=293) pushes safe designs towards impact
+- [4:55](https://youtube.com/watch?v=7FU98O0JLHs&t=295) without sliding into chaos. And over
+- [4:57](https://youtube.com/watch?v=7FU98O0JLHs&t=297) here on the left, this would just be
+- [4:59](https://youtube.com/watch?v=7FU98O0JLHs&t=299) like a standard Claude code output. And
+- [5:01](https://youtube.com/watch?v=7FU98O0JLHs&t=301) if I do impeccable bolder,
+- [5:03](https://youtube.com/watch?v=7FU98O0JLHs&t=303) well, I get something like this. Or if I
+- [5:04](https://youtube.com/watch?v=7FU98O0JLHs&t=304) do something like overdrive, hey,
+- [5:07](https://youtube.com/watch?v=7FU98O0JLHs&t=307) here's, you know, standard Claude code,
+- [5:09](https://youtube.com/watch?v=7FU98O0JLHs&t=309) and then here's impeccable. Or clarify,
+- [5:13](https://youtube.com/watch?v=7FU98O0JLHs&t=313) here's the standard warnings you get,
+- [5:15](https://youtube.com/watch?v=7FU98O0JLHs&t=315) and here's something that is a bit more
+- [5:18](https://youtube.com/watch?v=7FU98O0JLHs&t=318) condensed and easy to understand. And
+- [5:20](https://youtube.com/watch?v=7FU98O0JLHs&t=320) really what impeccable is doing is it's
+- [5:21](https://youtube.com/watch?v=7FU98O0JLHs&t=321) identifying and getting rid of slop. And
+- [5:23](https://youtube.com/watch?v=7FU98O0JLHs&t=323) it does that across really seven
+- [5:25](https://youtube.com/watch?v=7FU98O0JLHs&t=325) different places: typography, color,
+- [5:28](https://youtube.com/watch?v=7FU98O0JLHs&t=328) spatial design, responsiveness,
+- [5:29](https://youtube.com/watch?v=7FU98O0JLHs&t=329) interaction, motion, and actual UX
+- [5:31](https://youtube.com/watch?v=7FU98O0JLHs&t=331) writing. They have an entire section of
+- [5:33](https://youtube.com/watch?v=7FU98O0JLHs&t=333) their website dedicated to slop, and it
+- [5:35](https://youtube.com/watch?v=7FU98O0JLHs&t=335) breaks it down as 46 different patterns.
+- [5:38](https://youtube.com/watch?v=7FU98O0JLHs&t=338) And you can actually run the impeccable
+- [5:40](https://youtube.com/watch?v=7FU98O0JLHs&t=340) CLI, and it will look through everything
+- [5:41](https://youtube.com/watch?v=7FU98O0JLHs&t=341) to see, okay, like, is this, quote
+- [5:44](https://youtube.com/watch?v=7FU98O0JLHs&t=344) unquote, AI slop? And it'll actually
+- [5:45](https://youtube.com/watch?v=7FU98O0JLHs&t=345) show it to you
+- [5:47](https://youtube.com/watch?v=7FU98O0JLHs&t=347) on a dev server. Speaking of a dev
+- [5:48](https://youtube.com/watch?v=7FU98O0JLHs&t=348) server, they also have a live mode, so
+- [5:50](https://youtube.com/watch?v=7FU98O0JLHs&t=350) you can actually bring up your website
+- [5:52](https://youtube.com/watch?v=7FU98O0JLHs&t=352) and you can actually click through it
+- [5:54](https://youtube.com/watch?v=7FU98O0JLHs&t=354) component by component and make
+- [5:55](https://youtube.com/watch?v=7FU98O0JLHs&t=355) adjustments right there live. So, it's
+- [5:58](https://youtube.com/watch?v=7FU98O0JLHs&t=358) almost like Claude design in a in one
+- [6:00](https://youtube.com/watch?v=7FU98O0JLHs&t=360) sense, but it definitely gives you a
+- [6:02](https://youtube.com/watch?v=7FU98O0JLHs&t=362) visual aspect that you can't get if
+- [6:04](https://youtube.com/watch?v=7FU98O0JLHs&t=364) you're using exclusively the terminal.
+- [6:06](https://youtube.com/watch?v=7FU98O0JLHs&t=366) Now, to install this is super easy. It
+- [6:07](https://youtube.com/watch?v=7FU98O0JLHs&t=367) includes a CLI and they give you three
+- [6:10](https://youtube.com/watch?v=7FU98O0JLHs&t=370) different options for installing this
+- [6:11](https://youtube.com/watch?v=7FU98O0JLHs&t=371) thing and if you get confused, just go
+- [6:12](https://youtube.com/watch?v=7FU98O0JLHs&t=372) ahead, copy the URL and drop that in the
+- [6:15](https://youtube.com/watch?v=7FU98O0JLHs&t=375) Claude code and it will install it for
+- [6:16](https://youtube.com/watch?v=7FU98O0JLHs&t=376) you. Now, if you don't really like
+- [6:17](https://youtube.com/watch?v=7FU98O0JLHs&t=377) Impeccable, another one I would suggest
+- [6:19](https://youtube.com/watch?v=7FU98O0JLHs&t=379) is the Taste Skill. They just released
+- [6:21](https://youtube.com/watch?v=7FU98O0JLHs&t=381) their version two, although it's
+- [6:23](https://youtube.com/watch?v=7FU98O0JLHs&t=383) experimental. Again, we can find this on
+- [6:25](https://youtube.com/watch?v=7FU98O0JLHs&t=385) GitHub. It's just under 66,000 stars and
+- [6:28](https://youtube.com/watch?v=7FU98O0JLHs&t=388) sort of works in the same manner. You
+- [6:30](https://youtube.com/watch?v=7FU98O0JLHs&t=390) know, it's going to look for those AI
+- [6:32](https://youtube.com/watch?v=7FU98O0JLHs&t=392) sort of like Slop Tails and instead it's
+- [6:35](https://youtube.com/watch?v=7FU98O0JLHs&t=395) going to give you a stronger layout.
+- [6:36](https://youtube.com/watch?v=7FU98O0JLHs&t=396) It's going to work on the typography,
+- [6:37](https://youtube.com/watch?v=7FU98O0JLHs&t=397) motion, and spacing. And in the end,
+- [6:40](https://youtube.com/watch?v=7FU98O0JLHs&t=400) it's meant to give you something unique
+- [6:41](https://youtube.com/watch?v=7FU98O0JLHs&t=401) instead of a boilerplate looking UI. So,
+- [6:43](https://youtube.com/watch?v=7FU98O0JLHs&t=403) I think these two, the Taste Skill and
+- [6:44](https://youtube.com/watch?v=7FU98O0JLHs&t=404) Impeccable, are the best in the game
+- [6:46](https://youtube.com/watch?v=7FU98O0JLHs&t=406) right now. Definitely a step above the
+- [6:48](https://youtube.com/watch?v=7FU98O0JLHs&t=408) standard Anthropic front-end design and
+- [6:50](https://youtube.com/watch?v=7FU98O0JLHs&t=410) definitely a step above some of the more
+- [6:52](https://youtube.com/watch?v=7FU98O0JLHs&t=412) popular repos like UIUX Pro Max. Now,
+- [6:55](https://youtube.com/watch?v=7FU98O0JLHs&t=415) when we talk about MCPs, the one I use
+- [6:56](https://youtube.com/watch?v=7FU98O0JLHs&t=416) the most is the Higgs Field MCP and this
+- [6:58](https://youtube.com/watch?v=7FU98O0JLHs&t=418) is because it's going to give Claude
+- [7:00](https://youtube.com/watch?v=7FU98O0JLHs&t=420) code capabilities it simply does not
+- [7:01](https://youtube.com/watch?v=7FU98O0JLHs&t=421) have out of the box. Primarily, image
+- [7:04](https://youtube.com/watch?v=7FU98O0JLHs&t=424) creation and video creation. So, the
+- [7:06](https://youtube.com/watch?v=7FU98O0JLHs&t=426) Higgs Field MCP is going to give you
+- [7:08](https://youtube.com/watch?v=7FU98O0JLHs&t=428) access to
+- [7:09](https://youtube.com/watch?v=7FU98O0JLHs&t=429) virtually every single AI image and
+- [7:11](https://youtube.com/watch?v=7FU98O0JLHs&t=431) video generator out there. So, I usually
+- [7:13](https://youtube.com/watch?v=7FU98O0JLHs&t=433) use GPT images two for images and then
+- [7:16](https://youtube.com/watch?v=7FU98O0JLHs&t=436) for video, that's usually bouncing
+- [7:18](https://youtube.com/watch?v=7FU98O0JLHs&t=438) around every few weeks, but right now
+- [7:20](https://youtube.com/watch?v=7FU98O0JLHs&t=440) SeaDance tends to be the best. So, you
+- [7:22](https://youtube.com/watch?v=7FU98O0JLHs&t=442) can also install this as a CLI to
+- [7:25](https://youtube.com/watch?v=7FU98O0JLHs&t=445) actually get here. All you have to do is
+- [7:26](https://youtube.com/watch?v=7FU98O0JLHs&t=446) go to the Higgs Field website,
+- [7:28](https://youtube.com/watch?v=7FU98O0JLHs&t=448) higgsfield.ai, go to MCP and CLI, just
+- [7:31](https://youtube.com/watch?v=7FU98O0JLHs&t=451) copy this, paste it into Claude code,
+- [7:33](https://youtube.com/watch?v=7FU98O0JLHs&t=453) and then it will run you through the
+- [7:34](https://youtube.com/watch?v=7FU98O0JLHs&t=454) authentication process. It also has some
+- [7:37](https://youtube.com/watch?v=7FU98O0JLHs&t=457) skills you can add here as well. And
+- [7:39](https://youtube.com/watch?v=7FU98O0JLHs&t=459) once this is installed, if we're trying
+- [7:41](https://youtube.com/watch?v=7FU98O0JLHs&t=461) to create a website, we're especially if
+- [7:43](https://youtube.com/watch?v=7FU98O0JLHs&t=463) we want to add some sort of like hero
+- [7:44](https://youtube.com/watch?v=7FU98O0JLHs&t=464) imagery, right, in the background, it
+- [7:46](https://youtube.com/watch?v=7FU98O0JLHs&t=466) just calls on the MCP and it will
+- [7:48](https://youtube.com/watch?v=7FU98O0JLHs&t=468) generate it for you. Furthermore, if we
+- [7:49](https://youtube.com/watch?v=7FU98O0JLHs&t=469) want to generate custom assets, this can
+- [7:52](https://youtube.com/watch?v=7FU98O0JLHs&t=472) allow us to do it as well. And one last
+- [7:53](https://youtube.com/watch?v=7FU98O0JLHs&t=473) thing I wanted to talk about isn't
+- [7:54](https://youtube.com/watch?v=7FU98O0JLHs&t=474) really a skill or even an MCP, but that
+- [7:56](https://youtube.com/watch?v=7FU98O0JLHs&t=476) is 21st.dev,
+- [7:59](https://youtube.com/watch?v=7FU98O0JLHs&t=479) and this is kind of something you could
+- [8:00](https://youtube.com/watch?v=7FU98O0JLHs&t=480) probably even throw in step one in terms
+- [8:02](https://youtube.com/watch?v=7FU98O0JLHs&t=482) of the taste thing, but this is all
+- [8:04](https://youtube.com/watch?v=7FU98O0JLHs&t=484) about components. So, let's say I was
+- [8:07](https://youtube.com/watch?v=7FU98O0JLHs&t=487) looking for specific buttons. So, if I
+- [8:10](https://youtube.com/watch?v=7FU98O0JLHs&t=490) come over here on the left and I click
+- [8:12](https://youtube.com/watch?v=7FU98O0JLHs&t=492) buttons,
+- [8:14](https://youtube.com/watch?v=7FU98O0JLHs&t=494) I'm going to see a bunch of different
+- [8:16](https://youtube.com/watch?v=7FU98O0JLHs&t=496) buttons. And if I click on any of these
+- [8:18](https://youtube.com/watch?v=7FU98O0JLHs&t=498) buttons, I then have the ability to copy
+- [8:21](https://youtube.com/watch?v=7FU98O0JLHs&t=501) the prompt. So, down here it says copy
+- [8:23](https://youtube.com/watch?v=7FU98O0JLHs&t=503) prompt. If I copy that and I paste that
+- [8:24](https://youtube.com/watch?v=7FU98O0JLHs&t=504) into Cloud Code, it will give me a
+- [8:25](https://youtube.com/watch?v=7FU98O0JLHs&t=505) button that looks like this. And there
+- [8:28](https://youtube.com/watch?v=7FU98O0JLHs&t=508) isn't just buttons, there's
+- [8:30](https://youtube.com/watch?v=7FU98O0JLHs&t=510) cards, there's, you know, pricing
+- [8:33](https://youtube.com/watch?v=7FU98O0JLHs&t=513) sections. So, similar to, you know, in
+- [8:35](https://youtube.com/watch?v=7FU98O0JLHs&t=515) step one, where we're really looking for
+- [8:36](https://youtube.com/watch?v=7FU98O0JLHs&t=516) sort of like big picture in terms of
+- [8:38](https://youtube.com/watch?v=7FU98O0JLHs&t=518) design and aesthetics, this is a great
+- [8:40](https://youtube.com/watch?v=7FU98O0JLHs&t=520) place to go to get inspiration for
+- [8:42](https://youtube.com/watch?v=7FU98O0JLHs&t=522) specific components. So, we're just
+- [8:44](https://youtube.com/watch?v=7FU98O0JLHs&t=524) getting more detailed and like a little
+- [8:46](https://youtube.com/watch?v=7FU98O0JLHs&t=526) lower level on this sort of stuff. But,
+- [8:48](https://youtube.com/watch?v=7FU98O0JLHs&t=528) even here, it will have things, again,
+- [8:50](https://youtube.com/watch?v=7FU98O0JLHs&t=530) it will do um borders, backgrounds,
+- [8:55](https://youtube.com/watch?v=7FU98O0JLHs&t=535) calls to action. So, again, this is just
+- [8:57](https://youtube.com/watch?v=7FU98O0JLHs&t=537) all in the same vein of like exposing
+- [8:59](https://youtube.com/watch?v=7FU98O0JLHs&t=539) ourselves to things we otherwise
+- [9:00](https://youtube.com/watch?v=7FU98O0JLHs&t=540) wouldn't even think about. Like, how
+- [9:01](https://youtube.com/watch?v=7FU98O0JLHs&t=541) much How often are you looking at like
+- [9:03](https://youtube.com/watch?v=7FU98O0JLHs&t=543) pagination
+- [9:04](https://youtube.com/watch?v=7FU98O0JLHs&t=544) and the different options we have for
+- [9:05](https://youtube.com/watch?v=7FU98O0JLHs&t=545) that. Now, the last thing I'll say at
+- [9:07](https://youtube.com/watch?v=7FU98O0JLHs&t=547) this step is beware going down the
+- [9:09](https://youtube.com/watch?v=7FU98O0JLHs&t=549) rabbit hole in terms of tools and
+- [9:11](https://youtube.com/watch?v=7FU98O0JLHs&t=551) skills because
+- [9:12](https://youtube.com/watch?v=7FU98O0JLHs&t=552) it's very easy to fall into the trap of,
+- [9:15](https://youtube.com/watch?v=7FU98O0JLHs&t=555) well, I'm just one skill away from like
+- [9:17](https://youtube.com/watch?v=7FU98O0JLHs&t=557) all my design problems being solved.
+- [9:19](https://youtube.com/watch?v=7FU98O0JLHs&t=559) You'll probably see some really cool
+- [9:20](https://youtube.com/watch?v=7FU98O0JLHs&t=560) skills out there that build really cool
+- [9:22](https://youtube.com/watch?v=7FU98O0JLHs&t=562) websites. The issue is those tend to be
+- [9:24](https://youtube.com/watch?v=7FU98O0JLHs&t=564) very narrow in scope. They're extremely
+- [9:26](https://youtube.com/watch?v=7FU98O0JLHs&t=566) prescriptive and often times those
+- [9:28](https://youtube.com/watch?v=7FU98O0JLHs&t=568) skills will only give you one kind of
+- [9:30](https://youtube.com/watch?v=7FU98O0JLHs&t=570) output. The reason why I suggest the
+- [9:31](https://youtube.com/watch?v=7FU98O0JLHs&t=571) taste skill and I suggest impeccable and
+- [9:33](https://youtube.com/watch?v=7FU98O0JLHs&t=573) Hex Fields because they're very flexible
+- [9:35](https://youtube.com/watch?v=7FU98O0JLHs&t=575) and we can go a number of directions
+- [9:37](https://youtube.com/watch?v=7FU98O0JLHs&t=577) with them.
+- [9:38](https://youtube.com/watch?v=7FU98O0JLHs&t=578) However, because they are not
+- [9:41](https://youtube.com/watch?v=7FU98O0JLHs&t=581) prescriptive, they're not always going
+- [9:43](https://youtube.com/watch?v=7FU98O0JLHs&t=583) to give you a quote-unquote great output
+- [9:45](https://youtube.com/watch?v=7FU98O0JLHs&t=585) because that great output is going to
+- [9:46](https://youtube.com/watch?v=7FU98O0JLHs&t=586) depend on your prompting and again, how
+- [9:48](https://youtube.com/watch?v=7FU98O0JLHs&t=588) we inject taste. And now in step three
+- [9:50](https://youtube.com/watch?v=7FU98O0JLHs&t=590) is where we kind of put it all together.
+- [9:52](https://youtube.com/watch?v=7FU98O0JLHs&t=592) I'm going to show you how you should
+- [9:53](https://youtube.com/watch?v=7FU98O0JLHs&t=593) prompt and more importantly, how you
+- [9:55](https://youtube.com/watch?v=7FU98O0JLHs&t=595) should iterate until you get an output
+- [9:57](https://youtube.com/watch?v=7FU98O0JLHs&t=597) you like. So now we're in the step
+- [9:58](https://youtube.com/watch?v=7FU98O0JLHs&t=598) three, which is the actual build phase
+- [10:00](https://youtube.com/watch?v=7FU98O0JLHs&t=600) and what I want you to get away from is
+- [10:01](https://youtube.com/watch?v=7FU98O0JLHs&t=601) the idea that we need to one-shot these
+- [10:03](https://youtube.com/watch?v=7FU98O0JLHs&t=603) things. What we instead need to do and
+- [10:05](https://youtube.com/watch?v=7FU98O0JLHs&t=605) what I suggest is cast a very wide net
+- [10:08](https://youtube.com/watch?v=7FU98O0JLHs&t=608) off the bat. What you see here is I had
+- [10:10](https://youtube.com/watch?v=7FU98O0JLHs&t=610) it create a website for this fake AI
+- [10:12](https://youtube.com/watch?v=7FU98O0JLHs&t=612) company called Argus and I had it create
+- [10:14](https://youtube.com/watch?v=7FU98O0JLHs&t=614) five different versions in five
+- [10:17](https://youtube.com/watch?v=7FU98O0JLHs&t=617) different styles. And also what you see
+- [10:19](https://youtube.com/watch?v=7FU98O0JLHs&t=619) over here is on one hand on the
+- [10:21](https://youtube.com/watch?v=7FU98O0JLHs&t=621) left-hand side I had it use impeccable
+- [10:23](https://youtube.com/watch?v=7FU98O0JLHs&t=623) and on the right I had it use the taste
+- [10:24](https://youtube.com/watch?v=7FU98O0JLHs&t=624) scale. And the idea is when we first
+- [10:27](https://youtube.com/watch?v=7FU98O0JLHs&t=627) start prompting this guy, we want to see
+- [10:29](https://youtube.com/watch?v=7FU98O0JLHs&t=629) a bunch of different styles of the
+- [10:30](https://youtube.com/watch?v=7FU98O0JLHs&t=630) website we're trying to create.
+- [10:32](https://youtube.com/watch?v=7FU98O0JLHs&t=632) I like to do five. Once we see all five,
+- [10:35](https://youtube.com/watch?v=7FU98O0JLHs&t=635) we probably have a decent idea of like,
+- [10:36](https://youtube.com/watch?v=7FU98O0JLHs&t=636) okay, this is the direction I want to
+- [10:38](https://youtube.com/watch?v=7FU98O0JLHs&t=638) go.
+- [10:39](https://youtube.com/watch?v=7FU98O0JLHs&t=639) Once we choose that one, like let's say
+- [10:40](https://youtube.com/watch?v=7FU98O0JLHs&t=640) I did PrintTech, then we want to do some
+- [10:43](https://youtube.com/watch?v=7FU98O0JLHs&t=643) iterations on that. I have it do like
+- [10:45](https://youtube.com/watch?v=7FU98O0JLHs&t=645) three versions of that style and then
+- [10:47](https://youtube.com/watch?v=7FU98O0JLHs&t=647) from those three versions I pick one and
+- [10:48](https://youtube.com/watch?v=7FU98O0JLHs&t=648) then we tinker.
+- [10:50](https://youtube.com/watch?v=7FU98O0JLHs&t=650) The idea is I want to see all my options
+- [10:53](https://youtube.com/watch?v=7FU98O0JLHs&t=653) on one screen at one time. It's kind of
+- [10:55](https://youtube.com/watch?v=7FU98O0JLHs&t=655) tough, I think, to know what direction
+- [10:58](https://youtube.com/watch?v=7FU98O0JLHs&t=658) you even want to go on or go through
+- [11:00](https://youtube.com/watch?v=7FU98O0JLHs&t=660) when you're just sitting inside a
+- [11:01](https://youtube.com/watch?v=7FU98O0JLHs&t=661) terminal and you just try one thing and
+- [11:02](https://youtube.com/watch?v=7FU98O0JLHs&t=662) then you try another. Like, why don't we
+- [11:04](https://youtube.com/watch?v=7FU98O0JLHs&t=664) just try a bunch of stuff at once and
+- [11:06](https://youtube.com/watch?v=7FU98O0JLHs&t=666) compare and contrast? That's sort of my
+- [11:09](https://youtube.com/watch?v=7FU98O0JLHs&t=669) idea. And once we get a little more, you
+- [11:11](https://youtube.com/watch?v=7FU98O0JLHs&t=671) know, sort of fidelity in terms of what
+- [11:13](https://youtube.com/watch?v=7FU98O0JLHs&t=673) style we want to go into, then we bring
+- [11:14](https://youtube.com/watch?v=7FU98O0JLHs&t=674) in things like the Higgs field MCP and
+- [11:16](https://youtube.com/watch?v=7FU98O0JLHs&t=676) start generating assets, generating hero
+- [11:18](https://youtube.com/watch?v=7FU98O0JLHs&t=678) images, and doing all that cool stuff.
+- [11:20](https://youtube.com/watch?v=7FU98O0JLHs&t=680) Now, in regards to prompting, this is
+- [11:23](https://youtube.com/watch?v=7FU98O0JLHs&t=683) kind of how I like to go about it. I
+- [11:26](https://youtube.com/watch?v=7FU98O0JLHs&t=686) really have four different things I am
+- [11:29](https://youtube.com/watch?v=7FU98O0JLHs&t=689) going to pass to AI when I prompt. it.
+- [11:31](https://youtube.com/watch?v=7FU98O0JLHs&t=691) again, it's not prescriptive, it's not
+- [11:33](https://youtube.com/watch?v=7FU98O0JLHs&t=693) overly specific, it's not some
+- [11:35](https://youtube.com/watch?v=7FU98O0JLHs&t=695) 10,000-page design.md prompt you need to
+- [11:38](https://youtube.com/watch?v=7FU98O0JLHs&t=698) copy. Cuz remember, when people give you
+- [11:39](https://youtube.com/watch?v=7FU98O0JLHs&t=699) that, it's going to be kind of the same
+- [11:41](https://youtube.com/watch?v=7FU98O0JLHs&t=701) thing every time. It's very narrow. And
+- [11:43](https://youtube.com/watch?v=7FU98O0JLHs&t=703) what I think you want to pass is first
+- [11:45](https://youtube.com/watch?v=7FU98O0JLHs&t=705) the aesthetic, right? What is the
+- [11:47](https://youtube.com/watch?v=7FU98O0JLHs&t=707) general like family of design we want
+- [11:50](https://youtube.com/watch?v=7FU98O0JLHs&t=710) this website to sort of follow?
+- [11:52](https://youtube.com/watch?v=7FU98O0JLHs&t=712) Secondly, we want to give it some sort
+- [11:53](https://youtube.com/watch?v=7FU98O0JLHs&t=713) of reference image. This is where our
+- [11:56](https://youtube.com/watch?v=7FU98O0JLHs&t=716) sort of curated like taste library comes
+- [11:59](https://youtube.com/watch?v=7FU98O0JLHs&t=719) into play. This probably some sort of
+- [12:00](https://youtube.com/watch?v=7FU98O0JLHs&t=720) website or multiple websites you want to
+- [12:02](https://youtube.com/watch?v=7FU98O0JLHs&t=722) drop here in terms of the reference. And
+- [12:03](https://youtube.com/watch?v=7FU98O0JLHs&t=723) what we're trying to do is we're trying
+- [12:04](https://youtube.com/watch?v=7FU98O0JLHs&t=724) to match the feel. We aren't necessarily
+- [12:06](https://youtube.com/watch?v=7FU98O0JLHs&t=726) trying to match it, you know,
+- [12:08](https://youtube.com/watch?v=7FU98O0JLHs&t=728) content-wise or design-wise, cuz we're
+- [12:11](https://youtube.com/watch?v=7FU98O0JLHs&t=731) not trying to like copy them. Again,
+- [12:12](https://youtube.com/watch?v=7FU98O0JLHs&t=732) we're going for a feeling, an aesthetic.
+- [12:14](https://youtube.com/watch?v=7FU98O0JLHs&t=734) Number three is the intent. What are we
+- [12:16](https://youtube.com/watch?v=7FU98O0JLHs&t=736) building and why? Like, is this a SaaS
+- [12:19](https://youtube.com/watch?v=7FU98O0JLHs&t=739) product? Is this something for an event?
+- [12:21](https://youtube.com/watch?v=7FU98O0JLHs&t=741) Who is the target audience? What are we
+- [12:23](https://youtube.com/watch?v=7FU98O0JLHs&t=743) trying to have them do? Do we want them
+- [12:24](https://youtube.com/watch?v=7FU98O0JLHs&t=744) to just like read everything and that's
+- [12:26](https://youtube.com/watch?v=7FU98O0JLHs&t=746) it? Do we want them to click through
+- [12:28](https://youtube.com/watch?v=7FU98O0JLHs&t=748) something, fill out some sort of form?
+- [12:29](https://youtube.com/watch?v=7FU98O0JLHs&t=749) These things are important and they're
+- [12:31](https://youtube.com/watch?v=7FU98O0JLHs&t=751) going to dictate what the rest of the
+- [12:32](https://youtube.com/watch?v=7FU98O0JLHs&t=752) website looks like. And then lastly,
+- [12:33](https://youtube.com/watch?v=7FU98O0JLHs&t=753) what are some sort of guardrails? What
+- [12:35](https://youtube.com/watch?v=7FU98O0JLHs&t=755) are things we always wanted to do and
+- [12:37](https://youtube.com/watch?v=7FU98O0JLHs&t=757) what are some things we never
+- [12:38](https://youtube.com/watch?v=7FU98O0JLHs&t=758) want it to do. This can become useful in
+- [12:40](https://youtube.com/watch?v=7FU98O0JLHs&t=760) terms of like AI slop stuff. Like, I
+- [12:41](https://youtube.com/watch?v=7FU98O0JLHs&t=761) never want purple gradients. I never
+- [12:44](https://youtube.com/watch?v=7FU98O0JLHs&t=764) want Inter font and things of that
+- [12:45](https://youtube.com/watch?v=7FU98O0JLHs&t=765) nature.
+- [12:47](https://youtube.com/watch?v=7FU98O0JLHs&t=767) Also, in terms of references, don't be
+- [12:49](https://youtube.com/watch?v=7FU98O0JLHs&t=769) afraid to drop actual website URLs. If
+- [12:51](https://youtube.com/watch?v=7FU98O0JLHs&t=771) there's a website you like and you kind
+- [12:53](https://youtube.com/watch?v=7FU98O0JLHs&t=773) of want it to match again sort of the
+- [12:54](https://youtube.com/watch?v=7FU98O0JLHs&t=774) feel and style, drop that as well. It
+- [12:56](https://youtube.com/watch?v=7FU98O0JLHs&t=776) doesn't just have to be screenshots. But
+- [12:59](https://youtube.com/watch?v=7FU98O0JLHs&t=779) this, I think, is sort of a great place
+- [13:01](https://youtube.com/watch?v=7FU98O0JLHs&t=781) to start. And again, we're not trying to
+- [13:04](https://youtube.com/watch?v=7FU98O0JLHs&t=784) one-shot, we just want to get something
+- [13:05](https://youtube.com/watch?v=7FU98O0JLHs&t=785) moving in the right direction. Now, when
+- [13:07](https://youtube.com/watch?v=7FU98O0JLHs&t=787) we prompt this, like I said, I want a
+- [13:08](https://youtube.com/watch?v=7FU98O0JLHs&t=788) bunch of different, you know, design
+- [13:11](https://youtube.com/watch?v=7FU98O0JLHs&t=791) styles. And this kind of comes back to
+- [13:13](https://youtube.com/watch?v=7FU98O0JLHs&t=793) my taste library, cuz if you built this,
+- [13:15](https://youtube.com/watch?v=7FU98O0JLHs&t=795) like I suggested you do, it's already
+- [13:17](https://youtube.com/watch?v=7FU98O0JLHs&t=797) kind of broken it out into different
+- [13:18](https://youtube.com/watch?v=7FU98O0JLHs&t=798) libraries, right? I have print tech
+- [13:20](https://youtube.com/watch?v=7FU98O0JLHs&t=800) paper style, I have dither mono, kind of
+- [13:23](https://youtube.com/watch?v=7FU98O0JLHs&t=803) this like vast quiet cinematic style.
+- [13:26](https://youtube.com/watch?v=7FU98O0JLHs&t=806) And so for me, I can just tell Claude
+- [13:29](https://youtube.com/watch?v=7FU98O0JLHs&t=809) Code, "Hey, take a look at my library
+- [13:31](https://youtube.com/watch?v=7FU98O0JLHs&t=811) and pick out, you know, five different
+- [13:33](https://youtube.com/watch?v=7FU98O0JLHs&t=813) aesthetic families and create websites
+- [13:36](https://youtube.com/watch?v=7FU98O0JLHs&t=816) like that." Or, if you haven't built
+- [13:38](https://youtube.com/watch?v=7FU98O0JLHs&t=818) something like that, you need to
+- [13:39](https://youtube.com/watch?v=7FU98O0JLHs&t=819) actually
+- [13:40](https://youtube.com/watch?v=7FU98O0JLHs&t=820) tell it specifically, like, "Hey, I want
+- [13:42](https://youtube.com/watch?v=7FU98O0JLHs&t=822) five different variations in five
+- [13:43](https://youtube.com/watch?v=7FU98O0JLHs&t=823) different styles." That works, too.
+- [13:45](https://youtube.com/watch?v=7FU98O0JLHs&t=825) So, what we're going to do is we're
+- [13:47](https://youtube.com/watch?v=7FU98O0JLHs&t=827) going to use this prompt and start
+- [13:48](https://youtube.com/watch?v=7FU98O0JLHs&t=828) walking through it ourselves. So, here's
+- [13:51](https://youtube.com/watch?v=7FU98O0JLHs&t=831) the prompt I gave it. I said, "Build a
+- [13:52](https://youtube.com/watch?v=7FU98O0JLHs&t=832) landing page for Kestrel, an AI
+- [13:53](https://youtube.com/watch?v=7FU98O0JLHs&t=833) analytics platform for small startups."
+- [13:55](https://youtube.com/watch?v=7FU98O0JLHs&t=835) I give it the intent and what we're
+- [13:57](https://youtube.com/watch?v=7FU98O0JLHs&t=837) trying to actually do, right? We want
+- [13:59](https://youtube.com/watch?v=7FU98O0JLHs&t=839) them to actually book a demo. We have
+- [14:01](https://youtube.com/watch?v=7FU98O0JLHs&t=841) some guardrails. I'm saying for pretty
+- [14:02](https://youtube.com/watch?v=7FU98O0JLHs&t=842) much all the hero pages, we're going to
+- [14:04](https://youtube.com/watch?v=7FU98O0JLHs&t=844) have like a monumental image, and I want
+- [14:06](https://youtube.com/watch?v=7FU98O0JLHs&t=846) it to never do the AI slop stuff, things
+- [14:08](https://youtube.com/watch?v=7FU98O0JLHs&t=848) like purple gradients, 3D SAS blobs,
+- [14:10](https://youtube.com/watch?v=7FU98O0JLHs&t=850) that kind of thing.
+- [14:11](https://youtube.com/watch?v=7FU98O0JLHs&t=851) I say I want it to create five versions
+- [14:13](https://youtube.com/watch?v=7FU98O0JLHs&t=853) of the page, and then for each version,
+- [14:15](https://youtube.com/watch?v=7FU98O0JLHs&t=855) I break down the direction. So, I
+- [14:16](https://youtube.com/watch?v=7FU98O0JLHs&t=856) specify the aesthetic. I give it a
+- [14:18](https://youtube.com/watch?v=7FU98O0JLHs&t=858) reference image. Again, that's coming
+- [14:20](https://youtube.com/watch?v=7FU98O0JLHs&t=860) from my taste library.
+- [14:22](https://youtube.com/watch?v=7FU98O0JLHs&t=862) Remember this thing? And then I mention
+- [14:24](https://youtube.com/watch?v=7FU98O0JLHs&t=864) what the future here will probably look
+- [14:25](https://youtube.com/watch?v=7FU98O0JLHs&t=865) like, and I do that for all five
+- [14:27](https://youtube.com/watch?v=7FU98O0JLHs&t=867) versions. So, let's see what it comes up
+- [14:29](https://youtube.com/watch?v=7FU98O0JLHs&t=869) with. So, here are the five it created.
+- [14:31](https://youtube.com/watch?v=7FU98O0JLHs&t=871) Here's sort of the print tech paper
+- [14:33](https://youtube.com/watch?v=7FU98O0JLHs&t=873) version.
+- [14:35](https://youtube.com/watch?v=7FU98O0JLHs&t=875) Got the data as texture. Remember, all
+- [14:37](https://youtube.com/watch?v=7FU98O0JLHs&t=877) these graphics were all just generated
+- [14:39](https://youtube.com/watch?v=7FU98O0JLHs&t=879) by Claude Code. I haven't used anything
+- [14:41](https://youtube.com/watch?v=7FU98O0JLHs&t=881) like the HTML and CSS to actually create
+- [14:43](https://youtube.com/watch?v=7FU98O0JLHs&t=883) the graphics.
+- [14:45](https://youtube.com/watch?v=7FU98O0JLHs&t=885) We have sort of the vast quiet one. This
+- [14:48](https://youtube.com/watch?v=7FU98O0JLHs&t=888) is supposed to be like a stand-in for
+- [14:49](https://youtube.com/watch?v=7FU98O0JLHs&t=889) some sort of like mountain range we
+- [14:50](https://youtube.com/watch?v=7FU98O0JLHs&t=890) would create.
+- [14:52](https://youtube.com/watch?v=7FU98O0JLHs&t=892) We have dither mono.
+- [14:55](https://youtube.com/watch?v=7FU98O0JLHs&t=895) And then we have classical remix. So,
+- [15:00](https://youtube.com/watch?v=7FU98O0JLHs&t=900) again, remember, we're just kind of
+- [15:01](https://youtube.com/watch?v=7FU98O0JLHs&t=901) looking like big picture of what sort of
+- [15:03](https://youtube.com/watch?v=7FU98O0JLHs&t=903) style do I like?
+- [15:05](https://youtube.com/watch?v=7FU98O0JLHs&t=905) Mhm.
+- [15:07](https://youtube.com/watch?v=7FU98O0JLHs&t=907) Kind of
+- [15:09](https://youtube.com/watch?v=7FU98O0JLHs&t=909) Dither mono looks kind of cool. I kind
+- [15:12](https://youtube.com/watch?v=7FU98O0JLHs&t=912) of think the vast quiet looks kind of
+- [15:14](https://youtube.com/watch?v=7FU98O0JLHs&t=914) sick. It's definitely different, very
+- [15:17](https://youtube.com/watch?v=7FU98O0JLHs&t=917) minimalist, but I kind of like what it's
+- [15:18](https://youtube.com/watch?v=7FU98O0JLHs&t=918) doing. And I think this might look
+- [15:20](https://youtube.com/watch?v=7FU98O0JLHs&t=920) really cool if we can nail the actual
+- [15:22](https://youtube.com/watch?v=7FU98O0JLHs&t=922) image behind it. So, I'm going to go
+- [15:25](https://youtube.com/watch?v=7FU98O0JLHs&t=925) with sort of this vast quiet direction.
+- [15:27](https://youtube.com/watch?v=7FU98O0JLHs&t=927) And now what I'm going to do is I'm
+- [15:28](https://youtube.com/watch?v=7FU98O0JLHs&t=928) going to ask it to essentially create
+- [15:31](https://youtube.com/watch?v=7FU98O0JLHs&t=931) three different versions of this.
+- [15:32](https://youtube.com/watch?v=7FU98O0JLHs&t=932) Specifically, when we look at the body,
+- [15:34](https://youtube.com/watch?v=7FU98O0JLHs&t=934) I want to just kind of like see what's
+- [15:35](https://youtube.com/watch?v=7FU98O0JLHs&t=935) possible out there. So, I said, "Let's
+- [15:37](https://youtube.com/watch?v=7FU98O0JLHs&t=937) go with the vast quiet version. Generate
+- [15:39](https://youtube.com/watch?v=7FU98O0JLHs&t=939) three versions of that aesthetic for me,
+- [15:40](https://youtube.com/watch?v=7FU98O0JLHs&t=940) namely changing the body formats, etc."
+- [15:43](https://youtube.com/watch?v=7FU98O0JLHs&t=943) And you can get specific about what you
+- [15:44](https://youtube.com/watch?v=7FU98O0JLHs&t=944) want to see different with it. And so,
+- [15:46](https://youtube.com/watch?v=7FU98O0JLHs&t=946) just like we did here, it's going to be
+- [15:47](https://youtube.com/watch?v=7FU98O0JLHs&t=947) three versions of this. Then we'll nail
+- [15:49](https://youtube.com/watch?v=7FU98O0JLHs&t=949) down the one we like, and then we can
+- [15:51](https://youtube.com/watch?v=7FU98O0JLHs&t=951) get a little more specific when it comes
+- [15:54](https://youtube.com/watch?v=7FU98O0JLHs&t=954) to changing components, doing tweaks to
+- [15:56](https://youtube.com/watch?v=7FU98O0JLHs&t=956) fonts and colors, and then actually
+- [15:57](https://youtube.com/watch?v=7FU98O0JLHs&t=957) generating the assets. So, it's come up
+- [15:59](https://youtube.com/watch?v=7FU98O0JLHs&t=959) with a few more variants. Here's the
+- [16:01](https://youtube.com/watch?v=7FU98O0JLHs&t=961) original, right? Very minimal, very
+- [16:03](https://youtube.com/watch?v=7FU98O0JLHs&t=963) vertical.
+- [16:05](https://youtube.com/watch?v=7FU98O0JLHs&t=965) Here is the second one, which also kind
+- [16:07](https://youtube.com/watch?v=7FU98O0JLHs&t=967) of has that calm approach, but it looks
+- [16:08](https://youtube.com/watch?v=7FU98O0JLHs&t=968) like it's
+- [16:10](https://youtube.com/watch?v=7FU98O0JLHs&t=970) kind of added a little bit more to the
+- [16:11](https://youtube.com/watch?v=7FU98O0JLHs&t=971) body.
+- [16:13](https://youtube.com/watch?v=7FU98O0JLHs&t=973) Here's one where it's more of a ledger.
+- [16:14](https://youtube.com/watch?v=7FU98O0JLHs&t=974) It's kind of shifted a few things over
+- [16:16](https://youtube.com/watch?v=7FU98O0JLHs&t=976) to the left, and now we have this index
+- [16:18](https://youtube.com/watch?v=7FU98O0JLHs&t=978) that scrolls along with us, which I
+- [16:20](https://youtube.com/watch?v=7FU98O0JLHs&t=980) actually kind of like.
+- [16:22](https://youtube.com/watch?v=7FU98O0JLHs&t=982) Then we have this one, which it called
+- [16:23](https://youtube.com/watch?v=7FU98O0JLHs&t=983) frames.
+- [16:25](https://youtube.com/watch?v=7FU98O0JLHs&t=985) Okay, so everything's kind of like you
+- [16:27](https://youtube.com/watch?v=7FU98O0JLHs&t=987) see kind of how has these edges
+- [16:29](https://youtube.com/watch?v=7FU98O0JLHs&t=989) on the side that frames each section. To
+- [16:31](https://youtube.com/watch?v=7FU98O0JLHs&t=991) be honest, I kind of like the ledger.
+- [16:33](https://youtube.com/watch?v=7FU98O0JLHs&t=993) Um I kind of like how when you scroll
+- [16:34](https://youtube.com/watch?v=7FU98O0JLHs&t=994) down um this follows you on the
+- [16:37](https://youtube.com/watch?v=7FU98O0JLHs&t=997) left-hand side. Um maybe we add
+- [16:39](https://youtube.com/watch?v=7FU98O0JLHs&t=999) something to the right a little bit, not
+- [16:40](https://youtube.com/watch?v=7FU98O0JLHs&t=1000) totally sure, but I like this. It's kind
+- [16:42](https://youtube.com/watch?v=7FU98O0JLHs&t=1002) of like a neat minimal approach, yet
+- [16:44](https://youtube.com/watch?v=7FU98O0JLHs&t=1004) looks a little bit different. And so,
+- [16:46](https://youtube.com/watch?v=7FU98O0JLHs&t=1006) what I'm going to tell it now is, "Hey,
+- [16:47](https://youtube.com/watch?v=7FU98O0JLHs&t=1007) we're going to go with version 3B, which
+- [16:49](https://youtube.com/watch?v=7FU98O0JLHs&t=1009) is the quiet ledger version. And what I
+- [16:52](https://youtube.com/watch?v=7FU98O0JLHs&t=1012) want to do now is I want to nail the
+- [16:54](https://youtube.com/watch?v=7FU98O0JLHs&t=1014) hero image first. I think if I nail this
+- [16:56](https://youtube.com/watch?v=7FU98O0JLHs&t=1016) background, then I'll begin playing
+- [16:58](https://youtube.com/watch?v=7FU98O0JLHs&t=1018) around, you know, with like fonts and
+- [16:59](https://youtube.com/watch?v=7FU98O0JLHs&t=1019) where things are kind of sitting. So,
+- [17:01](https://youtube.com/watch?v=7FU98O0JLHs&t=1021) the prompt I'm going to give it is,
+- [17:03](https://youtube.com/watch?v=7FU98O0JLHs&t=1023) "Let's go with the V3B,
+- [17:06](https://youtube.com/watch?v=7FU98O0JLHs&t=1026) which is the ledger version. And what I
+- [17:08](https://youtube.com/watch?v=7FU98O0JLHs&t=1028) want to do now is nail that hero image."
+- [17:10](https://youtube.com/watch?v=7FU98O0JLHs&t=1030) So, you have the, you know, examples of
+- [17:13](https://youtube.com/watch?v=7FU98O0JLHs&t=1033) the hero images
+- [17:15](https://youtube.com/watch?v=7FU98O0JLHs&t=1035) that are part of the quiet aesthetic
+- [17:17](https://youtube.com/watch?v=7FU98O0JLHs&t=1037) that's on our
+- [17:18](https://youtube.com/watch?v=7FU98O0JLHs&t=1038) inspiration library. I think there's
+- [17:20](https://youtube.com/watch?v=7FU98O0JLHs&t=1040) like three or four of them. So, can you
+- [17:22](https://youtube.com/watch?v=7FU98O0JLHs&t=1042) create like give me like four different
+- [17:25](https://youtube.com/watch?v=7FU98O0JLHs&t=1045) images that fit this that would also fit
+- [17:27](https://youtube.com/watch?v=7FU98O0JLHs&t=1047) our hero image
+- [17:28](https://youtube.com/watch?v=7FU98O0JLHs&t=1048) specifically, right the whole like
+- [17:30](https://youtube.com/watch?v=7FU98O0JLHs&t=1050) composition of it. So,
+- [17:32](https://youtube.com/watch?v=7FU98O0JLHs&t=1052) use the Higgs field MCP for that. Make
+- [17:33](https://youtube.com/watch?v=7FU98O0JLHs&t=1053) them high quality. Make them 2K and
+- [17:35](https://youtube.com/watch?v=7FU98O0JLHs&t=1055) create four different designs and then
+- [17:37](https://youtube.com/watch?v=7FU98O0JLHs&t=1057) pull them up once you do that. So,
+- [17:39](https://youtube.com/watch?v=7FU98O0JLHs&t=1059) Claude code called the Higgs field MCP,
+- [17:40](https://youtube.com/watch?v=7FU98O0JLHs&t=1060) created some images, threw it into the
+- [17:42](https://youtube.com/watch?v=7FU98O0JLHs&t=1062) hero section, and now it's displaying
+- [17:44](https://youtube.com/watch?v=7FU98O0JLHs&t=1064) those different ones. So, this is the
+- [17:45](https://youtube.com/watch?v=7FU98O0JLHs&t=1065) first version which is the aerial. We
+- [17:48](https://youtube.com/watch?v=7FU98O0JLHs&t=1068) have the Crag. Then we have almost this
+- [17:50](https://youtube.com/watch?v=7FU98O0JLHs&t=1070) like watercolor type painting which I
+- [17:52](https://youtube.com/watch?v=7FU98O0JLHs&t=1072) think is cool. And then it did the cloud
+- [17:54](https://youtube.com/watch?v=7FU98O0JLHs&t=1074) sea. Now, I kind of like
+- [17:57](https://youtube.com/watch?v=7FU98O0JLHs&t=1077) Honestly, not a huge fan of two cuz I
+- [17:59](https://youtube.com/watch?v=7FU98O0JLHs&t=1079) feel like it overlaps some of the text,
+- [18:01](https://youtube.com/watch?v=7FU98O0JLHs&t=1081) but I
+- [18:02](https://youtube.com/watch?v=7FU98O0JLHs&t=1082) do like
+- [18:04](https://youtube.com/watch?v=7FU98O0JLHs&t=1084) I like number one and four. I think
+- [18:10](https://youtube.com/watch?v=7FU98O0JLHs&t=1090) I think one looks pretty cool, but maybe
+- [18:12](https://youtube.com/watch?v=7FU98O0JLHs&t=1092) if we could add, I don't know, like a
+- [18:14](https://youtube.com/watch?v=7FU98O0JLHs&t=1094) splash of color somewhere just cuz it's
+- [18:16](https://youtube.com/watch?v=7FU98O0JLHs&t=1096) very black and white and maybe just like
+- [18:18](https://youtube.com/watch?v=7FU98O0JLHs&t=1098) some semblance of color would look good.
+- [18:19](https://youtube.com/watch?v=7FU98O0JLHs&t=1099) So, that's what I'm going to tell it.
+- [18:20](https://youtube.com/watch?v=7FU98O0JLHs&t=1100) Can we go with option four that you
+- [18:22](https://youtube.com/watch?v=7FU98O0JLHs&t=1102) created and can you create multiple
+- [18:25](https://youtube.com/watch?v=7FU98O0JLHs&t=1105) versions of that and show me just like
+- [18:26](https://youtube.com/watch?v=7FU98O0JLHs&t=1106) you did before, but can we add maybe a
+- [18:28](https://youtube.com/watch?v=7FU98O0JLHs&t=1108) little color
+- [18:29](https://youtube.com/watch?v=7FU98O0JLHs&t=1109) to it? Right now, it's very black and
+- [18:31](https://youtube.com/watch?v=7FU98O0JLHs&t=1111) white. I'm not sure if just a splash of
+- [18:32](https://youtube.com/watch?v=7FU98O0JLHs&t=1112) color somewhere would look good. So, it
+- [18:34](https://youtube.com/watch?v=7FU98O0JLHs&t=1114) created some variations. So, here's the
+- [18:36](https://youtube.com/watch?v=7FU98O0JLHs&t=1116) original. Here added a little color
+- [18:39](https://youtube.com/watch?v=7FU98O0JLHs&t=1119) called a dawn touch, golden hour,
+- [18:42](https://youtube.com/watch?v=7FU98O0JLHs&t=1122) alpenglow, and then the duo tone which
+- [18:45](https://youtube.com/watch?v=7FU98O0JLHs&t=1125) is way too much.
+- [18:48](https://youtube.com/watch?v=7FU98O0JLHs&t=1128) And of all these, I think I like the
+- [18:50](https://youtube.com/watch?v=7FU98O0JLHs&t=1130) alpenglow. So, we're going to go with
+- [18:51](https://youtube.com/watch?v=7FU98O0JLHs&t=1131) that. Let's go with the alpenglow
+- [18:53](https://youtube.com/watch?v=7FU98O0JLHs&t=1133) version and then go ahead and bring up
+- [18:55](https://youtube.com/watch?v=7FU98O0JLHs&t=1135) our webpage with that as the hero. When
+- [18:58](https://youtube.com/watch?v=7FU98O0JLHs&t=1138) you do that, make sure you take a look
+- [19:00](https://youtube.com/watch?v=7FU98O0JLHs&t=1140) at the transitions between the hero and
+- [19:02](https://youtube.com/watch?v=7FU98O0JLHs&t=1142) the body. It shouldn't just be like a
+- [19:05](https://youtube.com/watch?v=7FU98O0JLHs&t=1145) super sudden change. So, do what you
+- [19:07](https://youtube.com/watch?v=7FU98O0JLHs&t=1147) need to make that look sort of premium.
+- [19:08](https://youtube.com/watch?v=7FU98O0JLHs&t=1148) And then in terms of like page loading,
+- [19:11](https://youtube.com/watch?v=7FU98O0JLHs&t=1151) um want everything to feel kind of like
+- [19:14](https://youtube.com/watch?v=7FU98O0JLHs&t=1154) heavy, um and give some weight to it.
+- [19:17](https://youtube.com/watch?v=7FU98O0JLHs&t=1157) So, here's what we got. All this stuff
+- [19:19](https://youtube.com/watch?v=7FU98O0JLHs&t=1159) kind of loads in one by one, which I
+- [19:20](https://youtube.com/watch?v=7FU98O0JLHs&t=1160) like.
+- [19:22](https://youtube.com/watch?v=7FU98O0JLHs&t=1162) As we scroll down, it's not like a hard
+- [19:24](https://youtube.com/watch?v=7FU98O0JLHs&t=1164) transition, so it kind of just,
+- [19:26](https://youtube.com/watch?v=7FU98O0JLHs&t=1166) you know, slowly fades out.
+- [19:29](https://youtube.com/watch?v=7FU98O0JLHs&t=1169) And then,
+- [19:30](https://youtube.com/watch?v=7FU98O0JLHs&t=1170) yeah, I like I kind of like I really
+- [19:32](https://youtube.com/watch?v=7FU98O0JLHs&t=1172) like this index, honestly. I think it
+- [19:33](https://youtube.com/watch?v=7FU98O0JLHs&t=1173) looks really cool.
+- [19:35](https://youtube.com/watch?v=7FU98O0JLHs&t=1175) And at the bottom, we have book a demo.
+- [19:37](https://youtube.com/watch?v=7FU98O0JLHs&t=1177) Now overall
+- [19:38](https://youtube.com/watch?v=7FU98O0JLHs&t=1178) very minimal, but it kind of fits the
+- [19:40](https://youtube.com/watch?v=7FU98O0JLHs&t=1180) vibe. And at this point, I'd kind of
+- [19:42](https://youtube.com/watch?v=7FU98O0JLHs&t=1182) just want to start tweaking different
+- [19:44](https://youtube.com/watch?v=7FU98O0JLHs&t=1184) things and maybe see if we can add just
+- [19:46](https://youtube.com/watch?v=7FU98O0JLHs&t=1186) a little bit more,
+- [19:48](https://youtube.com/watch?v=7FU98O0JLHs&t=1188) I don't know, punch to it, so it isn't
+- [19:50](https://youtube.com/watch?v=7FU98O0JLHs&t=1190) overly minimal, but honestly, I I I kind
+- [19:52](https://youtube.com/watch?v=7FU98O0JLHs&t=1192) of think it fits. And so, I think the
+- [19:53](https://youtube.com/watch?v=7FU98O0JLHs&t=1193) easiest way to do that, instead of just
+- [19:55](https://youtube.com/watch?v=7FU98O0JLHs&t=1195) sort of guessing and being like, "Uh,
+- [19:56](https://youtube.com/watch?v=7FU98O0JLHs&t=1196) make it look more premium. I want to add
+- [19:58](https://youtube.com/watch?v=7FU98O0JLHs&t=1198) stuff." is to add have it added tweaks
+- [20:00](https://youtube.com/watch?v=7FU98O0JLHs&t=1200) bar. And this is something you see
+- [20:01](https://youtube.com/watch?v=7FU98O0JLHs&t=1201) inside of Claude design.
+- [20:03](https://youtube.com/watch?v=7FU98O0JLHs&t=1203) And so, that prompt will look something
+- [20:04](https://youtube.com/watch?v=7FU98O0JLHs&t=1204) like this.
+- [20:05](https://youtube.com/watch?v=7FU98O0JLHs&t=1205) Can we sort of mimic what happens inside
+- [20:07](https://youtube.com/watch?v=7FU98O0JLHs&t=1207) of Claude design and add like a tweak
+- [20:09](https://youtube.com/watch?v=7FU98O0JLHs&t=1209) bar that pops up on this dev server, so
+- [20:12](https://youtube.com/watch?v=7FU98O0JLHs&t=1212) I can change a number of things, whether
+- [20:14](https://youtube.com/watch?v=7FU98O0JLHs&t=1214) that's font size, font type, accent
+- [20:16](https://youtube.com/watch?v=7FU98O0JLHs&t=1216) colors. Basically, any place where you
+- [20:18](https://youtube.com/watch?v=7FU98O0JLHs&t=1218) think there's a decision to be made in
+- [20:20](https://youtube.com/watch?v=7FU98O0JLHs&t=1220) terms of the overall aesthetic and
+- [20:22](https://youtube.com/watch?v=7FU98O0JLHs&t=1222) design, especially when looking at the
+- [20:24](https://youtube.com/watch?v=7FU98O0JLHs&t=1224) body, cuz I do like the hero. Um I want
+- [20:26](https://youtube.com/watch?v=7FU98O0JLHs&t=1226) an ability to tweak that on the tweaks
+- [20:28](https://youtube.com/watch?v=7FU98O0JLHs&t=1228) page, so go pretty aggressive with what
+- [20:29](https://youtube.com/watch?v=7FU98O0JLHs&t=1229) you offer me. And while it builds that,
+- [20:31](https://youtube.com/watch?v=7FU98O0JLHs&t=1231) the other thing I want to talk about is
+- [20:34](https://youtube.com/watch?v=7FU98O0JLHs&t=1234) sort of references. So, a lot of this
+- [20:36](https://youtube.com/watch?v=7FU98O0JLHs&t=1236) today has been, you know, when we've
+- [20:38](https://youtube.com/watch?v=7FU98O0JLHs&t=1238) talked about inspiration and building
+- [20:39](https://youtube.com/watch?v=7FU98O0JLHs&t=1239) references, has been in regards to the
+- [20:42](https://youtube.com/watch?v=7FU98O0JLHs&t=1242) hero section, right? The first thing you
+- [20:43](https://youtube.com/watch?v=7FU98O0JLHs&t=1243) see. But, that also applies to the body.
+- [20:45](https://youtube.com/watch?v=7FU98O0JLHs&t=1245) So, just like we've given it
+- [20:47](https://youtube.com/watch?v=7FU98O0JLHs&t=1247) screenshots, you can do the same for the
+- [20:48](https://youtube.com/watch?v=7FU98O0JLHs&t=1248) body. And in fact, you can give it
+- [20:50](https://youtube.com/watch?v=7FU98O0JLHs&t=1250) actual URLs of websites you like and be
+- [20:52](https://youtube.com/watch?v=7FU98O0JLHs&t=1252) like, "Hey, like take a look at the
+- [20:54](https://youtube.com/watch?v=7FU98O0JLHs&t=1254) actual like formatting of that website,
+- [20:55](https://youtube.com/watch?v=7FU98O0JLHs&t=1255) cuz Claude can see it, and I want it
+- [20:57](https://youtube.com/watch?v=7FU98O0JLHs&t=1257) applied to my page." And just like we've
+- [21:00](https://youtube.com/watch?v=7FU98O0JLHs&t=1260) created this library of inspiration, you
+- [21:02](https://youtube.com/watch?v=7FU98O0JLHs&t=1262) can do the same for stuff that isn't the
+- [21:04](https://youtube.com/watch?v=7FU98O0JLHs&t=1264) hero. Again, it can just be how a, you
+- [21:06](https://youtube.com/watch?v=7FU98O0JLHs&t=1266) know, the body of a website is laid out.
+- [21:08](https://youtube.com/watch?v=7FU98O0JLHs&t=1268) Okay, so now you can see over here on
+- [21:10](https://youtube.com/watch?v=7FU98O0JLHs&t=1270) the bottom right. I'll shift over here.
+- [21:12](https://youtube.com/watch?v=7FU98O0JLHs&t=1272) We have this tweaks button. So, when I
+- [21:14](https://youtube.com/watch?v=7FU98O0JLHs&t=1274) pull up the tweaks, again, similar to
+- [21:16](https://youtube.com/watch?v=7FU98O0JLHs&t=1276) Claude design, I can start changing a
+- [21:18](https://youtube.com/watch?v=7FU98O0JLHs&t=1278) bunch of stuff. So, I can change the
+- [21:21](https://youtube.com/watch?v=7FU98O0JLHs&t=1281) heading font. And like I this is just
+- [21:24](https://youtube.com/watch?v=7FU98O0JLHs&t=1284) all
+- [21:25](https://youtube.com/watch?v=7FU98O0JLHs&t=1285) built on the idea that like I need to
+- [21:27](https://youtube.com/watch?v=7FU98O0JLHs&t=1287) see the differences. I don't know what
+- [21:29](https://youtube.com/watch?v=7FU98O0JLHs&t=1289) font's going to look good. I don't want
+- [21:30](https://youtube.com/watch?v=7FU98O0JLHs&t=1290) to sit here and ask Claude code to then
+- [21:32](https://youtube.com/watch?v=7FU98O0JLHs&t=1292) create 10 different versions of the
+- [21:34](https://youtube.com/watch?v=7FU98O0JLHs&t=1294) webpage with different fonts. Like, just
+- [21:35](https://youtube.com/watch?v=7FU98O0JLHs&t=1295) give me some sort of like thing like
+- [21:37](https://youtube.com/watch?v=7FU98O0JLHs&t=1297) this, right? I think being able to like
+- [21:38](https://youtube.com/watch?v=7FU98O0JLHs&t=1298) iterate visually very quickly is what
+- [21:41](https://youtube.com/watch?v=7FU98O0JLHs&t=1301) allows us to eventually get something we
+- [21:42](https://youtube.com/watch?v=7FU98O0JLHs&t=1302) like. So, we can don't like the italics.
+- [21:45](https://youtube.com/watch?v=7FU98O0JLHs&t=1305) Change the size, all this good stuff.
+- [21:48](https://youtube.com/watch?v=7FU98O0JLHs&t=1308) And like I said, I totally get pretty
+- [21:49](https://youtube.com/watch?v=7FU98O0JLHs&t=1309) aggressive. So, it has like the hero
+- [21:51](https://youtube.com/watch?v=7FU98O0JLHs&t=1311) imagery, the assets, the motion,
+- [21:55](https://youtube.com/watch?v=7FU98O0JLHs&t=1315) the weight, the reveal distance, all
+- [21:56](https://youtube.com/watch?v=7FU98O0JLHs&t=1316) this stuff. And so, at this point, it's
+- [21:58](https://youtube.com/watch?v=7FU98O0JLHs&t=1318) really just a matter of tweaking it over
+- [22:00](https://youtube.com/watch?v=7FU98O0JLHs&t=1320) and over again, showing it more
+- [22:01](https://youtube.com/watch?v=7FU98O0JLHs&t=1321) references of things you like until you
+- [22:03](https://youtube.com/watch?v=7FU98O0JLHs&t=1323) get it to a place you're happy with. And
+- [22:05](https://youtube.com/watch?v=7FU98O0JLHs&t=1325) really this entire video has been about
+- [22:07](https://youtube.com/watch?v=7FU98O0JLHs&t=1327) that. It's about giving you a flexible
+- [22:08](https://youtube.com/watch?v=7FU98O0JLHs&t=1328) workflow, a series of steps that you can
+- [22:10](https://youtube.com/watch?v=7FU98O0JLHs&t=1330) follow to get you to a place you're
+- [22:13](https://youtube.com/watch?v=7FU98O0JLHs&t=1333) happy with. None of this is meant to be
+- [22:15](https://youtube.com/watch?v=7FU98O0JLHs&t=1335) prescriptive. None of this needs to be
+- [22:16](https://youtube.com/watch?v=7FU98O0JLHs&t=1336) followed to a T. Instead, it's about
+- [22:18](https://youtube.com/watch?v=7FU98O0JLHs&t=1338) some like general rules and guidelines
+- [22:19](https://youtube.com/watch?v=7FU98O0JLHs&t=1339) of figuring out, okay, what do I
+- [22:21](https://youtube.com/watch?v=7FU98O0JLHs&t=1341) actually like, you know, cultivating
+- [22:22](https://youtube.com/watch?v=7FU98O0JLHs&t=1342) that taste. How do I then take that
+- [22:24](https://youtube.com/watch?v=7FU98O0JLHs&t=1344) taste and bring it to AI? What are some
+- [22:26](https://youtube.com/watch?v=7FU98O0JLHs&t=1346) additional tools that Claude code
+- [22:28](https://youtube.com/watch?v=7FU98O0JLHs&t=1348) doesn't come with that can help me do a
+- [22:30](https://youtube.com/watch?v=7FU98O0JLHs&t=1350) better job of that? And then lastly, how
+- [22:32](https://youtube.com/watch?v=7FU98O0JLHs&t=1352) do I tweak? How do I iterate? So, I'm
+- [22:34](https://youtube.com/watch?v=7FU98O0JLHs&t=1354) not just at the mercy of Claude code one
+- [22:37](https://youtube.com/watch?v=7FU98O0JLHs&t=1357) shots and just playing the lottery game
+- [22:39](https://youtube.com/watch?v=7FU98O0JLHs&t=1359) of putting in a random prompt, saying,
+- [22:40](https://youtube.com/watch?v=7FU98O0JLHs&t=1360) "Please make it look more premium." And
+- [22:42](https://youtube.com/watch?v=7FU98O0JLHs&t=1362) praying that the output is good. So,
+- [22:44](https://youtube.com/watch?v=7FU98O0JLHs&t=1364) with all that said, that is where I'm
+- [22:46](https://youtube.com/watch?v=7FU98O0JLHs&t=1366) going to leave you guys for today. As
+- [22:48](https://youtube.com/watch?v=7FU98O0JLHs&t=1368) always, let me know what you thought.
+- [22:49](https://youtube.com/watch?v=7FU98O0JLHs&t=1369) Make sure to check out Chase AI Plus if
+- [22:51](https://youtube.com/watch?v=7FU98O0JLHs&t=1371) you want to get your hands on more
+- [22:53](https://youtube.com/watch?v=7FU98O0JLHs&t=1373) Claude code guides, especially my Claude
+- [22:54](https://youtube.com/watch?v=7FU98O0JLHs&t=1374) code masterclass. There'll be a link to
+- [22:55](https://youtube.com/watch?v=7FU98O0JLHs&t=1375) that down in the pinned comments.
+- [22:58](https://youtube.com/watch?v=7FU98O0JLHs&t=1378) And I'll see you around.
