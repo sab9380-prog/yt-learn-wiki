@@ -1,0 +1,376 @@
+---
+title: "https://youtube.com/watch?v=SD3dKmswiPE"
+source_url: https://youtube.com/watch?v=SD3dKmswiPE
+video_id: SD3dKmswiPE
+source_type: youtube
+lang: ko
+analyzed: 2026-08-01
+category: Picks전략
+tags: ["개념/초미세-부", "개념/중간-지대의-위기", "개념/자연-유입-콘텐츠", "개념/아날로그-가치의-상승", "개념/바벨-구조", "개념/아키텍트-vs-메이슨"]
+key_concepts: ["초미세 부(Micro-wealth)", "중간 지대의 위기", "자연 유입 콘텐츠(Organic Content)", "아날로그 가치의 상승", "바벨 구조(양극단화)", "아키텍트 vs 메이슨"]
+status: active
+---
+# https://youtube.com/watch?v=SD3dKmswiPE
+
+## 🧠 이해 (Understand)
+- **Summary:** 게리 바이너척은 AI 시대를 '거대 기업의 독식'과 '개인의 초미세 부 창출'이 동시에 벌어지는 이중 구조로 본다. 중간 지대(적당한 서비스, 반복적 업무)는 도태되지만, 개인은 AI로 작은 앱·콘텐츠·브랜드를 빠르게 만들어 틈새를 파고들 수 있다. 창작자는 AI가 콘텐츠를 대량 생산해도 오프라인 신뢰·관계 등 아날로그 가치로 차별화할 수 있다. 알고리즘과 문화의 흐름을 읽는 관찰력이 플랫폼 기술보다 더 중요하다. 실패를 자기 존재의 부정으로 보지 않고 다음 기회의 훈련으로 받아들이는 마음가짐이 이 시대의 핵심 역량이다.
+- **Core Message:** AI 시대는 끝이 아니라 전환점이며, 기술보다 '관심의 흐름을 읽는 관찰력'과 '실패를 훈련으로 받아들이는 마음가짐'을 가진 개인에게 초미세 부의 기회가 열린다.
+> 중산층은 위험해질 겁니다.
+> 피해야 할 산업은 따로 없고, 생각 없이 반복하는 태도만 피해야 합니다.
+> 에고는 자신감이 아니라 불안의 다른 얼굴이다.
+❗ 여권 사진 같은 단순한 AI 웹서비스도 매달 수천만 원의 수익을 낼 수 있다는 실제 사례가 존재한다.
+❗ AI로 100명이 과거 400명의 일을 할 수 있지만, 경쟁사가 400명에 AI를 더하면 인원 감축이 반드시 유리하지 않다.
+❗ 게리 바이너척은 AI 등장 이후에도 소셜 미디어 전략을 전면 교체하지 않았다. 원래부터 기술이 아닌 '관심의 흐름'을 봤기 때문이다.
+
+## 📚 핵심 용어
+- **초미세 부(Micro-wealth):** 혼자 또는 소수가 AI를 활용해 작은 문제를 해결하는 서비스로 월 소액을 버는 소규모 수익 구조. / 동네 구멍가게처럼, 대형마트가 못 채우는 좁은 수요를 작게 파고들어 꾸준히 수익을 내는 방식이다. / 스타트업 유니콘(수천억 기업)이 목표라면, 초미세 부는 월세 수준의 작은 현금흐름이 목표다. 규모가 다르다.
+- **자연 유입 콘텐츠(Organic Content):** 광고비 없이 사람들이 검색·공유로 자발적으로 찾아오게 만드는 콘텐츠. / 입소문처럼, 돈을 쓰지 않아도 사람들이 알아서 퍼뜨려 주는 콘텐츠다. / 유료 광고는 돈을 내는 동안만 노출되지만, 자연 유입 콘텐츠는 한 번 터지면 비용 없이 계속 유입된다.
+- **바벨 구조:** 한쪽 끝엔 초고도 자동화·AI, 반대쪽엔 오프라인 실제 경험이 공존하는 양극단 시장 구조. / 바벨(역기)처럼 양쪽 끝만 무겁고 가운데가 비어있다. 중간 평범한 서비스는 설 자리를 잃는다. / 기존 시장은 중간 규모가 안전했지만, 바벨 구조에서는 '완전 자동화'나 '완전 인간적 경험' 둘 중 하나를 선택해야 산다.
+- **아키텍트 vs 메이슨:** 아키텍트는 방향을 설계하고 AI를 활용하는 사람, 메이슨은 지시받은 일을 반복 수행하는 사람. / 건축 현장에서 설계사(아키텍트)는 도면을 그리고, 벽돌공(메이슨)은 지시대로 쌓는다. AI 시대엔 설계사 역할이 살아남는다. / 메이슨이 나쁜 게 아니라, 반복 지시만 따르면 AI가 대체한다. 아키텍트는 도구를 배워 누구나 될 수 있다.
+
+## 🚀 실행 (Execute)
+- [ ] 내가 속한 영역(PICKS·웹소설·교회)에서 '월 1~7만 원짜리 작은 문제'를 1개 찾아 AI로 해결하는 미니 서비스·콘텐츠 기획안 작성 — ⏰ 이번 주 · ⚡ 2~3시간
+  - 담당: 나
+  - 이유: 초미세 부 개념의 핵심은 거대한 시작이 아닌 작은 문제 해결이므로, 지금 당장 실행 가능한 단위로 좁혀야 한다.
+- [ ] 현재 운영 중인 채널(인스타·유튜브·링크드인 등) 중 1개를 골라, 광고비 없이 자연 유입되는 콘텐츠 포맷(쇼츠·카드뉴스·긴글)을 2주간 매일 1개씩 테스트 업로드 — ⏰ 2주 내 · ⚡ 하루 30분~1시간
+  - 담당: 나
+  - 이유: 알고리즘과 포맷 반응을 직접 데이터로 확인해야 '관심의 흐름 읽기' 역량이 쌓인다. 이론보다 실험이 빠르다.
+- [ ] 오프라인 접점 1개 기획: 팝업, 소그룹 모임, 네트워킹 이벤트 등 실제 만남의 자리를 1분기 내 1회 실행 — ⏰ 1개월 내 · ⚡ 기획 2시간 + 실행 반나절
+  - 담당: 나 또는 팀
+  - 이유: 바벨 구조에서 AI가 대체 못 하는 '아날로그 신뢰'가 차별화 자산이 되므로, 온라인 콘텐츠와 병행해야 한다.
+- 자료: Gary Vaynerchuk 유튜브 채널 (garyvee) — 원본 인터뷰 및 강연
+- 자료: Axiom Work AI (영상 언급 도구 — 확인 필요: 정확한 서비스명·존재 여부 검색 필요)
+- 자료: Substack, Beehiiv — 뉴스레터 기반 자연 유입 콘텐츠 플랫폼 (실존)
+- 자료: Claude, ChatGPT, Meta AI — 영상에서 게리가 직접 언급한 일상 AI 도구
+- Timeline: 1주차: 미니 서비스·콘텐츠 기획안 작성 → 2~3주차: 자연 유입 콘텐츠 포맷 A/B 테스트 → 4주차 이후: 오프라인 접점 기획 및 실행. 세 행동을 순차가 아닌 병렬로 진행해 상호 피드백 루프를 만드는 것이 이상적.
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
+- 핵심 개념: [[_concept-초미세-부|초미세 부]] · [[_concept-중간-지대의-위기|중간 지대의 위기]] · [[_concept-자연-유입-콘텐츠|자연 유입 콘텐츠]] · [[_concept-아날로그-가치의-상승|아날로그 가치의 상승]] · [[_concept-바벨-구조|바벨 구조]] · [[_concept-아키텍트-vs-메이슨|아키텍트 vs 메이슨]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=SD3dKmswiPE&t=0) 중산층은 [음악] 위험해질 겁니다.
+- [0:01](https://youtube.com/watch?v=SD3dKmswiPE&t=1) 게리바이너 척은 페이스북, 트위터,
+- [0:03](https://youtube.com/watch?v=SD3dKmswiPE&t=3) 우버의 초기에 투자했고 틱톡과 창작자
+- [0:06](https://youtube.com/watch?v=SD3dKmswiPE&t=6) 경제, 컴퓨터와 대화하는 시대까지
+- [0:08](https://youtube.com/watch?v=SD3dKmswiPE&t=8) 남들보다 먼저 내다본 사업가입니다.
+- [0:10](https://youtube.com/watch?v=SD3dKmswiPE&t=10) 그리고 동시에 AI 시대가 개인에게
+- [0:12](https://youtube.com/watch?v=SD3dKmswiPE&t=12) 아주 작은 단위의 부, 즉 혼자서도
+- [0:14](https://youtube.com/watch?v=SD3dKmswiPE&t=14) 만들 수 있는 새로운 기회를 열어 줄
+- [0:17](https://youtube.com/watch?v=SD3dKmswiPE&t=17) 수 있다고 이야기하죠. 그렇다면
+- [0:18](https://youtube.com/watch?v=SD3dKmswiPE&t=18) 우리는 지금 마지막 부의 기회 앞에서
+- [0:21](https://youtube.com/watch?v=SD3dKmswiPE&t=21) 있는 걸까요? 아니면 거대 [음악]
+- [0:22](https://youtube.com/watch?v=SD3dKmswiPE&t=22) 기업들이 모든 것을 가져가는 것처럼
+- [0:24](https://youtube.com/watch?v=SD3dKmswiPE&t=24) 보여도 그 틈에서 개인이 다시 올라설
+- [0:26](https://youtube.com/watch?v=SD3dKmswiPE&t=26) 수 있는 새로운 판이 열리고 있는
+- [0:28](https://youtube.com/watch?v=SD3dKmswiPE&t=28) 걸까요? 오늘 영상에서는 노트북과
+- [0:31](https://youtube.com/watch?v=SD3dKmswiPE&t=31) AI만으로 무엇을 시작할 수 있는지,
+- [0:33](https://youtube.com/watch?v=SD3dKmswiPE&t=33) 창작자와 브랜드의 미래는 어떻게
+- [0:35](https://youtube.com/watch?v=SD3dKmswiPE&t=35) 바뀌는지, [음악] 그리고 불안한
+- [0:36](https://youtube.com/watch?v=SD3dKmswiPE&t=36) 시대에 어떤 태도로 움직여야 하는지
+- [0:39](https://youtube.com/watch?v=SD3dKmswiPE&t=39) 함께 풀어 보겠습니다. 끝까지 보시면
+- [0:41](https://youtube.com/watch?v=SD3dKmswiPE&t=41) AI 시대를 두려움이 아니라 기회로
+- [0:43](https://youtube.com/watch?v=SD3dKmswiPE&t=43) 바라보는 관점을 얻어 가실 수 있을
+- [0:45](https://youtube.com/watch?v=SD3dKmswiPE&t=45) 거예요. 그럼 지금부터
+- [0:46](https://youtube.com/watch?v=SD3dKmswiPE&t=46) 시작하겠습니다. 게리 바이너 척은
+- [0:49](https://youtube.com/watch?v=SD3dKmswiPE&t=49) [음악] AI 시대를 두고 단순히
+- [0:50](https://youtube.com/watch?v=SD3dKmswiPE&t=50) 기회다 혹은 위기다라고 말하지
+- [0:53](https://youtube.com/watch?v=SD3dKmswiPE&t=53) 않습니다. 그가 보는 핵심은 양쪽이
+- [0:55](https://youtube.com/watch?v=SD3dKmswiPE&t=55) [음악] 동시에 커지고 있다는
+- [0:56](https://youtube.com/watch?v=SD3dKmswiPE&t=56) 점이에요. 한쪽에서는 메타,
+- [0:58](https://youtube.com/watch?v=SD3dKmswiPE&t=58) 마이크로소프트, 구글, 엔스로픽 같은
+- [1:00](https://youtube.com/watch?v=SD3dKmswiPE&t=60) 거대 기업들이 [음악]
+- [1:01](https://youtube.com/watch?v=SD3dKmswiPE&t=61) 더 많은 시장을 빨아들일 수
+- [1:03](https://youtube.com/watch?v=SD3dKmswiPE&t=63) 있습니다. 이들은 이미 막대한
+- [1:05](https://youtube.com/watch?v=SD3dKmswiPE&t=65) 데이터와 자본, [음악] 개발 인력을
+- [1:07](https://youtube.com/watch?v=SD3dKmswiPE&t=67) 갖고 있기 때문에 새로운 기술이 나올
+- [1:08](https://youtube.com/watch?v=SD3dKmswiPE&t=68) 때마다 기존 산업을 빠르게 대체할 수
+- [1:11](https://youtube.com/watch?v=SD3dKmswiPE&t=71) 있죠. 예를 들어 과거에는 세일즈
+- [1:13](https://youtube.com/watch?v=SD3dKmswiPE&t=73) 포스나 어도비 [음악] 같은 서비스형
+- [1:15](https://youtube.com/watch?v=SD3dKmswiPE&t=75) 소프트웨어 회사들이 기업의 업무를
+- [1:17](https://youtube.com/watch?v=SD3dKmswiPE&t=77) 도와주며 크게 성장했습니다. 서비스형
+- [1:19](https://youtube.com/watch?v=SD3dKmswiPE&t=79) 소프트웨어란 인터넷으로 접속해서 매달
+- [1:22](https://youtube.com/watch?v=SD3dKmswiPE&t=82) 돈을 내고 쓰는 프로그램을 말합니다.
+- [1:24](https://youtube.com/watch?v=SD3dKmswiPE&t=84) 그런데 AI가이 기능들을 한 번에
+- [1:26](https://youtube.com/watch?v=SD3dKmswiPE&t=86) 대신해 [음악] 버리면 기존 회사들은
+- [1:28](https://youtube.com/watch?v=SD3dKmswiPE&t=88) 갑자기 강한 역풍을 맞을 수
+- [1:30](https://youtube.com/watch?v=SD3dKmswiPE&t=90) 있습니다. 개리가 말한 블룸버그
+- [1:31](https://youtube.com/watch?v=SD3dKmswiPE&t=91) 터미널을 공짜로 준 것과 같다는
+- [1:34](https://youtube.com/watch?v=SD3dKmswiPE&t=94) 표현도 바로 이런 의미입니다. 비싸게
+- [1:36](https://youtube.com/watch?v=SD3dKmswiPE&t=96) 돈을 내고 쓰던 [음악] 전문 정보
+- [1:37](https://youtube.com/watch?v=SD3dKmswiPE&t=97) 도구를 AI가 순식간에 대체하면
+- [1:40](https://youtube.com/watch?v=SD3dKmswiPE&t=100) 시장의 규칙 자체가 바뀌는 거예요.
+- [1:42](https://youtube.com/watch?v=SD3dKmswiPE&t=102) 하지만 게는 여기서 끝이라고 보지
+- [1:44](https://youtube.com/watch?v=SD3dKmswiPE&t=104) 않습니다. 오히려 [음악] 반대편에는
+- [1:46](https://youtube.com/watch?v=SD3dKmswiPE&t=106) 개인이 만드는 아주 작은 부의 기회가
+- [1:48](https://youtube.com/watch?v=SD3dKmswiPE&t=108) 생길 수 있다고 말합니다. 그는
+- [1:49](https://youtube.com/watch?v=SD3dKmswiPE&t=109) 이것을 초미세부의 탄생처럼 봅니다.
+- [1:51](https://youtube.com/watch?v=SD3dKmswiPE&t=111) 예전에는 앱 하나를 만들려면
+- [1:53](https://youtube.com/watch?v=SD3dKmswiPE&t=113) 개발자에게 수억을 드리거나 긴 시간을
+- [1:56](https://youtube.com/watch?v=SD3dKmswiPE&t=116) 투자해야 [음악] 했습니다. 하지만
+- [1:57](https://youtube.com/watch?v=SD3dKmswiPE&t=117) 이제는 AI에게 이런 기능을 가진
+- [2:00](https://youtube.com/watch?v=SD3dKmswiPE&t=120) 앱을 만들어 줘라고 요청하면서 훨씬
+- [2:02](https://youtube.com/watch?v=SD3dKmswiPE&t=122) 빠르게 시도할 수 있는 시대가
+- [2:03](https://youtube.com/watch?v=SD3dKmswiPE&t=123) 됐습니다. 그래서 10대 학생도
+- [2:05](https://youtube.com/watch?v=SD3dKmswiPE&t=125) 직장인도 작은 사업자도 자신만의
+- [2:08](https://youtube.com/watch?v=SD3dKmswiPE&t=128) 미니앱을 만들고 돈을 벌 가능성이
+- [2:10](https://youtube.com/watch?v=SD3dKmswiPE&t=130) 생긴 겁니다. 물론 중간 [음악]
+- [2:11](https://youtube.com/watch?v=SD3dKmswiPE&t=131) 지대는 위험해질 수 있습니다. 기존
+- [2:13](https://youtube.com/watch?v=SD3dKmswiPE&t=133) 방식으로 적당히 운영되던 회사나
+- [2:16](https://youtube.com/watch?v=SD3dKmswiPE&t=136) 평범한 서비스는 거대 AI 기업에게
+- [2:18](https://youtube.com/watch?v=SD3dKmswiPE&t=138) 밀릴 수 있기 때문입니다. 그럼에도
+- [2:20](https://youtube.com/watch?v=SD3dKmswiPE&t=140) 게린은 이것이 [음악] 마지막
+- [2:21](https://youtube.com/watch?v=SD3dKmswiPE&t=141) 기회냐는 질문에는 단호하게 아니라고
+- [2:23](https://youtube.com/watch?v=SD3dKmswiPE&t=143) 봅니다. 왜냐하면 경제와 소비자의
+- [2:26](https://youtube.com/watch?v=SD3dKmswiPE&t=146) 행동은 너무 크고 복잡해서 몇몇
+- [2:28](https://youtube.com/watch?v=SD3dKmswiPE&t=148) 회사가 모든 욕구를 완벽하게
+- [2:30](https://youtube.com/watch?v=SD3dKmswiPE&t=150) 가져가기는 어렵기 때문입니다.
+- [2:31](https://youtube.com/watch?v=SD3dKmswiPE&t=151) [음악] 결국이 시대의 핵심은 거대
+- [2:34](https://youtube.com/watch?v=SD3dKmswiPE&t=154) 기업이 장악하는 판과 개인이 작게
+- [2:36](https://youtube.com/watch?v=SD3dKmswiPE&t=156) 치고 올라오는 판이 동시에 열린다는데
+- [2:38](https://youtube.com/watch?v=SD3dKmswiPE&t=158) 있습니다. 그렇다면 아무것도 없는
+- [2:40](https://youtube.com/watch?v=SD3dKmswiPE&t=160) 개인은 [음악] 지금 무엇을 해야
+- [2:41](https://youtube.com/watch?v=SD3dKmswiPE&t=161) 할까요? 게리의 대답은 의외로
+- [2:43](https://youtube.com/watch?v=SD3dKmswiPE&t=163) 단순합니다. 그는 먼저 월약
+- [2:45](https://youtube.com/watch?v=SD3dKmswiPE&t=165) 7,000원에서 [음악] 약 7만 원
+- [2:46](https://youtube.com/watch?v=SD3dKmswiPE&t=166) 정도를 받을 수 있는 작은 앱을
+- [2:48](https://youtube.com/watch?v=SD3dKmswiPE&t=168) 만들겠다고 말합니다. 여기서 중요한
+- [2:50](https://youtube.com/watch?v=SD3dKmswiPE&t=170) 건 거대한 회사를 만들겠다는 말이
+- [2:52](https://youtube.com/watch?v=SD3dKmswiPE&t=172) 아니라 사람들이 매달 부담 없이
+- [2:54](https://youtube.com/watch?v=SD3dKmswiPE&t=174) 결제할 만한 작은 문제를 해결하겠다는
+- [2:57](https://youtube.com/watch?v=SD3dKmswiPE&t=177) 뜻이에요. 그리고 그 앱을 만든
+- [2:58](https://youtube.com/watch?v=SD3dKmswiPE&t=178) 뒤에는 [음악] 링크드인 X, 틱톡
+- [3:01](https://youtube.com/watch?v=SD3dKmswiPE&t=181) 같은 플랫폼에 자연 유입 콘텐츠를
+- [3:03](https://youtube.com/watch?v=SD3dKmswiPE&t=183) 끝없이 [음악] 올리겠다고 합니다.
+- [3:05](https://youtube.com/watch?v=SD3dKmswiPE&t=185) 자연 유입 콘텐츠란 광고비를 내지
+- [3:07](https://youtube.com/watch?v=SD3dKmswiPE&t=187) 않고도 사람들이 검색하거나 공유하면서
+- [3:09](https://youtube.com/watch?v=SD3dKmswiPE&t=189) [음악] 보게 되는 콘텐츠를
+- [3:11](https://youtube.com/watch?v=SD3dKmswiPE&t=191) 말합니다. 예전에는 고객을 모으려면
+- [3:13](https://youtube.com/watch?v=SD3dKmswiPE&t=193) 광고비가 필요했지만 [음악] 지금은
+- [3:15](https://youtube.com/watch?v=SD3dKmswiPE&t=195) 짧은 영상 하나가 퍼지면 바로 수천
+- [3:17](https://youtube.com/watch?v=SD3dKmswiPE&t=197) 명, 수만 명에게 알려질 수 있죠.
+- [3:19](https://youtube.com/watch?v=SD3dKmswiPE&t=199) 실제로 여건 사진을 만들어 주는
+- [3:21](https://youtube.com/watch?v=SD3dKmswiPE&t=201) 단순한 웹사이트 [음악] 이야기도
+- [3:23](https://youtube.com/watch?v=SD3dKmswiPE&t=203) 좋은 예입니다. AI로 충분히 대체될
+- [3:25](https://youtube.com/watch?v=SD3dKmswiPE&t=205) 것처럼 보이지만 사람들은 아직 익숙한
+- [3:27](https://youtube.com/watch?v=SD3dKmswiPE&t=207) 웹사이트에 들어가 결제하는 습관을
+- [3:29](https://youtube.com/watch?v=SD3dKmswiPE&t=209) 가지고 있습니다. 그래서 그런 작은
+- [3:31](https://youtube.com/watch?v=SD3dKmswiPE&t=211) 서비스도 매달 수천만 원씩 벌 수
+- [3:33](https://youtube.com/watch?v=SD3dKmswiPE&t=213) 있다는 겁니다.이 대목에서 게리는
+- [3:35](https://youtube.com/watch?v=SD3dKmswiPE&t=215) 실리콘 밸리식 시선과 일반 소비자의
+- [3:37](https://youtube.com/watch?v=SD3dKmswiPE&t=217) 현실이 [음악] 다르다고 짚습니다.
+- [3:39](https://youtube.com/watch?v=SD3dKmswiPE&t=219) 기술을 잘하는 사람은 내일
+- [3:41](https://youtube.com/watch?v=SD3dKmswiPE&t=221) 엔스로픽이이 기능을 내면 끝나는 거
+- [3:43](https://youtube.com/watch?v=SD3dKmswiPE&t=223) 아니야라고 [음악] 생각합니다.
+- [3:44](https://youtube.com/watch?v=SD3dKmswiPE&t=224) 하지만 대부분의 소비자는 그렇게
+- [3:46](https://youtube.com/watch?v=SD3dKmswiPE&t=226) 빠르게 움직이지 않습니다. 사람들은
+- [3:48](https://youtube.com/watch?v=SD3dKmswiPE&t=228) 편한 곳, 믿는 곳, [음악] 이미
+- [3:50](https://youtube.com/watch?v=SD3dKmswiPE&t=230) 알고 있는 브랜드를 선택합니다.
+- [3:52](https://youtube.com/watch?v=SD3dKmswiPE&t=232) 그래서 AI 시대에는 오히려 브랜드가
+- [3:54](https://youtube.com/watch?v=SD3dKmswiPE&t=234) 더 중요해집니다. 브랜드란 단순한
+- [3:56](https://youtube.com/watch?v=SD3dKmswiPE&t=236) 이름이 아니라 사람들이 저기는 믿을
+- [3:58](https://youtube.com/watch?v=SD3dKmswiPE&t=238) 만해라고 [음악]
+- [3:59](https://youtube.com/watch?v=SD3dKmswiPE&t=239) 느끼게 만드는 기업과 신뢰입니다. 또
+- [4:01](https://youtube.com/watch?v=SD3dKmswiPE&t=241) 하나 흥미로운 부분은 악시엄 워크
+- [4:03](https://youtube.com/watch?v=SD3dKmswiPE&t=243) 같은 AI 업무 도구의 사례입니다.이
+- [4:05](https://youtube.com/watch?v=SD3dKmswiPE&t=245) [음악] 도구는 한 명의 AI가
+- [4:07](https://youtube.com/watch?v=SD3dKmswiPE&t=247) 아니라 전략가, 제작자, 운영
+- [4:09](https://youtube.com/watch?v=SD3dKmswiPE&t=249) 책임자처럼 역할이 나닌 AI 팀을
+- [4:11](https://youtube.com/watch?v=SD3dKmswiPE&t=251) 만들 수 있게 해 줍니다. 예를 들어
+- [4:13](https://youtube.com/watch?v=SD3dKmswiPE&t=253) 매일 아침 업계 뉴스를 정리해 팀에게
+- [4:15](https://youtube.com/watch?v=SD3dKmswiPE&t=255) 보내거나 콘텐츠 제작전에 데이터를
+- [4:18](https://youtube.com/watch?v=SD3dKmswiPE&t=258) 분석해 주는 식입니다. 결국 노트북과
+- [4:20](https://youtube.com/watch?v=SD3dKmswiPE&t=260) AI만 있다는 말은 혼자 일한다는
+- [4:23](https://youtube.com/watch?v=SD3dKmswiPE&t=263) 뜻이 아니라 혼자서도 작은 팀처럼
+- [4:25](https://youtube.com/watch?v=SD3dKmswiPE&t=265) 움직일 수 있다는 뜻입니다. 그렇다면
+- [4:27](https://youtube.com/watch?v=SD3dKmswiPE&t=267) 콘텐츠가 넘쳐나는 시대에 사람
+- [4:29](https://youtube.com/watch?v=SD3dKmswiPE&t=269) 창작자는 정말 살아남을 수 있을까요?
+- [4:31](https://youtube.com/watch?v=SD3dKmswiPE&t=271) AI 콘텐츠가 넘쳐나기 시작하면
+- [4:33](https://youtube.com/watch?v=SD3dKmswiPE&t=273) [음악]
+- [4:33](https://youtube.com/watch?v=SD3dKmswiPE&t=273) 가장 먼저 불안해지는 사람들은
+- [4:35](https://youtube.com/watch?v=SD3dKmswiPE&t=275) 창작자입니다. 왜냐하면 이제는
+- [4:37](https://youtube.com/watch?v=SD3dKmswiPE&t=277) 사람처럼 말하고 사람처럼 생기고
+- [4:39](https://youtube.com/watch?v=SD3dKmswiPE&t=279) 사람보다 더 빠르게 영상을 만드는
+- [4:42](https://youtube.com/watch?v=SD3dKmswiPE&t=282) 가상 [음악] 인물이 등장하기
+- [4:43](https://youtube.com/watch?v=SD3dKmswiPE&t=283) 때문입니다. 게리도이 흐름을 부정하지
+- [4:45](https://youtube.com/watch?v=SD3dKmswiPE&t=285) 않습니다. 앞으로 로레알 같은 큰
+- [4:47](https://youtube.com/watch?v=SD3dKmswiPE&t=287) 브랜드는 실제 인플루언서 대신
+- [4:49](https://youtube.com/watch?v=SD3dKmswiPE&t=289) 자신들이 직접 소유한 AI 모델을
+- [4:51](https://youtube.com/watch?v=SD3dKmswiPE&t=291) 써서 100개의 영상을 만들 수
+- [4:53](https://youtube.com/watch?v=SD3dKmswiPE&t=293) 있습니다. 그렇게 되면 비용도 줄고
+- [4:55](https://youtube.com/watch?v=SD3dKmswiPE&t=295) 메시지도 마음대로 통제할 수 있죠.
+- [4:57](https://youtube.com/watch?v=SD3dKmswiPE&t=297) [음악] 하지만 게리는 여기서 중요한
+- [4:59](https://youtube.com/watch?v=SD3dKmswiPE&t=299) 차이를 짚습니다. 플랫폼이 창작자에게
+- [5:01](https://youtube.com/watch?v=SD3dKmswiPE&t=301) 돈을 주는 것이 아니라 사람들의
+- [5:03](https://youtube.com/watch?v=SD3dKmswiPE&t=303) 관심이 모인 곳에 기업이 [음악]
+- [5:04](https://youtube.com/watch?v=SD3dKmswiPE&t=304) 광고를 붙이고 그 과정에서 창작자와
+- [5:07](https://youtube.com/watch?v=SD3dKmswiPE&t=307) 거래가 생긴다는 겁니다. 즉 창작자의
+- [5:09](https://youtube.com/watch?v=SD3dKmswiPE&t=309) 진짜 자산은 조회수 자체가 아니라
+- [5:11](https://youtube.com/watch?v=SD3dKmswiPE&t=311) 사람들이 그 사람을 실제로 알고 믿고
+- [5:13](https://youtube.com/watch?v=SD3dKmswiPE&t=313) 따라간다는 점입니다. 그래서 AI
+- [5:15](https://youtube.com/watch?v=SD3dKmswiPE&t=315) 시대에는 오히려 현실 세계의 가치가
+- [5:17](https://youtube.com/watch?v=SD3dKmswiPE&t=317) [음악] 커질 수 있습니다. 게린은
+- [5:19](https://youtube.com/watch?v=SD3dKmswiPE&t=319) 이것을 아날로그 가치의 상승이라고
+- [5:21](https://youtube.com/watch?v=SD3dKmswiPE&t=321) 설명합니다. 아날로그란 화면 밖에서
+- [5:23](https://youtube.com/watch?v=SD3dKmswiPE&t=323) 직접 만나고 직접 경험하고 [음악]
+- [5:25](https://youtube.com/watch?v=SD3dKmswiPE&t=325) 몸으로 느끼는 현실의 접점을
+- [5:27](https://youtube.com/watch?v=SD3dKmswiPE&t=327) 말합니다. 예를 들어 콘퍼런스를 열고
+- [5:29](https://youtube.com/watch?v=SD3dKmswiPE&t=329) [음악] 식당에서 사람을 만나고 팝업
+- [5:31](https://youtube.com/watch?v=SD3dKmswiPE&t=331) 스토어를 운영하고 스포츠 경기장에
+- [5:33](https://youtube.com/watch?v=SD3dKmswiPE&t=333) 가는 경험은 [음악] AI가 쉽게
+- [5:35](https://youtube.com/watch?v=SD3dKmswiPE&t=335) 대체하기 어렵습니다. 화면 속
+- [5:37](https://youtube.com/watch?v=SD3dKmswiPE&t=337) 콘텐츠가 무한히 많아질수록 사람들은
+- [5:39](https://youtube.com/watch?v=SD3dKmswiPE&t=339) [음악] 진짜 사람과 진짜 장소에 더
+- [5:41](https://youtube.com/watch?v=SD3dKmswiPE&t=341) 큰 가치를 느끼게 됩니다. 이것은
+- [5:43](https://youtube.com/watch?v=SD3dKmswiPE&t=343) 마치 극단적인 기술 시대일수록 반대로
+- [5:46](https://youtube.com/watch?v=SD3dKmswiPE&t=346) 인간적인 [음악]
+- [5:47](https://youtube.com/watch?v=SD3dKmswiPE&t=347) 경험이 더 귀해지는 현상입니다.
+- [5:48](https://youtube.com/watch?v=SD3dKmswiPE&t=348) 게린은 앞으로 세상이 양극단의 바벨
+- [5:51](https://youtube.com/watch?v=SD3dKmswiPE&t=351) 구조로 갈 것이라고 봅니다. 한쪽
+- [5:52](https://youtube.com/watch?v=SD3dKmswiPE&t=352) 끝에는 초고도 기술과 자동화가
+- [5:54](https://youtube.com/watch?v=SD3dKmswiPE&t=354) [음악] 있고 다른 한쪽 끝에는
+- [5:56](https://youtube.com/watch?v=SD3dKmswiPE&t=356) 오프라인 만남과 실제 경험이
+- [5:58](https://youtube.com/watch?v=SD3dKmswiPE&t=358) 있습니다. 그래서 창작자에게 [음악]
+- [5:59](https://youtube.com/watch?v=SD3dKmswiPE&t=359) 필요한 것은 단순히 영상을 많이
+- [6:01](https://youtube.com/watch?v=SD3dKmswiPE&t=361) 올리는 능력이 아닙니다. 온라인에서
+- [6:03](https://youtube.com/watch?v=SD3dKmswiPE&t=363) 사람들의 관심을 얻고 오프라인에서도
+- [6:05](https://youtube.com/watch?v=SD3dKmswiPE&t=365) 신뢰와 관계를 만들 수 있는
+- [6:07](https://youtube.com/watch?v=SD3dKmswiPE&t=367) 능력입니다. 과거에는 유명 연예인만
+- [6:09](https://youtube.com/watch?v=SD3dKmswiPE&t=369) 광고비를 가져갔지만 소셜 미디어가
+- [6:11](https://youtube.com/watch?v=SD3dKmswiPE&t=371) 등장하면서 일반 창작자도 그 돈의
+- [6:14](https://youtube.com/watch?v=SD3dKmswiPE&t=374) 일부를 가져왔습니다. [음악]
+- [6:15](https://youtube.com/watch?v=SD3dKmswiPE&t=375) 그런데 이제 AI가 다시 판을 흔들고
+- [6:17](https://youtube.com/watch?v=SD3dKmswiPE&t=377) 있는 거죠. 그렇다면 우리는이 변화를
+- [6:19](https://youtube.com/watch?v=SD3dKmswiPE&t=379) 두려워하기만 해야 할까요? 게리의
+- [6:21](https://youtube.com/watch?v=SD3dKmswiPE&t=381) 답은 명확합니다. [음악] 판은 계속
+- [6:23](https://youtube.com/watch?v=SD3dKmswiPE&t=383) 바뀌지만 관심이 어디로 이동하는지
+- [6:25](https://youtube.com/watch?v=SD3dKmswiPE&t=385) 읽는 사람은 계속 기회를 잡는다는
+- [6:27](https://youtube.com/watch?v=SD3dKmswiPE&t=387) 겁니다. 게리는 AI 때문에 [음악]
+- [6:29](https://youtube.com/watch?v=SD3dKmswiPE&t=389) 자신의 소셜 미디어 전략을 완전히
+- [6:31](https://youtube.com/watch?v=SD3dKmswiPE&t=391) 갈아없지는 않았다고 말합니다. 그
+- [6:33](https://youtube.com/watch?v=SD3dKmswiPE&t=393) 이유는 간단합니다. 그는 원래부터
+- [6:35](https://youtube.com/watch?v=SD3dKmswiPE&t=395) 기술이 아니라 사람들의 관심이 어디로
+- [6:37](https://youtube.com/watch?v=SD3dKmswiPE&t=397) 움직이는지를 보고 [음악] 있었기
+- [6:38](https://youtube.com/watch?v=SD3dKmswiPE&t=398) 때문입니다. 그가 말하는 핵심은
+- [6:40](https://youtube.com/watch?v=SD3dKmswiPE&t=400) 플랫폼 자체보다 그 안에서 [음악]
+- [6:42](https://youtube.com/watch?v=SD3dKmswiPE&t=402) 어떤 형식이 먹히고 어떤 문화가
+- [6:44](https://youtube.com/watch?v=SD3dKmswiPE&t=404) 올라오는지 관찰하는 능력입니다.
+- [6:46](https://youtube.com/watch?v=SD3dKmswiPE&t=406) 그래서 그는 서브스텍 비하이브
+- [6:48](https://youtube.com/watch?v=SD3dKmswiPE&t=408) [음악] 링크드인 X 핀터레스트
+- [6:51](https://youtube.com/watch?v=SD3dKmswiPE&t=411) 인스타그램 틱톡 유튜브 쇼츠 스냅
+- [6:54](https://youtube.com/watch?v=SD3dKmswiPE&t=414) 스포트라이트를 모두 따로 봅니다.
+- [6:56](https://youtube.com/watch?v=SD3dKmswiPE&t=416) 같은 플랫폼 안에서도 어떤 달에는
+- [6:58](https://youtube.com/watch?v=SD3dKmswiPE&t=418) 영상이 잘되고 또 어떤 순간에는
+- [7:00](https://youtube.com/watch?v=SD3dKmswiPE&t=420) 이미지나 [음악] 긴글이 더 잘될 수
+- [7:03](https://youtube.com/watch?v=SD3dKmswiPE&t=423) 있기 때문입니다. 이때 알고리즘이
+- [7:05](https://youtube.com/watch?v=SD3dKmswiPE&t=425) 중요해집니다. 알고리즘은 플랫폼이
+- [7:07](https://youtube.com/watch?v=SD3dKmswiPE&t=427) 어떤 콘텐츠를 더 많은 사람에게 보여
+- [7:09](https://youtube.com/watch?v=SD3dKmswiPE&t=429) 줄지 정하는 추천 규칙입니다.
+- [7:10](https://youtube.com/watch?v=SD3dKmswiPE&t=430) [음악] 창작자에게는이 규칙을 읽는
+- [7:12](https://youtube.com/watch?v=SD3dKmswiPE&t=432) 것이 가게 사장이 유동인구를 파악하는
+- [7:15](https://youtube.com/watch?v=SD3dKmswiPE&t=435) 것과 같습니다. 게리는 여기에 대중
+- [7:17](https://youtube.com/watch?v=SD3dKmswiPE&t=437) 문화까지 함께 봅니다. [음악] 한국
+- [7:18](https://youtube.com/watch?v=SD3dKmswiPE&t=438) 문화, 히스패닝 문화, 유행어,
+- [7:21](https://youtube.com/watch?v=SD3dKmswiPE&t=441) 패션, 장난감, 텀블러처럼 사람들이
+- [7:23](https://youtube.com/watch?v=SD3dKmswiPE&t=443) 지금 무엇에 반응하는지 알아야
+- [7:25](https://youtube.com/watch?v=SD3dKmswiPE&t=445) [음악] 콘텐츠가 살아난다는 겁니다.
+- [7:27](https://youtube.com/watch?v=SD3dKmswiPE&t=447) 그리고 채용에서도 그는 조심스럽게
+- [7:29](https://youtube.com/watch?v=SD3dKmswiPE&t=449) 접근합니다. AI 덕분에 100명이
+- [7:31](https://youtube.com/watch?v=SD3dKmswiPE&t=451) 과거 400명의 일을 할 수 있다는
+- [7:33](https://youtube.com/watch?v=SD3dKmswiPE&t=453) 사실은 인정합니다. 하지만 [음악]
+- [7:35](https://youtube.com/watch?v=SD3dKmswiPE&t=455) 만약 경쟁사는 400명을 그대로 두고
+- [7:37](https://youtube.com/watch?v=SD3dKmswiPE&t=457) AI로 무장시킨다면 단순히 인원을
+- [7:40](https://youtube.com/watch?v=SD3dKmswiPE&t=460) 줄인 회사가 반드시 이긴다고 볼 수는
+- [7:42](https://youtube.com/watch?v=SD3dKmswiPE&t=462) 없습니다. 그래서 AI는 방패이면서
+- [7:44](https://youtube.com/watch?v=SD3dKmswiPE&t=464) [음악]
+- [7:44](https://youtube.com/watch?v=SD3dKmswiPE&t=464) 동시에 카리자 총이 될 수 있습니다.
+- [7:47](https://youtube.com/watch?v=SD3dKmswiPE&t=467) 효율을 높이는 도구이지만 경쟁에서 더
+- [7:49](https://youtube.com/watch?v=SD3dKmswiPE&t=469) 강하게 공격하는 무기도 되는 거죠.
+- [7:51](https://youtube.com/watch?v=SD3dKmswiPE&t=471) 다만 가치가 낮은 [음악] 업무는
+- [7:52](https://youtube.com/watch?v=SD3dKmswiPE&t=472) 이미 빠르게 바뀌고 있습니다. 예를
+- [7:54](https://youtube.com/watch?v=SD3dKmswiPE&t=474) 들어 회의 내용을 받아 적기만 하는
+- [7:56](https://youtube.com/watch?v=SD3dKmswiPE&t=476) 프로젝트 매니저라면 이제는 더 큰
+- [7:59](https://youtube.com/watch?v=SD3dKmswiPE&t=479) 판단과 조율 능력을 요구받게 됩니다.
+- [8:01](https://youtube.com/watch?v=SD3dKmswiPE&t=481) 게리에게 AI는 [음악] 마법이
+- [8:02](https://youtube.com/watch?v=SD3dKmswiPE&t=482) 아니라 아이폰이 처음 나왔을 때처럼
+- [8:04](https://youtube.com/watch?v=SD3dKmswiPE&t=484) 인간의 능력을 확장하는 도구입니다.
+- [8:06](https://youtube.com/watch?v=SD3dKmswiPE&t=486) 그렇다면이 도구 앞에서 불안한 사람은
+- [8:09](https://youtube.com/watch?v=SD3dKmswiPE&t=489) 어떤 태도로 다음 단계로 가야
+- [8:10](https://youtube.com/watch?v=SD3dKmswiPE&t=490) 할까요? 게리는 [음악] 여기서
+- [8:11](https://youtube.com/watch?v=SD3dKmswiPE&t=491) 기술보다 먼저 마음가짐을
+- [8:13](https://youtube.com/watch?v=SD3dKmswiPE&t=493) 이야기합니다. 그는 사람의 가치가
+- [8:15](https://youtube.com/watch?v=SD3dKmswiPE&t=495) 회사 가치, [음악] 팔로수, 돈
+- [8:17](https://youtube.com/watch?v=SD3dKmswiPE&t=497) 같은 외부 결과에 묶기면 불안해질
+- [8:19](https://youtube.com/watch?v=SD3dKmswiPE&t=499) 수밖에 없다고 말합니다. 자신은
+- [8:21](https://youtube.com/watch?v=SD3dKmswiPE&t=501) 실패를 당하면 내가 부족했구나 다시
+- [8:23](https://youtube.com/watch?v=SD3dKmswiPE&t=503) 해보자라고 [음악] 받아들이지 실패를
+- [8:25](https://youtube.com/watch?v=SD3dKmswiPE&t=505) 자기 존재의 부정으로 받아들이지
+- [8:27](https://youtube.com/watch?v=SD3dKmswiPE&t=507) 않는다고 하죠.이 이 관점은 AI가
+- [8:30](https://youtube.com/watch?v=SD3dKmswiPE&t=510) 사람을 아키텍트와 [음악] 메이슨으로
+- [8:31](https://youtube.com/watch?v=SD3dKmswiPE&t=511) 나눈다는 이야기와 연결됩니다.
+- [8:33](https://youtube.com/watch?v=SD3dKmswiPE&t=513) 아키텍트는 방향을 설계하고 도구를
+- [8:36](https://youtube.com/watch?v=SD3dKmswiPE&t=516) 다루는 사람이고 [음악] 메이슨은
+- [8:37](https://youtube.com/watch?v=SD3dKmswiPE&t=517) 지시받은 일을 반복하는 사람입니다.
+- [8:39](https://youtube.com/watch?v=SD3dKmswiPE&t=519) 하지만 게리는 메이슨도 아키텍트가
+- [8:41](https://youtube.com/watch?v=SD3dKmswiPE&t=521) [음악] 될 수 있다고 말합니다.
+- [8:42](https://youtube.com/watch?v=SD3dKmswiPE&t=522) 다만 그러려면 넷플릭스로 불안을
+- [8:45](https://youtube.com/watch?v=SD3dKmswiPE&t=525) 피하는 시간을 줄이고 도구를 배우고
+- [8:47](https://youtube.com/watch?v=SD3dKmswiPE&t=527) 책을 읽고 더 나은 사람들과 어울리는
+- [8:49](https://youtube.com/watch?v=SD3dKmswiPE&t=529) 행동이 필요합니다. 그는 여가를
+- [8:51](https://youtube.com/watch?v=SD3dKmswiPE&t=531) 없애라는 것이 아니라 현실 도피가
+- [8:53](https://youtube.com/watch?v=SD3dKmswiPE&t=533) 인생의 주식이 [음악] 되면
+- [8:55](https://youtube.com/watch?v=SD3dKmswiPE&t=535) 위험하다고 설명합니다. 이민자에 대한
+- [8:57](https://youtube.com/watch?v=SD3dKmswiPE&t=537) 조언도 같은 맥락입니다. 새로운
+- [8:59](https://youtube.com/watch?v=SD3dKmswiPE&t=539) 나라에 도착했다면 먼저 자신이 무엇을
+- [9:01](https://youtube.com/watch?v=SD3dKmswiPE&t=541) 잘하는지 아는 자기 인식이 [음악]
+- [9:03](https://youtube.com/watch?v=SD3dKmswiPE&t=543) 필요합니다. 그리고 예전 나라에서
+- [9:04](https://youtube.com/watch?v=SD3dKmswiPE&t=544) 대단한 사람이었더라도 처음에는 계산
+- [9:06](https://youtube.com/watch?v=SD3dKmswiPE&t=546) 때 일을 할 수 있는 겸손이
+- [9:08](https://youtube.com/watch?v=SD3dKmswiPE&t=548) 필요합니다. 마지막으로 밤마다이
+- [9:10](https://youtube.com/watch?v=SD3dKmswiPE&t=550) 나라에서는 [음악] 무엇이 팔리고
+- [9:11](https://youtube.com/watch?v=SD3dKmswiPE&t=551) 어디에 기회가 있는지 살피는 호기심이
+- [9:14](https://youtube.com/watch?v=SD3dKmswiPE&t=554) 필요합니다. 게리는 에고를 자신감이
+- [9:15](https://youtube.com/watch?v=SD3dKmswiPE&t=555) 아니라 불안에 다른 얼굴이라고
+- [9:17](https://youtube.com/watch?v=SD3dKmswiPE&t=557) 봅니다. 진짜 기업가는 큰 회사가
+- [9:19](https://youtube.com/watch?v=SD3dKmswiPE&t=559) 따라할까 봐 누워서 울지 [음악]
+- [9:20](https://youtube.com/watch?v=SD3dKmswiPE&t=560) 않습니다. 그 과정에서 배운 모든
+- [9:22](https://youtube.com/watch?v=SD3dKmswiPE&t=562) 것이 다음 기회를 준비해 주기
+- [9:24](https://youtube.com/watch?v=SD3dKmswiPE&t=564) 때문입니다. 그리고 꼭 창업자가
+- [9:25](https://youtube.com/watch?v=SD3dKmswiPE&t=565) [음악] 아니어도 괜찮다고 말합니다.
+- [9:27](https://youtube.com/watch?v=SD3dKmswiPE&t=567) 페이스북의 초기 직원, 테슬라의 초기
+- [9:29](https://youtube.com/watch?v=SD3dKmswiPE&t=569) 직원처럼 위대한 팀 안에서 일하는
+- [9:31](https://youtube.com/watch?v=SD3dKmswiPE&t=571) 것도 [음악] 훌륭한 길입니다.
+- [9:33](https://youtube.com/watch?v=SD3dKmswiPE&t=573) 마지막으로 그는 매일 쓰는 도구로
+- [9:34](https://youtube.com/watch?v=SD3dKmswiPE&t=574) GPT, 클로드, 메타 AI를
+- [9:37](https://youtube.com/watch?v=SD3dKmswiPE&t=577) 언급하고 좋은 질문은 문화의 [음악]
+- [9:39](https://youtube.com/watch?v=SD3dKmswiPE&t=579) 다음 변화를 예측하는 데서 나온다고
+- [9:41](https://youtube.com/watch?v=SD3dKmswiPE&t=581) 말합니다. 대학은 의사나 변호사처럼
+- [9:43](https://youtube.com/watch?v=SD3dKmswiPE&t=583) 자격이 필요한 사람에게는 필요하지만
+- [9:45](https://youtube.com/watch?v=SD3dKmswiPE&t=585) 큰 빚을지는 [음악] 창의적
+- [9:46](https://youtube.com/watch?v=SD3dKmswiPE&t=586) 창업계에게는 다시 생각해 볼 문제라고
+- [9:49](https://youtube.com/watch?v=SD3dKmswiPE&t=589) 봅니다. 결국 피해야 할 산업은 따로
+- [9:51](https://youtube.com/watch?v=SD3dKmswiPE&t=591) 없고 생각 없이 반복하는 태도만
+- [9:53](https://youtube.com/watch?v=SD3dKmswiPE&t=593) 피해야 합니다. 오늘 영상은
+- [9:54](https://youtube.com/watch?v=SD3dKmswiPE&t=594) 여기까지입니다. 여러분들은 어떤
+- [9:56](https://youtube.com/watch?v=SD3dKmswiPE&t=596) 내용이 가장 인상 깊으셨나요? 게리
+- [9:58](https://youtube.com/watch?v=SD3dKmswiPE&t=598) 바이너측의 이야기를 관통하는 핵심은
+- [10:00](https://youtube.com/watch?v=SD3dKmswiPE&t=600) AI [음악] 시대가 끝이 아니라
+- [10:01](https://youtube.com/watch?v=SD3dKmswiPE&t=601) 전환점이라는 것입니다. 기업이 많은
+- [10:04](https://youtube.com/watch?v=SD3dKmswiPE&t=604) 것을 가져갈 수 있고 평범하게
+- [10:05](https://youtube.com/watch?v=SD3dKmswiPE&t=605) 반복하던 일은 분명 위험해질 수
+- [10:08](https://youtube.com/watch?v=SD3dKmswiPE&t=608) 있습니다. 하지만 동시에 개인이 작은
+- [10:10](https://youtube.com/watch?v=SD3dKmswiPE&t=610) 앱을 만들고 콘텐츠로 고객을 모으고
+- [10:12](https://youtube.com/watch?v=SD3dKmswiPE&t=612) 브랜드와 신뢰를 쌓을 기회도 열리고
+- [10:14](https://youtube.com/watch?v=SD3dKmswiPE&t=614) 있습니다. 결국 중요한 것은 [음악]
+- [10:16](https://youtube.com/watch?v=SD3dKmswiPE&t=616) 기술을 두려워하는 것이 아니라 그
+- [10:18](https://youtube.com/watch?v=SD3dKmswiPE&t=618) 기술로 내가 무엇을 더 잘할 수
+- [10:20](https://youtube.com/watch?v=SD3dKmswiPE&t=620) 있는지 묻는 태도입니다. 그리고
+- [10:22](https://youtube.com/watch?v=SD3dKmswiPE&t=622) 실패를 내 가치의 증거로 보지
+- [10:23](https://youtube.com/watch?v=SD3dKmswiPE&t=623) [음악] 않고 다음 기회를 준비하는
+- [10:25](https://youtube.com/watch?v=SD3dKmswiPE&t=625) 훈련으로 받아들이는 마음도 필요하죠.
+- [10:27](https://youtube.com/watch?v=SD3dKmswiPE&t=627) 오늘 영상이 여러분들이 AI 시대를
+- [10:30](https://youtube.com/watch?v=SD3dKmswiPE&t=630) [음악] 기회로 바꾸는데 도움이
+- [10:31](https://youtube.com/watch?v=SD3dKmswiPE&t=631) 되셨길 바라며 정상에서 뵙겠습니다.
+- [10:34](https://youtube.com/watch?v=SD3dKmswiPE&t=634) 감사합니다. 지금까지 동기부여
+- [10:35](https://youtube.com/watch?v=SD3dKmswiPE&t=635) 학과였습니다. 입니다.
+- [10:41](https://youtube.com/watch?v=SD3dKmswiPE&t=641) [음악]
