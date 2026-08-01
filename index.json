@@ -4122,5 +4122,47 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-08-01-Turn-Claude-Into-A-Design-GENIUS-In-3.md",
+    "title": "Turn Claude Into A Design GENIUS In 3 Simple Steps",
+    "category": "Picks전략",
+    "date": "2026-08-01",
+    "core_message": "AI에게 '취향'을 주입하는 체계적인 수집-도구-반복 워크플로우로 AI 슬롭을 극복할 수 있다.",
+    "topics": [
+      "검증"
+    ],
+    "concepts": [
+      {
+        "id": "ai-slop",
+        "label": "AI 슬롭",
+        "topic": "검증"
+      },
+      {
+        "id": "취향-라이브러리",
+        "label": "취향 라이브러리",
+        "topic": null
+      },
+      {
+        "id": "Impeccable",
+        "label": "Impeccable",
+        "topic": null
+      },
+      {
+        "id": "Taste-Skill",
+        "label": "Taste Skill",
+        "topic": null
+      },
+      {
+        "id": "Higgs-Field-MCP",
+        "label": "Higgs Field MCP",
+        "topic": null
+      },
+      {
+        "id": "21st.dev",
+        "label": "21st.dev",
+        "topic": null
+      }
+    ]
   }
 ]
