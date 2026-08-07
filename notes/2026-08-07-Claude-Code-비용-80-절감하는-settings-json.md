@@ -1,0 +1,333 @@
+---
+title: "Claude Code 비용 80% 절감하는 settings.json 3줄과 14만명이 쓰는 everything-claude-code 설정법"
+source_url: https://youtube.com/watch?v=4rN-UWKSmp0
+video_id: 4rN-UWKSmp0
+source_type: youtube
+lang: ko
+analyzed: 2026-08-07
+category: 일반학습
+tags: ["주제/컨텍스트관리", "개념/컨텍스트관리/context-rot", "개념/컨텍스트관리/context-engineering", "개념/컨텍스트관리/compaction", "주제/AI에이전트", "개념/AI에이전트/sub-agent", "주제/스킬", "개념/스킬/claude-skill", "개념/메모리-학습-시스템"]
+key_concepts: ["컨텍스트 부패", "컨텍스트 엔지니어링", "컴팩션", "서브 에이전트", "클로드 스킬", "메모리 학습 시스템"]
+status: active
+---
+# Claude Code 비용 80% 절감하는 settings.json 3줄과 14만명이 쓰는 everything-claude-code 설정법
+
+## 🧠 이해 (Understand)
+- **Summary:** 클로드 코드를 장시간 사용하면 출력 품질이 서서히 저하되는 '컨텍스트 부패(Context Rot)' 현상이 발생한다. 이를 해결하는 깃허브 저장소 'Everything Claude Code'(스타 14만3천 개)를 소개하며, settings.json 세 줄 수정만으로 API 비용을 80% 절감할 수 있다. 저장소 핵심은 작업 패턴을 자동 학습·저장·공유하는 메모리 학습 시스템(Continuous Learning V2)이며, 팀 간 노하우 이전도 가능하다. 보안 스캐너 'Agent Shield'로 클로드 코드 설정 전체의 취약점을 무설치로 검사할 수 있다. 순서는 settings.json 세 줄 → Strategic Compact 스킬 → 메모리 학습 시스템 순으로 단계적 적용을 권장한다.
+- **Core Message:** 클로드 코드가 갑자기 멍청해지는 건 컨텍스트 부패라는 구조적 문제이며, Everything Claude Code 저장소의 세 가지 설정(비용 절감 → 컨텍스트 관리 → 메모리 학습)을 순서대로 적용하면 비용과 품질 저하를 동시에 잡을 수 있다.
+> 클로드 코드가 갑자기 멍청해지는 건 버그가 아니라 컨텍스트 로트라는 진짜 현상이고, 이름까지 붙은 문제예요.
+> 한 사람이 열 달 동안 자기 워크플로를 다듬은 결과 치고는 거의 미친 수준이에요.
+> 절대로 구현 도중에 콤팩트하지 마세요. 변수명이랑 파일 경로랑 부분 상태를 다 잃어버립니다.
+❗ Everything Claude Code 저장소는 만든 지 겨우 80일 만에 깃허브 스타 14만3천 개를 달성했다.
+❗ MCP 서버를 모두 켜두면 20만 토큰짜리 컨텍스트 윈도우가 7만 토큰까지 줄어든다.
+❗ 기본 settings.json의 'maxThinkingTokens' 기본값은 31,999이며, 이를 1만으로 줄이면 숨은 비용이 약 70% 절감된다.
+
+## 📚 핵심 용어
+- **컨텍스트 부패:** 클로드를 장시간 사용할수록 출력 품질이 눈에 띄지 않게 서서히 저하되는 구조적 현상. / 장거리 운전할수록 트렁크 짐이 쌓여 연비와 핸들이 무거워지는 것처럼, 대화가 길어질수록 AI 응답이 둔해진다. / 일반 버그는 에러 메시지로 즉시 드러나지만, 컨텍스트 부패는 조용히 품질만 떨어져 원인을 찾기가 훨씬 어렵다.
+- **컴팩션:** 작업 마일스톤 사이에 누적된 컨텍스트를 요약·압축해 토큰을 확보하는 명령(slash compact). / 냉장고가 꽉 찼을 때 남은 음식을 정리해 공간을 만드는 것처럼, 작업 중간에 대화 기록을 압축해 여유를 만든다. / slash clear는 완전히 다른 작업 시작 시 컨텍스트를 통째로 비우는 것, slash compact는 같은 작업 흐름 안에서 압축만 하는 것.
+- **클로드 스킬:** 반복 패턴이 축적되면 재사용 가능한 모듈로 승격되는 클로드 코드의 학습 단위. / 업무 매뉴얼처럼, 자주 쓰는 작업 방식을 한 번 정리해두면 다음엔 꺼내 쓰기만 하면 된다. / 일반 프롬프트는 매번 다시 입력해야 하지만, 스킬은 저장·공유·재사용이 가능한 재활용 가능한 명령 묶음이다.
+- **서브 에이전트:** 클로드 코드가 작업 시 자동으로 띄우는 보조 AI 인스턴스로, 메인 모델과 별도로 비용이 발생한다. / 팀장(메인 모델)이 일을 지시하면 막내 직원(서브 에이전트)이 실무를 처리하는 구조로, 막내에게 굳이 비싼 전문가 대우를 할 필요는 없다. / 메인 모델은 깊은 추론이 필요한 Sonnet/Opus, 서브 에이전트는 단순 보조 작업이므로 저렴한 Haiku로 충분하다.
+
+## 🚀 실행 (Execute)
+- [ ] settings.json에 세 줄 추가: model=sonnet, maxThinkingTokens=10000, subAgentModel=haiku — ⏰ 오늘 · ⚡ 10분
+  - 담당: 나
+  - 이유: 즉시 API 비용 80% 절감 가능하며, 설정 변경만으로 다음 달 청구서가 눈에 띄게 줄어든다.
+- [ ] slash compact 사용 시점 규칙 정하기: 리서치→구현, 디버깅→다음 기능 전환 시점에만 사용하도록 워크플로에 메모 — ⏰ 이번 주 · ⚡ 30분
+  - 담당: 나
+  - 이유: 컨텍스트 부패의 핵심 대응 습관이며, 구현 도중 잘못 사용하면 작업 상태를 잃는다.
+- [ ] Everything Claude Code 저장소에서 Strategic Compact, Search First, TDD Workflow 스킬 3개만 먼저 설치 후 2주간 사용해보기 — ⏰ 이번 주 · ⚡ 1시간
+  - 담당: 나
+  - 이유: 156개 전체를 한꺼번에 깔면 오히려 컨텍스트 부담이 늘어나므로, 핵심 코어 3개부터 검증 후 확장해야 한다.
+- 자료: 깃허브 저장소: github.com/disler/everything-claude-code (스크립트 언급 저장소, 실제 존재 확인 필요)
+- 자료: 보안 스캐너 실행: npx ecc agent-shield scan (스크립트 언급, 패키지명 정확도 확인 필요)
+- 자료: Anthropic 공식 Claude Code 문서: docs.anthropic.com/claude/docs/claude-code (확인 필요)
+- Timeline: 1일차: settings.json 세 줄 수정(비용 즉시 절감) → 1주차: slash compact/clear 습관 정착 + 핵심 스킬 3개 설치 → 2~3주차: 메모리 학습 시스템(Continuous Learning V2) 적용 및 팀 공유 → 한 달 후: Agent Shield로 보안 설정 점검
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-컨텍스트관리]] · [[_topic-AI에이전트]] · [[_topic-스킬]]
+- 핵심 개념: [[_concept-context-rot|컨텍스트 부패]] · [[_concept-context-engineering|컨텍스트 엔지니어링]] · [[_concept-compaction|컴팩션]] · [[_concept-sub-agent|서브 에이전트]] · [[_concept-claude-skill|클로드 스킬]] · [[_concept-메모리-학습-시스템|메모리 학습 시스템]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=4rN-UWKSmp0&t=0) 클로드 코드를 한참 쓰다 보면 갑자기
+- [0:02](https://youtube.com/watch?v=4rN-UWKSmp0&t=2) 멍청해지는 순간이 옵니다. 같은
+- [0:04](https://youtube.com/watch?v=4rN-UWKSmp0&t=4) 실수를 두 세 번 반복하고 분명히
+- [0:06](https://youtube.com/watch?v=4rN-UWKSmp0&t=6) 알려준 규칙을 까먹고 시키지도 않은
+- [0:08](https://youtube.com/watch?v=4rN-UWKSmp0&t=8) 파일을 건드리고 이거 버그 아닙니다.
+- [0:11](https://youtube.com/watch?v=4rN-UWKSmp0&t=11) 컨텍스트 로트라는 진짜 현상이고
+- [0:14](https://youtube.com/watch?v=4rN-UWKSmp0&t=14) 이름까지 붙은 문제예요. 그리고 지금
+- [0:16](https://youtube.com/watch?v=4rN-UWKSmp0&t=16) 14만 명이 즐겨찾기 한 기터브
+- [0:18](https://youtube.com/watch?v=4rN-UWKSmp0&t=18) 저장소가이 문제를 통째로 풀어
+- [0:20](https://youtube.com/watch?v=4rN-UWKSmp0&t=20) 놨습니다. 만든지 겨우 80일 된
+- [0:22](https://youtube.com/watch?v=4rN-UWKSmp0&t=22) 저장소가요. 오늘 다룰 도구는
+- [0:24](https://youtube.com/watch?v=4rN-UWKSmp0&t=24) 에브리팅 클로드 코드라는 기터브
+- [0:26](https://youtube.com/watch?v=4rN-UWKSmp0&t=26) 저장소예요. 엔스로픽 해커톤 우승자
+- [0:29](https://youtube.com/watch?v=4rN-UWKSmp0&t=29) 앞판 무스타파라는 사람이 열 달 동안
+- [0:32](https://youtube.com/watch?v=4rN-UWKSmp0&t=32) 매일 다듬은 클로드 코드 세팅을
+- [0:34](https://youtube.com/watch?v=4rN-UWKSmp0&t=34) 통째로 오픈 소스로 공개한 건데 지금
+- [0:37](https://youtube.com/watch?v=4rN-UWKSmp0&t=37) 스타가 14만3,000개입니다.
+- [0:39](https://youtube.com/watch?v=4rN-UWKSmp0&t=39) 한국 인구로 따지면 약 0.3%가
+- [0:42](https://youtube.com/watch?v=4rN-UWKSmp0&t=42) 이걸 즐겨 찾게 해 놨다는 뜻이에요.
+- [0:44](https://youtube.com/watch?v=4rN-UWKSmp0&t=44) 오늘 영상에서 다룰 건 세
+- [0:45](https://youtube.com/watch?v=4rN-UWKSmp0&t=45) 가지입니다. 첫째, 클로드 코드가
+- [0:47](https://youtube.com/watch?v=4rN-UWKSmp0&t=47) 갑자기 멍청해지는 진짜 이유. 둘째,
+- [0:51](https://youtube.com/watch?v=4rN-UWKSmp0&t=51) 비용을 80% 줄이는 세팅스 제이슨
+- [0:53](https://youtube.com/watch?v=4rN-UWKSmp0&t=53) 세 줄. 셋째,이 저장소의 진짜
+- [0:56](https://youtube.com/watch?v=4rN-UWKSmp0&t=56) 핵심인 메모리 학습 시스템과 보안
+- [0:57](https://youtube.com/watch?v=4rN-UWKSmp0&t=57) 스캐너까지요. 영상을 끝까지 보시고
+- [1:00](https://youtube.com/watch?v=4rN-UWKSmp0&t=60) 좋아요와 댓글 구독해 주시면 에브리팅
+- [1:03](https://youtube.com/watch?v=4rN-UWKSmp0&t=63) 클로드 코드 핵심 가이드 PDF를
+- [1:05](https://youtube.com/watch?v=4rN-UWKSmp0&t=65) 받으실 수 있는 링크를 영상 마지막에
+- [1:08](https://youtube.com/watch?v=4rN-UWKSmp0&t=68) 말씀드리겠습니다. 먼저 만든 사람부터
+- [1:10](https://youtube.com/watch?v=4rN-UWKSmp0&t=70) 짚고 갈게요. 아판 무스타판은
+- [1:13](https://youtube.com/watch?v=4rN-UWKSmp0&t=73) 샌프란시스코에서
+- [1:14](https://youtube.com/watch?v=4rN-UWKSmp0&t=74) AI랑 금융분야 스타트업을 하는
+- [1:17](https://youtube.com/watch?v=4rN-UWKSmp0&t=77) 빌더예요. 작년 가을에 앤스로픽이랑
+- [1:19](https://youtube.com/watch?v=4rN-UWKSmp0&t=79) 포럼 벤처스가 뉴욕에서 연커톤이
+- [1:21](https://youtube.com/watch?v=4rN-UWKSmp0&t=81) 있었는데 100팀이 넘게 참가한 그
+- [1:24](https://youtube.com/watch?v=4rN-UWKSmp0&t=84) 대회에서 1등을 했습니다. 동료랑
+- [1:26](https://youtube.com/watch?v=4rN-UWKSmp0&t=86) 둘이서 제니스 다체이라는 서비스를
+- [1:29](https://youtube.com/watch?v=4rN-UWKSmp0&t=89) 클로드 코드로 8시간 만에
+- [1:31](https://youtube.com/watch?v=4rN-UWKSmp0&t=91) 만들어서요. 상금으로만 5,000달러
+- [1:33](https://youtube.com/watch?v=4rN-UWKSmp0&t=93) 어치 엔스로픽 API 크레딧을
+- [1:34](https://youtube.com/watch?v=4rN-UWKSmp0&t=94) 받았고이 사람이 X에 올린 클로드
+- [1:37](https://youtube.com/watch?v=4rN-UWKSmp0&t=97) 코드 가이드 트윗이 누적 천만 뷰가
+- [1:39](https://youtube.com/watch?v=4rN-UWKSmp0&t=99) 넘습니다. 그러니까 어디 잘 모르는
+- [1:41](https://youtube.com/watch?v=4rN-UWKSmp0&t=101) 사람이 한번 만들어 본게 아니고
+- [1:43](https://youtube.com/watch?v=4rN-UWKSmp0&t=103) 진짜로 매일 클로드 코드로 먹고 사는
+- [1:45](https://youtube.com/watch?v=4rN-UWKSmp0&t=105) 사람이 자기 노하우를 통째로 푼
+- [1:48](https://youtube.com/watch?v=4rN-UWKSmp0&t=108) 거예요. 자, 그럼 본론으로 들어가서
+- [1:51](https://youtube.com/watch?v=4rN-UWKSmp0&t=111) 컨텍스트 로트가 도대체 뭔지부터
+- [1:52](https://youtube.com/watch?v=4rN-UWKSmp0&t=112) 설명드리겠습니다. 컨텍스트 로트를
+- [1:55](https://youtube.com/watch?v=4rN-UWKSmp0&t=115) 한국말로 풀면 컨텍스트가 썩는다는
+- [1:57](https://youtube.com/watch?v=4rN-UWKSmp0&t=117) 뜻이에요. 클로드한테 한시간, 두시간
+- [2:00](https://youtube.com/watch?v=4rN-UWKSmp0&t=120) 계속 일을 시키다 보면 출력 품질이
+- [2:02](https://youtube.com/watch?v=4rN-UWKSmp0&t=122) 서서히 무너지는 현상을 말합니다.
+- [2:04](https://youtube.com/watch?v=4rN-UWKSmp0&t=124) 무서운 건 크래시가 나거나 에러가
+- [2:06](https://youtube.com/watch?v=4rN-UWKSmp0&t=126) 뜨는게 아니라 그냥 왠지 멍청해진다는
+- [2:08](https://youtube.com/watch?v=4rN-UWKSmp0&t=128) 거예요. 그래서 잡기가 진짜
+- [2:10](https://youtube.com/watch?v=4rN-UWKSmp0&t=130) 어렵습니다. 여러분이 잘못한 줄
+- [2:12](https://youtube.com/watch?v=4rN-UWKSmp0&t=132) 아시는데 사실은 구조적 문제예요.
+- [2:14](https://youtube.com/watch?v=4rN-UWKSmp0&t=134) 원인은 크게네 가지인데 첫째는 어텐션
+- [2:17](https://youtube.com/watch?v=4rN-UWKSmp0&t=137) 희석이라고 해서 문맥이 길어질수록
+- [2:19](https://youtube.com/watch?v=4rN-UWKSmp0&t=139) 중간에 있는 정보를 클로드가 잘 못
+- [2:21](https://youtube.com/watch?v=4rN-UWKSmp0&t=141) 떠올립니다. 둘째는 명령 충돌,
+- [2:24](https://youtube.com/watch?v=4rN-UWKSmp0&t=144) 누적된 지시문이 서로 모순서 클로드가
+- [2:27](https://youtube.com/watch?v=4rN-UWKSmp0&t=147) 어느 쪽을 따라야 할지 헷갈려해요.
+- [2:29](https://youtube.com/watch?v=4rN-UWKSmp0&t=149) 셋째는 토큰 예산 압박. 부풀어 오른
+- [2:31](https://youtube.com/watch?v=4rN-UWKSmp0&t=151) 시작 파일이 정작 작업할 토큰을 다
+- [2:34](https://youtube.com/watch?v=4rN-UWKSmp0&t=154) 잡아먹습니다. 넷째는 관련성 미스
+- [2:36](https://youtube.com/watch?v=4rN-UWKSmp0&t=156) 매치. 모든 파일이 매번 다
+- [2:38](https://youtube.com/watch?v=4rN-UWKSmp0&t=158) 로드되니까 지금 작업이랑 상관없는
+- [2:41](https://youtube.com/watch?v=4rN-UWKSmp0&t=161) 정보까지 클로드 머릿속에 다 들어가
+- [2:43](https://youtube.com/watch?v=4rN-UWKSmp0&t=163) 있는 거죠. 이걸 자동차에 비유하면
+- [2:45](https://youtube.com/watch?v=4rN-UWKSmp0&t=165) 이렇습니다. 20만 토큰이라는 거대한
+- [2:47](https://youtube.com/watch?v=4rN-UWKSmp0&t=167) 연료 탱크가 있는데 출발할 때 이미
+- [2:50](https://youtube.com/watch?v=4rN-UWKSmp0&t=170) 트렁크의 짐을 한 가득 싣고 시작하는
+- [2:52](https://youtube.com/watch?v=4rN-UWKSmp0&t=172) 거예요. 운전은 가능하긴 한데 연비도
+- [2:54](https://youtube.com/watch?v=4rN-UWKSmp0&t=174) 떨어지고 핸들도 무거워집니다. 그게
+- [2:57](https://youtube.com/watch?v=4rN-UWKSmp0&t=177) 컨텍스트 로트입니다. 그래서 외국
+- [3:00](https://youtube.com/watch?v=4rN-UWKSmp0&t=180) 가이드 글에서는 한 파일을
+- [3:02](https://youtube.com/watch?v=4rN-UWKSmp0&t=182) 2,000에서 3,000 토큰
+- [3:04](https://youtube.com/watch?v=4rN-UWKSmp0&t=184) 그러니까 한글로 100 단어 정도
+- [3:07](https://youtube.com/watch?v=4rN-UWKSmp0&t=187) 넘으면 점검 신호로 보라고 권장해요.
+- [3:09](https://youtube.com/watch?v=4rN-UWKSmp0&t=189) 클로드 MD가 너무 두꺼우면 이미 그
+- [3:12](https://youtube.com/watch?v=4rN-UWKSmp0&t=192) 자체로 멍청해지는 원인이라는 거죠.
+- [3:14](https://youtube.com/watch?v=4rN-UWKSmp0&t=194) 아참이 영상은 핑거로 만들었습니다.
+- [3:17](https://youtube.com/watch?v=4rN-UWKSmp0&t=197) 이런 영상을 딸각으로 만드시려면
+- [3:19](https://youtube.com/watch?v=4rN-UWKSmp0&t=199) 핑거닷이오에 접속해 보세요. 설명란에
+- [3:22](https://youtube.com/watch?v=4rN-UWKSmp0&t=202) 링크가 있습니다. 제가 직접 녹음하고
+- [3:24](https://youtube.com/watch?v=4rN-UWKSmp0&t=204) 편집해서 하루 종일 만든 영상은
+- [3:26](https://youtube.com/watch?v=4rN-UWKSmp0&t=206) 조회수가 천도 안 나왔는데 딸깍 만든
+- [3:29](https://youtube.com/watch?v=4rN-UWKSmp0&t=209) 영상들은 몇만의 조회수가 나오면서
+- [3:32](https://youtube.com/watch?v=4rN-UWKSmp0&t=212) 영상마다 몇 만 원의 조회수 수익,
+- [3:34](https://youtube.com/watch?v=4rN-UWKSmp0&t=214) 수십만 원의 강의 판매 수익이
+- [3:36](https://youtube.com/watch?v=4rN-UWKSmp0&t=216) 있습니다. 판매하시는 전문 서비스나
+- [3:38](https://youtube.com/watch?v=4rN-UWKSmp0&t=218) 상품이 있다면 딸각으로 만든 영상으로
+- [3:41](https://youtube.com/watch?v=4rN-UWKSmp0&t=221) 내 서비스를 홍보하실 수 있어요.
+- [3:43](https://youtube.com/watch?v=4rN-UWKSmp0&t=223) 그럼 이제 본격적으로 14만 명이
+- [3:45](https://youtube.com/watch?v=4rN-UWKSmp0&t=225) 즐겨 찾기 한이 저장소 안에 도대체
+- [3:47](https://youtube.com/watch?v=4rN-UWKSmp0&t=227) 뭐가 들어 있는지 들여다보겠습니다.
+- [3:49](https://youtube.com/watch?v=4rN-UWKSmp0&t=229) 에브리팅 클로드 코드는 단순한 설정
+- [3:51](https://youtube.com/watch?v=4rN-UWKSmp0&t=231) 모음이 아니에요. 안에 들어 있는 걸
+- [3:53](https://youtube.com/watch?v=4rN-UWKSmp0&t=233) 한번 세워 보면 전문 영역별 서브
+- [3:55](https://youtube.com/watch?v=4rN-UWKSmp0&t=235) 에이전트 38개. 필요할 때만
+- [3:57](https://youtube.com/watch?v=4rN-UWKSmp0&t=237) 로드되는 스킬 56개, 슬래시 명령어
+- [4:00](https://youtube.com/watch?v=4rN-UWKSmp0&t=240) 72개, 항상 따르는 롤 34개
+- [4:03](https://youtube.com/watch?v=4rN-UWKSmp0&t=243) 그리고 기터브 슈퍼베이스 컨텍스트 7
+- [4:06](https://youtube.com/watch?v=4rN-UWKSmp0&t=246) 같은 MCP 서버 연동 설정 14개.
+- [4:09](https://youtube.com/watch?v=4rN-UWKSmp0&t=249) 거기에 1282 개의 자동화 테스트가
+- [4:12](https://youtube.com/watch?v=4rN-UWKSmp0&t=252) 통과하고 커버리지가 98%입니다. 한
+- [4:15](https://youtube.com/watch?v=4rN-UWKSmp0&t=255) 사람이 열 달 동안 자기 워크풀로
+- [4:17](https://youtube.com/watch?v=4rN-UWKSmp0&t=257) 다듬은 결과 치고는 거의 미친
+- [4:19](https://youtube.com/watch?v=4rN-UWKSmp0&t=259) 수준이에요. 더 놀라운 건 이게
+- [4:21](https://youtube.com/watch?v=4rN-UWKSmp0&t=261) 클로드 코드만이 아니라 커서 코덱스,
+- [4:24](https://youtube.com/watch?v=4rN-UWKSmp0&t=264) 오픈 코드, 안티그래비티,
+- [4:25](https://youtube.com/watch?v=4rN-UWKSmp0&t=265) 재미나이까지 같은 설정으로 다
+- [4:28](https://youtube.com/watch?v=4rN-UWKSmp0&t=268) 동작합니다. 루트의 에이전츠 MD라는
+- [4:30](https://youtube.com/watch?v=4rN-UWKSmp0&t=270) 파일 하나만 두면 여섯 개 툴이 다
+- [4:33](https://youtube.com/watch?v=4rN-UWKSmp0&t=273) 그걸 읽어요. 자, 그럼 가장
+- [4:34](https://youtube.com/watch?v=4rN-UWKSmp0&t=274) 실용적인 부분으로 들어가겠습니다.
+- [4:37](https://youtube.com/watch?v=4rN-UWKSmp0&t=277) 비용 80% 절감하는 세팅스 제이슨
+- [4:39](https://youtube.com/watch?v=4rN-UWKSmp0&t=279) 세 줄이 뭐냐? 홈 디렉토리에 있는
+- [4:41](https://youtube.com/watch?v=4rN-UWKSmp0&t=281) 클로드 폴더의 세팅스 제이슨 파일을
+- [4:43](https://youtube.com/watch?v=4rN-UWKSmp0&t=283) 열고 딱 세 가지를 추가하면 됩니다.
+- [4:46](https://youtube.com/watch?v=4rN-UWKSmp0&t=286) 첫째, 모델을 오퍼스 대신 소으로
+- [4:48](https://youtube.com/watch?v=4rN-UWKSmp0&t=288) 바꾸세요. 이거 하나만으로 약 60%
+- [4:51](https://youtube.com/watch?v=4rN-UWKSmp0&t=291) 비용이 절감됩니다. 아판이 직접
+- [4:53](https://youtube.com/watch?v=4rN-UWKSmp0&t=293) 측정한 바로는 코딩 작업의 80%는
+- [4:56](https://youtube.com/watch?v=4rN-UWKSmp0&t=296) 소넷으로 충분하다고 해요. 진짜 깊은
+- [4:59](https://youtube.com/watch?v=4rN-UWKSmp0&t=299) 아키텍처 고민이나 복잡한 디버깅이
+- [5:01](https://youtube.com/watch?v=4rN-UWKSmp0&t=301) 필요할 때만 슬래시 모델 오퍼스로
+- [5:03](https://youtube.com/watch?v=4rN-UWKSmp0&t=303) 잠깐 바꾸시면 됩니다. 둘째 줄은
+- [5:05](https://youtube.com/watch?v=4rN-UWKSmp0&t=305) 맥스 think킹 토큰스라는 환경
+- [5:07](https://youtube.com/watch?v=4rN-UWKSmp0&t=307) 변수를 1만으로 줄이세요.
+- [5:09](https://youtube.com/watch?v=4rN-UWKSmp0&t=309) 클로드한테는 우리한테 안 보이는 띵킹
+- [5:11](https://youtube.com/watch?v=4rN-UWKSmp0&t=311) 토큰이라는게 있는데 기본값이
+- [5:13](https://youtube.com/watch?v=4rN-UWKSmp0&t=313) 31,999입니다.
+- [5:15](https://youtube.com/watch?v=4rN-UWKSmp0&t=315) 이게 답변하기 전에 클로드가
+- [5:17](https://youtube.com/watch?v=4rN-UWKSmp0&t=317) 머릿속으로 생각하는 분량인데 사실
+- [5:19](https://youtube.com/watch?v=4rN-UWKSmp0&t=319) 대부분의 작업에서는 이만큼 필요
+- [5:21](https://youtube.com/watch?v=4rN-UWKSmp0&t=321) 없어요.만으로 줄이면 숨은 비용이 약
+- [5:23](https://youtube.com/watch?v=4rN-UWKSmp0&t=323) 70% 줄어듭니다. 셋째 줄은 클로드
+- [5:26](https://youtube.com/watch?v=4rN-UWKSmp0&t=326) 코드 서브 에이전트 모델이라는 변수를
+- [5:28](https://youtube.com/watch?v=4rN-UWKSmp0&t=328) 하이쿠로 설정하세요. 클로드 코드는
+- [5:31](https://youtube.com/watch?v=4rN-UWKSmp0&t=331) 작업할 때 보조 역할을 하는
+- [5:32](https://youtube.com/watch?v=4rN-UWKSmp0&t=332) 서브에트를 자동으로 띄우는데이 보조
+- [5:35](https://youtube.com/watch?v=4rN-UWKSmp0&t=335) 일꾼까지 굳이 비싼 모델을 쓸 필요가
+- [5:37](https://youtube.com/watch?v=4rN-UWKSmp0&t=337) 없습니다. 하이크로 바꾸면 약 80%
+- [5:40](https://youtube.com/watch?v=4rN-UWKSmp0&t=340) 절감됩니다.이 세 줄을 다 적용하면
+- [5:43](https://youtube.com/watch?v=4rN-UWKSmp0&t=343) 누적으로 기본 설정 대비 80% 이상
+- [5:46](https://youtube.com/watch?v=4rN-UWKSmp0&t=346) 절감이 가능해요. 같은 작업을 두 번
+- [5:48](https://youtube.com/watch?v=4rN-UWKSmp0&t=348) 했을 때 한 번은 4달러 나오던게
+- [5:50](https://youtube.com/watch?v=4rN-UWKSmp0&t=350) 다른 한 번은 60 나오는 식이죠.
+- [5:53](https://youtube.com/watch?v=4rN-UWKSmp0&t=353) 한 달 청구서로 환산하면 진짜 무시
+- [5:55](https://youtube.com/watch?v=4rN-UWKSmp0&t=355) 못 합니다. 그런데 세팅을 바꾼다고
+- [5:57](https://youtube.com/watch?v=4rN-UWKSmp0&t=357) 끝나는게 아닙니다. 손가락 습관도
+- [6:00](https://youtube.com/watch?v=4rN-UWKSmp0&t=360) 같이 바꿔야 해요. 클로드 코드에는
+- [6:02](https://youtube.com/watch?v=4rN-UWKSmp0&t=362) 슬래시클리어랑 슬래시 콤팩트라는 두
+- [6:04](https://youtube.com/watch?v=4rN-UWKSmp0&t=364) 가지 명령이 있는데 대부분 차이를
+- [6:06](https://youtube.com/watch?v=4rN-UWKSmp0&t=366) 모르고 쓰십니다. 슬래시 클리어는
+- [6:08](https://youtube.com/watch?v=4rN-UWKSmp0&t=368) 무관한 작업 사이에 쓰는 거예요.이
+- [6:10](https://youtube.com/watch?v=4rN-UWKSmp0&t=370) 작업은 끝났고 이제 완전히 다른 일을
+- [6:12](https://youtube.com/watch?v=4rN-UWKSmp0&t=372) 한다 싶으면 무료로 즉시 컨텍스트를
+- [6:15](https://youtube.com/watch?v=4rN-UWKSmp0&t=375) 통째로 비우는 거죠. 슬래시 콤팩트는
+- [6:18](https://youtube.com/watch?v=4rN-UWKSmp0&t=378) 마일스톤 사이에 쓰는 거고요.
+- [6:19](https://youtube.com/watch?v=4rN-UWKSmp0&t=379) 리서치가 끝나고 구현 들어가기 직전,
+- [6:22](https://youtube.com/watch?v=4rN-UWKSmp0&t=382) 디버인 끝나고 다음 기능 들어가기
+- [6:24](https://youtube.com/watch?v=4rN-UWKSmp0&t=384) 직전. 이런 자연스러운 끊김 지점에서
+- [6:26](https://youtube.com/watch?v=4rN-UWKSmp0&t=386) 컨텍스트를 요약 압축합니다. 절대로
+- [6:29](https://youtube.com/watch?v=4rN-UWKSmp0&t=389) 구현도 중에 콤팩트하지 마세요.
+- [6:31](https://youtube.com/watch?v=4rN-UWKSmp0&t=391) 변수명이랑 파일 경로랑 부분 상태를
+- [6:33](https://youtube.com/watch?v=4rN-UWKSmp0&t=393) 다 잃어버립니다. 에브리팅 클로드
+- [6:35](https://youtube.com/watch?v=4rN-UWKSmp0&t=395) 코드의 스트레티지 콤팩트라는 스킬이
+- [6:37](https://youtube.com/watch?v=4rN-UWKSmp0&t=397) 적절한 시점에 자동으로 콤팩트를
+- [6:39](https://youtube.com/watch?v=4rN-UWKSmp0&t=399) 제안해 줍니다. 그리고 또 하나
+- [6:41](https://youtube.com/watch?v=4rN-UWKSmp0&t=401) 함정이 있는데 MCP 서버를 너무
+- [6:43](https://youtube.com/watch?v=4rN-UWKSmp0&t=403) 많이 켜두지 마세요. MCP
+- [6:45](https://youtube.com/watch?v=4rN-UWKSmp0&t=405) 하나하나가 도구 설명을 토큰으로
+- [6:47](https://youtube.com/watch?v=4rN-UWKSmp0&t=407) 잡아먹기 때문에 다 켜두면 20만
+- [6:49](https://youtube.com/watch?v=4rN-UWKSmp0&t=409) 토큰짜리 컨텍스트 윈도우가 7만
+- [6:52](https://youtube.com/watch?v=4rN-UWKSmp0&t=412) 토큰까지 줄어듭니다. 프로젝트당
+- [6:54](https://youtube.com/watch?v=4rN-UWKSmp0&t=414) MCP는 10개 이하, 활성 도구는
+- [6:56](https://youtube.com/watch?v=4rN-UWKSmp0&t=416) 80개 이하로 유지하시는 걸
+- [6:57](https://youtube.com/watch?v=4rN-UWKSmp0&t=417) 권장합니다. 여기까지가 토큰
+- [6:59](https://youtube.com/watch?v=4rN-UWKSmp0&t=419) 다이어트였고 사실 14만 명이이
+- [7:02](https://youtube.com/watch?v=4rN-UWKSmp0&t=422) 저장소를 즐겨 찾기 한 진짜 이유는
+- [7:04](https://youtube.com/watch?v=4rN-UWKSmp0&t=424) 따로 있습니다. 바로 메모리 학습
+- [7:06](https://youtube.com/watch?v=4rN-UWKSmp0&t=426) 시스템이에요. 컨티뉴어스 러닝 V2.
+- [7:09](https://youtube.com/watch?v=4rN-UWKSmp0&t=429) 한국말로 풀면 지속 학습이 점령
+- [7:11](https://youtube.com/watch?v=4rN-UWKSmp0&t=431) 버전이라고 하는데이 시스템이 하는
+- [7:13](https://youtube.com/watch?v=4rN-UWKSmp0&t=433) 일은 이렇습니다. 클로드 코드가
+- [7:15](https://youtube.com/watch?v=4rN-UWKSmp0&t=435) 도구를 호출하기 직전이랑 직후에 후기
+- [7:17](https://youtube.com/watch?v=4rN-UWKSmp0&t=437) 자동으로 발동돼서 여러분이 작업하는
+- [7:20](https://youtube.com/watch?v=4rN-UWKSmp0&t=440) 걸 100% 관찰하고 있어요.
+- [7:22](https://youtube.com/watch?v=4rN-UWKSmp0&t=442) 그러면서 반복되는 패턴을 찾아냅니다.
+- [7:24](https://youtube.com/watch?v=4rN-UWKSmp0&t=444) 예를 들어이 사람은 새 컴포넌트를
+- [7:26](https://youtube.com/watch?v=4rN-UWKSmp0&t=446) 만들 때 항상 폴더 구조를 이렇게
+- [7:29](https://youtube.com/watch?v=4rN-UWKSmp0&t=449) 잡는구나.이 사람은 에러 처리할 때
+- [7:31](https://youtube.com/watch?v=4rN-UWKSmp0&t=451) 항상이 라이브러리를 쓰는구나. 이런
+- [7:33](https://youtube.com/watch?v=4rN-UWKSmp0&t=453) 걸 인스트라고 부르는 학습 단위로
+- [7:35](https://youtube.com/watch?v=4rN-UWKSmp0&t=455) 저장합니다. 각 인스팅트에는 0.3
+- [7:38](https://youtube.com/watch?v=4rN-UWKSmp0&t=458) 3부터 0.9까지의 9까지의 실뢰도
+- [7:40](https://youtube.com/watch?v=4rN-UWKSmp0&t=460) 점수가 붙어요. 그리고 관련된
+- [7:42](https://youtube.com/watch?v=4rN-UWKSmp0&t=462) 인스팅트가 세 개 이상 모이면 슬래시
+- [7:45](https://youtube.com/watch?v=4rN-UWKSmp0&t=465) 에볼 명령으로 자동으로 재사용 가능한
+- [7:47](https://youtube.com/watch?v=4rN-UWKSmp0&t=467) 스킬 모듈로 승격됩니다. 더 좋은 건
+- [7:50](https://youtube.com/watch?v=4rN-UWKSmp0&t=470) 슬래시 인스팅트 익스포트로 내가
+- [7:51](https://youtube.com/watch?v=4rN-UWKSmp0&t=471) 학습한 걸 동료한테 보낼 수 있고
+- [7:54](https://youtube.com/watch?v=4rN-UWKSmp0&t=474) 임포트로 동료가 학습한 걸 받을 수
+- [7:56](https://youtube.com/watch?v=4rN-UWKSmp0&t=476) 있다는 거예요. 한국 회사에 적용하면
+- [7:58](https://youtube.com/watch?v=4rN-UWKSmp0&t=478) 한번 가르친 우리 회사 코딩 컨벤션을
+- [8:00](https://youtube.com/watch?v=4rN-UWKSmp0&t=480) 클로드가 연구히 기억하고 신입이
+- [8:02](https://youtube.com/watch?v=4rN-UWKSmp0&t=482) 들어와도 그 노하우를 그대로 넘겨 줄
+- [8:04](https://youtube.com/watch?v=4rN-UWKSmp0&t=484) 수 있다는 뜻입니다. 마지막으로
+- [8:06](https://youtube.com/watch?v=4rN-UWKSmp0&t=486) 보너스 하나 더 알려 드릴게요.
+- [8:09](https://youtube.com/watch?v=4rN-UWKSmp0&t=489) 클로드 코드를 만든 같은 사람이
+- [8:10](https://youtube.com/watch?v=4rN-UWKSmp0&t=490) 에이전트 쉴드라는 보안 스캐너도 같이
+- [8:13](https://youtube.com/watch?v=4rN-UWKSmp0&t=493) 만들었습니다. MPX ECC 에이전트
+- [8:15](https://youtube.com/watch?v=4rN-UWKSmp0&t=495) 쉴드 스캔.이 이 한 줄만 치면 설치
+- [8:18](https://youtube.com/watch?v=4rN-UWKSmp0&t=498) 없이 바로 돌아가요. 뭘 검사하냐면
+- [8:20](https://youtube.com/watch?v=4rN-UWKSmp0&t=500) 클로드 MD 파일, 세팅스 제이슨,
+- [8:23](https://youtube.com/watch?v=4rN-UWKSmp0&t=503) MCP 설정, 훅, 에이전트 정의
+- [8:25](https://youtube.com/watch?v=4rN-UWKSmp0&t=505) 같은 클로드 코드 설정 전체를 다섯
+- [8:27](https://youtube.com/watch?v=4rN-UWKSmp0&t=507) 가지 카테고리로 스캔합니다. 시크릿
+- [8:29](https://youtube.com/watch?v=4rN-UWKSmp0&t=509) 키가 노출됐는지, 권한이 너무 열려
+- [8:32](https://youtube.com/watch?v=4rN-UWKSmp0&t=512) 있는지, 훅 인젝션 취약점이 있는지,
+- [8:34](https://youtube.com/watch?v=4rN-UWKSmp0&t=514) MCP 서버 중에 위험한게 있는지요.
+- [8:36](https://youtube.com/watch?v=4rN-UWKSmp0&t=516) 거기에 더블 대시 오퍼스 플래그를
+- [8:38](https://youtube.com/watch?v=4rN-UWKSmp0&t=518) 붙이면 클로드 오퍼스 4.6 미국
+- [8:41](https://youtube.com/watch?v=4rN-UWKSmp0&t=521) 에이전트 세 마리가 레드 팀,
+- [8:42](https://youtube.com/watch?v=4rN-UWKSmp0&t=522) 블루팀, 오디터 역할로 나뉘어서
+- [8:45](https://youtube.com/watch?v=4rN-UWKSmp0&t=525) 적대적으로 검증합니다. 한 마리는
+- [8:47](https://youtube.com/watch?v=4rN-UWKSmp0&t=527) 익스플로이을 찾고 한 마리는 방어를
+- [8:49](https://youtube.com/watch?v=4rN-UWKSmp0&t=529) 평가하고 한 마리는 둘을 종합해서
+- [8:52](https://youtube.com/watch?v=4rN-UWKSmp0&t=532) 우선 순위 리스크를 매겨요. 이게
+- [8:54](https://youtube.com/watch?v=4rN-UWKSmp0&t=534) 1282 개의 테스트와 102개의
+- [8:57](https://youtube.com/watch?v=4rN-UWKSmp0&t=537) 보완로 굴러갑니다. AI 에이전트
+- [8:59](https://youtube.com/watch?v=4rN-UWKSmp0&t=539) 보안이 곧 화두가 될 텐데 미리
+- [9:02](https://youtube.com/watch?v=4rN-UWKSmp0&t=542) 잡아둘 수 있는 도구예요. 그래서
+- [9:03](https://youtube.com/watch?v=4rN-UWKSmp0&t=543) 결론 한국 개발자 입장에서 이걸
+- [9:06](https://youtube.com/watch?v=4rN-UWKSmp0&t=546) 어떻게 시작하면 좋을까요? 한 번에
+- [9:08](https://youtube.com/watch?v=4rN-UWKSmp0&t=548) 다 깔지 마시고 순서대로 가세요.
+- [9:11](https://youtube.com/watch?v=4rN-UWKSmp0&t=551) 첫째, 오늘 당장 세팅스 제이슨의 세
+- [9:14](https://youtube.com/watch?v=4rN-UWKSmp0&t=554) 줄만 추가하세요. 모델 소, 맥스
+- [9:17](https://youtube.com/watch?v=4rN-UWKSmp0&t=557) 띵킹 토큰스만, 서브 에이전트 모델
+- [9:19](https://youtube.com/watch?v=4rN-UWKSmp0&t=559) 하이쿠. 이거 하나만으로도 다음 달
+- [9:22](https://youtube.com/watch?v=4rN-UWKSmp0&t=562) 청구서가 확 줄어듭니다. 둘째,
+- [9:24](https://youtube.com/watch?v=4rN-UWKSmp0&t=564) 슬래시 플러그인 마켓플레이스 애드
+- [9:26](https://youtube.com/watch?v=4rN-UWKSmp0&t=566) 명령으로 에브리팅 클로드 코드를
+- [9:28](https://youtube.com/watch?v=4rN-UWKSmp0&t=568) 추가하고 슬래시 플러그인 인스톨c
+- [9:31](https://youtube.com/watch?v=4rN-UWKSmp0&t=571) 명령으로 플러그인을 설치하세요.
+- [9:33](https://youtube.com/watch?v=4rN-UWKSmp0&t=573) 셋째, 룰만 별도로 기클론에서
+- [9:36](https://youtube.com/watch?v=4rN-UWKSmp0&t=576) inst.s SH 프로파일 풀로
+- [9:39](https://youtube.com/watch?v=4rN-UWKSmp0&t=579) 설치하시면 됩니다. 한 가지 함정
+- [9:41](https://youtube.com/watch?v=4rN-UWKSmp0&t=581) 경고들이면 156개 스킬을 다 깔지
+- [9:44](https://youtube.com/watch?v=4rN-UWKSmp0&t=584) 마세요. 서치 퍼스트, TDD
+- [9:46](https://youtube.com/watch?v=4rN-UWKSmp0&t=586) 워크풀로, 스트레티지 콤팩트 같은
+- [9:48](https://youtube.com/watch?v=4rN-UWKSmp0&t=588) 코어부터 시작하시고 필요할 때마다
+- [9:50](https://youtube.com/watch?v=4rN-UWKSmp0&t=590) 하나씩 추가하세요. 그리고 멀티에트
+- [9:53](https://youtube.com/watch?v=4rN-UWKSmp0&t=593) 명령들은 별도로 CCG 워크풀로
+- [9:55](https://youtube.com/watch?v=4rN-UWKSmp0&t=595) 런타임을 깔아야 동작하니까 처음에는
+- [9:58](https://youtube.com/watch?v=4rN-UWKSmp0&t=598) 안 쓰셔도 됩니다. 오늘 다룬 걸 한
+- [10:00](https://youtube.com/watch?v=4rN-UWKSmp0&t=600) 줄로 정리하면 이렇습니다. 클로드
+- [10:02](https://youtube.com/watch?v=4rN-UWKSmp0&t=602) 코드가 멍청해지는 건 컨텍스트
+- [10:04](https://youtube.com/watch?v=4rN-UWKSmp0&t=604) 로트라는 구조적 문제고 에브리팅
+- [10:06](https://youtube.com/watch?v=4rN-UWKSmp0&t=606) 클로드 코드는 그 해법을 14만 명이
+- [10:08](https://youtube.com/watch?v=4rN-UWKSmp0&t=608) 검증한 형태로 풀어 놓은
+- [10:09](https://youtube.com/watch?v=4rN-UWKSmp0&t=609) 저장소입니다. 오늘 당장 적용할 건
+- [10:12](https://youtube.com/watch?v=4rN-UWKSmp0&t=612) 세팅스 제이슨 세 줄 그다음은
+- [10:15](https://youtube.com/watch?v=4rN-UWKSmp0&t=615) 스트레티지 콤팩트 스킬 여유 생기면
+- [10:17](https://youtube.com/watch?v=4rN-UWKSmp0&t=617) 메모리 학습 시스템까지이 순서대로만
+- [10:20](https://youtube.com/watch?v=4rN-UWKSmp0&t=620) 가셔도 다음 달 청구서랑 클로드의
+- [10:23](https://youtube.com/watch?v=4rN-UWKSmp0&t=623) 멍청함이 둘 다 줄어들 거예요.
+- [10:25](https://youtube.com/watch?v=4rN-UWKSmp0&t=625) 댓글에 여러분이 클로드 코드 쓰면서
+- [10:27](https://youtube.com/watch?v=4rN-UWKSmp0&t=627) 가장 짜증났던 순간을 적어 주세요.
+- [10:29](https://youtube.com/watch?v=4rN-UWKSmp0&t=629) 다음 주제 정할 때 참고하겠습니다.
+- [10:31](https://youtube.com/watch?v=4rN-UWKSmp0&t=631) 영상이 도움됐다면 좋아요와 구독
+- [10:33](https://youtube.com/watch?v=4rN-UWKSmp0&t=633) 부탁드려요. 그리고 약속드린 에브리팅
+- [10:36](https://youtube.com/watch?v=4rN-UWKSmp0&t=636) 클로드 코드 핵심 가이드 PDF는
+- [10:38](https://youtube.com/watch?v=4rN-UWKSmp0&t=638) 영상 설명란에
+- [10:39](https://youtube.com/watch?v=4rN-UWKSmp0&t=639) heaj제es./팁스링크에서
+- [10:42](https://youtube.com/watch?v=4rN-UWKSmp0&t=642) 받으실 수 있습니다. 다음 영상에서
+- [10:44](https://youtube.com/watch?v=4rN-UWKSmp0&t=644) 또 만나요.
