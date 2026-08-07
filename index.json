@@ -4331,5 +4331,49 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-08-07-Claude-Code-비용-80-절감하는-settings-json.md",
+    "title": "Claude Code 비용 80% 절감하는 settings.json 3줄과 14만명이 쓰는 everything-claude-code 설정법",
+    "category": "일반학습",
+    "date": "2026-08-07",
+    "core_message": "클로드 코드가 갑자기 멍청해지는 건 컨텍스트 부패라는 구조적 문제이며, Everything Claude Code 저장소의 세 가지 설정(비용 절감 → 컨텍스트 관리 → 메모리 학습)을 순서대로 적용하면 비용과 품질 저하를 동시에 잡을 수 있다.",
+    "topics": [
+      "컨텍스트관리",
+      "AI에이전트",
+      "스킬"
+    ],
+    "concepts": [
+      {
+        "id": "context-rot",
+        "label": "컨텍스트 부패",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "context-engineering",
+        "label": "컨텍스트 엔지니어링",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "compaction",
+        "label": "컴팩션",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "sub-agent",
+        "label": "서브 에이전트",
+        "topic": "AI에이전트"
+      },
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "메모리-학습-시스템",
+        "label": "메모리 학습 시스템",
+        "topic": null
+      }
+    ]
   }
 ]
