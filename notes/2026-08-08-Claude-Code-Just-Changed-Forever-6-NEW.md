@@ -1,0 +1,809 @@
+---
+title: "Claude Code Just Changed Forever (6 NEW Rules by Anthropic Engineers)"
+source_url: https://youtube.com/watch?v=gQeRjkb_Hlc
+video_id: gQeRjkb_Hlc
+source_type: youtube
+lang: en
+analyzed: 2026-08-08
+category: 일반학습
+tags: ["주제/컨텍스트관리", "개념/컨텍스트관리/context-engineering", "개념/ARMS-프레임워크", "주제/스킬", "개념/스킬/claude-skill", "개념/스킬/agent-md", "개념/점진적-공개", "개념/컨텍스트관리/context-rot", "주제/ANTHROPIC", "개념/ANTHROPIC/anthropic"]
+key_concepts: ["컨텍스트 엔지니어링", "ARMS 프레임워크", "클로드 스킬", "agent.md", "점진적 공개(Progressive Disclosure)", "컨텍스트 부패"]
+status: active
+---
+# Claude Code Just Changed Forever (6 NEW Rules by Anthropic Engineers)
+
+## 🧠 이해 (Understand)
+- **Summary:** Anthropic 수석 엔지니어 Tariq이 발표한 'Claude 5 모델을 위한 컨텍스트 엔지니어링 새 규칙' 아티클을 분석한 영상이다. Opus 5·Fable 5의 지능이 급격히 향상되면서, 기존의 '규칙을 많이 줄수록 좋다'는 접근이 오히려 성능을 제한한다는 사실이 밝혀졌다. Anthropic은 Claude Code 시스템 프롬프트의 80% 이상을 삭제했음에도 코딩 평가에서 손실이 없었다. 주요 변화는 ①판단 위임, ②예시 대신 디자인 인터페이스, ③점진적 공개, ④단순 도구 설명, ⑤자동 메모리, ⑥마크다운 대신 HTML 참조 파일로 요약된다. 영상 말미에는 이 6가지 변화를 자동으로 점검하는 /doctor-plus 스킬을 소개한다.
+- **Core Message:** Claude 5 세대 모델은 지능이 비약적으로 향상되었으므로, 규칙·예시·중복 지시를 줄이고 판단·디자인 인터페이스·점진적 파일 로딩으로 전환해야 더 빠르고 저렴한 에이전트 운영이 가능하다.
+> They actually removed over 80% of Claude Code's system prompt for Opus 5 and Fable 5 — and experienced no measurable loss on their coding evaluations.
+> Your Claude.md actually becomes more powerful if you make it function as a router to your tree of files.
+> Giving examples actually constrains them to a certain exploration space.
+❗ Anthropic은 Claude Code 시스템 프롬프트의 80% 이상을 삭제했음에도 코딩 평가 점수에 측정 가능한 손실이 없었다.
+❗ 1년 전 Opus 4의 Artificial Analysis 지능 지수는 31%였으나, Opus 5·Fable 5는 60~61%로 두 배 가까이 향상됐다.
+❗ 기존의 '사용 예시를 많이 줄수록 좋다'는 통념이 실제로는 최신 모델의 탐색 공간을 오히려 제한한다는 사실이 밝혀졌다.
+
+## 📚 핵심 용어
+- **컨텍스트 엔지니어링:** AI 에이전트가 받는 전체 입력(앱·루틴·메모리·스킬)을 전략적으로 설계하는 행위. / 요리사에게 레시피(프롬프트)만 건네는 게 아니라, 재료·도구·주방 동선까지 미리 세팅해 두는 것과 같다. / 단순 프롬프트 작성은 요리사에게 말만 거는 것, 컨텍스트 엔지니어링은 주방 전체를 설계하는 것이다.
+- **점진적 공개(Progressive Disclosure):** 필요한 컨텍스트를 한꺼번에 주입하지 않고, 작업 상황에 맞춰 단계적으로 불러오는 설계 방식. / 도서관에서 모든 책을 책상에 쌓아두지 않고, 필요한 책만 그때그때 꺼내 보는 것과 같다. / 두꺼운 claude.md는 매 세션마다 전 내용을 소비하지만, 라우터형 claude.md는 필요한 파일만 그때 불러와 토큰을 아낀다.
+- **클로드 스킬:** 슬래시 명령어로 호출하는 skill.md 파일로, Claude에게 특정 작업 방식을 즉시 주입하는 SOP 모듈. / 업무 매뉴얼 바인더에서 필요한 챕터만 꺼내 직원에게 건네는 것과 같다. / claude.md는 항상 열려 있는 운영 지침서, 스킬은 특정 작업 때만 꺼내는 전문 매뉴얼이다.
+- **컨텍스트 부패:** 세션이 길어질수록 AI가 초반 지시를 잊거나 무시하고 최근 메시지에만 반응하는 현상. / 긴 회의 말미에 처음 결정 사항을 팀원들이 슬슬 잊어버리는 상황과 같다. / 컨텍스트 부패는 구형 모델에서 심각했지만, Opus 5·Fable 5는 긴 컨텍스트에서도 초반 지시를 더 잘 유지한다.
+
+## 🚀 실행 (Execute)
+- [ ] claude.md를 '라우터' 구조로 재설계: 두꺼운 단일 파일을 얇은 라우터 + 부서별 서브 인덱스(content.md, product.md 등) 트리로 분리한다. — ⏰ 이번 주 · ⚡ 2~4시간
+  - 담당: 나
+  - 이유: 매 세션 시작 시 소비되는 토큰을 줄이고, 컨텍스트 부패를 완화해 비용과 속도를 동시에 개선할 수 있는 가장 직접적인 변화다.
+- [ ] /doctor-plus 스킬을 영상 설명란에서 받아 Claude Code에 설치하고, 기존 skill.md 파일들의 줄 수·중복 지시·예시 과다 여부를 점검한다. — ⏰ 오늘 · ⚡ 30분
+  - 담당: 나
+  - 이유: 6가지 새 규칙 위반 항목을 자동으로 탐지해 주므로, 수동 검토보다 빠르게 현재 설정의 문제점을 파악할 수 있다.
+- [ ] 브랜드 디자인 시스템을 마크다운이 아닌 HTML 파일(brandbook.html)로 제작하고, 이를 참조하는 /디자인 스킬을 만들어 콘텐츠·제품 자료에 일관된 시각 언어를 적용한다. — ⏰ 2주 내 · ⚡ 3~5시간 (Claude에게 초안 생성 위임 후 수정)
+  - 담당: 나
+  - 이유: HTML 참조 파일은 색상 팔레트·폰트를 시각적으로 렌더링해 Claude가 맥락을 정확히 파악하고, 사람도 검토하기 쉬워 협업 커뮤니케이션에도 유리하다.
+- 자료: Tariq의 원문 아티클: X(트위터) 검색 'new rules of context engineering Claude 5 Tariq' (확인 필요 — 정확한 URL은 영상 설명란 참조)
+- 자료: artificialanalysis.ai — 모델 벤치마크 비교 사이트 (실제 존재 확인됨)
+- 자료: /doctor-plus 스킬 파일 — 영상 설명란 및 고정 댓글 링크 (확인 필요 — 링크 유효성 직접 확인 필요)
+- 자료: Claude Code 공식 문서 (docs.anthropic.com) — 훅스·MCP·메모리 기능 레퍼런스
+- Timeline: 1일차: /doctor-plus 설치 및 현재 설정 점검 → 2~3일차: claude.md 라우터 구조 재설계 → 1~2주차: HTML 브랜드북 + 디자인 스킬 제작 → 매월 1회: /doctor-plus 정기 점검 루틴 등록
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-컨텍스트관리]] · [[_topic-스킬]] · [[_topic-ANTHROPIC]]
+- 핵심 개념: [[_concept-context-engineering|컨텍스트 엔지니어링]] · [[_concept-ARMS-프레임워크|ARMS 프레임워크]] · [[_concept-claude-skill|클로드 스킬]] · [[_concept-agent-md|agent.md]] · [[_concept-점진적-공개|점진적 공개]] · [[_concept-context-rot|컨텍스트 부패]] · [[_concept-anthropic|Anthropic]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=0) So one of the lead engineers at
+- [0:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1) Anthropic just published this
+- [0:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=2) breakthrough article on X. It now has 4
+- [0:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=5) million views [music] and in it he
+- [0:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=6) outlines the important changes that
+- [0:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=8) they've made to Claude code, which if
+- [0:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=9) you pay attention to can make your setup
+- [0:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=11) faster, can make your systems cost less,
+- [0:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=13) and just overall let you upgrade your
+- [0:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=15) agentic operating system. I read through
+- [0:17](https://youtube.com/watch?v=gQeRjkb_Hlc&t=17) this whole article and today I'll break
+- [0:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=18) down for you the six new rules of Claude
+- [0:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=20) code that it talks about, which some of
+- [0:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=22) them by the way are the exact opposite
+- [0:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=23) of the advice we've been following for
+- [0:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=25) months. And by the end I'm also going to
+- [0:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=27) share with you a skill that lets you
+- [0:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=28) automatically apply these improvements
+- [0:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=30) [music]
+- [0:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=30) to your own setup. And if you're new, my
+- [0:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=32) name is Jay. I spent over a decade
+- [0:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=34) working with brands you may know, have
+- [0:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=35) been in AI since my masters in data
+- [0:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=37) science. Now I'm running an AI business
+- [0:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=39) and one of the largest AI communities
+- [0:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=40) globally. Let's dive into it.
+- [0:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=42) >> [music]
+- [0:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=45) >> So to give you some context, this person
+- [0:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=47) Tariq, he's one of the more well-known
+- [0:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=48) engineers who is working in Anthropic
+- [0:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=50) and this past week he published this
+- [0:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=52) really good article called the new rules
+- [0:54](https://youtube.com/watch?v=gQeRjkb_Hlc&t=54) of context engineering for Claude 5
+- [0:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=57) models. And this has been out for only a
+- [0:58](https://youtube.com/watch?v=gQeRjkb_Hlc&t=58) few days, but you can see already
+- [1:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=60) garnered something like 4.3 million
+- [1:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=62) views. So that's a very good signal that
+- [1:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=64) there's a couple of great nuggets to
+- [1:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=65) learn from here. Now it's a pretty long
+- [1:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=67) article so I read through it so that you
+- [1:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=68) don't have to and in this video I'll
+- [1:10](https://youtube.com/watch?v=gQeRjkb_Hlc&t=70) just break down all of the insights for
+- [1:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=71) you so that you can directly benefit
+- [1:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=73) from it. And with this article the core
+- [1:14](https://youtube.com/watch?v=gQeRjkb_Hlc&t=74) topic of it is this piece called context
+- [1:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=76) engineering, which if you haven't heard
+- [1:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=78) that term before it's probably worth
+- [1:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=79) stepping back to just understand what it
+- [1:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=81) is because whenever you work with AI
+- [1:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=82) agents like Claude or Hermes or Codex,
+- [1:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=85) then for sure you yourself even without
+- [1:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=87) knowing it have done a bit of context
+- [1:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=88) engineering as well. And Tariq mentions
+- [1:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=90) it here as well because when you send a
+- [1:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=92) message or a prompt to Claude that
+- [1:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=94) prompt is actually only a small part of
+- [1:36](https://youtube.com/watch?v=gQeRjkb_Hlc&t=96) the context that it gets. And a big part
+- [1:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=98) of the output is that your agent gives
+- [1:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=100) you is coming from your context. And
+- [1:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=102) just to hone in on this point, whenever
+- [1:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=104) you start a Claude session and you send
+- [1:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=106) your first prompt, Claude actually
+- [1:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=107) doesn't just work from that prompt or
+- [1:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=109) that message that you send, right?
+- [1:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=111) Because in this case the prompt is just
+- [1:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=112) a direction that you're giving to
+- [1:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=113) Claude, but it becomes so much more
+- [1:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=115) powerful if you have your context
+- [1:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=117) organized. And just to make it simple,
+- [1:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=119) whenever I talk about context in our
+- [2:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=120) community, I always use this arms
+- [2:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=122) framework with the core idea being that
+- [2:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=124) if you organize and engineer this arms
+- [2:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=126) framework properly as your context, then
+- [2:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=129) you're actually ahead of like 99% of
+- [2:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=131) Claude and agentic AI users. Because the
+- [2:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=133) entirety of your context that consists
+- [2:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=135) of the applications that you are using,
+- [2:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=138) which you have connected via tools like
+- [2:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=139) MCPs or APIs or CLIs. You have your
+- [2:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=142) routines, which are basically your
+- [2:24](https://youtube.com/watch?v=gQeRjkb_Hlc&t=144) scheduled tasks or your crons that you
+- [2:26](https://youtube.com/watch?v=gQeRjkb_Hlc&t=146) have set up. You have your memory, which
+- [2:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=148) are all the artifacts and all of the
+- [2:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=150) reports and documents that you have
+- [2:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=152) generated over time. And finally, you
+- [2:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=153) have your skills, which are SOPs or
+- [2:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=157) processes that you can actually invoke
+- [2:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=158) through skill commands that immediately
+- [2:41](https://youtube.com/watch?v=gQeRjkb_Hlc&t=161) just teach Claude how to do a given set
+- [2:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=163) of work. And so when we talk about
+- [2:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=164) context engineering, the way that I
+- [2:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=166) think of it is always just revolving
+- [2:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=168) around these four elements. And what
+- [2:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=170) Tarek is saying in this article is that
+- [2:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=172) because the way that Claude's models
+- [2:54](https://youtube.com/watch?v=gQeRjkb_Hlc&t=174) have evolved, there's actually a few new
+- [2:56](https://youtube.com/watch?v=gQeRjkb_Hlc&t=176) things that have changed quite
+- [2:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=177) drastically when it comes to operating
+- [3:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=180) or engineering the context for these
+- [3:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=182) models. And to give you a clear example
+- [3:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=184) of how drastic it is, at least in
+- [3:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=185) Anthropic's team, he is mentioning here
+- [3:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=188) that they actually removed over 80% of
+- [3:10](https://youtube.com/watch?v=gQeRjkb_Hlc&t=190) Claude code's system prompt for models
+- [3:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=193) like Opus 5 and Fable 5. And even just
+- [3:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=195) by doing that, they experienced no
+- [3:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=196) measurable loss on their coding
+- [3:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=198) evaluations. And this is quite a big
+- [3:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=200) deal and just shows you how far we've
+- [3:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=202) come in terms of the intelligence and
+- [3:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=203) the raw capability of these models.
+- [3:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=205) Because if you just take a step back,
+- [3:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=207) only last year when Opus 4 was launched
+- [3:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=209) and also coincidentally around the same
+- [3:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=210) time that Claude code was launched, the
+- [3:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=212) benchmark intelligence score of Opus 4
+- [3:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=215) back then was only 31% on the artificial
+- [3:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=218) analysis index. Which just to quickly
+- [3:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=220) share with you what that is, that is
+- [3:41](https://youtube.com/watch?v=gQeRjkb_Hlc&t=221) coming straight from this company called
+- [3:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=223) artificialanalysis.ai.
+- [3:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=225) And their benchmarks here for raw
+- [3:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=226) intelligence is actually quite good
+- [3:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=228) because what they essentially do here is
+- [3:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=229) throw a a of really difficult tasks to
+- [3:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=231) these models across a variety of
+- [3:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=233) disciplines and score them out of 100.
+- [3:56](https://youtube.com/watch?v=gQeRjkb_Hlc&t=236) And this company is also backed by some
+- [3:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=237) big names in the AI field like Nat
+- [3:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=239) Friedman, who's the ex-CEO of GitHub, as
+- [4:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=241) well as Andrew Ng, who's the former head
+- [4:03](https://youtube.com/watch?v=gQeRjkb_Hlc&t=243) of Google Brain. And so, the point being
+- [4:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=245) that I think if you're looking for like
+- [4:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=246) one benchmark that is a good reference
+- [4:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=248) every time new models drop, I think
+- [4:10](https://youtube.com/watch?v=gQeRjkb_Hlc&t=250) artificialanalysis.ai
+- [4:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=251) would be a good source for you. And if
+- [4:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=253) you look at the chart here, the ones
+- [4:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=255) that are topping the leaderboards right
+- [4:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=256) now is Opus 5 as well as Fable 5, and
+- [4:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=258) they're getting a score of 60 out of
+- [4:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=260) 100. Which again, if you go back to our
+- [4:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=262) comparison here, that 61% is actually
+- [4:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=265) leagues better versus what we had only a
+- [4:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=268) year ago. And so, what Tarek was sharing
+- [4:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=269) in that article is that because these
+- [4:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=271) models are now so capable, there's
+- [4:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=273) actually a few new rules to understand
+- [4:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=275) when it comes to engineering the context
+- [4:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=277) of your workspace so that your agents
+- [4:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=279) can work more effectively. And so, when
+- [4:41](https://youtube.com/watch?v=gQeRjkb_Hlc&t=281) you're building out your own second
+- [4:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=282) brain or you're building out an agentic
+- [4:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=284) operating system for companies, then
+- [4:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=286) this is a good article for you to get
+- [4:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=288) insights from. And the great thing about
+- [4:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=290) what Anthropic outlined here is that
+- [4:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=291) they actually provided a then and now
+- [4:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=293) view. So, what are the rules that were
+- [4:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=295) true before, and what are the revised
+- [4:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=297) rules that we should consider now as we
+- [4:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=299) work with these agents. And so, I'll go
+- [5:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=301) through each one of these along with a
+- [5:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=302) few examples so that we can all
+- [5:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=304) understand it. And by the way, if you
+- [5:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=305) want to learn how to build and sell AI
+- [5:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=306) systems that businesses actually pay
+- [5:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=308) for, then that's pretty much all we do
+- [5:10](https://youtube.com/watch?v=gQeRjkb_Hlc&t=310) over at the Robo Nuggets community.
+- [5:12](https://youtube.com/watch?v=gQeRjkb_Hlc&t=312) Where not only do you get access to the
+- [5:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=313) Claude Living Masterclass, which we
+- [5:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=315) update every week and takes you from
+- [5:17](https://youtube.com/watch?v=gQeRjkb_Hlc&t=317) zero to mastery with the latest on AI,
+- [5:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=319) but you also get access to our Agents as
+- [5:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=321) Course, which walks you through how to
+- [5:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=323) actually get paid for all these AI
+- [5:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=325) skills that you're learning. You also
+- [5:26](https://youtube.com/watch?v=gQeRjkb_Hlc&t=326) get to be part of a genuinely great
+- [5:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=328) community of AI builders. In fact, you
+- [5:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=330) can see just some of the recent wins our
+- [5:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=331) members are getting from the program
+- [5:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=333) right here. So, if you want to start
+- [5:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=334) earning from AI, then check that just in
+- [5:36](https://youtube.com/watch?v=gQeRjkb_Hlc&t=336) the pinned comment below. Now, back to
+- [5:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=337) the video. So, a big one for us to
+- [5:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=339) understand is that if before it's
+- [5:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=340) important to give Claude a lot of rules,
+- [5:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=343) this time it is actually important to
+- [5:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=344) let Claude use judgment. And here Tarek
+- [5:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=347) explains it that when they first rolled
+- [5:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=349) out Claude code, they needed to be sure
+- [5:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=350) that Claude avoided worst-case scenarios
+- [5:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=352) such as deleting files. Because
+- [5:54](https://youtube.com/watch?v=gQeRjkb_Hlc&t=354) remember, the models weren't as smart
+- [5:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=355) back then. And so that meant that they
+- [5:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=357) would give particularly strong guidance
+- [5:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=359) and rules that might not always be true
+- [6:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=362) and is actually limiting Claude Fable 5
+- [6:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=364) or Opus 5 in today's world. So the
+- [6:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=366) example he gives here because they deal
+- [6:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=368) with a lot of code documentation is that
+- [6:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=371) before in the system prompt of Claude
+- [6:12](https://youtube.com/watch?v=gQeRjkb_Hlc&t=372) code, they were actually giving a more
+- [6:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=375) stringent set of rules like this where
+- [6:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=376) they're asking Claude to default to
+- [6:17](https://youtube.com/watch?v=gQeRjkb_Hlc&t=377) writing no comments, to never write
+- [6:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=379) multi-paragraph docstrings, and
+- [6:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=381) basically just very specific rules.
+- [6:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=383) Which now with models that are much
+- [6:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=385) smarter than what we started with, it's
+- [6:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=387) actually better sometimes to just let
+- [6:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=388) your AI agent use a bit of judgement in
+- [6:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=391) order for you to get better results. So
+- [6:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=393) one example they're mentioning here is
+- [6:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=394) that they actually trimmed down that
+- [6:36](https://youtube.com/watch?v=gQeRjkb_Hlc&t=396) system prompt to just say this, to write
+- [6:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=397) code that reads like the surrounding
+- [6:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=399) code, to match its comment density,
+- [6:41](https://youtube.com/watch?v=gQeRjkb_Hlc&t=401) naming, and idiom. Now you might not be
+- [6:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=402) into coding and development yourself,
+- [6:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=404) but you can actually still take
+- [6:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=405) advantage of this new rule. So to give
+- [6:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=407) an example from my own second brain
+- [6:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=409) setup, which is basically how I'm
+- [6:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=411) engineering my context, I've started now
+- [6:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=413) to develop some skills that are
+- [6:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=415) literally just meant for Claude to
+- [6:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=417) surprise me with its output. And if I
+- [6:58](https://youtube.com/watch?v=gQeRjkb_Hlc&t=418) just look for that skill because I
+- [7:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=420) literally just named it as surprise me.
+- [7:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=422) I think it's this skill.md. And if I
+- [7:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=425) would look at the actual description of
+- [7:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=427) this surprise me skill, essentially it's
+- [7:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=429) one that I built in order for Fable and
+- [7:12](https://youtube.com/watch?v=gQeRjkb_Hlc&t=432) Opus to create really good front-end
+- [7:14](https://youtube.com/watch?v=gQeRjkb_Hlc&t=434) designs. If you just browse through some
+- [7:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=436) of the description lines of this skill,
+- [7:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=438) you can see that the direction here is
+- [7:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=439) for Claude to demonstrate extreme
+- [7:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=441) capability, taste, and artistic flavor.
+- [7:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=443) So it's really up to Claude to use his
+- [7:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=445) judgement in order to create better
+- [7:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=447) front-end designs. And to give you an
+- [7:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=448) example of some of the designs that it
+- [7:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=450) created, there's a lot of really good
+- [7:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=451) ones here depending on the niche that
+- [7:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=453) you are in. So there's one that has
+- [7:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=454) these kinetic dots design that looks
+- [7:36](https://youtube.com/watch?v=gQeRjkb_Hlc&t=456) pretty good especially when you are
+- [7:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=458) developing for the tech niche. There's
+- [7:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=460) is origami design that has even
+- [7:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=462) interactivity built into that. This one
+- [7:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=464) is quite good because it implements some
+- [7:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=466) really advanced ways to have more
+- [7:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=468) kinetic typography. And if I just scroll
+- [7:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=470) down here, there's a lot of optionality
+- [7:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=472) here in terms of different ways by which
+- [7:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=475) your AI agent can avoid that AI sloppy
+- [7:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=477) look that it usually defaults to. And
+- [8:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=480) the way that these were all created is
+- [8:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=482) because that surprise me skill just
+- [8:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=484) basically lets Claude use its own
+- [8:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=486) judgment in order to create effects like
+- [8:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=488) these that you may have not thought of
+- [8:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=491) yourself. And so the point being,
+- [8:12](https://youtube.com/watch?v=gQeRjkb_Hlc&t=492) especially when it comes to more
+- [8:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=493) creative thinking, you might actually
+- [8:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=495) want to just let Claude run with
+- [8:17](https://youtube.com/watch?v=gQeRjkb_Hlc&t=497) multiple iterations and multiple options
+- [8:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=499) instead of caging it with structured
+- [8:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=500) rules which may actually just hamstring
+- [8:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=502) your output rather than help you. Now, a
+- [8:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=505) related shift that is equally as
+- [8:26](https://youtube.com/watch?v=gQeRjkb_Hlc&t=506) important is this. Whereas before, if it
+- [8:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=508) was important to give Claude some
+- [8:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=510) examples, now Tariq mentions that it's
+- [8:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=512) even more important to give it design
+- [8:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=514) interfaces. And he elaborates it here
+- [8:36](https://youtube.com/watch?v=gQeRjkb_Hlc&t=516) where when they were designing the tool
+- [8:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=518) usage capability for Claude, before they
+- [8:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=520) were providing Claude some specific
+- [8:41](https://youtube.com/watch?v=gQeRjkb_Hlc&t=521) examples on how to actually use them.
+- [8:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=523) But with the newest models now like
+- [8:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=525) Fable 5 and Opus 5, what they found is
+- [8:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=527) that giving examples actually constrains
+- [8:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=529) them to a certain exploration space. And
+- [8:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=531) I find this to be true in our own work
+- [8:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=533) and projects as well. Because now it's
+- [8:54](https://youtube.com/watch?v=gQeRjkb_Hlc&t=534) really important for you to have your
+- [8:56](https://youtube.com/watch?v=gQeRjkb_Hlc&t=536) own design system if you want to stand
+- [8:58](https://youtube.com/watch?v=gQeRjkb_Hlc&t=538) out from the crowd and actually build
+- [9:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=540) your own brand. To give an example, a
+- [9:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=541) lot of the artifacts and builds that you
+- [9:03](https://youtube.com/watch?v=gQeRjkb_Hlc&t=543) see here in our platform like this
+- [9:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=545) getrubric.app website or its Rubric
+- [9:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=547) Flows tool which we use to visualize
+- [9:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=549) systems that we build out for clients or
+- [9:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=551) even the look of this second brain
+- [9:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=553) system that I made a video for before.
+- [9:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=555) And even these title slides that I'm
+- [9:17](https://youtube.com/watch?v=gQeRjkb_Hlc&t=557) showing in this video, all of this is
+- [9:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=558) being designed automatically by Claude
+- [9:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=560) using my design interface system skill.
+- [9:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=563) And if I were to just look for it, I
+- [9:24](https://youtube.com/watch?v=gQeRjkb_Hlc&t=564) call mine as /robo. And you can see if I
+- [9:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=567) zoom in here, whenever I create a Robo
+- [9:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=569) Nuggets branded material, I just invoke
+- [9:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=571) /robo and it's able to invoke this
+- [9:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=574) skill.md which is connected through this
+- [9:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=577) brandbook.html.
+- [9:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=578) And if I go ahead and open that,
+- [9:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=580) essentially what this HTML does is it
+- [9:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=583) just outlines the different rules when
+- [9:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=585) it comes to this design system. So, let
+- [9:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=587) me just shift that so you can see, and
+- [9:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=589) it provides color palettes, it provides
+- [9:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=591) some guidance on the voices as well as
+- [9:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=593) the fonts that we are using. It gives
+- [9:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=595) that visual style for the dot matrix
+- [9:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=597) effect that you're seeing a lot in the
+- [9:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=599) videos that I create. And essentially
+- [10:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=600) what we're doing here is we're not
+- [10:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=602) really giving examples to Claude
+- [10:03](https://youtube.com/watch?v=gQeRjkb_Hlc&t=603) anymore. Not specific examples entirely,
+- [10:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=606) so that it has more freedom to design,
+- [10:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=608) but still within a few guidelines that
+- [10:10](https://youtube.com/watch?v=gQeRjkb_Hlc&t=610) the design interface system is actually
+- [10:12](https://youtube.com/watch?v=gQeRjkb_Hlc&t=612) providing it. And so, if you were
+- [10:14](https://youtube.com/watch?v=gQeRjkb_Hlc&t=614) building out a design system for
+- [10:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=615) yourself for the first time, then these
+- [10:17](https://youtube.com/watch?v=gQeRjkb_Hlc&t=617) two rules that we just went over, you
+- [10:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=619) probably need to keep in mind. Because
+- [10:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=621) what I would do first is I'll probably
+- [10:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=622) ask people five to give me different
+- [10:24](https://youtube.com/watch?v=gQeRjkb_Hlc&t=624) design systems and give it feedback
+- [10:26](https://youtube.com/watch?v=gQeRjkb_Hlc&t=626) until we arrive at a point that we like
+- [10:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=627) that particular look. Then, let's say
+- [10:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=629) you actually like this Helvetica 26
+- [10:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=632) Swiss brutalist design, then you can
+- [10:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=634) just ask Claude to create a brand book
+- [10:36](https://youtube.com/watch?v=gQeRjkb_Hlc&t=636) HTML file that provides rules of how
+- [10:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=638) that design system is built, and then
+- [10:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=640) just ask Claude to make that into a
+- [10:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=642) skill file, something like /robo, or in
+- [10:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=644) this case it's probably /helvetica. And
+- [10:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=647) then, the next time that you create some
+- [10:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=648) materials, then it will always look this
+- [10:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=650) good. Now, another important shift that
+- [10:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=652) the article talked about is what we're
+- [10:54](https://youtube.com/watch?v=gQeRjkb_Hlc&t=654) calling as progressive disclosure, which
+- [10:56](https://youtube.com/watch?v=gQeRjkb_Hlc&t=656) you can see Tarek differentiates versus
+- [10:58](https://youtube.com/watch?v=gQeRjkb_Hlc&t=658) the practice before, where you are
+- [11:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=660) putting all of the context up front. And
+- [11:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=662) just to elaborate on that, he mentions
+- [11:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=664) here that because Claude Code in the
+- [11:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=665) very beginning was focused on coding,
+- [11:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=667) their system prompt included or needed
+- [11:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=669) to include detailed information on how
+- [11:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=671) to do code review verification, which
+- [11:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=673) are all these details that are not
+- [11:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=676) always needed, but when they are, it was
+- [11:17](https://youtube.com/watch?v=gQeRjkb_Hlc&t=677) actually crucial information. But what
+- [11:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=679) has changed since then is that Claude
+- [11:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=681) Code and these new batch of models have
+- [11:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=683) actually gotten very competent at using
+- [11:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=685) progressive disclosure, which is
+- [11:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=687) essentially loading the right context at
+- [11:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=689) the right times. And a great example of
+- [11:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=691) this is your own claw.md because it
+- [11:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=693) wasn't that long ago that there's a
+- [11:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=695) common advice that if you want to make
+- [11:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=697) your claw.md as strong as you can, you
+- [11:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=699) would want to make that a central
+- [11:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=700) repository of every known practice that
+- [11:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=703) you might run into. But in today's world
+- [11:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=705) and with these more powerful models,
+- [11:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=706) your claw.md actually becomes more
+- [11:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=708) powerful if you make it function as a
+- [11:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=711) router to your tree of files. And just
+- [11:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=713) to make that point clearer, if I go back
+- [11:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=715) to my second brain system here, you can
+- [11:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=717) see that my claw.md is at the center of
+- [11:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=719) this whole second brain system. And
+- [12:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=721) essentially what you're seeing here, all
+- [12:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=722) of these nodes are simply all of the
+- [12:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=724) files in my workspace. But because of
+- [12:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=727) the amount of files and context that's
+- [12:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=729) already in here, you can see I have
+- [12:10](https://youtube.com/watch?v=gQeRjkb_Hlc&t=730) something like 57,000 files already in
+- [12:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=733) this whole workspace, then it doesn't
+- [12:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=735) really make sense if you try to stuff
+- [12:17](https://youtube.com/watch?v=gQeRjkb_Hlc&t=737) your claw.md with every single context
+- [12:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=740) and way of working and operational rules
+- [12:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=742) that you would like your agent to
+- [12:24](https://youtube.com/watch?v=gQeRjkb_Hlc&t=744) remember. And so here you can see how I
+- [12:26](https://youtube.com/watch?v=gQeRjkb_Hlc&t=746) represented it in our second brain
+- [12:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=747) system is that our claw.md is actually
+- [12:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=750) just a router, so that it knows when I'm
+- [12:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=752) asking or working with it for content,
+- [12:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=754) then it's able to just tap to this set
+- [12:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=755) of files over here. If I'm working with
+- [12:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=757) it for my community, then there's this
+- [12:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=759) set of files that it can work with. If
+- [12:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=760) I'm dealing with product development,
+- [12:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=762) there is this branch. Personal stuff is
+- [12:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=764) this branch, and all the business
+- [12:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=765) dealings will happen on this side. And
+- [12:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=768) going back to Thrivec's point around
+- [12:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=769) building a tree of files, if claw.md is
+- [12:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=772) a pointer to these different departments
+- [12:54](https://youtube.com/watch?v=gQeRjkb_Hlc&t=774) or set of files, then what I actually
+- [12:56](https://youtube.com/watch?v=gQeRjkb_Hlc&t=776) have in my workspace, which you can try
+- [12:58](https://youtube.com/watch?v=gQeRjkb_Hlc&t=778) and emulate as well, is to have sub
+- [13:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=780) routers that basically just let Claude
+- [13:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=781) find the right files within this
+- [13:03](https://youtube.com/watch?v=gQeRjkb_Hlc&t=783) specific department. Just to give one
+- [13:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=785) example, let's say for content, I
+- [13:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=787) actually have a file that's called
+- [13:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=788) content.md. And you can see here that
+- [13:10](https://youtube.com/watch?v=gQeRjkb_Hlc&t=790) it's basically a router that gives
+- [13:12](https://youtube.com/watch?v=gQeRjkb_Hlc&t=792) Claude some direction on where to find
+- [13:14](https://youtube.com/watch?v=gQeRjkb_Hlc&t=794) things whenever we're working on
+- [13:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=795) content. So let's say we're in the
+- [13:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=796) process of ideating content ideas,
+- [13:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=799) there's some skills here that it names
+- [13:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=800) that are useful for that intent. When it
+- [13:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=802) comes to researching or producing the
+- [13:24](https://youtube.com/watch?v=gQeRjkb_Hlc&t=804) actual lesson or video, then it has
+- [13:26](https://youtube.com/watch?v=gQeRjkb_Hlc&t=806) several markdown file references and
+- [13:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=808) skills here as well. And so the point
+- [13:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=810) being here is that as your agentic
+- [13:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=811) operating system evolves and you start
+- [13:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=813) to have a workspace for your company or
+- [13:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=815) for your team that becomes a bit more
+- [13:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=817) complex, what you can start to do is to
+- [13:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=819) actually identify the different
+- [13:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=820) departments of your life and of your
+- [13:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=823) work and actually build out these sub
+- [13:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=825) indexes in order to help Claude navigate
+- [13:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=828) your tree of files more efficiently. So
+- [13:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=831) that instead of just filling your
+- [13:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=832) Claude.md with every single fact about
+- [13:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=835) your business, then you can start to
+- [13:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=837) make it a lot thinner and a bit more
+- [13:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=839) efficient so that it only progressively
+- [14:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=841) loads the context that you need during
+- [14:03](https://youtube.com/watch?v=gQeRjkb_Hlc&t=843) the sessions where you need them. Which
+- [14:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=845) in its essence is what progressive
+- [14:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=847) disclosure really is. And also remember
+- [14:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=849) that this has implications on cost and
+- [14:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=851) how often you run into usage limits.
+- [14:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=853) Because before, if you have your
+- [14:14](https://youtube.com/watch?v=gQeRjkb_Hlc&t=854) Claude.md set up so that it's quite
+- [14:17](https://youtube.com/watch?v=gQeRjkb_Hlc&t=857) thick and is quite verbose, then what
+- [14:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=858) really happens here is if this rectangle
+- [14:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=861) denoted by the broken lines would be
+- [14:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=863) your session and your context window,
+- [14:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=865) then every session that you start with
+- [14:26](https://youtube.com/watch?v=gQeRjkb_Hlc&t=866) Claude, you actually use up this much
+- [14:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=868) tokens, which is equivalent to your
+- [14:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=869) Claude.md the moment that you send your
+- [14:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=872) first prompt. Which in my view is a bit
+- [14:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=873) of a waste, especially if as time goes
+- [14:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=875) by and you start to use Claude or any
+- [14:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=878) agent platform a lot more, then that
+- [14:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=879) token usage does rack up. Now in
+- [14:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=882) contrast to that, if your Claude.md is
+- [14:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=884) thin and only serves as a router, then
+- [14:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=886) the more that you interact with your
+- [14:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=888) agent, you actually start to realize the
+- [14:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=890) efficiency gains because you are not
+- [14:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=892) using up as much tokens with this
+- [14:54](https://youtube.com/watch?v=gQeRjkb_Hlc&t=894) Claude.md that is essentially a system
+- [14:56](https://youtube.com/watch?v=gQeRjkb_Hlc&t=896) prompt that gets injected and also uses
+- [14:58](https://youtube.com/watch?v=gQeRjkb_Hlc&t=898) your token budget allocation the moment
+- [15:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=901) that you start a new session. Now this
+- [15:03](https://youtube.com/watch?v=gQeRjkb_Hlc&t=903) next one is quite simple because before
+- [15:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=904) with older models, you may find that you
+- [15:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=906) needed to repeat yourself quite a lot in
+- [15:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=908) order for the model to understand what
+- [15:10](https://youtube.com/watch?v=gQeRjkb_Hlc&t=910) you mean. But this time, Tarikin that
+- [15:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=911) article mentions that it's actually
+- [15:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=913) better to have more simple tool
+- [15:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=915) descriptions. And this is probably
+- [15:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=916) something that you will just notice in
+- [15:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=918) the background because before if you
+- [15:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=919) recall, there were some advice where if
+- [15:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=921) you continuously chat with a model in a
+- [15:24](https://youtube.com/watch?v=gQeRjkb_Hlc&t=924) particular session and that session
+- [15:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=925) starts to build up context, there is a
+- [15:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=928) more noticeable case of what we're
+- [15:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=929) calling context rot. And a good example
+- [15:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=931) of how that was is that models before
+- [15:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=934) were more likely to listen to
+- [15:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=935) instructions at the end of the context
+- [15:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=937) window, which are the most recent
+- [15:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=938) messages, than the ones at the start.
+- [15:41](https://youtube.com/watch?v=gQeRjkb_Hlc&t=941) And so as a result of that, you would
+- [15:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=942) sometimes need to provide more repeated
+- [15:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=945) instructions for a model in order for it
+- [15:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=947) to understand or remember what you mean.
+- [15:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=949) Now, what Tarek is mentioning here
+- [15:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=950) simply is that that has actually changed
+- [15:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=952) because a lot of these models with table
+- [15:54](https://youtube.com/watch?v=gQeRjkb_Hlc&t=954) five and opus five are actually more
+- [15:56](https://youtube.com/watch?v=gQeRjkb_Hlc&t=956) intelligent and a bit more smart. Same
+- [15:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=957) with the example by the Entropic team
+- [15:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=959) here, where he's saying that in the
+- [16:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=960) past, their system prompt would
+- [16:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=962) sometimes have references to tools in
+- [16:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=964) the main system prompt as well as
+- [16:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=966) instructions in the tool description.
+- [16:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=967) So, they're basically just putting it in
+- [16:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=969) two places at once. But now, they could
+- [16:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=971) just delete those other repeat examples,
+- [16:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=973) which in their case would be in the tool
+- [16:14](https://youtube.com/watch?v=gQeRjkb_Hlc&t=974) descriptions rather than the system
+- [16:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=976) prompt. So, there's less duplication.
+- [16:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=978) You also save on the token cost simply
+- [16:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=980) because these newer set of models are
+- [16:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=981) much more intelligent versus what we
+- [16:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=983) started with. And that leads us to
+- [16:24](https://youtube.com/watch?v=gQeRjkb_Hlc&t=984) another shift, which you also might have
+- [16:26](https://youtube.com/watch?v=gQeRjkb_Hlc&t=986) noticed in the background, which is
+- [16:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=987) basically this concept of automatic
+- [16:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=989) memory. And this concept and shift is
+- [16:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=991) very simple. What Entropic's mentioning
+- [16:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=993) here is that before, they actually used
+- [16:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=995) to encourage users to save things in
+- [16:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=997) Claude's memory, which if you don't
+- [16:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=998) know, you can actually use the hash
+- [16:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=999) hotkey to write to their cloud.md
+- [16:41](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1001) automatically. But instead, at this
+- [16:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1003) point in Claude code's development, it
+- [16:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1005) now can actually automatically save
+- [16:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1006) memories that are relevant to the work
+- [16:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1008) and to you. Now, this particular advice
+- [16:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1010) and this saving memories, I do see it
+- [16:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1013) happen on my side, but generally, I
+- [16:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1015) think if you have a productive session
+- [16:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1017) with Claude that you think there's a lot
+- [16:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1019) of information there that would be
+- [17:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1020) useful to be logged or remembered by
+- [17:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1022) Claude, I think it's definitely still
+- [17:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1024) worth just asking Claude to remember
+- [17:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1026) those things depending on how your
+- [17:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1028) second brain system and your agenda
+- [17:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1029) operating system is set up. Now, to give
+- [17:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1031) an example, at least in how I do it, I
+- [17:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1033) built out this skill called {slash}
+- [17:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1035) calibrate. And this is probably one of
+- [17:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1036) my most used skills because whenever I
+- [17:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1038) end a session with Claude, I just do
+- [17:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1040) /calibrate. And what it does is it will
+- [17:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1042) just review that current conversation
+- [17:24](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1044) and applies the best updates to skills,
+- [17:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1047) to claw.md rules, to memory, and to
+- [17:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1049) workflows that we have so that it
+- [17:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1051) captures the learning in that whole
+- [17:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1052) session and applies it to our operating
+- [17:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1055) system. As to give you a view of my VS
+- [17:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1057) Code IDE here where I'm using Claude
+- [17:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1059) Code. You see I've used calibrate here
+- [17:41](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1061) and what that did is it just updated
+- [17:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1063) these skills that I gave some feedback
+- [17:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1065) for. And apart from skills, it also
+- [17:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1067) calibrates my claw.md, the content.md
+- [17:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1069) router that I showed earlier, my memory
+- [17:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1071) files. It logged a new recipe or format
+- [17:54](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1074) under my prompt packs and so on and so
+- [17:56](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1076) forth. And so you can see with this one
+- [17:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1077) skill and the more that you use Claude
+- [17:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1079) Code, you're actually starting to refine
+- [18:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1081) the way you work with them so that it
+- [18:03](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1083) gets to know you better. And last but
+- [18:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1084) not least is the transition from simple
+- [18:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1087) specs to richer references. And to me
+- [18:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1089) this shift is really important because I
+- [18:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1091) use it on the daily. So what Tarek
+- [18:12](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1092) mentions here is that previously,
+- [18:14](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1094) literally just a few probably months
+- [18:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1096) ago, there was this over-reliance on
+- [18:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1098) markdown files with creating plans, with
+- [18:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1100) creating assets and artifacts because
+- [18:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1102) the prevailing knowledge is that these
+- [18:24](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1104) markdown files are simple enough and
+- [18:26](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1106) light enough so that it would help
+- [18:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1108) Claude have proper references for things
+- [18:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1110) like code or specs or essentially plans
+- [18:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1113) for projects that you're creating with
+- [18:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1114) it. And obviously markdown files still
+- [18:36](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1116) very important like your claw.md and
+- [18:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1118) your skill files are still in the
+- [18:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1120) markdown format, right? But what we're
+- [18:41](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1121) saying here is that you don't actually
+- [18:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1123) need to be limited anymore with just
+- [18:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1124) markdown files. Because with this newer
+- [18:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1126) batch of models, it can handle
+- [18:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1128) increasingly more complicated
+- [18:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1129) references. And the one that I really
+- [18:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1131) like and probably start to use more now
+- [18:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1133) more than markdown files are HTML
+- [18:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1135) artifacts. And a good example of an HTML
+- [18:58](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1138) artifact or reference is that brand book
+- [19:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1140) that I showed earlier. Because if this
+- [19:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1142) were a markdown file, it probably won't
+- [19:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1144) be able to convey the same idea. It
+- [19:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1146) won't be able to show visually what are
+- [19:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1148) the color palettes of this design
+- [19:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1149) system. And so having a reference like
+- [19:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1151) this, which you can see is an HTML file,
+- [19:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1153) basically a hypertext markup language,
+- [19:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1155) that when you open them, it just allows
+- [19:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1156) browsers like Chrome to render them
+- [19:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1158) visually. Then, there's a benefit of
+- [19:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1160) number one, your agent being able to
+- [19:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1162) parse through it, because under the
+- [19:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1163) hood, this is all still just code and
+- [19:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1165) still just text. But, also equally as
+- [19:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1167) important is that you, as the human,
+- [19:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1169) should be able to see and understand
+- [19:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1171) these references, especially the more
+- [19:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1173) visual ones. And this is also important
+- [19:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1175) when you're communicating ideas to other
+- [19:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1177) people, just like what I'm doing now.
+- [19:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1178) So, let's say this document about this
+- [19:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1180) skill called Dr. Plus, which I'll go
+- [19:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1182) over in a bit. This is much more visual,
+- [19:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1184) much more engaging versus the say if I
+- [19:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1186) were presenting to you right now a
+- [19:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1188) markdown file, then this probably won't
+- [19:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1190) be as effective as how it looks right
+- [19:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1192) now. In fact, sometimes if I feel like I
+- [19:54](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1194) have a lot of token budget remaining
+- [19:56](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1196) during the week, and I want to
+- [19:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1197) understand concepts or new skills that
+- [19:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1199) I'm investigating or trying out, simply,
+- [20:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1201) I routinely just ask Claude to create
+- [20:03](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1203) HTML artifacts for me, because this is
+- [20:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1205) just much easier to review versus like a
+- [20:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1207) markdown file or just being locked in
+- [20:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1209) the chat window terminal session, where
+- [20:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1211) you need to read through a wall of text.
+- [20:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1213) So, this is just one example where I
+- [20:14](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1214) literally just ask it to create an
+- [20:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1216) infographic using that {slash} Robo
+- [20:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1218) skill, our design system, in order to
+- [20:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1220) understand what are these new rules that
+- [20:22](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1222) the article was talking about. So, I
+- [20:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1223) pointed Claude to that article, it gave
+- [20:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1225) me those six shifts, gave me some
+- [20:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1227) examples of what these shifts are
+- [20:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1229) pertaining to, and this gives me a more
+- [20:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1230) solid idea in a much faster way versus
+- [20:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1233) me just having to read through Claude's
+- [20:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1235) essay on what this whole article is
+- [20:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1237) about. Now, the good news about all this
+- [20:39](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1239) is that Anthropic has actually made it
+- [20:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1240) really simple to apply all of these best
+- [20:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1242) practices with the latest version of
+- [20:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1244) Claude Code. So, if you update your
+- [20:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1245) Claude Code to the latest, then you'll
+- [20:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1247) be able to also get this {slash} doctor
+- [20:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1250) skill, which if you invoke that command,
+- [20:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1253) what it will basically do is five
+- [20:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1255) things. So, it will check your install
+- [20:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1257) of Claude Code to see if there's like
+- [20:59](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1259) any broken or duplicate installs, any
+- [21:02](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1262) path file path problems. It also finds
+- [21:04](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1264) dead weight, so for example, your skills
+- [21:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1266) or MCP servers, and even your cloud.md,
+- [21:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1269) it trims it down so that it's optimized
+- [21:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1271) to be thinner, just like what we
+- [21:12](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1272) mentioned earlier. If you have hooks set
+- [21:14](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1274) up, which are essentially these
+- [21:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1276) deterministic codes that you may have
+- [21:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1278) already set up if you're a bit more
+- [21:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1279) advanced in Cloud Code, then {slash}
+- [21:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1281) doctor will call out these hooks that
+- [21:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1283) add a bit of slowness to every turn or
+- [21:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1285) every message that you send to Cloud.
+- [21:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1287) And then finally, it just reports its
+- [21:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1288) findings before applying those fixes. If
+- [21:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1290) I go to my Cloud and just show, you can
+- [21:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1292) see I ran that {slash} doctor command a
+- [21:34](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1294) while ago. Gives me a summary of what it
+- [21:36](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1296) found. So, it says here that my install
+- [21:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1298) is healthy and up to date. It gives me a
+- [21:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1300) lot of detail around the stuff that it
+- [21:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1302) recommends. But, at the end of this, it
+- [21:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1304) gave me these options on what I actually
+- [21:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1305) want to do. So, it gave some MCP servers
+- [21:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1308) that I might consider disabling, which I
+- [21:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1310) think we can do that. There's a couple
+- [21:51](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1311) of skills in here that I think I either
+- [21:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1313) might have replaced already, which we
+- [21:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1315) can probably archive. There's also a
+- [21:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1317) plugin that I was demoing in a tutorial
+- [22:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1320) previously. And then it also tells me
+- [22:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1321) here that I am a bit behind on the
+- [22:03](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1323) versioning because I think every day
+- [22:05](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1325) there's a new version of Cloud Code. So,
+- [22:07](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1327) you might find that to be true for
+- [22:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1328) yourself as well. So, if you submit
+- [22:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1329) that, that just gets your Cloud Code
+- [22:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1331) instance to be up to spec, let's say, to
+- [22:14](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1334) these best practices. However, with just
+- [22:16](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1336) this {slash} doctor skill, I actually
+- [22:18](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1338) found that it is a bit more basic. It
+- [22:20](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1340) doesn't really capture the learnings
+- [22:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1341) that Tariq was mentioning in those six
+- [22:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1343) shifts. So, what I basically did is I
+- [22:26](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1346) just made this {slash} doctor plus,
+- [22:28](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1348) which is a skill that you can just grab
+- [22:29](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1349) below. It's available for free. And what
+- [22:31](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1351) that does, if in case you want a more
+- [22:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1353) complete checkup, is that apart from
+- [22:35](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1355) doing all the things that {slash} doctor
+- [22:37](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1357) does, basically by just invoking the
+- [22:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1358) same {slash} doctor command that ships
+- [22:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1360) with Cloud Code, is it also does a check
+- [22:43](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1363) of those six shifts that we talked
+- [22:45](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1365) about. And you can see when I ran this
+- [22:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1366) on my device, says doctor's clean
+- [22:48](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1368) because I've already done it before
+- [22:50](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1370) this. And then the good thing about this
+- [22:52](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1372) is that it actually tells me with those
+- [22:53](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1373) six shifts, what are some of the skills
+- [22:55](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1375) and artifacts that I can actually
+- [22:57](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1377) optimize based on these new rules of
+- [23:00](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1380) Cloud. So, it's telling me that this
+- [23:01](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1381) last 30-day skill, which is meant for
+- [23:03](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1383) research, is hitting a lot of red flags
+- [23:06](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1386) based on those new rules. And I actually
+- [23:08](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1388) I'm not surprised with this because I
+- [23:09](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1389) remember with this last 30 days, it came
+- [23:11](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1391) out a few months ago already. So, it's
+- [23:13](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1393) telling me here that this skill is
+- [23:15](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1395) actually really thick. It's like 2,090
+- [23:17](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1397) lines long. And we can probably optimize
+- [23:19](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1399) that by making this skill.md more of a
+- [23:21](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1401) router rather than dumping this whole
+- [23:23](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1403) 2,000 lines of context in there. But,
+- [23:25](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1405) there in essence, what you can do is to
+- [23:27](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1407) run this Dr. Plus skill and just do a
+- [23:30](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1410) more advanced checkup based on the
+- [23:32](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1412) shifts, based on the new rules that
+- [23:33](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1413) Tarek was mentioning in that now viral
+- [23:36](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1416) article. And again, you can just grab
+- [23:38](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1418) that whole skill, which you can import
+- [23:40](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1420) or customize for your setup or even set
+- [23:42](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1422) up a routine for. So, that let's say
+- [23:44](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1424) every month you run this Dr. Plus skill
+- [23:46](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1426) to do a check with your Cloud Code
+- [23:47](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1427) instance. And you can just get that in
+- [23:49](https://youtube.com/watch?v=gQeRjkb_Hlc&t=1429) the description below.
