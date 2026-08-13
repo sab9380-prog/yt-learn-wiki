@@ -5,11 +5,12 @@ concept: anthropic
 
 # 🧩 Anthropic
 
-> 개념 집약 · 자동 생성 (수정 금지) · 노트 8개
+> 개념 집약 · 자동 생성 (수정 금지) · 노트 9개
 
 - 상위 주제: [[_topic-ANTHROPIC]]
 
 ## 관련 노트
+- [[2026-08-13-You-re-Paying-Anthropic-20x-MORE-Than]] — You're Paying Anthropic 20x MORE Than You Need To — Claude Code 비용의 핵심은 프롬프트 캐싱 원리를 이해하는 것이며, 캐시 만료 하나만 막아도 토큰 비용을 최대 20배 절감할 수 있다.
 - [[2026-08-08-Claude-Code-Just-Changed-Forever-6-NEW]] — Claude Code Just Changed Forever (6 NEW Rules by Anthropic Engineers) — Claude 5 세대 모델은 지능이 비약적으로 향상되었으므로, 규칙·예시·중복 지시를 줄이고 판단·디자인 인터페이스·점진적 파일 로딩으로 전환해야 더 빠르고 저렴한 에이전트 운영이 가능하다.
 - [[2026-07-31-앤트로픽-테크니컬-스태프가-알려주는-Claude-Fable-활용법-6가지]] — 앤트로픽 테크니컬 스태프가 알려주는 Claude Fable 활용법 6가지 — AI 결과물의 병목은 모델이 아니라 '내가 모르는 것을 모르는 상태'이며, 6가지 기법으로 그 간극을 미리 채우는 것이 곧 AI 시대의 핵심 역량이다.
 - [[2026-07-07-Anthropic-개발자가-직접-공개한-Claude-Fable-5]] — Anthropic 개발자가 직접 공개한 Claude Fable 5 사용법 (핵심은 언노운 찾기) — AI 결과물의 품질은 모델 성능이 아니라 내가 '모른다는 것조차 모르는 것(언노운)'을 얼마나 빨리 발굴하느냐에 달려 있으므로, AI에게 더 시키기 전에 AI로 나 자신을 먼저 업그레이드하라.
