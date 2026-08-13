@@ -5,13 +5,14 @@ topic: ANTHROPIC
 
 # 🗂️ ANTHROPIC
 
-> 주제 집약 · 자동 생성 (수정 금지) · 노트 11개
+> 주제 집약 · 자동 생성 (수정 금지) · 노트 12개
 
 ## 세부 개념
 - [[_concept-anthropic|Anthropic]]
 - [[_concept-claude-model|Claude]]
 
 ## 관련 노트
+- [[2026-08-13-You-re-Paying-Anthropic-20x-MORE-Than]] — You're Paying Anthropic 20x MORE Than You Need To — Claude Code 비용의 핵심은 프롬프트 캐싱 원리를 이해하는 것이며, 캐시 만료 하나만 막아도 토큰 비용을 최대 20배 절감할 수 있다.
 - [[2026-08-08-Claude-Code-Just-Changed-Forever-6-NEW]] — Claude Code Just Changed Forever (6 NEW Rules by Anthropic Engineers) — Claude 5 세대 모델은 지능이 비약적으로 향상되었으므로, 규칙·예시·중복 지시를 줄이고 판단·디자인 인터페이스·점진적 파일 로딩으로 전환해야 더 빠르고 저렴한 에이전트 운영이 가능하다.
 - [[2026-07-31-앤트로픽-테크니컬-스태프가-알려주는-Claude-Fable-활용법-6가지]] — 앤트로픽 테크니컬 스태프가 알려주는 Claude Fable 활용법 6가지 — AI 결과물의 병목은 모델이 아니라 '내가 모르는 것을 모르는 상태'이며, 6가지 기법으로 그 간극을 미리 채우는 것이 곧 AI 시대의 핵심 역량이다.
 - [[2026-07-11-클로드-페이블5로-자동화-여기까지-된다-I-클로드-500시간-써본-대표]] — 클로드 페이블5로 자동화 여기까지 된다? I 클로드 500시간 써본 대표 후기 — AI 이미지 워크플로우의 병목을 직접 체험으로 찾아내고, 여러 AI 도구를 역할별로 조합해 내부 자동화 웹앱으로 해결한 실전 사례.
