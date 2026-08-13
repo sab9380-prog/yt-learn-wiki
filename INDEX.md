@@ -1,6 +1,6 @@
 # 🏠 학습 위키 목차
 
-> 총 123개 · 자동 생성 (수정 금지)
+> 총 124개 · 자동 생성 (수정 금지)
 
 ## META
 - [[2026-05-22-비교-표시-방식-4-옵션-비교-재열님-결정용]] — [UX 모킹] 비유·비교 표시 방식 4 옵션 비교 (재열님 결정용) (2026-05-22)
@@ -62,6 +62,7 @@
 - [[2026-07-31-상상을-현실로-만드는-기술-웹소설-창작-AI-제작-특강-웨비나-녹화]] — 상상을 현실로 만드는 기술, 웹소설 창작 AI 제작 특강 (웨비나 녹화 편집본) (2026-07-31)
 
 ## 일반학습
+- [[2026-08-13-You-re-Paying-Anthropic-20x-MORE-Than]] — You're Paying Anthropic 20x MORE Than You Need To (2026-08-13)
 - [[2026-08-08-Claude-Code-Just-Changed-Forever-6-NEW]] — Claude Code Just Changed Forever (6 NEW Rules by Anthropic Engineers) (2026-08-08)
 - [[2026-08-07-Claude-Code-비용-80-절감하는-settings-json]] — Claude Code 비용 80% 절감하는 settings.json 3줄과 14만명이 쓰는 everything-claude-code 설정법 (2026-08-07)
 - [[2026-08-06-오픈AI-GPT-해킹-사건-으로-지옥문-열렸다-인류-멸망-시나리오-최초]] — 오픈AI 'GPT 해킹 사건'으로 '지옥문' 열렸다? "인류 멸망 시나리오 최초 공개" (ft. 김대식 교수) | 💡지식의발견 (2026-08-06)
