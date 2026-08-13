@@ -5,11 +5,12 @@ concept: context-engineering
 
 # 🧩 컨텍스트 엔지니어링
 
-> 개념 집약 · 자동 생성 (수정 금지) · 노트 19개
+> 개념 집약 · 자동 생성 (수정 금지) · 노트 20개
 
 - 상위 주제: [[_topic-컨텍스트관리]]
 
 ## 관련 노트
+- [[2026-08-13-You-re-Paying-Anthropic-20x-MORE-Than]] — You're Paying Anthropic 20x MORE Than You Need To — Claude Code 비용의 핵심은 프롬프트 캐싱 원리를 이해하는 것이며, 캐시 만료 하나만 막아도 토큰 비용을 최대 20배 절감할 수 있다.
 - [[2026-08-08-Claude-Code-Just-Changed-Forever-6-NEW]] — Claude Code Just Changed Forever (6 NEW Rules by Anthropic Engineers) — Claude 5 세대 모델은 지능이 비약적으로 향상되었으므로, 규칙·예시·중복 지시를 줄이고 판단·디자인 인터페이스·점진적 파일 로딩으로 전환해야 더 빠르고 저렴한 에이전트 운영이 가능하다.
 - [[2026-08-07-Claude-Code-비용-80-절감하는-settings-json]] — Claude Code 비용 80% 절감하는 settings.json 3줄과 14만명이 쓰는 everything-claude-code 설정법 — 클로드 코드가 갑자기 멍청해지는 건 컨텍스트 부패라는 구조적 문제이며, Everything Claude Code 저장소의 세 가지 설정(비용 절감 → 컨텍스트 관리 → 메모리 학습)을 순서대로 적용하면 비용과 품질…
 - [[2026-07-31-클로드와-GPT는-끝났다-실리콘밸리에서-급성장-중인-AI-리뷰-l]] — 클로드와 GPT는 끝났다. 실리콘밸리에서 급성장 중인 AI 리뷰 l 언제요 Ep16  — AI 세컨 브레인은 개인 맥락을 학습해 업무 속도를 높이지만, 일의 총량 자체는 줄어들지 않는다.
