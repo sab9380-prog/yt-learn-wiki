@@ -4424,5 +4424,54 @@
         "topic": "ANTHROPIC"
       }
     ]
+  },
+  {
+    "filename": "2026-08-13-You-re-Paying-Anthropic-20x-MORE-Than.md",
+    "title": "You're Paying Anthropic 20x MORE Than You Need To",
+    "category": "일반학습",
+    "date": "2026-08-13",
+    "core_message": "Claude Code 비용의 핵심은 프롬프트 캐싱 원리를 이해하는 것이며, 캐시 만료 하나만 막아도 토큰 비용을 최대 20배 절감할 수 있다.",
+    "topics": [
+      "컨텍스트관리",
+      "스킬",
+      "ANTHROPIC"
+    ],
+    "concepts": [
+      {
+        "id": "프롬프트-캐싱",
+        "label": "프롬프트 캐싱",
+        "topic": null
+      },
+      {
+        "id": "context-engineering",
+        "label": "컨텍스트 엔지니어링",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "캐시-히트-vs-캐시-라이트",
+        "label": "캐시 히트 vs 캐시 라이트",
+        "topic": null
+      },
+      {
+        "id": "compaction",
+        "label": "컴팩션",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "모델-라우팅",
+        "label": "모델 라우팅",
+        "topic": null
+      },
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "anthropic",
+        "label": "Anthropic",
+        "topic": "ANTHROPIC"
+      }
+    ]
   }
 ]
