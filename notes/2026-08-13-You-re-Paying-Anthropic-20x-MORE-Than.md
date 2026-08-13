@@ -1,0 +1,590 @@
+---
+title: "You're Paying Anthropic 20x MORE Than You Need To"
+source_url: https://youtube.com/watch?v=V0XbuApxlhg
+video_id: V0XbuApxlhg
+source_type: youtube
+lang: en
+analyzed: 2026-08-13
+category: 일반학습
+tags: ["개념/프롬프트-캐싱", "주제/컨텍스트관리", "개념/컨텍스트관리/context-engineering", "개념/캐시-히트-vs-캐시-라이트", "개념/컨텍스트관리/compaction", "개념/모델-라우팅", "주제/스킬", "개념/스킬/claude-skill", "주제/ANTHROPIC", "개념/ANTHROPIC/anthropic"]
+key_concepts: ["프롬프트 캐싱", "컨텍스트 윈도우", "캐시 히트 vs 캐시 라이트", "컴팩션", "모델 라우팅", "클로드 스킬"]
+status: active
+---
+# You're Paying Anthropic 20x MORE Than You Need To
+
+## 🧠 이해 (Understand)
+- **Summary:** Claude Code 사용 시 토큰 비용을 최대 20배까지 절감할 수 있는 5가지 방법을 설명한다. 핵심은 프롬프트 캐싱 원리를 이해하는 것으로, 캐시 히트 시 입력 토큰 비용이 $1/백만 토큰이지만 캐시가 만료되면 $20/백만 토큰으로 20배 급등한다. 캐시는 1시간 비활성 시 초기화되며, 모델 전환·MCP 연결·컴팩션 등의 행동도 캐시를 리셋한다. 캐시 손실 후에는 /clear, /compact, 핸드오프 문서 중 상황에 맞는 방법을 선택해야 하며, 모델 라우팅과 Claude.md 다이어트, 보조 스캐폴딩 도구로 추가 절감이 가능하다.
+- **Core Message:** Claude Code 비용의 핵심은 프롬프트 캐싱 원리를 이해하는 것이며, 캐시 만료 하나만 막아도 토큰 비용을 최대 20배 절감할 수 있다.
+> You might be paying 20 times more for your Claude code tokens than you need to and not even know it.
+> There is nothing I'm going to talk about beyond this point that is going to give you any sort of efficiency gain close to this. Nothing.
+> We went from 50 cents to $10 just because we waited an hour.
+❗ 캐시 히트($1/백만)와 캐시 미스($20/백만)의 비용 차이가 정확히 20배다.
+❗ 캐시는 1시간 비활동 시 초기화되며, 모델 전환·MCP 연결·컴팩션 등 일상적인 행동 하나로도 리셋된다.
+❗ 새 대화를 시작해도 스킬·MCP·시스템 프롬프트·메모리 파일 등으로 메시지 전송 전부터 이미 40,000토큰이 소진되어 있다.
+
+## 📚 핵심 용어
+- **프롬프트 캐싱:** 이전 대화 전체를 저장해 두고 저렴한 요금으로 재참조하는 Anthropic의 비용 절감 시스템. / 도서관 사서가 자주 쓰는 책을 카운터 앞에 꺼내 두는 것처럼, Claude도 대화 이력을 바로 옆에 펼쳐두고 빠르게 읽는다. / 캐시 없이 전송 시 $20/백만 토큰, 캐시 히트 시 $1/백만 토큰. 같은 내용인데 20배 차이가 난다.
+- **컨텍스트 부패:** 대화가 길어질수록 오래된 맥락이 노이즈가 되어 모델 응답 품질이 저하되는 현상. / 회의록이 너무 길어지면 핵심을 찾기 어려워지듯, 토큰이 쌓일수록 Claude도 길을 잃는다. / 캐시 만료는 비용 문제, 컨텍스트 부패는 품질 문제. 둘 다 긴 대화에서 발생하지만 해결책이 다르다.
+- **컴팩션:** 긴 대화를 요약본으로 압축해 새 대화를 시작하는 Claude Code 내장 기능. / 두꺼운 회의록을 1페이지 요약본으로 만들어 다음 회의에 가져가는 것과 같다. / 핸드오프는 요약을 디스크 파일로 저장, 컴팩션은 대화 히스토리 안에만 주입. 파일로 남기려면 핸드오프.
+- **모델 라우팅:** 작업 난이도에 따라 큰 모델과 작은 모델을 구분해 호출하는 비용 최적화 전략. / 간단한 서류 작업은 인턴에게, 중요한 의사결정만 임원에게 올리는 업무 위임과 같다. / 단일 모델 사용은 모든 일을 임원이 처리하는 것. 라우팅은 비용을 낮추되 품질은 유지한다.
+
+## 🚀 실행 (Execute)
+- [ ] /doctor 명령어 실행 후 Claude.md 및 미사용 스킬·MCP 정리 — ⏰ 오늘 · ⚡ 30분
+  - 담당: 나
+  - 이유: 비활성 스킬과 비대해진 Claude.md가 대화 시작 전부터 수만 토큰을 소진하고 있으며, doctor는 이를 자동으로 진단·정리해 즉각 비용 절감 효과를 준다.
+- [ ] 1시간 이상 자리를 비울 때 /compact 또는 핸드오프 문서 생성 루틴 습관화 — ⏰ 이번 주 내로 루틴 확립 · ⚡ 1~2시간 (핸드오프 스킬 설정 포함)
+  - 담당: 나
+  - 이유: 캐시 만료 한 번으로 동일 메시지가 20배 비싸지는 구조를 알았으므로, 자리 이탈 전 컨텍스트를 보존하는 것이 가장 직접적인 비용 절감 행동이다.
+- [ ] 단순 반복 작업에 Advisor 모드(Fable→Sonnet) 또는 외부 저비용 모델(GPT Luna/Terra) 위임 테스트 — ⏰ 2주 내 · ⚡ 2~3시간 (Codex 플러그인 또는 커스텀 스킬 설정)
+  - 담당: 나
+  - 이유: 복잡도 낮은 작업까지 최상위 모델을 쓰는 것은 낭비이며, 모델 라우팅으로 품질 유지 + 비용 절감을 동시에 달성할 수 있다.
+- 자료: Anthropic 공식 가격 문서 — 캐시 라이트/캐시 히트 요금표 확인 (anthropic.com/pricing)
+- 자료: Claude Code 공식 문서 — 캐시 초기화 트리거 목록 확인 필요
+- 자료: Ponytail GitHub 레포 — 코드 생성 토큰 절감 스캐폴딩 (확인 필요: 정확한 레포명 검색 권장)
+- 자료: Caveman 프롬프트 — 출력 토큰 65% 절감 주장 도구 (확인 필요: 실제 효과는 프로젝트마다 다를 수 있음)
+- 자료: Codex 플러그인 for Claude Code — GPT 모델 위임용 (확인 필요: 현재 지원 여부 최신 문서 확인 권장)
+- Timeline: 1일차: /doctor 실행 및 Claude.md 정리 → 1주차: 컴팩션/핸드오프 루틴 체화 → 2주차: 모델 라우팅 테스트 및 비용 비교 측정
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-컨텍스트관리]] · [[_topic-스킬]] · [[_topic-ANTHROPIC]]
+- 핵심 개념: [[_concept-프롬프트-캐싱|프롬프트 캐싱]] · [[_concept-context-engineering|컨텍스트 엔지니어링]] · [[_concept-캐시-히트-vs-캐시-라이트|캐시 히트 vs 캐시 라이트]] · [[_concept-compaction|컴팩션]] · [[_concept-모델-라우팅|모델 라우팅]] · [[_concept-claude-skill|클로드 스킬]] · [[_concept-anthropic|Anthropic]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=V0XbuApxlhg&t=0) You might be paying 20 times more for
+- [0:02](https://youtube.com/watch?v=V0XbuApxlhg&t=2) your Claude code tokens than you need to
+- [0:04](https://youtube.com/watch?v=V0XbuApxlhg&t=4) and not even know it. Understanding how
+- [0:06](https://youtube.com/watch?v=V0XbuApxlhg&t=6) to get the most out of your Claude code
+- [0:07](https://youtube.com/watch?v=V0XbuApxlhg&t=7) tokens is one of the most important
+- [0:09](https://youtube.com/watch?v=V0XbuApxlhg&t=9) skills you can master and it goes well
+- [0:11](https://youtube.com/watch?v=V0XbuApxlhg&t=11) beyond simply putting a line in your
+- [0:13](https://youtube.com/watch?v=V0XbuApxlhg&t=13) Claude.md file saying be brief. Because
+- [0:16](https://youtube.com/watch?v=V0XbuApxlhg&t=16) if you don't understand things like how
+- [0:17](https://youtube.com/watch?v=V0XbuApxlhg&t=17) prompt caching even work, you can be
+- [0:19](https://youtube.com/watch?v=V0XbuApxlhg&t=19) paying way more than you need to. So in
+- [0:22](https://youtube.com/watch?v=V0XbuApxlhg&t=22) this video, I'm going to give you five
+- [0:23](https://youtube.com/watch?v=V0XbuApxlhg&t=23) different ways to better manage your
+- [0:25](https://youtube.com/watch?v=V0XbuApxlhg&t=25) Claude tokens so you can actually get
+- [0:26](https://youtube.com/watch?v=V0XbuApxlhg&t=26) the most out of these top-tier models.
+- [0:28](https://youtube.com/watch?v=V0XbuApxlhg&t=28) Now tip number one is the most
+- [0:30](https://youtube.com/watch?v=V0XbuApxlhg&t=30) important. This will save you more money
+- [0:31](https://youtube.com/watch?v=V0XbuApxlhg&t=31) in usage than every other tip combined
+- [0:33](https://youtube.com/watch?v=V0XbuApxlhg&t=33) by far and that is understanding how
+- [0:35](https://youtube.com/watch?v=V0XbuApxlhg&t=35) prompt caching actually works. Now to
+- [0:39](https://youtube.com/watch?v=V0XbuApxlhg&t=39) understand prompt caching, you need to
+- [0:40](https://youtube.com/watch?v=V0XbuApxlhg&t=40) understand how tokens work at all. So
+- [0:43](https://youtube.com/watch?v=V0XbuApxlhg&t=43) we're going to do a very quick review
+- [0:44](https://youtube.com/watch?v=V0XbuApxlhg&t=44) like 60 seconds so we're all on the same
+- [0:45](https://youtube.com/watch?v=V0XbuApxlhg&t=45) page. Now tokens are the currency of
+- [0:47](https://youtube.com/watch?v=V0XbuApxlhg&t=47) large language models and for all
+- [0:49](https://youtube.com/watch?v=V0XbuApxlhg&t=49) intents and purposes, this is somewhat
+- [0:51](https://youtube.com/watch?v=V0XbuApxlhg&t=51) simplified, is every word equals one
+- [0:54](https://youtube.com/watch?v=V0XbuApxlhg&t=54) token. So when you, the user, on your
+- [0:56](https://youtube.com/watch?v=V0XbuApxlhg&t=56) first message to Fable say, "How are you
+- [1:00](https://youtube.com/watch?v=V0XbuApxlhg&t=60) doing today?" you have sent five input
+- [1:04](https://youtube.com/watch?v=V0XbuApxlhg&t=64) tokens.
+- [1:05](https://youtube.com/watch?v=V0XbuApxlhg&t=65) Now when Fable responds to you and says,
+- [1:07](https://youtube.com/watch?v=V0XbuApxlhg&t=67) "I'm doing great, thanks." it has given
+- [1:09](https://youtube.com/watch?v=V0XbuApxlhg&t=69) you four output tokens. These are priced
+- [1:13](https://youtube.com/watch?v=V0XbuApxlhg&t=73) differently. In fact, output tokens, by
+- [1:15](https://youtube.com/watch?v=V0XbuApxlhg&t=75) and large, cost five times what an input
+- [1:18](https://youtube.com/watch?v=V0XbuApxlhg&t=78) token costs. Now these five input tokens
+- [1:21](https://youtube.com/watch?v=V0XbuApxlhg&t=81) and these four output tokens now
+- [1:23](https://youtube.com/watch?v=V0XbuApxlhg&t=83) accumulate inside the context window. If
+- [1:26](https://youtube.com/watch?v=V0XbuApxlhg&t=86) tokens are the currency, then the
+- [1:28](https://youtube.com/watch?v=V0XbuApxlhg&t=88) context window is our budget. Opus,
+- [1:32](https://youtube.com/watch?v=V0XbuApxlhg&t=92) Fable, Sonnet, they all have a budget of
+- [1:34](https://youtube.com/watch?v=V0XbuApxlhg&t=94) 1 million tokens. So this point we have
+- [1:36](https://youtube.com/watch?v=V0XbuApxlhg&t=96) used nine over 1 million, not a whole
+- [1:39](https://youtube.com/watch?v=V0XbuApxlhg&t=99) lot. Now what gets interesting is when
+- [1:41](https://youtube.com/watch?v=V0XbuApxlhg&t=101) we send follow-on messages after the
+- [1:44](https://youtube.com/watch?v=V0XbuApxlhg&t=104) first one. So in our second message, I,
+- [1:46](https://youtube.com/watch?v=V0XbuApxlhg&t=106) the user, say, "Build me an app, no
+- [1:49](https://youtube.com/watch?v=V0XbuApxlhg&t=109) mistakes." Six input tokens, right? I'm
+- [1:52](https://youtube.com/watch?v=V0XbuApxlhg&t=112) just going to send Anthropic and Fable
+- [1:54](https://youtube.com/watch?v=V0XbuApxlhg&t=114) just six input tokens. Well, not quite.
+- [1:57](https://youtube.com/watch?v=V0XbuApxlhg&t=117) What I'm actually going to be sending it
+- [1:59](https://youtube.com/watch?v=V0XbuApxlhg&t=119) is everything. I'm going to be sending
+- [2:03](https://youtube.com/watch?v=V0XbuApxlhg&t=123) Anthropic this entire conversation up
+- [2:06](https://youtube.com/watch?v=V0XbuApxlhg&t=126) until that point. So, I'm not really
+- [2:08](https://youtube.com/watch?v=V0XbuApxlhg&t=128) sending six input tokens. I'm in fact
+- [2:11](https://youtube.com/watch?v=V0XbuApxlhg&t=131) sending 16 input tokens cuz I'm going to
+- [2:14](https://youtube.com/watch?v=V0XbuApxlhg&t=134) send them the five from here and the
+- [2:15](https://youtube.com/watch?v=V0XbuApxlhg&t=135) four from here because it's going to get
+- [2:16](https://youtube.com/watch?v=V0XbuApxlhg&t=136) the entire message so that it can
+- [2:18](https://youtube.com/watch?v=V0XbuApxlhg&t=138) understand the context. And for every
+- [2:20](https://youtube.com/watch?v=V0XbuApxlhg&t=140) single follow-on message, that will be
+- [2:22](https://youtube.com/watch?v=V0XbuApxlhg&t=142) the case. I am always sending the
+- [2:24](https://youtube.com/watch?v=V0XbuApxlhg&t=144) entirety the conversation before that
+- [2:27](https://youtube.com/watch?v=V0XbuApxlhg&t=147) latest message. And you can quickly see
+- [2:29](https://youtube.com/watch?v=V0XbuApxlhg&t=149) how this compounds very, very quickly to
+- [2:31](https://youtube.com/watch?v=V0XbuApxlhg&t=151) where you're talking about 5,000,
+- [2:34](https://youtube.com/watch?v=V0XbuApxlhg&t=154) 10,000, 100,000 input tokens being sent
+- [2:36](https://youtube.com/watch?v=V0XbuApxlhg&t=156) every single message and you are paying
+- [2:38](https://youtube.com/watch?v=V0XbuApxlhg&t=158) for that. Now, if that is the case, then
+- [2:41](https://youtube.com/watch?v=V0XbuApxlhg&t=161) why don't we just run through all of our
+- [2:43](https://youtube.com/watch?v=V0XbuApxlhg&t=163) usage immediately? Why doesn't everyone
+- [2:44](https://youtube.com/watch?v=V0XbuApxlhg&t=164) pay a billion dollars every time they
+- [2:46](https://youtube.com/watch?v=V0XbuApxlhg&t=166) try to use these AI systems? Because
+- [2:48](https://youtube.com/watch?v=V0XbuApxlhg&t=168) obviously we're sending message after
+- [2:49](https://youtube.com/watch?v=V0XbuApxlhg&t=169) message, so there's a whole lot of like
+- [2:51](https://youtube.com/watch?v=V0XbuApxlhg&t=171) compounded messaging being sent to the
+- [2:53](https://youtube.com/watch?v=V0XbuApxlhg&t=173) servers. Well, the solution here is the
+- [2:55](https://youtube.com/watch?v=V0XbuApxlhg&t=175) cache
+- [2:56](https://youtube.com/watch?v=V0XbuApxlhg&t=176) system. So, yes, when I send message
+- [2:59](https://youtube.com/watch?v=V0XbuApxlhg&t=179) number two over here, I am in fact
+- [3:01](https://youtube.com/watch?v=V0XbuApxlhg&t=181) sending all of this.
+- [3:03](https://youtube.com/watch?v=V0XbuApxlhg&t=183) But,
+- [3:04](https://youtube.com/watch?v=V0XbuApxlhg&t=184) what has been created at this point is
+- [3:06](https://youtube.com/watch?v=V0XbuApxlhg&t=186) the message cache.
+- [3:09](https://youtube.com/watch?v=V0XbuApxlhg&t=189) And for our second message, that message
+- [3:10](https://youtube.com/watch?v=V0XbuApxlhg&t=190) cache are these first two messages. I
+- [3:13](https://youtube.com/watch?v=V0XbuApxlhg&t=193) want you to think of the message cache
+- [3:15](https://youtube.com/watch?v=V0XbuApxlhg&t=195) is simply a document that Claude has in
+- [3:17](https://youtube.com/watch?v=V0XbuApxlhg&t=197) front of it that has your entire
+- [3:18](https://youtube.com/watch?v=V0XbuApxlhg&t=198) conversation up until that point. So, we
+- [3:21](https://youtube.com/watch?v=V0XbuApxlhg&t=201) got you talking to Claude right here.
+- [3:23](https://youtube.com/watch?v=V0XbuApxlhg&t=203) You are now sending message number two,
+- [3:26](https://youtube.com/watch?v=V0XbuApxlhg&t=206) which is build me an app, no mistakes.
+- [3:29](https://youtube.com/watch?v=V0XbuApxlhg&t=209) But, we have the cache system, so this
+- [3:31](https://youtube.com/watch?v=V0XbuApxlhg&t=211) whole section, these first two messages,
+- [3:33](https://youtube.com/watch?v=V0XbuApxlhg&t=213) are now sitting in this document. So,
+- [3:36](https://youtube.com/watch?v=V0XbuApxlhg&t=216) what Claude and Anthropic is able to do
+- [3:38](https://youtube.com/watch?v=V0XbuApxlhg&t=218) is it is able to read that document,
+- [3:40](https://youtube.com/watch?v=V0XbuApxlhg&t=220) it's able to read the cache,
+- [3:42](https://youtube.com/watch?v=V0XbuApxlhg&t=222) take a look at the entire message
+- [3:43](https://youtube.com/watch?v=V0XbuApxlhg&t=223) history up until that point at a way
+- [3:45](https://youtube.com/watch?v=V0XbuApxlhg&t=225) cheaper rate than if you were just
+- [3:48](https://youtube.com/watch?v=V0XbuApxlhg&t=228) sending it all at once without the
+- [3:50](https://youtube.com/watch?v=V0XbuApxlhg&t=230) cache.
+- [3:52](https://youtube.com/watch?v=V0XbuApxlhg&t=232) And that's how it calculates the cost.
+- [3:54](https://youtube.com/watch?v=V0XbuApxlhg&t=234) And this cost is important because this
+- [3:56](https://youtube.com/watch?v=V0XbuApxlhg&t=236) cash system does not last forever.
+- [3:58](https://youtube.com/watch?v=V0XbuApxlhg&t=238) What you need to understand is that when
+- [4:00](https://youtube.com/watch?v=V0XbuApxlhg&t=240) you and Claude are talking to one
+- [4:02](https://youtube.com/watch?v=V0XbuApxlhg&t=242) another
+- [4:04](https://youtube.com/watch?v=V0XbuApxlhg&t=244) and we have this cash document between
+- [4:05](https://youtube.com/watch?v=V0XbuApxlhg&t=245) us, which has all of our conversation
+- [4:07](https://youtube.com/watch?v=V0XbuApxlhg&t=247) history, which it can read very cheaply,
+- [4:09](https://youtube.com/watch?v=V0XbuApxlhg&t=249) it only holds on to that for 1 hour.
+- [4:11](https://youtube.com/watch?v=V0XbuApxlhg&t=251) So, if you and Claude are having this
+- [4:14](https://youtube.com/watch?v=V0XbuApxlhg&t=254) discussion, you're having a back and
+- [4:15](https://youtube.com/watch?v=V0XbuApxlhg&t=255) forth over and over again, you know,
+- [4:17](https://youtube.com/watch?v=V0XbuApxlhg&t=257) just back back back back and then you
+- [4:18](https://youtube.com/watch?v=V0XbuApxlhg&t=258) walk away for an hour
+- [4:20](https://youtube.com/watch?v=V0XbuApxlhg&t=260) and you have a document that is 500,000
+- [4:23](https://youtube.com/watch?v=V0XbuApxlhg&t=263) tokens long, a 500,000 token
+- [4:25](https://youtube.com/watch?v=V0XbuApxlhg&t=265) conversation. After an hour, this
+- [4:28](https://youtube.com/watch?v=V0XbuApxlhg&t=268) disappears.
+- [4:29](https://youtube.com/watch?v=V0XbuApxlhg&t=269) This is gone.
+- [4:31](https://youtube.com/watch?v=V0XbuApxlhg&t=271) And so, when you send message, you know,
+- [4:35](https://youtube.com/watch?v=V0XbuApxlhg&t=275) 500,000 and one, well, guess what? You
+- [4:38](https://youtube.com/watch?v=V0XbuApxlhg&t=278) are now going to be charged for a full
+- [4:41](https://youtube.com/watch?v=V0XbuApxlhg&t=281) rate 500,000 token message, even if all
+- [4:44](https://youtube.com/watch?v=V0XbuApxlhg&t=284) you said was, "Hey, what's up?" Now,
+- [4:46](https://youtube.com/watch?v=V0XbuApxlhg&t=286) understand when I say this cash only
+- [4:48](https://youtube.com/watch?v=V0XbuApxlhg&t=288) lasts for 1 hour, I mean an hour with no
+- [4:51](https://youtube.com/watch?v=V0XbuApxlhg&t=291) activity. So, it's refreshed every
+- [4:52](https://youtube.com/watch?v=V0XbuApxlhg&t=292) single message. So, if it's been 59
+- [4:54](https://youtube.com/watch?v=V0XbuApxlhg&t=294) minutes since our last message and I hit
+- [4:56](https://youtube.com/watch?v=V0XbuApxlhg&t=296) it again, well, that 1 hour counter
+- [4:58](https://youtube.com/watch?v=V0XbuApxlhg&t=298) resets. Now, why is it so important?
+- [5:00](https://youtube.com/watch?v=V0XbuApxlhg&t=300) Well, it's the cost I talked about in
+- [5:01](https://youtube.com/watch?v=V0XbuApxlhg&t=301) the intro. The difference between a cash
+- [5:03](https://youtube.com/watch?v=V0XbuApxlhg&t=303) read, aka reading this whole history
+- [5:06](https://youtube.com/watch?v=V0XbuApxlhg&t=306) versus reading the 500,000 message
+- [5:09](https://youtube.com/watch?v=V0XbuApxlhg&t=309) without a cash is quite literally a 20x
+- [5:13](https://youtube.com/watch?v=V0XbuApxlhg&t=313) difference. And this is reflected in the
+- [5:15](https://youtube.com/watch?v=V0XbuApxlhg&t=315) pricing documentation. So, remember,
+- [5:18](https://youtube.com/watch?v=V0XbuApxlhg&t=318) output tokens what Claude is giving us,
+- [5:21](https://youtube.com/watch?v=V0XbuApxlhg&t=321) that never changes. For Fable, we're
+- [5:23](https://youtube.com/watch?v=V0XbuApxlhg&t=323) looking at $50 per million tokens and
+- [5:25](https://youtube.com/watch?v=V0XbuApxlhg&t=325) $25 when it comes to Opus. But, the
+- [5:27](https://youtube.com/watch?v=V0XbuApxlhg&t=327) input tokens is where this whole
+- [5:28](https://youtube.com/watch?v=V0XbuApxlhg&t=328) conversation has been living. So, we
+- [5:30](https://youtube.com/watch?v=V0XbuApxlhg&t=330) always talk about base input tokens of
+- [5:33](https://youtube.com/watch?v=V0XbuApxlhg&t=333) being $10 per million, but that's kind
+- [5:35](https://youtube.com/watch?v=V0XbuApxlhg&t=335) of a misnomer because in reality, we are
+- [5:38](https://youtube.com/watch?v=V0XbuApxlhg&t=338) always doing cash writes. So, a 1 hour
+- [5:41](https://youtube.com/watch?v=V0XbuApxlhg&t=341) cash write, which is what you are doing
+- [5:43](https://youtube.com/watch?v=V0XbuApxlhg&t=343) on a subscription plan, is is fact
+- [5:45](https://youtube.com/watch?v=V0XbuApxlhg&t=345) double the cost. So, when we are writing
+- [5:49](https://youtube.com/watch?v=V0XbuApxlhg&t=349) to that cash for the first time for like
+- [5:50](https://youtube.com/watch?v=V0XbuApxlhg&t=350) that first message, it is $20
+- [5:54](https://youtube.com/watch?v=V0XbuApxlhg&t=354) per million tokens. You'll notice a
+- [5:56](https://youtube.com/watch?v=V0XbuApxlhg&t=356) 5-minute cash right here, but that is
+- [5:58](https://youtube.com/watch?v=V0XbuApxlhg&t=358) really just for people who are on the
+- [5:59](https://youtube.com/watch?v=V0XbuApxlhg&t=359) API.
+- [6:01](https://youtube.com/watch?v=V0XbuApxlhg&t=361) Now, compare that to the cash hits, aka
+- [6:03](https://youtube.com/watch?v=V0XbuApxlhg&t=363) Anthropic is just reading that document
+- [6:05](https://youtube.com/watch?v=V0XbuApxlhg&t=365) that's in front of it that it's been
+- [6:06](https://youtube.com/watch?v=V0XbuApxlhg&t=366) accumulating every hour and refreshes,
+- [6:08](https://youtube.com/watch?v=V0XbuApxlhg&t=368) it's $1.
+- [6:11](https://youtube.com/watch?v=V0XbuApxlhg&t=371) 20 times cheaper. That's a wild
+- [6:14](https://youtube.com/watch?v=V0XbuApxlhg&t=374) difference, and that's why this whole
+- [6:16](https://youtube.com/watch?v=V0XbuApxlhg&t=376) thing, this particular tip,
+- [6:17](https://youtube.com/watch?v=V0XbuApxlhg&t=377) understanding prompt caching and how the
+- [6:19](https://youtube.com/watch?v=V0XbuApxlhg&t=379) token system works is so important.
+- [6:20](https://youtube.com/watch?v=V0XbuApxlhg&t=380) There is nothing I'm going to talk about
+- [6:22](https://youtube.com/watch?v=V0XbuApxlhg&t=382) beyond this point that is going to give
+- [6:23](https://youtube.com/watch?v=V0XbuApxlhg&t=383) you any sort of,
+- [6:25](https://youtube.com/watch?v=V0XbuApxlhg&t=385) you know, efficiency gain close to this.
+- [6:28](https://youtube.com/watch?v=V0XbuApxlhg&t=388) Nothing. Now, let's go back to our
+- [6:30](https://youtube.com/watch?v=V0XbuApxlhg&t=390) example of that 500,000 token
+- [6:33](https://youtube.com/watch?v=V0XbuApxlhg&t=393) conversation we are having with Claude
+- [6:36](https://youtube.com/watch?v=V0XbuApxlhg&t=396) Code, and we're about to send a
+- [6:37](https://youtube.com/watch?v=V0XbuApxlhg&t=397) follow-on message. In scenario number
+- [6:39](https://youtube.com/watch?v=V0XbuApxlhg&t=399) one, we're going to imagine we have the
+- [6:41](https://youtube.com/watch?v=V0XbuApxlhg&t=401) cash system. So, this 500k conversation
+- [6:44](https://youtube.com/watch?v=V0XbuApxlhg&t=404) history is cached, and I'm sending that
+- [6:46](https://youtube.com/watch?v=V0XbuApxlhg&t=406) new message. The way the pricing is
+- [6:48](https://youtube.com/watch?v=V0XbuApxlhg&t=408) going to work is it still has to read
+- [6:50](https://youtube.com/watch?v=V0XbuApxlhg&t=410) this whole conversation history, and
+- [6:52](https://youtube.com/watch?v=V0XbuApxlhg&t=412) that is at the $1 per million token
+- [6:55](https://youtube.com/watch?v=V0XbuApxlhg&t=415) rate. So, it's going to cost me 50 cents
+- [6:58](https://youtube.com/watch?v=V0XbuApxlhg&t=418) on that next message for it to read
+- [7:00](https://youtube.com/watch?v=V0XbuApxlhg&t=420) everything, plus the new message. So,
+- [7:03](https://youtube.com/watch?v=V0XbuApxlhg&t=423) imagine that new message was a thousand
+- [7:05](https://youtube.com/watch?v=V0XbuApxlhg&t=425) tokens long, that thousand token
+- [7:07](https://youtube.com/watch?v=V0XbuApxlhg&t=427) follow-on message is not charged at $1
+- [7:10](https://youtube.com/watch?v=V0XbuApxlhg&t=430) per million, it's charged at $20 per
+- [7:14](https://youtube.com/watch?v=V0XbuApxlhg&t=434) million. So, for a thousand tokens,
+- [7:16](https://youtube.com/watch?v=V0XbuApxlhg&t=436) that's what, like
+- [7:17](https://youtube.com/watch?v=V0XbuApxlhg&t=437) 2 cents or something that I don't know,
+- [7:18](https://youtube.com/watch?v=V0XbuApxlhg&t=438) my math is probably off. The point
+- [7:20](https://youtube.com/watch?v=V0XbuApxlhg&t=440) being,
+- [7:21](https://youtube.com/watch?v=V0XbuApxlhg&t=441) the history is at a dollar, the new one
+- [7:22](https://youtube.com/watch?v=V0XbuApxlhg&t=442) is at $20 a month because this is
+- [7:25](https://youtube.com/watch?v=V0XbuApxlhg&t=445) cached. Now, the next time we send a
+- [7:28](https://youtube.com/watch?v=V0XbuApxlhg&t=448) message, same scenario except this
+- [7:30](https://youtube.com/watch?v=V0XbuApxlhg&t=450) thousand tokens will now be part of that
+- [7:32](https://youtube.com/watch?v=V0XbuApxlhg&t=452) cached document. Sort of makes sense?
+- [7:34](https://youtube.com/watch?v=V0XbuApxlhg&t=454) Okay, that's scenario one. Scenario two,
+- [7:38](https://youtube.com/watch?v=V0XbuApxlhg&t=458) we have no cash. We waited an hour to
+- [7:41](https://youtube.com/watch?v=V0XbuApxlhg&t=461) send it. Well, instead of this being 50
+- [7:44](https://youtube.com/watch?v=V0XbuApxlhg&t=464) cents, we instead now are going to get
+- [7:47](https://youtube.com/watch?v=V0XbuApxlhg&t=467) charged at a cash read Sorry, at a cash
+- [7:50](https://youtube.com/watch?v=V0XbuApxlhg&t=470) rate rate, which remember is $20 per
+- [7:53](https://youtube.com/watch?v=V0XbuApxlhg&t=473) million. So, what is this going to cost?
+- [7:55](https://youtube.com/watch?v=V0XbuApxlhg&t=475) Well, now this one message is costing us
+- [7:57](https://youtube.com/watch?v=V0XbuApxlhg&t=477) like 10 bucks.
+- [7:59](https://youtube.com/watch?v=V0XbuApxlhg&t=479) So, we went from 50 cents to $10 just
+- [8:01](https://youtube.com/watch?v=V0XbuApxlhg&t=481) because we waited an hour.
+- [8:03](https://youtube.com/watch?v=V0XbuApxlhg&t=483) That's the like sort of consequences of
+- [8:04](https://youtube.com/watch?v=V0XbuApxlhg&t=484) not understanding this. Now, time isn't
+- [8:07](https://youtube.com/watch?v=V0XbuApxlhg&t=487) the only thing we have to think about
+- [8:08](https://youtube.com/watch?v=V0XbuApxlhg&t=488) when it comes to losing the cash. There
+- [8:10](https://youtube.com/watch?v=V0XbuApxlhg&t=490) are other things that will reset it
+- [8:11](https://youtube.com/watch?v=V0XbuApxlhg&t=491) completely, and this is straight from
+- [8:13](https://youtube.com/watch?v=V0XbuApxlhg&t=493) the Claude code documentation. If you
+- [8:15](https://youtube.com/watch?v=V0XbuApxlhg&t=495) switch your model, you know, you were on
+- [8:17](https://youtube.com/watch?v=V0XbuApxlhg&t=497) Fable and you switch to Opus and you're
+- [8:18](https://youtube.com/watch?v=V0XbuApxlhg&t=498) 500,000 tokens in, that is gone. Cash is
+- [8:22](https://youtube.com/watch?v=V0XbuApxlhg&t=502) reset. Effort level, going to change it.
+- [8:24](https://youtube.com/watch?v=V0XbuApxlhg&t=504) Fast mode, connecting or disconnecting
+- [8:26](https://youtube.com/watch?v=V0XbuApxlhg&t=506) an MCP server, plugins, denying tools,
+- [8:29](https://youtube.com/watch?v=V0XbuApxlhg&t=509) compacting conversation, or just
+- [8:31](https://youtube.com/watch?v=V0XbuApxlhg&t=511) upgrading Claude code in general. Any of
+- [8:33](https://youtube.com/watch?v=V0XbuApxlhg&t=513) these things will reset the cash, and
+- [8:34](https://youtube.com/watch?v=V0XbuApxlhg&t=514) your next message will be 20 times more
+- [8:37](https://youtube.com/watch?v=V0XbuApxlhg&t=517) expensive than it needs to be. So, with
+- [8:39](https://youtube.com/watch?v=V0XbuApxlhg&t=519) all that being said, what can you
+- [8:40](https://youtube.com/watch?v=V0XbuApxlhg&t=520) actually do with this information? What
+- [8:42](https://youtube.com/watch?v=V0XbuApxlhg&t=522) do you do when you're in a position
+- [8:44](https://youtube.com/watch?v=V0XbuApxlhg&t=524) where you need to step away from a
+- [8:45](https://youtube.com/watch?v=V0XbuApxlhg&t=525) conversation that has a lot of important
+- [8:47](https://youtube.com/watch?v=V0XbuApxlhg&t=527) information in it, but you're going to
+- [8:49](https://youtube.com/watch?v=V0XbuApxlhg&t=529) be gone for more than an hour, or you
+- [8:50](https://youtube.com/watch?v=V0XbuApxlhg&t=530) stepped away for an hour plus, and
+- [8:52](https://youtube.com/watch?v=V0XbuApxlhg&t=532) you're just coming back and realizing,
+- [8:53](https://youtube.com/watch?v=V0XbuApxlhg&t=533) "Oh, shoot. Like,
+- [8:54](https://youtube.com/watch?v=V0XbuApxlhg&t=534) I kind of didn't think about this ahead
+- [8:56](https://youtube.com/watch?v=V0XbuApxlhg&t=536) of time." Well, that's what we will talk
+- [8:58](https://youtube.com/watch?v=V0XbuApxlhg&t=538) about in tip number two. But first, a
+- [9:00](https://youtube.com/watch?v=V0XbuApxlhg&t=540) quick word from today's sponsor, me. So,
+- [9:03](https://youtube.com/watch?v=V0XbuApxlhg&t=543) this week I am releasing a completely
+- [9:06](https://youtube.com/watch?v=V0XbuApxlhg&t=546) updated version of my Claude code
+- [9:08](https://youtube.com/watch?v=V0XbuApxlhg&t=548) masterclass inside of Chase AI Plus. A
+- [9:10](https://youtube.com/watch?v=V0XbuApxlhg&t=550) ton has changed since I first came out
+- [9:12](https://youtube.com/watch?v=V0XbuApxlhg&t=552) with this. I update it all the time, but
+- [9:14](https://youtube.com/watch?v=V0XbuApxlhg&t=554) fundamentally, we've come a long way
+- [9:17](https://youtube.com/watch?v=V0XbuApxlhg&t=557) since March when I came out with this
+- [9:19](https://youtube.com/watch?v=V0XbuApxlhg&t=559) thing. So, if you're someone who is
+- [9:21](https://youtube.com/watch?v=V0XbuApxlhg&t=561) trying to level up their AI game,
+- [9:23](https://youtube.com/watch?v=V0XbuApxlhg&t=563) someone who definitely doesn't come from
+- [9:25](https://youtube.com/watch?v=V0XbuApxlhg&t=565) a technical background, and you want a
+- [9:26](https://youtube.com/watch?v=V0XbuApxlhg&t=566) roadmap actually know how to use this
+- [9:28](https://youtube.com/watch?v=V0XbuApxlhg&t=568) tool from the ground up, and something
+- [9:29](https://youtube.com/watch?v=V0XbuApxlhg&t=569) that focuses on real use cases, then
+- [9:31](https://youtube.com/watch?v=V0XbuApxlhg&t=571) this is for you. It's inside of Chase AI
+- [9:33](https://youtube.com/watch?v=V0XbuApxlhg&t=573) Plus. There is a link to it in the
+- [9:35](https://youtube.com/watch?v=V0XbuApxlhg&t=575) pinned comment. Now, tip number two is
+- [9:37](https://youtube.com/watch?v=V0XbuApxlhg&t=577) all about your options when we lose the
+- [9:39](https://youtube.com/watch?v=V0XbuApxlhg&t=579) cash. We stepped away for too long. We
+- [9:40](https://youtube.com/watch?v=V0XbuApxlhg&t=580) have some conversation that's 2 3 4
+- [9:42](https://youtube.com/watch?v=V0XbuApxlhg&t=582) 500,000 tokens long and we want to know
+- [9:46](https://youtube.com/watch?v=V0XbuApxlhg&t=586) what the next step should be instead of
+- [9:47](https://youtube.com/watch?v=V0XbuApxlhg&t=587) paying those outrageous costs. And it
+- [9:50](https://youtube.com/watch?v=V0XbuApxlhg&t=590) kind of just depends on what your
+- [9:51](https://youtube.com/watch?v=V0XbuApxlhg&t=591) scenario is. Now, our first option is
+- [9:53](https://youtube.com/watch?v=V0XbuApxlhg&t=593) sort of the nuclear option and that's
+- [9:55](https://youtube.com/watch?v=V0XbuApxlhg&t=595) just to do forward/clear.
+- [9:58](https://youtube.com/watch?v=V0XbuApxlhg&t=598) Forward/clear is just going to wipe the
+- [10:01](https://youtube.com/watch?v=V0XbuApxlhg&t=601) entire conversation history and this
+- [10:03](https://youtube.com/watch?v=V0XbuApxlhg&t=603) isn't always a bad thing. In fact, if
+- [10:06](https://youtube.com/watch?v=V0XbuApxlhg&t=606) you have some sort of code base that
+- [10:08](https://youtube.com/watch?v=V0XbuApxlhg&t=608) you're working in, some sort of project
+- [10:10](https://youtube.com/watch?v=V0XbuApxlhg&t=610) which with a bunch of files and a bunch
+- [10:11](https://youtube.com/watch?v=V0XbuApxlhg&t=611) of contacts, you probably just want to
+- [10:13](https://youtube.com/watch?v=V0XbuApxlhg&t=613) forward/clear. Whatever you were working
+- [10:16](https://youtube.com/watch?v=V0XbuApxlhg&t=616) on, whatever you were talking about,
+- [10:17](https://youtube.com/watch?v=V0XbuApxlhg&t=617) chances are there is evidence in the
+- [10:18](https://youtube.com/watch?v=V0XbuApxlhg&t=618) project itself as to what has happened.
+- [10:21](https://youtube.com/watch?v=V0XbuApxlhg&t=621) Claude code can just take a look at that
+- [10:23](https://youtube.com/watch?v=V0XbuApxlhg&t=623) and when you start a new conversation
+- [10:25](https://youtube.com/watch?v=V0XbuApxlhg&t=625) from scratch, it can pick up the pieces
+- [10:27](https://youtube.com/watch?v=V0XbuApxlhg&t=627) and get you back to where you were. You
+- [10:29](https://youtube.com/watch?v=V0XbuApxlhg&t=629) don't need to be a slave to the previous
+- [10:31](https://youtube.com/watch?v=V0XbuApxlhg&t=631) conversation. Now, your second option is
+- [10:34](https://youtube.com/watch?v=V0XbuApxlhg&t=634) to use compaction. Now, there is an auto
+- [10:37](https://youtube.com/watch?v=V0XbuApxlhg&t=637) compact feature inside of Claude code
+- [10:39](https://youtube.com/watch?v=V0XbuApxlhg&t=639) once you hit a certain amount of tokens.
+- [10:41](https://youtube.com/watch?v=V0XbuApxlhg&t=641) I suggest not waiting to get to that
+- [10:43](https://youtube.com/watch?v=V0XbuApxlhg&t=643) point because when we're working in the
+- [10:44](https://youtube.com/watch?v=V0XbuApxlhg&t=644) 6 7 800,000 token range, we're starting
+- [10:47](https://youtube.com/watch?v=V0XbuApxlhg&t=647) to deal with context rot, still a
+- [10:49](https://youtube.com/watch?v=V0XbuApxlhg&t=649) problem with these bigger models, these
+- [10:50](https://youtube.com/watch?v=V0XbuApxlhg&t=650) more powerful models, but we can
+- [10:52](https://youtube.com/watch?v=V0XbuApxlhg&t=652) forward/compact anytime. And what that
+- [10:55](https://youtube.com/watch?v=V0XbuApxlhg&t=655) is going to do for us is it's going to
+- [10:56](https://youtube.com/watch?v=V0XbuApxlhg&t=656) create a summary of what we've talked
+- [10:59](https://youtube.com/watch?v=V0XbuApxlhg&t=659) about and then for all intents and
+- [11:01](https://youtube.com/watch?v=V0XbuApxlhg&t=661) purposes, it's going to do
+- [11:02](https://youtube.com/watch?v=V0XbuApxlhg&t=662) forward/clear,
+- [11:04](https://youtube.com/watch?v=V0XbuApxlhg&t=664) but it's going to start a new
+- [11:05](https://youtube.com/watch?v=V0XbuApxlhg&t=665) conversation with that summary kind of
+- [11:08](https://youtube.com/watch?v=V0XbuApxlhg&t=668) like in the memory.
+- [11:09](https://youtube.com/watch?v=V0XbuApxlhg&t=669) So, if you did have important stuff in
+- [11:11](https://youtube.com/watch?v=V0XbuApxlhg&t=671) that conversation, you don't think
+- [11:13](https://youtube.com/watch?v=V0XbuApxlhg&t=673) whatever's in the code base is going to
+- [11:15](https://youtube.com/watch?v=V0XbuApxlhg&t=675) be enough for it to understand, well,
+- [11:16](https://youtube.com/watch?v=V0XbuApxlhg&t=676) then just do compaction.
+- [11:18](https://youtube.com/watch?v=V0XbuApxlhg&t=678) Forward/compact, it will start a new
+- [11:20](https://youtube.com/watch?v=V0XbuApxlhg&t=680) conversation with that summary and that
+- [11:22](https://youtube.com/watch?v=V0XbuApxlhg&t=682) summary just lives in the message
+- [11:23](https://youtube.com/watch?v=V0XbuApxlhg&t=683) history.
+- [11:25](https://youtube.com/watch?v=V0XbuApxlhg&t=685) Now, your third option is very similar
+- [11:27](https://youtube.com/watch?v=V0XbuApxlhg&t=687) to compact and that is doing some sort
+- [11:30](https://youtube.com/watch?v=V0XbuApxlhg&t=690) of custom handoff tool. There are a
+- [11:32](https://youtube.com/watch?v=V0XbuApxlhg&t=692) bunch of custom handoff skills out
+- [11:33](https://youtube.com/watch?v=V0XbuApxlhg&t=693) there. I have one myself. You can get
+- [11:35](https://youtube.com/watch?v=V0XbuApxlhg&t=695) that inside of my free community. And
+- [11:37](https://youtube.com/watch?v=V0XbuApxlhg&t=697) the difference between
+- [11:39](https://youtube.com/watch?v=V0XbuApxlhg&t=699) handoff and compaction is where that
+- [11:41](https://youtube.com/watch?v=V0XbuApxlhg&t=701) summary lives. So, if I'm doing handoff,
+- [11:45](https://youtube.com/watch?v=V0XbuApxlhg&t=705) what that's going to do is it's actually
+- [11:46](https://youtube.com/watch?v=V0XbuApxlhg&t=706) just going to put it on my disk.
+- [11:48](https://youtube.com/watch?v=V0XbuApxlhg&t=708) It's going to create an actual markdown
+- [11:50](https://youtube.com/watch?v=V0XbuApxlhg&t=710) file with the summary, with whatever I
+- [11:52](https://youtube.com/watch?v=V0XbuApxlhg&t=712) want in it, and then I can start a new
+- [11:54](https://youtube.com/watch?v=V0XbuApxlhg&t=714) conversation and say, "Hey, Claude,
+- [11:57](https://youtube.com/watch?v=V0XbuApxlhg&t=717) code, take a look at that handoff
+- [11:59](https://youtube.com/watch?v=V0XbuApxlhg&t=719) document on the disk so you can get spun
+- [12:01](https://youtube.com/watch?v=V0XbuApxlhg&t=721) up on what you need to know."
+- [12:03](https://youtube.com/watch?v=V0XbuApxlhg&t=723) Versus compact, it doesn't create any
+- [12:05](https://youtube.com/watch?v=V0XbuApxlhg&t=725) sort of file. It's just a message in the
+- [12:08](https://youtube.com/watch?v=V0XbuApxlhg&t=728) message history in that particular
+- [12:11](https://youtube.com/watch?v=V0XbuApxlhg&t=731) conversation you're having. Subtle
+- [12:12](https://youtube.com/watch?v=V0XbuApxlhg&t=732) difference, but for some people they
+- [12:14](https://youtube.com/watch?v=V0XbuApxlhg&t=734) want some sort of file on the disk, and
+- [12:16](https://youtube.com/watch?v=V0XbuApxlhg&t=736) oftentimes it's a living breathing
+- [12:18](https://youtube.com/watch?v=V0XbuApxlhg&t=738) document that's constantly being
+- [12:19](https://youtube.com/watch?v=V0XbuApxlhg&t=739) updated.
+- [12:21](https://youtube.com/watch?v=V0XbuApxlhg&t=741) So, these are really your three options.
+- [12:24](https://youtube.com/watch?v=V0XbuApxlhg&t=744) Do you want to just clear everything and
+- [12:25](https://youtube.com/watch?v=V0XbuApxlhg&t=745) start from scratch? Oftentimes this is
+- [12:27](https://youtube.com/watch?v=V0XbuApxlhg&t=747) totally fine. Do you just want to use
+- [12:29](https://youtube.com/watch?v=V0XbuApxlhg&t=749) the Claude native feature and compact it
+- [12:31](https://youtube.com/watch?v=V0XbuApxlhg&t=751) and have the summary injected right in?
+- [12:33](https://youtube.com/watch?v=V0XbuApxlhg&t=753) Or do you want a summary to be an actual
+- [12:35](https://youtube.com/watch?v=V0XbuApxlhg&t=755) document that Claude can look at? In
+- [12:37](https://youtube.com/watch?v=V0XbuApxlhg&t=757) that case, use handoff.
+- [12:39](https://youtube.com/watch?v=V0XbuApxlhg&t=759) Those are your three options, and
+- [12:41](https://youtube.com/watch?v=V0XbuApxlhg&t=761) oftentimes they are better than just
+- [12:43](https://youtube.com/watch?v=V0XbuApxlhg&t=763) sending a new message, because by and
+- [12:44](https://youtube.com/watch?v=V0XbuApxlhg&t=764) large you really shouldn't be operating
+- [12:46](https://youtube.com/watch?v=V0XbuApxlhg&t=766) in 400, 500, 600,000 token ranges
+- [12:49](https://youtube.com/watch?v=V0XbuApxlhg&t=769) anyways. Now, tip number three is all
+- [12:51](https://youtube.com/watch?v=V0XbuApxlhg&t=771) about model routing. How do we choose
+- [12:52](https://youtube.com/watch?v=V0XbuApxlhg&t=772) the right model for the job so we aren't
+- [12:54](https://youtube.com/watch?v=V0XbuApxlhg&t=774) just using Fable for everything? Can we
+- [12:56](https://youtube.com/watch?v=V0XbuApxlhg&t=776) use a smaller, cheaper, less smart model
+- [12:59](https://youtube.com/watch?v=V0XbuApxlhg&t=779) for the simpler tasks? The answer is
+- [13:01](https://youtube.com/watch?v=V0XbuApxlhg&t=781) yes, and we can approach this in a
+- [13:03](https://youtube.com/watch?v=V0XbuApxlhg&t=783) number of different ways. We can use
+- [13:04](https://youtube.com/watch?v=V0XbuApxlhg&t=784) outside models. We could go to GPT.
+- [13:07](https://youtube.com/watch?v=V0XbuApxlhg&t=787) So, we could go to GPT Luna and Terra,
+- [13:09](https://youtube.com/watch?v=V0XbuApxlhg&t=789) which just got super cheap. We can use
+- [13:11](https://youtube.com/watch?v=V0XbuApxlhg&t=791) local models, or we have options if we
+- [13:14](https://youtube.com/watch?v=V0XbuApxlhg&t=794) want to stay in the Anthropic ecosystem.
+- [13:16](https://youtube.com/watch?v=V0XbuApxlhg&t=796) And the easiest way to do this, I think,
+- [13:19](https://youtube.com/watch?v=V0XbuApxlhg&t=799) is advisor mode. Now, what you see here
+- [13:21](https://youtube.com/watch?v=V0XbuApxlhg&t=801) is from the original advisor blog post
+- [13:24](https://youtube.com/watch?v=V0XbuApxlhg&t=804) that came out several months ago, and so
+- [13:26](https://youtube.com/watch?v=V0XbuApxlhg&t=806) it shows Opus and Sonnet, but the same
+- [13:28](https://youtube.com/watch?v=V0XbuApxlhg&t=808) system remains with models like Fable.
+- [13:31](https://youtube.com/watch?v=V0XbuApxlhg&t=811) And the idea is we have a smart model
+- [13:34](https://youtube.com/watch?v=V0XbuApxlhg&t=814) like Fable or even Opus advising a
+- [13:37](https://youtube.com/watch?v=V0XbuApxlhg&t=817) smaller model like Sonnet when it comes
+- [13:40](https://youtube.com/watch?v=V0XbuApxlhg&t=820) to executing tasks. So, the big model
+- [13:42](https://youtube.com/watch?v=V0XbuApxlhg&t=822) comes up with a plan, the small model
+- [13:44](https://youtube.com/watch?v=V0XbuApxlhg&t=824) executes it, and the small model is able
+- [13:46](https://youtube.com/watch?v=V0XbuApxlhg&t=826) to share its context with the bigger
+- [13:49](https://youtube.com/watch?v=V0XbuApxlhg&t=829) model whenever it runs into issues. And
+- [13:51](https://youtube.com/watch?v=V0XbuApxlhg&t=831) this model has boasted better outcomes
+- [13:53](https://youtube.com/watch?v=V0XbuApxlhg&t=833) at lower costs. And to bring up our
+- [13:55](https://youtube.com/watch?v=V0XbuApxlhg&t=835) previous discussion about prompt
+- [13:56](https://youtube.com/watch?v=V0XbuApxlhg&t=836) caching, both the advisor and the
+- [13:59](https://youtube.com/watch?v=V0XbuApxlhg&t=839) executor have their own prompt cache
+- [14:01](https://youtube.com/watch?v=V0XbuApxlhg&t=841) working at the same time. Now, your
+- [14:02](https://youtube.com/watch?v=V0XbuApxlhg&t=842) second option is to delegate tasks to
+- [14:04](https://youtube.com/watch?v=V0XbuApxlhg&t=844) models outside of Claude code. An easy
+- [14:07](https://youtube.com/watch?v=V0XbuApxlhg&t=847) one to do is Codex. There is a Codex
+- [14:09](https://youtube.com/watch?v=V0XbuApxlhg&t=849) plugin for Claude code, which makes it
+- [14:11](https://youtube.com/watch?v=V0XbuApxlhg&t=851) very simple to call on Codex from the
+- [14:14](https://youtube.com/watch?v=V0XbuApxlhg&t=854) Claude code interface. So, you can have
+- [14:16](https://youtube.com/watch?v=V0XbuApxlhg&t=856) Fable essentially doing that same sort
+- [14:18](https://youtube.com/watch?v=V0XbuApxlhg&t=858) of advisor mode, but instead of calling
+- [14:21](https://youtube.com/watch?v=V0XbuApxlhg&t=861) on Opus or Sonnet, it calls on the GPT
+- [14:24](https://youtube.com/watch?v=V0XbuApxlhg&t=864) models. There's other repos like this
+- [14:25](https://youtube.com/watch?v=V0XbuApxlhg&t=865) Fable advisor that do exactly that. And
+- [14:29](https://youtube.com/watch?v=V0XbuApxlhg&t=869) ultimately, it's pretty trivial to set
+- [14:30](https://youtube.com/watch?v=V0XbuApxlhg&t=870) up your own skill that does this
+- [14:32](https://youtube.com/watch?v=V0XbuApxlhg&t=872) exactly. And if you're looking for those
+- [14:34](https://youtube.com/watch?v=V0XbuApxlhg&t=874) cheaper models, again, I really suggest
+- [14:36](https://youtube.com/watch?v=V0XbuApxlhg&t=876) looking at the GPT ones, specifically
+- [14:38](https://youtube.com/watch?v=V0XbuApxlhg&t=878) Luna and Terra, because A, their costs
+- [14:40](https://youtube.com/watch?v=V0XbuApxlhg&t=880) got reduced significantly, and B, there
+- [14:43](https://youtube.com/watch?v=V0XbuApxlhg&t=883) really isn't any model in the you know,
+- [14:46](https://youtube.com/watch?v=V0XbuApxlhg&t=886) Anthropic family that does what they do
+- [14:48](https://youtube.com/watch?v=V0XbuApxlhg&t=888) at that price point. You can even take
+- [14:50](https://youtube.com/watch?v=V0XbuApxlhg&t=890) it a step further and bring in some
+- [14:52](https://youtube.com/watch?v=V0XbuApxlhg&t=892) local models if the tasks make sense for
+- [14:54](https://youtube.com/watch?v=V0XbuApxlhg&t=894) that. And tip number four is all about
+- [14:55](https://youtube.com/watch?v=V0XbuApxlhg&t=895) your Claude hygiene. You might have seen
+- [14:57](https://youtube.com/watch?v=V0XbuApxlhg&t=897) this video recently making the rounds of
+- [14:59](https://youtube.com/watch?v=V0XbuApxlhg&t=899) Boris Cherny, the creator of Claude
+- [15:00](https://youtube.com/watch?v=V0XbuApxlhg&t=900) code, saying, "You need to delete your
+- [15:03](https://youtube.com/watch?v=V0XbuApxlhg&t=903) Claude.md file." Well, do you need to
+- [15:05](https://youtube.com/watch?v=V0XbuApxlhg&t=905) really delete that Claude.md file? Well,
+- [15:07](https://youtube.com/watch?v=V0XbuApxlhg&t=907) not necessarily, but what you do need to
+- [15:10](https://youtube.com/watch?v=V0XbuApxlhg&t=910) do, and this has gotten some recent
+- [15:12](https://youtube.com/watch?v=V0XbuApxlhg&t=912) changes over the last couple weeks, is
+- [15:13](https://youtube.com/watch?v=V0XbuApxlhg&t=913) run the forward {slash} doctor command.
+- [15:17](https://youtube.com/watch?v=V0XbuApxlhg&t=917) And what does this have to do with
+- [15:18](https://youtube.com/watch?v=V0XbuApxlhg&t=918) tokens? Well, first of all, what this
+- [15:20](https://youtube.com/watch?v=V0XbuApxlhg&t=920) command is going to do, amongst other
+- [15:22](https://youtube.com/watch?v=V0XbuApxlhg&t=922) things, but we're kind of keeping this
+- [15:23](https://youtube.com/watch?v=V0XbuApxlhg&t=923) token related, is it's going to take a
+- [15:26](https://youtube.com/watch?v=V0XbuApxlhg&t=926) look at your claw.md and it's going to
+- [15:28](https://youtube.com/watch?v=V0XbuApxlhg&t=928) trim this thing down.
+- [15:30](https://youtube.com/watch?v=V0XbuApxlhg&t=930) The way these models work, especially
+- [15:32](https://youtube.com/watch?v=V0XbuApxlhg&t=932) these five series models, is they do not
+- [15:35](https://youtube.com/watch?v=V0XbuApxlhg&t=935) need as much instruction. If you look at
+- [15:38](https://youtube.com/watch?v=V0XbuApxlhg&t=938) what people were creating for the
+- [15:39](https://youtube.com/watch?v=V0XbuApxlhg&t=939) claw.md's
+- [15:40](https://youtube.com/watch?v=V0XbuApxlhg&t=940) 3 6 9 months ago, they were very
+- [15:43](https://youtube.com/watch?v=V0XbuApxlhg&t=943) prescriptive and extremely detailed and
+- [15:45](https://youtube.com/watch?v=V0XbuApxlhg&t=945) perhaps at the time an argument could be
+- [15:47](https://youtube.com/watch?v=V0XbuApxlhg&t=947) made that they needed that. That is not
+- [15:49](https://youtube.com/watch?v=V0XbuApxlhg&t=949) the case anymore. And so not only is a
+- [15:52](https://youtube.com/watch?v=V0XbuApxlhg&t=952) bloated claw.md making it slower, it is
+- [15:54](https://youtube.com/watch?v=V0XbuApxlhg&t=954) literally costing you tokens. And
+- [15:57](https://youtube.com/watch?v=V0XbuApxlhg&t=957) doctor is going to take a look at that
+- [15:59](https://youtube.com/watch?v=V0XbuApxlhg&t=959) and get rid of things in your claw.md
+- [16:02](https://youtube.com/watch?v=V0XbuApxlhg&t=962) that just don't need to be there.
+- [16:04](https://youtube.com/watch?v=V0XbuApxlhg&t=964) Secondly, it's going to take a look at
+- [16:05](https://youtube.com/watch?v=V0XbuApxlhg&t=965) things that are harming your context or
+- [16:08](https://youtube.com/watch?v=V0XbuApxlhg&t=968) or bloating your context window because
+- [16:11](https://youtube.com/watch?v=V0XbuApxlhg&t=971) even when you start a new conversation
+- [16:12](https://youtube.com/watch?v=V0XbuApxlhg&t=972) and you run context, there are things
+- [16:15](https://youtube.com/watch?v=V0XbuApxlhg&t=975) filling it up. Now I've recently run
+- [16:18](https://youtube.com/watch?v=V0XbuApxlhg&t=978) doctor, so I've gotten rid of a lot of
+- [16:20](https://youtube.com/watch?v=V0XbuApxlhg&t=980) my bloat, but this is what my context
+- [16:22](https://youtube.com/watch?v=V0XbuApxlhg&t=982) window looks like right at the beginning
+- [16:24](https://youtube.com/watch?v=V0XbuApxlhg&t=984) of a conversation with no messages sent.
+- [16:26](https://youtube.com/watch?v=V0XbuApxlhg&t=986) We've already used 40,000 tokens and
+- [16:28](https://youtube.com/watch?v=V0XbuApxlhg&t=988) what is using up a lot of this? Well,
+- [16:30](https://youtube.com/watch?v=V0XbuApxlhg&t=990) some of it comes from things like
+- [16:32](https://youtube.com/watch?v=V0XbuApxlhg&t=992) skills, like you can see here. Some of
+- [16:34](https://youtube.com/watch?v=V0XbuApxlhg&t=994) it includes stuff like the system prompt
+- [16:36](https://youtube.com/watch?v=V0XbuApxlhg&t=996) as well as memory files. What
+- [16:38](https://youtube.com/watch?v=V0XbuApxlhg&t=998) doctor is going to do is it's going to
+- [16:40](https://youtube.com/watch?v=V0XbuApxlhg&t=1000) take a look at things like your skills,
+- [16:41](https://youtube.com/watch?v=V0XbuApxlhg&t=1001) like your MCPs and start trimming the
+- [16:43](https://youtube.com/watch?v=V0XbuApxlhg&t=1003) ones that you just haven't been using.
+- [16:46](https://youtube.com/watch?v=V0XbuApxlhg&t=1006) Is this a huge token save? No, but it's
+- [16:49](https://youtube.com/watch?v=V0XbuApxlhg&t=1009) something it's something on the margins
+- [16:51](https://youtube.com/watch?v=V0XbuApxlhg&t=1011) and it's such a simple fix. There's no
+- [16:53](https://youtube.com/watch?v=V0XbuApxlhg&t=1013) reason not to do it, especially if
+- [16:54](https://youtube.com/watch?v=V0XbuApxlhg&t=1014) you're someone who's been just
+- [16:55](https://youtube.com/watch?v=V0XbuApxlhg&t=1015) accumulating 10 million skills over the
+- [16:58](https://youtube.com/watch?v=V0XbuApxlhg&t=1018) last 6 months and you haven't actually
+- [17:00](https://youtube.com/watch?v=V0XbuApxlhg&t=1020) gone through and started cutting them.
+- [17:02](https://youtube.com/watch?v=V0XbuApxlhg&t=1022) Because doing so will also make your
+- [17:04](https://youtube.com/watch?v=V0XbuApxlhg&t=1024) skills fire more effectively and there
+- [17:06](https://youtube.com/watch?v=V0XbuApxlhg&t=1026) won't be any confusion on Claude's part
+- [17:08](https://youtube.com/watch?v=V0XbuApxlhg&t=1028) as to which skill it needs to call. I
+- [17:10](https://youtube.com/watch?v=V0XbuApxlhg&t=1030) bet you probably have like 10 skills
+- [17:11](https://youtube.com/watch?v=V0XbuApxlhg&t=1031) sitting there that all have to do with
+- [17:12](https://youtube.com/watch?v=V0XbuApxlhg&t=1032) front end design and you don't need all
+- [17:14](https://youtube.com/watch?v=V0XbuApxlhg&t=1034) those. So this very simple and easy to
+- [17:16](https://youtube.com/watch?v=V0XbuApxlhg&t=1036) execute tip when it comes to sort of
+- [17:19](https://youtube.com/watch?v=V0XbuApxlhg&t=1039) your Claude hygiene is one you shouldn't
+- [17:20](https://youtube.com/watch?v=V0XbuApxlhg&t=1040) pass up. Just run doctor. And so, that
+- [17:23](https://youtube.com/watch?v=V0XbuApxlhg&t=1043) brings us to our final tip, which I
+- [17:25](https://youtube.com/watch?v=V0XbuApxlhg&t=1045) think is the least effective out of the
+- [17:27](https://youtube.com/watch?v=V0XbuApxlhg&t=1047) bunch these days, but that is sort of
+- [17:29](https://youtube.com/watch?v=V0XbuApxlhg&t=1049) the additional skills and scaffolding
+- [17:31](https://youtube.com/watch?v=V0XbuApxlhg&t=1051) that you see running around all over the
+- [17:33](https://youtube.com/watch?v=V0XbuApxlhg&t=1053) place. The most popular one these days
+- [17:35](https://youtube.com/watch?v=V0XbuApxlhg&t=1055) is ponytail. And essentially, it reduces
+- [17:37](https://youtube.com/watch?v=V0XbuApxlhg&t=1057) the amount of code Claude writes while
+- [17:39](https://youtube.com/watch?v=V0XbuApxlhg&t=1059) maintaining its effectiveness and
+- [17:41](https://youtube.com/watch?v=V0XbuApxlhg&t=1061) therefore making it cheaper and faster.
+- [17:44](https://youtube.com/watch?v=V0XbuApxlhg&t=1064) Now, I did a video on this comparing
+- [17:46](https://youtube.com/watch?v=V0XbuApxlhg&t=1066) these numbers with what actually happens
+- [17:49](https://youtube.com/watch?v=V0XbuApxlhg&t=1069) in reality because the GitHub repo only
+- [17:51](https://youtube.com/watch?v=V0XbuApxlhg&t=1071) shows Haiku 4.5, which obviously is very
+- [17:54](https://youtube.com/watch?v=V0XbuApxlhg&t=1074) outdated. When I ran this using Fable,
+- [17:56](https://youtube.com/watch?v=V0XbuApxlhg&t=1076) the numbers did hold up. In fact, the
+- [17:58](https://youtube.com/watch?v=V0XbuApxlhg&t=1078) numbers look even better with better
+- [17:59](https://youtube.com/watch?v=V0XbuApxlhg&t=1079) models. Now, I used the benchmarks that
+- [18:01](https://youtube.com/watch?v=V0XbuApxlhg&t=1081) were provided with this GitHub repo.
+- [18:03](https://youtube.com/watch?v=V0XbuApxlhg&t=1083) What works for you in reality may be a
+- [18:05](https://youtube.com/watch?v=V0XbuApxlhg&t=1085) little bit different depending on the
+- [18:06](https://youtube.com/watch?v=V0XbuApxlhg&t=1086) complexity of your project, but this is
+- [18:09](https://youtube.com/watch?v=V0XbuApxlhg&t=1089) something you can tack onto everything
+- [18:11](https://youtube.com/watch?v=V0XbuApxlhg&t=1091) we've talked about up until now if you
+- [18:13](https://youtube.com/watch?v=V0XbuApxlhg&t=1093) want to continue to reduce your token
+- [18:16](https://youtube.com/watch?v=V0XbuApxlhg&t=1096) usage. Another one you will see a lot is
+- [18:18](https://youtube.com/watch?v=V0XbuApxlhg&t=1098) caveman, which these days is claiming it
+- [18:20](https://youtube.com/watch?v=V0XbuApxlhg&t=1100) reduces your output tokens by 65%.
+- [18:24](https://youtube.com/watch?v=V0XbuApxlhg&t=1104) There's a lot of people out there who
+- [18:25](https://youtube.com/watch?v=V0XbuApxlhg&t=1105) also talk about just doing one-liners in
+- [18:27](https://youtube.com/watch?v=V0XbuApxlhg&t=1107) a Claude MD, something as simple as just
+- [18:29](https://youtube.com/watch?v=V0XbuApxlhg&t=1109) saying be brief, which will also reduce
+- [18:31](https://youtube.com/watch?v=V0XbuApxlhg&t=1111) your output tokens. But remember, output
+- [18:33](https://youtube.com/watch?v=V0XbuApxlhg&t=1113) tokens are just one piece of the puzzle.
+- [18:36](https://youtube.com/watch?v=V0XbuApxlhg&t=1116) And that puzzle, to bring it back to our
+- [18:38](https://youtube.com/watch?v=V0XbuApxlhg&t=1118) original discussion, is dominated by
+- [18:40](https://youtube.com/watch?v=V0XbuApxlhg&t=1120) prompt caching. So, if you got nothing
+- [18:42](https://youtube.com/watch?v=V0XbuApxlhg&t=1122) else from this video, I hope you were
+- [18:43](https://youtube.com/watch?v=V0XbuApxlhg&t=1123) able to get that because that is where
+- [18:46](https://youtube.com/watch?v=V0XbuApxlhg&t=1126) we're going to be ending it today. So,
+- [18:48](https://youtube.com/watch?v=V0XbuApxlhg&t=1128) as always, let me know what you thought.
+- [18:50](https://youtube.com/watch?v=V0XbuApxlhg&t=1130) Make sure to check out Chase AI Plus if
+- [18:51](https://youtube.com/watch?v=V0XbuApxlhg&t=1131) you want to get your hands on the Claude
+- [18:53](https://youtube.com/watch?v=V0XbuApxlhg&t=1133) Code Masterclass. Again, dropping a huge
+- [18:55](https://youtube.com/watch?v=V0XbuApxlhg&t=1135) update on that this week. And besides
+- [18:57](https://youtube.com/watch?v=V0XbuApxlhg&t=1137) that, I'll see you around.
