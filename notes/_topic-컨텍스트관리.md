@@ -5,7 +5,7 @@ topic: 컨텍스트관리
 
 # 🗂️ 컨텍스트관리
 
-> 주제 집약 · 자동 생성 (수정 금지) · 노트 32개
+> 주제 집약 · 자동 생성 (수정 금지) · 노트 33개
 
 ## 세부 개념
 - [[_concept-context-engineering|컨텍스트 엔지니어링]]
@@ -13,6 +13,7 @@ topic: 컨텍스트관리
 - [[_concept-compaction|컴팩션]]
 
 ## 관련 노트
+- [[2026-08-16-한영자막-장시간-AI-에이전트가-기억을-잃지-않게-만드는-법]] — [한영자막] 장시간 AI 에이전트가 기억을 잃지 않게 만드는 법 — Stefania Druga, Sakana.ai — 장기 에이전트에서 '어떻게 기억할 것인가'보다 '무엇을 언제 어떻게 불러올 것인가(리콜 정책)'를 1급 지표로 설계해야 성능과 비용 모두 개선된다.
 - [[2026-08-13-You-re-Paying-Anthropic-20x-MORE-Than]] — You're Paying Anthropic 20x MORE Than You Need To — Claude Code 비용의 핵심은 프롬프트 캐싱 원리를 이해하는 것이며, 캐시 만료 하나만 막아도 토큰 비용을 최대 20배 절감할 수 있다.
 - [[2026-08-08-Claude-Code-Just-Changed-Forever-6-NEW]] — Claude Code Just Changed Forever (6 NEW Rules by Anthropic Engineers) — Claude 5 세대 모델은 지능이 비약적으로 향상되었으므로, 규칙·예시·중복 지시를 줄이고 판단·디자인 인터페이스·점진적 파일 로딩으로 전환해야 더 빠르고 저렴한 에이전트 운영이 가능하다.
 - [[2026-08-07-Claude-Code-비용-80-절감하는-settings-json]] — Claude Code 비용 80% 절감하는 settings.json 3줄과 14만명이 쓰는 everything-claude-code 설정법 — 클로드 코드가 갑자기 멍청해지는 건 컨텍스트 부패라는 구조적 문제이며, Everything Claude Code 저장소의 세 가지 설정(비용 절감 → 컨텍스트 관리 → 메모리 학습)을 순서대로 적용하면 비용과 품질…
