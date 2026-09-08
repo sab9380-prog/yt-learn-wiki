@@ -4806,5 +4806,47 @@
         "topic": "RAG검색"
       }
     ]
+  },
+  {
+    "filename": "2026-09-08-요즘-클로드-디자인에-미쳐있는-이유-티안나는AI디자인.md",
+    "title": "요즘 클로드 디자인에 미쳐있는 이유 #티안나는AI디자인 #designsystems #ClaudeDesign",
+    "category": "Picks전략",
+    "date": "2026-09-08",
+    "core_message": "AI 디자인 시대에 그림 실력보다 중요한 것은 PRD·레퍼런스·플로우를 준비하는 기획 역량이며, 이것만 갖추면 피그마 없이도 1시간 안에 퀄리티 있는 모바일 UI를 만들 수 있다.",
+    "topics": [
+      "디자인"
+    ],
+    "concepts": [
+      {
+        "id": "claude-design",
+        "label": "클로드 디자인",
+        "topic": "디자인"
+      },
+      {
+        "id": "design-system",
+        "label": "디자인 시스템",
+        "topic": "디자인"
+      },
+      {
+        "id": "PRD-문서",
+        "label": "PRD 문서",
+        "topic": null
+      },
+      {
+        "id": "디자인-시스템-커스터마이징",
+        "label": "디자인 시스템 커스터마이징",
+        "topic": null
+      },
+      {
+        "id": "뉴모피즘",
+        "label": "뉴모피즘",
+        "topic": null
+      },
+      {
+        "id": "레퍼런스-기반-프롬프팅",
+        "label": "레퍼런스 기반 프롬프팅",
+        "topic": null
+      }
+    ]
   }
 ]
