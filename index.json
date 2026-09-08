@@ -4723,5 +4723,42 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-09-08-Why-traditional-APIs-are-failing-AI.md",
+    "title": "MCP vs API: Why traditional APIs are failing AI agents",
+    "category": "일반학습",
+    "date": "2026-09-08",
+    "core_message": "MCP는 API를 대체하는 것이 아니라 그 위에서 작동하는 레이어로, AI 모델이 외부 도구를 하드코딩 없이 자율적으로 발견하고 사용할 수 있게 해주는 새로운 표준이다.",
+    "topics": [
+      "MCP"
+    ],
+    "concepts": [
+      {
+        "id": "mcp",
+        "label": "MCP",
+        "topic": "MCP"
+      },
+      {
+        "id": "자기서술",
+        "label": "자기서술",
+        "topic": null
+      },
+      {
+        "id": "에이전트-네이티브-아키텍처",
+        "label": "에이전트 네이티브 아키텍처",
+        "topic": null
+      },
+      {
+        "id": "컨텍스트-기반-도구-탐색",
+        "label": "컨텍스트 기반 도구 탐색",
+        "topic": null
+      },
+      {
+        "id": "API-vs-MCP-레이어-구분",
+        "label": "API vs MCP 레이어 구분",
+        "topic": null
+      }
+    ]
   }
 ]
