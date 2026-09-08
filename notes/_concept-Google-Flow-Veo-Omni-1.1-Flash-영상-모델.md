@@ -1,0 +1,13 @@
+---
+type: concept-moc
+concept: Google-Flow-Veo-Omni-1.1-Flash-영상-모델
+---
+
+# 🧩 Google Flow / Veo Omni 1.1 Flash 영상 모델
+
+> 개념 집약 · 자동 생성 (수정 금지) · 노트 1개
+
+## 관련 노트
+- [[2026-09-08-해외에서-잘나가는-AI-역사-채널-만드는-법-전부-공개합니다-ft]] — 해외에서 잘나가는 AI 역사 채널, 만드는 법 전부 공개합니다 (ft.프롬프트 공개) | 구글 옴니 1.1 — Gemini→Midjourney→Google Flow Omni 1.1 Flash 세 도구를 조합하면 3,000원 안팎의 비용으로 감도 높은 AI 역사 스토리텔링 영상을 완성할 수 있다.
+
+[[INDEX]]
