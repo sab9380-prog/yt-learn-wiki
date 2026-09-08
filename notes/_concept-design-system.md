@@ -5,12 +5,12 @@ concept: design-system
 
 # 🧩 디자인 시스템
 
-> 개념 집약 · 자동 생성 (수정 금지) · 노트 6개
+> 개념 집약 · 자동 생성 (수정 금지) · 노트 7개
 
 - 상위 주제: [[_topic-디자인]]
-- 🧭 종합: [[_synth-design-system]]
 
 ## 관련 노트
+- [[2026-09-08-요즘-클로드-디자인에-미쳐있는-이유-티안나는AI디자인]] — 요즘 클로드 디자인에 미쳐있는 이유 #티안나는AI디자인 #designsystems #ClaudeDesign — AI 디자인 시대에 그림 실력보다 중요한 것은 PRD·레퍼런스·플로우를 준비하는 기획 역량이며, 이것만 갖추면 피그마 없이도 1시간 안에 퀄리티 있는 모바일 UI를 만들 수 있다.
 - [[2026-05-28-AI-티-나는-PPT-10분-만에-싹-바꾸는-법]] — AI 티 나는 PPT, 10분 만에 싹 바꾸는 법ㅣ클로드, 디자인 시스템, skills — 기업의 디자인 시스템을 활용해 일관된 품질의 PPT를 자동으로 생성하는 시스템을 구축할 수 있다.
 - [[2026-05-22-Claude-Code-Design-just-became]] — Claude Code Design just became UNSTOPPABLE — 디자인을 코드로 체계화하면 아름다운 디자인을 무한 복제할 수 있고, 이는 디자인 업계의 패러다임을 바꾸고 있다.
 - [[2026-05-22-Top-10-Claude-Code-Frontend-Design]] — Top 10 Claude Code Frontend Design Skills, Plugins, & CLIs — Claude Code의 획일적인 디자인 문제를 해결하기 위해 특화된 도구와 스킬을 활용하여 차별화된 웹사이트를 만들 수 있다.
