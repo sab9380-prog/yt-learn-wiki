@@ -1,0 +1,357 @@
+---
+title: "[MCP SUMMIT SEOUL 2026]  AI 에이전트, 실제 업무에 어떻게 연결할까? | Enterprise MCP 실전 전략"
+source_url: https://youtube.com/watch?v=almrSt2GREM
+video_id: almrSt2GREM
+source_type: youtube
+lang: en
+analyzed: 2026-09-08
+category: 일반학습
+tags: ["주제/RAG검색", "개념/RAG검색/rag", "개념/Enterprise-MCP", "개념/MCP-컨트롤-플레인", "개념/워크플로우-기반-MCP-도구-설계", "개념/MCP-Registry", "개념/MCP-Proxy"]
+key_concepts: ["RAG (Retrieval-Augmented Generation)", "Enterprise MCP", "MCP 컨트롤 플레인", "워크플로우 기반 MCP 도구 설계", "MCP Registry", "MCP Proxy"]
+status: active
+---
+# \[MCP SUMMIT SEOUL 2026\]  AI 에이전트, 실제 업무에 어떻게 연결할까? | Enterprise MCP 실전 전략
+
+## 🧠 이해 (Understand)
+- **Summary:** AI 에이전트를 실제 업무 프로세스에 안전하게 연결하려면 세 가지 문제를 해결해야 한다: 시스템 연결(RAG만으로는 실시간 데이터 부족), 정확도(LLM 단독 판단의 오류 위험), 거버넌스(권한 통제·로그·추적 부재). Workato는 14,000개 이상의 커넥터와 Enterprise MCP를 통해 이 세 문제를 동시에 해결하는 통합 제어·실행 플랫폼을 제공한다. 핵심은 LLM에 MCP 서버를 직접 붙여 판단을 맡기는 대신, 검증된 비즈니스 로직 워크플로우를 MCP 도구로 감싸 LLM의 역할을 '도구 선택'으로 한정하는 것이다. MCP Registry와 MCP Proxy를 통해 조직 전체의 MCP를 등록·재사용·모니터링할 수 있다.
+- **Core Message:** LLM에 MCP를 단순 연결해 판단을 맡기면 실제 비즈니스에서 대형 사고가 난다 — 검증된 워크플로우로 MCP를 구조화하고, Enterprise MCP로 전사 거버넌스를 갖춰야 AI를 업무에 안전하게 쓸 수 있다.
+> If you don't connect the systems within a company, AI cannot understand the business context and, naturally, cannot execute tasks.
+> If you need to ensure that issues arising from complex business logic, reasoning errors, or potential failures absolutely never occur, it is crucial to understand the importance of building MCP servers in such a workflow format.
+> No matter which LLM or AI you use, all requests will go through Workato's Enterprise MCP, allowing everything to be monitored, tracked, and controlled.
+❗ OpenAI와 Anthropic 같은 AI 선도 기업들도 자사 내부 시스템 연결·실행·통제에 Workato 솔루션을 직접 사용하고 있다.
+❗ LLM에 MCP 서버를 무제한 연결하면 컨텍스트 윈도우가 MCP 정보로 채워져 LLM의 추론 성능 자체가 저하된다.
+❗ AI 에이전트가 운영 DB를 삭제하거나 운영 VM을 지우는 실제 사고 사례가 최근 뉴스에 보도됐다.
+
+## 📚 핵심 용어
+- **Enterprise MCP:** 조직 내 모든 MCP 서버를 단일 제어 지점에서 등록·관리·모니터링하는 기업용 MCP 제어 플랫폼. / 사내 모든 출입카드를 통합 보안 서버 한 곳에서 발급·차단·기록하는 것과 같다. / 일반 MCP 서버는 특정 기능만 제공하는 개별 카드기이고, Enterprise MCP는 모든 카드기를 통제하는 중앙 보안 서버다.
+- **워크플로우 기반 MCP 도구 설계:** LLM이 직접 판단하지 않고, 미리 정의된 순서(조회→검증→실행)로만 동작하는 MCP 도구를 만드는 설계 방식. / 은행 송금처럼 본인 확인 → 한도 확인 → 이체 순서를 건너뛸 수 없게 고정해 두는 것. / LLM 직접 판단은 AI가 매번 경로를 스스로 정하고, 워크플로우 방식은 경로가 이미 고정돼 AI는 도구 선택만 한다.
+- **MCP Proxy:** 모든 LLM 요청이 Enterprise MCP를 거치도록 중간에서 중계하며 권한·로그·감사를 일괄 처리하는 기능. / 회사 인터넷이 방화벽을 통과해야 외부로 나가듯, AI 요청이 반드시 이 중계 지점을 통과한다. / MCP 서버 직접 연결은 각 서버가 개별 보안을 담당하고, MCP Proxy는 모든 서버의 보안을 한 곳에서 통합 처리한다.
+- **AI 거버넌스:** AI가 어떤 정보를 근거로 무엇을 실행했는지 추적·승인·감사할 수 있게 하는 통제 체계. / 회계 감사처럼, AI의 모든 행동에 대해 '누가, 언제, 무엇을, 왜 했는가'를 나중에 확인할 수 있어야 한다. / 단순 로그는 기록만 남기고, AI 거버넌스는 실행 전 승인·실행 중 권한 통제·실행 후 추적을 모두 포함한다.
+
+## 🚀 실행 (Execute)
+- [ ] 현재 사용 중인 AI 워크플로우에서 LLM이 단독으로 최종 판단·실행하는 지점을 찾아, 검증된 워크플로우 도구로 대체할 후보 목록 작성 — ⏰ 이번 주 · ⚡ 2시간
+  - 담당: 나 (또는 팀 리드)
+  - 이유: LLM 자율 판단은 비즈니스 로직 오류 시 대형 사고로 이어질 수 있으며, 구조화된 워크플로우 MCP 도구로 교체하면 오류 범위를 사전에 차단할 수 있다.
+- [ ] 조직 내 MCP 서버 현황(DIY·네이티브·팀별 중복 포함)을 인벤토리화하고, 권한 통제·로그·재사용 정책 초안 수립 — ⏰ 2주 내 · ⚡ 하루
+  - 담당: 나 + 팀원
+  - 이유: MCP가 팀별로 파편화되면 인증 공백과 중복 개발이 발생하며, 인벤토리가 없으면 Enterprise MCP 도입이나 거버넌스 설계 자체가 불가능하다.
+- [ ] Workato Enterprise MCP POC(개념 검증) 미팅 또는 데모 신청 — 부스 방문 또는 공식 채널 통해 요청 — ⏰ 이번 주 · ⚡ 1시간 (미팅 포함)
+  - 담당: 나
+  - 이유: 레거시 시스템 연결이나 전사 MCP 거버넌스가 필요한 경우, 직접 개발 대비 time-to-market 단축 여부를 실제 데모로 검증해야 의사결정이 가능하다.
+- 자료: Workato 공식 사이트 — Enterprise MCP 및 커넥터 목록: workato.com (실제 존재 확인됨)
+- 자료: Anthropic MCP 공식 문서 — MCP 서버 구조 및 프로토콜 이해: modelcontextprotocol.io (확인 필요)
+- 자료: WoW (Workato World) 2025 Las Vegas 이벤트 — 온라인 참가 가능 여부 Workato 사이트에서 확인
+- Timeline: 1주차: LLM 단독 판단 지점 식별 + Workato 데모 신청 → 2주차: MCP 인벤토리 및 거버넌스 초안 완성 → 1개월 내: POC 결과 바탕으로 Enterprise MCP 도입 또는 자체 워크플로우 MCP 전환 우선순위 확정
+
+## 🔗 연결
+- 카테고리: [[_category-일반학습]]
+- 주제: [[_topic-RAG검색]]
+- 핵심 개념: [[_concept-rag|RAG]] · [[_concept-Enterprise-MCP|Enterprise MCP]] · [[_concept-MCP-컨트롤-플레인|MCP 컨트롤 플레인]] · [[_concept-워크플로우-기반-MCP-도구-설계|워크플로우 기반 MCP 도구 설계]] · [[_concept-MCP-Registry|MCP Registry]] · [[_concept-MCP-Proxy|MCP Proxy]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=almrSt2GREM&t=0) Hello. I am Kim Hyun-soo, a Solution
+- [0:03](https://youtube.com/watch?v=almrSt2GREM&t=3) Architect at Walkout. Today, I would
+- [0:07](https://youtube.com/watch?v=almrSt2GREM&t=7) like to talk to you about how to safely
+- [0:09](https://youtube.com/watch?v=almrSt2GREM&t=9) connect AI agents to actual work
+- [0:11](https://youtube.com/watch?v=almrSt2GREM&t=11) processes. When I meet with clients
+- [0:15](https://youtube.com/watch?v=almrSt2GREM&t=15) lately, many want to utilize AI but are
+- [0:18](https://youtube.com/watch?v=almrSt2GREM&t=18) facing various difficulties, and I’d
+- [0:20](https://youtube.com/watch?v=almrSt2GREM&t=20) like to discuss those points as well.
+- [0:26](https://youtube.com/watch?v=almrSt2GREM&t=26) It is often said that there are many
+- [0:28](https://youtube.com/watch?v=almrSt2GREM&t=28) cases where AI projects fail to
+- [0:30](https://youtube.com/watch?v=almrSt2GREM&t=30) translate into actual business results.
+- [0:33](https://youtube.com/watch?v=almrSt2GREM&t=33) This often happens because most are
+- [0:36](https://youtube.com/watch?v=almrSt2GREM&t=36) introducing AI for the first time. When
+- [0:40](https://youtube.com/watch?v=almrSt2GREM&t=40) listening to the clients we meet these
+- [0:43](https://youtube.com/watch?v=almrSt2GREM&t=43) days, most of them say similar things.
+- [0:48](https://youtube.com/watch?v=almrSt2GREM&t=48) They want to use AI effectively, but
+- [0:50](https://youtube.com/watch?v=almrSt2GREM&t=50) since it is not connected to their
+- [0:52](https://youtube.com/watch?v=almrSt2GREM&t=52) systems, they find it difficult to
+- [0:55](https://youtube.com/watch?v=almrSt2GREM&t=55) apply to their actual work. Also,
+- [0:59](https://youtube.com/watch?v=almrSt2GREM&t=59) accuracy varies significantly depending
+- [1:02](https://youtube.com/watch?v=almrSt2GREM&t=62) on the AI, and it frequently causes
+- [1:05](https://youtube.com/watch?v=almrSt2GREM&t=65) what is commonly referred to as
+- [1:07](https://youtube.com/watch?v=almrSt2GREM&t=67) hallucinations. Furthermore, it is a
+- [1:11](https://youtube.com/watch?v=almrSt2GREM&t=71) fact that many are struggling in
+- [1:13](https://youtube.com/watch?v=almrSt2GREM&t=73) various areas because a governance
+- [1:16](https://youtube.com/watch?v=almrSt2GREM&t=76) framework for AI itself is not well
+- [1:18](https://youtube.com/watch?v=almrSt2GREM&t=78) established. Indeed, connectivity to
+- [1:22](https://youtube.com/watch?v=almrSt2GREM&t=82) these systems is one of the most
+- [1:24](https://youtube.com/watch?v=almrSt2GREM&t=84) critical factors. As you all know, AI
+- [1:28](https://youtube.com/watch?v=almrSt2GREM&t=88) only possesses information up to the
+- [1:30](https://youtube.com/watch?v=almrSt2GREM&t=90) point when its training was completed.
+- [1:33](https://youtube.com/watch?v=almrSt2GREM&t=93) Basically, it has no data beyond that.
+- [1:38](https://youtube.com/watch?v=almrSt2GREM&t=98) Consequently, it is difficult to search
+- [1:40](https://youtube.com/watch?v=almrSt2GREM&t=100) for and retrieve the latest information
+- [1:43](https://youtube.com/watch?v=almrSt2GREM&t=103) or data from our company’s internal
+- [1:46](https://youtube.com/watch?v=almrSt2GREM&t=106) systems or databases to get answers.
+- [1:49](https://youtube.com/watch?v=almrSt2GREM&t=109) That is why most of you are primarily
+- [1:53](https://youtube.com/watch?v=almrSt2GREM&t=113) configuring RAG. You are performing
+- [1:55](https://youtube.com/watch?v=almrSt2GREM&t=115) Retrieval-Augmented Generation. Why? It
+- [1:57](https://youtube.com/watch?v=almrSt2GREM&t=117) is because the AI only has data from
+- [2:00](https://youtube.com/watch?v=almrSt2GREM&t=120) the time of its past training. But
+- [2:02](https://youtube.com/watch?v=almrSt2GREM&t=122) another problem arises here. Is RAG,
+- [2:05](https://youtube.com/watch?v=almrSt2GREM&t=125) then, perfect? That is not the case.
+- [2:09](https://youtube.com/watch?v=almrSt2GREM&t=129) Usually, when you configure RAG, you
+- [2:11](https://youtube.com/watch?v=almrSt2GREM&t=131) inevitably end up with a situation
+- [2:14](https://youtube.com/watch?v=almrSt2GREM&t=134) involving past data. However, actual
+- [2:17](https://youtube.com/watch?v=almrSt2GREM&t=137) business does not run on past data.
+- [2:21](https://youtube.com/watch?v=almrSt2GREM&t=141) Business is conducted based on current
+- [2:24](https://youtube.com/watch?v=almrSt2GREM&t=144) data from the systems I use, whether
+- [2:27](https://youtube.com/watch?v=almrSt2GREM&t=147) it’s a CRM or an ERP. You cannot
+- [2:32](https://youtube.com/watch?v=almrSt2GREM&t=152) conduct business using data from
+- [2:33](https://youtube.com/watch?v=almrSt2GREM&t=153) yesterday or the day before. Ultimately
+- [2:38](https://youtube.com/watch?v=almrSt2GREM&t=158) , you reach the final stage of needing
+- [2:42](https://youtube.com/watch?v=almrSt2GREM&t=162) to figure out how to retrieve real-time
+- [2:45](https://youtube.com/watch?v=almrSt2GREM&t=165) information. And it’s not just about
+- [2:49](https://youtube.com/watch?v=almrSt2GREM&t=169) worrying about how to bring in
+- [2:51](https://youtube.com/watch?v=almrSt2GREM&t=171) real-time information. You need to be
+- [2:54](https://youtube.com/watch?v=almrSt2GREM&t=174) able to perform the actual tasks you
+- [2:56](https://youtube.com/watch?v=almrSt2GREM&t=176) intend to do within platforms like SAP,
+- [2:58](https://youtube.com/watch?v=almrSt2GREM&t=178) Salesforce, or Oracle, as you see here.
+- [3:01](https://youtube.com/watch?v=almrSt2GREM&t=181) Eventually, it comes down to a matter
+- [3:03](https://youtube.com/watch?v=almrSt2GREM&t=183) of execution. Ultimately, if you don't
+- [3:07](https://youtube.com/watch?v=almrSt2GREM&t=187) connect the systems within a company,
+- [3:10](https://youtube.com/watch?v=almrSt2GREM&t=190) AI cannot understand the business
+- [3:12](https://youtube.com/watch?v=almrSt2GREM&t=192) context and, naturally, cannot execute
+- [3:15](https://youtube.com/watch?v=almrSt2GREM&t=195) tasks. This leads to the situation
+- [3:18](https://youtube.com/watch?v=almrSt2GREM&t=198) where we must solve the problem of
+- [3:21](https://youtube.com/watch?v=almrSt2GREM&t=201) connecting systems and data for AI to
+- [3:23](https://youtube.com/watch?v=almrSt2GREM&t=203) work properly. Another problem is that
+- [3:26](https://youtube.com/watch?v=almrSt2GREM&t=206) there are many cases where AI provides
+- [3:28](https://youtube.com/watch?v=almrSt2GREM&t=208) very plausible-sounding answers. I
+- [3:32](https://youtube.com/watch?v=almrSt2GREM&t=212) actually captured an experience we had
+- [3:34](https://youtube.com/watch?v=almrSt2GREM&t=214) where we gave it a slide and asked it
+- [3:35](https://youtube.com/watch?v=almrSt2GREM&t=215) to analyze it, but it just analyzed it
+- [3:37](https://youtube.com/watch?v=almrSt2GREM&t=217) arbitrarily. When I questioned it about
+- [3:42](https://youtube.com/watch?v=almrSt2GREM&t=222) making assumptions and errors, it
+- [3:46](https://youtube.com/watch?v=almrSt2GREM&t=226) admitted that it was wrong. What would
+- [3:50](https://youtube.com/watch?v=almrSt2GREM&t=230) happen if this situation occurred in an
+- [3:53](https://youtube.com/watch?v=almrSt2GREM&t=233) actual business? If it were just a
+- [3:57](https://youtube.com/watch?v=almrSt2GREM&t=237) simple information search, you could
+- [3:59](https://youtube.com/watch?v=almrSt2GREM&t=239) search again, but in a situation where
+- [4:01](https://youtube.com/watch?v=almrSt2GREM&t=241) large figures are involved,
+- [4:03](https://youtube.com/watch?v=almrSt2GREM&t=243) encountering such AI errors could be a
+- [4:05](https://youtube.com/watch?v=almrSt2GREM&t=245) major issue. It could lead to a major
+- [4:09](https://youtube.com/watch?v=almrSt2GREM&t=249) accident. This shows that there are
+- [4:12](https://youtube.com/watch?v=almrSt2GREM&t=252) limitations to relying solely on AI.
+- [4:16](https://youtube.com/watch?v=almrSt2GREM&t=256) Since there are limits to relying on AI
+- [4:19](https://youtube.com/watch?v=almrSt2GREM&t=259) , we also need AI to be able to call
+- [4:22](https://youtube.com/watch?v=almrSt2GREM&t=262) and execute pre-defined and verified
+- [4:25](https://youtube.com/watch?v=almrSt2GREM&t=265) business logic. Shall we look at
+- [4:29](https://youtube.com/watch?v=almrSt2GREM&t=269) another problem? The third problem is
+- [4:32](https://youtube.com/watch?v=almrSt2GREM&t=272) the need for governance, control, and
+- [4:36](https://youtube.com/watch?v=almrSt2GREM&t=276) permission management. If you look at
+- [4:41](https://youtube.com/watch?v=almrSt2GREM&t=281) recent news, there are reports of AI
+- [4:45](https://youtube.com/watch?v=almrSt2GREM&t=285) agents deleting operational databases
+- [4:48](https://youtube.com/watch?v=almrSt2GREM&t=288) or wiping out operational VMs. This
+- [4:53](https://youtube.com/watch?v=almrSt2GREM&t=293) means there are cases where the AI
+- [4:56](https://youtube.com/watch?v=almrSt2GREM&t=296) misinterprets my commands and takes
+- [4:59](https://youtube.com/watch?v=almrSt2GREM&t=299) arbitrary actions, much like it
+- [5:01](https://youtube.com/watch?v=almrSt2GREM&t=301) provided arbitrary answers earlier. The
+- [5:05](https://youtube.com/watch?v=almrSt2GREM&t=305) way to solve this is ultimately by
+- [5:07](https://youtube.com/watch?v=almrSt2GREM&t=307) controlling AI execution. This is a
+- [5:10](https://youtube.com/watch?v=almrSt2GREM&t=310) case that shows how essential
+- [5:12](https://youtube.com/watch?v=almrSt2GREM&t=312) permission control and governance are
+- [5:14](https://youtube.com/watch?v=almrSt2GREM&t=314) when AI performs any execution. If a
+- [5:19](https://youtube.com/watch?v=almrSt2GREM&t=319) governance system is not
+- [5:20](https://youtube.com/watch?v=almrSt2GREM&t=320) well-established, it becomes very
+- [5:22](https://youtube.com/watch?v=almrSt2GREM&t=322) difficult to control AI execution. We
+- [5:26](https://youtube.com/watch?v=almrSt2GREM&t=326) need processes where we understand what
+- [5:29](https://youtube.com/watch?v=almrSt2GREM&t=329) information the AI is basing its
+- [5:31](https://youtube.com/watch?v=almrSt2GREM&t=331) decisions on, and where humans
+- [5:34](https://youtube.com/watch?v=almrSt2GREM&t=334) intervene to approve and verify final
+- [5:36](https://youtube.com/watch?v=almrSt2GREM&t=336) actions to prevent errors. Also,
+- [5:40](https://youtube.com/watch?v=almrSt2GREM&t=340) execution logs must be kept so that we
+- [5:43](https://youtube.com/watch?v=almrSt2GREM&t=343) can trace the causes later on.
+- [5:48](https://youtube.com/watch?v=almrSt2GREM&t=348) Ultimately, if you want to go beyond
+- [5:51](https://youtube.com/watch?v=almrSt2GREM&t=351) simple searches and use AI for full
+- [5:54](https://youtube.com/watch?v=almrSt2GREM&t=354) execution, you finally need control and
+- [5:57](https://youtube.com/watch?v=almrSt2GREM&t=357) traceability. As a result, leading AI
+- [6:02](https://youtube.com/watch?v=almrSt2GREM&t=362) companies these days are primarily
+- [6:05](https://youtube.com/watch?v=almrSt2GREM&t=365) using the enterprise MCP and
+- [6:07](https://youtube.com/watch?v=almrSt2GREM&t=367) orchestration features we offer here at
+- [6:10](https://youtube.com/watch?v=almrSt2GREM&t=370) Workato. Companies like OpenAI or
+- [6:14](https://youtube.com/watch?v=almrSt2GREM&t=374) Anthropic, which you are all familiar
+- [6:18](https://youtube.com/watch?v=almrSt2GREM&t=378) with, also use our Workato solutions to
+- [6:21](https://youtube.com/watch?v=almrSt2GREM&t=381) connect, execute, and control the vast
+- [6:24](https://youtube.com/watch?v=almrSt2GREM&t=384) number of diverse systems operating
+- [6:27](https://youtube.com/watch?v=almrSt2GREM&t=387) within their organizations. Now, since
+- [6:33](https://youtube.com/watch?v=almrSt2GREM&t=393) this is the MCP Summit. I would like to
+- [6:37](https://youtube.com/watch?v=almrSt2GREM&t=397) talk more about MCP, and you are likely
+- [6:39](https://youtube.com/watch?v=almrSt2GREM&t=399) already aware that there are various
+- [6:42](https://youtube.com/watch?v=almrSt2GREM&t=402) MCP servers available when using MCP.
+- [6:45](https://youtube.com/watch?v=almrSt2GREM&t=405) As you can see here, you could also use
+- [6:47](https://youtube.com/watch?v=almrSt2GREM&t=407) the DIY MCP shown second. You can
+- [6:50](https://youtube.com/watch?v=almrSt2GREM&t=410) create your own MCP servers by
+- [6:52](https://youtube.com/watch?v=almrSt2GREM&t=412) developing them yourself or using tools
+- [6:54](https://youtube.com/watch?v=almrSt2GREM&t=414) like Claude Code. However, there is
+- [6:57](https://youtube.com/watch?v=almrSt2GREM&t=417) always a bottleneck in implementation,
+- [7:00](https://youtube.com/watch?v=almrSt2GREM&t=420) and once developed, issues with
+- [7:02](https://youtube.com/watch?v=almrSt2GREM&t=422) maintenance can arise. And there are a
+- [7:06](https://youtube.com/watch?v=almrSt2GREM&t=426) vast number of application services in
+- [7:09](https://youtube.com/watch?v=almrSt2GREM&t=429) the market right now. There are also
+- [7:12](https://youtube.com/watch?v=almrSt2GREM&t=432) MCP servers provided by various
+- [7:14](https://youtube.com/watch?v=almrSt2GREM&t=434) applications you are well-acquainted
+- [7:17](https://youtube.com/watch?v=almrSt2GREM&t=437) with, such as Salesforce or ServiceNow.
+- [7:20](https://youtube.com/watch?v=almrSt2GREM&t=440) We usually refer to those as native MCP
+- [7:24](https://youtube.com/watch?v=almrSt2GREM&t=444) servers. These are servers that simply
+- [7:28](https://youtube.com/watch?v=almrSt2GREM&t=448) wrap APIs and provide them, but as you
+- [7:32](https://youtube.com/watch?v=almrSt2GREM&t=452) heard from various discussions
+- [7:35](https://youtube.com/watch?v=almrSt2GREM&t=455) yesterday, you cannot attach an
+- [7:38](https://youtube.com/watch?v=almrSt2GREM&t=458) unlimited number of MCP servers to an
+- [7:42](https://youtube.com/watch?v=almrSt2GREM&t=462) LLM. Context is consumed, and if the
+- [7:47](https://youtube.com/watch?v=almrSt2GREM&t=467) context window becomes occupied by MCP
+- [7:50](https://youtube.com/watch?v=almrSt2GREM&t=470) information, the LLM’s inference
+- [7:52](https://youtube.com/watch?v=almrSt2GREM&t=472) capacity decreases, which leads to
+- [7:55](https://youtube.com/watch?v=almrSt2GREM&t=475) problems where it cannot perform
+- [7:58](https://youtube.com/watch?v=almrSt2GREM&t=478) inference properly. And if you have a
+- [8:03](https://youtube.com/watch?v=almrSt2GREM&t=483) proliferation of lightweight or DIY
+- [8:06](https://youtube.com/watch?v=almrSt2GREM&t=486) MCPs, teams end up building redundant
+- [8:09](https://youtube.com/watch?v=almrSt2GREM&t=489) solutions, or situations arise where
+- [8:12](https://youtube.com/watch?v=almrSt2GREM&t=492) teams cannot reuse an MCP that another
+- [8:15](https://youtube.com/watch?v=almrSt2GREM&t=495) team is already using. Consequently,
+- [8:19](https://youtube.com/watch?v=almrSt2GREM&t=499) gaps in authentication, permissions,
+- [8:21](https://youtube.com/watch?v=almrSt2GREM&t=501) and monitoring will naturally occur.
+- [8:24](https://youtube.com/watch?v=almrSt2GREM&t=504) The solution to control all of these is
+- [8:28](https://youtube.com/watch?v=almrSt2GREM&t=508) what we call an Enterprise MCP or an
+- [8:31](https://youtube.com/watch?v=almrSt2GREM&t=511) MCP control plane product or technology
+- [8:34](https://youtube.com/watch?v=almrSt2GREM&t=514) . At Workato, we have a massive number
+- [8:39](https://youtube.com/watch?v=almrSt2GREM&t=519) of connectors that can connect all
+- [8:40](https://youtube.com/watch?v=almrSt2GREM&t=520) systems into one. The founding motto of
+- [8:45](https://youtube.com/watch?v=almrSt2GREM&t=525) our company, Workato, is to connect
+- [8:48](https://youtube.com/watch?v=almrSt2GREM&t=528) systems very easily. You can develop
+- [8:52](https://youtube.com/watch?v=almrSt2GREM&t=532) and attach them. There is no problem at
+- [8:54](https://youtube.com/watch?v=almrSt2GREM&t=534) all. But if development or the effort
+- [8:56](https://youtube.com/watch?v=almrSt2GREM&t=536) required for that development takes too
+- [8:58](https://youtube.com/watch?v=almrSt2GREM&t=538) long, your go-to-market and
+- [9:00](https://youtube.com/watch?v=almrSt2GREM&t=540) time-to-market will inevitably slow
+- [9:02](https://youtube.com/watch?v=almrSt2GREM&t=542) down, and issues with maintenance and
+- [9:04](https://youtube.com/watch?v=almrSt2GREM&t=544) similar areas are bound to arise. The
+- [9:07](https://youtube.com/watch?v=almrSt2GREM&t=547) company established to solve such
+- [9:09](https://youtube.com/watch?v=almrSt2GREM&t=549) problems is called Workato. As you can
+- [9:13](https://youtube.com/watch?v=almrSt2GREM&t=553) see, we provide over 14,000 connectors.
+- [9:17](https://youtube.com/watch?v=almrSt2GREM&t=557) With just a few clicks, you can easily
+- [9:19](https://youtube.com/watch?v=almrSt2GREM&t=559) create workflows based on these
+- [9:22](https://youtube.com/watch?v=almrSt2GREM&t=562) connectors and turn them into MCP
+- [9:24](https://youtube.com/watch?v=almrSt2GREM&t=564) servers with a few more clicks. That is
+- [9:29](https://youtube.com/watch?v=almrSt2GREM&t=569) why many people are looking for Workato
+- [9:32](https://youtube.com/watch?v=almrSt2GREM&t=572) when connecting various systems. When
+- [9:37](https://youtube.com/watch?v=almrSt2GREM&t=577) we visit clients, we see many different
+- [9:41](https://youtube.com/watch?v=almrSt2GREM&t=581) types; while modern IT companies use
+- [9:45](https://youtube.com/watch?v=almrSt2GREM&t=585) the latest applications and
+- [9:48](https://youtube.com/watch?v=almrSt2GREM&t=588) technologies, many companies in Korea
+- [9:52](https://youtube.com/watch?v=almrSt2GREM&t=592) still have very old legacy systems.
+- [9:57](https://youtube.com/watch?v=almrSt2GREM&t=597) Manufacturing companies are a prime
+- [10:00](https://youtube.com/watch?v=almrSt2GREM&t=600) example of such legacy environments,
+- [10:02](https://youtube.com/watch?v=almrSt2GREM&t=602) and we often hear requests from them to
+- [10:04](https://youtube.com/watch?v=almrSt2GREM&t=604) connect these legacy systems to AI. But
+- [10:07](https://youtube.com/watch?v=almrSt2GREM&t=607) there is often no way to do it. They
+- [10:10](https://youtube.com/watch?v=almrSt2GREM&t=610) don't provide APIs, the databases
+- [10:12](https://youtube.com/watch?v=almrSt2GREM&t=612) cannot be opened, and there are many
+- [10:15](https://youtube.com/watch?v=almrSt2GREM&t=615) other constraints. Even in these cases,
+- [10:19](https://youtube.com/watch?v=almrSt2GREM&t=619) the demand to connect legacy systems to
+- [10:22](https://youtube.com/watch?v=almrSt2GREM&t=622) AI still remains. The question is, how
+- [10:25](https://youtube.com/watch?v=almrSt2GREM&t=625) can we easily connect them? Workato
+- [10:28](https://youtube.com/watch?v=almrSt2GREM&t=628) provides technologies to connect these
+- [10:30](https://youtube.com/watch?v=almrSt2GREM&t=630) legacy systems through a wide variety
+- [10:32](https://youtube.com/watch?v=almrSt2GREM&t=632) of interface methods. We also include
+- [10:36](https://youtube.com/watch?v=almrSt2GREM&t=636) an API gateway solution that makes it
+- [10:38](https://youtube.com/watch?v=almrSt2GREM&t=638) easy to turn them into APIs based on
+- [10:40](https://youtube.com/watch?v=almrSt2GREM&t=640) those connections. As a result, we
+- [10:44](https://youtube.com/watch?v=almrSt2GREM&t=644) provide the technology to easily
+- [10:47](https://youtube.com/watch?v=almrSt2GREM&t=647) convert those APIs into MCP servers
+- [10:50](https://youtube.com/watch?v=almrSt2GREM&t=650) with a few clicks, enabling you to
+- [10:53](https://youtube.com/watch?v=almrSt2GREM&t=653) build an enterprise-wide MCP. Let's
+- [10:57](https://youtube.com/watch?v=almrSt2GREM&t=657) talk about the accuracy issue I
+- [10:59](https://youtube.com/watch?v=almrSt2GREM&t=659) mentioned earlier. The diagram you see
+- [11:03](https://youtube.com/watch?v=almrSt2GREM&t=663) on the left shows the usage of a
+- [11:05](https://youtube.com/watch?v=almrSt2GREM&t=665) standard MCP. It essentially means
+- [11:08](https://youtube.com/watch?v=almrSt2GREM&t=668) attaching MCP servers that perform
+- [11:10](https://youtube.com/watch?v=almrSt2GREM&t=670) functions like order lookup or payment
+- [11:13](https://youtube.com/watch?v=almrSt2GREM&t=673) directly to the LLM. Then, you tell the
+- [11:16](https://youtube.com/watch?v=almrSt2GREM&t=676) LLM something like this: "Refund the
+- [11:18](https://youtube.com/watch?v=almrSt2GREM&t=678) shoes I bought last week." The LLM then
+- [11:20](https://youtube.com/watch?v=almrSt2GREM&t=680) makes a judgment and triggers the
+- [11:23](https://youtube.com/watch?v=almrSt2GREM&t=683) entire workflow. This can lead to the
+- [11:27](https://youtube.com/watch?v=almrSt2GREM&t=687) AI behaving unexpectedly as mentioned
+- [11:30](https://youtube.com/watch?v=almrSt2GREM&t=690) earlier, and no one here can guarantee
+- [11:33](https://youtube.com/watch?v=almrSt2GREM&t=693) that it will never malfunction.
+- [11:37](https://youtube.com/watch?v=almrSt2GREM&t=697) Ultimately, this creates a major hole
+- [11:40](https://youtube.com/watch?v=almrSt2GREM&t=700) in a critical workflow involving money,
+- [11:43](https://youtube.com/watch?v=almrSt2GREM&t=703) which can lead to a significant impact
+- [11:46](https://youtube.com/watch?v=almrSt2GREM&t=706) on your business. In such cases, it is
+- [11:50](https://youtube.com/watch?v=almrSt2GREM&t=710) crucial not to just attach it via MCP
+- [11:53](https://youtube.com/watch?v=almrSt2GREM&t=713) and leave the judgment to the LLM, but
+- [11:55](https://youtube.com/watch?v=almrSt2GREM&t=715) to build it in the form of a strictly
+- [11:58](https://youtube.com/watch?v=almrSt2GREM&t=718) defined workflow. As shown on the right
+- [12:02](https://youtube.com/watch?v=almrSt2GREM&t=722) , we create a single MCP tool called "
+- [12:04](https://youtube.com/watch?v=almrSt2GREM&t=724) Execute Refund Process," and within its
+- [12:07](https://youtube.com/watch?v=almrSt2GREM&t=727) backend, we build a structured workflow
+- [12:10](https://youtube.com/watch?v=almrSt2GREM&t=730) that handles tasks like order lookup,
+- [12:13](https://youtube.com/watch?v=almrSt2GREM&t=733) return eligibility checks, payment
+- [12:15](https://youtube.com/watch?v=almrSt2GREM&t=735) cancellation, and courier pickup
+- [12:17](https://youtube.com/watch?v=almrSt2GREM&t=737) requests. Ensuring that it never
+- [12:20](https://youtube.com/watch?v=almrSt2GREM&t=740) deviates from this path. In this case,
+- [12:22](https://youtube.com/watch?v=almrSt2GREM&t=742) when the LLM receives a user query, it
+- [12:25](https://youtube.com/watch?v=almrSt2GREM&t=745) simply identifies the order ID, finds
+- [12:28](https://youtube.com/watch?v=almrSt2GREM&t=748) the corresponding tool, and executes it
+- [12:30](https://youtube.com/watch?v=almrSt2GREM&t=750) . This allows the internal workflow to
+- [12:35](https://youtube.com/watch?v=almrSt2GREM&t=755) operate seamlessly without errors or
+- [12:37](https://youtube.com/watch?v=almrSt2GREM&t=757) gaps. If you need to ensure that issues
+- [12:42](https://youtube.com/watch?v=almrSt2GREM&t=762) arising from complex business logic,
+- [12:45](https://youtube.com/watch?v=almrSt2GREM&t=765) reasoning errors, or potential failures
+- [12:47](https://youtube.com/watch?v=almrSt2GREM&t=767) absolutely never occur, it is crucial
+- [12:50](https://youtube.com/watch?v=almrSt2GREM&t=770) to understand the importance of
+- [12:52](https://youtube.com/watch?v=almrSt2GREM&t=772) building MCP servers in such a workflow
+- [12:54](https://youtube.com/watch?v=almrSt2GREM&t=774) format. Now, moving on to another
+- [12:57](https://youtube.com/watch?v=almrSt2GREM&t=777) important aspect. Governance. Our
+- [13:00](https://youtube.com/watch?v=almrSt2GREM&t=780) Workato solution is equipped with
+- [13:02](https://youtube.com/watch?v=almrSt2GREM&t=782) features to register, discover, and
+- [13:05](https://youtube.com/watch?v=almrSt2GREM&t=785) monitor all MCPs. Through our internal
+- [13:09](https://youtube.com/watch?v=almrSt2GREM&t=789) "MCP Registry" feature, MCP servers can
+- [13:12](https://youtube.com/watch?v=almrSt2GREM&t=792) be registered, searched, and reused in
+- [13:14](https://youtube.com/watch?v=almrSt2GREM&t=794) one place, allowing team members across
+- [13:17](https://youtube.com/watch?v=almrSt2GREM&t=797) the entire organization to check and
+- [13:19](https://youtube.com/watch?v=almrSt2GREM&t=799) reuse all MCPs through this registry.
+- [13:24](https://youtube.com/watch?v=almrSt2GREM&t=804) Moreover, instead of connecting MCP
+- [13:27](https://youtube.com/watch?v=almrSt2GREM&t=807) servers directly to an LLM, you
+- [13:30](https://youtube.com/watch?v=almrSt2GREM&t=810) register them in Workato’s Enterprise
+- [13:33](https://youtube.com/watch?v=almrSt2GREM&t=813) MCP using the "MCP Proxy" feature,
+- [13:36](https://youtube.com/watch?v=almrSt2GREM&t=816) enabling you to simultaneously use
+- [13:39](https://youtube.com/watch?v=almrSt2GREM&t=819) functions like comprehensive permission
+- [13:42](https://youtube.com/watch?v=almrSt2GREM&t=822) control, access management, logging,
+- [13:46](https://youtube.com/watch?v=almrSt2GREM&t=826) auditing, and reporting. This means
+- [13:51](https://youtube.com/watch?v=almrSt2GREM&t=831) that no matter which LLM or AI you use,
+- [13:54](https://youtube.com/watch?v=almrSt2GREM&t=834) all requests will go through
+- [13:57](https://youtube.com/watch?v=almrSt2GREM&t=837) Workato’s Enterprise MCP, allowing
+- [14:00](https://youtube.com/watch?v=almrSt2GREM&t=840) everything to be monitored, tracked,
+- [14:03](https://youtube.com/watch?v=almrSt2GREM&t=843) and controlled. Yes. I would describe
+- [14:09](https://youtube.com/watch?v=almrSt2GREM&t=849) Workato as an integrated control and
+- [14:11](https://youtube.com/watch?v=almrSt2GREM&t=851) execution platform for AI-driven MCPs.
+- [14:13](https://youtube.com/watch?v=almrSt2GREM&t=853) The origin of our company, Workato,
+- [14:16](https://youtube.com/watch?v=almrSt2GREM&t=856) actually began with what is shown at
+- [14:19](https://youtube.com/watch?v=almrSt2GREM&t=859) the bottom: Universal Connectivity. We
+- [14:23](https://youtube.com/watch?v=almrSt2GREM&t=863) started as a company that provides an
+- [14:25](https://youtube.com/watch?v=almrSt2GREM&t=865) orchestration layer to easily connect
+- [14:28](https://youtube.com/watch?v=almrSt2GREM&t=868) various systems and facilitate data
+- [14:31](https://youtube.com/watch?v=almrSt2GREM&t=871) exchange through more than 14,000
+- [14:34](https://youtube.com/watch?v=almrSt2GREM&t=874) connectors. Building on those strengths
+- [14:38](https://youtube.com/watch?v=almrSt2GREM&t=878) , we are now introducing our "
+- [14:40](https://youtube.com/watch?v=almrSt2GREM&t=880) Enterprise MCP" solution to customers.
+- [14:44](https://youtube.com/watch?v=almrSt2GREM&t=884) Another major strength of our company
+- [14:48](https://youtube.com/watch?v=almrSt2GREM&t=888) is that by adhering to standard MCP
+- [14:51](https://youtube.com/watch?v=almrSt2GREM&t=891) protocols, we can seamlessly connect to
+- [14:55](https://youtube.com/watch?v=almrSt2GREM&t=895) any LLM without any issues. If you have
+- [15:00](https://youtube.com/watch?v=almrSt2GREM&t=900) any questions about Workato, please
+- [15:02](https://youtube.com/watch?v=almrSt2GREM&t=902) know that we are always available at
+- [15:04](https://youtube.com/watch?v=almrSt2GREM&t=904) our booth. We would appreciate it if
+- [15:06](https://youtube.com/watch?v=almrSt2GREM&t=906) you could stop by. And finally, there
+- [15:08](https://youtube.com/watch?v=almrSt2GREM&t=908) is just one more thing I would like to
+- [15:10](https://youtube.com/watch?v=almrSt2GREM&t=910) add. We have an event in Las Vegas this
+- [15:13](https://youtube.com/watch?v=almrSt2GREM&t=913) September called WoW. It is a large
+- [15:16](https://youtube.com/watch?v=almrSt2GREM&t=916) event known as World of Warcraft. For
+- [15:19](https://youtube.com/watch?v=almrSt2GREM&t=919) those interested, we are also hosting
+- [15:22](https://youtube.com/watch?v=almrSt2GREM&t=922) the event online, so if you could
+- [15:24](https://youtube.com/watch?v=almrSt2GREM&t=924) attend that,
+- [15:25](https://youtube.com/watch?v=almrSt2GREM&t=925) we would appreciate it. Thank you.
