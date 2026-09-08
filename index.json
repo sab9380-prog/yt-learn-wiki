@@ -4760,5 +4760,51 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-09-08-YC의-AI-플레이북을-제-자료에-그대로-적용했습니다.md",
+    "title": "YC의 AI 플레이북을 제 자료에 그대로 적용했습니다 — 제2의 두뇌 세팅",
+    "category": "일반학습",
+    "date": "2026-09-08",
+    "core_message": "업무 기록을 한 곳에 쌓고 AI가 그 맥락을 읽어 일하게 하는 '공용 두뇌' 구조를 만들면, 조직(혹은 개인)이 쓸수록 똑똑해지는 자기개선 시스템이 된다.",
+    "topics": [
+      "컨텍스트관리",
+      "스킬",
+      "자기개선",
+      "위키",
+      "RAG검색"
+    ],
+    "concepts": [
+      {
+        "id": "조직의-공용-두뇌",
+        "label": "조직의 공용 두뇌",
+        "topic": null
+      },
+      {
+        "id": "context-engineering",
+        "label": "컨텍스트 엔지니어링",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "self-improving",
+        "label": "자기개선 AI",
+        "topic": "자기개선"
+      },
+      {
+        "id": "llm-wiki",
+        "label": "LLM 위키",
+        "topic": "위키"
+      },
+      {
+        "id": "graph-rag",
+        "label": "그래프 RAG",
+        "topic": "RAG검색"
+      }
+    ]
   }
 ]
