@@ -4974,5 +4974,45 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-09-08-해외에서-잘나가는-AI-역사-채널-만드는-법-전부-공개합니다-ft.md",
+    "title": "해외에서 잘나가는 AI 역사 채널, 만드는 법 전부 공개합니다 (ft.프롬프트 공개) | 구글 옴니 1.1",
+    "category": "Picks전략",
+    "date": "2026-09-08",
+    "core_message": "Gemini→Midjourney→Google Flow Omni 1.1 Flash 세 도구를 조합하면 3,000원 안팎의 비용으로 감도 높은 AI 역사 스토리텔링 영상을 완성할 수 있다.",
+    "topics": [],
+    "concepts": [
+      {
+        "id": "Gemini",
+        "label": "Gemini",
+        "topic": null
+      },
+      {
+        "id": "Midjourney-이미지-생성",
+        "label": "Midjourney 이미지 생성",
+        "topic": null
+      },
+      {
+        "id": "Google-Flow-Veo-Omni-1.1-Flash-영상-모델",
+        "label": "Google Flow / Veo Omni 1.1 Flash 영상 모델",
+        "topic": null
+      },
+      {
+        "id": "시작-프레임·종료-프레임",
+        "label": "시작 프레임·종료 프레임",
+        "topic": null
+      },
+      {
+        "id": "장면-확장",
+        "label": "장면 확장",
+        "topic": null
+      },
+      {
+        "id": "360p-드래프트-모드",
+        "label": "360p 드래프트 모드",
+        "topic": null
+      }
+    ]
   }
 ]
