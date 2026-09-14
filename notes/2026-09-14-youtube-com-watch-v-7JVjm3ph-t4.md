@@ -1,0 +1,531 @@
+---
+title: "https://youtube.com/watch?v=7JVjm3ph-t4"
+source_url: https://youtube.com/watch?v=7JVjm3ph-t4
+video_id: 7JVjm3ph-t4
+source_type: youtube
+lang: ko
+analyzed: 2026-09-14
+category: Picks전략
+tags: ["개념/고객-발견-인터뷰", "개념/더-맘-테스트", "개념/최소-기능-제품", "개념/사용성-테스트", "개념/고객-성공-확인", "개념/반복-매출"]
+key_concepts: ["고객 발견 인터뷰", "더 맘 테스트", "최소 기능 제품(MVP)", "사용성 테스트", "고객 성공 확인", "반복 매출(MRR)"]
+status: active
+---
+# https://youtube.com/watch?v=7JVjm3ph-t4
+
+## 🧠 이해 (Understand)
+- **Summary:** AI 마케팅 SaaS '패스트레인'은 출시 2달 만에 유료 사용자 1,000명, 월 반복 매출 약 9천만 원을 달성했다. 창업자 가우라브와 존은 초기에 마케팅 전반을 해결하는 범용 제품을 만들었다가 실패하고, 2,000건의 고객 통화를 통해 '짧은 콘텐츠 생성·예약 발행' 하나에 집중하는 방향으로 전환했다. 고객 통화는 일회성 이벤트가 아니라 노션 DB·분석 대시보드와 연결된 운영 시스템으로 만들어졌다. 핵심 교훈은 '무엇을 만들지 결정하는 과정'이 기술 선택보다 중요하며, 고객의 과거 행동을 묻는 질문이 미래 의향을 묻는 질문보다 훨씬 정확한 신호를 준다는 것이다. AI 도구는 속도를 높였지만, 불편한 질문을 던지는 일은 여전히 창업자의 몫이다.
+- **Core Message:** 고객과의 불편한 대화 2,000건이 기술보다 강력한 경쟁력이다—무엇을 만들지 결정하는 과정이 곧 사업의 핵심이다.
+> 고객과 대화하는 것이 나쁜 평가를 만드는 것이 아니라 이미 존재하는 현실을 더 빨리 발견하는 것이다.
+> 새로운 기능을 하나 더 만드는 일이 고객에게 연락하는 것보다 편할 수 있다. 하지만 편한 개발이 언제나 사업을 앞으로 움직이는 것은 아니다.
+> 칭찬을 구하기보다 고객이 마지막으로 그 문제를 해결했던 장면부터 물어보세요.
+❗ 비개발자인 공동창업자 존이 AI 코딩 도구(클로드 코드)로 고객 데이터 분석 내부 시스템을 직접 만들었다.
+❗ 제품 내 무지개색 버튼 하나로 고객 통화를 모집했고, 복잡한 리쿠르팅 캠페인 없이 2,000건의 대화를 쌓았다.
+❗ 공식 출시 약 두 달 만에 유료 사용자 1,000명·월 MRR 약 9천만 원을 달성했다.
+
+## 📚 핵심 용어
+- **더 맘 테스트(The Mom Test):** 엄마도 거짓 칭찬을 못 하도록 미래 의향 대신 과거 행동을 묻는 고객 인터뷰 원칙. / "살 것 같아요?" 대신 "마지막으로 이 문제에 돈 쓴 게 언제예요?"라고 묻는 것. 행동은 거짓말을 못 한다. / 일반 설문은 의향(살 것 같다)을 묻고, 더 맘 테스트는 행동(실제로 샀다)을 묻는다. 의향은 부풀려지지만 행동은 검증된 신호다.
+- **최소 기능 제품(MVP):** 가장 핵심 문제 하나만 해결할 수 있는 가장 작은 버전의 제품. / 자동차 대신 먼저 킥보드를 내놓아 '이동 수요'가 있는지 확인하는 것. / MVP는 가설 검증용 최소 버전, 베타는 MVP 이후 실제 사용자에게 오류를 찾게 하는 단계. 목적이 다르다.
+- **반복 매출(MRR):** 기존 구독 고객이 유지되는 한 매달 자동으로 재발생하는 예측 가능한 매출. / 넷플릭스 구독처럼, 고객이 해지하지 않으면 다음 달에도 같은 금액이 들어오는 구조. / 일회성 판매는 매달 새 고객을 찾아야 하지만, MRR은 기존 고객이 쌓일수록 기반이 커진다.
+- **UX 마찰:** 고객이 제품의 핵심 가치에 도달하기 전에 겪는 작은 불편과 장애물의 합산. / ATM에서 카드 넣고 비밀번호 누르고 메뉴 세 번 눌러야 출금되는 번거로움. 단계마다 포기자가 생긴다. / 버그는 기능이 '안 되는' 것, 마찰은 기능은 되지만 '찾기 어렵거나 느린' 것. 마찰은 조용히 이탈을 만든다.
+
+## 🚀 실행 (Execute)
+- [ ] 현재 운영 중인 서비스·제품의 실제 사용자 3~5명에게 이번 주 30분 통화를 요청하고, '더 맘 테스트' 원칙(과거 행동 질문)으로 인터뷰 스크립트를 작성해 실행한다. — ⏰ 이번 주 · ⚡ 스크립트 작성 1시간 + 통화 3회 × 30분 = 약 2.5시간
+  - 담당: 나 (대표 또는 서비스 담당자 직접)
+  - 이유: 고객의 실제 행동을 듣지 않으면 기능 개발과 마케팅 메시지가 창업자 자신의 가정을 정교화하는 데 그칠 수 있다.
+- [ ] 고객 인터뷰 내용을 노션(또는 스프레드시트)에 구조화된 형태로 저장하는 간단한 '고객 인텔리전스 템플릿'을 만들고, 가입 이유·사용 빈도·핵심 불만 3개 필드를 기준으로 기존 고객 데이터를 분류한다. — ⏰ 2주 내 · ⚡ 템플릿 설계 1시간 + 기존 데이터 입력 2~3시간
+  - 담당: 나 또는 운영 담당 팀원
+  - 이유: 통화를 해도 기억에만 남기면 패턴을 발견할 수 없다. 구조화된 저장이 인사이트를 팀 자산으로 만든다.
+- 자료: 도서: 《The Mom Test》 Rob Fitzpatrick 저 — 고객 인터뷰 질문 설계의 핵심 원칙서 (국내 번역본 존재 여부 확인 필요)
+- 자료: 도구: Notion 데이터베이스 — 고객 인텔리전스 저장 및 분류
+- 자료: 도구: Otter.ai 또는 Clova Note — 통화 자동 녹취·요약 (확인 필요: 한국어 정확도 비교 후 선택)
+- Timeline: 1주차: 인터뷰 스크립트 작성 + 첫 통화 3건 실행 → 2주차: 노션 템플릿 구축 + 기존 고객 데이터 분류 → 3~4주차: 반복 패턴 확인 후 제품·마케팅 메시지 1가지 수정 적용
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
+- 핵심 개념: [[_concept-고객-발견-인터뷰|고객 발견 인터뷰]] · [[_concept-더-맘-테스트|더 맘 테스트]] · [[_concept-최소-기능-제품|최소 기능 제품]] · [[_concept-사용성-테스트|사용성 테스트]] · [[_concept-고객-성공-확인|고객 성공 확인]] · [[_concept-반복-매출|반복 매출]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=0) 출시 두 달 만에 월 9천만 원을
+- [0:01](https://youtube.com/watch?v=7JVjm3ph-t4&t=1) 버는 [음악] 구독 소프트웨어를
+- [0:03](https://youtube.com/watch?v=7JVjm3ph-t4&t=3) 만들려면 어떤 특별한 기술이
+- [0:05](https://youtube.com/watch?v=7JVjm3ph-t4&t=5) 필요할까요? 대부분은 천재적인
+- [0:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=6) [음악] 아이디어나 광고 전략, 빠른
+- [0:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=8) 개발 도구를 떠올립니다. 하지만
+- [0:10](https://youtube.com/watch?v=7JVjm3ph-t4&t=10) 패스트레인의 창업자 가우라브가 꼽은
+- [0:11](https://youtube.com/watch?v=7JVjm3ph-t4&t=11) 비결은 훨씬 단순하고 불편했습니다.
+- [0:14](https://youtube.com/watch?v=7JVjm3ph-t4&t=14) 바로 고객에게 전화를 거는
+- [0:15](https://youtube.com/watch?v=7JVjm3ph-t4&t=15) 일이었습니다. 가우라부와
+- [0:17](https://youtube.com/watch?v=7JVjm3ph-t4&t=17) 공동창업자존은 매주 약 번씩 고객과
+- [0:19](https://youtube.com/watch?v=7JVjm3ph-t4&t=19) 통화했고 아이디어를 찾기 시작한 뒤
+- [0:21](https://youtube.com/watch?v=7JVjm3ph-t4&t=21) 누적 약 2,000건의 대화를
+- [0:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=23) 쌓았습니다. 그렇게 만든 인공지능
+- [0:25](https://youtube.com/watch?v=7JVjm3ph-t4&t=25) 마케팅 서비스 패스트레이는 공식 출시
+- [0:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=27) 약 두 달 만에 유료 사용자 1천명을
+- [0:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=29) 넘기며 월 반복 매출 약 9천만 원에
+- [0:32](https://youtube.com/watch?v=7JVjm3ph-t4&t=32) 도달했습니다. 형범해 보이는 고객
+- [0:34](https://youtube.com/watch?v=7JVjm3ph-t4&t=34) 통화가 어떻게 제품의 방향과 화면
+- [0:36](https://youtube.com/watch?v=7JVjm3ph-t4&t=36) 구성, 마케팅 전략까지 [음악]
+- [0:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=37) 바꿨을까요? 오늘은 패스트레인이 넓고
+- [0:40](https://youtube.com/watch?v=7JVjm3ph-t4&t=40) 오호한 아이디어를 버리고 고객이
+- [0:41](https://youtube.com/watch?v=7JVjm3ph-t4&t=41) 실제로 돈을 낼 문제를 발견해 빠르게
+- [0:44](https://youtube.com/watch?v=7JVjm3ph-t4&t=44) 성장한 과정을 [음악]
+- [0:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=45) 살펴보겠습니다. 그럼 지금부터
+- [0:46](https://youtube.com/watch?v=7JVjm3ph-t4&t=46) 시작하겠습니다. 가오라브가 처음부터
+- [0:48](https://youtube.com/watch?v=7JVjm3ph-t4&t=48) 성공적인 사스 창업자였던 것은
+- [0:50](https://youtube.com/watch?v=7JVjm3ph-t4&t=50) 아닙니다. 그는 다른 창업자들의
+- [0:52](https://youtube.com/watch?v=7JVjm3ph-t4&t=52) 사례를 다룬 영상을 보다가 한 모바일
+- [0:54](https://youtube.com/watch?v=7JVjm3ph-t4&t=54) 앱의 성장 이야기에 매료됐습니다.
+- [0:56](https://youtube.com/watch?v=7JVjm3ph-t4&t=56) [음악] 자신도 소프트웨어를 만들 수
+- [0:58](https://youtube.com/watch?v=7JVjm3ph-t4&t=58) 있겠다는 생각이 들어 곧바로 여러
+- [1:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=60) 앱을 개발하기 시작했죠. 제품을
+- [1:02](https://youtube.com/watch?v=7JVjm3ph-t4&t=62) 만드는 일은 생각보다 [음악]
+- [1:03](https://youtube.com/watch?v=7JVjm3ph-t4&t=63) 가능했습니다. 문제는 완성한
+- [1:05](https://youtube.com/watch?v=7JVjm3ph-t4&t=65) 뒤였습니다. 아무리 기능을 만들어도
+- [1:07](https://youtube.com/watch?v=7JVjm3ph-t4&t=67) 사람들이 제품의 존재를 알지
+- [1:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=68) 못했습니다. 큰 광고비를 쓰고 싶지는
+- [1:10](https://youtube.com/watch?v=7JVjm3ph-t4&t=70) 않았고 틱톡이나 인스타그램에서 무엇을
+- [1:13](https://youtube.com/watch?v=7JVjm3ph-t4&t=73) 올려야 [음악] 할지도 막막했습니다.
+- [1:15](https://youtube.com/watch?v=7JVjm3ph-t4&t=75) 개발은 할 수 있지만 마케팅은 할 수
+- [1:17](https://youtube.com/watch?v=7JVjm3ph-t4&t=77) 없는 상황이었습니다. [음악]
+- [1:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=78) 비슷한 시기에 만난 공동 창업자 조도
+- [1:21](https://youtube.com/watch?v=7JVjm3ph-t4&t=81) 같은 문제를 겪고 있었습니다. 두
+- [1:22](https://youtube.com/watch?v=7JVjm3ph-t4&t=82) 사람은 자신들만의 고민이 아니라 많은
+- [1:24](https://youtube.com/watch?v=7JVjm3ph-t4&t=84) 1인 창업자가 반복해서 겪는 문제라는
+- [1:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=87) [음악] 사실을 발견했습니다.
+- [1:28](https://youtube.com/watch?v=7JVjm3ph-t4&t=88) 인공지능과 푸딩 도구가 좋아지면서
+- [1:30](https://youtube.com/watch?v=7JVjm3ph-t4&t=90) 제품을 만드는 장벽은 낮아졌지만 국에
+- [1:32](https://youtube.com/watch?v=7JVjm3ph-t4&t=92) 관심을 얻는 일은 여전히
+- [1:34](https://youtube.com/watch?v=7JVjm3ph-t4&t=94) 어려웠습니다. 여기서 좋은 사업
+- [1:35](https://youtube.com/watch?v=7JVjm3ph-t4&t=95) 아이디어가 만들어집니다. 창업자가
+- [1:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=97) 자기 문제를 겪고 주변에서도 같은
+- [1:40](https://youtube.com/watch?v=7JVjm3ph-t4&t=100) 고통이 [음악] 반복되는지 확인한 뒤
+- [1:41](https://youtube.com/watch?v=7JVjm3ph-t4&t=101) 해결책을 만드는 것입니다. 다만 두
+- [1:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=103) 사람은 처음부터 정확한 답을 찾은
+- [1:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=105) [음악] 것은 아니었습니다. 처음
+- [1:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=107) 만든 서비스의 이름은 테스트
+- [1:48](https://youtube.com/watch?v=7JVjm3ph-t4&t=108) AI였습니다. 검색 엔진 최적화부터
+- [1:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=111) 인공지능 검색 노출, 레디에서의 고객
+- [1:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=113) 소통, 짧은 영상 제작까지 [음악]
+- [1:55](https://youtube.com/watch?v=7JVjm3ph-t4&t=115) 마케팅에 필요한 모든 일을 한
+- [1:57](https://youtube.com/watch?v=7JVjm3ph-t4&t=117) 제품에서 해결하려 했습니다. 이름도
+- [1:59](https://youtube.com/watch?v=7JVjm3ph-t4&t=119) 멋있어 보였고 기능도 많았습니다.
+- [2:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=120) 창업자 입장에서는 무엇이든 할 수
+- [2:02](https://youtube.com/watch?v=7JVjm3ph-t4&t=122) [음악] 있는 제품이 더 같이 있어
+- [2:03](https://youtube.com/watch?v=7JVjm3ph-t4&t=123) 보였죠. 하지만 고객에게는
+- [2:05](https://youtube.com/watch?v=7JVjm3ph-t4&t=125) 달랐습니다. 기능이 많을수록 제품이
+- [2:07](https://youtube.com/watch?v=7JVjm3ph-t4&t=127) 누구를 위한 것인지 가장 잘 해결하는
+- [2:09](https://youtube.com/watch?v=7JVjm3ph-t4&t=129) 문제가 무엇인지 오호해졌습니다. 검색
+- [2:11](https://youtube.com/watch?v=7JVjm3ph-t4&t=131) 노출이 필요한 사람과 짧은 영상이
+- [2:13](https://youtube.com/watch?v=7JVjm3ph-t4&t=133) 필요한 사람, [음악] 커뮤니티
+- [2:14](https://youtube.com/watch?v=7JVjm3ph-t4&t=134) 마케팅이 필요한 사람의 상황은 서로
+- [2:16](https://youtube.com/watch?v=7JVjm3ph-t4&t=136) 달랐습니다. 모든 문제를 동시에
+- [2:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=138) 풀려다 보니 어느 문제도 날카롭게
+- [2:20](https://youtube.com/watch?v=7JVjm3ph-t4&t=140) 해결하지 못한 것입니다. 두 사람은
+- [2:22](https://youtube.com/watch?v=7JVjm3ph-t4&t=142) 7월부터 초기 버전을 만들고 8월과
+- [2:24](https://youtube.com/watch?v=7JVjm3ph-t4&t=144) 9월에 계속 출시했습니다.이 과정에서
+- [2:26](https://youtube.com/watch?v=7JVjm3ph-t4&t=146) 고객과 대화하면서 사람들이 가장
+- [2:28](https://youtube.com/watch?v=7JVjm3ph-t4&t=148) 강하게 [음악] 반응하는 부분을
+- [2:30](https://youtube.com/watch?v=7JVjm3ph-t4&t=150) 확인했습니다. 바로 짧은 콘텐츠를
+- [2:32](https://youtube.com/watch?v=7JVjm3ph-t4&t=152) 만들어 제품을 알리는 기능이었습니다.
+- [2:34](https://youtube.com/watch?v=7JVjm3ph-t4&t=154) 그래서 나머지 기능을 붙잡는 [음악]
+- [2:35](https://youtube.com/watch?v=7JVjm3ph-t4&t=155) 대신 짧은 영상 마케팅 하나에
+- [2:38](https://youtube.com/watch?v=7JVjm3ph-t4&t=158) 집중하기로 했습니다. 10월부터
+- [2:40](https://youtube.com/watch?v=7JVjm3ph-t4&t=160) 새로운 방향으로 개발을 시작했고
+- [2:42](https://youtube.com/watch?v=7JVjm3ph-t4&t=162) 12월에는 약 2,000명의
+- [2:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=163) 대기자에게 베타 버전을 공개했습니다.
+- [2:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=165) [음악] 베타는 정식 출시 전 실제
+- [2:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=167) 고객에게 써 보게 하며 문제를 찾는
+- [2:49](https://youtube.com/watch?v=7JVjm3ph-t4&t=169) 단계입니다. 여기서 받은 피드백을
+- [2:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=171) 반영한 뒤듬의 3월 23일 [음악]
+- [2:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=173) 지금의 패스트레인을 공식
+- [2:55](https://youtube.com/watch?v=7JVjm3ph-t4&t=175) 출시했습니다. 패스트레인의 작동
+- [2:56](https://youtube.com/watch?v=7JVjm3ph-t4&t=176) 방식은 명확합니다. 사용자가 자신의
+- [2:59](https://youtube.com/watch?v=7JVjm3ph-t4&t=179) 웹사이트 주소를 입력하면 서비스가
+- [3:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=180) 해당 분야에서 유행하는 콘텐츠를
+- [3:02](https://youtube.com/watch?v=7JVjm3ph-t4&t=182) [음악] 찾습니다. 그리고 잘되는
+- [3:04](https://youtube.com/watch?v=7JVjm3ph-t4&t=184) 형식과 흐름을 사용자의 제품에 맞게
+- [3:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=186) 바꾸어 수많은 짧은 콘텐츠 아이디어를
+- [3:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=188) 만들어 줍니다. 완성된 콘텐츠는
+- [3:09](https://youtube.com/watch?v=7JVjm3ph-t4&t=189) [음악] 틱톡과 인스타그램, 유튜브에
+- [3:12](https://youtube.com/watch?v=7JVjm3ph-t4&t=192) 예약 발행할 수 있습니다. 핵심
+- [3:13](https://youtube.com/watch?v=7JVjm3ph-t4&t=193) 고객은 모바일 앱이나 구독
+- [3:15](https://youtube.com/watch?v=7JVjm3ph-t4&t=195) 소프트웨어를 혼자 만드는
+- [3:16](https://youtube.com/watch?v=7JVjm3ph-t4&t=196) 창업자입니다. 이들은 제품 개발에는
+- [3:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=198) 익숙해도 [음악] 콘텐츠 마케팅에는
+- [3:20](https://youtube.com/watch?v=7JVjm3ph-t4&t=200) 어려움을 느끼는 경우가 많습니다.
+- [3:22](https://youtube.com/watch?v=7JVjm3ph-t4&t=202) 패스트레는 무엇을 만들지 고민하는
+- [3:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=203) [음악] 과정부터 실제 개시까지 한
+- [3:25](https://youtube.com/watch?v=7JVjm3ph-t4&t=205) 곳에서 줄여 줍니다. 출시 후 매출
+- [3:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=207) 그래프는 짧은 기간에 급격히
+- [3:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=209) 상승했습니다. [음악]
+- [3:30](https://youtube.com/watch?v=7JVjm3ph-t4&t=210) 일부 유료 베타으로 시작한 사업은
+- [3:32](https://youtube.com/watch?v=7JVjm3ph-t4&t=212) 공식 출시 약 두 달 만에 유료
+- [3:34](https://youtube.com/watch?v=7JVjm3ph-t4&t=214) 사용자 1,000명을 넘어섰고
+- [3:35](https://youtube.com/watch?v=7JVjm3ph-t4&t=215) 소프트웨어에서만 매달 약 9천만 원의
+- [3:38](https://youtube.com/watch?v=7JVjm3ph-t4&t=218) 반복 매출을 만들었습니다. 반복
+- [3:40](https://youtube.com/watch?v=7JVjm3ph-t4&t=220) 매출은 기존 고객이 [음악] 구독을
+- [3:42](https://youtube.com/watch?v=7JVjm3ph-t4&t=222) 유지하는 동안 다음 달에도 다시
+- [3:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=223) 발생하는 매출을 뜻합니다. 그렇다면이
+- [3:46](https://youtube.com/watch?v=7JVjm3ph-t4&t=226) 성장은 제품을 빠르게 만든 기술
+- [3:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=227) 덕분이었을까요? [음악] 기술은 분명
+- [3:49](https://youtube.com/watch?v=7JVjm3ph-t4&t=229) 중요했습니다. 패스트레이는 서버
+- [3:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=231) 기능과 데이터를 관리하는 도구,
+- [3:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=233) [음악] 웹 화면을 운영하는 서비스,
+- [3:55](https://youtube.com/watch?v=7JVjm3ph-t4&t=235) 사용자 로그인과 이메일 발송, 오류
+- [3:57](https://youtube.com/watch?v=7JVjm3ph-t4&t=237) 기록을 위한 여러 제품을
+- [3:58](https://youtube.com/watch?v=7JVjm3ph-t4&t=238) 조합했습니다. 문구와 개심을 [음악]
+- [4:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=240) 설명에는 오픈 AI와 클로드를
+- [4:02](https://youtube.com/watch?v=7JVjm3ph-t4&t=242) 사용했고 이미지와 영상 생성에도
+- [4:04](https://youtube.com/watch?v=7JVjm3ph-t4&t=244) 인공지능을 활용했습니다. 개발 속도를
+- [4:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=246) 높이는 데는 클로드 코드가 큰 역할을
+- [4:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=248) 했습니다. 놀라운 점은 고객 데이터를
+- [4:10](https://youtube.com/watch?v=7JVjm3ph-t4&t=250) [음악] 정리하는 내부 시스템을
+- [4:12](https://youtube.com/watch?v=7JVjm3ph-t4&t=252) 비발자인 공동 창업자가 만들었다는
+- [4:14](https://youtube.com/watch?v=7JVjm3ph-t4&t=254) 사실입니다. 원하는 기능을 일상적인
+- [4:17](https://youtube.com/watch?v=7JVjm3ph-t4&t=257) 문장으로 설명하고 [음악] 인공지능이
+- [4:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=258) 코드를 작성하도록 했습니다. 과거라면
+- [4:21](https://youtube.com/watch?v=7JVjm3ph-t4&t=261) 전문 개발자를 고용하거나 오랜 시간
+- [4:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=263) 배워야 했던 작업을 훨씬 빠르게
+- [4:25](https://youtube.com/watch?v=7JVjm3ph-t4&t=265) 실행할 수 있었던 것이죠. 그러나
+- [4:26](https://youtube.com/watch?v=7JVjm3ph-t4&t=266) 가우라브는 패스트레인의 핵심 경쟁력이
+- [4:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=269) 기술 구성에 [음악] 있다고 보지
+- [4:30](https://youtube.com/watch?v=7JVjm3ph-t4&t=270) 않았습니다. 같은 도구는 다른
+- [4:32](https://youtube.com/watch?v=7JVjm3ph-t4&t=272) 창업자도 사용할 수 있기 때문입니다.
+- [4:34](https://youtube.com/watch?v=7JVjm3ph-t4&t=274) 진짜 차이는 무엇을 만들어야 하는지
+- [4:36](https://youtube.com/watch?v=7JVjm3ph-t4&t=276) 결정하는 과정에서 나왔습니다.
+- [4:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=277) [음악] 그 중심에 고객 통화 약
+- [4:39](https://youtube.com/watch?v=7JVjm3ph-t4&t=279) 2,000건이 있었습니다. 두
+- [4:40](https://youtube.com/watch?v=7JVjm3ph-t4&t=280) 창업자는 8월부터 매주 약승후번의
+- [4:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=283) 통화를 이어갔습니다. [음악]
+- [4:44](https://youtube.com/watch?v=7JVjm3ph-t4&t=284) 제품 화면에 무지개 계색 테두리의
+- [4:46](https://youtube.com/watch?v=7JVjm3ph-t4&t=286) 버튼을 하나 넣고 팀과 통화하면 무료
+- [4:49](https://youtube.com/watch?v=7JVjm3ph-t4&t=289) 이용 [음악] 기간을 7일 더 준다고
+- [4:50](https://youtube.com/watch?v=7JVjm3ph-t4&t=290) 안내했습니다. 고객은 추가 사용
+- [4:52](https://youtube.com/watch?v=7JVjm3ph-t4&t=292) 기간을 얻고 창업자는 실제 사용자의
+- [4:54](https://youtube.com/watch?v=7JVjm3ph-t4&t=294) 문제를 직접들을 [음악] 수
+- [4:56](https://youtube.com/watch?v=7JVjm3ph-t4&t=296) 있었습니다. 버튼을 누르면 예약
+- [4:58](https://youtube.com/watch?v=7JVjm3ph-t4&t=298) 서비스로 이동해 고객이 편한 시간을
+- [5:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=300) 고르게 했습니다. [음악] 복잡한
+- [5:02](https://youtube.com/watch?v=7JVjm3ph-t4&t=302) 모집 캠페인 없이 제품 안에 대화의
+- [5:04](https://youtube.com/watch?v=7JVjm3ph-t4&t=304) 통로를 만든 것입니다. 고객 통화를
+- [5:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=306) 특별 행사로 진행한 것이 아니라
+- [5:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=308) 제품을 운영하는 일상적인 과정으로
+- [5:10](https://youtube.com/watch?v=7JVjm3ph-t4&t=310) 팔계했다는 점이 중요합니다. 통화에는
+- [5:12](https://youtube.com/watch?v=7JVjm3ph-t4&t=312) 인공지능 기록 도구를 참여시켰습니다.
+- [5:14](https://youtube.com/watch?v=7JVjm3ph-t4&t=314) 대화를 자동으로 받아줬고 핵심 내용을
+- [5:17](https://youtube.com/watch?v=7JVjm3ph-t4&t=317) 정리하게 했죠. [음악] 하지만
+- [5:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=318) 단순히 녹음 파일을 쌓는 데서 멈추지
+- [5:20](https://youtube.com/watch?v=7JVjm3ph-t4&t=320) 않았습니다. 두 사람은 통화마다
+- [5:22](https://youtube.com/watch?v=7JVjm3ph-t4&t=322) 확인할 질문을 정하고 답변을 노션
+- [5:24](https://youtube.com/watch?v=7JVjm3ph-t4&t=324) 데이터베이스에 구조화해 저장했습니다.
+- [5:26](https://youtube.com/watch?v=7JVjm3ph-t4&t=326) [음악]
+- [5:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=327) 그렇게 쌓인 고객 정보를 플로드와
+- [5:28](https://youtube.com/watch?v=7JVjm3ph-t4&t=328) 연결해 패스트레인 고객 인텔리전스라는
+- [5:31](https://youtube.com/watch?v=7JVjm3ph-t4&t=331) 내부 시스템을 만들었습니다. 쉽게
+- [5:33](https://youtube.com/watch?v=7JVjm3ph-t4&t=333) 말하면 고객에 관한 모든 관찰을 한
+- [5:35](https://youtube.com/watch?v=7JVjm3ph-t4&t=335) 곳에서 분석하는 대시보드입니다. 누가
+- [5:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=337) 왜 가입했고 어떤 사업을 운영하며
+- [5:39](https://youtube.com/watch?v=7JVjm3ph-t4&t=339) 얼마나 오래 구독했고 [음악] 어떤
+- [5:41](https://youtube.com/watch?v=7JVjm3ph-t4&t=341) 기능을 많이 사용하는지 확인할 수
+- [5:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=343) 있게 했습니다. 예를 들어 단순히
+- [5:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=345) >> [음악]
+- [5:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=345) >> 궁금해서 가입한 고객과 지금 당장
+- [5:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=347) 마케팅이 필요해서 가입한 고객은
+- [5:49](https://youtube.com/watch?v=7JVjm3ph-t4&t=349) 겉으로 보면 똑같은 회원입니다.
+- [5:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=351) 그러나 행동은 달랐습니다. 포기심으로
+- [5:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=353) 들어온 사람은 제품을 오래 사용하지
+- [5:55](https://youtube.com/watch?v=7JVjm3ph-t4&t=355) 않고 [음악] 애정도 낮은 경향이
+- [5:57](https://youtube.com/watch?v=7JVjm3ph-t4&t=357) 있었습니다. 반면 마케팅 문제가
+- [5:59](https://youtube.com/watch?v=7JVjm3ph-t4&t=359) 절박한 고객은 더 오래 남고
+- [6:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=360) 적극적으로 [음악]
+- [6:01](https://youtube.com/watch?v=7JVjm3ph-t4&t=361) 활용했습니다.이 차이를 모르면 모든
+- [6:03](https://youtube.com/watch?v=7JVjm3ph-t4&t=363) 가입자를 같은 고객으로 보고 기능을
+- [6:05](https://youtube.com/watch?v=7JVjm3ph-t4&t=365) 만들게 됩니다. 그러면 떠날 가능성이
+- [6:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=368) 큰 사람의 일시적인 의견과 큰 가치를
+- [6:10](https://youtube.com/watch?v=7JVjm3ph-t4&t=370) 얻으며 오래 남을 사람의 요구를
+- [6:12](https://youtube.com/watch?v=7JVjm3ph-t4&t=372) 구분하기 어렵습니다. 패스트레이는
+- [6:14](https://youtube.com/watch?v=7JVjm3ph-t4&t=374) 누가 제품을 가장 좋아하는지 보여주는
+- [6:16](https://youtube.com/watch?v=7JVjm3ph-t4&t=376) 고객 애정 점수까지 만들고 제품
+- [6:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=378) 개발의 우선 순위를이 점수와 [음악]
+- [6:20](https://youtube.com/watch?v=7JVjm3ph-t4&t=380) 연결했습니다. 하지만 고객이 좋다고
+- [6:22](https://youtube.com/watch?v=7JVjm3ph-t4&t=382) 말하는 것만으로는 충분하지
+- [6:24](https://youtube.com/watch?v=7JVjm3ph-t4&t=384) 않았습니다. 실제 성과를
+- [6:25](https://youtube.com/watch?v=7JVjm3ph-t4&t=385) 확인했습니다. 패스트레인으로 만든
+- [6:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=387) 콘텐츠가 틱톡에서 100만 조회수를
+- [6:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=389) [음악] 만들었는지 20만 조회수를
+- [6:31](https://youtube.com/watch?v=7JVjm3ph-t4&t=391) 만들었는지 살펴봤습니다. 조회수가
+- [6:33](https://youtube.com/watch?v=7JVjm3ph-t4&t=393) 실제 전환과 앱 설치로 이어지는지도
+- [6:34](https://youtube.com/watch?v=7JVjm3ph-t4&t=394) [음악]
+- [6:35](https://youtube.com/watch?v=7JVjm3ph-t4&t=395) 확인했죠. 고객 통화는 사업 단계에
+- [6:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=397) 따라 세 가지 방식으로 나뉘었습니다.
+- [6:39](https://youtube.com/watch?v=7JVjm3ph-t4&t=399) 처음은 무엇을 만들어야 하는지 찾는
+- [6:41](https://youtube.com/watch?v=7JVjm3ph-t4&t=401) 고객 발견 단계였습니다. 이때 가장
+- [6:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=403) 위험한 질문은 제 아이디어가 마음에
+- [6:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=405) 드세요입니다. [음악]
+- [6:46](https://youtube.com/watch?v=7JVjm3ph-t4&t=406) 사람들은 상대방을 실망시키고 싶지
+- [6:48](https://youtube.com/watch?v=7JVjm3ph-t4&t=408) 않아 별로인 아이디어 해도 좋다고
+- [6:50](https://youtube.com/watch?v=7JVjm3ph-t4&t=410) 답할 수 있습니다. 특히 친구나
+- [6:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=411) [음악] 지인는 더 그렇습니다.
+- [6:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=413) 가오라브는 더맘 테스트라는 책의
+- [6:55](https://youtube.com/watch?v=7JVjm3ph-t4&t=415) 원칙을 활용했습니다. 엄마조차 빈말로
+- [6:57](https://youtube.com/watch?v=7JVjm3ph-t4&t=417) 칭찬하기 어려운 질문을 해야 한다는
+- [6:59](https://youtube.com/watch?v=7JVjm3ph-t4&t=419) 접근입니다. 미래의 [음악] 의향을
+- [7:01](https://youtube.com/watch?v=7JVjm3ph-t4&t=421) 묻지 않고 과거의 행동을 묻는 것이
+- [7:03](https://youtube.com/watch?v=7JVjm3ph-t4&t=423) 핵심이죠.이 이 문제를 마지막으로
+- [7:05](https://youtube.com/watch?v=7JVjm3ph-t4&t=425) 해결했던 때를 설명해 주세요. 그때
+- [7:07](https://youtube.com/watch?v=7JVjm3ph-t4&t=427) 어떤 방법을 사용했나요? 얼마나 많은
+- [7:09](https://youtube.com/watch?v=7JVjm3ph-t4&t=429) 시간과 돈이 들었나요? [음악]
+- [7:10](https://youtube.com/watch?v=7JVjm3ph-t4&t=430) 아무것도 하지 않으면 어떤 일이
+- [7:12](https://youtube.com/watch?v=7JVjm3ph-t4&t=432) 생기나요? 이런 질문을 던지면 복객의
+- [7:14](https://youtube.com/watch?v=7JVjm3ph-t4&t=434) 말이 아니라 행동이 드러납니다. 어떤
+- [7:16](https://youtube.com/watch?v=7JVjm3ph-t4&t=436) 사람이 문제가 심각하다고 말하면서도
+- [7:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=438) 한 번도 해결책을 찾아보거나 돈을
+- [7:20](https://youtube.com/watch?v=7JVjm3ph-t4&t=440) 쓰지 않았다면 실제 [음악] 우선
+- [7:21](https://youtube.com/watch?v=7JVjm3ph-t4&t=441) 순위는 낮을 수 있습니다. 반대로
+- [7:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=443) 불완전한 방법에 이미 시간과 비용을
+- [7:25](https://youtube.com/watch?v=7JVjm3ph-t4&t=445) 쓰고 있다면 더 나은 해결책을 구매할
+- [7:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=447) [음악] 가능성이 큽니다. 여러
+- [7:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=449) 사람의 답변에서 같은 고통이 반복되자
+- [7:31](https://youtube.com/watch?v=7JVjm3ph-t4&t=451) 두 사람은 최소 기능 제품을 [음악]
+- [7:32](https://youtube.com/watch?v=7JVjm3ph-t4&t=452) 만들었습니다. 최소 기능은 완벽한
+- [7:35](https://youtube.com/watch?v=7JVjm3ph-t4&t=455) 서비스가 아니라 택신 문제를 해결할
+- [7:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=457) 수 있는 가장 작은 버전입니다.
+- [7:39](https://youtube.com/watch?v=7JVjm3ph-t4&t=459) 필요한 기능만 빠르게 만들어 고객의
+- [7:41](https://youtube.com/watch?v=7JVjm3ph-t4&t=461) 행동으로 가설을 확인하는 것이
+- [7:42](https://youtube.com/watch?v=7JVjm3ph-t4&t=462) 목적입니다. [음악]
+- [7:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=463) 제품을 만든 뒤에는 사용성 테스트로
+- [7:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=465) 넘어갔습니다. 두 사람은 고객을 한
+- [7:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=467) 명씩 직접 [음악] 확보했습니다.
+- [7:49](https://youtube.com/watch?v=7JVjm3ph-t4&t=469) 레딧에서 관련 글을 찾고 소셜
+- [7:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=471) 미디어의 잠재 고객이 관심을 [음악]
+- [7:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=473) 가질 무료 자료를 올렸습니다. 대기자
+- [7:55](https://youtube.com/watch?v=7JVjm3ph-t4&t=475) 명단에 가입한 사람에게 곧바로
+- [7:57](https://youtube.com/watch?v=7JVjm3ph-t4&t=477) 이메일을 보내 통화에 초대했습니다.
+- [7:59](https://youtube.com/watch?v=7JVjm3ph-t4&t=479) 통화가 시작되면 고객에게 패스트레인
+- [8:01](https://youtube.com/watch?v=7JVjm3ph-t4&t=481) 링크를 보내고 화면을 공유하게
+- [8:03](https://youtube.com/watch?v=7JVjm3ph-t4&t=483) 했습니다. [음악] 그리고 최대한
+- [8:04](https://youtube.com/watch?v=7JVjm3ph-t4&t=484) 조용히 지켜봤습니다. 사용자가 로그인
+- [8:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=486) 버튼을 찾지 못하거나 잘못된 메뉴를
+- [8:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=488) 눌러도 바로 알려주지 않았습니다.
+- [8:10](https://youtube.com/watch?v=7JVjm3ph-t4&t=490) 창업자가 도와주는 [음악] 순간
+- [8:12](https://youtube.com/watch?v=7JVjm3ph-t4&t=492) 고객이 실제 환경에서 어디서 막히는지
+- [8:14](https://youtube.com/watch?v=7JVjm3ph-t4&t=494) 알 수 없기 때문입니다.이 과정은
+- [8:15](https://youtube.com/watch?v=7JVjm3ph-t4&t=495) [음악] 생각보다 불편합니다. 자신이
+- [8:17](https://youtube.com/watch?v=7JVjm3ph-t4&t=497) 오랫동안 만든 제품 앞에서 사용자가
+- [8:19](https://youtube.com/watch?v=7JVjm3ph-t4&t=499) 헤매는 모습을 보면 설명하고
+- [8:21](https://youtube.com/watch?v=7JVjm3ph-t4&t=501) 싶어집니다. 거기가 아니라이 버튼을
+- [8:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=503) 누르면 됩니다라고 말하고 싶죠.
+- [8:25](https://youtube.com/watch?v=7JVjm3ph-t4&t=505) 하지만 사용자가 버튼을 못 찾는다면
+- [8:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=507) 고객이 부족한 것이 아니라 화면이
+- [8:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=509) 충분히 [음악] 명확하지 않을
+- [8:30](https://youtube.com/watch?v=7JVjm3ph-t4&t=510) 가능성이 큽니다. 패스트레인은
+- [8:32](https://youtube.com/watch?v=7JVjm3ph-t4&t=512) 사람들이 화면을 탐색하는 모습을
+- [8:34](https://youtube.com/watch?v=7JVjm3ph-t4&t=514) 관찰하며 대품 안에 예상보다 많은
+- [8:36](https://youtube.com/watch?v=7JVjm3ph-t4&t=516) 마찰이 [음악] 있다는 사실을
+- [8:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=517) 발견했습니다. 마찰은 고객이 원하는
+- [8:39](https://youtube.com/watch?v=7JVjm3ph-t4&t=519) 결과에 도달하기까지 겪는 작은
+- [8:41](https://youtube.com/watch?v=7JVjm3ph-t4&t=521) 불편입니다. 이해하기 어려운 문구와
+- [8:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=523) 찾기 [음악] 힘든 버튼, 너무 긴
+- [8:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=525) 단계가 하나씩 쌓이면 사용자는 제품의
+- [8:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=527) 가치를 경험하기 전에 떠납니다.이
+- [8:49](https://youtube.com/watch?v=7JVjm3ph-t4&t=529) 관찰이 [음악] 지금의 핵심 화면을
+- [8:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=531) 만드는데 영향을 줬습니다.
+- [8:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=533) 패스트레이는 베이팅 앱틴더처럼
+- [8:55](https://youtube.com/watch?v=7JVjm3ph-t4&t=535) 콘텐츠를 빠르게 선택하는 구조를
+- [8:56](https://youtube.com/watch?v=7JVjm3ph-t4&t=536) [음악] 도입했습니다. 화면 한쪽에는
+- [8:58](https://youtube.com/watch?v=7JVjm3ph-t4&t=538) 사용자의 분야에서 이미 좋은 반응을
+- [9:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=540) 얻은 콘텐츠가 보입니다. 가운데에는
+- [9:02](https://youtube.com/watch?v=7JVjm3ph-t4&t=542) 그 형식을 사용자의 제품에 맞게 바꾼
+- [9:04](https://youtube.com/watch?v=7JVjm3ph-t4&t=544) 결과물이 나타납니다. 마음에 들지
+- [9:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=546) 않으면 거절하고 마음에 들면
+- [9:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=548) 오른쪽으로 넘겨 [음악] 선택합니다.
+- [9:10](https://youtube.com/watch?v=7JVjm3ph-t4&t=550) 이후 틱톡과 인스타그램 영상이라면
+- [9:12](https://youtube.com/watch?v=7JVjm3ph-t4&t=552) 유튜브를 고른 뒤 [음악] 발행
+- [9:14](https://youtube.com/watch?v=7JVjm3ph-t4&t=554) 일정을 정할 수 있습니다. 인공지능이
+- [9:16](https://youtube.com/watch?v=7JVjm3ph-t4&t=556) 게시물에 붙일 설명 문구도 만들어
+- [9:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=558) 줍니다. 사용자는 확인하고 계시하면
+- [9:20](https://youtube.com/watch?v=7JVjm3ph-t4&t=560) 몇 분 안에 콘텐츠를 올릴 수
+- [9:21](https://youtube.com/watch?v=7JVjm3ph-t4&t=561) 있습니다. 지금 보면 틴더 같은
+- [9:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=563) [음악] 방식이 당연하고 단순해
+- [9:24](https://youtube.com/watch?v=7JVjm3ph-t4&t=564) 보입니다. 하지만 고객이 실제로
+- [9:26](https://youtube.com/watch?v=7JVjm3ph-t4&t=566) 어디서 고민하고 멈추는지 보지
+- [9:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=567) 않았다면 이런 결정을 떠올리기
+- [9:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=569) 어려웠을 수 있습니다. 아이디어를
+- [9:31](https://youtube.com/watch?v=7JVjm3ph-t4&t=571) 떠올렸더라도 기존 화면을 버리고
+- [9:33](https://youtube.com/watch?v=7JVjm3ph-t4&t=573) 바꿀만큼 확신하기 어려웠을 [음악]
+- [9:36](https://youtube.com/watch?v=7JVjm3ph-t4&t=576) 것입니다. 반복된 관찰이 직감을 제품
+- [9:38](https://youtube.com/watch?v=7JVjm3ph-t4&t=578) 결정으로 바꿔 줬습니다. 마지막
+- [9:40](https://youtube.com/watch?v=7JVjm3ph-t4&t=580) 단계는 독 성공을 확인하는
+- [9:42](https://youtube.com/watch?v=7JVjm3ph-t4&t=582) 일이었습니다. 제품이 사용하기
+- [9:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=583) 쉬워졌다는 것만으로 [음악] 사업이
+- [9:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=585) 완성되지는 않습니다. 고객이 실제로
+- [9:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=587) 원했던 결과를 얻는지 확인해야
+- [9:49](https://youtube.com/watch?v=7JVjm3ph-t4&t=589) 합니다. 에서 패스트레이는 가장 자주
+- [9:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=591) 사용하는 고객을 찾아 다시 [음악]
+- [9:52](https://youtube.com/watch?v=7JVjm3ph-t4&t=592) 통화했습니다. 이들은 단순히 기능이
+- [9:55](https://youtube.com/watch?v=7JVjm3ph-t4&t=595) 마음에 든다고 말하는 사람이
+- [9:56](https://youtube.com/watch?v=7JVjm3ph-t4&t=596) 아니었습니다. 제품으로 콘텐츠를
+- [9:58](https://youtube.com/watch?v=7JVjm3ph-t4&t=598) 만들고 실제 조회수와 전환 앱 설치를
+- [10:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=600) 얻은 사용자였습니다. 패스트레이는
+- [10:02](https://youtube.com/watch?v=7JVjm3ph-t4&t=602) 이들의 행동을 보며 짧은 콘텐츠
+- [10:04](https://youtube.com/watch?v=7JVjm3ph-t4&t=604) 기능이 고객에게 [음악] 가장 큰
+- [10:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=606) 가치를 준다는 판단을 강화했고 그
+- [10:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=608) 부분에 더 많은 자원을 집중했습니다.
+- [10:10](https://youtube.com/watch?v=7JVjm3ph-t4&t=610) 고객 발견에서는 어떤 문제를 풀지
+- [10:12](https://youtube.com/watch?v=7JVjm3ph-t4&t=612) 배웁니다. 사용성 테스트에서는
+- [10:13](https://youtube.com/watch?v=7JVjm3ph-t4&t=613) [음악] 고객이 제품을 사용할 수
+- [10:15](https://youtube.com/watch?v=7JVjm3ph-t4&t=615) 있는지 배웁니다. 고객 성공
+- [10:16](https://youtube.com/watch?v=7JVjm3ph-t4&t=616) 단계에서는 제품이 정말 결과를
+- [10:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=618) 만드는지 확인합니다. 같은 고객
+- [10:20](https://youtube.com/watch?v=7JVjm3ph-t4&t=620) 통화라도 사업 단계에 따라 질문과
+- [10:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=623) 목적이 달라져야 하는 이유입니다.이
+- [10:25](https://youtube.com/watch?v=7JVjm3ph-t4&t=625) 과정은 제품 개발뿐 아니라 마케팅
+- [10:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=627) 전략도 알려줬습니다. 고객이 누구인지
+- [10:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=629) [음악] 알면 그들이 어디에 모여
+- [10:30](https://youtube.com/watch?v=7JVjm3ph-t4&t=630) 있는지 알 수 있습니다. 어떤
+- [10:32](https://youtube.com/watch?v=7JVjm3ph-t4&t=632) 표현으로 문제를 설명하는지도 보이고
+- [10:34](https://youtube.com/watch?v=7JVjm3ph-t4&t=634) 가입을 결심한 계기와 떠나는 이유도
+- [10:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=637) 드러납니다. 결국 [음악] 고객과의
+- [10:38](https://youtube.com/watch?v=7JVjm3ph-t4&t=638) 대화가 어디에서 어떤 메시지로
+- [10:40](https://youtube.com/watch?v=7JVjm3ph-t4&t=640) 판매할지를 찾는 장치가 된 것입니다.
+- [10:42](https://youtube.com/watch?v=7JVjm3ph-t4&t=642) [음악] 많은 창업자는 비밀스러운
+- [10:44](https://youtube.com/watch?v=7JVjm3ph-t4&t=644) 성장 전략을 원합니다. 어떤 광고
+- [10:46](https://youtube.com/watch?v=7JVjm3ph-t4&t=646) 소재를 쓰고 [음악] 어느 플랫폼에서
+- [10:48](https://youtube.com/watch?v=7JVjm3ph-t4&t=648) 바이러를 만들며 어떤 가격을
+- [10:50](https://youtube.com/watch?v=7JVjm3ph-t4&t=650) 설정했는지 궁금해야 합니다. 이런
+- [10:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=651) 요소도 중요합니다. 그러나 고객이
+- [10:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=653) 누구인지 모르면 어느 전략을 [음악]
+- [10:55](https://youtube.com/watch?v=7JVjm3ph-t4&t=655) 선택해도 우연에 의존하게 됩니다.
+- [10:57](https://youtube.com/watch?v=7JVjm3ph-t4&t=657) 특히 인공지능 시대에는 혼자 만드는
+- [10:59](https://youtube.com/watch?v=7JVjm3ph-t4&t=659) 일이 너무 쉬워져서 고객과 멀어지기
+- [11:01](https://youtube.com/watch?v=7JVjm3ph-t4&t=661) 쉽습니다. [음악] 코딩 보조 도구에
+- [11:02](https://youtube.com/watch?v=7JVjm3ph-t4&t=662) 원하는 기능을 입력하면 며칠 만에
+- [11:04](https://youtube.com/watch?v=7JVjm3ph-t4&t=664) 작동하는 제품을 만들 수 있습니다.
+- [11:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=666) [음악] 계속 개발하고 있으면 빠르게
+- [11:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=668) 전진하는 기분도 듭니다. 하지만
+- [11:09](https://youtube.com/watch?v=7JVjm3ph-t4&t=669) 고객을 만나지 않은 채 기능만 늘리면
+- [11:12](https://youtube.com/watch?v=7JVjm3ph-t4&t=672) [음악] 시장이 아니라 상업자 자신의
+- [11:13](https://youtube.com/watch?v=7JVjm3ph-t4&t=673) 생각을 정교하게 구현하고 있을 수
+- [11:16](https://youtube.com/watch?v=7JVjm3ph-t4&t=676) 있습니다. 가울라브 역시 고객과
+- [11:17](https://youtube.com/watch?v=7JVjm3ph-t4&t=677) 대화하는 것이 편하지 않았습니다.
+- [11:19](https://youtube.com/watch?v=7JVjm3ph-t4&t=679) 통화전에는 심장이 빠르게 뛸 정도로
+- [11:21](https://youtube.com/watch?v=7JVjm3ph-t4&t=681) 긴장했다고 합니다. 내 제품을 평편
+- [11:24](https://youtube.com/watch?v=7JVjm3ph-t4&t=684) 없다고 평가하면 어떻게 [음악]
+- [11:25](https://youtube.com/watch?v=7JVjm3ph-t4&t=685) 할지, 거절당하면 어떻게 할지
+- [11:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=687) 두려웠습니다. 내향적인 창업자라면
+- [11:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=689) 이런 감정을 더 크게 느낄 수 있죠.
+- [11:31](https://youtube.com/watch?v=7JVjm3ph-t4&t=691) 하지만 통화를 피한다고 고객의 불만이
+- [11:33](https://youtube.com/watch?v=7JVjm3ph-t4&t=693) 사라지는 것은 아닙니다. 사용자는
+- [11:35](https://youtube.com/watch?v=7JVjm3ph-t4&t=695) 이미 버튼을 찾지 못하고 있을 수
+- [11:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=697) 있고 [음악] 제품이 필요 없다고
+- [11:38](https://youtube.com/watch?v=7JVjm3ph-t4&t=698) 생각하고 있을 수도 있습니다.
+- [11:40](https://youtube.com/watch?v=7JVjm3ph-t4&t=700) 창업자가 듣지 않았기 때문에 모를
+- [11:41](https://youtube.com/watch?v=7JVjm3ph-t4&t=701) 뿐입니다. 가오라브는 불편한 대화를
+- [11:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=703) 통해 나쁜 평가를 만드는 것이 아니라
+- [11:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=705) 이미 존재하는 현실을 더 빨리
+- [11:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=707) 발견한다고 봤습니다. [음악] 그는
+- [11:49](https://youtube.com/watch?v=7JVjm3ph-t4&t=709) 호주에서 자라며 톨포피 신드롬이라는
+- [11:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=711) 분위기도 경험했습니다. 다른 꽃보다
+- [11:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=713) 높이 자란 양귀비가 잘린다는 뜻으로
+- [11:55](https://youtube.com/watch?v=7JVjm3ph-t4&t=715) 남들과 다르게 나서거나 크게 도전하는
+- [11:57](https://youtube.com/watch?v=7JVjm3ph-t4&t=717) 사람을 불편하게 보는 문화를
+- [11:59](https://youtube.com/watch?v=7JVjm3ph-t4&t=719) 가르킵니다. 자기 일을 시작하고
+- [12:01](https://youtube.com/watch?v=7JVjm3ph-t4&t=721) 공개적으로 제품을 알리는 것이
+- [12:03](https://youtube.com/watch?v=7JVjm3ph-t4&t=723) [음악] 부담스러울 수 있다는
+- [12:04](https://youtube.com/watch?v=7JVjm3ph-t4&t=724) 이야기입니다. 가오라브의 조언은
+- [12:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=726) 자신을 믿고 끝까지 밀어붙이라는
+- [12:08](https://youtube.com/watch?v=7JVjm3ph-t4&t=728) 것입니다. 그러나 근거 없는
+- [12:09](https://youtube.com/watch?v=7JVjm3ph-t4&t=729) 자신감과는 [음악] 다릅니다. 독의
+- [12:11](https://youtube.com/watch?v=7JVjm3ph-t4&t=731) 말을 외면한 채 내 아이디어가 옳다고
+- [12:13](https://youtube.com/watch?v=7JVjm3ph-t4&t=733) 우기는 것이 아니라 불편함을 견디며
+- [12:16](https://youtube.com/watch?v=7JVjm3ph-t4&t=736) 현실을 확인하고 [음악] 그 배움에
+- [12:17](https://youtube.com/watch?v=7JVjm3ph-t4&t=737) 따라 제품을 바꾸는 자신감입니다.
+- [12:19](https://youtube.com/watch?v=7JVjm3ph-t4&t=739) 패스트레인의 성장을 그대로 따라하려는
+- [12:21](https://youtube.com/watch?v=7JVjm3ph-t4&t=741) 사람이 고객 통화 2천권이라는
+- [12:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=743) >> [음악]
+- [12:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=743) >> 숫자만 복사할 필요는 없습니다.
+- [12:25](https://youtube.com/watch?v=7JVjm3ph-t4&t=745) 중요한 것은 통화 횟수가 아니라
+- [12:26](https://youtube.com/watch?v=7JVjm3ph-t4&t=746) 학습이 쌓이는 구조입니다. 매번 다른
+- [12:28](https://youtube.com/watch?v=7JVjm3ph-t4&t=748) 이야기를 듣고 끝내면 [음악]
+- [12:30](https://youtube.com/watch?v=7JVjm3ph-t4&t=750) 2,000번을 해도 제품은 달라지지
+- [12:32](https://youtube.com/watch?v=7JVjm3ph-t4&t=752) 않을 수 있습니다. 먼저 단계에 맞는
+- [12:34](https://youtube.com/watch?v=7JVjm3ph-t4&t=754) 질문을 정해야 합니다. 통화를
+- [12:36](https://youtube.com/watch?v=7JVjm3ph-t4&t=756) 기록하고 같은 문제가 얼마나
+- [12:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=757) 반복되는지 [음악] 분류해야 합니다.
+- [12:39](https://youtube.com/watch?v=7JVjm3ph-t4&t=759) 고객의 말과 실제 행동이 일치하는지도
+- [12:42](https://youtube.com/watch?v=7JVjm3ph-t4&t=762) 봐야 하죠. 그리고 배운 내용을
+- [12:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=763) 기능과 문구, [음악] 화면 구성과
+- [12:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=765) 고객 확보 방식에 반영해야 합니다.
+- [12:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=767) 다음 통화에서는 그 변화가 효과가
+- [12:49](https://youtube.com/watch?v=7JVjm3ph-t4&t=769) 있었는지 다시 확인합니다. 이렇게
+- [12:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=771) 하면 고객과의 대화가 막연한 소통이
+- [12:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=773) 아니라 사업의 운영 [음악] 시스템이
+- [12:54](https://youtube.com/watch?v=7JVjm3ph-t4&t=774) 됩니다. 패스트레이는 예약 버튼과
+- [12:56](https://youtube.com/watch?v=7JVjm3ph-t4&t=776) 인공지능 기록, 노션 데이터베이스,
+- [12:58](https://youtube.com/watch?v=7JVjm3ph-t4&t=778) 분석 대시보드를 연결해 그 시스템을
+- [13:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=780) [음악] 만들었습니다. 고객 이해가
+- [13:02](https://youtube.com/watch?v=7JVjm3ph-t4&t=782) 창업자의 기억 속에만 있지 않고 팀이
+- [13:04](https://youtube.com/watch?v=7JVjm3ph-t4&t=784) 함께 사용할 수 있는 자산으로
+- [13:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=786) 남았습니다. 또 하나 중요한 점은
+- [13:07](https://youtube.com/watch?v=7JVjm3ph-t4&t=787) 실제로 아픈 [음악] 문제를
+- [13:09](https://youtube.com/watch?v=7JVjm3ph-t4&t=789) 선택했다는 것입니다. 고객과 많이
+- [13:11](https://youtube.com/watch?v=7JVjm3ph-t4&t=791) 대화해도 사람들이 중요하게 생각하지
+- [13:13](https://youtube.com/watch?v=7JVjm3ph-t4&t=793) 않는 문제라면 큰 사업으로 이어지기
+- [13:15](https://youtube.com/watch?v=7JVjm3ph-t4&t=795) 어렵습니다. 패스트레인이 선택한
+- [13:16](https://youtube.com/watch?v=7JVjm3ph-t4&t=796) 고객은 제품은 만들었지만 [음악]
+- [13:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=798) 마케팅할 시간과 돈, 콘텐츠
+- [13:20](https://youtube.com/watch?v=7JVjm3ph-t4&t=800) 아이디어가 부족한 1인
+- [13:21](https://youtube.com/watch?v=7JVjm3ph-t4&t=801) 병업자였습니다. 이들에게 마케팅은
+- [13:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=803) 있으면 좋은 기능이 아니라 제품의
+- [13:25](https://youtube.com/watch?v=7JVjm3ph-t4&t=805) 생존을 결정하는 문제였습니다. 아무도
+- [13:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=807) 제품을 보지 않으면 개발해 [음악]
+- [13:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=809) 드린 시간이 전부 의미를 잃을 수
+- [13:31](https://youtube.com/watch?v=7JVjm3ph-t4&t=811) 있기 때문입니다. 패스트레이는이 넓은
+- [13:33](https://youtube.com/watch?v=7JVjm3ph-t4&t=813) 문제를 짧은 콘텐츠 생성과 예약
+- [13:35](https://youtube.com/watch?v=7JVjm3ph-t4&t=815) 발행이라는 구체적인 해결책으로
+- [13:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=817) 좁혔습니다. 결국 출시 두 달 만에
+- [13:39](https://youtube.com/watch?v=7JVjm3ph-t4&t=819) >> [음악]
+- [13:39](https://youtube.com/watch?v=7JVjm3ph-t4&t=819) >> 월 9천만 원이라는 결과는 갑자기
+- [13:41](https://youtube.com/watch?v=7JVjm3ph-t4&t=821) 등장한 것이 아닙니다. 모든 마케팅을
+- [13:43](https://youtube.com/watch?v=7JVjm3ph-t4&t=823) 해결하려던 초기 제품을 포기한 결정,
+- [13:45](https://youtube.com/watch?v=7JVjm3ph-t4&t=825) 고객의 과거 행동을 묻는 질문,
+- [13:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=827) [음악] 화면 공유 중에 설명하지
+- [13:48](https://youtube.com/watch?v=7JVjm3ph-t4&t=828) 않고 기다린 인내 성공한 사용자의
+- [13:50](https://youtube.com/watch?v=7JVjm3ph-t4&t=830) 성과를 추적한 과정이 차곡차곡
+- [13:52](https://youtube.com/watch?v=7JVjm3ph-t4&t=832) [음악] 쌓인 결과입니다. 인공지능은
+- [13:54](https://youtube.com/watch?v=7JVjm3ph-t4&t=834) 그 속도를 크게 높혔습니다. 개발을
+- [13:56](https://youtube.com/watch?v=7JVjm3ph-t4&t=836) 돕고 통화를 기록하며 추천건의 고객
+- [13:58](https://youtube.com/watch?v=7JVjm3ph-t4&t=838) 정보를 분석하고 콘텐츠를
+- [14:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=840) 생성했습니다. 그러나 무엇이 [음악]
+- [14:01](https://youtube.com/watch?v=7JVjm3ph-t4&t=841) 중요한 문제인지 결정하고 고객 앞에서
+- [14:04](https://youtube.com/watch?v=7JVjm3ph-t4&t=844) 불편한 질문을 던지는 일은 창업자의
+- [14:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=846) 몫수로 남았습니다. 도구가
+- [14:07](https://youtube.com/watch?v=7JVjm3ph-t4&t=847) 강력해질수록이 [음악] 차이는 더
+- [14:09](https://youtube.com/watch?v=7JVjm3ph-t4&t=849) 중요해집니다. 오늘 영상은
+- [14:10](https://youtube.com/watch?v=7JVjm3ph-t4&t=850) 여기까지입니다. 여러분들은 어떤
+- [14:12](https://youtube.com/watch?v=7JVjm3ph-t4&t=852) 내용이 가장 인상 깊으셨나요?
+- [14:14](https://youtube.com/watch?v=7JVjm3ph-t4&t=854) [음악] 저는 패스트레인이 고객
+- [14:15](https://youtube.com/watch?v=7JVjm3ph-t4&t=855) 통화를 마케팅과 제품 개발을 따로
+- [14:18](https://youtube.com/watch?v=7JVjm3ph-t4&t=858) 연결하는 중심 시스템으로 만든 점이
+- [14:20](https://youtube.com/watch?v=7JVjm3ph-t4&t=860) 가장 인상적이었습니다. [음악]
+- [14:21](https://youtube.com/watch?v=7JVjm3ph-t4&t=861) 고객을 이해하면 무엇을 만들뿐 아니라
+- [14:23](https://youtube.com/watch?v=7JVjm3ph-t4&t=863) 어디에서 팔고 어떤 말로 설명하며
+- [14:26](https://youtube.com/watch?v=7JVjm3ph-t4&t=866) 누구의 요구를 우선해야 하는지도
+- [14:27](https://youtube.com/watch?v=7JVjm3ph-t4&t=867) 보입니다. 새로운 기능을 하나 더
+- [14:29](https://youtube.com/watch?v=7JVjm3ph-t4&t=869) 만드는 일이 고객에게 연락하는 것보다
+- [14:31](https://youtube.com/watch?v=7JVjm3ph-t4&t=871) 편할 수 있습니다. 하지만 편한
+- [14:33](https://youtube.com/watch?v=7JVjm3ph-t4&t=873) 개발이 언제나 사업을 [음악] 앞으로
+- [14:35](https://youtube.com/watch?v=7JVjm3ph-t4&t=875) 움직이는 것은 아닙니다. 지금 만들고
+- [14:37](https://youtube.com/watch?v=7JVjm3ph-t4&t=877) 있는 것이 있다면 칭찬을 구하기보다
+- [14:39](https://youtube.com/watch?v=7JVjm3ph-t4&t=879) 고객이 마지막으로 그 문제를 해결했던
+- [14:41](https://youtube.com/watch?v=7JVjm3ph-t4&t=881) 장면부터 물어보세요. 그 답변 속에는
+- [14:44](https://youtube.com/watch?v=7JVjm3ph-t4&t=884) 기능 목록보다 훨씬 정확한 사업의
+- [14:46](https://youtube.com/watch?v=7JVjm3ph-t4&t=886) 방향이 들어 있을 [음악] 수
+- [14:47](https://youtube.com/watch?v=7JVjm3ph-t4&t=887) 있습니다. 오늘 영상이 여러분들이
+- [14:48](https://youtube.com/watch?v=7JVjm3ph-t4&t=888) 고객의 실제 문제를 발견하고 사람들이
+- [14:51](https://youtube.com/watch?v=7JVjm3ph-t4&t=891) 원하는 제품을 만드는데 도움이 되셨길
+- [14:53](https://youtube.com/watch?v=7JVjm3ph-t4&t=893) 바라며 영상에서 뵙겠습니다.
+- [14:54](https://youtube.com/watch?v=7JVjm3ph-t4&t=894) 감사합니다. 지금까지 동기 부여
+- [14:56](https://youtube.com/watch?v=7JVjm3ph-t4&t=896) 학과였습니다. 입니다.
+- [15:00](https://youtube.com/watch?v=7JVjm3ph-t4&t=900) [음악]
+- [15:06](https://youtube.com/watch?v=7JVjm3ph-t4&t=906) [음악]
