@@ -5094,5 +5094,45 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-09-14-youtube-com-watch-v-82NdDI0aM8.md",
+    "title": "https://youtube.com/watch?v=_82NdDI0aM8",
+    "category": "Picks전략",
+    "date": "2026-09-14",
+    "core_message": "반복되는 고객 확보 과정을 숫자와 규칙으로 바꿔 시스템에 맡기면, 매출은 유지하면서 자신의 시간을 돌려받을 수 있다.",
+    "topics": [],
+    "concepts": [
+      {
+        "id": "CAC-vs-LTV-구조",
+        "label": "CAC vs LTV 구조",
+        "topic": null
+      },
+      {
+        "id": "유료-광고-자동화",
+        "label": "유료 광고 자동화",
+        "topic": null
+      },
+      {
+        "id": "온보딩-최적화",
+        "label": "온보딩 최적화",
+        "topic": null
+      },
+      {
+        "id": "결제-추적-연동",
+        "label": "결제 추적 연동",
+        "topic": null
+      },
+      {
+        "id": "광고-소재-피로도",
+        "label": "광고 소재 피로도",
+        "topic": null
+      },
+      {
+        "id": "예산-점진적-확장",
+        "label": "예산 점진적 확장",
+        "topic": null
+      }
+    ]
   }
 ]
