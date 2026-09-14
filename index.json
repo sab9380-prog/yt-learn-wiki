@@ -5014,5 +5014,45 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-09-14-youtube-com-watch-v-7JVjm3ph-t4.md",
+    "title": "https://youtube.com/watch?v=7JVjm3ph-t4",
+    "category": "Picks전략",
+    "date": "2026-09-14",
+    "core_message": "고객과의 불편한 대화 2,000건이 기술보다 강력한 경쟁력이다—무엇을 만들지 결정하는 과정이 곧 사업의 핵심이다.",
+    "topics": [],
+    "concepts": [
+      {
+        "id": "고객-발견-인터뷰",
+        "label": "고객 발견 인터뷰",
+        "topic": null
+      },
+      {
+        "id": "더-맘-테스트",
+        "label": "더 맘 테스트",
+        "topic": null
+      },
+      {
+        "id": "최소-기능-제품",
+        "label": "최소 기능 제품",
+        "topic": null
+      },
+      {
+        "id": "사용성-테스트",
+        "label": "사용성 테스트",
+        "topic": null
+      },
+      {
+        "id": "고객-성공-확인",
+        "label": "고객 성공 확인",
+        "topic": null
+      },
+      {
+        "id": "반복-매출",
+        "label": "반복 매출",
+        "topic": null
+      }
+    ]
   }
 ]
