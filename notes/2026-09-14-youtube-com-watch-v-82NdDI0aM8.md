@@ -1,0 +1,633 @@
+---
+title: "https://youtube.com/watch?v=_82NdDI0aM8"
+source_url: https://youtube.com/watch?v=_82NdDI0aM8
+video_id: _82NdDI0aM8
+source_type: youtube
+lang: ko
+analyzed: 2026-09-14
+category: Picks전략
+tags: ["개념/CAC-vs-LTV-구조", "개념/유료-광고-자동화", "개념/온보딩-최적화", "개념/결제-추적-연동", "개념/광고-소재-피로도", "개념/예산-점진적-확장"]
+key_concepts: ["CAC vs LTV 구조", "유료 광고 자동화", "온보딩 최적화", "결제 추적 연동", "광고 소재 피로도", "예산 점진적 확장"]
+status: active
+---
+# https://youtube.com/watch?v=\_82NdDI0aM8
+
+## 🧠 이해 (Understand)
+- **Summary:** 23살 티보는 AI 주식·암호화폐 차트 분석 앱 '차트 디텍터 AI'를 형과 함께 만들어 출시 13개월 만에 월 매출 약 7,800만 원을 달성했다. 핵심은 고객 한 명을 데려오는 비용(CAC)보다 그 고객이 만들어내는 매출(LTV)이 크다는 구조를 먼저 확인한 뒤, 틱톡 유료 광고 알고리즘에 고객 확보를 위임한 것이다. 온보딩에서 기능이 아닌 결과를 보여주고, 무료 체험 없이 바로 결제벽을 세워 광고비 회수 속도를 높였다. 결제 데이터를 광고 플랫폼에 실시간으로 전달해 알고리즘이 '결제할 가능성 높은 사람'을 찾도록 학습시켰다. 이 구조가 완성된 덕분에 현재 월 약 20시간만 일하며 세계를 여행한다.
+- **Core Message:** 반복되는 고객 확보 과정을 숫자와 규칙으로 바꿔 시스템에 맡기면, 매출은 유지하면서 자신의 시간을 돌려받을 수 있다.
+> 돈을 넣을수록 더 큰 돈이 돌아오는 구조를 먼저 만들고, 그다음 자신의 시간을 빼낸 겁니다.
+> 실행을 해야 진짜 질문이 생기는 겁니다. 그전까지는 무엇이 문제인지조차 모릅니다.
+> 자동화는 아무것도 하지 않는 상태가 아닙니다. 내가 매일 반복했던 판단을 시스템과 규칙이 대신하게 만드는 과정에 더 가깝습니다.
+❗ 가장 성과 좋은 광고 영상은 화려한 제작물이 아니라, 사용자가 앱을 쓰는 장면을 단순히 보여준 영상이었고 약 500만 뷰·2천만 원 매출을 만들었다.
+❗ 매출 6천만 원 중 광고비 2,800만 원 등 비용을 제하면 실 이익은 약 1,600만 원(이익률 25%)으로, 고매출 광고 사업의 실제 마진은 생각보다 낮다.
+❗ 미국 시장보다 다른 나라에서 광고 수익률이 더 높게 나온 경우도 있었으며, 티보는 감이 아닌 실제 테스트 데이터로 시장을 선택했다.
+
+## 📚 핵심 용어
+- **CAC vs LTV 구조:** 고객 1명을 데려오는 비용(CAC)보다 그 고객이 내는 평균 매출(LTV)이 클 때 사업이 성립하는 수익 구조. / 자판기에 500원을 넣으면 1,000원짜리 음료가 나오는 것과 같다. 넣을수록 이익이 쌓인다. / CAC와 LTV의 차이 — CAC만 보면 '비용'처럼 보이지만, LTV가 더 크면 광고비는 비용이 아니라 투자 자본이 된다.
+- **결제 추적 연동:** 앱 설치·구독 결제 데이터를 광고 플랫폼에 실시간 전달해 알고리즘이 '결제 가능성 높은 사람'을 학습하게 하는 설정. / 낚시터 직원이 어느 자리에서 물고기가 잡혔는지 메모해두면, 다음엔 그 자리에 먼저 안내하는 것과 같다. / 다운로드 최적화 vs 결제 최적화 — 전자는 앱을 설치하는 사람을 모으고, 후자는 실제 돈을 내는 사람을 모은다. 사업 수익은 후자만 만든다.
+- **광고 소재 피로도:** 같은 광고 영상이 반복 노출되면서 클릭률·전환율이 점차 떨어지는 현상. / 편의점 BGM이 매일 같은 노래면 어느 순간 귀에 들어오지 않는 것과 같다. 새 노래를 계속 틀어야 한다. / 소재 피로도 vs 예산 문제 — 성과가 떨어질 때 예산이 부족한 게 아니라 영상이 낡은 경우가 많다. 예산을 올리기 전에 소재를 먼저 바꿔야 한다.
+- **온보딩 최적화:** 앱 첫 실행 시 사용자에게 기능 설명 대신 '사용 후 얻는 결과'를 보여줘 결제 전환율을 높이는 과정. / 헬스장 투어에서 기구 설명보다 '3개월 후 몸이 이렇게 바뀐 사람들' 사진을 먼저 보여주는 것과 같다. / 기능 중심 온보딩 vs 결과 중심 온보딩 — 전자는 '무엇이 있나'를 알려주고, 후자는 '내가 무엇을 얻나'를 보여준다. 결제율은 후자가 높다.
+
+## 🚀 실행 (Execute)
+- [ ] 운영 중인 채널(앱/이커머스/스토어)의 CAC와 LTV를 실제 숫자로 계산해 스프레드시트에 정리하기 — ⏰ 이번 주 · ⚡ 2~3시간
+  - 담당: 나 또는 마케팅 담당자
+  - 이유: CAC < LTV가 확인돼야 유료 광고 확장이 의미 있다. 이 숫자 없이 광고비를 늘리면 손실만 커진다.
+- [ ] 현재 광고 캠페인의 최적화 목표를 '클릭/설치'에서 '실제 구매·구독'으로 변경하고, 결제 데이터를 광고 플랫폼(메타/틱톡)에 전달하는 추적 연동 설정 점검하기 — ⏰ 2주 내 · ⚡ 반나절~하루 (기술 설정 포함)
+  - 담당: 나 + 개발자 또는 마케팅 담당자
+  - 이유: 알고리즘이 결제 데이터를 학습해야 CAC가 낮아지고 광고 효율이 올라간다. 설치 최적화는 실 매출과 무관한 트래픽을 끌어온다.
+- [ ] 첫 결제 화면 직전 온보딩 흐름을 '기능 소개'에서 '사용 후 결과 + 실제 사용 후기(사회적 증거)' 중심으로 리디자인하고, A/B 테스트 실행하기 — ⏰ 2주 내 · ⚡ 1~2일 (기획 + 디자인 수정)
+  - 담당: 나 + 디자이너
+  - 이유: 사람은 기능이 아니라 결과를 산다. 온보딩 전환율 개선은 광고비 추가 없이 매출을 높이는 가장 빠른 레버다.
+- 자료: 틱톡 광고 공식 가이드 — Tik Tok for Business (tiktok.com/business) : 자동화 캠페인(Smart Performance Campaign) 설정 방법
+- 자료: 메타 Conversions API 또는 애플 SKAdNetwork 연동 문서 — 결제 데이터를 광고 플랫폼에 전달하는 공식 방법 (확인 필요: 앱 종류에 따라 연동 방식 상이)
+- 자료: RevenueCat — 모바일 앱 구독 관리 및 광고 플랫폼 결제 데이터 연동 도구 (영상에서 '구독 관리 도구'로 언급된 것과 유사, 실제 존재 확인됨)
+- 자료: Mixpanel 또는 Amplitude — 온보딩 단계별 이탈률 분석 도구 (A/B 테스트 병행 가능)
+- Timeline: 1주차: CAC·LTV 숫자 계산 → 2주차: 결제 추적 연동 점검 및 온보딩 리디자인 기획 → 3~4주차: 온보딩 A/B 테스트 실행 + 광고 최적화 목표 변경 후 1주 학습 기간 대기 → 5주차 이후: 수익성 확인 후 예산 3일마다 최대 20% 점진적 확장
+
+## 🔗 연결
+- 카테고리: [[_category-Picks전략]]
+- 핵심 개념: [[_concept-CAC-vs-LTV-구조|CAC vs LTV 구조]] · [[_concept-유료-광고-자동화|유료 광고 자동화]] · [[_concept-온보딩-최적화|온보딩 최적화]] · [[_concept-결제-추적-연동|결제 추적 연동]] · [[_concept-광고-소재-피로도|광고 소재 피로도]] · [[_concept-예산-점진적-확장|예산 점진적 확장]]
+
+## 📝 자막 전문
+- [0:00](https://youtube.com/watch?v=_82NdDI0aM8&t=0) 매달 7천만 원 넘게 버는 앱을
+- [0:02](https://youtube.com/watch?v=_82NdDI0aM8&t=2) 운영하면서 한 달에 딱 숨만 일하는
+- [0:04](https://youtube.com/watch?v=_82NdDI0aM8&t=4) 사업가가 있습니다. 오늘 [음악]
+- [0:05](https://youtube.com/watch?v=_82NdDI0aM8&t=5) 이야기의 주인공은 23살 티보입니다.
+- [0:07](https://youtube.com/watch?v=_82NdDI0aM8&t=7) 그는 형과 함께 AI로 주식과
+- [0:09](https://youtube.com/watch?v=_82NdDI0aM8&t=9) 암호화폐 차트를 분석해 주는 앱을
+- [0:11](https://youtube.com/watch?v=_82NdDI0aM8&t=11) 만들었습니다. 출시한지 약 13개월
+- [0:13](https://youtube.com/watch?v=_82NdDI0aM8&t=13) 만에 다운로드는 9만 건을 넘었고
+- [0:15](https://youtube.com/watch?v=_82NdDI0aM8&t=15) 누적 매출은 약 3억 6천만 원까지
+- [0:17](https://youtube.com/watch?v=_82NdDI0aM8&t=17) 올라갔죠. 현재 월 매출은 약
+- [0:19](https://youtube.com/watch?v=_82NdDI0aM8&t=19) 7,800만 원 수준입니다. 그런데
+- [0:21](https://youtube.com/watch?v=_82NdDI0aM8&t=21) 더 놀라운 건 따로 있습니다.
+- [0:23](https://youtube.com/watch?v=_82NdDI0aM8&t=23) 티보는이 앱 때문에 매일 밤 늦게까지
+- [0:25](https://youtube.com/watch?v=_82NdDI0aM8&t=25) 일하지 않습니다. 현재 세 개를
+- [0:27](https://youtube.com/watch?v=_82NdDI0aM8&t=27) 여행하면서 앱에 사용하는 시간은 한
+- [0:29](https://youtube.com/watch?v=_82NdDI0aM8&t=29) 달에 약 20시간뿐이에요. 비결은
+- [0:31](https://youtube.com/watch?v=_82NdDI0aM8&t=31) 일을 하지 않는데 있지 않았습니다.
+- [0:33](https://youtube.com/watch?v=_82NdDI0aM8&t=33) 고객 한 명을 데려오는데 쓰는 돈보다
+- [0:35](https://youtube.com/watch?v=_82NdDI0aM8&t=35) 그 고객이 만들어내는 매출이 더 큰
+- [0:37](https://youtube.com/watch?v=_82NdDI0aM8&t=37) 구조를 만든 뒤 그 과정을 유료
+- [0:39](https://youtube.com/watch?v=_82NdDI0aM8&t=39) 광고와 시스템에 맡긴 겁니다. 돈을
+- [0:41](https://youtube.com/watch?v=_82NdDI0aM8&t=41) 넣을수록 더 큰 돈이 돌아오는 구조를
+- [0:43](https://youtube.com/watch?v=_82NdDI0aM8&t=43) 먼저 만들고 그다음 자신의 시간을
+- [0:45](https://youtube.com/watch?v=_82NdDI0aM8&t=45) 빼낸 거죠. 그렇다면 티보는 어떻게
+- [0:47](https://youtube.com/watch?v=_82NdDI0aM8&t=47) 월 7천만 원이 넘는 앱을
+- [0:49](https://youtube.com/watch?v=_82NdDI0aM8&t=49) 만들었을까요? 그리고 광고비를 계속
+- [0:51](https://youtube.com/watch?v=_82NdDI0aM8&t=51) 쓰면서도 실제로 돈을 남기고 한 달
+- [0:53](https://youtube.com/watch?v=_82NdDI0aM8&t=53) 20시간만 일하는 구조까지 만들 수
+- [0:55](https://youtube.com/watch?v=_82NdDI0aM8&t=55) 있었던 이유는 무엇이었을까요? 그럼
+- [0:56](https://youtube.com/watch?v=_82NdDI0aM8&t=56) 지금부터 시작하겠습니다. 티보가
+- [0:58](https://youtube.com/watch?v=_82NdDI0aM8&t=58) 처음부터 자유롭게 여행하며 앱 사업을
+- [1:00](https://youtube.com/watch?v=_82NdDI0aM8&t=60) [음악] 운영했던 것은 아닙니다.
+- [1:02](https://youtube.com/watch?v=_82NdDI0aM8&t=62) 그는 독일의 대형 자동차 회사에서
+- [1:04](https://youtube.com/watch?v=_82NdDI0aM8&t=64) 소프트웨어 엔지니어로 일하고
+- [1:05](https://youtube.com/watch?v=_82NdDI0aM8&t=65) 있었습니다. [음악] 평범하게
+- [1:07](https://youtube.com/watch?v=_82NdDI0aM8&t=67) 출근하고 퇴근하는 직장인이었죠.
+- [1:09](https://youtube.com/watch?v=_82NdDI0aM8&t=69) 하지만 형제와 함께 언젠가는 자신들의
+- [1:11](https://youtube.com/watch?v=_82NdDI0aM8&t=71) 사업을 하고 싶다는 생각을 [음악]
+- [1:12](https://youtube.com/watch?v=_82NdDI0aM8&t=72) 계속 가지고 있었습니다. 그래서 여러
+- [1:14](https://youtube.com/watch?v=_82NdDI0aM8&t=74) 가지 사업을 시도했습니다. 처음부터
+- [1:16](https://youtube.com/watch?v=_82NdDI0aM8&t=76) 모든게 잘됐던 것은 아니에요. 여러
+- [1:18](https://youtube.com/watch?v=_82NdDI0aM8&t=78) 시도가 원하는 결과로 이어지지
+- [1:19](https://youtube.com/watch?v=_82NdDI0aM8&t=79) [음악] 않았습니다. 그러다 처음으로
+- [1:21](https://youtube.com/watch?v=_82NdDI0aM8&t=81) 제대로 성과가 나오기 시작한 것이
+- [1:23](https://youtube.com/watch?v=_82NdDI0aM8&t=83) 모바일 앱이었습니다. 두 사람이 앱을
+- [1:25](https://youtube.com/watch?v=_82NdDI0aM8&t=85) 출시한 뒤 약 6개월이 지나자 티보는
+- [1:28](https://youtube.com/watch?v=_82NdDI0aM8&t=88) 직장을 그만둘 수 [음악] 있을
+- [1:29](https://youtube.com/watch?v=_82NdDI0aM8&t=89) 정도의 수익을 만들게 됩니다. 그리고
+- [1:31](https://youtube.com/watch?v=_82NdDI0aM8&t=91) 지금은 그 사업을 풀타임으로 붙잡고
+- [1:33](https://youtube.com/watch?v=_82NdDI0aM8&t=93) 있는 것이 아니라 [음악] 오히려
+- [1:34](https://youtube.com/watch?v=_82NdDI0aM8&t=94) 운영 시간을 줄이면서 세계를 여행하고
+- [1:37](https://youtube.com/watch?v=_82NdDI0aM8&t=97) 있죠. 그 시작에는 당시 막 등장한
+- [1:39](https://youtube.com/watch?v=_82NdDI0aM8&t=99) 새로운 AI 기능이 [음악]
+- [1:40](https://youtube.com/watch?v=_82NdDI0aM8&t=100) 있었습니다. 채치피트에서 이미지를
+- [1:42](https://youtube.com/watch?v=_82NdDI0aM8&t=102) 업로드하고 분석할 수 있는 기능이
+- [1:44](https://youtube.com/watch?v=_82NdDI0aM8&t=104) 새롭게 나왔을 때였습니다. 지금은
+- [1:46](https://youtube.com/watch?v=_82NdDI0aM8&t=106) AI에게 이미지를 보여 주는 [음악]
+- [1:47](https://youtube.com/watch?v=_82NdDI0aM8&t=107) 것이 특별하게 느껴지지 않을 수도
+- [1:49](https://youtube.com/watch?v=_82NdDI0aM8&t=109) 있습니다. 하지만 당시에는 꽤 신선한
+- [1:51](https://youtube.com/watch?v=_82NdDI0aM8&t=111) 기능이었죠. 티보와 그의 형제는
+- [1:53](https://youtube.com/watch?v=_82NdDI0aM8&t=113) 여기서 [음악] 하나의 가능성을
+- [1:54](https://youtube.com/watch?v=_82NdDI0aM8&t=114) 봅니다. 주식이나 암호화폐 차트를
+- [1:56](https://youtube.com/watch?v=_82NdDI0aM8&t=116) 이미지로 보여주고 AI가 그 내용을
+- [1:58](https://youtube.com/watch?v=_82NdDI0aM8&t=118) 분석해 주면 [음악] 어떨까? 처음
+- [2:00](https://youtube.com/watch?v=_82NdDI0aM8&t=120) 아이디어는 모바일 앱도 아니었습니다.
+- [2:02](https://youtube.com/watch?v=_82NdDI0aM8&t=122) AI가 주식 차트를 분석해 주는
+- [2:03](https://youtube.com/watch?v=_82NdDI0aM8&t=123) [음악] 텔레그램 봇 정도였어요.
+- [2:05](https://youtube.com/watch?v=_82NdDI0aM8&t=125) 하지만 생각을 조금 더 확장하면서
+- [2:07](https://youtube.com/watch?v=_82NdDI0aM8&t=127) 이것을 모바일 앱으로 만들기로
+- [2:09](https://youtube.com/watch?v=_82NdDI0aM8&t=129) 합니다. 그렇게 나온 것이 차트
+- [2:10](https://youtube.com/watch?v=_82NdDI0aM8&t=130) 디텍터 에어입니다. 앱의 구조는 아주
+- [2:12](https://youtube.com/watch?v=_82NdDI0aM8&t=132) [음악] 단순합니다. 사용자가
+- [2:13](https://youtube.com/watch?v=_82NdDI0aM8&t=133) 주식이나 암호화폐 차트에 사진을
+- [2:15](https://youtube.com/watch?v=_82NdDI0aM8&t=135) 찍습니다. 그리고 그 이미지를 앱에
+- [2:17](https://youtube.com/watch?v=_82NdDI0aM8&t=137) 올리죠. 그러면 AI가 차트를
+- [2:18](https://youtube.com/watch?v=_82NdDI0aM8&t=138) 분석하고 방향에 대한 정보를
+- [2:20](https://youtube.com/watch?v=_82NdDI0aM8&t=140) 제공합니다. 기술적으로 엄청나게
+- [2:22](https://youtube.com/watch?v=_82NdDI0aM8&t=142) [음악] 복잡한 소비자 서비스는
+- [2:23](https://youtube.com/watch?v=_82NdDI0aM8&t=143) 아니었습니다. 오히려 새로운 AI
+- [2:25](https://youtube.com/watch?v=_82NdDI0aM8&t=145) 기능 하나를 사람들이 이미 하고 있던
+- [2:27](https://youtube.com/watch?v=_82NdDI0aM8&t=147) 행동과 연결한 것에 가까웠습니다.
+- [2:29](https://youtube.com/watch?v=_82NdDI0aM8&t=149) 사람들은 원래 차트를 봅니다.
+- [2:31](https://youtube.com/watch?v=_82NdDI0aM8&t=151) [음악] 가격 움직임을 해석하고 싶어
+- [2:32](https://youtube.com/watch?v=_82NdDI0aM8&t=152) 하죠. 그 과정에서 분석을 도와주는
+- [2:34](https://youtube.com/watch?v=_82NdDI0aM8&t=154) 도구를 원합니다. 티보는 새롭게
+- [2:36](https://youtube.com/watch?v=_82NdDI0aM8&t=156) 등장한 이미지 분석 기능을이 행동에
+- [2:38](https://youtube.com/watch?v=_82NdDI0aM8&t=158) 붙인 겁니다. 그리고 앱은 성장하기
+- [2:40](https://youtube.com/watch?v=_82NdDI0aM8&t=160) [음악] 시작합니다. 현재 한 달에
+- [2:42](https://youtube.com/watch?v=_82NdDI0aM8&t=162) 약 13,에서 14,000건의
+- [2:44](https://youtube.com/watch?v=_82NdDI0aM8&t=164) 다운로드가 발생하고 있고 [음악] 월
+- [2:46](https://youtube.com/watch?v=_82NdDI0aM8&t=166) 매출은 약 7,800만 원 수준까지
+- [2:48](https://youtube.com/watch?v=_82NdDI0aM8&t=168) 올라왔습니다. 누적 노출은 약 4천만
+- [2:50](https://youtube.com/watch?v=_82NdDI0aM8&t=170) 회에 가깝고요. 최근 30일 동안에만
+- [2:52](https://youtube.com/watch?v=_82NdDI0aM8&t=172) 약 780만 회의 조회수를
+- [2:54](https://youtube.com/watch?v=_82NdDI0aM8&t=174) 기록했습니다. [음악]
+- [2:55](https://youtube.com/watch?v=_82NdDI0aM8&t=175) 그런데이 숫자보다 더 중요한 것은
+- [2:57](https://youtube.com/watch?v=_82NdDI0aM8&t=177) 고객이 어디에서 들어오는지입니다.
+- [2:59](https://youtube.com/watch?v=_82NdDI0aM8&t=179) [음악] T보의 핵심 성장 채널은
+- [3:00](https://youtube.com/watch?v=_82NdDI0aM8&t=180) 유료 광고입니다. 많은 사람들이 유료
+- [3:02](https://youtube.com/watch?v=_82NdDI0aM8&t=182) 광고라고 하면 먼저 이런 생각을
+- [3:04](https://youtube.com/watch?v=_82NdDI0aM8&t=184) 합니다. [음악] 돈을 계속 쓰면
+- [3:06](https://youtube.com/watch?v=_82NdDI0aM8&t=186) 결국 남는게 없지 않을까? 광고비가
+- [3:08](https://youtube.com/watch?v=_82NdDI0aM8&t=188) 올라가면 매출만 커지고 이익은
+- [3:10](https://youtube.com/watch?v=_82NdDI0aM8&t=190) 사라지는 것 아닐까? 물론 그렇게 될
+- [3:12](https://youtube.com/watch?v=_82NdDI0aM8&t=192) 수도 있습니다. 그래서 티버가 가장
+- [3:14](https://youtube.com/watch?v=_82NdDI0aM8&t=194) 먼저 보는 숫자가 있습니다. [음악]
+- [3:15](https://youtube.com/watch?v=_82NdDI0aM8&t=195) 고객 한 명을 데려오는데 얼마가
+- [3:17](https://youtube.com/watch?v=_82NdDI0aM8&t=197) 드는가? 그리고 그 고객 한 명에게서
+- [3:19](https://youtube.com/watch?v=_82NdDI0aM8&t=199) 평균적으로 얼마를 버는가?
+- [3:21](https://youtube.com/watch?v=_82NdDI0aM8&t=201) >> [음악]
+- [3:21](https://youtube.com/watch?v=_82NdDI0aM8&t=201) >> 예를 들어 광고를 통해 사용자 한
+- [3:23](https://youtube.com/watch?v=_82NdDI0aM8&t=203) 명을 데려오는데 약 2,000원이
+- [3:25](https://youtube.com/watch?v=_82NdDI0aM8&t=205) 들어간다고 해보겠습니다. 그런데 그
+- [3:26](https://youtube.com/watch?v=_82NdDI0aM8&t=206) 사용자에게서 평균 약 4,000원의
+- [3:28](https://youtube.com/watch?v=_82NdDI0aM8&t=208) 매출을 [음악] 만들 수 있다면
+- [3:30](https://youtube.com/watch?v=_82NdDI0aM8&t=210) 이야기가 달라집니다. 2,000원을
+- [3:31](https://youtube.com/watch?v=_82NdDI0aM8&t=211) 넣고 4,000원을 돌려받는
+- [3:33](https://youtube.com/watch?v=_82NdDI0aM8&t=213) 구조니까요.이 구조가 안정적으로
+- [3:35](https://youtube.com/watch?v=_82NdDI0aM8&t=215) 반복된다면 광고비는 [음악] 단순한
+- [3:36](https://youtube.com/watch?v=_82NdDI0aM8&t=216) 비용이 아닙니다. 돈을 더 벌기 위해
+- [3:38](https://youtube.com/watch?v=_82NdDI0aM8&t=218) 투입하는 자본이 됩니다. 티보가
+- [3:40](https://youtube.com/watch?v=_82NdDI0aM8&t=220) 말하는 핵심도 단순합니다. 한 명을
+- [3:42](https://youtube.com/watch?v=_82NdDI0aM8&t=222) 데려오는 비용보다 한 명에게서 버는
+- [3:44](https://youtube.com/watch?v=_82NdDI0aM8&t=224) [음악] 돈이 더 크다는 사실을
+- [3:45](https://youtube.com/watch?v=_82NdDI0aM8&t=225) 확인했다면 이제 해야 할 일은 그
+- [3:47](https://youtube.com/watch?v=_82NdDI0aM8&t=227) 구조가 무너지지 않는 범위에서 최대한
+- [3:49](https://youtube.com/watch?v=_82NdDI0aM8&t=229) 확장하는 겁니다. 그는 이런 구조를
+- [3:51](https://youtube.com/watch?v=_82NdDI0aM8&t=231) 사실상 돈을 찍어내는 [음악] 기계에
+- [3:52](https://youtube.com/watch?v=_82NdDI0aM8&t=232) 비유합니다. 하지만 여기에는 중요한
+- [3:54](https://youtube.com/watch?v=_82NdDI0aM8&t=234) 조건이 있습니다. 무조건 광고비만
+- [3:56](https://youtube.com/watch?v=_82NdDI0aM8&t=236) 늘린다고 되는 건 아니에요. 광고를
+- [3:58](https://youtube.com/watch?v=_82NdDI0aM8&t=238) 받을 준비가 [음악] 된 앱이 먼저
+- [3:59](https://youtube.com/watch?v=_82NdDI0aM8&t=239) 있어야 합니다. 희보가 가장 먼저
+- [4:01](https://youtube.com/watch?v=_82NdDI0aM8&t=241) 혼보라고 하는 것이 바로
+- [4:03](https://youtube.com/watch?v=_82NdDI0aM8&t=243) 온보딩입니다. [음악] 온보딩은
+- [4:04](https://youtube.com/watch?v=_82NdDI0aM8&t=244) 사용자가 앱을 처음 설치하고 핵심
+- [4:06](https://youtube.com/watch?v=_82NdDI0aM8&t=246) 기능을 이해하기까지 거치는 첫 경험을
+- [4:08](https://youtube.com/watch?v=_82NdDI0aM8&t=248) 말합니다. 많은 앱은 여기서 기능을
+- [4:10](https://youtube.com/watch?v=_82NdDI0aM8&t=250) 설명합니다.이 앱에는 이런 [음악]
+- [4:12](https://youtube.com/watch?v=_82NdDI0aM8&t=252) 기능이 있고 저런 기능이 있다고
+- [4:14](https://youtube.com/watch?v=_82NdDI0aM8&t=254) 보여주죠. 하지만 티보는 기능
+- [4:15](https://youtube.com/watch?v=_82NdDI0aM8&t=255) 자체보다 사용자가 결국 얻고 싶은
+- [4:17](https://youtube.com/watch?v=_82NdDI0aM8&t=257) 결과를 보여주는데 집중합니다.
+- [4:19](https://youtube.com/watch?v=_82NdDI0aM8&t=259) 사람들은 기능을 사고 싶은 것이
+- [4:21](https://youtube.com/watch?v=_82NdDI0aM8&t=261) 아니라 결과를 사고 싶어 하기
+- [4:22](https://youtube.com/watch?v=_82NdDI0aM8&t=262) 때문입니다. 차트 분석 앱을 쓰는
+- [4:24](https://youtube.com/watch?v=_82NdDI0aM8&t=264) 사람도 AI 기능 자체를 사고 싶은
+- [4:26](https://youtube.com/watch?v=_82NdDI0aM8&t=266) 것이 아닙니다. 차트를 더 쉽게
+- [4:28](https://youtube.com/watch?v=_82NdDI0aM8&t=268) 이해하고 싶고 자신의 판단에 도움을
+- [4:30](https://youtube.com/watch?v=_82NdDI0aM8&t=270) 받고 싶은 거죠. 그래서 온보딩에서는
+- [4:32](https://youtube.com/watch?v=_82NdDI0aM8&t=272) 사용자가 앱을 사용했을 때 어떤
+- [4:34](https://youtube.com/watch?v=_82NdDI0aM8&t=274) 결과를 얻는지를 최대한 명확하게
+- [4:36](https://youtube.com/watch?v=_82NdDI0aM8&t=276) 보여줍니다. 여기에 사회적 증거도
+- [4:38](https://youtube.com/watch?v=_82NdDI0aM8&t=278) 적극적으로 넣습니다. 다른 사용자들이
+- [4:41](https://youtube.com/watch?v=_82NdDI0aM8&t=281) 어떻게 사용하고 [음악] 있는지
+- [4:42](https://youtube.com/watch?v=_82NdDI0aM8&t=282) 사람들이이 제품을 실제로 신뢰하고
+- [4:44](https://youtube.com/watch?v=_82NdDI0aM8&t=284) 있다는 느낌을 줄 수 있는 요소들을
+- [4:46](https://youtube.com/watch?v=_82NdDI0aM8&t=286) 추가하는 겁니다. [음악] 광고를
+- [4:48](https://youtube.com/watch?v=_82NdDI0aM8&t=288) 보고 처음 들어온 사람은 회사를 잘
+- [4:50](https://youtube.com/watch?v=_82NdDI0aM8&t=290) 모릅니다. 앱도 처음 봅니다. 그러니
+- [4:52](https://youtube.com/watch?v=_82NdDI0aM8&t=292) 결제를 요청하기 전에이 서비스는 믿을
+- [4:54](https://youtube.com/watch?v=_82NdDI0aM8&t=294) 만하다는 느낌을 만드는 것이
+- [4:56](https://youtube.com/watch?v=_82NdDI0aM8&t=296) 중요하죠. 그리고 티보의 앱에는 무료
+- [4:58](https://youtube.com/watch?v=_82NdDI0aM8&t=298) [음악] 체험이 없습니다. 핵심
+- [4:59](https://youtube.com/watch?v=_82NdDI0aM8&t=299) 기능을 이용하려면 바로 결제해야 하는
+- [5:02](https://youtube.com/watch?v=_82NdDI0aM8&t=302) 강한 결제벽을 사용합니다. [음악]
+- [5:03](https://youtube.com/watch?v=_82NdDI0aM8&t=303) 현재 주간 구독은 약 18,000원
+- [5:06](https://youtube.com/watch?v=_82NdDI0aM8&t=306) 정도이고 6개월 구독은 약 8만
+- [5:08](https://youtube.com/watch?v=_82NdDI0aM8&t=308) 원대입니다. 특히 6개월 구독 상품은
+- [5:10](https://youtube.com/watch?v=_82NdDI0aM8&t=310) 여러 가격 구조를 직접 테스트한 끝에
+- [5:12](https://youtube.com/watch?v=_82NdDI0aM8&t=312) 유지하고 있는 방식이에요. 물론 모든
+- [5:14](https://youtube.com/watch?v=_82NdDI0aM8&t=314) 앱이 무료 체험을 없애야 한다는 뜻은
+- [5:16](https://youtube.com/watch?v=_82NdDI0aM8&t=316) 아닙니다. 피보가이 방식을 [음악]
+- [5:17](https://youtube.com/watch?v=_82NdDI0aM8&t=317) 사용하는 이유는 자신의 성장 방식이
+- [5:20](https://youtube.com/watch?v=_82NdDI0aM8&t=320) 유료 광고이기 때문입니다. 광고비를
+- [5:21](https://youtube.com/watch?v=_82NdDI0aM8&t=321) 오늘 썼다면 가능한 한 빨리 그 돈이
+- [5:23](https://youtube.com/watch?v=_82NdDI0aM8&t=323) 돌아오는지를 확인하고 싶습니다. 무료
+- [5:25](https://youtube.com/watch?v=_82NdDI0aM8&t=325) 체험 기간이 길어지면 사용자가 실제로
+- [5:27](https://youtube.com/watch?v=_82NdDI0aM8&t=327) 결제하기까지 시간이 걸리죠. 그러면
+- [5:30](https://youtube.com/watch?v=_82NdDI0aM8&t=330) 광고비를 쓰고도이 사용자가 돈이 되는
+- [5:32](https://youtube.com/watch?v=_82NdDI0aM8&t=332) 고객인지 판단하기까지 시간이 더
+- [5:34](https://youtube.com/watch?v=_82NdDI0aM8&t=334) 필요합니다. 반대로 처음부터 [음악]
+- [5:36](https://youtube.com/watch?v=_82NdDI0aM8&t=336) 결제가 일어나면 광고비를 얼마나 빨리
+- [5:38](https://youtube.com/watch?v=_82NdDI0aM8&t=338) 회수하는지 확인하기가 쉬워집니다.
+- [5:40](https://youtube.com/watch?v=_82NdDI0aM8&t=340) 그래서 그의 사업에서는 결제 구조
+- [5:42](https://youtube.com/watch?v=_82NdDI0aM8&t=342) 자체가 광고 시스템과 연결되어
+- [5:43](https://youtube.com/watch?v=_82NdDI0aM8&t=343) [음악] 있습니다. 그리고 여기서 두
+- [5:45](https://youtube.com/watch?v=_82NdDI0aM8&t=345) 번째 중요한 요소가 등장합니다.
+- [5:47](https://youtube.com/watch?v=_82NdDI0aM8&t=347) 추적입니다. 유료 광고를 제대로
+- [5:49](https://youtube.com/watch?v=_82NdDI0aM8&t=349) 운영하려면 단순히 조회수가 얼마나
+- [5:51](https://youtube.com/watch?v=_82NdDI0aM8&t=351) 나왔는지만 알아서는 안 됩니다. 누가
+- [5:53](https://youtube.com/watch?v=_82NdDI0aM8&t=353) 광고를 받는지, 그 사람이 앱을
+- [5:55](https://youtube.com/watch?v=_82NdDI0aM8&t=355) 설치했는지, [음악] 그리고 설치한
+- [5:56](https://youtube.com/watch?v=_82NdDI0aM8&t=356) 사람 가운데 누가 실제 돈을
+- [5:58](https://youtube.com/watch?v=_82NdDI0aM8&t=358) 냈는지까지 연결해서 봐야 합니다.
+- [6:00](https://youtube.com/watch?v=_82NdDI0aM8&t=360) 그래야 광고 플랫폼 역시 어떤 사람이
+- [6:02](https://youtube.com/watch?v=_82NdDI0aM8&t=362) 좋은 고객인지 [음악] 학습할 수
+- [6:04](https://youtube.com/watch?v=_82NdDI0aM8&t=364) 있습니다.이를 위해 앱 설치와 구독
+- [6:07](https://youtube.com/watch?v=_82NdDI0aM8&t=367) 데이터를 광고 플랫폼에 전달해 주는
+- [6:09](https://youtube.com/watch?v=_82NdDI0aM8&t=369) 별도의 추적 도구를 사용합니다.이
+- [6:11](https://youtube.com/watch?v=_82NdDI0aM8&t=371) 역할을 쉽게 설명하면 이렇습니다.
+- [6:13](https://youtube.com/watch?v=_82NdDI0aM8&t=373) 틱톡에게 이렇게 알려 주는 겁니다.이
+- [6:14](https://youtube.com/watch?v=_82NdDI0aM8&t=374) [음악]
+- [6:15](https://youtube.com/watch?v=_82NdDI0aM8&t=375) 광고를 본 사람 중에서이 사람이 실제
+- [6:17](https://youtube.com/watch?v=_82NdDI0aM8&t=377) 돈을 냈어.이 이 정보가 계속 쌓이면
+- [6:19](https://youtube.com/watch?v=_82NdDI0aM8&t=379) 틱톡의 알고리즘은 단순히 앱을
+- [6:21](https://youtube.com/watch?v=_82NdDI0aM8&t=381) [음악] 잘 설치하는 사람을 찾는
+- [6:22](https://youtube.com/watch?v=_82NdDI0aM8&t=382) 것이 아니라 실제 결제할 가능성이
+- [6:24](https://youtube.com/watch?v=_82NdDI0aM8&t=384) 높은 사람을 더 많이 찾으려고
+- [6:26](https://youtube.com/watch?v=_82NdDI0aM8&t=386) [음악] 합니다.이 차이는 굉장히
+- [6:28](https://youtube.com/watch?v=_82NdDI0aM8&t=388) 큽니다. 다운로드가 많다고 사업이
+- [6:29](https://youtube.com/watch?v=_82NdDI0aM8&t=389) 잘되는 것은 아니니까요. 100명이
+- [6:31](https://youtube.com/watch?v=_82NdDI0aM8&t=391) 설치하고 아무도 [음악] 결제하지
+- [6:33](https://youtube.com/watch?v=_82NdDI0aM8&t=393) 않는 것보다 10명이 설치해서 여러
+- [6:35](https://youtube.com/watch?v=_82NdDI0aM8&t=395) 명이 돈을내는 편이 훨씬 좋은 사업일
+- [6:37](https://youtube.com/watch?v=_82NdDI0aM8&t=397) 수 있습니다. 그래서는 광고 최적화
+- [6:40](https://youtube.com/watch?v=_82NdDI0aM8&t=400) 목표도 앱 설치가 아니라 실제 구독
+- [6:42](https://youtube.com/watch?v=_82NdDI0aM8&t=402) 결제로 잡는 편을 선호합니다.
+- [6:43](https://youtube.com/watch?v=_82NdDI0aM8&t=403) 조회수가 아니라 돈, 다운로드가
+- [6:45](https://youtube.com/watch?v=_82NdDI0aM8&t=405) 아니라 결제, 사업에서 실제로 원하는
+- [6:47](https://youtube.com/watch?v=_82NdDI0aM8&t=407) 행동을 알고리즘에게
+- [6:48](https://youtube.com/watch?v=_82NdDI0aM8&t=408) >> [음악]
+- [6:48](https://youtube.com/watch?v=_82NdDI0aM8&t=408) >> 학습시키는 겁니다. 다만이 연결
+- [6:50](https://youtube.com/watch?v=_82NdDI0aM8&t=410) 작업은 생각보다 복잡할 수 있습니다.
+- [6:52](https://youtube.com/watch?v=_82NdDI0aM8&t=412) 설정을 잘못하면 결제 데이터가 제대로
+- [6:54](https://youtube.com/watch?v=_82NdDI0aM8&t=414) 전달되지 않을 수도 있고 그러면 광고
+- [6:56](https://youtube.com/watch?v=_82NdDI0aM8&t=416) 알고리즘 [음악] 역시 잘못된
+- [6:58](https://youtube.com/watch?v=_82NdDI0aM8&t=418) 데이터를 학습하게 됩니다. 광고비를
+- [7:00](https://youtube.com/watch?v=_82NdDI0aM8&t=420) 많이 쓸수록 이런 작은 설정 오류
+- [7:02](https://youtube.com/watch?v=_82NdDI0aM8&t=422) 하나가 큰 비용으로 이어질 수 있죠.
+- [7:04](https://youtube.com/watch?v=_82NdDI0aM8&t=424) 그래서 기술적인 연결에 익숙하지
+- [7:06](https://youtube.com/watch?v=_82NdDI0aM8&t=426) 않다면 [음악] 외부 전문가를
+- [7:07](https://youtube.com/watch?v=_82NdDI0aM8&t=427) 활용하는 것도 방법이라고
+- [7:09](https://youtube.com/watch?v=_82NdDI0aM8&t=429) 이야기합니다. 그리고 준비가 끝났다면
+- [7:11](https://youtube.com/watch?v=_82NdDI0aM8&t=431) 이제 실제 [음악] 광고를
+- [7:12](https://youtube.com/watch?v=_82NdDI0aM8&t=432) 시작합니다. 이때도 영상 하나를
+- [7:13](https://youtube.com/watch?v=_82NdDI0aM8&t=433) 만들어 놓고 결과를 기다리지
+- [7:15](https://youtube.com/watch?v=_82NdDI0aM8&t=435) 않습니다. 처음 광고 캠페인을
+- [7:17](https://youtube.com/watch?v=_82NdDI0aM8&t=437) 시작한다면 최소 여섯 개 정도의
+- [7:19](https://youtube.com/watch?v=_82NdDI0aM8&t=439) [음악] 영상을 준비하라고 하는
+- [7:20](https://youtube.com/watch?v=_82NdDI0aM8&t=440) 이유가 있습니다. 광고 플랫폼에게
+- [7:22](https://youtube.com/watch?v=_82NdDI0aM8&t=442) 선택지를 줘야 하기 때문입니다.
+- [7:24](https://youtube.com/watch?v=_82NdDI0aM8&t=444) 사람마다 반응하는 콘텐츠가 다릅니다.
+- [7:26](https://youtube.com/watch?v=_82NdDI0aM8&t=446) 누군가는 제품을 바로 보여주는 영상에
+- [7:28](https://youtube.com/watch?v=_82NdDI0aM8&t=448) 반응할 수 있습니다. 다른 사람은
+- [7:30](https://youtube.com/watch?v=_82NdDI0aM8&t=450) 다른 형태의 설명에 더 관심을 보일
+- [7:32](https://youtube.com/watch?v=_82NdDI0aM8&t=452) 수도 있죠. 영상이 하나뿐이면
+- [7:34](https://youtube.com/watch?v=_82NdDI0aM8&t=454) 알고리즘도 [음악] 시험할 수 있는
+- [7:35](https://youtube.com/watch?v=_82NdDI0aM8&t=455) 것이 거의 없습니다. 반대로 여러
+- [7:37](https://youtube.com/watch?v=_82NdDI0aM8&t=457) 개의 소재를 주면 어떤 사람에게 어떤
+- [7:39](https://youtube.com/watch?v=_82NdDI0aM8&t=459) 영상이 잘 먹히는지 비교할 수 있게
+- [7:41](https://youtube.com/watch?v=_82NdDI0aM8&t=461) 됩니다. 티버는 틱톡에 자동화된 광고
+- [7:44](https://youtube.com/watch?v=_82NdDI0aM8&t=464) 캠페인을 [음악] 사용합니다. 어떤
+- [7:45](https://youtube.com/watch?v=_82NdDI0aM8&t=465) 사람에게 광고를 보여 줄지, 어느
+- [7:47](https://youtube.com/watch?v=_82NdDI0aM8&t=467) 영상의 예산을 더 배분할지 이런 상당
+- [7:49](https://youtube.com/watch?v=_82NdDI0aM8&t=469) 부분을 알고리즘이 알아서 판단하게
+- [7:51](https://youtube.com/watch?v=_82NdDI0aM8&t=471) 만드는 방식입니다. [음악] 타게팅도
+- [7:53](https://youtube.com/watch?v=_82NdDI0aM8&t=473) 굉장히 넓게 잡습니다. 세세하게
+- [7:55](https://youtube.com/watch?v=_82NdDI0aM8&t=475) 연령과 관심사를 수십 지정하는
+- [7:57](https://youtube.com/watch?v=_82NdDI0aM8&t=477) 방식보다 광고할 국가 정도를 설정하고
+- [7:59](https://youtube.com/watch?v=_82NdDI0aM8&t=479) 나머지는 [음악] 플랫폼이 데이터를
+- [8:01](https://youtube.com/watch?v=_82NdDI0aM8&t=481) 통해 찾아가게 합니다. 이때 중요한
+- [8:03](https://youtube.com/watch?v=_82NdDI0aM8&t=483) 것이 충분한 데이터입니다. 그래서
+- [8:05](https://youtube.com/watch?v=_82NdDI0aM8&t=485) 너무 적은 예산으로 시작하면
+- [8:06](https://youtube.com/watch?v=_82NdDI0aM8&t=486) 알고리즘이 학습할 수 있는 [음악]
+- [8:08](https://youtube.com/watch?v=_82NdDI0aM8&t=488) 기회 자체가 부족할 수 있습니다.
+- [8:10](https://youtube.com/watch?v=_82NdDI0aM8&t=490) 키보는 자신의 경험상 하루 약 7만
+- [8:12](https://youtube.com/watch?v=_82NdDI0aM8&t=492) 원 정도의 예산에서 좋은 결과를
+- [8:14](https://youtube.com/watch?v=_82NdDI0aM8&t=494) 봤다고 이야기합니다. 물론이 숫자가
+- [8:15](https://youtube.com/watch?v=_82NdDI0aM8&t=495) [음악] 모든 앱에 똑같이 적용되는
+- [8:17](https://youtube.com/watch?v=_82NdDI0aM8&t=497) 절대적인 기준은 아닙니다. 핵심은
+- [8:19](https://youtube.com/watch?v=_82NdDI0aM8&t=499) 플랫폼이 여러 사람에게 광고를
+- [8:21](https://youtube.com/watch?v=_82NdDI0aM8&t=501) 보여주고 [음악] 어떤 사용자가 실제
+- [8:23](https://youtube.com/watch?v=_82NdDI0aM8&t=503) 돈을 내는지를 배울 수 있을 만큼의
+- [8:25](https://youtube.com/watch?v=_82NdDI0aM8&t=505) 데이터가 필요하다는 겁니다. 그리고
+- [8:27](https://youtube.com/watch?v=_82NdDI0aM8&t=507) 광고를 시작한 직후에는 사업가가 가장
+- [8:29](https://youtube.com/watch?v=_82NdDI0aM8&t=509) 참기 어려운 시간이 찾아옵니다. 처음
+- [8:31](https://youtube.com/watch?v=_82NdDI0aM8&t=511) 약 일주일 정도는 광고 플랫폼에
+- [8:33](https://youtube.com/watch?v=_82NdDI0aM8&t=513) 학습하는 기간입니다. 어떤 영상이
+- [8:35](https://youtube.com/watch?v=_82NdDI0aM8&t=515) 잘되는지, 어떤 사람이 결제하는지,
+- [8:38](https://youtube.com/watch?v=_82NdDI0aM8&t=518) 누구에게 광고를 보여 줘야 하는지를
+- [8:39](https://youtube.com/watch?v=_82NdDI0aM8&t=519) 계속 시험하죠. 그런데 광고주
+- [8:41](https://youtube.com/watch?v=_82NdDI0aM8&t=521) 입장에서는 하루하루 숫자가 보입니다.
+- [8:43](https://youtube.com/watch?v=_82NdDI0aM8&t=523) [음악] 오늘 성과가 안 좋습니다.
+- [8:44](https://youtube.com/watch?v=_82NdDI0aM8&t=524) 내일도 기대보다 떨어집니다. 그러면
+- [8:46](https://youtube.com/watch?v=_82NdDI0aM8&t=526) 뭔가를 바꾸고 싶어집니다. 예산을
+- [8:48](https://youtube.com/watch?v=_82NdDI0aM8&t=528) 조정하고 싶고요. [음악] 타게팅도
+- [8:50](https://youtube.com/watch?v=_82NdDI0aM8&t=530) 바꾸고 싶습니다. 영상도 당장 빼
+- [8:51](https://youtube.com/watch?v=_82NdDI0aM8&t=531) 버리고 싶죠. 하지만 티보는이
+- [8:53](https://youtube.com/watch?v=_82NdDI0aM8&t=533) 기간에는 함부로 설정을 바꾸지
+- [8:55](https://youtube.com/watch?v=_82NdDI0aM8&t=535) [음악] 않는 편을 권합니다. 아직
+- [8:56](https://youtube.com/watch?v=_82NdDI0aM8&t=536) 알고리즘이 충분히 학습하지 못했는데
+- [8:58](https://youtube.com/watch?v=_82NdDI0aM8&t=538) 계속 조건을 바꾸면 학습이 처음부터
+- [9:00](https://youtube.com/watch?v=_82NdDI0aM8&t=540) 다시 흔들릴 수 있기 때문입니다.
+- [9:02](https://youtube.com/watch?v=_82NdDI0aM8&t=542) 광고 역시 생각보다 기다림이 필요한
+- [9:04](https://youtube.com/watch?v=_82NdDI0aM8&t=544) [음악] 게임인 겁니다. 그리고 약
+- [9:05](https://youtube.com/watch?v=_82NdDI0aM8&t=545) 일주일 정도의 학습이 지나면
+- [9:07](https://youtube.com/watch?v=_82NdDI0aM8&t=547) 그다음부터는 숫자를 보면서
+- [9:09](https://youtube.com/watch?v=_82NdDI0aM8&t=549) 판단합니다. 티보가 매주 가장
+- [9:10](https://youtube.com/watch?v=_82NdDI0aM8&t=550) 중요하게 확인하는 것은 광고
+- [9:12](https://youtube.com/watch?v=_82NdDI0aM8&t=552) 수익률입니다. 내가 광고에 넣은 돈과
+- [9:14](https://youtube.com/watch?v=_82NdDI0aM8&t=554) 돌아온 매출의 관계가 안정적인가
+- [9:16](https://youtube.com/watch?v=_82NdDI0aM8&t=556) [음악] 계속 이익이 나고 있는가를
+- [9:17](https://youtube.com/watch?v=_82NdDI0aM8&t=557) 보는 거죠. 수익성이 안정적이라면
+- [9:19](https://youtube.com/watch?v=_82NdDI0aM8&t=559) 예산을 늘립니다. 하지만 여기에서도
+- [9:21](https://youtube.com/watch?v=_82NdDI0aM8&t=561) 욕심을 [음악] 내지 않습니다.
+- [9:22](https://youtube.com/watch?v=_82NdDI0aM8&t=562) 광고가 잘된다고 오늘 예산을 두 배,
+- [9:24](https://youtube.com/watch?v=_82NdDI0aM8&t=564) 세 배 올리는 식으로 확장하지
+- [9:26](https://youtube.com/watch?v=_82NdDI0aM8&t=566) 않아요. 너무 빠르게 [음악] 예산을
+- [9:27](https://youtube.com/watch?v=_82NdDI0aM8&t=567) 바꾸면 잘되던 광고가 다시 불안정해질
+- [9:30](https://youtube.com/watch?v=_82NdDI0aM8&t=570) 수 있기 때문입니다. 디보가 참고하는
+- [9:31](https://youtube.com/watch?v=_82NdDI0aM8&t=571) [음악] 기준은 대략 3일마다
+- [9:33](https://youtube.com/watch?v=_82NdDI0aM8&t=573) 20%를 넘지 않도록 조금씩 예산을
+- [9:36](https://youtube.com/watch?v=_82NdDI0aM8&t=576) 키우는 방식입니다. [음악] 천천히
+- [9:37](https://youtube.com/watch?v=_82NdDI0aM8&t=577) 늘립니다. 성과가 유지되는지
+- [9:39](https://youtube.com/watch?v=_82NdDI0aM8&t=579) 확인합니다. 괜찮으면 또 조금
+- [9:41](https://youtube.com/watch?v=_82NdDI0aM8&t=581) 늘리고요. 이런 방식으로 확장합니다.
+- [9:43](https://youtube.com/watch?v=_82NdDI0aM8&t=583) 반대로 수익성이 떨어지면 무조건
+- [9:45](https://youtube.com/watch?v=_82NdDI0aM8&t=585) 예산을 더 [음악] 쓰지 않습니다.
+- [9:47](https://youtube.com/watch?v=_82NdDI0aM8&t=587) 새로운 광고 영상을 넣습니다. 여기서
+- [9:49](https://youtube.com/watch?v=_82NdDI0aM8&t=589) 유료 광고에 또 다른 현실이
+- [9:50](https://youtube.com/watch?v=_82NdDI0aM8&t=590) 나옵니다. 아무리 잘되는 광고도
+- [9:52](https://youtube.com/watch?v=_82NdDI0aM8&t=592) 영원히 잘되지는 않습니다. 처음에는
+- [9:54](https://youtube.com/watch?v=_82NdDI0aM8&t=594) 사람들의 눈길를 끌었던 영상도 너무
+- [9:56](https://youtube.com/watch?v=_82NdDI0aM8&t=596) 많은 사람에게 반복해서 노출되면
+- [9:58](https://youtube.com/watch?v=_82NdDI0aM8&t=598) 반응이 떨어지기 시작합니다. [음악]
+- [10:00](https://youtube.com/watch?v=_82NdDI0aM8&t=600) 이걸 광고 소재의 필요라고 생각하면
+- [10:02](https://youtube.com/watch?v=_82NdDI0aM8&t=602) 됩니다. 사람들이 이미 여러 번
+- [10:03](https://youtube.com/watch?v=_82NdDI0aM8&t=603) 봤습니다. 신선하지 않습니다. 클릭도
+- [10:06](https://youtube.com/watch?v=_82NdDI0aM8&t=606) 줄고 별제도 줄 수 있죠. 그래서
+- [10:07](https://youtube.com/watch?v=_82NdDI0aM8&t=607) 자동화된 광고 사업이라고 해서
+- [10:09](https://youtube.com/watch?v=_82NdDI0aM8&t=609) 아무것도 하지 않는 것은 아닙니다.
+- [10:11](https://youtube.com/watch?v=_82NdDI0aM8&t=611) 새로운 영상을 계속 공급해야 합니다.
+- [10:13](https://youtube.com/watch?v=_82NdDI0aM8&t=613) 잘되는 [음악] 광고가 지치기 전에
+- [10:15](https://youtube.com/watch?v=_82NdDI0aM8&t=615) 다음 영상을 준비해 두는 겁니다.
+- [10:16](https://youtube.com/watch?v=_82NdDI0aM8&t=616) 이게 티보가 한 달 20시간만 일할
+- [10:18](https://youtube.com/watch?v=_82NdDI0aM8&t=618) 수 있는 이유와도 연결됩니다. 매일
+- [10:20](https://youtube.com/watch?v=_82NdDI0aM8&t=620) 고객을 직접 찾아다니지는 [음악]
+- [10:22](https://youtube.com/watch?v=_82NdDI0aM8&t=622) 않습니다. 한 명 한 명에게 연락할
+- [10:24](https://youtube.com/watch?v=_82NdDI0aM8&t=624) 필요도 없어요. 광고 플랫폼에 알아서
+- [10:26](https://youtube.com/watch?v=_82NdDI0aM8&t=626) 사람을 찾습니다. 예산도 일정 부분
+- [10:28](https://youtube.com/watch?v=_82NdDI0aM8&t=628) [음악] 자동으로 배분하고요. 설치와
+- [10:30](https://youtube.com/watch?v=_82NdDI0aM8&t=630) 결제 데이터도 시스템을 통해
+- [10:31](https://youtube.com/watch?v=_82NdDI0aM8&t=631) 전달됩니다. 티보가 해야 하는 핵심은
+- [10:33](https://youtube.com/watch?v=_82NdDI0aM8&t=633) 비교적 단순해집니다. 광고 수익률을
+- [10:35](https://youtube.com/watch?v=_82NdDI0aM8&t=635) 확인합니다. 잘되면 [음악] 예산을
+- [10:37](https://youtube.com/watch?v=_82NdDI0aM8&t=637) 조금 올립니다. 수익성이 떨어지면
+- [10:39](https://youtube.com/watch?v=_82NdDI0aM8&t=639) 새로운 영상을 넣습니다. 그리고
+- [10:40](https://youtube.com/watch?v=_82NdDI0aM8&t=640) 앱에서 더 개선할 부분이 없는지
+- [10:42](https://youtube.com/watch?v=_82NdDI0aM8&t=642) 살펴봅니다. 반복적인 고객 확보를
+- [10:44](https://youtube.com/watch?v=_82NdDI0aM8&t=644) 시스템에 맡겼기 [음악] 때문에
+- [10:46](https://youtube.com/watch?v=_82NdDI0aM8&t=646) 자신의 시간이 크게 줄어든 겁니다.
+- [10:47](https://youtube.com/watch?v=_82NdDI0aM8&t=647) 그렇다고 매출의 대부분이 그대로
+- [10:49](https://youtube.com/watch?v=_82NdDI0aM8&t=649) 이익으로 남는 것은 아닙니다.이
+- [10:51](https://youtube.com/watch?v=_82NdDI0aM8&t=651) 부분도 중요합니다. 유료 광고 사업은
+- [10:53](https://youtube.com/watch?v=_82NdDI0aM8&t=653) 매출 숫자만 [음악] 보면 실제보다
+- [10:54](https://youtube.com/watch?v=_82NdDI0aM8&t=654) 훨씬 많은 돈을 버는 것처럼 보일 수
+- [10:57](https://youtube.com/watch?v=_82NdDI0aM8&t=657) 있기 때문이에요. T보가 공개한 한
+- [10:58](https://youtube.com/watch?v=_82NdDI0aM8&t=658) 달의 사례를 보면 매출이 약 6천만
+- [11:00](https://youtube.com/watch?v=_82NdDI0aM8&t=660) 원 정도였습니다. 그중 약
+- [11:02](https://youtube.com/watch?v=_82NdDI0aM8&t=662) 2,800만 원 가량이 광고비로
+- [11:04](https://youtube.com/watch?v=_82NdDI0aM8&t=664) 들어갔고요. 애플에 지급하는 수수료
+- [11:06](https://youtube.com/watch?v=_82NdDI0aM8&t=666) 같은 비용도 [음악] 발생했습니다.
+- [11:07](https://youtube.com/watch?v=_82NdDI0aM8&t=667) 모든 비용을 제외한 실제 이익은 약
+- [11:09](https://youtube.com/watch?v=_82NdDI0aM8&t=669) 1,600만 원 정도였습니다.
+- [11:11](https://youtube.com/watch?v=_82NdDI0aM8&t=671) [음악] 이익률로 보면 약 25%
+- [11:13](https://youtube.com/watch?v=_82NdDI0aM8&t=673) 수준입니다. 누군가는이 숫자를 보고
+- [11:15](https://youtube.com/watch?v=_82NdDI0aM8&t=675) 이렇게 생각할 수 있습니다. 매출이
+- [11:17](https://youtube.com/watch?v=_82NdDI0aM8&t=677) 6천만 원인데 1,600만 원밖에 안
+- [11:19](https://youtube.com/watch?v=_82NdDI0aM8&t=679) 남는다면 너무 적은 것 아닌가?
+- [11:21](https://youtube.com/watch?v=_82NdDI0aM8&t=681) [음악] 하지만 여기에서 티보가
+- [11:22](https://youtube.com/watch?v=_82NdDI0aM8&t=682) 선택한 게임을 봐야 합니다. 그는
+- [11:24](https://youtube.com/watch?v=_82NdDI0aM8&t=684) 최고 수준에 이익률만을 목표로 한
+- [11:26](https://youtube.com/watch?v=_82NdDI0aM8&t=686) 것이 아닙니다. [음악] 자신의
+- [11:27](https://youtube.com/watch?v=_82NdDI0aM8&t=687) 시간을 거의 쓰지 않고도 계속 고객이
+- [11:29](https://youtube.com/watch?v=_82NdDI0aM8&t=689) 들어오는 사업을 만들었습니다.
+- [11:30](https://youtube.com/watch?v=_82NdDI0aM8&t=690) 광고비라는 자본을 넣는 대신 자신의
+- [11:32](https://youtube.com/watch?v=_82NdDI0aM8&t=692) 시간을 돌려받은 거죠. 직접 [음악]
+- [11:34](https://youtube.com/watch?v=_82NdDI0aM8&t=694) 매일 콘텐츠를 제작하고 계속 사람들을
+- [11:36](https://youtube.com/watch?v=_82NdDI0aM8&t=696) 만나고 영업을 해야 한다면 이익률은
+- [11:38](https://youtube.com/watch?v=_82NdDI0aM8&t=698) 조금 더 높아질 수도 [음악]
+- [11:40](https://youtube.com/watch?v=_82NdDI0aM8&t=700) 있습니다. 하지만 자신의 시간이 훨씬
+- [11:42](https://youtube.com/watch?v=_82NdDI0aM8&t=702) 많이 들어갈 수 있습니다. 피보는
+- [11:44](https://youtube.com/watch?v=_82NdDI0aM8&t=704) 반대의 구조를 선택했습니다. 일부
+- [11:46](https://youtube.com/watch?v=_82NdDI0aM8&t=706) 마진을 포기하고 광고 시스템을 이용해
+- [11:48](https://youtube.com/watch?v=_82NdDI0aM8&t=708) 시간을 확보한 겁니다. 그래서
+- [11:50](https://youtube.com/watch?v=_82NdDI0aM8&t=710) [음악] 지금 세계를 여행하면서도
+- [11:51](https://youtube.com/watch?v=_82NdDI0aM8&t=711) 앱을 유지할 수 있는 거죠. 실제로
+- [11:53](https://youtube.com/watch?v=_82NdDI0aM8&t=713) 그의 광고 가운데 가장 성과가 좋았던
+- [11:56](https://youtube.com/watch?v=_82NdDI0aM8&t=716) 영상 하나도 매우 단순했습니다.
+- [11:57](https://youtube.com/watch?v=_82NdDI0aM8&t=717) [음악] 화려한 광고 촬영이
+- [11:59](https://youtube.com/watch?v=_82NdDI0aM8&t=719) 아니었습니다. 거창한 스토리도
+- [12:01](https://youtube.com/watch?v=_82NdDI0aM8&t=721) 없었어요. 사용자가 실제로 앱을
+- [12:02](https://youtube.com/watch?v=_82NdDI0aM8&t=722) 사용하는 장면을 보여주는
+- [12:04](https://youtube.com/watch?v=_82NdDI0aM8&t=724) 영상이었습니다. 차트를 올립니다.
+- [12:06](https://youtube.com/watch?v=_82NdDI0aM8&t=726) 앱이 분석합니다. 사람은 바로 제품이
+- [12:08](https://youtube.com/watch?v=_82NdDI0aM8&t=728) 어떤 역할을 하는지 이해야 합니다.이
+- [12:10](https://youtube.com/watch?v=_82NdDI0aM8&t=730) 광고 하나가 약 500만 회의
+- [12:12](https://youtube.com/watch?v=_82NdDI0aM8&t=732) 조회수를 만들었고 약 2천만 원이
+- [12:14](https://youtube.com/watch?v=_82NdDI0aM8&t=734) 넘는 매출로 연결됐습니다.이 [음악]
+- [12:15](https://youtube.com/watch?v=_82NdDI0aM8&t=735) 사례에서 재미있는 것은 부은 광고가
+- [12:17](https://youtube.com/watch?v=_82NdDI0aM8&t=737) 반드시 복잡할 필요는 없다는
+- [12:19](https://youtube.com/watch?v=_82NdDI0aM8&t=739) 점입니다. 오히려 앱이 무엇을 하는지
+- [12:21](https://youtube.com/watch?v=_82NdDI0aM8&t=741) [음악] 가장 빠르게 보여 주는 것이
+- [12:23](https://youtube.com/watch?v=_82NdDI0aM8&t=743) 강한 광고가 될 수도 있습니다.
+- [12:25](https://youtube.com/watch?v=_82NdDI0aM8&t=745) 사용자가 몇 초 안에 [음악]
+- [12:26](https://youtube.com/watch?v=_82NdDI0aM8&t=746) 이해합니다. 아,이 앱은 차트 사진을
+- [12:28](https://youtube.com/watch?v=_82NdDI0aM8&t=748) 올리면 AI가 분석해 주는구나.
+- [12:30](https://youtube.com/watch?v=_82NdDI0aM8&t=750) 설명이 필요 없습니다. 그리고
+- [12:31](https://youtube.com/watch?v=_82NdDI0aM8&t=751) [음악] 바로 자신의 상황에 대입할
+- [12:33](https://youtube.com/watch?v=_82NdDI0aM8&t=753) 수 있습니다. 티보는 미국 시장만
+- [12:35](https://youtube.com/watch?v=_82NdDI0aM8&t=755) 고집하지도 않았습니다. 많은 앱
+- [12:37](https://youtube.com/watch?v=_82NdDI0aM8&t=757) 창업가들이 광고를 시작하면 자연스럽게
+- [12:39](https://youtube.com/watch?v=_82NdDI0aM8&t=759) 미국을 먼저 생각합니다. [음악]
+- [12:40](https://youtube.com/watch?v=_82NdDI0aM8&t=760) 시장 규모가 크고 결제력이 높은
+- [12:42](https://youtube.com/watch?v=_82NdDI0aM8&t=762) 사람들이 많으니까요. 하지만 경쟁자
+- [12:44](https://youtube.com/watch?v=_82NdDI0aM8&t=764) 역시 많습니다. [음악]
+- [12:45](https://youtube.com/watch?v=_82NdDI0aM8&t=765) 광고비도 비쌀 수 있죠. 티보는 여러
+- [12:47](https://youtube.com/watch?v=_82NdDI0aM8&t=767) 국가를 직접 테스트했습니다. 그 결과
+- [12:50](https://youtube.com/watch?v=_82NdDI0aM8&t=770) 미국이 아닌 나라에서 오히려 더 높은
+- [12:52](https://youtube.com/watch?v=_82NdDI0aM8&t=772) 광고 수익률이 나오는 경우도
+- [12:53](https://youtube.com/watch?v=_82NdDI0aM8&t=773) 있었습니다. 여기서 다시 같은 원칙이
+- [12:55](https://youtube.com/watch?v=_82NdDI0aM8&t=775) 등장합니다. 감으로 [음악] 결정하지
+- [12:57](https://youtube.com/watch?v=_82NdDI0aM8&t=777) 않는 겁니다. 미국이 가장 큰
+- [12:58](https://youtube.com/watch?v=_82NdDI0aM8&t=778) 시장이니까 미국이 최고일 거야.
+- [13:00](https://youtube.com/watch?v=_82NdDI0aM8&t=780) 이렇게 단정하지 않습니다. [음악]
+- [13:02](https://youtube.com/watch?v=_82NdDI0aM8&t=782) 실제로 광고를 돌려봅니다. 고객을
+- [13:04](https://youtube.com/watch?v=_82NdDI0aM8&t=784) 데려오는 비용을 봅니다. 결제율을
+- [13:06](https://youtube.com/watch?v=_82NdDI0aM8&t=786) 확인하고요. 실제 돈이 얼마나
+- [13:07](https://youtube.com/watch?v=_82NdDI0aM8&t=787) 남는지를 비교합니다. [음악] 그리고
+- [13:09](https://youtube.com/watch?v=_82NdDI0aM8&t=789) 숫자가 좋은 곳에 더 많은 예산을
+- [13:10](https://youtube.com/watch?v=_82NdDI0aM8&t=790) 넣습니다. 결국 T보의 사업에서
+- [13:12](https://youtube.com/watch?v=_82NdDI0aM8&t=792) 중요한 판단 상당수가 숫자로
+- [13:14](https://youtube.com/watch?v=_82NdDI0aM8&t=794) 단순화되어 있습니다.이 [음악]
+- [13:15](https://youtube.com/watch?v=_82NdDI0aM8&t=795) 광고는 돈이 되는가? 그렇다면 조금
+- [13:17](https://youtube.com/watch?v=_82NdDI0aM8&t=797) 더 늘립니다. 돈이 안 되는가?
+- [13:19](https://youtube.com/watch?v=_82NdDI0aM8&t=799) 그러면 소재를 바꿉니다.이 나라에서
+- [13:21](https://youtube.com/watch?v=_82NdDI0aM8&t=801) 고객을 데려오는 비용이 더 낮은가?
+- [13:23](https://youtube.com/watch?v=_82NdDI0aM8&t=803) [음악] 그렇다면 그 시장을 더
+- [13:24](https://youtube.com/watch?v=_82NdDI0aM8&t=804) 테스트합니다. 복잡해 보이지만 판단
+- [13:26](https://youtube.com/watch?v=_82NdDI0aM8&t=806) 기준은 오히려 단순한 편입니다.
+- [13:28](https://youtube.com/watch?v=_82NdDI0aM8&t=808) 그래서 시스템을 만들 [음악] 수
+- [13:29](https://youtube.com/watch?v=_82NdDI0aM8&t=809) 있습니다. 그리고 기술적인 구조도
+- [13:31](https://youtube.com/watch?v=_82NdDI0aM8&t=811) 생각보다 거창하지 않습니다. 앱은
+- [13:33](https://youtube.com/watch?v=_82NdDI0aM8&t=813) 리액트 네이티브와 X4를 사용해
+- [13:35](https://youtube.com/watch?v=_82NdDI0aM8&t=815) 만들었습니다. [음악] 백엔드는
+- [13:37](https://youtube.com/watch?v=_82NdDI0aM8&t=817) 슈퍼베이스를 활용했고요. 앱의 핵심
+- [13:39](https://youtube.com/watch?v=_82NdDI0aM8&t=819) AI 기능에는 오픈 A를 사용합니다.
+- [13:41](https://youtube.com/watch?v=_82NdDI0aM8&t=821) 구독과 결제 관리에는 별도의 구독
+- [13:43](https://youtube.com/watch?v=_82NdDI0aM8&t=823) 관리 도구를 붙였습니다. 광고 성과
+- [13:45](https://youtube.com/watch?v=_82NdDI0aM8&t=825) 추적을 위해서는 설치와 결제 데이터를
+- [13:47](https://youtube.com/watch?v=_82NdDI0aM8&t=827) 연결해 주는 도구를 사용하고요. 영상
+- [13:49](https://youtube.com/watch?v=_82NdDI0aM8&t=829) 편집 역시 일반적으로 접근할 수 있는
+- [13:51](https://youtube.com/watch?v=_82NdDI0aM8&t=831) [음악] 편집 도구를 활용합니다. 즉
+- [13:53](https://youtube.com/watch?v=_82NdDI0aM8&t=833) 월 수천만 원을 만드는 앱이라고 해서
+- [13:55](https://youtube.com/watch?v=_82NdDI0aM8&t=835) 반드시 엄청나게 복잡한 자체 [음악]
+- [13:57](https://youtube.com/watch?v=_82NdDI0aM8&t=837) 기술 인프라가 필요한 것은
+- [13:59](https://youtube.com/watch?v=_82NdDI0aM8&t=839) 아니었습니다. 기존에 존재하는 여러
+- [14:01](https://youtube.com/watch?v=_82NdDI0aM8&t=841) 도구를 잘 연결해 필요한 기능을
+- [14:03](https://youtube.com/watch?v=_82NdDI0aM8&t=843) 만들었습니다. 오히려 더 중요한 것은
+- [14:05](https://youtube.com/watch?v=_82NdDI0aM8&t=845) 그 위에 어떤 사업 구조를
+- [14:07](https://youtube.com/watch?v=_82NdDI0aM8&t=847) 올렸느냐였습니다. 제품이 결제로
+- [14:09](https://youtube.com/watch?v=_82NdDI0aM8&t=849) 연결되는가? 광고가 고객으로
+- [14:10](https://youtube.com/watch?v=_82NdDI0aM8&t=850) 연결되는가? 광고비보다 고객 가치가
+- [14:12](https://youtube.com/watch?v=_82NdDI0aM8&t=852) 더 큰가? [음악] 그 결과를 추적할
+- [14:14](https://youtube.com/watch?v=_82NdDI0aM8&t=854) 수 있는가? 그리고 잘되는 구조를 더
+- [14:16](https://youtube.com/watch?v=_82NdDI0aM8&t=856) 크게 확장할 수 있는가?이 이
+- [14:17](https://youtube.com/watch?v=_82NdDI0aM8&t=857) 질문들이 해결되자 [음악] 운영에
+- [14:19](https://youtube.com/watch?v=_82NdDI0aM8&t=859) 필요한 시간 역시 줄어들기
+- [14:21](https://youtube.com/watch?v=_82NdDI0aM8&t=861) 시작합니다. 결국 티보가 한 달에
+- [14:22](https://youtube.com/watch?v=_82NdDI0aM8&t=862) 50시간만 [음악] 일한다는 것은
+- [14:24](https://youtube.com/watch?v=_82NdDI0aM8&t=864) 일을 대충 한다는 뜻이 아닙니다.
+- [14:26](https://youtube.com/watch?v=_82NdDI0aM8&t=866) 오히려 반대에 가깝습니다. 반복적으로
+- [14:28](https://youtube.com/watch?v=_82NdDI0aM8&t=868) 해야 했던 일들을 미리 구조로 만들어
+- [14:30](https://youtube.com/watch?v=_82NdDI0aM8&t=870) 놓은 결과입니다. [음악] 광고
+- [14:31](https://youtube.com/watch?v=_82NdDI0aM8&t=871) 타게팅을 매일 직접 조정하지
+- [14:33](https://youtube.com/watch?v=_82NdDI0aM8&t=873) 않습니다. 알고리즘에게 맡깁니다.
+- [14:35](https://youtube.com/watch?v=_82NdDI0aM8&t=875) 광고와 결제의 연결. 역시 사람이
+- [14:36](https://youtube.com/watch?v=_82NdDI0aM8&t=876) 손으로 계산하지 않습니다. 추적
+- [14:38](https://youtube.com/watch?v=_82NdDI0aM8&t=878) 시스템을 붙여둡니다. 매일 광고비를
+- [14:40](https://youtube.com/watch?v=_82NdDI0aM8&t=880) 어떻게 배분할지도 하나하나 고민하지
+- [14:42](https://youtube.com/watch?v=_82NdDI0aM8&t=882) 않죠. [음악] 이미 정해진 규칙에
+- [14:44](https://youtube.com/watch?v=_82NdDI0aM8&t=884) 따라 움직입니다. 수익성이 안정적이면
+- [14:46](https://youtube.com/watch?v=_82NdDI0aM8&t=886) 조금 늘립니다. 무너지면 새로운
+- [14:48](https://youtube.com/watch?v=_82NdDI0aM8&t=888) 소재를 넣습니다. [음악] 이렇게
+- [14:49](https://youtube.com/watch?v=_82NdDI0aM8&t=889) 판단 자체를 규칙으로 바꾸면 사업가가
+- [14:51](https://youtube.com/watch?v=_82NdDI0aM8&t=891) 매일 내려야 할 결정의 숫자가 크게
+- [14:53](https://youtube.com/watch?v=_82NdDI0aM8&t=893) 줄어듭니다. 그래서 자동화는 아무것도
+- [14:55](https://youtube.com/watch?v=_82NdDI0aM8&t=895) 하지 않는 상태가 아닙니다. 내가
+- [14:57](https://youtube.com/watch?v=_82NdDI0aM8&t=897) 매일 반복했던 판단을 시스템과 규칙이
+- [14:59](https://youtube.com/watch?v=_82NdDI0aM8&t=899) 대신하게 만드는 과정에 더
+- [15:01](https://youtube.com/watch?v=_82NdDI0aM8&t=901) 가깝습니다. [음악] 그리고 티보가
+- [15:02](https://youtube.com/watch?v=_82NdDI0aM8&t=902) 과거에 자신에게 해 주고 싶은
+- [15:04](https://youtube.com/watch?v=_82NdDI0aM8&t=904) 조언도이 이야기와 잘 연결됩니다.
+- [15:06](https://youtube.com/watch?v=_82NdDI0aM8&t=906) 그는 예전에 유튜브 영상을 굉장히
+- [15:08](https://youtube.com/watch?v=_82NdDI0aM8&t=908) 많이 봤다고 합니다. [음악] 사업에
+- [15:10](https://youtube.com/watch?v=_82NdDI0aM8&t=910) 대한 영상을 봅니다. 앱 만드는
+- [15:12](https://youtube.com/watch?v=_82NdDI0aM8&t=912) 방법을 보고요. 마케팅에 대해서도
+- [15:13](https://youtube.com/watch?v=_82NdDI0aM8&t=913) 공부합니다. 그런데 문제가
+- [15:15](https://youtube.com/watch?v=_82NdDI0aM8&t=915) 있었습니다. [음악] 공부하고 있다는
+- [15:16](https://youtube.com/watch?v=_82NdDI0aM8&t=916) 사실 때문에 자신이 생산적인 일을
+- [15:18](https://youtube.com/watch?v=_82NdDI0aM8&t=918) 하고 있다고 느꼈던 겁니다. 새로운
+- [15:20](https://youtube.com/watch?v=_82NdDI0aM8&t=920) 영상을 하나 더 보면 뭔가 앞으로
+- [15:22](https://youtube.com/watch?v=_82NdDI0aM8&t=922) 나아간 것 같습니다. 새로운 전략을
+- [15:24](https://youtube.com/watch?v=_82NdDI0aM8&t=924) 배우면 준비가 더 된 것 같죠.
+- [15:26](https://youtube.com/watch?v=_82NdDI0aM8&t=926) 하지만 현실에서는 아무 결과도
+- [15:28](https://youtube.com/watch?v=_82NdDI0aM8&t=928) 만들어지지 않을 수 있습니다. 앱을
+- [15:29](https://youtube.com/watch?v=_82NdDI0aM8&t=929) 출시하지 않았으니까요. [음악]
+- [15:31](https://youtube.com/watch?v=_82NdDI0aM8&t=931) 광고도 켜지 않았습니다. 고객이
+- [15:32](https://youtube.com/watch?v=_82NdDI0aM8&t=932) 어떻게 반응하는지 알 수도 없죠.
+- [15:34](https://youtube.com/watch?v=_82NdDI0aM8&t=934) 피보가 가장 [음악] 강조하고 싶은
+- [15:36](https://youtube.com/watch?v=_82NdDI0aM8&t=936) 것은 그래서 실행입니다. 더 많이
+- [15:37](https://youtube.com/watch?v=_82NdDI0aM8&t=937) 공부한 다음 시작하는 것이 아니라
+- [15:39](https://youtube.com/watch?v=_82NdDI0aM8&t=939) 지금 시작해야 한다는 겁니다. 직접
+- [15:41](https://youtube.com/watch?v=_82NdDI0aM8&t=941) 앱을 만들고 시장에 냅니다. [음악]
+- [15:43](https://youtube.com/watch?v=_82NdDI0aM8&t=943) 광고를 켜 봅니다. 돈을 조금 써
+- [15:45](https://youtube.com/watch?v=_82NdDI0aM8&t=945) 봅니다. 그러면 데이터가 나옵니다.
+- [15:46](https://youtube.com/watch?v=_82NdDI0aM8&t=946) 설치가 안 될 수도 있고요. 설치는
+- [15:48](https://youtube.com/watch?v=_82NdDI0aM8&t=948) 되는데 별제가 없을 [음악] 수도
+- [15:50](https://youtube.com/watch?v=_82NdDI0aM8&t=950) 있습니다. 광고는 좋은데 온보딩에서
+- [15:52](https://youtube.com/watch?v=_82NdDI0aM8&t=952) 사람들이 빠져나갈 수도 있습니다.
+- [15:53](https://youtube.com/watch?v=_82NdDI0aM8&t=953) 이제 무엇을 공부해야 하는지가
+- [15:55](https://youtube.com/watch?v=_82NdDI0aM8&t=955) 명확해집니다. 즉 실행을 해야 진짜
+- [15:57](https://youtube.com/watch?v=_82NdDI0aM8&t=957) [음악] 질문이 생기는 겁니다.
+- [15:59](https://youtube.com/watch?v=_82NdDI0aM8&t=959) 그전까지는 무엇이 문제인지 조조차
+- [16:01](https://youtube.com/watch?v=_82NdDI0aM8&t=961) 모릅니다. 그래서 성공을 단순히 유료
+- [16:03](https://youtube.com/watch?v=_82NdDI0aM8&t=963) 광고를 잘해서 성공했다라고만 보면
+- [16:06](https://youtube.com/watch?v=_82NdDI0aM8&t=966) 중요한 부분을 [음악] 놓치게
+- [16:07](https://youtube.com/watch?v=_82NdDI0aM8&t=967) 됩니다. 그는 광고를 자동화하기 전에
+- [16:09](https://youtube.com/watch?v=_82NdDI0aM8&t=969) 먼저 돈이 되는 구조를 만들었습니다.
+- [16:11](https://youtube.com/watch?v=_82NdDI0aM8&t=971) 온보딩을 개선했습니다. 결제 구조를
+- [16:13](https://youtube.com/watch?v=_82NdDI0aM8&t=973) 테스트했고요. 앱 설치가 아니라 실제
+- [16:15](https://youtube.com/watch?v=_82NdDI0aM8&t=975) 구독을 추적했습니다. 여러 광고
+- [16:17](https://youtube.com/watch?v=_82NdDI0aM8&t=977) 영상을 준비했습니다. 충분한 학습
+- [16:19](https://youtube.com/watch?v=_82NdDI0aM8&t=979) 시간을 줬고 잘되는 캠페인의 [음악]
+- [16:21](https://youtube.com/watch?v=_82NdDI0aM8&t=981) 예산도 서서히 키웠습니다. 그리고
+- [16:23](https://youtube.com/watch?v=_82NdDI0aM8&t=983) 잘되던 광고가 지치면 새로운 영상을
+- [16:25](https://youtube.com/watch?v=_82NdDI0aM8&t=985) 계속 [음악] 공급했습니다.이 이
+- [16:26](https://youtube.com/watch?v=_82NdDI0aM8&t=986) 과정을 반복하면서 복잡했던 성장
+- [16:29](https://youtube.com/watch?v=_82NdDI0aM8&t=989) 방식이 점점 몇 개의 규칙으로 정리된
+- [16:31](https://youtube.com/watch?v=_82NdDI0aM8&t=991) 겁니다. 그래서 지금은 월 7천만
+- [16:33](https://youtube.com/watch?v=_82NdDI0aM8&t=993) 원이 넘는 매출을 만들면서도 한 달
+- [16:35](https://youtube.com/watch?v=_82NdDI0aM8&t=995) 약 20시간만 앱에 사용할 수 있는
+- [16:38](https://youtube.com/watch?v=_82NdDI0aM8&t=998) 구조가 만들어졌습니다. 처음부터
+- [16:40](https://youtube.com/watch?v=_82NdDI0aM8&t=1000) 자유를 얻은 것이 아닙니다. [음악]
+- [16:41](https://youtube.com/watch?v=_82NdDI0aM8&t=1001) 먼저 시스템을 만들었고 그 시스템이
+- [16:43](https://youtube.com/watch?v=_82NdDI0aM8&t=1003) 나중에 자유를 만들어 준 겁니다.
+- [16:45](https://youtube.com/watch?v=_82NdDI0aM8&t=1005) 오늘 영상은 여기까지입니다.
+- [16:47](https://youtube.com/watch?v=_82NdDI0aM8&t=1007) 여러분들은 어떤 내용이 가장 인상
+- [16:49](https://youtube.com/watch?v=_82NdDI0aM8&t=1009) 깊으셨나요? 저는 이번 이야기에서
+- [16:50](https://youtube.com/watch?v=_82NdDI0aM8&t=1010) 가장 중요한 부분이 적게 일하는
+- [16:52](https://youtube.com/watch?v=_82NdDI0aM8&t=1012) 방법보다 반복되는 일을 숫자와
+- [16:54](https://youtube.com/watch?v=_82NdDI0aM8&t=1014) 규칙으로 바꿨다는 점이라고
+- [16:56](https://youtube.com/watch?v=_82NdDI0aM8&t=1016) 생각합니다. 광고가 잘될지 감으로
+- [16:58](https://youtube.com/watch?v=_82NdDI0aM8&t=1018) 판단하지 않았습니다. 고객 [음악]
+- [17:00](https://youtube.com/watch?v=_82NdDI0aM8&t=1020) 한 명을 데려오는 비용과 그 고객이
+- [17:02](https://youtube.com/watch?v=_82NdDI0aM8&t=1022) 만들어내는 매출을 비교했고 실제로
+- [17:04](https://youtube.com/watch?v=_82NdDI0aM8&t=1024) 돈이 남는다는 것이 확인됐을 때만
+- [17:06](https://youtube.com/watch?v=_82NdDI0aM8&t=1026) 예산을 늘렸죠. 그리고이 구조가
+- [17:07](https://youtube.com/watch?v=_82NdDI0aM8&t=1027) [음악] 만들어지자 매일 직접 고객을
+- [17:10](https://youtube.com/watch?v=_82NdDI0aM8&t=1030) 찾아다닐 필요도 없어졌습니다.
+- [17:11](https://youtube.com/watch?v=_82NdDI0aM8&t=1031) 사업에서 자유로운 [음악] 시간을
+- [17:13](https://youtube.com/watch?v=_82NdDI0aM8&t=1033) 만드는 방법은 단순히 일을 덜 하는
+- [17:15](https://youtube.com/watch?v=_82NdDI0aM8&t=1035) 것이 아닐 수 있습니다. 내가
+- [17:17](https://youtube.com/watch?v=_82NdDI0aM8&t=1037) 반복해서 하는 일 가운데 [음악]
+- [17:18](https://youtube.com/watch?v=_82NdDI0aM8&t=1038) 무엇을 시스템에 맡길 수 있는지 찾고
+- [17:20](https://youtube.com/watch?v=_82NdDI0aM8&t=1040) 그 시스템이 제대로 움직이고 있는지를
+- [17:22](https://youtube.com/watch?v=_82NdDI0aM8&t=1042) 확인할 숫자를 만드는 것이 먼저일 수
+- [17:25](https://youtube.com/watch?v=_82NdDI0aM8&t=1045) 있죠. 그리고 아무리 좋은 전략을
+- [17:26](https://youtube.com/watch?v=_82NdDI0aM8&t=1046) 많이 알고 있어도 실행하지 않으면
+- [17:28](https://youtube.com/watch?v=_82NdDI0aM8&t=1048) 데이터는 생기지 않습니다. 완벽하게
+- [17:30](https://youtube.com/watch?v=_82NdDI0aM8&t=1050) 준비된 다음 시작하려고 하기보다
+- [17:32](https://youtube.com/watch?v=_82NdDI0aM8&t=1052) 작게라도 직접 실행하고 결과를 보는
+- [17:34](https://youtube.com/watch?v=_82NdDI0aM8&t=1054) 것에서 다음 단계가 시작될 수
+- [17:36](https://youtube.com/watch?v=_82NdDI0aM8&t=1056) 있습니다. 오늘 영상이 여러분들이
+- [17:38](https://youtube.com/watch?v=_82NdDI0aM8&t=1058) 공부만 하며 준비하는데 머무르기보다
+- [17:40](https://youtube.com/watch?v=_82NdDI0aM8&t=1060) 직접 실행하고 반복되는 일을 수익성
+- [17:42](https://youtube.com/watch?v=_82NdDI0aM8&t=1062) 있는 시스템으로 만드는데 도움이
+- [17:44](https://youtube.com/watch?v=_82NdDI0aM8&t=1064) 되셨길 바라며 영상에서 뵙겠습니다.
+- [17:46](https://youtube.com/watch?v=_82NdDI0aM8&t=1066) 감사합니다. 지금까지 동기부여
+- [17:48](https://youtube.com/watch?v=_82NdDI0aM8&t=1068) 학과였습니다. 입니다.
+- [17:52](https://youtube.com/watch?v=_82NdDI0aM8&t=1072) [음악]
