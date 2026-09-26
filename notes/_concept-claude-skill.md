@@ -5,11 +5,12 @@ concept: claude-skill
 
 # 🧩 클로드 스킬
 
-> 개념 집약 · 자동 생성 (수정 금지) · 노트 21개
+> 개념 집약 · 자동 생성 (수정 금지) · 노트 22개
 
 - 상위 주제: [[_topic-스킬]]
 
 ## 관련 노트
+- [[2026-09-26-Superpowers-전부-지운-이유-Opus-5-5]] — 하네스는 죽었다 — gstack·Superpowers 전부 지운 이유 (Opus 5.5) — 강력해진 모델에게 낡은 하네스는 무기가 아니라 과속 방지턱이므로, 기능 도구만 남기고 '생각하는 법'을 강제하는 문서는 지워야 한다.
 - [[2026-09-08-YC의-AI-플레이북을-제-자료에-그대로-적용했습니다]] — YC의 AI 플레이북을 제 자료에 그대로 적용했습니다 — 제2의 두뇌 세팅 — 업무 기록을 한 곳에 쌓고 AI가 그 맥락을 읽어 일하게 하는 '공용 두뇌' 구조를 만들면, 조직(혹은 개인)이 쓸수록 똑똑해지는 자기개선 시스템이 된다.
 - [[2026-08-13-You-re-Paying-Anthropic-20x-MORE-Than]] — You're Paying Anthropic 20x MORE Than You Need To — Claude Code 비용의 핵심은 프롬프트 캐싱 원리를 이해하는 것이며, 캐시 만료 하나만 막아도 토큰 비용을 최대 20배 절감할 수 있다.
 - [[2026-08-08-Claude-Code-Just-Changed-Forever-6-NEW]] — Claude Code Just Changed Forever (6 NEW Rules by Anthropic Engineers) — Claude 5 세대 모델은 지능이 비약적으로 향상되었으므로, 규칙·예시·중복 지시를 줄이고 판단·디자인 인터페이스·점진적 파일 로딩으로 전환해야 더 빠르고 저렴한 에이전트 운영이 가능하다.
