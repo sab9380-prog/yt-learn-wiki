@@ -5174,5 +5174,50 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-09-26-Superpowers-전부-지운-이유-Opus-5-5.md",
+    "title": "하네스는 죽었다 — gstack·Superpowers 전부 지운 이유 (Opus 5.5)",
+    "category": "일반학습",
+    "date": "2026-09-26",
+    "core_message": "강력해진 모델에게 낡은 하네스는 무기가 아니라 과속 방지턱이므로, 기능 도구만 남기고 '생각하는 법'을 강제하는 문서는 지워야 한다.",
+    "topics": [
+      "하네스",
+      "스킬",
+      "클로드코드",
+      "토큰최적화"
+    ],
+    "concepts": [
+      {
+        "id": "harness",
+        "label": "하네스",
+        "topic": "하네스"
+      },
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "지스택",
+        "label": "지스택",
+        "topic": null
+      },
+      {
+        "id": "슈퍼파워즈",
+        "label": "슈퍼파워즈",
+        "topic": null
+      },
+      {
+        "id": "hooks",
+        "label": "훅스",
+        "topic": "클로드코드"
+      },
+      {
+        "id": "token-optimization",
+        "label": "토큰 최적화",
+        "topic": "토큰최적화"
+      }
+    ]
   }
 ]
