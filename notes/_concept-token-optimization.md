@@ -5,12 +5,12 @@ concept: token-optimization
 
 # 🧩 토큰 최적화
 
-> 개념 집약 · 자동 생성 (수정 금지) · 노트 8개
+> 개념 집약 · 자동 생성 (수정 금지) · 노트 9개
 
 - 상위 주제: [[_topic-토큰최적화]]
-- 🧭 종합: [[_synth-token-optimization]]
 
 ## 관련 노트
+- [[2026-09-26-Superpowers-전부-지운-이유-Opus-5-5]] — 하네스는 죽었다 — gstack·Superpowers 전부 지운 이유 (Opus 5.5) — 강력해진 모델에게 낡은 하네스는 무기가 아니라 과속 방지턱이므로, 기능 도구만 남기고 '생각하는 법'을 강제하는 문서는 지워야 한다.
 - [[2026-07-01-Meta에서-배운-실전-테크닉-AI가-길-잃지-않는-코드베이스-토큰]] — Meta에서 배운 실전 테크닉 - AI가 길 잃지 않는 코드베이스 & 토큰 비용 최적화 — 에이전트의 실패는 AI 능력 문제가 아니라 코드베이스 탐색 비용 문제이므로, 코드베이스 지형 자체를 AI 친화적으로 정비하고 토큰 비용을 팀 단위로 자동 통제해야 한다.
 - [[2026-06-11-Claude-Code-Graphify-Insane-Agentic-OS]] — Claude Code + Graphify = Insane Agentic OS — Graphify는 코드베이스를 지식 그래프로 변환하여 Claude의 코드 이해 능력을 대폭 향상시키고, agentic operating system과 결합하면 모든 프로젝트를 통합 관리할 수 있는 강력한 개발 환경…
 - [[2026-05-22-5-Skills-to-Build-an-AI-Operating]] — 5 Skills to Build an AI Operating System Like The 1% (Full Guide) — AI 도구의 진정한 잠재력을 발휘하려면 개인과 비즈니스의 모든 맥락이 담긴 세컨드 브레인을 구축하여 AI가 항상 관련성 높은 정보에 접근할 수 있도록 해야 한다.
