@@ -5259,5 +5259,47 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-09-28-에이전트를-믿게-만든-건-프롬프트가-아니라-코드베이스였습니다.md",
+    "title": "Cursor 엔지니어의 한 달 PR 1,000개 — 에이전트를 믿게 만든 건 프롬프트가 아니라 코드베이스였습니다",
+    "category": "일반학습",
+    "date": "2026-09-28",
+    "core_message": "에이전트에게 검증 능력을 주고, 코드베이스를 하드 제약으로 무장하면 — 에이전트를 믿고 손을 뗄 수 있는 수준까지 도달할 수 있다.",
+    "topics": [
+      "스킬"
+    ],
+    "concepts": [
+      {
+        "id": "검증-스킬",
+        "label": "검증 스킬",
+        "topic": null
+      },
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "피처-맵",
+        "label": "피처 맵",
+        "topic": null
+      },
+      {
+        "id": "에이전트-신뢰-곡선",
+        "label": "에이전트 신뢰 곡선",
+        "topic": null
+      },
+      {
+        "id": "Dune-아키텍처",
+        "label": "Dune 아키텍처",
+        "topic": null
+      },
+      {
+        "id": "Eval",
+        "label": "Eval",
+        "topic": null
+      }
+    ]
   }
 ]
