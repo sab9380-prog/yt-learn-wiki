@@ -5301,5 +5301,48 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-10-01-클로드-코드-200-끌어올리는-6가지-비밀.md",
+    "title": "클로드 코드 200% 끌어올리는 6가지 비밀",
+    "category": "일반학습",
+    "date": "2026-10-01",
+    "core_message": "모델이 강해질수록 스킬은 줄이고, 모델이 스스로 채울 수 없는 '내 기준·작업 방식'만 정밀하게 채워주는 것이 현재 Claude 활용의 핵심이다.",
+    "topics": [
+      "스킬",
+      "토큰최적화"
+    ],
+    "concepts": [
+      {
+        "id": "Effort-Value",
+        "label": "Effort Value",
+        "topic": null
+      },
+      {
+        "id": "claude-skill",
+        "label": "클로드 스킬",
+        "topic": "스킬"
+      },
+      {
+        "id": "agent-md",
+        "label": "agent.md",
+        "topic": "스킬"
+      },
+      {
+        "id": "token-optimization",
+        "label": "토큰 최적화",
+        "topic": "토큰최적화"
+      },
+      {
+        "id": "Ponytail-스킬",
+        "label": "Ponytail 스킬",
+        "topic": null
+      },
+      {
+        "id": "Mapper-Grimi-스킬",
+        "label": "Mapper/Grimi 스킬",
+        "topic": null
+      }
+    ]
   }
 ]
