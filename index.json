@@ -5344,5 +5344,48 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-10-09-메타-개발자들이-부딪힌-AI-에이전트의-진짜-한계.md",
+    "title": "메타 개발자들이 부딪힌 AI 에이전트의 진짜 한계",
+    "category": "일반학습",
+    "date": "2026-10-09",
+    "core_message": "AI의 진짜 한계는 기술이 아니라 인간의 맥락 공급 능력과 방향 설정 이해력이다.",
+    "topics": [
+      "검증",
+      "컨텍스트관리"
+    ],
+    "concepts": [
+      {
+        "id": "ai-slop",
+        "label": "AI 슬롭",
+        "topic": "검증"
+      },
+      {
+        "id": "context-rot",
+        "label": "컨텍스트 부패",
+        "topic": "컨텍스트관리"
+      },
+      {
+        "id": "에이전트-메모리",
+        "label": "에이전트 메모리",
+        "topic": null
+      },
+      {
+        "id": "Hindsight-프레임워크",
+        "label": "Hindsight 프레임워크",
+        "topic": null
+      },
+      {
+        "id": "이해-병목",
+        "label": "이해 병목",
+        "topic": null
+      },
+      {
+        "id": "멀티-에이전트-관리",
+        "label": "멀티 에이전트 관리",
+        "topic": null
+      }
+    ]
   }
 ]
