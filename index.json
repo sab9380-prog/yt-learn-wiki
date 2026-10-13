@@ -5470,5 +5470,48 @@
         "topic": null
       }
     ]
+  },
+  {
+    "filename": "2026-10-13-소프트웨어는-끝났다-앱-통째로-복사하는-미친-오픈소스-ㄷㄷ.md",
+    "title": "소프트웨어는 끝났다? 앱 통째로 복사하는 미친 오픈소스.. ㄷㄷ",
+    "category": "일반학습",
+    "date": "2026-10-13",
+    "core_message": "REA는 새로운 기술이 아니라 기존 분석 툴의 접근성 혁신으로, 코딩 비전문가도 앱을 뜯어 자신만의 기능을 붙일 수 있는 시대가 열렸다.",
+    "topics": [
+      "MCP",
+      "바이브코딩"
+    ],
+    "concepts": [
+      {
+        "id": "Reverse-Engineer-Anything",
+        "label": "Reverse Engineer Anything",
+        "topic": null
+      },
+      {
+        "id": "리버스-엔지니어링",
+        "label": "리버스 엔지니어링",
+        "topic": null
+      },
+      {
+        "id": "mcp",
+        "label": "MCP",
+        "topic": "MCP"
+      },
+      {
+        "id": "Ghidra",
+        "label": "Ghidra",
+        "topic": null
+      },
+      {
+        "id": "vibe-coding",
+        "label": "바이브 코딩",
+        "topic": "바이브코딩"
+      },
+      {
+        "id": "Pseudo-코드",
+        "label": "Pseudo 코드",
+        "topic": null
+      }
+    ]
   }
 ]
